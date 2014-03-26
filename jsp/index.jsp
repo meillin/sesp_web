@@ -67,50 +67,86 @@
 
 <div id="main-content-index">
   <div class="row">
+    <div class="large-12 columns welcome-text text-center">
+      Welcome to the dashboard
+    </div>
+  </div>
+
+  <div class="row">
     <div class="large-12 columns">
 
      <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
 
       <li>
-        <a class="patch" href="<%=contextPath%>/std/ViewResourceProjectionAction" alt="RESOURCE PROJECTIONS" title="RESOURCE PROJECTIONS">
+        <div>
+          <a class="patch" href="<%=contextPath%>/std/ViewResourceProjectionAction" alt="RESOURCE PROJECTIONS" title="RESOURCE PROJECTIONS">
+            <img src="../images/chart_line_64.png" />
+          <h3>RESOURCE PROJECTIONS</h3>
+          </a>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <a class="patch" href="<%=contextPath%>/std/AreaProgress" alt="AREA PROGRESS" title="AREA PROGRESS">
+            <img src="../images/chart_line_64.png" />
+            <h3>AREA PROGRESS</h3>
+          </a>
+        </div>
+      </li>
+
+      <li>
+        <div>
+            <a class="patch" href="<%=contextPath%>/std/StockManagement1" alt="LOGISTICS" title="LOGISTICS">
+              <img src="../images/chart_line_64.png" />
+              <h3>LOGISTICS</h3>
+            </a>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <a class="patch" href="<%=contextPath%>/std/AlarmManagementReports" alt="ALARM MANAGEMENT" title="ALARM MANAGEMENT">
+            <img src="../images/chart_line_64.png" />
+            <h3>ALARM MANAGEMENT</h3>
+          </a>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <a class="patch" href="javascript: openDashboard();" alt="SYSTEM UTILIZATION" title="SYSTEM UTILIZATION">
+            <img src="../images/chart_line_64.png" />
+            <h3>SYSTEM UTILIZATION</h3>
+          </a>
+        </div>
+      </li>
+
+     <li>
+        <div>
+          <a class="patch" href="<%=contextPath%>/std/WorkOrderProgress" alt="WORK ORDER PROGRESS" title="WORK ORDER PROGRESS">
+            <img src="../images/chart_line_64.png" />
+            <h3>WORK ORDER PROGRESS</h3>
+          </a>
+        </div>
+      </li>
+
+    <li>
+      <div>
+        <a class="patch" href="<%=contextPath%>/std/AnalyzeFieldWorkEfficiency" alt="FIELD WORK EFFICIENCY" title="FIELD WORK EFFICIENCY">
           <img src="../images/chart_line_64.png" />
           <h3>RESOURCE PROJECTIONS</h3>
         </a>
-      </li>
+      </div>
+    </li>
 
       <li>
-        <img src="../images/chart_line_64.png" />
-        <h3>RESOURCE PROJECTIONS</h3>
-      </li>
-
-      <li>
-        <img src="../images/chart_line_64.png" />
-        <h3>RESOURCE PROJECTIONS</h3>
-      </li>
-
-      <li>
-        <img src="../images/chart_line_64.png" />
-        <h3>RESOURCE PROJECTIONS</h3>
-      </li>
-
-      <li>
-        <img src="../images/chart_line_64.png" />
-        <h3>RESOURCE PROJECTIONS</h3>
-      </li>
-
-     <li>
-        <img src="../images/chart_line_64.png" />
-        <h3>RESOURCE PROJECTIONS</h3>
-      </li>
-
-     <li>
-        <img src="../images/chart_line_64.png" />
-        <h3>RESOURCE PROJECTIONS</h3>
-      </li>
-
-      <li>
-        <img src="../images/chart_line_64.png" />
-        <h3>RESOURCE PROJECTIONS</h3>
+        <div>
+          <a class="patch" href="<%=contextPath%>/std/TimeReservationCallList" alt="TIME RESERVATION CALL LIST" title="TIME RESERVATION CALL LIST">
+            <img src="../images/chart_line_64.png" />
+            <h3>RESOURCE PROJECTIONS</h3>
+          </a>
+        </div>
       </li>
 
     </ul>

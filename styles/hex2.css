@@ -5450,6 +5450,7 @@ html.hq .hidden-notice .talk {
 .nav-tabs a, .nav-tabs-tooltip {
     font-weight: 700;
 }
+/* ***********************MODIFIED BY MEILAN*********************************************************************************/
 
 #main-content-index {
     background-image: url(../images/2014/dashboard_bg.jpg);
@@ -5459,20 +5460,27 @@ html.hq .hidden-notice .talk {
 	/*text-align: center;*/
 }
 #main-content-index ul li {
+    text-align: center;
+}
+#main-content-index ul li div {
     background: #5eb785;
-        margin-right: 1em;
-
+    width: 99.9999%;
+    margin: auto;
+    min-height: 180px;
 }
 #main-content-index h3 {
     color: #fff;
 }
-
-#main-content-index .text-grey,.block-accordion {
-	font-size:14px;
-	text-align: center;
+#main-content-index img {
+    padding-top: 1.5em;
+}
+.welcome-text {
+    color: #fff;
+    font-size: 4em;
+    padding: 1.5em 0;
 }
 
-
+/**********************************************************************************************************************************/
 .content-main {
     background: none repeat scroll 0 0 #EFEFEF;
     padding-bottom: 80px;
