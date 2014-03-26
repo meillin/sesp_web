@@ -74,7 +74,7 @@
 								<a href="javascript:submitLogin(document.loginForm)" id="divenable" style="display:block" class="button tiny">
 									<s:text name="webportal.index.signin"/>
 								</a>					
-								<a href="#" disabled="disabled" id="divdisable" style="display:none" class="text-blue custom-deactivebutton">
+								<a href="#" disabled="disabled" id="divdisable" style="display:none" class="button tiny custom-deactivebutton">
 									<s:text name="webportal.index.signin"/>
 								</a>
 							</div>

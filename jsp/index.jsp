@@ -27,7 +27,7 @@
         <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/hex2.css"> 
 		<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/js/images/favicon.png" />
 		<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />		
-		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/bootstrap.css"/>		
+		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/bootstrap.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/style.tidy.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
 		

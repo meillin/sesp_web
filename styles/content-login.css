@@ -27,3 +27,6 @@ label {
 .button {
 	background-color: #000;
 }
+input:focus {
+	background: #fff;
+}
