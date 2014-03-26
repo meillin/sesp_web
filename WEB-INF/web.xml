@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>ast_sep_webportal</display-name>
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<welcome-file-list>
+		<welcome-file>jsp/authentification.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<description></description>
+		<display-name>StartupServlet</display-name>
+		<servlet-name>StartupServlet</servlet-name>
+		<servlet-class>com.capgemini.sesp.ast_sep.webclient.startup.BstWebPortalStartupServlet</servlet-class>
+		<init-param>
+			<param-name>SEPWebportalProperties</param-name>
+			<param-value>sep_webportal.properties</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<description></description>
+		<display-name>MonitorServlet</display-name>
+		<servlet-name>MonitorServlet</servlet-name>
+		<servlet-class>com.skvader.rsp.cft.monitor.servlet.MonitorServlet</servlet-class>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<servlet>
+		<display-name>FCExporter</display-name>
+		<servlet-name>FCExporter</servlet-name>
+		<servlet-class>com.fusioncharts.exporter.servlet.FCExporter</servlet-class>
+		<load-on-startup>3</load-on-startup>
+	</servlet>
+	<servlet>
+		<display-name>WebPortalInfo</display-name>
+		<servlet-name>WebPortalInfo</servlet-name>
+		<servlet-class>com.capgemini.sesp.ast_sep.webclient.servlet.WebPortalInfo</servlet-class>
+		<load-on-startup>4</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StartupServlet</servlet-name>
+		<url-pattern>/StartupServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FCExporter</servlet-name>
+		<url-pattern>/FCExporterServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>WebPortalInfo</servlet-name>
+		<url-pattern>/WebInfoServlet</url-pattern>
+	</servlet-mapping>
+	<listener>
+		<listener-class>com.capgemini.sesp.ast_sep.webclient.servlet.SessionCounterListener</listener-class>
+	</listener>
+	<session-config>
+		<session-timeout>-1</session-timeout>
+	</session-config>
+</web-app>

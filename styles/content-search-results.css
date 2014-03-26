@@ -1,0 +1,38 @@
+#main-content .accordion ul.subMenu a {
+	padding-left: 0px;
+}
+
+#main-content #block-search-results .block-title-picto {
+	background: url(../images/icons-sprite.png) 0 -450px no-repeat;
+}
+
+#main-content .large-block .installation-table  {
+	width: 100% !important;
+	max-width: 930px;
+	table-layout: fixed;
+}
+#main-content .large-block .installation-table th {
+	padding-top: 8px;
+	padding-left: 10px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	border-left: 10px solid transparent;
+}
+#main-content .large-block .installation-table td {
+	padding-top: 8px;
+	padding-left: 10px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	border-left: 10px solid transparent;
+}
+
+.block-title-button-open-all {
+	margin-left: 40px;
+}
+
+.block-title-button-close-all {
+	margin-left: 40px;
+}
+

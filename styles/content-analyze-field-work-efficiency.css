@@ -1,0 +1,212 @@
+#main-content #block-filters .block-title-picto{
+	background:url(../images/icons-sprite.png) 0 -200px no-repeat;
+}
+
+#main-content #block-work-order-type-analysis .block-title-picto{
+	background:url(../images/icons-sprite.png) 0 -25px no-repeat;
+}
+
+
+.large-block .third-column{
+	width: 260px;
+	margin : 0px 10px;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 30px;
+}
+
+.large-block .third-column .custom-select{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#main-content .large-block .third-column .select-wrapper .select-title{
+	padding-left: 1px;/*5px;*/
+	font-size: 12px;
+	font-weight: bold;
+	display: block
+} 
+
+#main-content .large-block .small-select-wrapper{
+	text-align: left;
+	width: 102px;
+	display: inline-block;
+}
+
+#main-content .large-block .third-column .select-wrapper .small-select-wrapper .select-title{
+	display: block;
+}
+
+#main-content .select-wrapper{
+	margin-top: 20px;
+	width: 204px;
+}
+
+#main-content .center-wrapper .button-wrapper{
+	margin-top: 8px;
+}
+
+#main-content #block-work-order-type-analysis-chart{
+	margin-left: 40px;
+	width: 620px;
+	height:606px;
+}
+
+#main-content #block-work-order-type-analysis-chart-filter{
+	width: 200px;
+	box-shadow: 0px 0px 12px 0px #adadad;
+	border: 1px solid #a8a8a8;
+	background-color: #2db1ea;
+	display: inline-block;
+	position: absolute;
+	top: 50px;
+	right: 20px;
+	max-height: 580px;
+	overflow: auto;
+}
+
+#main-content #block-work-order-type-analysis-chart-filter-content{
+	padding: 5px 15px;
+	background-color: white;
+	margin-top: 10px;
+	padding-bottom: 20px;
+}
+
+#main-content #block-work-order-type-analysis-chart-filter-content .title{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#main-content #block-work-order-type-analysis-chart-filter-content .filter-block{
+	margin-top: 20px;
+	font-size: 18px;
+}
+
+#main-content #block-work-order-type-analysis-chart-filter-content .filter-block-title{
+	font-weight: bold;
+}
+
+#main-content #block-work-order-type-analysis-chart-filter-content .filter-block-content{
+	margin-top: 2px;
+	font-size: 13px;
+}
+
+#main-content #table-wrapper{	
+	background: url(../images/table-shadow.png) no-repeat;
+	background-position-x: center;
+	background-position-y: bottom;
+	padding-bottom: 23px;
+	margin: 20px 40px 0px 40px;
+}
+
+#main-content #block-work-order-type-analysis-table #table-header{
+	height: 54px;
+	padding-bottom: 23px;
+	margin-bottom: 20px;
+}
+
+
+
+#main-content #block-work-order-type-analysis-table #table-header .table-header-text{
+	text-align: center;
+	padding: 0px;
+	background-color: #2db1ea;
+}
+
+#main-content #block-work-order-type-analysis-table #table-header .table-header-text.column1{
+	width: 230px;
+}
+
+#main-content #block-work-order-type-analysis-table #table-header .table-header-text.column2{
+	width: 120px;
+}
+
+#main-content #block-work-order-type-analysis-table #table-header .table-header-text.column3{
+	width: 100px;	
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#main-content #block-work-order-type-analysis-table #table-header .table-header-text.column4{
+	width: 120px;
+}
+
+#main-content #block-work-order-type-analysis-table #table-header .table-header-text.column5{
+	width: 120px;
+}
+
+#main-content #block-work-order-type-analysis-table #table-header .table-header-text.column6{
+	width: 140px;
+}
+
+#main-content #block-work-order-type-analysis-table .table-line{
+	height: 24px;
+}
+
+#main-content #block-work-order-type-analysis-table .table-line td{
+	text-align: center;	
+}
+
+#main-content #block-work-order-type-analysis-table .table-line td a{
+	color: #0b5676;
+}
+
+#main-content #block-work-order-type-analysis-table .table-line td.good{
+	color: #519136;
+	font-weight: bold;
+}
+
+#main-content #block-work-order-type-analysis-table .table-line td.bad{
+	color: #ec2327;
+	font-weight: bold;
+}
+
+#main-content #block-work-order-type-analysis-table .table-line .align-left{
+	text-align: left;
+	padding-left: 20px;
+}
+
+#main-content #block-work-order-type-analysis-table .table-line.line-average{
+	background-color: #0b5676;
+	color: white;
+}
+
+#main-content #block-work-order-type-analysis-table .table-line.line-average a{
+	color:white;	
+}
+
+#main-content #block-work-order-type-analysis-export{
+	text-align: right;
+	margin-top: 20px;
+}
+
+#main-content #block-work-order-type-analysis-export a{
+	padding-left: 40px;
+	height: 29px;
+	display: inline-block;
+	margin-right: 40px;
+	cursor: pointer;
+}
+
+#main-content #block-work-order-type-analysis-export-excel{
+	background: url(../images/excel-icon.png) no-repeat;
+}
+
+#main-content #block-work-order-type-analysis-export-pdf{
+	background: url(../images/pdf-icon.png) no-repeat;
+}
+
+
+#main-content #block-work-order-type-analysis-export a span{
+	text-decoration: underline;
+	margin-top: 5px;
+	display: block;
+}
+
+#meterValuesGridDiv{
+
+visibility:collapse;
+
+height: 0px;
+
+}

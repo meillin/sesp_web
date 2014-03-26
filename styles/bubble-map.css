@@ -1,0 +1,132 @@
+#bubble{
+	width: 210px;
+	box-shadow: 0px 0px 12px 0px #adadad;
+	border: 1px solid #a8a8a8;
+	font-family: arial;	
+	position: relative;
+}
+
+#bubble-header{
+	background-color: #2cb0ea;
+	height: 9px;
+	border-bottom: 1px solid #a8a8a8;
+}
+
+#bubble-content{
+	padding: 10px;
+}
+
+#bubble .bubble-line{
+	font-size: 12px;
+	margin-top: 2px;		
+}
+
+#bubble .bubble-line .bubble-category{
+	font-weight: bold;
+	display: inline-block;
+	width: 105px;
+	text-align: right;
+	float : left;
+}
+
+#bubble .bubble-line .bubble-value{
+	display: block;
+	padding-left: 110px;
+}
+
+#bubble .bubble-line .bubble-value a{
+	text-decoration: underline;
+	color: #0b5676;
+}
+
+#bubble .bubble-title{
+	text-align: center;
+	margin-top: 2px;
+	font-size: 14px;
+}
+
+#bubble .bubble-title .bubble-category{
+	font-weight: bold;
+	display: inline-block;
+	width: 110px;
+	text-align: right;
+}
+
+#bubble .bubble-title .bubble-value{
+	display: inline-block;
+}
+
+#bubble .bubble-title .bubble-value a{
+	text-decoration: underline;
+	font-weight: bold;
+	color: #0b5676;
+}
+
+#bubble-arrow{
+	background: url(../images/bubble-arrow.png);
+	width: 11px;
+	height: 13px;
+	position: absolute;
+	bottom: -13px;
+	left : 25px;
+	z-index: 5px;
+}
+
+
+#bubble.bubble-chart{
+	width: 340px;
+}
+
+#bubble.bubble-alarm-management{
+	width: 210px;
+}
+
+#bubble.bubble-alarm-management .bubble-category{
+	width: 105px;
+}
+
+#bubble.bubble-alarm-management .bubble-value{
+	padding-left: 110px;
+}
+
+
+
+#bubble.bubble-stock-management{
+	width: 170px;
+}
+
+#bubble.bubble-stock-management .bubble-category{
+	width: 70px;
+}
+
+#bubble.bubble-stock-management .bubble-value{
+	padding-left: 75px;
+}
+
+
+
+#bubble.bubble-area-progress{
+	width: 200px;
+}
+
+#bubble.bubble-area-progress .bubble-category{
+	width: 65px;
+}
+
+#bubble.bubble-area-progress .bubble-value{
+	padding-left: 70px;
+}
+
+
+
+#bubble.bubble-area-progress2{
+	width: 200px;
+}
+
+#bubble.bubble-area-progress2 .bubble-category{
+	width: 65px;
+}
+
+#bubble.bubble-area-progress2 .bubble-value{
+	padding-left: 70px;
+}

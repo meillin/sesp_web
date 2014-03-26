@@ -1,0 +1,62 @@
+
+/**
+ * 	ALARMS MANAGEMENT
+ */
+ 
+ #main-content #block-alarm-map #map-wrapper{
+	top: -2px;
+	position: relative;
+	box-shadow: 0px 2px 8px 0px #adadad;
+}
+ 
+
+#main-content #block-alarm-map .map-filter .block-title-picto{
+	background:url(../images/icons-sprite.png) 0 -200px no-repeat;
+}
+
+#main-content #block-alarm-charts .block-title-picto{
+	background:url(../images/icons-sprite.png) 0 -100px no-repeat;
+}
+
+
+#main-content #block-alarm-charts .content #block-alarm-charts-title{
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 20px;
+}
+
+#main-content #block-alarm-charts .content #block-alarm-charts-period{
+	font-weight: bold;
+	text-align: center;
+	margin-top: 5px;
+}
+
+#main-content #block-alarm-charts .content #block-alarm-charts-view{
+	/*background: url(../images/uc016-alarm-chart.jpg) no-repeat center;
+	height: 313px;*/
+	width: 100%;
+	height: 100%;
+	
+	text-align: center;
+	margin-top: 10px;
+}
+
+#main-content #block-alarm-charts .content #block-alarm-charts-groupBy{
+	font-weight: bold;
+	text-align: center;	
+	margin-top: 5px; 
+}
+
+#main-content #block-alarm-charts .content #block-alarm-charts-radioBox{
+	margin-top: 10px;
+	text-align: center;
+}
+
+#main-content #block-alarm-charts .content #block-alarm-charts-radioBox #chart-form{
+	text-align: center;
+}
+
+#main-content #block-alarm-charts .content #block-alarm-charts-radioBox #chart-form .legend1{
+	margin-right: 20px;
+}

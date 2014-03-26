@@ -1,0 +1,58 @@
+.modal{
+	display:none;
+	width: 280px;
+	position : fixed;	
+	z-index: 200;
+	background-color: white;
+	border: 1px solid #a8a8a8;
+	box-shadow: 0px 0px 12px 0px #adadad;
+}
+
+.modal .modal-title{
+	font-size: 20px;
+	font-weight: bold;	
+	margin-left: 20px;
+	margin-top: 15px;
+	margin-bottom: 25px;
+}
+
+.modal .button-quit{
+	background: url(../images/close-popup.png);
+	width: 29px;
+	height: 30px;
+	position: absolute;
+	top: -11px;
+	right: -13px;
+}
+
+.modal .select-wrapper{
+	margin-top: 10px;	
+	padding: 0px 20px;
+	font-size: 0;
+}
+
+.modal .select-wrapper .small-select-wrapper{
+	display: inline-block;
+	vertical-align: middle;
+	width: 97px;	
+}
+
+.modal .select-wrapper .select-title{
+	display: block;
+	font-weight: bold;
+	padding-left: 5px;
+	margin-bottom: 2px;
+	font-size: 12px;
+}
+
+.modal .button-select .button-wrapper.left{
+	float : left;
+}
+
+.modal .button-select .button-wrapper.right{
+	float : right;
+}
+
+.modal .select-wrapper .button-wrapper a{
+	width: 50px;
+}

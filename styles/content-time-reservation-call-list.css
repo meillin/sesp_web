@@ -1,0 +1,120 @@
+#main-content #block-filter .block-title-picto{
+	background:url(../images/icons-sprite.png) 0 -50px no-repeat;
+}
+
+#main-content #block-search-results .block-title-picto{
+	background:url(../images/icons-sprite.png) 0 -450px no-repeat;
+}
+
+
+.large-block .third-column{
+	width: 260px;
+	margin : 0px 10px;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 30px;
+	margin-bottom: 10px;
+}
+
+.large-block .third-column .custom-select{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#main-content .large-block .third-column .select-wrapper .select-title{
+	padding-left: 5px;
+	font-size: 12px;
+	font-weight: bold;
+	display: block
+} 
+
+#main-content .large-block .small-select-wrapper{
+	text-align: right;
+	width: 204px;
+	margin-top: 10px;
+}
+
+#main-content .large-block .third-column .select-wrapper .small-select-wrapper .select-title{
+	display: inline-block;
+}
+
+#main-content .select-wrapper{
+	margin-top: 20px;
+}
+
+#main-content #filter-slider-wrapper{
+	width: 204px;
+	margin-top: 50px;
+}
+
+#main-content #filter-slider-wrapper .select-title{
+	padding-left: 5px;
+	font-size: 12px;
+	font-weight: bold;
+	display: block;
+}
+
+#main-content #filter-slider{
+	margin-top: 30px;
+}
+
+#main-content #filter-slider-wrapper .ui-rangeSlider-container{
+	margin: 0px;
+}
+
+#main-content #filter-slider .ui-rangeSlider-handle{
+	width: 8px;
+	height: 34px;
+	top:-6px !important;
+	background: rgba(100,100,100,1);
+}
+
+#main-content #filter-slider .ui-rangeSlider-label-value{
+	font-weight: bold;
+	color : #41474c;
+}
+
+#main-content #filter-slider .ui-rangeSlider-arrow{
+	display: none;	
+}
+
+#main-content #table-wrapper{	
+	background: url(../images/table-shadow.png) no-repeat;
+	background-position-x: center;
+	background-position-y: bottom;
+	padding-bottom: 23px;
+	margin: 20px 40px 0px 40px;
+}
+
+#main-content #block-search-results .big-table th,
+#main-content #block-search-results .big-table td{
+	padding-left: 10px;
+}
+
+#main-content #block-search-results .export-wrapprer{
+	text-align: right;
+
+	margin-top: 20px;
+}
+
+#main-content #block-search-results .export-wrapprer a{
+	padding-left: 40px;
+	height: 29px;
+	display: inline-block;
+	margin-right: 40px;
+	cursor: pointer;
+}
+
+#main-content #block-search-results-export{
+	display: inline-block;
+}
+
+#main-content #block-search-results .export-wrapprer #block-search-results-export-excel{
+	background: url(../images/excel-icon.png) no-repeat;
+}
+
+#main-content #block-search-results .export-wrapprer a span{
+	text-decoration: underline;
+	margin-top: 5px;
+	display: block;
+}

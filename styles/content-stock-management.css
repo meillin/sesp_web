@@ -1,0 +1,100 @@
+#main-content #block-on-pallet .block-title-picto{
+	background:url(../images/icons-sprite.png) 0 0 no-repeat;
+}
+
+#main-content #block-on-pallet .map-filter .block-title-picto{
+	background:url(../images/icons-sprite.png) 0 -200px no-repeat;
+}
+
+#main-content #block-on-pallet #tabs-wrapper{
+	position: absolute;
+	top: 33px;
+	left:150px;
+}
+
+#main-content #block-on-pallet #tabs-wrapper .tab{
+	height: 28px;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+}
+
+#main-content #block-on-pallet #tabs-wrapper #block-on-pallet-tab1{
+	width: 161px;
+	background: url(../images/tabs-sprite.png) 0 0 no-repeat;
+	z-index: 13;
+}
+
+#main-content #block-on-pallet #tabs-wrapper #block-on-pallet-tab1.selected{
+	background: url(../images/tabs-sprite.png) 0 -28px no-repeat;
+	z-index: 15;
+}
+
+#main-content #block-on-pallet #tabs-wrapper #block-on-pallet-tab2{
+	width: 152px;
+	background: url(../images/tabs-sprite.png) -161px 0 no-repeat;
+	margin-left: -42px;
+	z-index: 12;
+}
+
+#main-content #block-on-pallet #tabs-wrapper #block-on-pallet-tab2.selected{
+	background: url(../images/tabs-sprite.png) -161px -28px no-repeat;
+	z-index: 15;
+}
+
+#main-content #block-on-pallet #tabs-wrapper #block-on-pallet-tab3{
+	width: 152px;
+	background: url(../images/tabs-sprite.png) -313px 0 no-repeat;
+	margin-left: -42px;
+	z-index: 11;
+}
+
+#main-content #block-on-pallet #tabs-wrapper #block-on-pallet-tab3.selected{
+	background: url(../images/tabs-sprite.png) -313px -28px no-repeat;
+	z-index: 15;
+}
+
+#main-content #block-on-pallet #map-wrapper{
+	top: -2px;
+	position: relative;
+	box-shadow: 0px 2px 8px 0px #adadad;
+}
+
+#main-content #block-on-pallet .map-filter{
+	top:40px;
+	opacity:100;
+}
+
+#main-content #block-on-pallet #chart-wrapper{
+	margin-top: 20px;
+	width: 100%;
+	height: 100%;
+}
+
+#main-content #block-on-pallet #chart-wrapper #block-on-pallet-chart-view{
+	width: 100%;
+	height: 65%;
+	text-align: center;
+}
+
+#main-content #block-on-pallet #chart-wrapper #chart-legend{
+	text-align: center;
+	margin: 40px 0px;
+}
+
+#main-content #block-on-pallet #chart-wrapper #chart-legend .select-wrapper{
+	display: inline-block;
+	margin: 0px 20px;
+}
+
+#main-content #block-on-pallet #chart-wrapper #chart-legend .select-wrapper .select-title{
+	display: block;	
+	font-weight: bold;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	font-size: 12px;
+}
+
+#main-content #chart-wrapper #chart-legend .button-wrapper{
+	margin-top: 10px;
+}

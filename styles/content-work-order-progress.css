@@ -1,0 +1,61 @@
+#main-content #block-filters .block-title-picto{
+	background:url(../images/icons-sprite.png) 0 -200px no-repeat;
+}
+
+#main-content #block-work-order-status .block-title-picto{
+	background:url(../images/icons-sprite.png) 0 -25px no-repeat;
+}
+
+#main-content #block-progress-overview .block-title-picto{
+	background:url(../images/icons-sprite.png) 0 -125px no-repeat;
+}
+
+#main-content #block-area-progress .block-title-picto{
+	background:url(../images/icons-sprite.png) 0 -475px no-repeat;
+}
+
+.large-block .quarter-column{
+	width: 230px;
+	margin : 0px 10px;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 50px;
+}
+
+.large-block .quarter-column .custom-select{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#main-content .large-block .quarter-column .select-wrapper .select-title{
+	padding-left: 1px;
+	font-size: 12px;
+	font-weight: bold;
+	display: block
+} 
+
+#main-content .large-block .small-select-wrapper{
+	text-align: left;
+	width: 102px;
+	display: inline-block;
+}
+
+#main-content .large-block .quarter-column .select-wrapper .small-select-wrapper .select-title{
+	display: block;
+}
+
+#main-content .select-wrapper{
+	margin-top: 20px;
+	width: 204px;
+}
+
+#main-content .center-wrapper{
+	margin-top: -45px !important;
+    padding-right: 18px !important;
+    padding-top: 10px !important;
+    text-align: right !important;
+}
+
+#main-content #map-wrapper{
+	margin-top: -2px;
+}

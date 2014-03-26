@@ -1,0 +1,39 @@
+/**
+ * 	Footer
+ */
+
+footer{
+	width: 100%;
+	height: 51px;
+	position : absolute;
+	bottom : 0px;
+	left:0px;
+	text-align: center;
+	background-color: #41474c;
+}
+
+footer #footer-inner{
+	margin-top: 8px;
+	height: 41px;
+}
+
+footer .left-block{
+	float: left;	
+}
+
+footer .right-block{
+	float: right;
+}
+
+footer .left-block .client-logo{
+	margin: 7px 0 0 10px;
+}
+
+footer .right-block .copyright{
+	font-weight: bold;
+	text-decoration: underline;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 10px;
+	margin: 12px 20px 0px 10px;
+}

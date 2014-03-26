@@ -1,0 +1,456 @@
+body {
+	color: #333333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    line-height: 18px; margin:0px;
+}
+body.pagebg{ background: url(../images/pagebg.png) repeat-x 0 0px;}
+td {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+th {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+ul, li {margin:0px;}
+
+a { color:#0033CC; text-decoration:none}
+a:hover{text-decoration: underline}
+
+/* Global CSS */
+
+#wrapper {
+	width: 100%;
+	clear: both;
+	background:url(../images/smartenergylogo_right.png) no-repeat top right;}
+
+h1{font-size: 30px;
+    line-height: 36px;}
+	
+h2.mainHead{ font-family:Arial, Helvetica, sans-serif; font-size:24px; font-weight:normal; padding: 0px 15px 15px 20px; margin:0px; width:655px; float:left; clear:right; color: #526b34; }
+
+h3.subhead { text-align:left; border-bottom:1px solid #999; margin:0 0 20px 0; font-weight:normal; color:#727272}
+.right_margin_0 { margin-right:0px !important;}
+
+.clearboth{ clear:both; margin-top:20px;}
+/* Header Area starts here */
+.toppadding{padding-top:10px;}
+#header { width:950px; margin:0px auto 0 auto; clear:both; display:block;}
+
+#headerLogin{ width:950px; margin:0px auto 0 auto; clear:both; display:block;  }
+#headerLogin #logoCG{ width:200px; float:left; background:url(../images/curve.png) no-repeat 42px 0; position:relative; left:-65px; top: 18px;}
+
+#header #logoCG{ width:200px; float:left; background:url(../images/curve.png) no-repeat 42px 0; position:relative; left:-65px; top: 2px;}
+#header #logoCap { float:right; padding:8px}
+
+.logoSection{ clear:both; margin:15px auto 0; /*overflow:hidden;*/}
+.headSearch{clear:both; overflow:hidden; padding: 30px 0 0}
+
+/* login box */
+
+.searchButton { border:0px solid ; background:#5d9630; padding:5px; color:#FFFFFF; text-transform:uppercase}
+.searchBox { border:1px solid #ccc; width:200px; height:26px!important;}
+#login{
+  width: 650px;
+  margin:150px auto; overflow:hidden; clear:both}
+  
+.logoleft{ width: 320px; border-right:3px solid #e0e0e0; float:left}
+
+.nav{clear: both; widows:950px; padding:3px 0; display:block; overflow:hidden}
+
+.nav .welcomeuser {width: 500px; float:left; }
+.nav .welcomeuser span { color:#0000CC}
+.nav .loginLogout {width: 400px; float:right; text-align:right}
+.nav .loginLogout  ul li { display:inline; padding:0 5px;}
+
+
+/* login area start here */
+
+.signin{ height:254px; margin:0 0 0 0; padding-left:10px}
+#formlogin{ width:300px; float:right; margin:16px 0 0 0}
+
+#formlogin input { clear:both; display:block; width:250px; height:23px; }
+
+.margin-bottom { clear:both; height:58px;}
+.margin-bottom label{width: 100px; clear:both; }
+
+
+.btn {
+	text-indent:-999px; background: url(../images/bt_signin.png) no-repeat; display:block; height:29px; width:100px;
+}
+
+
+/* middle Container start */
+
+#middlecontainer { width:950px; clear:both; margin:0px auto; padding:2px 0 0 0}
+#middlecontainer .box { background:url(../images/boxbg.png) no-repeat; width:260px; height:140px; text-align:center; padding-top:40px; margin:10px 80px 50px 0; float:left}
+#middlecontainer .last { clear:right}
+
+.box h3{ font-weight:normal; color:#5c5c5c; font-size:18px;}
+.box h3 a {color:#5c5c5c;}
+
+/* footer area */
+#footer {width:950px; margin:10px auto; text-align:left; border-top:1px solid #d1d1d1; padding:10px; clear:both}
+
+#footerInner {width:100%; margin:10px auto; background:url(../images/footerbg.png) repeat-x; margin:10px auto; clear:both; height:40px;}
+.footerText {width:950px; margin:0px auto; text-align:left; clear:both; padding:15px 0;}
+
+
+
+/* graph image display setting */
+
+.graphImgconsumption { padding:20px; clear:both; border-top: 1px #ececec solid; margin-top:10px;}
+
+.graphImgconsumption img { max-width:900px}
+
+
+/* tab CSS starts here */
+
+#tabbed_box_1 {
+	margin: 0px auto 0px auto;
+/*	width:300px;*/
+}
+
+
+.tabbed_area {
+/*	border:1px solid #494e52;
+	background-color:#636d76;
+	padding:8px;	*/
+}
+
+ul.tabs {
+	margin:0px; padding:0px;
+	margin-top:5px;
+	margin-bottom:6px;
+}
+ul.tabs li {
+	list-style:none;
+	display:inline; margin-right:8px;
+}
+ul.tabs li a {
+	background-color:#fff;
+	color:#727272;
+	padding:8px 14px 8px 14px;
+	text-decoration:none;
+	font-size:16px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	text-transform:normal;
+	border:1px solid #e4e4e4;
+	background-image:url(../images/tab_on.jpg);
+	background-repeat:repeat-x;	 
+	background-position:top;
+	
+	-moz-border-radius: 5px 5px 0px 0px;
+	
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -khtml-border-radius: 5px 5px 0px 0px;
+
+	
+	behavior: url(border-radius.htc);
+	border-radius: 5px 5px 0px 0px;
+}
+ul.tabs li a:hover {
+	background-color:#fff;
+	border-color:#e4e4e4;
+}
+ul.tabs li a.active {
+	background-color:#ffffff;
+	color:#282e32;
+	border:1px solid #e4e4e4; 
+	border-bottom: 1px solid #ffffff;
+	background-image:url(../images/tab_on.jpg);
+	background-repeat:repeat-x;
+	background-position:top;	
+}
+.content {
+	background-color:#ffffff;
+	padding:10px;
+	border:1px solid #e4e4e4; 	
+	font-family:Arial, Helvetica, sans-serif;
+	background-image:url(../content_bottom.jpg);
+	background-repeat:repeat-x;	 
+	background-position:bottom;	
+	
+	-moz-border-radius: 0px 5px 5px 5px;
+    -webkit-border-radius: 0px 5px 5px 5px;
+    -khtml-border-radius: 0px 5px 5px 5px;
+    border-radius: 0px 5px 5px 5px;
+		behavior: url(border-radius.htc);
+	border-radius: 0px 5px 5px 5px;
+
+}
+#content_2, #content_3 { display:none; }
+
+.content ul {
+	margin:0px;
+	padding:0px 20px 0px 20px;
+}
+.content ul li {
+	list-style:none;
+	border-bottom:1px solid #d6dde0;
+	padding-top:15px;
+	padding-bottom:15px;
+	font-size:13px;
+}
+.content ul li:last-child {
+	border-bottom:none;
+}
+.content ul li a {
+	text-decoration:none;
+	color:#3e4346;
+}
+.content ul li a small {
+	color:#8b959c;
+	font-size:9px;
+	text-transform:uppercase;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	position:relative;
+	left:4px;
+	top:0px;
+}
+.content ul li a:hover {
+	color:#a59c83;
+}
+.content ul li a:hover small {
+	color:#baae8e;
+}
+
+/* tab CSS ends here */
+
+
+/* Report form CSS start */
+
+.input-append.date .add-on i, .input-prepend.date .add-on i {
+display: block;
+cursor: pointer;
+width: 16px;
+height: 16px;
+}
+
+
+/* from application-styles-min.css*/
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+display: inline-block;
+height: 24px;
+padding: 0px;
+margin-bottom: 9px;
+font-size: 13px;
+line-height: 18px;
+color: #555;
+}
+
+/*Select box*/
+/* Dropdown control */
+.selectBox-dropdown {
+	min-width: 110px;
+	position: relative;
+	border: solid 1px #BBB;
+	line-height: 1.5;
+	text-decoration: none;
+	text-align: left;
+	color: #000;
+	outline: none;
+	vertical-align: middle;
+	background: #F2F2F2;
+	background: -moz-linear-gradient(top, #F8F8F8 1%, #E1E1E1 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #F8F8F8), color-stop(100%, #E1E1E1));
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F8F8F8', endColorstr='#E1E1E1', GradientType=0);
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .75);
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .75);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .75);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	display: inline-block;
+	cursor: default;
+}
+
+.selectBox-dropdown:focus,
+.selectBox-dropdown:focus .selectBox-arrow {
+	border-color: #666;
+}
+
+.selectBox-dropdown.selectBox-menuShowing {
+	-moz-border-radius-bottomleft: 0;
+	-moz-border-radius-bottomright: 0;
+	-webkit-border-bottom-left-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.selectBox-dropdown .selectBox-label {
+	padding: 2px 8px;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.selectBox-dropdown .selectBox-arrow {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 23px;
+	height: 100%;
+	background: url(../images/jquery.selectBox-arrow.gif) 50% center no-repeat;
+	border-left: solid 1px #BBB;
+}
+
+
+/* Dropdown menu */
+.selectBox-dropdown-menu {
+	position: absolute;
+	z-index: 99999;
+	max-height: 200px;
+	min-height: 1em;
+	border: solid 1px #BBB; /* should be the same border width as .selectBox-dropdown */
+	background: #FFF;
+	-moz-box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+	-webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+	box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+	overflow: auto;
+}
+
+
+ 
+/* Icon CSS */
+
+[class^="icon-"],[class*=" icon-"]{display:inline-block;width:14px;height:14px;*margin-right:.3em;line-height:14px;vertical-align:text-top;background-image:url("../images/glyphicons-halflings.png");background-position:14px 14px;background-repeat:no-repeat;}[class^="icon-"]:last-child,[class*=" icon-"]:last-child{*margin-left:0;}.icon-white{background-image:url("../images/glyphicons-halflings-white.png");}.icon-glass{background-position:0 0;}.icon-music{background-position:-24px 0;}.icon-search{background-position:-48px 0;}.icon-envelope{background-position:-72px 0;}.icon-heart{background-position:-96px 0;}.icon-star{background-position:-120px 0;}.icon-star-empty{background-position:-144px 0;}.icon-user{background-position:-168px 0;}.icon-film{background-position:-192px 0;}.icon-th-large{background-position:-216px 0;}.icon-th{background-position:-240px 0;}.icon-th-list{background-position:-264px 0;}.icon-ok{background-position:-288px 0;}.icon-remove{background-position:-312px 0;}.icon-zoom-in{background-position:-336px 0;}.icon-zoom-out{background-position:-360px 0;}.icon-off{background-position:-384px 0;}.icon-signal{background-position:-408px 0;}.icon-cog{background-position:-432px 0;}.icon-trash{background-position:-456px 0;}.icon-home{background-position:0 -24px;}.icon-file{background-position:-24px -24px;}.icon-time{background-position:-48px -24px;}.icon-road{background-position:-72px -24px;}.icon-download-alt{background-position:-96px -24px;}.icon-download{background-position:-120px -24px;}.icon-upload{background-position:-144px -24px;}.icon-inbox{background-position:-168px -24px;}.icon-play-circle{background-position:-192px -24px;}.icon-repeat{background-position:-216px -24px;}.icon-refresh{background-position:-240px -24px;}.icon-list-alt{background-position:-264px -24px;}.icon-lock{background-position:-287px -24px;}.icon-flag{background-position:-312px -24px;}.icon-headphones{background-position:-336px -24px;}.icon-volume-off{background-position:-360px -24px;}.icon-volume-down{background-position:-384px -24px;}.icon-volume-up{background-position:-408px -24px;}.icon-qrcode{background-position:-432px -24px;}.icon-barcode{background-position:-456px -24px;}.icon-tag{background-position:0 -48px;}.icon-tags{background-position:-25px -48px;}.icon-book{background-position:-48px -48px;}.icon-bookmark{background-position:-72px -48px;}.icon-print{background-position:-96px -48px;}.icon-camera{background-position:-120px -48px;}.icon-font{background-position:-144px -48px;}.icon-bold{background-position:-167px -48px;}.icon-italic{background-position:-192px -48px;}.icon-text-height{background-position:-216px -48px;}.icon-text-width{background-position:-240px -48px;}.icon-align-left{background-position:-264px -48px;}.icon-align-center{background-position:-288px -48px;}.icon-align-right{background-position:-312px -48px;}.icon-align-justify{background-position:-336px -48px;}.icon-list{background-position:-360px -48px;}.icon-indent-left{background-position:-384px -48px;}.icon-indent-right{background-position:-408px -48px;}.icon-facetime-video{background-position:-432px -48px;}.icon-picture{background-position:-456px -48px;}.icon-pencil{background-position:0 -72px;}.icon-map-marker{background-position:-24px -72px;}.icon-adjust{background-position:-48px -72px;}.icon-tint{background-position:-72px -72px;}.icon-edit{background-position:-96px -72px;}.icon-share{background-position:-120px -72px;}.icon-check{background-position:-144px -72px;}.icon-move{background-position:-168px -72px;}.icon-step-backward{background-position:-192px -72px;}.icon-fast-backward{background-position:-216px -72px;}.icon-backward{background-position:-240px -72px;}.icon-play{background-position:-264px -72px;}.icon-pause{background-position:-288px -72px;}.icon-stop{background-position:-312px -72px;}.icon-forward{background-position:-336px -72px;}.icon-fast-forward{background-position:-360px -72px;}.icon-step-forward{background-position:-384px -72px;}.icon-eject{background-position:-408px -72px;}.icon-chevron-left{background-position:-432px -72px;}.icon-chevron-right{background-position:-456px -72px;}.icon-plus-sign{background-position:0 -96px;}.icon-minus-sign{background-position:-24px -96px;}.icon-remove-sign{background-position:-48px -96px;}.icon-ok-sign{background-position:-72px -96px;}.icon-question-sign{background-position:-96px -96px;}.icon-info-sign{background-position:-120px -96px;}.icon-screenshot{background-position:-144px -96px;}.icon-remove-circle{background-position:-168px -96px;}.icon-ok-circle{background-position:-192px -96px;}.icon-ban-circle{background-position:-216px -96px;}.icon-arrow-left{background-position:-240px -96px;}.icon-arrow-right{background-position:-264px -96px;}.icon-arrow-up{background-position:-289px -96px;}.icon-arrow-down{background-position:-312px -96px;}.icon-share-alt{background-position:-336px -96px;}.icon-resize-full{background-position:-360px -96px;}.icon-resize-small{background-position:-384px -96px;}.icon-plus{background-position:-408px -96px;}.icon-minus{background-position:-433px -96px;}.icon-asterisk{background-position:-456px -96px;}.icon-exclamation-sign{background-position:0 -120px;}.icon-gift{background-position:-24px -120px;}.icon-leaf{background-position:-48px -120px;}.icon-fire{background-position:-72px -120px;}.icon-eye-open{background-position:-96px -120px;}.icon-eye-close{background-position:-120px -120px;}.icon-warning-sign{background-position:-144px -120px;}.icon-plane{background-position:-168px -120px;}.icon-calendar{background-position:-192px -120px;}.icon-random{background-position:-216px -120px;}.icon-comment{background-position:-240px -120px;}.icon-magnet{background-position:-264px -120px;}.icon-chevron-up{background-position:-288px -120px;}.icon-chevron-down{background-position:-313px -119px;}.icon-retweet{background-position:-336px -120px;}.icon-shopping-cart{background-position:-360px -120px;}.icon-folder-close{background-position:-384px -120px;}.icon-folder-open{background-position:-408px -120px;}.icon-resize-vertical{background-position:-432px -119px;}.icon-resize-horizontal{background-position:-456px -118px;}.icon-hdd{background-position:0 -144px;}.icon-bullhorn{background-position:-24px -144px;}.icon-bell{background-position:-48px -144px;}.icon-certificate{background-position:-72px -144px;}.icon-thumbs-up{background-position:-96px -144px;}.icon-thumbs-down{background-position:-120px -144px;}.icon-hand-right{background-position:-144px -144px;}.icon-hand-left{background-position:-168px -144px;}.icon-hand-up{background-position:-192px -144px;}.icon-hand-down{background-position:-216px -144px;}.icon-circle-arrow-right{background-position:-240px -144px;}.icon-circle-arrow-left{background-position:-264px -144px;}.icon-circle-arrow-up{background-position:-288px -144px;}.icon-circle-arrow-down{background-position:-312px -144px;}.icon-globe{background-position:-336px -144px;}.icon-wrench{background-position:-360px -144px;}.icon-tasks{background-position:-384px -144px;}.icon-filter{background-position:-408px -144px;}.icon-briefcase{background-position:-432px -144px;}.icon-fullscreen{background-position:-456px -144px;}
+
+/* icon CSS ends here */
+
+/* --- Accordion --- */
+.js #main .accordion {visibility:hidden}
+
+.js #side .accordion {display:none}
+
+.accordion {margin:0; padding:0 10px}
+
+.accordion li {list-style-type:none}
+
+.accordion li.last-child {margin-left:19px; list-style-type:disc}
+
+#side ul.accordion ul {margin:0; padding:0 0 0 20px;}
+
+.accordion .outer {border:1px solid #dadada; border-width:0 1px 1px; background: #fff}
+
+.accordion .inner {margin-bottom:0; padding:.5em 20px 1em; overflow:hidden}
+
+.accordion .inner .inner {padding-bottom:0}
+
+.accordion .h {padding-top:.3em}
+
+.accordion p {margin:.5em 0 1em}
+
+.switch {margin-bottom:.5em}
+
+/*  
+  Add styles for all links in the 'accordion':
+.accordion a {...}
+*/    
+
+a.trigger {display:block; padding-left:20px; background-image: url(../style/images/plus.gif); background-repeat: no-repeat; background-position: 1px 50%;  font-weight:700}
+
+a.trigger.open {background-image: url(../style/images/minus.gif)}
+
+.last-child a.trigger{padding-left:1px; background-image:none; font-weight:normal}
+
+#main a.trigger {background-color:#f0f0f0}
+
+#main a.trigger.open {border-color:#dadada; background-color:#e7e7e7}
+
+#main a:hover.trigger.open, #main a:focus.trigger.open, #main a:active.trigger.open {border-color:#bcd}
+
+#main .switch a.open {background:transparent none}
+
+#side a.active{font-weight:700; color:#f72; text-decoration:none}
+
+
+/* meter detilas accordion CSS */
+ * { margin:0; padding:0; } /* a simple reset */
+        .head, li, h2 { margin-bottom:15px; }
+        .head { display:block; }
+        .contentMT { display:none; }
+.meterDT ul li { list-style-type:none;}
+.meterDT ul li a { text-decoration:none; color:#727272;}
+
+.meterDT {	
+	background-color:#fff;
+	color:#727272;
+	padding:7px 0 0 20px;
+	margin-top:20px;
+	text-decoration:none;
+	font-size:16px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	text-transform:normal;
+	border:1px solid #e4e4e4;
+	background-image:url(../images/tab_on.jpg);
+	background-repeat:repeat-x;	 
+	background-position:top;
+	overflow:hidden;
+	
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+	behavior: url(border-radius.htc);
+	border-radius: 5px;
+
+}
+
+
+/* single accordion css ends here */
+
+
+/* meter details cSS */
+.meterDTcontent { float:left; width:600px; margin-bottom:15px;}
+
+.meterDTcontent table td{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; padding:8px; background:#f6fdf0; color:#000;}
+
+.meterDTcontent .mdthead { width:250px; background:#f5f5f5;}
+.meterImg img{ padding:50px 0 0 30px;}
+/*
+.summary{ margin-bottom:20px;}
+.summary table th { font-size:18px; padding:15px;}
+.summary table td{ padding:10px; background:#f5f5f5; font-size:14px;}
+
+.summary .summerysubHead{ background: #E7F7DD; text-align:left; font-weight:bold; font-size:14px;}
+*/
+
+.summary{ margin-bottom:20px;}
+.summary table th { font-size:13px; padding:5px;}
+.summary table td{ padding:5px; background:#f5f5f5; font-size:12px;}
+
+.summary .summerysubHead{ background: #E7F7DD; text-align:left; font-weight:bold; font-size:12px;}
+
+.column1ME{ float:left; width:440px; border:0px solid; margin-right:0px;}
+
+
+/* logistics Report CSS */
+.graphLogistics{ clear:both; width:100%; text-align:left }
+.graphLogistics img{ border:1px solid #9f9e9e; clear:both; width:950px}
+.mapindicationDetails { clear:both; margin:10px 0 border:1px solid;}
+.mapindicationDetails ul li{ text-align:left; display:inline; padding:0 30px 0 15px; }
+
+.centralstock { background:url(../images/central_icon.png) no-repeat 0 3px;}
+.localstock { background:url(../images/local_stock_icon.png) no-repeat 0 3px;}
+.externalsite { background:url(../images/external_site_icon.png) no-repeat 0 3px;}
+.servicesite { background:url(../images/servicesite_icon.png) no-repeat 0 3px;}
+.servicevehicle { background:url(../images/servicevehicle_icon.png) no-repeat 0 3px;}
+
+/* form logistic */
+
+#formLogistic{ border:1px solid #9f9e9e; padding:10px 10px 0 10px; margin:0 0 0px 0; background:#f5f3f3;}
+.arrowForm{ width:26px; position:relative; top:15px; left:100px;}
+#formLogistic label { padding-right:20px; width:110px; float:left;}
+
+.suboptioncheckbox{ clear:both; margin:0; position: relative; top: -6px;}
+.alertbreakup label{width:75px !important; }
+
+#formLogistic select{ width:215px;}
+
+
+.curveTop{ position:absolute; top:123px; left:35px;}
