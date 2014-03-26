@@ -14,7 +14,8 @@ html, body{
 #wrapper{
 	min-height: 100%;
 	position: relative;
-	}
+	background: #ebefee;
+}
 
 #main-content{
 	padding:10px 0px 61px 0px;

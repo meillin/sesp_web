@@ -93,16 +93,8 @@ a:hover {
     color: #1E679F;
     text-decoration: underline;
 }
-.row {
-    margin-left: -20px;
-}
-.row:before, .row:after {
-    content: "";
-    display: table;
-}
-.row:after {
-    clear: both;
-}
+
+
 [class*="span"] {
     float: left;
     margin-left: 20px;
@@ -5459,30 +5451,21 @@ html.hq .hidden-notice .talk {
     font-weight: 700;
 }
 
-#main-content-index{
-	padding:10px 0px 61px 0px;
-	width: 1090px;
-	margin-left: auto;
-	margin-right: auto;
-	font-size:0;
-	text-align: center;
-}
-
-#main-content-index *{
+#main-content-index {
+    background-image: url(../images/2014/dashboard_bg.jpg);
+    background-repeat: repeat-x;
+    background-color: #ebefee;
 	font-size:14px;
 	/*text-align: center;*/
 }
+#main-content-index ul li {
+    background: #5eb785;
+        margin-right: 1em;
 
-/*
-#main-content2{
-	padding:80px 0px 61px 0px;
-	width: 980px;
-	height:auto;
-	margin-left: auto;
-	margin-right: auto;
-	font-size:0;
 }
-*/
+#main-content-index h3 {
+    color: #fff;
+}
 
 #main-content-index .text-grey,.block-accordion {
 	font-size:14px;
@@ -6096,7 +6079,7 @@ button.link:hover {
     content: "H";
 }
 .power-icn:before {
-    content: ";
+    content: "";
 }
 .check-icn:before {
     content: "T";

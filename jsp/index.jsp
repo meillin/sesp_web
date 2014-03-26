@@ -18,16 +18,14 @@
 		</script>
 		<![endif]-->
 		<%String contextPath = request.getContextPath(); %>
-		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/color.css"/>
+    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-block.css" />
-		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/footer.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-search-results.css" />
-        <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/hex2.css"> 
+    <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/hex2.css"> 
 		<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/js/images/favicon.png" />
 		<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />		
-		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/bootstrap.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/style.tidy.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
 		
@@ -38,64 +36,127 @@
 		<script type="text/javascript" src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
 		<script type="text/javascript" src="<%=contextPath%>/js/index-init.js"></script>
 <%-- 		<script type="text/javascript" src="<%=contextPath%>/js/search-results.js"></script>
- --%>		<script type="text/javascript" src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>		
+ --%>
+    <script type="text/javascript" src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>		
 		<script type="text/javascript" src="<%=contextPath%>/js/jquery.cookie.js"></script>		
 		
 		<script src="<%=contextPath%>/js/sesp_ajax.js"></script>
 		<script src="<%=contextPath%>/js/spin.js"></script>
 		<script src="<%=contextPath%>/js/ajax-loader.js"></script>
+
+
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+  <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+  <![endif]-->
 		
 </head>
 <body>
 <div id="wrapper">
-<script>
-        contextPath = "<%=request.getContextPath()%>";           
-        isAjaxSearch = false;    	
-        i18nerrorInvalidSearchInput = "<s:text name='webportal.search.results.error.invalidsearchinput'/>"; 
-        i18nerrorInvalidSearchAction = "<s:text name='webportal.search.results.error.invalidsearchaction'/>";        
-        i18nerrorNoDataForSearch = "<s:text name='webportal.search.results.error.nosearchresults'/>";   
-    </script>
+  <script>
+    contextPath = "<%=request.getContextPath()%>";     
+    isAjaxSearch = false;
+    i18nerrorInvalidSearchInput = "<s:text name='webportal.search.results.error.invalidsearchinput'/>";
+    i18nerrorInvalidSearchAction = "<s:text name='webportal.search.results.error.invalidsearchaction'/>";
+    i18nerrorNoDataForSearch = "<s:text name='webportal.search.results.error.nosearchresults'/>";
+  </script>
 
 <%@ include file="headerv311.inc" %>
- <div id="main-content-index">
-<div class="inner" style="margin-bottom:5px;"> 
+
+<div id="main-content-index">
+  <div class="row">
+    <div class="large-12 columns">
+
+     <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+
+      <li>
+        <a class="patch" href="<%=contextPath%>/std/ViewResourceProjectionAction" alt="RESOURCE PROJECTIONS" title="RESOURCE PROJECTIONS">
+          <img src="../images/chart_line_64.png" />
+          <h3>RESOURCE PROJECTIONS</h3>
+        </a>
+      </li>
+
+      <li>
+        <img src="../images/chart_line_64.png" />
+        <h3>RESOURCE PROJECTIONS</h3>
+      </li>
+
+      <li>
+        <img src="../images/chart_line_64.png" />
+        <h3>RESOURCE PROJECTIONS</h3>
+      </li>
+
+      <li>
+        <img src="../images/chart_line_64.png" />
+        <h3>RESOURCE PROJECTIONS</h3>
+      </li>
+
+      <li>
+        <img src="../images/chart_line_64.png" />
+        <h3>RESOURCE PROJECTIONS</h3>
+      </li>
+
+     <li>
+        <img src="../images/chart_line_64.png" />
+        <h3>RESOURCE PROJECTIONS</h3>
+      </li>
+
+     <li>
+        <img src="../images/chart_line_64.png" />
+        <h3>RESOURCE PROJECTIONS</h3>
+      </li>
+
+      <li>
+        <img src="../images/chart_line_64.png" />
+        <h3>RESOURCE PROJECTIONS</h3>
+      </li>
+
+    </ul>
+  </div>
+  </div>
+</div>
+
+<!--
+<div class="inner"> 
 <ul id="skills-list" class="skills">
 
-<li class="">
-<div class="graphic">
- <div class="progress-ring">
-  <span>
-   <span>
-     <a class="patch" style="background-image:url(<%=contextPath%>/images/resourceprojection.png)" href="<%=contextPath%>/std/ViewResourceProjectionAction" alt="RESOURCE PROJECTIONS" title="RESOURCE PROJECTIONS"></a>
-   </span>
-  </span>
- </div>
-</div>
-<div class="info">
-<h3 class="title">
-<a href="<%=contextPath%>/std/ViewResourceProjectionAction">RESOURCE PROJECTIONS</a>
-</h3>
+  <li class="">
+  <div class="graphic">
+   <div class="progress-ring">
+    <span>
+     <span>
+       <a class="patch" style="background-image:url(<%=contextPath%>/images/resourceprojection.png)" href="<%=contextPath%>/std/ViewResourceProjectionAction" alt="RESOURCE PROJECTIONS" title="RESOURCE PROJECTIONS"></a>
+     </span>
+    </span>
+   </div>
+  </div>
+  <div class="info">
+  <h3 class="title">
+  <a href="<%=contextPath%>/std/ViewResourceProjectionAction">RESOURCE PROJECTIONS</a>
+  </h3>
 
-</div>
-</li>
+  </div>
+  </li>
 
-<li class="">
-<div class="graphic">
- <div class="progress-ring">
-  <span>
-   <span>
-     <a class="patch" style="background-image:url(<%=contextPath%>/images/areabased.png)" href="<%=contextPath%>/std/AreaProgress" alt="AREA PROGRESS" title="AREA PROGRESS"></a>
-   </span>
-  </span>
- </div>
-</div>
-<div class="info">
-<h3 class="title">
-<a href="<%=contextPath%>/std/AreaProgress">AREA PROGRESS</a>
-</h3>
+  <li class="">
+  <div class="graphic">
+   <div class="progress-ring">
+    <span>
+     <span>
+       <a class="patch" style="background-image:url(<%=contextPath%>/images/areabased.png)" href="<%=contextPath%>/std/AreaProgress" alt="AREA PROGRESS" title="AREA PROGRESS"></a>
+     </span>
+    </span>
+   </div>
+  </div>
+  <div class="info">
+  <h3 class="title">
+  <a href="<%=contextPath%>/std/AreaProgress">AREA PROGRESS</a>
+  </h3>
 
-</div>
-</li>
+  </div>
+  </li>
 
 <li class="">
 <div class="graphic">
@@ -187,61 +248,27 @@
 </div>
 </li>
 
- <li class="">
-<div class="graphic">
- <div class="progress-ring">
-  <span>
-   <span>
-     <a class="patch" style="background-image:url(<%=contextPath%>/images/timedurationcalllist.png)" href="<%=contextPath%>/std/TimeReservationCallList" alt="TIME RESERVATION CALL LIST" title="TIME RESERVATION CALL LIST"></a>
-   </span>
-  </span>
- </div>
-</div>
-<div class="info">
-<h3 class="title">
-<a href="<%=contextPath%>/std/TimeReservationCallList">TIME RESERVATION CALL LIST</a>
-</h3>
-
-</div>
-</li> 
-<!-- 
 <li class="">
-<div class="graphic">
- <div class="progress-ring">
-  <span>
-   <span>
-     <a class="patch" style="background-image:url(<%=contextPath%>/images/settings.png)" href="#" alt="SETTINGS" title="SETTINGS"></a>
-   </span>
-  </span>
- </div>
+  <div class="graphic">
+    <div class="progress-ring">
+      <span>
+        <span>
+        <a class="patch" style="background-image:url(<%=contextPath%>/images/timedurationcalllist.png)" href="<%=contextPath%>/std/TimeReservationCallList" alt="TIME RESERVATION CALL LIST" title="TIME RESERVATION CALL LIST"></a>
+        </span>
+      </span>
+    </div>
+  </div>
+  <div class="info">
+    <h3 class="title">
+      <a href="<%=contextPath%>/std/TimeReservationCallList">TIME RESERVATION CALL LIST</a>
+    </h3>
+  </div>
+</li> 
+</ul>
 </div>
-<div class="info">
-<h3 class="title">
-<a href="#">SETTINGS</a>
-</h3>
-
-</div>
-</li>
-
- -->
-
-</div>
-<!--<footer id="footer" style="position:relative;">
-				<div id="footer-inner" class="background-grey">
-					<div class="right-block">
-						<a href="#" class="copyright text-grey">
-							CAPGEMINI SESP WEBSITE
-						</a>
-						<a href="#" class="copyright text-grey">
-							© 2013 CAPGEMINI
-						</a>
-					</div>
-				</div>
-			</footer>
 -->
-
-<%@ include file="footerv311.inc" %>
+  <%@ include file="footerv311.inc" %>
 </div>
-
+    <script type="text/javascript" src="https://raw.githubusercontent.com/chuckcarpenter/REM-unit-polyfill/master/js/rem.min.js"></script>
 </body>
 </html>
