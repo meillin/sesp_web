@@ -1335,7 +1335,7 @@ legend + .control-group {
 .fade.in {
     opacity: 1;
 }
-.collapse {
+/*.collapse {
     height: 0;
     overflow: hidden;
     position: relative;
@@ -1343,7 +1343,7 @@ legend + .control-group {
 }
 .collapse.in {
     height: auto;
-}
+}*/
 /*
 .close {
     color: #000000;

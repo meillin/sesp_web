@@ -1,32 +1,28 @@
 /**
  * 	Header 
  */
+/**
+ * 	Header 
+ */
 body{background: #E7E7E7 !important;}
-
-header {
-	border-bottom: 1px solid #E7E7E7;
-}
+header {border-bottom: 1px solid #E7E7E7;}
 header .row{
 	max-width: initial;
 	background: #fff;
 	/*padding-top: 10px;*/ 
 }
-
-header .row .collapse{
-	padding: 0.5rem;
-}
-
-header .row input{
-	margin-bottom: 0;
-}
-
+header .row .collapse{padding: 0.5rem;}
+header .row input{margin-bottom: 0;}
 header .menu-button-text{
 	display: block;
 	padding: 0.9375rem 0.9375rem 0.9375rem 0;
 	border-right: 1px solid #E7E7E7;
 	margin-right: 10px; 
 }
-
-header .logo-capgemini img{
-	padding: 0.5rem;
+header .logo-capgemini img{padding: 0.5rem;}
+input:-webkit-autofill, 
+textarea:-webkit-autofill {
+background-color: #ffffff;
+background-image: none;
+color: rgb(0, 0, 0);
 }
