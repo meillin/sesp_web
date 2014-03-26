@@ -1,4 +1,4 @@
-			<footer id="footer">
+			<!--<footer id="footer">
 				<div id="footer-inner" class="background-grey">
 					<div class="right-block">
 						<a href="<s:text name="webportal.footer.companyurl"/>" class="copyright text-grey">
@@ -9,4 +9,4 @@
 						</a>
 					</div>
 				</div>
-			</footer>
+			</footer>-->
