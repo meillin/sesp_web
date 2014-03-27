@@ -7,14 +7,7 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
-input:-webkit-autofill, 
-textarea:-webkit-autofill {
-    color: #000 !important;
-    background-color: none !important;
-  background-image: none !important;
-  background: none !important;
-}
- 
+
 .clearfix {
   *zoom: 1;
 }

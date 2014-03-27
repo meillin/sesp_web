@@ -38,7 +38,9 @@
 <%-- 		<script type="text/javascript" src="<%=contextPath%>/js/search-results.js"></script>
  --%>
     <script type="text/javascript" src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>		
-		<script type="text/javascript" src="<%=contextPath%>/js/jquery.cookie.js"></script>		
+		<script type="text/javascript" src="<%=contextPath%>/js/jquery.cookie.js"></script>	
+    <script type="text/javascript" src="<%=contextPath%>/js/foundation.min.js"></script>
+    <script type="text/javascript" src="<%=contextPath%>/js/foundation/foundation.offcanvas.js"></script>	
 		
 		<script src="<%=contextPath%>/js/sesp_ajax.js"></script>
 		<script src="<%=contextPath%>/js/spin.js"></script>
