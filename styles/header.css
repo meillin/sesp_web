@@ -9,27 +9,47 @@ body,html{
     width:100%;
 }
 .off-canvas-wrap,.inner-wrap{height:100%;}
-#wrapper{height:100%;   }
+#wrapper{height:100%;}
 body{background: #E7E7E7 !important;}
 
 header{border-bottom: 1px solid #E7E7E7;}
 header .row{
 	max-width: initial;
 	background: #fff;
-	/*padding-top: 10px;*/ 
 }
-header .row .collapse{padding: 0.5rem;}
 header .row input{margin-bottom: 0;}
-header .slid-in-menu a{
+header .slide-menu-left a{
+	color: #353535;
 	display: block;
-	padding: 0.9375rem 0.9375rem 0.9375rem 0;
+	padding: 0.75rem 1.25rem 0.75rem 0.25rem;
 	border-right: 1px solid #E7E7E7;
 	margin-right: 10px; 
 }
-header .logo-capgemini img{padding: 0.45rem;}
-input:-webkit-autofill, 
-textarea:-webkit-autofill {
-background-color: #ffffff;
-background-image: none;
-color: rgb(0, 0, 0);
+header .slide-menu-right a{
+	color: #353535;
+	display: block;
+	padding: 0.75rem 0.25rem 0.75rem 1.25rem;
+	border-left: 1px solid #E7E7E7;
 }
+header .search-bar{
+	padding: 0.75rem;
+	width: 100%;
+}
+header .search-bar li:first-child{width: 90%;}
+header .search-bar li{width: 10%;}
+header .search-button a{
+	color: #353535;
+	border: none;
+	margin-left: -100%;
+	z-index: 1001;
+}
+header .search-button .postfix{
+height: 1.75rem;
+line-height: 1.75rem;
+}
+header .search-input input{
+	/*border: none;*/
+	height: 1.75rem;
+	border-radius: 20px;
+}
+header .logo-capgemini img{padding-top: 0.55rem;}

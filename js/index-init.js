@@ -47,7 +47,7 @@ function errorInvalidSearchInput() {
 }
 
 
-
+/*
 jQuery(document).ready(function($){
     var menu = $('#second-header');
     
@@ -194,4 +194,4 @@ jQuery(document).ready(function($){
 	   		selectedList: 2 // Number of item listed in the header befor the generic "x selected"
 		});
 	}
-});
+}); */

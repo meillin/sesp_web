@@ -59,10 +59,11 @@ document.createElement("figure");
 <body>
   <div id="wrapper">
     <div class="off-canvas-wrap">
+    <%@ include file="headerv311.inc" %>
       <div class="inner-wrap">
         <aside class="left-off-canvas-menu">
           <ul class="off-canvas-list">
-            <li><label>Foundation</label></li>
+            <li><label>Menu</label></li>
             <li><a href="<%=request.getContextPath()%>/std/TimeReservationCallList" id="menu-button-delivery-performance">Time Reservation Call List</a></li>
             <li><a href="<%=request.getContextPath()%>/std/StockManagement1" id="menu-button-logistics"> LOGISTICS</a></li>
             <li><a href="javascript: openDashboard();" id="menu-button-system-utilization">SYSTEM UTILIZATION</a></li>
@@ -73,20 +74,6 @@ document.createElement("figure");
             <li><a href="<%=request.getContextPath()%>/std/ViewResourceProjectionAction" id="menu-button-resource-projections">RESOURCE PROJECTIONS</a></li>
           </ul>
         </aside>
-        <aside class="right-off-canvas-menu">
-          <ul class="off-canvas-list">
-            <li><label>Foundation</label></li>
-            <li><a href="<%=request.getContextPath()%>/std/TimeReservationCallList" id="menu-button-delivery-performance">Time Reservation Call List</a></li>
-            <li><a href="<%=request.getContextPath()%>/std/StockManagement1" id="menu-button-logistics"> LOGISTICS</a></li>
-            <li><a href="javascript: openDashboard();" id="menu-button-system-utilization">SYSTEM UTILIZATION</a></li>
-            <li><a href="<%=request.getContextPath()%>/std/AlarmManagementReports" id="menu-button-alarm-management">ALARM MANAGEMENT</a></li>
-            <li><a href="<%=request.getContextPath()%>/std/WorkOrderProgress" id="menu-button-work-order-progress">WORK ORDER PROGRESS</a></li>
-            <li><a href="<%=request.getContextPath()%>/std/AreaProgress" id="menu-button-technician-positioning">AREA PROGRESS</a></li>
-            <li><a href="<%=request.getContextPath()%>/std/AnalyzeFieldWorkEfficiency" id="menu-button-technician-work-load">Field Work Efficiency</a></li>
-            <li><a href="<%=request.getContextPath()%>/std/ViewResourceProjectionAction" id="menu-button-resource-projections">RESOURCE PROJECTIONS</a></li>
-          </ul>
-        </aside>
-        <%@ include file="headerv311.inc" %>
         <section class="main-section">
           <script>
             contextPath = "<%=request.getContextPath()%>";     
