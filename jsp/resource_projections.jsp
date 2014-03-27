@@ -19,8 +19,9 @@
 		<![endif]-->
 		<% String contextPath = request.getContextPath(); %>
 		
-		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/bootstrap.css"/>
-		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/color.css"/>
+		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
+    	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
+    	
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/jquery.multiselect.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
@@ -68,15 +69,10 @@
 			i18nErrorSelectDeviceModel = "<s:text name='webportal.error.choosedevicemodel'/>";
 			i18nErrorSelectPlanningPeriod = "<s:text name='webportal.resourceprojections.planningperiods.errorMessage'/>";
 			
-			
-			
-			
 			i18nplanningname="<s:text name="webportal.resourceprojections.planningperiods.name"/>";
 			i18nplanningstartdate="<s:text name="webportal.resourceprojections.planningperiods.startdate"/>";
 			i18nplanningenddate="<s:text name="webportal.resourceprojections.planningperiods.enddate"/>";
-			i18nplanningdomain="<s:text name="webportal.resourceprojections.planningperiods.domain"/>";	
-
-			
+			i18nplanningdomain="<s:text name="webportal.resourceprojections.planningperiods.domain"/>";
 		</script>
 				
 	</head>

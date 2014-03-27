@@ -77,23 +77,11 @@ textarea {
     min-height: 28px;
     width: 100%;
 }
-/*body {
-    background-color: #FFFFFF;
-    color: #333333;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    line-height: 22px;
-    margin: 0;
-} */
-a {
-    color: #3290D8;
-    text-decoration: none;
-}
+
 a:hover {
     color: #1E679F;
     text-decoration: underline;
 }
-
 
 [class*="span"] {
     float: left;
@@ -5467,12 +5455,10 @@ html.hq .hidden-notice .talk {
     width: 99.9999%;
     margin: auto;
     min-height: 180px;
+    padding: 1em;
 }
 #main-content-index h3 {
     color: #fff;
-}
-#main-content-index img {
-    padding-top: 1.5em;
 }
 .welcome-text {
     color: #fff;
