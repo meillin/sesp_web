@@ -107,9 +107,9 @@
 			</div><!-- end of main content -->
 
 		</div>
-			<!-- Footer -->
-			<!-- <%@ include file="footerv311.inc"%> -->
 
+	<!--[if lt IE 9]>
 	<script type="text/javascript" src="https://raw.githubusercontent.com/chuckcarpenter/REM-unit-polyfill/master/js/rem.min.js"></script>
+	<![endif]-->
 	</body>
 </html>
