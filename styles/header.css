@@ -4,8 +4,15 @@
 /**
  * 	Header 
  */
+body,html{
+    height:100%;
+    width:100%;
+}
+.off-canvas-wrap,.inner-wrap{height:100%;}
+#wrapper{height:100%;   }
 body{background: #E7E7E7 !important;}
-header {border-bottom: 1px solid #E7E7E7;}
+
+header{border-bottom: 1px solid #E7E7E7;}
 header .row{
 	max-width: initial;
 	background: #fff;
@@ -13,13 +20,13 @@ header .row{
 }
 header .row .collapse{padding: 0.5rem;}
 header .row input{margin-bottom: 0;}
-header .menu-button-text{
+header .slid-in-menu a{
 	display: block;
 	padding: 0.9375rem 0.9375rem 0.9375rem 0;
 	border-right: 1px solid #E7E7E7;
 	margin-right: 10px; 
 }
-header .logo-capgemini img{padding: 0.5rem;}
+header .logo-capgemini img{padding: 0.45rem;}
 input:-webkit-autofill, 
 textarea:-webkit-autofill {
 background-color: #ffffff;
