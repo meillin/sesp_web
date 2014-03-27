@@ -21,12 +21,11 @@
 		
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
     	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
-    	
+
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/jquery.multiselect.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-block.css" />
-		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/footer.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/datepicker.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-resource-projections.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/style.tidy.css" />
@@ -35,8 +34,9 @@
 		
 		<script type="text/javascript" src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>		
+		<script type="text/javascript" src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
 		<script type="text/javascript" src="<%=contextPath%>/js/bootstrap-datepicker.js"></script>
+
 		<script type="text/javascript" src="<%=contextPath%>/js/jquery.multiselect.js"></script>
 		<script type="text/javascript" src="<%=contextPath%>/js/jquery.cookie.js"></script>
 		<script type="text/javascript" src="<%=contextPath%>/js/init.js"></script>		
@@ -77,294 +77,168 @@
 				
 	</head>
 	<body onload="loadDefaultData()">
-		
 		<div id="wrapper">
+
 			<%@ include file="headerv311.inc" %>
-			
-			<div id="main-content">
 
-				<div class="title-large-block large-block text-grey" >
-					<s:text name="webportal.resourceprojections.title"/>
-				</div>
-				
-				<div class="block retractable map-filter" id="block-time">
-					<div class="block-title">
-						<span class="block-title-picto"></span>
-						<span class="block-title-name text-blue"><s:text name="webportal.resourceprojections.time.title"/></span>
-						<span class="block-arrow open"></span>
+			<div id="row">
+				<div>
+					<div class="large-12 columns" >
+						<h2><s:text name="webportal.resourceprojections.title"/></h2>
 					</div>
-					<div class="content-wrapper">
-						<div class="content text-grey">		
-							
-							<div class="select-wrapper">
-								<span class="select-title text-grey"><s:text name="webportal.resourceprojections.time.domain.title"/></span>
-								<div class="custom-select">
-									<select id="block-time-multiselect-domain"  class="custom-multi-select" name="multiselect-domain" multiple="multiple" onchange="domainChanged()">
+				</div>
+
+				<div class="big-row">
+					<div class="large-4 columns">
+						<div class="panel">
+						<h4><i class="fi-clock"></i> TIME</h4>
+						<div>
+							<div>
+								<label><s:text name="webportal.resourceprojections.time.domain.title"/></label>
+								<div>
+									<select id="block-time-multiselect-domain" class="custom-multi-select" name="multiselect-domain" multiple="multiple" onchange="domainChanged()">
 									</select>
 								</div>
-							</div>								
-							
-							<div class="select-wrapper">
-								<span class="select-title text-grey"><s:text name="webportal.resourceprojections.time.dateinterval.title"/></span>
-								<div class="custom-select">
+							</div>
+
+							<div>
+								<label><s:text name="webportal.resourceprojections.time.dateinterval.title"/></label>
+								<div>
 									<select id="block-time-select-date-interval" onchange="onDateIntervalSelect()">
-										
-											<option value="upcomingweek"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingweek"/></option>
-											<option value="upcomingmonth"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingmonth"/></option>													
-											<option value="upcomingquarter"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingquarter"/></option>
-											<option value="upcomingyear"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingyear"/></option>											
-											<option value="custominterval"><s:text name="webportal.resourceprojections.time.dateinterval.custominterval"/></option>
-										
+										<option value="upcomingweek"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingweek"/></option>
+										<option value="upcomingmonth"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingmonth"/></option>													
+										<option value="upcomingquarter"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingquarter"/></option>
+										<option value="upcomingyear"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingyear"/></option>											
+										<option value="custominterval"><s:text name="webportal.resourceprojections.time.dateinterval.custominterval"/></option>
 									</select>
 								</div>
 							</div>
-							<div class="select-wrapper" id="block_from_and_to_date">
-								<div class="small-select-wrapper left-select">
-									<span class="select-title text-red"><s:text name="webportal.resourceprojections.time.fromdate.title"/>:</span>
-									<div class="custom-input-datepicker input-append date" data-date="2012-02-12" data-date-format="yyyy-mm-dd">
-										<input id="block-time-date-from" type="text" class="input-datepicker text-red"  readonly="readonly"/>
-									</div>
-								</div>
-								<div class="small-select-wrapper right-select">
-									<span class="select-title text-red"><s:text name="webportal.resourceprojections.time.todate.title"/>:</span>
-									<div class="custom-input-datepicker input-append date"  data-date="12-02-2012" data-date-format="yyyy-mm-dd">
-										<input id="block-time-date-to" type="text" class="input-datepicker text-red"  readonly="readonly"/>
-									</div>
-								</div>
-							</div>
-							<div class="center-wrapper">
-							<div class="button-wrapper">
-								<a id="block-time-button-update" onclick="javascript:updatePlanningPeriod()" class="text-blue custom-button"><s:text name="webportal.resourceprojections.time.update"/></a>						
-							</div>					
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<div class="large-block block retractable" id="block-planning-periods">
-					<div class="block-title">
-						<span class="block-title-picto"></span>
-						<span class="block-title-name text-blue"><s:text name="webportal.resourceprojections.planningperiods.title"/></span>
-						<a href="#" class="block-title-button-select-all text-blue"   ><s:text name="webportal.resourceprojections.planningperiods.selectall"/></a>
-						<a href="#" class="block-title-button-select-none text-blue"  ><s:text name="webportal.resourceprojections.planningperiods.selectnone"/></a>
-						<span class="block-arrow open"></span>
-					</div>
-					<div class="content-wrapper">
-						<div class="content">
-						
-						<div style="height:234px; overflow:auto"> 
-							<table class="big-table"  style="position:absolute;background-color:#fff;height:20px;">
-								<tr class="table-title">
-									<th class="col1" style="text-align:left !important;width:160px;overflow:hidden;"><s:text name="webportal.resourceprojections.planningperiods.name"/></th>
-									<th class="col2" style="text-align:left !important;width:100px;overflow:hidden;"><s:text name="webportal.resourceprojections.planningperiods.startdate"/></th>
-									<th class="col3" style="text-align:left !important;width:100px;overflow:hidden;"><s:text name="webportal.resourceprojections.planningperiods.enddate"/></th>
-									<th class="col4" style="text-align:left !important;width:200px;overflow:hidden;"><s:text name="webportal.resourceprojections.planningperiods.domain"/></th>
-								</tr>
-							</table>
-							<table class="big-table" id="block-planning-periods-table" style="margin-top:50px;">	
-								<!--
-								<tr class="table-line line-grey">
-									<td>Month 2013 March</td>
-									<td>2013-03-01</td>
-									<td>2013-03-01</td>
-									<td>Domain #1</td>
-								</tr>
-								<tr class="table-line">
-									<td>Month 2013 April</td>
-									<td>2013-03-01</td>
-									<td>2013-03-01</td>
-									<td>Domain #1</td>
-								</tr>
-								<tr class="table-line line-grey">
-									<td>Month 2013 May</td>
-									<td>2013-03-01</td>
-									<td>2013-03-01</td>
-									<td>Domain #1</td>
-								</tr>
-								
-								
-							--></table>
-							</div>  
-						</div>
-					</div>
-				</div>
-				
-				<div class="large-block block retractable" id="block-filters">
-					<div class="block-title">
-						<span class="block-title-picto"></span>
-						<span class="block-title-name text-blue"><s:text name="webportal.resourceprojections.filters.title"/></span>
-						<span class="block-arrow open"></span>
-					</div>
-					<div class="content-wrapper full-height">
-						<div class="content text-grey">
-							<div class="third-column">
-								<div class="select-wrapper">
-									<span class="select-title text-grey"><s:text name="webportal.resourceprojections.filters.utilitytype"/></span>
-									<div class="custom-select">
-										<select id="filter-multiselect-utility-type" class="custom-multi-select" name="multiselect-utility-type" multiple="multiple">
-											<!--<option value="option_1">Electricity</option>
-											<option value="option_2">Option 2</option>								
-											<option value="option_3">Option 3</option>
-											<option value="option_4">Option 4</option>
-											<option value="option_5">Option 5</option>
-											<option value="option_6">Option 6</option>
-											<option value="option_7">Option 7</option>
-										--></select>
-									</div>
-								</div>
-								
-								<div class="select-wrapper">
-									<span class="select-title text-grey"><s:text name="webportal.resourceprojections.filters.area"/></span>
-									<div class="custom-select">
-										<select id="filter-multiselect-area" class="custom-multi-select" name="multiselect-area" multiple="multiple">
-											<!--<option value="option_1">Option 1</option>
-											<option value="option_2">Option 2</option>								
-											<option value="option_3">Option 3</option>
-											<option value="option_4">Option 4</option>
-											<option value="option_5">Option 5</option>
-											<option value="option_6">Option 6</option>
-											<option value="option_7">Option 7</option>
-										--></select>
-									</div>
-								</div>
-								
-							</div><!--
-							--><div class="third-column">
-								<div class="select-wrapper">
-									<span class="select-title text-grey"><s:text name="webportal.resourceprojections.filters.areatype"/></span>
-									<div class="custom-select">
-										<select id="filter-multiselect-area-type" class="custom-multi-select" name="multiselect-area-type" multiple="multiple">
-											<!--<option value="option_1">Milestone areas</option>
-											<option value="option_2">Option 2</option>								
-											<option value="option_3">Option 3</option>
-											<option value="option_4">Option 4</option>
-											<option value="option_5">Option 5</option>
-											<option value="option_6">Option 6</option>
-											<option value="option_7">Option 7</option>
-										--></select>
-									</div>
-								</div><!--
-								
-								--><div class="select-wrapper">
-									<span class="select-title text-grey"><s:text name="webportal.resourceprojections.filters.workordertype"/></span>
-									<div class="custom-select">
-										<select id="filter-multiselect-work-order-type" class="custom-multi-select" name="multiselect-work-order-type" multiple="multiple"><!--
-											<option value="option_1">Option 1</option>
-											<option value="option_2">Option 2</option>								
-											<option value="option_3">Option 3</option>
-											<option value="option_4">Option 4</option>
-											<option value="option_5">Option 5</option>
-											<option value="option_6">Option 6</option>
-											<option value="option_7">Option 7</option>
-										--></select>
-									</div>
-								</div>
-							</div><!--
-							--><div class="third-column">	
-								<div class="select-wrapper">
-									<span class="select-title text-grey"><s:text name="webportal.resourceprojections.filters.devicetype"/></span>
-									<div class="custom-select">
-										<select id="filter-multiselect-device-type" class="custom-multi-select" name="multiselect-device-type" multiple="multiple">
-											<!--<option value="option_1">Option 1</option>
-											<option value="option_2">Option 2</option>								
-											<option value="option_3">Option 3</option>
-											<option value="option_4">Option 4</option>
-											<option value="option_5">Option 5</option>
-											<option value="option_6">Option 6</option>
-											<option value="option_7">Option 7</option>
-										--></select>
-									</div>
-								</div>
-								
-								<div class="select-wrapper">
-									<span class="select-title text-grey"><s:text name="webportal.resourceprojections.filters.devicemodel"/></span>
-									<div class="custom-select">
-										<select id="filter-multiselect-device-model" class="custom-multi-select" name="multiselect-device-model" multiple="multiple"><!--
-											<option value="option_1">Option 1</option>
-											<option value="option_2">Option 2</option>								
-											<option value="option_3">Option 3</option>
-											<option value="option_4">Option 4</option>
-											<option value="option_5">Option 5</option>
-											<option value="option_6">Option 6</option>
-											<option value="option_7">Option 7</option>
-										--></select>
-									</div>
-								</div>
-							</div>
-							
-							<div class="center-wrapper">
-								<div class="button-wrapper">
-									<a id="block-filter-button-update" class="text-blue custom-button" onclick="javascript:processProjections()"><s:text name="webportal.resourceprojections.filters.update"/></a>						
-								</div>	
-							</div>
-							
-						</div>
-					</div>
-				</div>
-								
-				<div class="large-block block retractable" id="block-device-assets-projections">
-					<div class="block-title">
-						<span class="block-title-picto"></span>
-						<span class="block-title-name text-blue"><s:text name="webportal.resourceprojections.deviceassets.title"/></span>
-						<span class="block-arrow open"></span>
-					</div>
-					<div class="content-wrapper full-height">
-						<div class="content text-grey">
-							<div id="block-device-assets-projections-per-month">
-								<div class="chart-title"><s:text name="webportal.resourceprojections.deviceassets.permonth"/></div>
-								<div class="chart-view" id="block-device-assets-projections-per-month-view">
-									<!--  <img src="<%=contextPath%>/images/resource-projection-per-month.jpg" /> -->
-								</div>
-							</div>
-							
-							<div id="block-device-assets-projections-total">
-								<div class="chart-title"><s:text name="webportal.resourceprojections.deviceassets.total"/></div>
-								<div class="chart-view" id="block-device-assets-projections-total-view">
-									<!--  <img src="<%=contextPath%>/images/total-resource-projection.jpg" />  --> 
-								</div>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-								
-				<div class="large-block block retractable" id="block-resource-projections-per-month">
-					<div class="block-title">
-						<span class="block-title-picto"></span>
-						<span class="block-title-name text-blue"><s:text name="webportal.resourceprojections.resourceprojections.title"/></span>
-						<span class="block-arrow open"></span>
-					</div>
-					<div class="content-wrapper full-height">
-						<div class="content text-grey">
-							<div id="block-resource-projections-per-month">
-								<div class="chart-title"><s:text name="webportal.resourceprojections.resourceprojections.permonth"/></div>
-								<div class="chart-view" id="block-resource-projections-per-month-view">
-									<!-- <img src="<%=contextPath%>/images/resource-projection-per-month.jpg" />  -->
-								</div>
-							</div>
-							
-							<!--<div id="block-device-assets-projections-total">
-								<div class="chart-title"><s:text name="webportal.resourceprojections.resourceprojections.total"/></div>
-								<div class="chart-view" id="block-resource-projections-total-view">
-									 <img src="<%=contextPath%>/images/total-resource-projection.jpg" />  
-								</div>
-							</div>
-							
-								--><div id="block-resource-projections-total">
-								<div class="chart-title"><s:text name="webportal.resourceprojections.resourceprojections.total"/></div>
-								<div class="chart-view" id="block-resource-projections-total-view">
-									 <!-- <img src="<%=contextPath%>/images/total-resource-projection.jpg" />  --> 
-								</div>
-							</div>
-							
-							
-						</div>
-					</div>
-				</div>
-				
-			</div>
-			<%@ include file="footerv311.inc"%>
 
-		</div>
+							<div id="block_from_and_to_date">
+								<div>
+									<label><s:text name="webportal.resourceprojections.time.fromdate.title"/>:</label>
+									<div class="custom-input-datepicker input-append date" data-date="2012-02-12" data-date-format="yyyy-mm-dd">
+									<input id="block-time-date-from" type="text" class="input-datepicker text-red"  readonly="readonly"/>
+									</div>
+								</div>
+								<div>
+									<label><s:text name="webportal.resourceprojections.time.todate.title"/>:</label>
+									<div class="custom-input-datepicker input-append date"  data-date="12-02-2012" data-date-format="yyyy-mm-dd">
+									<input id="block-time-date-to" type="text" class="input-datepicker text-red"  readonly="readonly"/>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div>
+								<a id="block-time-button-update" onclick="javascript:updatePlanningPeriod()" class="button tiny"><s:text name="webportal.resourceprojections.time.update"/></a>	
+								</div>
+							</div>
+							</div>
+						</div>
+					</div> <!-- end of time columns -->
+
+					<div class="large-8 columns">
+						<div class="panel">
+
+						<h4>
+							<i class="fi-clock"></i> PLANNING PERIODS
+							<small><a href="#"><s:text name="webportal.resourceprojections.planningperiods.selectall"/></a>
+							<a href="#"><s:text name="webportal.resourceprojections.planningperiods.selectnone"/></a></small>
+						</h4>
+
+						<div>
+							<table>
+							  <thead>
+							    <tr>
+							      <th width="200"><s:text name="webportal.resourceprojections.planningperiods.name"/></th>
+							      <th><s:text name="webportal.resourceprojections.planningperiods.startdate"/></th>
+							      <th width="150"><s:text name="webportal.resourceprojections.planningperiods.enddate"/></th>
+							      <th width="150"><s:text name="webportal.resourceprojections.planningperiods.domain"/></th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <td>Content Goes Here</td>
+							      <td>This is longer</td>
+							      <td>Content Goes Here</td>
+							      <td>Content Goes Here</td>
+							    </tr>
+							    <tr>
+							      <td>Content Goes Here</td>
+							      <td>This is longer</td>
+							      <td>Content Goes Here</td>
+							      <td>Content Goes Here</td>
+							    </tr>
+							    <tr>
+							      <td>Content Goes Here</td>
+							      <td>This is longer</td>
+							      <td>Content Goes Here</td>
+							      <td>Content Goes Here</td>
+							    </tr>
+							     <tr>
+							      <td>Content Goes Here</td>
+							      <td>This is longer</td>
+							      <td>Content Goes Here</td>
+							      <td>Content Goes Here</td>
+							    </tr>
+							        <tr>
+							      <td>Content Goes Here</td>
+							      <td>This is longer</td>
+							      <td>Content Goes Here</td>
+							      <td>Content Goes Here</td>
+							    </tr>
+							        <tr>
+							      <td>Content Goes Here</td>
+							      <td>This is longer</td>
+							      <td>Content Goes Here</td>
+							      <td>Content Goes Here</td>
+							    </tr>
+							      <tr>
+							      <td>Content Goes Here</td>
+							      <td>This is longer</td>
+							      <td>Content Goes Here</td>
+							      <td>Content Goes Here</td>
+							    </tr>
+
+							  </tbody>
+							</table>
+						</div>
+					</div>
+					</div>
+				</div>
+
+				<div>
+					<div class="large-4 columns">
+						<div class="panel">
+							<h4>Filters</h4>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum 
+						</div>
+						<div class="panel">
+							<h4>Key performance indexes</h4>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, 
+						</div> 
+					</div>
+					<div class="large-8 columns">
+						<div class="panel">
+						<h4>Device assets projections</h4>
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam process
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<div class="large-12 columns">
+						<div class="white">
+						Resource projections per month
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam process
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+
+		</div><!--end of wrapper -->
 	</body>
 </html>

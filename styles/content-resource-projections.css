@@ -1,146 +1,16 @@
-#main-content #block-time .block-title-picto{
-	background:url(../images/icons-sprite.png) 0 -50px no-repeat;
+body {
+	color: #000;
 }
-
-#main-content #block-planning-periods .block-title-picto{
-	background:url(../images/icons-sprite.png) 0 -550px no-repeat;
+.white {
+	background: #fff;
+	margin: 1em 1em 0em 0em;
 }
-
-#main-content #block-filters .block-title-picto{
-	background:url(../images/icons-sprite.png) 0 -200px no-repeat;
+.big-row {
+	min-height: 450px;
 }
-
-#main-content #block-device-assets-projections .block-title-picto{
-	background:url(../images/icons-sprite.png) 0 -25px no-repeat;
+.panel {
+	min-height: 100% !important;
 }
-
-#main-content #block-resource-projections-per-month .block-title-picto{
-	background:url(../images/icons-sprite.png) 0 -25px no-repeat;
-}
-
-#main-content #block-key-performance-indexes .block-title-picto{
-	background:url(../images/icons-sprite.png) 0 -150px no-repeat;
-}
-
-#main-content #block-time{
-	position: initial;
-	top: initial;
-	right : initial;
-	margin: 10px 20px;
-}
-
-#main-content #block-time .button-wrapper{
-	/*margin-top: 23px;
-	margin-bottom:3px; */
-	margin-top: 23px;	
-	/*margin-bottom:3px;*/
-	margin-left:70px;
-	/*position:absolute;
-	left:225px;
-	top:380px; */  
-}
-
-#main-content #block-planning-periods{
-	width: 652px;
-	margin: 10px 20px;
-}
-
-#main-content #block-planning-periods .block-title-button-select-none,
-#main-content #block-planning-periods .block-title-button-select-all{
-	font-weight: bold;
-	position: absolute;
-	padding: 6px 5px;
-}
-
-#main-content #block-planning-periods .block-title-button-select-none{
-	right: 40px;
-}
-
-#main-content #block-planning-periods .block-title-button-select-all{
-	right: 140px;
-}
-
-#main-content #block-planning-periods table th,
-#main-content #block-planning-periods table td{
-	padding-left: 15px;
-}
-
-#main-content #block-planning-periods table tr.table-line{
-	cursor: pointer;
-}
-
-#main-content #block-planning-periods table tr.selected{
-	background-color: #0e6f99;
-	color: white;
-}
-
-.large-block .third-column{
-	width: 260px;
-	margin : 0px 10px;
-	display: inline-block;
-	vertical-align: top;
-	padding-left: 30px;
-}
-
-.large-block .third-column .custom-select{
-	margin-left: auto;
-	margin-right: auto;
-}
-
-#main-content .large-block .third-column .select-wrapper .select-title{
-	padding-left: 1px;
-	font-size: 12px;
-	font-weight: bold;
-	display: block
-} 
-
-#main-content .large-block .small-select-wrapper{
-	text-align: right;
-	width: 204px;
-	margin-top: 10px;
-}
-
-#main-content .large-block .third-column .select-wrapper .small-select-wrapper .select-title{
-	display: inline-block;
-}
-
-#main-content .select-wrapper{
-	margin-top: 20px;
-}
-
-#main-content #block-device-assets-projections .chart-title,
-#main-content #block-resource-projections-per-month .chart-title,
-#main-content #block-key-performance-indexes .chart-title{
-	text-align: center;
-	font-weight: bold;
-	font-size: 20px;
-	margin-top: 20px;
-}
-
-#main-content #block-key-performance-indexes .column1{
-	width: 530px;
-	display: inline-block;
-	vertical-align: middle;
-}
-
-
-#main-content #block-key-performance-indexes .column2{
-	width: 400px;
-	display: inline-block;
-	vertical-align: middle;
-}
-
-#main-content #block-device-assets-projections #block-device-assets-projections-per-month-view,
-#main-content #block-device-assets-projections #block-device-assets-projections-total-view,
-#main-content #block-resource-projections-per-month #block-resource-projections-per-month-view,
-#main-content #block-resource-projections-per-month #block-resource-projections-total-view,
-#main-content #block-key-performance-indexes-planned #block-key-performance-indexes-planned-view,
-#main-content #block-key-performance-indexes-unplanned #block-key-performance-indexes-unplanned-view{
-	text-align: center;
-}
-
-#main-content #block-key-performance-indexes-unplanned #block-key-performance-indexes-unplanned-value{
-	font-weight: bold;
-	font-size: 50px;
-	margin-top: 20px;
+.resource-projection-content {
+	padding: 1em;
 }
