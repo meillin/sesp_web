@@ -19,9 +19,11 @@ document.createElement("figure");
 <![endif]-->
 <%String contextPath = request.getContextPath(); %>
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-block.css" />
+<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-index.css" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-search-results.css" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/hex2.css"> 
 <link rel="shortcut icon" type="image/png" href="<%=contextPath%>/js/images/favicon.png" />
@@ -45,7 +47,6 @@ document.createElement("figure");
 <script src="<%=contextPath%>/js/sesp_ajax.js"></script>
 <script src="<%=contextPath%>/js/spin.js"></script>
 <script src="<%=contextPath%>/js/ajax-loader.js"></script>
-
 
 <!--[if lt IE 9]>
 <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
@@ -100,76 +101,84 @@ document.createElement("figure");
                 Welcome to the dashboard
               </div>
             </div>
-            <div class="row">
-              <div class="large-12 columns">
-                <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
-                  <li>
-                    <div>
-                      <a class="patch" href="<%=contextPath%>/std/ViewResourceProjectionAction" alt="RESOURCE PROJECTIONS" title="RESOURCE PROJECTIONS">
-                        <img src="../images/chart_line_64.png" />
-                        <h3>RESOURCE PROJECTIONS</h3>
-                      </a>
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      <a class="patch" href="<%=contextPath%>/std/AreaProgress" alt="AREA PROGRESS" title="AREA PROGRESS">
-                        <img src="../images/chart_line_64.png" />
-                        <h3>AREA PROGRESS</h3>
-                      </a>
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      <a class="patch" href="<%=contextPath%>/std/StockManagement1" alt="LOGISTICS" title="LOGISTICS">
-                        <img src="../images/chart_line_64.png" />
-                        <h3>LOGISTICS</h3>
-                      </a>
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      <a class="patch" href="<%=contextPath%>/std/AlarmManagementReports" alt="ALARM MANAGEMENT" title="ALARM MANAGEMENT">
-                        <img src="../images/chart_line_64.png" />
-                        <h3>ALARM MANAGEMENT</h3>
-                      </a>
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      <a class="patch" href="javascript: openDashboard();" alt="SYSTEM UTILIZATION" title="SYSTEM UTILIZATION">
-                        <img src="../images/chart_line_64.png" />
-                        <h3>SYSTEM UTILIZATION</h3>
-                      </a>
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      <a class="patch" href="<%=contextPath%>/std/WorkOrderProgress" alt="WORK ORDER PROGRESS" title="WORK ORDER PROGRESS">
-                        <img src="../images/chart_line_64.png" />
-                        <h3>WORK ORDER PROGRESS</h3>
-                      </a>
-                    </div>
-                  </li>
+         <div class="row">
+    <div class="large-12 columns">
 
-                  <li>
-                    <div>
-                      <a class="patch" href="<%=contextPath%>/std/AnalyzeFieldWorkEfficiency" alt="FIELD WORK EFFICIENCY" title="FIELD WORK EFFICIENCY">
-                        <img src="../images/chart_line_64.png" />
-                        <h3>RESOURCE PROJECTIONS</h3>
-                      </a>
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      <a class="patch" href="<%=contextPath%>/std/TimeReservationCallList" alt="TIME RESERVATION CALL LIST" title="TIME RESERVATION CALL LIST">
-                        <img src="../images/chart_line_64.png" />
-                        <h3>RESOURCE PROJECTIONS</h3>
-                      </a>
-                    </div>
-                  </li>
+     <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
 
-                </ul>
+      <li>
+        <div>
+          <a class="patch" href="<%=contextPath%>/std/ViewResourceProjectionAction" alt="RESOURCE PROJECTIONS" title="RESOURCE PROJECTIONS">
+            <i class="fi-graph-bar size-74"></i>
+            <h3>RESOURCE PROJECTIONS</h3>
+          </a>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <a class="patch" href="<%=contextPath%>/std/AreaProgress" alt="AREA PROGRESS" title="AREA PROGRESS">
+            <i class="fi-loop size-74"></i>
+            <h3>AREA PROGRESS</h3>
+          </a>
+        </div>
+      </li>
+
+      <li>
+        <div>
+            <a class="patch" href="<%=contextPath%>/std/StockManagement1" alt="LOGISTICS" title="LOGISTICS">
+              <i class="fi-alert size-74"></i>
+              <h3>LOGISTICS</h3>
+            </a>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <a class="patch" href="<%=contextPath%>/std/AlarmManagementReports" alt="ALARM MANAGEMENT" title="ALARM MANAGEMENT">
+            <i class="fi-alert size-74"></i>
+            <h3>ALARM MANAGEMENT</h3>
+          </a>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <a class="patch" href="javascript: openDashboard();" alt="SYSTEM UTILIZATION" title="SYSTEM UTILIZATION">
+            <i class="fi-monitor size-74"></i>
+            <h3>SYSTEM UTILIZATION</h3>
+          </a>
+        </div>
+      </li>
+
+     <li>
+        <div>
+          <a class="patch" href="<%=contextPath%>/std/WorkOrderProgress" alt="WORK ORDER PROGRESS" title="WORK ORDER PROGRESS">
+            <i class="fi-clock size-74"></i>
+            <h3>WORK ORDER PROGRESS</h3>
+          </a>
+        </div>
+      </li>
+
+    <li>
+      <div>
+        <a class="patch" href="<%=contextPath%>/std/AnalyzeFieldWorkEfficiency" alt="FIELD WORK EFFICIENCY" title="FIELD WORK EFFICIENCY">
+          <i class="fi-wrench size-74"></i>
+          <h3>FIELD WORK EFFICIENCY</h3>
+        </a>
+      </div>
+    </li>
+
+      <li>
+        <div>
+          <a class="patch" href="<%=contextPath%>/std/TimeReservationCallList" alt="TIME RESERVATION CALL LIST" title="TIME RESERVATION CALL LIST">
+            <i class="fi-list size-74"></i>
+            <h3>TIME RESERVATION CALL LIST</h3>
+          </a>
+        </div>
+      </li>
+
+    </ul>
               </div>
             </div>
           </section>
