@@ -4,7 +4,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Smart Energy Services Platform</title>
-
+  
 		<!-- Enable html5 tags for 6-7-8 -->
 		<!--[if lte IE 8]>
 		<script type="text/javascript">
@@ -18,14 +18,17 @@
 		</script>
 		<![endif]-->
 		<%String contextPath = request.getContextPath(); %>
+    <link rel="shortcut icon" type="image/png" href="<%=contextPath%>/js/images/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />
+
     <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
+
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-block.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-search-results.css" />
     <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/hex2.css"> 
-		<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/js/images/favicon.png" />
-		<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />		
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/style.tidy.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
 		
@@ -35,8 +38,7 @@
 		<script type="text/javascript" src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
 		<script type="text/javascript" src="<%=contextPath%>/js/index-init.js"></script>
-<%-- 		<script type="text/javascript" src="<%=contextPath%>/js/search-results.js"></script>
- --%>
+
     <script type="text/javascript" src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>		
 		<script type="text/javascript" src="<%=contextPath%>/js/jquery.cookie.js"></script>	
     <script type="text/javascript" src="<%=contextPath%>/js/foundation.min.js"></script>
@@ -46,13 +48,12 @@
 		<script src="<%=contextPath%>/js/spin.js"></script>
 		<script src="<%=contextPath%>/js/ajax-loader.js"></script>
 
-
-  <!--[if lt IE 9]>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
-  <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
-  <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
-  <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+    <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+    <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+    <![endif]-->
 		
 </head>
 <body>
@@ -65,7 +66,7 @@
     i18nerrorNoDataForSearch = "<s:text name='webportal.search.results.error.nosearchresults'/>";
   </script>
 
-<%@ include file="headerv311.inc" %>
+  <%@ include file="headerv311.inc" %>
 
 <div id="main-content-index">
   <div class="row">
@@ -157,6 +158,6 @@
 </div>
 <%@ include file="footerv311.inc" %>
 </div>
-    <script type="text/javascript" src="https://raw.githubusercontent.com/chuckcarpenter/REM-unit-polyfill/master/js/rem.min.js"></script>
+<script type="text/javascript" src="https://raw.githubusercontent.com/chuckcarpenter/REM-unit-polyfill/master/js/rem.min.js"></script>
 </body>
 </html>
