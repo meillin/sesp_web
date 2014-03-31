@@ -16,6 +16,37 @@ html, body{
 	position: relative;
 	background: #ebefee;
 }
+
+#main-content{
+	padding:10px 0px 61px 0px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#main-content{
+	color: #fff;
+	text-align: center;
+}
+
+.panel button {
+	width: 100%;
+}
+
+.panel{
+	background: #fff;
+}
+.big-row {
+	/*min-height: 450px;*/
+	max-width: initial;
+}
+
+.big-row-padding {
+	/*min-height: 450px;*/
+	max-width: initial;
+	padding-left: 0.9375em;
+	padding-right: 0.9375em;
+}
 /**
  * 	Custom Generic Button
  */
@@ -25,6 +56,17 @@ html, body{
 	border-radius: 3px;
 	display: inline-block;
 }
+
+.filterHeader{
+	background: #343d45;
+	/*border-top: 1px solid #E7E7E7;*/
+}
+.filterHeader,
+.filterHeader h4,
+.filterHeader label{
+	color: #fff;
+}
+
 
 .button-wrapper .custom-button{
 	display: inline-block;
@@ -38,15 +80,15 @@ html, body{
 	box-shadow: 0px 1px 0px 0px #aaaaaa;
 	font-size: 14px;
 	text-decoration: none;
-
+	
 	/*
 	 * Disable text selection
 	 */
-	-webkit-user-select: none;
-  	-moz-user-select: none;
-  	-ms-user-select: none;
+	-webkit-user-select: none;  
+  	-moz-user-select: none;    
+  	-ms-user-select: none;      
 	user-select: none;
-
+	
 	/*
 	 * gradient background
 	 */

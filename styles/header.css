@@ -23,13 +23,25 @@ header .slide-menu-left a{
 	color: #fff;
 	display: block;
 	padding: 0.75rem 1.25rem 0.75rem 0rem;
+
+}
+header .slide{
+	border-right: 1px solid #E7E7E7;
+}
+header .logout-right a{
+	color: #353535;
+	display: block;
+	padding: 0.75rem 0.25rem 0.75rem 1.25rem;
+	border-left: 1px solid #E7E7E7;
 }
 
 header .slide-menu-right a{
 	color: #353535;
 	display: block;
-	padding: 0.75rem 0.25rem 0.75rem 1.25rem;
+	padding: 0.75rem 1.25rem;
+	border-left: 1px solid #E7E7E7;
 }
+
 header .search-bar{
 	padding: 0.70rem;
 	width: 100%;
