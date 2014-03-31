@@ -12,7 +12,7 @@ body,html{
 
 body{background: #E7E7E7 !important;}
 
-header{border-bottom: 1px solid #E7E7E7;}
+/*header{border-bottom: 1px solid #E7E7E7;}*/
 header .row{
 	max-width: initial;
 	background: #fff;
@@ -31,7 +31,7 @@ header .slide-menu-right a{
 	padding: 0.75rem 0.25rem 0.75rem 1.25rem;
 }
 header .search-bar{
-	padding: 0.75rem;
+	padding: 0.70rem;
 	width: 100%;
 }
 header .search-bar li:first-child{width: 90%;}
@@ -39,7 +39,7 @@ header .search-bar li{width: 10%;}
 header .search-button a{
 	color: #353535;
 	border: none;
-	margin-left: -100%;
+	margin-left: -85%;
 	z-index: 1001;
 }
 header .search-button .postfix{

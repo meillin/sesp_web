@@ -32,6 +32,10 @@ html, body{
 .panel button {
 	width: 100%;
 }
+
+.panel{
+	background: #fff;
+}
 /**
  * 	Custom Generic Button
  */

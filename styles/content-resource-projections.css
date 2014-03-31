@@ -6,11 +6,21 @@ body {
 	margin: 1em 1em 0em 0em;
 }
 .big-row {
-	min-height: 450px;
+	/*min-height: 450px;*/
+	max-width: initial;
 }
 .panel {
 	min-height: 100% !important;
 }
 .resource-projection-content {
 	padding: 1em;
+}
+
+.filterHeader{
+	background: #fff;
+	border-top: 1px solid #E7E7E7;
+}
+
+.colorHeading{
+ color: #5eb584;
 }

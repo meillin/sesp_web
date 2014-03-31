@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title><s:text name='webportal.head.title'/></title>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title><s:text name='webportal.head.title'/></title>
 
-		<!-- Enable html5 tags for 6-7-8 -->
+	<!-- Enable html5 tags for 6-7-8 -->
 		<!--[if lte IE 8]>
 		<script type="text/javascript">
 		document.createElement("header");
@@ -20,7 +20,7 @@
 		<% String contextPath = request.getContextPath(); %>
 		
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
-    	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
+		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
 
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/jquery.multiselect.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
@@ -53,7 +53,7 @@
 		<script src="<%=contextPath%>/js/spin.js"></script>
 		<script src="<%=contextPath%>/js/ajax-loader.js"></script>
 		<script type="text/javascript" src="<%=contextPath%>/js/search-results.js"></script>	
-				
+
 		<script>
 			contextPath = "<%=contextPath%>";
 
@@ -75,168 +75,158 @@
 			i18nplanningenddate="<s:text name="webportal.resourceprojections.planningperiods.enddate"/>";
 			i18nplanningdomain="<s:text name="webportal.resourceprojections.planningperiods.domain"/>";
 		</script>
-				
+
 	</head>
 	<body onload="loadDefaultData()">
 		<div id="wrapper">
-
 			<%@ include file="headerv311.inc" %>
 
-			<div>
-				<div>
-					<div class="large-12 columns" >
-						<h2><s:text name="webportal.resourceprojections.title"/></h2>
-					</div>
+			<div class="big-row">
+			<div class="large-12 columns filterHeader">
+			<div class="big-row">
+			<div class="large-4 columns">
+			<div class="row">
+				<div class="large-12 columns">
+					<h4><i class="fi-clock colorHeading"> </i> Update planing periods</h4>
 				</div>
-
-				<div class="big-row">
-					<div class="large-4 columns">
-						<div class="panel">
-						<h4><i class="fi-clock"></i> TIME</h4>
-						<div>
-							<div>
-								<label><s:text name="webportal.resourceprojections.time.domain.title"/></label>
-								<div>
-									<select id="block-time-multiselect-domain" class="custom-multi-select" name="multiselect-domain" multiple="multiple" onchange="domainChanged()">
-									</select>
-								</div>
+			</div>
+				<div class="row">
+					<div class="large-6 columns">
+						<div id="block_from_and_to_date">
+							<label><s:text name="webportal.resourceprojections.time.fromdate.title"/>:</label>
+							<div class="custom-input-datepicker input-append date" data-date="2012-02-12" data-date-format="yyyy-mm-dd">
+								<input id="block-time-date-from" type="text" class="input-datepicker text-red"  readonly="readonly"/>
 							</div>
-
-							<div>
-								<label><s:text name="webportal.resourceprojections.time.dateinterval.title"/></label>
-								<div>
-									<select id="block-time-select-date-interval" onchange="onDateIntervalSelect()">
-										<option value="upcomingweek"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingweek"/></option>
-										<option value="upcomingmonth"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingmonth"/></option>													
-										<option value="upcomingquarter"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingquarter"/></option>
-										<option value="upcomingyear"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingyear"/></option>											
-										<option value="custominterval"><s:text name="webportal.resourceprojections.time.dateinterval.custominterval"/></option>
-									</select>
-								</div>
-							</div>
-
-							<div id="block_from_and_to_date">
-								<div>
-									<label><s:text name="webportal.resourceprojections.time.fromdate.title"/>:</label>
-									<div class="custom-input-datepicker input-append date" data-date="2012-02-12" data-date-format="yyyy-mm-dd">
-									<input id="block-time-date-from" type="text" class="input-datepicker text-red"  readonly="readonly"/>
-									</div>
-								</div>
-								<div>
-									<label><s:text name="webportal.resourceprojections.time.todate.title"/>:</label>
-									<div class="custom-input-datepicker input-append date"  data-date="12-02-2012" data-date-format="yyyy-mm-dd">
-									<input id="block-time-date-to" type="text" class="input-datepicker text-red"  readonly="readonly"/>
-									</div>
-								</div>
-							</div>
-							<div>
-								<div>
-								<a id="block-time-button-update" onclick="javascript:updatePlanningPeriod()" class="button tiny"><s:text name="webportal.resourceprojections.time.update"/></a>	
-								</div>
-							</div>
+							<label><s:text name="webportal.resourceprojections.time.todate.title"/>:</label>
+							<div class="custom-input-datepicker input-append date"  data-date="12-02-2012" data-date-format="yyyy-mm-dd">
+								<input id="block-time-date-to" type="text" class="input-datepicker text-red"  readonly="readonly"/>
 							</div>
 						</div>
+						
 					</div> <!-- end of time columns -->
-
-					<div class="large-8 columns">
-						<div class="panel">
-
-						<h4>
-							<i class="fi-clock"></i> PLANNING PERIODS
-							<small><a href="#"><s:text name="webportal.resourceprojections.planningperiods.selectall"/></a>
-							<a href="#"><s:text name="webportal.resourceprojections.planningperiods.selectnone"/></a></small>
-						</h4>
-
-						<div>
-							<table>
-							  <thead>
-							    <tr>
-							      <th width="200"><s:text name="webportal.resourceprojections.planningperiods.name"/></th>
-							      <th><s:text name="webportal.resourceprojections.planningperiods.startdate"/></th>
-							      <th width="150"><s:text name="webportal.resourceprojections.planningperiods.enddate"/></th>
-							      <th width="150"><s:text name="webportal.resourceprojections.planningperiods.domain"/></th>
-							    </tr>
-							  </thead>
-							  <tbody>
-							    <tr>
-							      <td>Content Goes Here</td>
-							      <td>This is longer</td>
-							      <td>Content Goes Here</td>
-							      <td>Content Goes Here</td>
-							    </tr>
-							    <tr>
-							      <td>Content Goes Here</td>
-							      <td>This is longer</td>
-							      <td>Content Goes Here</td>
-							      <td>Content Goes Here</td>
-							    </tr>
-							    <tr>
-							      <td>Content Goes Here</td>
-							      <td>This is longer</td>
-							      <td>Content Goes Here</td>
-							      <td>Content Goes Here</td>
-							    </tr>
-							     <tr>
-							      <td>Content Goes Here</td>
-							      <td>This is longer</td>
-							      <td>Content Goes Here</td>
-							      <td>Content Goes Here</td>
-							    </tr>
-							        <tr>
-							      <td>Content Goes Here</td>
-							      <td>This is longer</td>
-							      <td>Content Goes Here</td>
-							      <td>Content Goes Here</td>
-							    </tr>
-							        <tr>
-							      <td>Content Goes Here</td>
-							      <td>This is longer</td>
-							      <td>Content Goes Here</td>
-							      <td>Content Goes Here</td>
-							    </tr>
-							      <tr>
-							      <td>Content Goes Here</td>
-							      <td>This is longer</td>
-							      <td>Content Goes Here</td>
-							      <td>Content Goes Here</td>
-							    </tr>
-
-							  </tbody>
-							</table>
-						</div>
-					</div>
-					</div>
+					<div class="large-6 columns">
+						<label><s:text name="webportal.resourceprojections.time.domain.title"/></label>
+						<select id="block-time-multiselect-domain" class="custom-multi-select" name="multiselect-domain" multiple="multiple" onchange="domainChanged()">
+						</select>
+						<label><s:text name="webportal.resourceprojections.time.dateinterval.title"/></label>
+						<select id="block-time-select-date-interval" onchange="onDateIntervalSelect()">
+							<option value="upcomingweek"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingweek"/></option>
+							<option value="upcomingmonth"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingmonth"/></option>													
+							<option value="upcomingquarter"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingquarter"/></option>
+							<option value="upcomingyear"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingyear"/></option>											
+							<option value="custominterval"><s:text name="webportal.resourceprojections.time.dateinterval.custominterval"/></option>
+						</select>
+						<a id="block-time-button-update" onclick="javascript:updatePlanningPeriod()" class="button tiny"><s:text name="webportal.resourceprojections.time.update"/></a>	
+					</div> <!-- end of time columns -->
 				</div>
+			</div>
+				<div class="large-8 columns">
+					<h4><i class="fi-filter colorHeading"></i> Filters</h4>
+					<div>
+						<p>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum 
+						</p>
+					</div>
+					</div>
+					</div>
+				</div> <!-- end of time columns -->
+			</div>
 
-				<div>
+			<div class="big-row">
+			<div class="large-12 columns" >
+				<h2><s:text name="webportal.resourceprojections.title"/></h2>
+			</div>
+			</div>
+			<div class="big-row">
 					<div class="large-4 columns">
 						<div class="panel">
-							<h4>Filters</h4>
-							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum 
-						</div>
-						<div class="panel">
-							<h4>Key performance indexes</h4>
+							<h4><i class="fi-graph-trend colorHeading"></i> Key performance indexes</h4>
 							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, 
 						</div> 
 					</div>
-					<div class="large-8 columns">
-						<div class="panel">
-						<h4>Device assets projections</h4>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam process
+				<div class="large-8 columns">
+					<div class="panel">
+						<h4>
+							<i class="fi-calendar colorHeading"></i> Planning Periods
+							<small>
+								<a href="#"><s:text name="webportal.resourceprojections.planningperiods.selectall"/></a>
+								<a href="#"><s:text name="webportal.resourceprojections.planningperiods.selectnone"/></a>
+							</small>
+							</h4>
+
+								<table>
+									<thead>
+										<tr>
+											<th width="200"><s:text name="webportal.resourceprojections.planningperiods.name"/></th>
+											<th><s:text name="webportal.resourceprojections.planningperiods.startdate"/></th>
+											<th width="150"><s:text name="webportal.resourceprojections.planningperiods.enddate"/></th>
+											<th width="150"><s:text name="webportal.resourceprojections.planningperiods.domain"/></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Content Goes Here</td>
+											<td>This is longer</td>
+											<td>Content Goes Here</td>
+											<td>Content Goes Here</td>
+										</tr>
+										<tr>
+											<td>Content Goes Here</td>
+											<td>This is longer</td>
+											<td>Content Goes Here</td>
+											<td>Content Goes Here</td>
+										</tr>
+										<tr>
+											<td>Content Goes Here</td>
+											<td>This is longer</td>
+											<td>Content Goes Here</td>
+											<td>Content Goes Here</td>
+										</tr>
+										<tr>
+											<td>Content Goes Here</td>
+											<td>This is longer</td>
+											<td>Content Goes Here</td>
+											<td>Content Goes Here</td>
+										</tr>
+										<tr>
+											<td>Content Goes Here</td>
+											<td>This is longer</td>
+											<td>Content Goes Here</td>
+											<td>Content Goes Here</td>
+										</tr>
+										<tr>
+											<td>Content Goes Here</td>
+											<td>This is longer</td>
+											<td>Content Goes Here</td>
+											<td>Content Goes Here</td>
+										</tr>
+										<tr>
+											<td>Content Goes Here</td>
+											<td>This is longer</td>
+											<td>Content Goes Here</td>
+											<td>Content Goes Here</td>
+										</tr>
+									</tbody>
+								</table>
 						</div>
 					</div>
 				</div>
-
-				<div>
+				<div class="big-row">
 					<div class="large-12 columns">
 						<div class="panel">
-						Resource projections per month
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam process
+							<h4>Device assets projections</h4>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam process
 						</div>
 					</div>
 				</div>
-
-			</div>
-		</div><!--end of wrapper -->
-	</body>
-</html>
+				<div class="big-row">
+					<div class="large-12 columns">
+						<div class="panel">
+							Resource projections per month
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam process
+						</div>
+					</div>
+				</div>
+			</div><!--end of wrapper -->
+		</body>
+		</html>

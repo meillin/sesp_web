@@ -21,6 +21,12 @@ jQuery(document).ready(function($){
     	//prevent the body click event;
     	e.stopPropagation();
     });
+
+    $('.toggle-filter').click(function(e){
+        //prevent the body click event;
+        e.preventDefault();
+       $('.filterHeader').slideToggle("up");
+    });
     
     //Allow to close the menu with a click out the menu
     $('body').click(function(e){

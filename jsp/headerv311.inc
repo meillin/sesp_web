@@ -5,15 +5,15 @@
 				<li class="slide-menu-left">
 					<a><i id="show-nav" class="fi-list size-24"></i></a> 
 					<ul class="overlapping-menu">
-						<li><a href="<%=request.getContextPath()%>/std/Index" id="menu-button-delivery-performance">HOME</a></li>
-						<li><a href="<%=request.getContextPath()%>/std/ViewResourceProjectionAction" id="menu-button-resource-projections">RESOURCE PROJECTIONS</a></li>
-						<li><a href="<%=request.getContextPath()%>/std/AreaProgress" id="menu-button-technician-positioning">AREA PROGRESS</a></li><br />
-						<li><a href="<%=request.getContextPath()%>/std/StockManagement1" id="menu-button-logistics">LOGISTICS</a></li>
-						<li><a href="<%=request.getContextPath()%>/std/AlarmManagementReports" id="menu-button-alarm-management">ALARM MANAGEMENT</a></li>
-						<li><a href="javascript: openDashboard();" id="menu-button-system-utilization">SYSTEM UTILIZATION</a></li>
-						<li><a href="<%=request.getContextPath()%>/std/WorkOrderProgress" id="menu-button-work-order-progress">WORK ORDER PROGRESS</a></li>
-						<li><a href="<%=request.getContextPath()%>/std/AnalyzeFieldWorkEfficiency" id="menu-button-technician-work-load">FIELD WORK EFFICIENCY</a></li>
-						<li><a href="<%=request.getContextPath()%>/std/TimeReservationCallList" id="menu-button-delivery-performance">TIME RESERVATION CALL LIST</a></li>
+						<li><a href="<%=request.getContextPath()%>/std/Index" id="menu-button-delivery-performance"><i class="fi-home"></i> Home</a></li>
+						<li><a href="<%=request.getContextPath()%>/std/ViewResourceProjectionAction" id="menu-button-resource-projections"><i class="fi-home"></i> Resources Projections</a></li>
+						<li><a href="<%=request.getContextPath()%>/std/AreaProgress" id="menu-button-technician-positioning"><i class="fi-home"></i> Area Progress</a></li><br />
+						<li><a href="<%=request.getContextPath()%>/std/StockManagement1" id="menu-button-logistics"><i class="fi-home"></i> Logistics</a></li>
+						<li><a href="<%=request.getContextPath()%>/std/AlarmManagementReports" id="menu-button-alarm-management"><i class="fi-home"></i> Alarm Management</a></li>
+						<li><a href="javascript: openDashboard();" id="menu-button-system-utilization"><i class="fi-home"></i> System Utilization</a></li>
+						<li><a href="<%=request.getContextPath()%>/std/WorkOrderProgress" id="menu-button-work-order-progress"><i class="fi-home"></i> Work Order Progress</a></li>
+						<li><a href="<%=request.getContextPath()%>/std/AnalyzeFieldWorkEfficiency" id="menu-button-technician-work-load"><i class="fi-home"></i> Field work Efficency</a></li>
+						<li><a href="<%=request.getContextPath()%>/std/TimeReservationCallList" id="menu-button-delivery-performance"><i class="fi-home"></i> Time Reservation call list</a></li>
 					</ul>
 				</li>
 				<li>
@@ -42,7 +42,7 @@
 		<div class="large-4 columns">
 			<ul class="inline-list right">
 				<li class="slide-menu-right">
-					<a><i class="fi-filter size-24"></i></a> 
+					<a class="toggle-filter">Filter <i class="fi-filter size-24"></i></a> 
 				</li>
 			</ul>
 		</div>
