@@ -1,0 +1,82 @@
+[
+  {
+    "idCase": "277",
+    "x": "540",
+    "y": "273139",
+    "status": "IN_PROGRESS",
+    "idWoAddress": "Nötabrånevägen, 22 374 91 Asarum",
+    "coordinateSystem": "RT90"
+  },
+  {
+    "idCase": "355",
+    "x": "5851809",
+    "y": "6792759",
+    "status": "CLOSED",
+    "idWoAddress": "Nötabrånevägen, 22 374 91 Asarum",
+    "coordinateSystem": "SWEREF99TM"
+  },
+  {
+    "idCase": "358",
+    "x": "5851809",
+    "y": "6792759",
+    "status": "CLOSED",
+    "idWoAddress": "Nötabrånevägen, 22 374 91 Asarum",
+    "coordinateSystem": "RT90"
+  },
+  {
+    "idCase": "361",
+    "x": "5851809",
+    "y": "6792759",
+    "status": "CLOSED",
+    "idWoAddress": "Nötabrånevägen, 22 374 91 Asarum",
+    "coordinateSystem": "RT90"
+  },
+  {
+    "idCase": "365",
+    "x": "5851809",
+    "y": "6792759",
+    "status": "CLOSED",
+    "idWoAddress": "Nötabrånevägen, 22 374 91 Asarum",
+    "coordinateSystem": "RT90"
+  },
+  {
+    "idCase": "396",
+    "x": "5851809",
+    "y": "6792759",
+    "status": "CLOSED",
+    "idWoAddress": "Nötabrånevägen, 22 374 91 Asarum",
+    "coordinateSystem": "RT90"
+  },
+  {
+    "idCase": "407",
+    "x": "5851809",
+    "y": "6792759",
+    "status": "CLOSED",
+    "idWoAddress": "Nötabrånevägen, 22 374 91 Asarum",
+    "coordinateSystem": "RT90"
+  },
+  {
+    "idCase": "464",
+    "x": "7765506",
+    "y": "1695755",
+    "status": "CLOSED",
+    "idWoAddress": "Stapelvägen, 5 360 73 Lenhovda",
+    "coordinateSystem": "SWEREF99TM"
+  },
+  {
+    "idCase": "466",
+    "x": "4895088",
+    "y": "8064946",
+    "status": "CLOSED",
+    "idWoAddress": "Stapelvägen, 5 360 73 Lenhovda",
+    "coordinateSystem": "SWEREF99TM"
+  },
+  {
+    "idCase": "493",
+    "x": "4895088",
+    "y": "8064946",
+    "status": "CANCELLED",
+    "idWoAddress": "Stapelvägen, 5 360 73 Lenhovda",
+    "coordinateSystem": "RT90"
+  }
+]

@@ -1,26 +1,22 @@
 var areaStyle = new OpenLayers.Style({
     fillColor: "#00ff00",
-   // fillColor: "#d3edd2", //lentostyle
-    //strokeColor: "#ff9933",
     strokeColor: "#029803", //lentostyle
     strokeWidth: 2,
-  //  label: "${type}",
     fontColor: "#333333",
     fontFamily: "sans-serif",
     fontWeight: "bold",
     fillOpacity: "0.05"
-    //label : "${name}\n\n ${closed}"
 });
 
 var projections = {};
-//projections['RT90']={projection: new OpenLayers.Projection("EPSG:3021")}; 
+projections['SWEREF99TM']={projection: new OpenLayers.Projection("EPSG:3021")};
 projections['RT90']={projection: new OpenLayers.Projection("EPSG:900913")};
-projections['WGS84']={projection: new OpenLayers.Projection("EPSG:4326")}; 
-//projections['KKJ3']={projection: new OpenLayers.Projection("EPSG:2393")};  
-//projections['KKJ3']={projection: new OpenLayers.Projection("EPSG:4326")}; 
-projections['KKJ3']={projection: new OpenLayers.Projection("EPSG:900913")}; 
-projections['UTM32N']={projection: new OpenLayers.Projection("UTM32N")}; 
-projections['NAD87']={projection:'value'}; 
+projections['WGS84']={projection: new OpenLayers.Projection("EPSG:4326")};
+//projections['KKJ3']={projection: new OpenLayers.Projection("EPSG:2393")};
+//projections['KKJ3']={projection: new OpenLayers.Projection("EPSG:4326")};
+projections['KKJ3']={projection: new OpenLayers.Projection("EPSG:900913")};
+projections['UTM32N']={projection: new OpenLayers.Projection("UTM32N")};
+projections['NAD87']={projection:'value'};
 var toProjection   = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
 //var toProjection   = new OpenLayers.Projection("EPSG:4326"); // to Spherical WGS84 Projection
 
@@ -29,7 +25,7 @@ var center = toMercator({x:-0.05,y:51.5});
 
 var popup = null;
 
-var resolutionArray = 
+var resolutionArray =
 [
      156543.0339280410,
      78271.51696402048,
@@ -58,23 +54,23 @@ function createAreaJSON(json) {
 		var layer = layers[i];
 		layer.destroy();
 	}
-	
+
 	if(json == "[]") {
 		return;
 	}
-	
+
 	var features = [];
 	var areas = eval(json);
 	for(var i=0; i<areas.length; i++) {
 		area = areas[i];
 		var areaPoints = [];
-		
+
 //		xCoord = '';
 //		yCoord = '';
 		for(var j = 0; j<area.areaCoordinates.length; j++) {
 //			xCoord = xCoord + area.areaCoordinates[j].x + ", ";
 //			yCoord = yCoord + area.areaCoordinates[j].y + ", ";
-			
+
 			point = new OpenLayers.Geometry.Point(area.areaCoordinates[j].y, area.areaCoordinates[j].x);
 			point.transform(
 				projections[area.areaCoordinates[j].coordinateSystem].projection,
@@ -82,12 +78,12 @@ function createAreaJSON(json) {
 			);
 			areaPoints.push(point);
 		}
-		
-		
-		
+
+
+
 		var linear_ring = new OpenLayers.Geometry.LinearRing(areaPoints);
 		var polygonFeature = new OpenLayers.Feature.Vector(
-				new OpenLayers.Geometry.Polygon([linear_ring]), 
+				new OpenLayers.Geometry.Polygon([linear_ring]),
 				null,
 				null
 		);
@@ -139,7 +135,7 @@ function createPointsJSON(json, getPointCollectionFunc, pointCollections) {
 	boundingBox.maxY = null;
 	boundingBox.minX = null;
 	boundingBox.minY = null;
-	
+
 	var points = eval(json);
 	for(var i=0; i<points.length; i++) {
 		var pointObject = points[i];
@@ -149,36 +145,36 @@ function createPointsJSON(json, getPointCollectionFunc, pointCollections) {
 			projections[pointObject.coordinateSystem].projection,
 			toProjection // to Spherical Mercator Projection
 		);
-		
+
 		if(boundingBox.minX == null) {
 			boundingBox.minX = point.x;
 		} else if(boundingBox.minX > point.x) {
 			boundingBox.minX = point.x;
 		}
-		
+
 		if(boundingBox.minY == null) {
 			boundingBox.minY = point.y;
 		} else if(boundingBox.minY > point.y) {
 			boundingBox.minY = point.y;
 		}
-		
+
 		if(boundingBox.maxX == null) {
 			boundingBox.maxX = point.x;
 		} else if(boundingBox.maxX < point.x) {
 			boundingBox.maxX = point.x;
 		}
-		
+
 		if(boundingBox.maxY == null) {
 			boundingBox.maxY = point.y;
 		} else if(boundingBox.maxY > point.y) {
 			boundingBox.maxY = point.y;
 		}
-		
+
 		vector = new OpenLayers.Feature.Vector(point);
 		vector.object_id = pointObject.id;
 		vector.object_woid = pointObject.idCase;
 		vector.object_wostatus = pointObject.status;
-		vector.object_address = pointObject.idWoAddress;		
+		vector.object_address = pointObject.idWoAddress;
 		pointCollection.features.push(vector);
 	}
 	return boundingBox;
@@ -189,37 +185,37 @@ function addPoints(json, getPointCollectionFunc, pointCollections, clickCallback
 		popup.destroy();
 		popup = null;
 	}
-	
+
 	var controls = map.getControlsByClass("OpenLayers.Control.SelectFeature");
 	for(var i = 0; i<controls.length; i++) {
 		var control = controls[i];
 		control.destroy();
 	}
-	
+
 	var layers = map.getLayersByName("PointsLayer");
 	for(var i = 0; i<layers.length; i++) {
 		var layer = layers[i];
 		layer.destroy();
 	}
-	
+
 	if(json == "[]" || json == "") {
 		return;
 	}
-	
+
 	boundingBox = createPointsJSON(json, getPointCollectionFunc, pointCollections);
 	var renderer = OpenLayers.Util.getParameters(window.location.href).renderer;
 	renderer = (renderer) ? [renderer] : OpenLayers.Layer.Vector.prototype.renderers;
 	var pointVectors = [];
-	
-	
-	
+
+
+
 	for(var i=0; i<pointCollections.objectlist.length; i++) {
 		var pointCollection = pointCollections.objectlist[i];
-		var vector = 
+		var vector =
 	    	new OpenLayers.Layer.Vector("PointsLayer", {
 	        renderers: renderer,
 	        styleMap: new OpenLayers.StyleMap({
-	            "default": 
+	            "default":
 	            	new OpenLayers.Style(
 	            		OpenLayers.Util.applyDefaults({
 	            			externalGraphic: pointCollection.unselectedImageURL,
@@ -271,13 +267,13 @@ function addPoints(json, getPointCollectionFunc, pointCollections, clickCallback
 		pointVectors.push(vector);
 		vector.addFeatures(pointCollection.features);
 	}
-	
+
 	selectControlClick = new OpenLayers.Control.SelectFeature(
 	    		pointVectors,
 	           {
 	               clickout: true,
 	               toggle: false,
-	               multiple: false, 
+	               multiple: false,
 	               hover: false,
 	               toggleKey: "ctrlKey", // ctrl key removes from selection
 	               multipleKey: "shiftKey" // shift key adds to selection
@@ -292,7 +288,7 @@ function addPoints(json, getPointCollectionFunc, pointCollections, clickCallback
 	               }
 	           }
 	    );
-	    
+
 		function removePopup() {
 			if(popup != null) {
 				map.removePopup(popup);
@@ -300,8 +296,8 @@ function addPoints(json, getPointCollectionFunc, pointCollections, clickCallback
 				popup = null;
 			}
 		}
-	    
-	    
+
+
 	    selectControlHover = new OpenLayers.Control.SelectFeature(
 	    		pointVectors,
 	           {
@@ -337,10 +333,10 @@ function addPoints(json, getPointCollectionFunc, pointCollections, clickCallback
 	                    	popup.calculateRelativePosition = function () {
 	                    	    return 'bl';
 	                    	};
-	                    	
+
 	                    	feature.popup = popup;
                             map.addPopup(popup);
-	                    	
+
 	                    },
 	                    featureunhighlighted: function(e) {
 	                    	var feature = e.feature;
@@ -351,19 +347,19 @@ function addPoints(json, getPointCollectionFunc, pointCollections, clickCallback
 	    );
 	    map.addControl(selectControlHover);
 	    selectControlHover.activate();
-	    
-	    
+
+
 	    map.addControl(selectControlClick);
 	    selectControlClick.activate();
-	    
-	   
+
+
 	    var positionX = boundingBox.minX + (boundingBox.maxX - boundingBox.minX) /2;
 	    var positionY = boundingBox.minY + (boundingBox.maxY - boundingBox.minY) /2;
-	    var zoom           = 10; 
+	    var zoom           = 10;
 	    var xResolution = (boundingBox.maxX - boundingBox.minX) / document.getElementById("map-wrapper").offsetWidth;
 	    var yResolution =  (boundingBox.maxY - boundingBox.minY) / document.getElementById("map-wrapper").offsetHeight
 	    var resolution = Math.max(xResolution, yResolution);
-	    
+
 	    var scale = 10;
 	    for(var i = 0; i<resolutionArray.length; i++) {
 	    	if(i == resolutionArray.length -1) {
@@ -381,8 +377,8 @@ function addPoints(json, getPointCollectionFunc, pointCollections, clickCallback
 	    		break;
 	    	}
 	    }
-	    	
-	    
+
+
 	    map.setCenter( new OpenLayers.LonLat(positionX, positionY), scale);
 }
 
@@ -397,56 +393,56 @@ function init(mapServerURL) {
 			//controls: [new OpenLayers.Control.Attribution()],
 			resolutions: resolutionArray,
 			projection: "EPSG:900913"
-				
+
 		}
 	);
 	//map.projection = "EPSG:900913";
 //  var mapLayer       = new OpenLayers.Layer.OSM();
-//	var mapLayer = new OpenLayers.Layer.WMS( 
+//	var mapLayer = new OpenLayers.Layer.WMS(
 //			"OpenLayers WMS",
 //            "http://vmap0.tiles.osgeo.org/wms/vmap0",
-//            {layers: 'basic'} 
+//            {layers: 'basic'}
 //	);
 	//map.projection = toProjection;
-	
+
 	var options = {
 		layers: 'cache'//,
 		//srs: "EPSG:900913",
 		//projection: "EPSG:900913"
 	};
-	
-	var mapLayer = new OpenLayers.Layer.WMS( 
+
+	var mapLayer = new OpenLayers.Layer.WMS(
 			"Öystein WMS Cache",
 			mapUrl,
 			//"http://stargate.corp.capgemini.com/mapcache",
-            options, 
+            options,
             {
 				transitionEffect: "resize"//,
 				,attribution: "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
             }
 	);
-	
-//	var mapLayer = new OpenLayers.Layer.MapServer( 
+
+//	var mapLayer = new OpenLayers.Layer.MapServer(
 //			"Öystein MapServer",
 //            "http://macgyver/cgi-bin/mapserv?map=/home/ok/osm-demo/mapserver-utils/osm-google.map",
-//            {layers: 'all'} 
+//            {layers: 'all'}
 //	);
-	
-	
-	
+
+
+
 //    var mapLayer = new OpenLayers.Layer.MapServer( "MapServer Layer",
 //            "http://macgyver/cgi-bin/mapserv?map=/home/ok/osm-demo/mapserver-utils/osm-google.map&",
 //            {layers: 'land0 borders0 places0 land1 borders1 places1 land2 borders2 places2 land3 borders3 places3 land4 landuse4 waterarea4 borders4 places4 land5 landuse5 waterarea5 roads5 borders5 places5 land6 landuse6 waterarea6 waterways6 roads6 borders6 places6 land7 landuse7 waterarea7 waterways7 roads7 borders7 places7 land8 landuse8 waterarea8 waterways8 railways8 roads8 borders8 places8 land9 landuse9 waterarea9 waterways9 railways9 roads9 borders9 places9 land10 landuse10 waterarea10 waterways10 railways10 roads10 aeroways10 borders10 places10 land11 landuse11 transport_areas11 waterarea11 waterways11 railways11 roads11 aeroways11 borders11 places11 land12 landuse12 transport_areas12 waterarea12 waterways12 railways12 roads12 aeroways12 borders12 places12 land13 landuse13 transport_areas13 waterarea13 waterways13 railways13 roads13 aeroways13 borders13 places13 land14 landuse14 transport_areas14 waterarea14 waterways14 railways14 roads14 aeroways14 borders14 places14 land15 landuse15 transport_areas15 waterarea15 waterways15 railways15 roads15 aeroways15 borders15 places15 land16 landuse16 transport_areas16 waterarea16 waterways16 railways16 roads16 aeroways16 borders16 places16 land17 landuse17 transport_areas17 waterarea17 waterways17 railways17 roads17 aeroways17 borders17 places17 land18 landuse18 transport_areas18 waterarea18 waterways18 railways18 roads18 aeroways18 borders18 places18'},
 //            {singleTile: "true", ratio:1} );
 
-	
-//	var mapLayer = new OpenLayers.Layer.WMS( 
+
+//	var mapLayer = new OpenLayers.Layer.WMS(
 //			"OpenLayers WMS",
 //			 "http://macgyver/cgi-bin/mapserv?map=/home/ok/osm-demo/mapserver-utils/osm-google.map",
-//            {layers: 'all'} 
+//            {layers: 'all'}
 //	);
     var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
-    
+
     //X: 9098493,5 Y: 1962764
    // var position       = new OpenLayers.LonLat(13.41,52.52).transform(fromProjection, toProjection);
     map.addLayer(mapLayer);
@@ -468,84 +464,86 @@ function initmap(mapServerURL) {
 			//controls: [new OpenLayers.Control.Attribution()],
 			resolutions: resolutionArray,
 			projection: "EPSG:900913"
-				
+
 		}
-	);	
-	
+	);
+
 	var options = {
 		layers: 'cache'//,
-		
+
 	};
-	
-	var mapLayer = new OpenLayers.Layer.WMS( 
+
+	var mapLayer = new OpenLayers.Layer.WMS(
 			"Öystein WMS Cache",
 			mapUrl,
 			//"http://stargate.corp.capgemini.com/mapcache",
-            options, 
+            options,
             {
 				transitionEffect: "resize"//,
 				,attribution: "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
-				//opacity: .9	
+				//opacity: .9
             }
-	);	
+	);
 
     var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
-    
-    
+
+
     map.addLayer(mapLayer);
     map.setCenter(new OpenLayers.LonLat(1962764, 9098493), 4);
-    
+
+    //Meilan added this for testing.
+    filter_submit();
   }
 
 
 
 function loadMapPoint(mapServerUrl, mapElementID, xcoord, ycoord) {
 	var mapUrl = "http://portal.skvader.com/mapcache";
-	
+
 	// Img Path
 	var imgPath = contextPath + "/images/marker-icon-blue.png";
-	
+
 	if(mapServerUrl!=null&&mapServerUrl!='') {
 		mapUrl = mapServerUrl;
 	}
 	map = new OpenLayers.Map(
 			mapElementID,
-		{	
+		{
 			resolutions: resolutionArray,
 			numZoomLevels: 19,
-			projection: "EPSG:900913"				
+			projection: "EPSG:900913"
 		}
-	);	
+	);
 	var options = {
 		layers: 'cache'
 	};
-	
-	var mapLayer = new OpenLayers.Layer.WMS( 
+
+	var mapLayer = new OpenLayers.Layer.WMS(
 			"Öystein WMS Cache",
-			mapUrl,			
-            options, 
+			mapUrl,
+            options,
             {
 				transitionEffect: "resize"
 				,attribution: "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
             }
-	);	
+	);
 	// Vector Layer
 	var vectorLayer = new OpenLayers.Layer.Vector("Overlay");
 	var point = new OpenLayers.Geometry.Point(ycoord, xcoord);
-	
+
 	var feature = new OpenLayers.Feature.Vector(point, {
-		some : 'data'}, 
+		some : 'data'},
 		{
 		externalGraphic : imgPath,
 		graphicHeight : 38,
 		graphicWidth : 26
-		}, 
+		},
 	    {
 		strategies : [ new OpenLayers.Strategy.BBOX(),
 				new OpenLayers.Strategy.Save() ]
 	});
-	vectorLayer.addFeatures(feature);        
+	vectorLayer.addFeatures(feature);
     var position = new OpenLayers.LonLat(point.x,point.y);
     map.addLayers( [ mapLayer, vectorLayer ]);
-    map.setCenter(position, 14);    
+    map.setCenter(position, 14);
   }

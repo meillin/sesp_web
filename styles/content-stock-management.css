@@ -7,7 +7,6 @@
 }
 
 #main-content #block-on-pallet #tabs-wrapper{
-	position: absolute;
 	top: 33px;
 	left:150px;
 }
@@ -88,7 +87,7 @@
 }
 
 #main-content #block-on-pallet #chart-wrapper #chart-legend .select-wrapper .select-title{
-	display: block;	
+	display: block;
 	font-weight: bold;
 	margin-left: 5px;
 	margin-bottom: 5px;

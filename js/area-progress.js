@@ -23,32 +23,24 @@ jQuery(document).ready(function($){
     	if( !$(this).hasClass("selected")){
 	    	$(".tab").removeClass("selected");
 	    	$(this).addClass("selected");
-
 	    	/**
 	    	 * TODO
 	    	 * action on the first tab
 	    	 */
-
     	}
     });
 
     $("#block-work-order-tab2").click(function(){
-
     	if( !$(this).hasClass("selected")){
 	    	$(".tab").removeClass("selected");
 	    	$(this).addClass("selected");
-
 	    	/**
 	    	 * TODO
 	    	 * action on the second tab
 	    	 */
-
     	 }
     });
-
 });
-
-
 
 function loadvalues(){
 	if(area_name1!=null&&area_name1!='') {
@@ -61,15 +53,15 @@ function loadvalues(){
 	loadWorkOrderTypes();
 	loadDefaultTabs();
 
+	//filter_submit();
 	//getAreas();
-
+	//Meilan added this function. tobe removed
 }
 
 function populateAPDateIntervalFilters() {
 
 	var ap_dateInterval = $.cookie(pgCode+"ap_dateInterval");
 	if(ap_dateInterval!=null && ap_dateInterval!='') {
-		//var dataarray = ap_dateInterval.split(",");
 		$("#filter-select-date-interval").val(ap_dateInterval);
 	}
 	show();
@@ -107,21 +99,6 @@ function loadDomainList() {
 	var obj= {};
 	obj.url=contextPath+"/std/GetDomains.action";
 	obj.successfunc = function(data) {
-		/*var items;
-
-		$.each(data, function(i, item) {
-			items += '<option value="' + item.id + '">'	+ item.name + '</option>';
-			});
-		$("#filter-multiselect-domain").html(items);
-
-		var ap_domain = $.cookie(pgCode+"ap_domain");
-		if(ap_domain!=null && ap_domain!='') {
-			var dataarray = ap_domain.split(",");
-			$("#filter-multiselect-domain").val(dataarray);
-		}
-
-		$("#filter-multiselect-domain").multiselect("refresh");  */
-
 		var items;
 		var savedData = $.cookie(pgCode+"ap_domain");
 		var selected = '" > ';
@@ -152,19 +129,6 @@ function loadAreaTypes(){
 	var obj1= {};
 	obj1.url=contextPath+"/std/AlertManagementAreaTypes.action";
 	obj1.successfunc = function(data){
-	/*var items1;
-	$.each(data, function(i, item1) {
-		items1 += '<option value="' + item1.id + '">' + item1.name + '</option>';
-	});
-	$("#filter-multiselect-area-type").html(items1);
-
-	var ap_areaType = $.cookie(pgCode+"ap_areaType");
-	if(ap_areaType!=null && ap_areaType!='') {
-		var dataarray = ap_areaType.split(",");
-		$("#filter-multiselect-area-type").val(dataarray);
-	}
-
-	$("#filter-multiselect-area-type").multiselect("refresh");*/
 
 	var items;
 	var savedData = $.cookie(pgCode+"ap_areaType");
@@ -186,8 +150,6 @@ function loadAreaTypes(){
 	obj1.errorfunc = errorDetails;
 	run_ajax_json(obj1);
 	return;
-
-
 	}
 
 
@@ -195,19 +157,6 @@ function loadAreaTypes2(){
 	var obj1= {};
 	obj1.url=contextPath+"/std/AlertManagementAreaTypes.action";
 	obj1.successfunc = function(data){
-	/*var items1;
-	$.each(data, function(i, item1) {
-		items1 += '<option value="' + item1.id + '">' + item1.name + '</option>';
-	});
-	$("#filter-multiselect-area-type").html(items1);
-
-	var ap_areaType = $.cookie(pgCode+"ap_areaType");
-	if(ap_areaType!=null && ap_areaType!='') {
-		var dataarray = ap_areaType.split(",");
-		$("#filter-multiselect-area-type").val(dataarray);
-	}
-
-	$("#filter-multiselect-area-type").multiselect("refresh");*/
 
 	var items;
 	var savedData = $.cookie(pgCode+"ap_areaType");
@@ -219,13 +168,10 @@ function loadAreaTypes2(){
 
 	$.each(data, function(i, item) {
 		items += '<option value="' + item.id +selected + item.name + '</option>';
-
 	});
 
 	populateSavedMultiSelectBox("#filter-multiselect-area-type", items,savedData);
 
-	/*$("#filter-multiselect-area").attr('disabled','false');
-	getAreas();*/
 	};
 	obj1.errorfunc = errorDetails;
 	run_ajax_json(obj1);
@@ -240,9 +186,8 @@ function loadWorkOrderTypes(){
 	obj2.successfunc = populateWorkOrderTypes;
 	obj2.errorfunc = errorDetails;
 	run_ajax_json(obj2);
+
 	return;
-
-
 }
 
 function populateWorkOrderTypes(data){
@@ -339,11 +284,11 @@ function filter_submit() {
 		var ap_dateInterval = $("#filter-select-date-interval").val();
 		var ap_dateFrom = $("#filter-date-from").val();
 		var ap_dateTo = $("#filter-date-to").val();
-		var ap_domain = $("#filter-multiselect-domain").val();
-		var ap_areaType = $("#filter-multiselect-area-type").val();
-		var ap_workOrderType = $("#filter-multiselect-work-order-type").val();
+		var ap_domain = $("#filter-multiselect-domain").val() || '6, 7, 8';
+		var ap_areaType = $("#filter-multiselect-area-type").val() || '10,9,8,11,7,12,13';
+		var ap_workOrderType = $("#filter-multiselect-work-order-type").val() || '41,44,81,51,53,55,57,59,61,63,65,112,130,152,128,140,460,207,107,126,136,173,462,110,256,147,168,149,143,464,145,466,211,68,69,70,82,135,154,74,77,78,84,179,180,183,184,185,186,187,188,189,190,191,192,193,194,195,175,196,197,176,198,199,200,177,178,201,202,203,204,205,181,182';
 		var ap_unplanned = $("#filter-checkbox-unplanned").prop('checked');
-		var ap_area = $("#filter-multiselect-area").val();
+		var ap_area = $("#filter-multiselect-area").val() || '7,8,9,10,11,12,13,14,15';
 
 		if(ap_dateInterval == "custominterval"){
 				if(!validateInputs(ap_dateFrom,from_err_msg)){
@@ -371,7 +316,7 @@ function filter_submit() {
 			return false;
 		}
 
-		if($("#filter-multiselect-area").text()!=null&&$("#filter-multiselect-area").text()!='') {
+		if($("#filter-multiselect-area").text()!=null && $("#filter-multiselect-area").text()!='') {
 				$("#area-name").val(area_name1);
 		}
 		saveAPFilters(ap_dateInterval,ap_dateFrom,ap_dateTo,ap_domain,ap_areaType,ap_workOrderType,ap_unplanned,ap_area);
@@ -381,8 +326,8 @@ function filter_submit() {
 		$("#summary-workordertypes-selected").html("");
 
 		//Removing old charts
-		refreshChart1();
-		refreshChart2();
+		//refreshChart1();
+		//refreshChart2();
 
 		var obj3= {};
 		obj3.url=contextPath+"/std/WorkOrderStatusChart.action";
@@ -482,15 +427,13 @@ function showWorkOrderTypes(data){
 
 function drawChart1(data) {
 
-	console.log('should draw chart');
+	console.log('function drawChart1() called');
 
 	showWorkOrderProgressCharts();
 	//$("#block-summary-content-wo-count").html(eval(data).totalNoOfWorkOrders);
 
 	$("#block-summary-content-wo-count").html('no data');
-
 	var summaryWorkOrderId = "#summary-workordertypes-selected";
-
 	//Removing old data for summaryWorkOrder
 	$(summaryWorkOrderId).html("");
 
@@ -503,23 +446,31 @@ function drawChart1(data) {
 		}
 	}
 
-	var randomNum = Math.random();
 	//Work Order Progress
+		//Generate Javascript Fusion chart with a dummy data
+	var myChart = new FusionCharts("Doughnut2D","order-progress", "400", "300", "0" );
+      myChart.setJSONUrl(contextPath + "/data/dummydata.json");
+      myChart.render("block-work-order-chart-view");
 
+  var myChart2 = new FusionCharts( "Line", "work-order-progress", "400", "300" );
+      myChart2.setJSONUrl(contextPath + "/data/dummydata.json");
+			myChart2.render("block-work-order-chart-view2");
+/*
 	var stockChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/Doughnut2D.swf", "Work Order Progress"+randomNum,"930","513");
 	stockChart.setDataXML(data.workOrderProgress);
-
 	stockChart.render("block-work-order-chart-view");
 
 	stockChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/MSCombi2D.swf", "Weekly DetailedProgress"+randomNum,"930","513");
 	stockChart.setDataXML(data.detailedProgress);
 	stockChart.render("block-work-order-chart-view2");
+*/
 }
 
 function refreshChart1(){
 	console.log('refreshchart1');
-	var myChart = new FusionCharts("Doughnut2D","myChartId", "400", "300", "0" );
 
+	//Generate Javascript Fusion chart with a dummy data
+	var myChart = new FusionCharts("Doughnut2D","myChartId", "400", "300", "0" );
       myChart.setXMLData("<chart caption='Weekly Sales Summary' xAxisName='Week' " +
         "yAxisName='Sales' numberPrefix='$'>" +
           "<set label='Week 1' value='14400' />" +
@@ -529,7 +480,7 @@ function refreshChart1(){
         "</chart>");
       myChart.render("block-work-order-chart-view");
 
-      var myChart2 = new FusionCharts( "Line", "myChartId2", "400", "300" );
+      var myChart2 = new FusionCharts( "Line", "fakechart", "400", "300" );
 			myChart2.setXMLData("<chart caption='Weekly Sales Summary' xAxisName='Week' " +
         "yAxisName='Sales' numberPrefix='$'>" +
           "<set label='Week 1' value='14400' />" +
@@ -564,35 +515,30 @@ function updateWorkOrder(orderType){
 	var ap_area = $("#filter-multiselect-area").val();
 
 	if(ap_dateInterval == "custominterval"){
-
-
-			if(!validateInputs(ap_dateFrom,from_err_msg)){
-				return false;
-			}
-
-			if(!validateInputs(ap_dateTo,to_err_msg)){
-				return false;
-			}
-
-			if(new Date(ap_dateFrom) > new Date(ap_dateTo)){
-				alert(i18nerrorFromDateOlderThanToDate);
-				return false;
-			}
-
+		if(!validateInputs(ap_dateFrom,from_err_msg)){
+			return false;
+		}
+		if(!validateInputs(ap_dateTo,to_err_msg)){
+			return false;
+		}
+		if(new Date(ap_dateFrom) > new Date(ap_dateTo)){
+			alert(i18nerrorFromDateOlderThanToDate);
+			return false;
+		}
 	}
 
-	 if(!validateInputs(ap_domain,domain_err_msg)){
-			return false;
-	 }
-	 if(!validateInputs(ap_areaType,areatype_err_msg)){
-			return false;
-	 }
-	 if(!validateInputs(ap_workOrderType,workordertype_err_msg)){
-			return false;
-	 }
-	 if(!validateInputs(ap_area,area_err_msg)){
-			return false;
-	 }
+	if(!validateInputs(ap_domain,domain_err_msg)){
+		return false;
+	}
+	if(!validateInputs(ap_areaType,areatype_err_msg)){
+		return false;
+	}
+	if(!validateInputs(ap_workOrderType,workordertype_err_msg)){
+		return false;
+	}
+	if(!validateInputs(ap_area,area_err_msg)){
+		return false;
+	}
 
 	saveAPFilters(ap_dateInterval,ap_dateFrom,ap_dateTo,ap_domain,ap_areaType,ap_workOrderType,ap_unplanned,ap_area);
 	saveAreaProgressFilter("block-work-order-tab",orderType );
@@ -610,9 +556,6 @@ function updateWorkOrder(orderType){
 		var stockChart;
 		if(orderType == "progress"){
 			updateStatusTab("#block-work-order-tab1","#block-work-order-tab2");
-			/*$("#block-work-order-tab1").addClass("tab selected");
-			$("#block-work-order-tab2").removeClass("tab selected");
-			$("#block-work-order-tab2").addClass("tab");*/
 			obj3.successfunc = drawChart1;
 			obj3.errorfunc = errorDetails;
 			run_ajax(obj3);
@@ -623,8 +566,6 @@ function updateWorkOrder(orderType){
 			obj3.successfunc = drawChart2;
 			obj3.errorfunc = errorDetails;
 			run_ajax(obj3);
-
-
 		}
 
 	}
@@ -635,7 +576,7 @@ function updateWorkOrder(orderType){
 function drawChart2(data){
 
 	showWorkOrderStatusCharts();
-
+	console.log("function drawChart2() called");
 	$("#block-summary-content-wo-count").html(eval(data).totalNoOfWorkOrders);
 
 	var summaryWorkOrderId = "#summary-workordertypes-selected";
@@ -743,32 +684,19 @@ function populateSavedMultiSelectBox(idName, items,savedData){
 function updateStatusTab(tabId1,tabId2){
 
 	var tabSelected = "tab selected";
-
-	//if(statusType == "progress"){
-		$(tabId1).addClass(tabSelected);
-		$(tabId2).removeClass(tabSelected);
-		$(tabId2).addClass("tab");
-	//}else if(statusType == "status"){
-
-		/*$("#block-work-order-tab1").removeClass(tabSelected);
-		$("#block-work-order-tab1").addClass("tab");
-		$("#block-work-order-tab2").addClass(tabSelected);*/
-	//}
+	$(tabId1).addClass(tabSelected);
+	$(tabId2).removeClass(tabSelected);
+	$(tabId2).addClass("tab");
 }
 
 function loadDefaultTabs(){
 
 	var orderType = $.cookie(pgCode+"block-work-order-tab");
-
-
 	if(orderType != "undefined" && orderType != null && orderType != ""){
-
 		if(orderType == "progress"){
 			updateStatusTab("#block-work-order-tab1","#block-work-order-tab2");
-
 		}else if(orderType == "status"){
 			updateStatusTab("#block-work-order-tab2","#block-work-order-tab1");
-
 		}
 	}
 }

@@ -8,6 +8,7 @@
  */
 .datepicker {
 
+	display: none; /*Meilan added display:none;*/
 	top: 0;
 	left: 0;
 	padding: 4px;

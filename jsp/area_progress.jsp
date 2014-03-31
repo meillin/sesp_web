@@ -63,7 +63,7 @@ WorkOrderProgressService woProgressService = ServiceProvider.getInstance().getSe
 List<WorkOrderStatusTO> woStatusTypes = woProgressService.getWOStatusTypes();
 Map<String, String> selectedImage = new HashMap<String, String>();
 Map<String, String> unselectedImage = new HashMap<String, String>();
-//String[] symbols = new String[] {"blue","green","orange","pink","purple","red","yellow"};
+
 String[] symbols = new String[] {"blue","red","green","purple","yellow","pink","ltblue"};
 
 int imageCount = 1;
@@ -79,40 +79,39 @@ String imagePath = null;
 7	SCHEDULED	Scheduled*/
 
 for(WorkOrderStatusTO woStatusTTO : woStatusTypes) {
+	if(woStatusTTO.getCode().equals("CANCELLED")) {
+	imagePath = "/images/marker-icon-blue-dot.png";
+	} else if (woStatusTTO.getCode().equals("CLOSED")) {
+	imagePath = "/images/marker-icon-green-dot.png";
+	}  else if (woStatusTTO.getCode().equals("ERROR"))  {
+	imagePath = "/images/marker-icon-red-dot.png";
+	}  else if (woStatusTTO.getCode().equals("ERROR_STARTING"))  {
+	imagePath = "/images/marker-icon-red-dot.png";
+	}  else if (woStatusTTO.getCode().equals("IN_PROGRESS"))  {
+	imagePath = "/images/marker-icon-yellow-dot.png";
+	} else if (woStatusTTO.getCode().equals("SCHEDULED"))  {
+	imagePath = "/images/marker-icon-yellow-dot.png";
+	}
 
-if(woStatusTTO.getCode().equals("CANCELLED")) {
-imagePath = "/images/marker-icon-blue-dot.png";
-} else if (woStatusTTO.getCode().equals("CLOSED")) {
-imagePath = "/images/marker-icon-green-dot.png";
-}  else if (woStatusTTO.getCode().equals("ERROR"))  {
-imagePath = "/images/marker-icon-red-dot.png";
-}  else if (woStatusTTO.getCode().equals("ERROR_STARTING"))  {
-imagePath = "/images/marker-icon-red-dot.png";
-}  else if (woStatusTTO.getCode().equals("IN_PROGRESS"))  {
-imagePath = "/images/marker-icon-yellow-dot.png";
-} else if (woStatusTTO.getCode().equals("SCHEDULED"))  {
-imagePath = "/images/marker-icon-yellow-dot.png";
-}
-
-unselectedImage.put(woStatusTTO.getStatusId(), ((HttpServletRequest)pageContext.getRequest()).getContextPath() + imagePath);
-selectedImage.put(woStatusTTO.getStatusId(),  ((HttpServletRequest)pageContext.getRequest()).getContextPath() + imagePath);
-symbolCounter++;
+	unselectedImage.put(woStatusTTO.getStatusId(), ((HttpServletRequest)pageContext.getRequest()).getContextPath() + imagePath);
+	selectedImage.put(woStatusTTO.getStatusId(),  ((HttpServletRequest)pageContext.getRequest()).getContextPath() + imagePath);
+	symbolCounter++;
 }
 %>
 	<script>
-        contextPath = "<%=request.getContextPath()%>";
+		contextPath = "<%=request.getContextPath()%>";
 		area_name1 = "<%=request.getAttribute("aname")%>";
-        from_err_msg="<s:text name='areaprogress.filters.from.err.msg'/>";
-        to_err_msg="<s:text name='areaprogress.filters.to.err.msg'/>";
-        i18nerrorFromDateOlderThanToDate = "<s:text name='webportal.analyzefieldwork.fieldworkefficiency.filters.datesvalidation'/>";
-        domain_err_msg="<s:text name='areaprogress.filters.domain.err.msg'/>";
-        areatype_err_msg="<s:text name='areaprogress.filters.areatype.err.msg'/>";
-        workordertype_err_msg="<s:text name='areaprogress.filters.workordertype.err.msg'/>";
-        dateinterval_err_msg="<s:text name='areaprogress.filters.dateinterval.err.msg'/>";
-        filters_msg="<s:text name='areaprogress.filters.msg'/>";
-        area_err_msg="<s:text name='webportal.error.selectarea'/>";
+		from_err_msg="<s:text name='areaprogress.filters.from.err.msg'/>";
+		to_err_msg="<s:text name='areaprogress.filters.to.err.msg'/>";
+		i18nerrorFromDateOlderThanToDate = "<s:text name='webportal.analyzefieldwork.fieldworkefficiency.filters.datesvalidation'/>";
+		domain_err_msg="<s:text name='areaprogress.filters.domain.err.msg'/>";
+		areatype_err_msg="<s:text name='areaprogress.filters.areatype.err.msg'/>";
+		workordertype_err_msg="<s:text name='areaprogress.filters.workordertype.err.msg'/>";
+		dateinterval_err_msg="<s:text name='areaprogress.filters.dateinterval.err.msg'/>";
+		filters_msg="<s:text name='areaprogress.filters.msg'/>";
+		area_err_msg="<s:text name='webportal.error.selectarea'/>";
 
-        var ap_dateInterval = "<%=request.getAttribute("dateInterval")%>";
+		var ap_dateInterval = "<%=request.getAttribute("dateInterval")%>";
 		var ap_dateFrom = "<%=request.getAttribute("dateFrom")%>";
 		var ap_dateTo = "<%=request.getAttribute("dateTo")%>";
 		var ap_domain = "<%=request.getAttribute("domain")%>";
@@ -168,9 +167,7 @@ symbolCounter++;
 			}
 
         function displayInfo(id) {
-        		// alert(id);
         		$("#area-name").val(id);
-        		// submitLogistics();
         	}
 
         function infoDataCallback(id,woid,wostatus, woaddress) {
@@ -198,19 +195,18 @@ symbolCounter++;
 
 		<div id="wrapper">
 			<%@include  file="headerv311.inc" %>
-			<div>
-				<div>
+				<div class="page-name">
 					<div class="large-12 columns" >
 						<h2><s:text name="areaprogress.area"/> : <span class="text-light-grey" id="area-name"></span></h2>
 					</div>
 				</div>
 
-				<div>
-
-					<div class="large-4 columns">
+				<div><!-- start of new full width row -->
+					<div class="large-12 columns fillter">
 						<div class="panel">
-							<div class="row">
-								<div class="large-12 columns">
+
+							<div>
+								<div class="large-4 columns">
 									<label> <s:text name="workorderprogress.filters.dateinterval"/></label>
 									<select id="filter-select-date-interval" onchange="show()">
 										<option value="lastweek" selected="selected"><s:text name="webportal.alarm.dateinterval.lastweek"/></option>
@@ -220,115 +216,107 @@ symbolCounter++;
 										<option value="lastyear"><s:text name="webportal.alarm.dateinterval.lastyear"/></option>
 										<option value="custominterval"><s:text name="webportal.alarm.dateinterval.custominterval"/></option>
 									</select>
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="large-6 columns">
-									<label><s:text name="workorderprogress.filters.from"/> :</label>
-									<div class="custom-input-datepicker input-append date" data-date="2012-02-12" data-date-format="yyyy-mm-dd">
-										<input id="filter-date-from" type="text" class="input-datepicker text-red"  readonly="readonly"/>
+									<div class="row">
+										<div class="medium-6 columns">
+											<label><s:text name="workorderprogress.filters.from"/> :</label>
+											<div class="custom-input-datepicker input-append date" data-date="2012-02-12" data-date-format="yyyy-mm-dd">
+												<input id="filter-date-from" type="text" class="input-datepicker text-red"  readonly="readonly"/>
+											</div>
+										</div>
+										<div class="medium-6 columns">
+											<label><s:text name="workorderprogress.filters.to"/> :</label>
+											<div class="custom-input-datepicker input-append date"  data-date="12-02-2012" data-date-format="yyyy-mm-dd">
+												<input id="filter-date-to" type="text" class="input-datepicker text-red"  readonly="readonly"/>
+											</div>
+										</div>
 									</div>
 								</div>
-								<div class="large-6 columns">
-									<label><s:text name="workorderprogress.filters.to"/> :</label>
-									<div class="custom-input-datepicker input-append date"  data-date="12-02-2012" data-date-format="yyyy-mm-dd">
-										<input id="filter-date-to" type="text" class="input-datepicker text-red"  readonly="readonly"/>
-									</div>
-								</div>
-							</div>
 
-							<div class="row">
-								<div class="large-6 columns">
+								<div class="large-4 columns">
 									<lable><s:text name="areaprogress.filters.domain"/></lable>
 									<select id="filter-multiselect-domain" class="custom-multi-select" onchange="domainChanged()" name="multiselect-domain" multiple="multiple">
 									</select>
-								</div>
-								<div class="large-6 columns">
 									<lable><s:text name="workorderprogress.filters.workordertype"/></lable>
 									<select id="filter-multiselect-work-order-type" class="custom-multi-select" name="multiselect-work-order-type" multiple="multiple">
 									</select>
 								</div>
-							</div>
 
-							<div class="row">
-								<div class="large-12 columns">
+								<div class="large-4 columns">
 									<lable><s:text name="areaprogress.filters.areatype"/></lable>
 									<select id="filter-multiselect-area-type" class="custom-multi-select" onchange="areaTypeChanged()" name="multiselect-area-type" multiple="multiple">
 									</select>
-								</div>
-								<div class="large-12 columns">
+
 									<lable><s:text name="webportal.alarm.area"/></lable>
 									<select id="filter-multiselect-area" class="custom-multi-select" name="multiselect-area" multiple="multiple"></select>
-									<lable>Unplanned<input type="checkbox" id="filter-checkbox-unplanned" name="unplanned" value="checked"/> </lable>
+									<lable>Unplanned<input type="checkbox" id="filter-checkbox-unplanned" name="unplanned" value="checked"/></lable>
 								</div>
 							</div>
+							<hr>
+							<div class="submit-button">
+									<div class="row text-center">
+										<div class="large-12 columns">
+											<a class="button" id="block-filter-button-update" onclick="filter_submit()"><s:text name="workorderprogress.filters.update"/></a>
+										</div>
+									</div>
+							</div><!-- end of submit-button -->
 
-							<div class="row">
-								<div class="medium-12 columns">
-									<a class="button" id="block-filter-button-update" onclick="filter_submit()"><s:text name="workorderprogress.filters.update"/></a>
+						</div><!-- end of panel -->
+					</div><!-- end of filter -->
+				</div><!-- end of new full width row -->
+
+				<div><!-- start of new full width row -->
+					<div class="large-12 columns main-content-wrapper">
+						<div style="min-height: 660px">
+							<div>
+
+								<div class="large-4 columns map panel">
+										<div id="tabs-wrapper">
+											<a id="block-work-order-tab1" onclick="javascript:updateWorkOrder('progress')">Progress</a>
+											<a id="block-work-order-tab2" onclick="javascript:updateWorkOrder('status')">Status</a>
+										</div>
+										<div style="width: 500px; height: 600px; opacity:0.99;" id="map-wrapper"></div>
 								</div>
-							</div>
-
-						</div>
-					</div>
-
-					<div class="large-8 columns chart-container">
-						<div class="panel">
-							<div id="block-work-order">
-								<div><span><s:text name="areaprogress.workorderprogress"/></span></div>
-									<div>
+								<div class="large-4 columns work-order panel" id="block-summary">
 										<div>
-											<div id="tabs-wrapper">
-												<a id="block-work-order-tab1" class="tab selected" onclick="javascript:updateWorkOrder('progress')">Progress</a>
-												<a id="block-work-order-tab2" class="tab" onclick="javascript:updateWorkOrder('status')">Status</a>
+											<span><s:text name="areaprogress.workorderprogress.summary"/></span>
+										</div>
+
+										<div>
+											<div>
+												<div><s:text name="areaprogress.workorderprogress.summary.numberofworkorders"/> :</div>
+												<div id="block-summary-content-wo-count"></div>
 											</div>
 
-											<div style="width: 693px; height: 660px; opacity:0.99;" id="map-wrapper"></div>
-
-											<div class="inside-small-block" id="block-summary">
-												<div class="block-title">
-													<span class="block-title-picto"></span>
-													<span class="block-title-name"><s:text name="areaprogress.workorderprogress.summary"/></span>
-													<span class="block-arrow open"></span>
-												</div>
-												<div class="content-wrapper">
-													<div class="content text-grey">
-														<div class="sub-block-summary">
-															<div class="sub-block-summary-title"><s:text name="areaprogress.workorderprogress.summary.numberofworkorders"/> :</div>
-															<div id="block-summary-content-wo-count" class="sub-block-summary-content">         </div>
-														</div>
-														<div class="sub-block-summary">
-															<div class="sub-block-summary-title"><s:text name="areaprogress.workorderprogress.summary.workordertypes"/> :</div>
-															<div id="summary-workordertypes-selected" style="max-height:500px;overflow-y:scroll">
-																LOTS OF TEXT HERE
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-
-											<div id="chart-wrapper">
-												<div id="block-work-order-chart-view">
-												</div>
-												<div id="block-work-order-chart-view2"></div>
-												<div class="content-wrapper full-height">
-													<div class="content text-grey">
-														<div style="width: 640px;height: 445; float: left;"   id="block-work-order-status-chart"></div>
-														<div style="width: 260px;height: 445; float: right;" id="block-work-order-status-chart-right"></div>
-													</div>
+											<div>
+												<div><s:text name="areaprogress.workorderprogress.summary.workordertypes"/> :</div>
+												<div id="summary-workordertypes-selected" style="max-height:500px;overflow-y:scroll">
+													LOTS OF TEXT HERE
 												</div>
 											</div>
 										</div>
-									</div>
-						</div>
-					</div>
-				</div><!-- end of chart container -->
-			</div>
-			<script>
-			loadvalues();
-			</script>
-		</div><!-- end of wrapper -->
+								</div><!-- end of work-order -->
 
+								<div class="large-4 columns panel charts">
+									<div id="chart-wrapper">
+										<div class="medium-12 columns" id="block-work-order-chart-view"></div>
+										<div class="medium-12 columns" id="block-work-order-chart-view2"></div>
+										<div>
+											<div>
+												<div id="block-work-order-status-chart"></div>
+												<div id="block-work-order-status-chart-right"></div>
+											</div>
+										</div>
+									</div>
+								</div><!-- end of charts -->
+
+							</div>
+						</div><!-- end of first-child of main-content-wrapper -->
+					</div><!-- end of main-content-wrapper -->
+				</div><!-- end of new full width row -->
+
+		</div><!-- end of wrapper -->
+		<script>
+		loadvalues();
+		</script>
 	</body>
 </html>
