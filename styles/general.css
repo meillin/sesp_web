@@ -1,4 +1,4 @@
-/* Enable html5 tags for 6-7-8 */ 
+/* Enable html5 tags for 6-7-8 */
 header, footer, section, hgroup, aside, nav, article, figure, figcaption, time, dialog {
 	display: block;
 }
@@ -15,26 +15,6 @@ html, body{
 	min-height: 100%;
 	position: relative;
 	background: #ebefee;
-}
-
-#main-content{
-	padding:10px 0px 61px 0px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-}
-
-#main-content{
-	color: #fff;
-	text-align: center;
-}
-
-.panel button {
-	width: 100%;
-}
-
-.panel{
-	background: #fff;
 }
 /**
  * 	Custom Generic Button
@@ -58,15 +38,15 @@ html, body{
 	box-shadow: 0px 1px 0px 0px #aaaaaa;
 	font-size: 14px;
 	text-decoration: none;
-	
+
 	/*
-	 * Disable text selection 
+	 * Disable text selection
 	 */
-	-webkit-user-select: none;  
-  	-moz-user-select: none;    
-  	-ms-user-select: none;      
+	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
 	user-select: none;
-	
+
 	/*
 	 * gradient background
 	 */
@@ -107,11 +87,11 @@ html, body{
 .custom-input,
 .custom-textarea{
 	overflow:hidden; /* this hides the select's drop button */
-    padding:0; 
-    margin:0; 
-    background: white url(../images/toggle-btn-down.png) no-repeat; 
+    padding:0;
+    margin:0;
+    background: white url(../images/toggle-btn-down.png) no-repeat;
     /* this is the new drop button, in image form */
-    width:202px; 
+    width:202px;
     border : 1px solid ;
 	border-top-color: #bebebe;
 	border-bottom-color: #ffffff;
@@ -125,16 +105,16 @@ html, body{
 
 .custom-select.custom-small-select{
 	width: 97px;
-	background-position: 74px 2px;	
+	background-position: 74px 2px;
 }
 
 .custom-select select{
-	width:222px; /* this percentage effectively extends the drop down button out of view */ 
+	width:222px; /* this percentage effectively extends the drop down button out of view */
     background-color:transparent; /* this hides the select's background making any styling visible from the div */
-    background-image:none; 
-    -webkit-appearance: none /* this is required for Webkit browsers */; 
-    border:none; 
-    box-shadow:none; 
+    background-image:none;
+    -webkit-appearance: none /* this is required for Webkit browsers */;
+    border:none;
+    box-shadow:none;
     padding:0.3em 2px; /* padding should be added to the select, not the div */
 	outline: none;
 	color : #41474c;
@@ -142,7 +122,7 @@ html, body{
 }
 
 .custom-select.custom-small-select select{
-	width: 116px; 
+	width: 116px;
 }
 
 .custom-select.custom-small-select select{
@@ -174,20 +154,20 @@ html, body{
 }
 
 .custom-input-datepicker-wide input{
-	background: transparent url(../images/toggle-btn-down.png) no-repeat; 
+	background: transparent url(../images/toggle-btn-down.png) no-repeat;
 	background-position: 179px 2px;
 	width: 195px;
 }
 
 .custom-input-datepicker input{
-	background: transparent url(../images/menu-arrow-red.png) no-repeat; 
-	background-position: 74px 2px;	
+	background: transparent url(../images/menu-arrow-red.png) no-repeat;
+	background-position: 74px 2px;
 	width: 90px;
 }
 
 .custom-input-datepicker.grey input{
-	background: transparent url(../images/toggle-btn-down.png) no-repeat; 
-	background-position: 74px 2px;	
+	background: transparent url(../images/toggle-btn-down.png) no-repeat;
+	background-position: 74px 2px;
 	width: 90px;
 	color: #41474c;
 }
@@ -212,7 +192,7 @@ html, body{
 
 .custom-textarea{
 	width: 504px;
-	padding: 2px 3px;	
+	padding: 2px 3px;
 }
 
 .custom-textarea textarea{
@@ -221,14 +201,14 @@ html, body{
 	background: none;
 	outline: none;
 	font-size: 12px !important;
-	resize: none; 
+	resize: none;
 	min-height: 50px;
 }
 /*
  * Widget multisection custom
  */
 #main-content button.custom-multi-select{
-	height: 28px;	
+	height: 28px;
 }
 
 .ui-multiselect-menu{
@@ -265,8 +245,8 @@ html, body{
 }
 
 .ui-multiselect-menu ul a span{
-	margin-left: 3px; 
-	text-decoration: underline;	
+	margin-left: 3px;
+	text-decoration: underline;
 }
 
 .ui-multiselect-menu ul a img,
@@ -281,17 +261,17 @@ html, body{
 
 #main-content button.custom-multi-select{
 	padding-left: 0px;
-	width: 202px;		
-	overflow:hidden; 
-    padding:0; 
-    margin:0; 
+	width: 202px;
+	overflow:hidden;
+    padding:0;
+    margin:0;
     background: none;
     border:none;
     padding-left: 5px;
 }
 
 #main-content button.custom-multi-select span{
-	font-size: 12px;	
+	font-size: 12px;
 }
 
 .ui-multiselect-menu .ui-multiselect-checkboxes{
@@ -300,7 +280,7 @@ html, body{
 }
 
 .ui-multiselect-menu .ui-multiselect-checkboxes span{
-	font-size: 12px;	
+	font-size: 12px;
 }
 
 /*
@@ -334,7 +314,7 @@ display:inline;
  font-size:12px;
  float:left;
  text-align: center;
- box-shadow:0px 0px 12px 0px #adadad; 
+ box-shadow:0px 0px 12px 0px #adadad;
  background-color:#699936;
  color:#fff;
  border-radius:10px;
@@ -345,7 +325,7 @@ border-right:1px solid #FFF;
 float:left;
 height:100%;
 font-size:12px;
-padding:0px 2px; 
+padding:0px 2px;
 cursor:default;
 }
 .menu-icon .icon
@@ -451,7 +431,7 @@ margin-left:2px;
 }
 
 .menu-block p{
-  margin-left:25px; 
+  margin-left:25px;
   width:auto;
 }
 .menu-title{
@@ -463,51 +443,51 @@ margin-top:18px;
 .menu-block:nth-child(1):hover{
 border:1px solid #F00;
 opacity:0.9;
-box-shadow:2px 2px 10px 1px #2f2f2f inset; 
+box-shadow:2px 2px 10px 1px #2f2f2f inset;
 
 }
 a .menu-block:nth-child(2):hover{
 border:1px solid brown;
 opacity:0.7;
-box-shadow:0px 0px 12px 1px brown; 
+box-shadow:0px 0px 12px 1px brown;
 }
 a .menu-block:nth-child(3):hover{
 border:1px solid yellow;
 opacity:0.7;
-box-shadow:0px 0px 12px 1px yellow; 
+box-shadow:0px 0px 12px 1px yellow;
 }
 a .menu-block:nth-child(4):hover{
 border:1px solid purple;
 opacity:0.7;
-box-shadow:0px 0px 12px 1px purple; 
+box-shadow:0px 0px 12px 1px purple;
 }
 a .menu-block:nth-child(5):hover{
 border:1px solid red;
 opacity:0.7;
-box-shadow:0px 0px 12px 1px red; 
+box-shadow:0px 0px 12px 1px red;
 }
 a .menu-block:nth-child(6):hover{
 border:1px solid green;
 opacity:0.7;
-box-shadow:0px 0px 12px 1px green; 
+box-shadow:0px 0px 12px 1px green;
 }
 a .menu-block:nth-child(7):hover{
 border:1px solid #5f5f5f;
 opacity:0.7;
-box-shadow:0px 0px 12px 1px #5f5f5f; 
+box-shadow:0px 0px 12px 1px #5f5f5f;
 }
 a .menu-block:nth-child(8):hover{
 border:1px solid #3f3f3f;
 opacity:0.7;
-box-shadow:0px 0px 12px 1px #3f3f3f; 
+box-shadow:0px 0px 12px 1px #3f3f3f;
 }
 a .menu-block:nth-child(9):hover{
 border:1px solid orange;
 opacity:0.7;
-box-shadow:0px 0px 12px 1px orange; 
+box-shadow:0px 0px 12px 1px orange;
 }
 a .menu-block:nth-child(10):hover{
 border:1px solid grey;
 opacity:0.7;
-box-shadow:0px 0px 12px 1px grey; 
+box-shadow:0px 0px 12px 1px grey;
 }

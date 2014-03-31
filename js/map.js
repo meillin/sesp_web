@@ -12,8 +12,8 @@ var projections = {};
 projections['SWEREF99TM']={projection: new OpenLayers.Projection("EPSG:3021")};
 projections['RT90']={projection: new OpenLayers.Projection("EPSG:900913")};
 projections['WGS84']={projection: new OpenLayers.Projection("EPSG:4326")};
-//projections['KKJ3']={projection: new OpenLayers.Projection("EPSG:2393")};
-//projections['KKJ3']={projection: new OpenLayers.Projection("EPSG:4326")};
+//projections['EPSG2393']={projection: new OpenLayers.Projection("EPSG:2393")};
+//projections['EPSG3006']={projection: new OpenLayers.Projection("EPSG:4326")};
 projections['KKJ3']={projection: new OpenLayers.Projection("EPSG:900913")};
 projections['UTM32N']={projection: new OpenLayers.Projection("UTM32N")};
 projections['NAD87']={projection:'value'};
@@ -492,8 +492,8 @@ function initmap(mapServerURL) {
     map.setCenter(new OpenLayers.LonLat(1962764, 9098493), 4);
 
     //Meilan added this for testing.
-    filter_submit();
-  }
+    //filter_submit();
+}
 
 
 

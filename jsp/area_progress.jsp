@@ -202,7 +202,7 @@ for(WorkOrderStatusTO woStatusTTO : woStatusTypes) {
 				</div>
 
 				<div><!-- start of new full width row -->
-					<div class="large-12 columns fillter">
+					<div class="large-12 columns filter">
 						<div class="panel">
 
 							<div>
@@ -274,7 +274,7 @@ for(WorkOrderStatusTO woStatusTTO : woStatusTypes) {
 											<a id="block-work-order-tab1" onclick="javascript:updateWorkOrder('progress')">Progress</a>
 											<a id="block-work-order-tab2" onclick="javascript:updateWorkOrder('status')">Status</a>
 										</div>
-										<div style="width: 500px; height: 600px; opacity:0.99;" id="map-wrapper"></div>
+										<div style="width: 100%; height: 550px; opacity:0.99;" id="map-wrapper"></div>
 								</div>
 								<div class="large-4 columns work-order panel" id="block-summary">
 										<div>
