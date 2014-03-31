@@ -35,7 +35,6 @@
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/style.tidy.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/bubble-map.css"/>
 		<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />
-		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-stock-management.css" />
 		<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />
 
 		<script type="text/javascript" src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
