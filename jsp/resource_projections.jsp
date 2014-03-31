@@ -25,7 +25,7 @@
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/jquery.multiselect.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
-		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-block.css" />
+
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/datepicker.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-resource-projections.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/style.tidy.css" />
@@ -39,7 +39,8 @@
 
 		<script type="text/javascript" src="<%=contextPath%>/js/jquery.multiselect.js"></script>
 		<script type="text/javascript" src="<%=contextPath%>/js/jquery.cookie.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/init.js"></script>		
+		<script type="text/javascript" src="<%=contextPath%>/js/init.js"></script>
+		<script type="text/javascript" src="<%=contextPath%>/js/common.js"></script>
 		<script type="text/javascript" src="<%=contextPath%>/js/resource_projections.js"></script>
 		<script src="<%=contextPath%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
 		
@@ -81,7 +82,7 @@
 
 			<%@ include file="headerv311.inc" %>
 
-			<div id="row">
+			<div>
 				<div>
 					<div class="large-12 columns" >
 						<h2><s:text name="webportal.resourceprojections.title"/></h2>
@@ -228,7 +229,7 @@
 
 				<div>
 					<div class="large-12 columns">
-						<div class="white">
+						<div class="panel">
 						Resource projections per month
 						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam process
 						</div>
@@ -236,9 +237,6 @@
 				</div>
 
 			</div>
-
-
-
 		</div><!--end of wrapper -->
 	</body>
 </html>

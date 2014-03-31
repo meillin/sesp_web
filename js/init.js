@@ -1,25 +1,5 @@
 jQuery(document).ready(function($){
-    var menu = $('#second-header');
-    
-    // Calcul of the offset behind the top of the document and the object
-    var fixedLimit = menu.offset().top - parseFloat(menu.css('marginTop').replace(/auto/,0));
- 
-    // fire the scroll event to update the position at the page loading
-    $(window).trigger('scroll');
- 
- 	//scroll the menu bar
-    $(window).scroll(function(event){
-        // Value of scrolling at the page loading
-        var windowScroll = $(window).scrollTop();
- 
-        // Update the position according  value of scroll
-        if( windowScroll >= fixedLimit ){
-            menu.addClass('fixed');
-        } else {
-            menu.removeClass('fixed');
-        }
-    });
-    
+
     //Event of menu button
     $('#menu-button').click(function (e) {
         if ($('#menu').css('display') == "none") {
@@ -163,24 +143,4 @@ var renderTable = function(tableId){
 		marginLeft: "10px",
 		marginRight: "10px"
 	});
-}; 
-
-
-/*
- * place holder jquery fix for ie
- 
-$("'[placeholder]'").focus(function() {
-	  var input = $(this);
-	  if (input.val() == input.attr("'placeholder'")) {
-	    input.val("''");
-	    input.removeClass("'placeholder'");
-	  }
-	}).blur(function() {
-	  var input = $(this);
-	  if (input.val() == "''" || input.val() == input.attr("'placeholder'")) {
-	    input.addClass("'placeholder'");
-	    input.val(input.attr("'placeholder'"));
-	  }
-	}).blur();
-
-	*/
+};

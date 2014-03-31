@@ -1,11 +1,20 @@
-<div id="header">	
-	<div class="nav">	
-		<div class="welcomeuser"><s:text name="webportal.header.welcome"/> <span><%=session.getAttribute("username")%></span></div>
-    	<div class="loginLogout">
-    		<ul><li><a href="<%=request.getContextPath()%>/std/Home"><s:text name="webportal.link.home"/><a/></li><li>|</li> <li><a href="<%=request.getContextPath()%>/std/Logout"><s:text name="webportal.link.logout"/></a></li></ul>
-    	</div>
-	</div>
-	<div class="logoSection">
-		<div id="logoCG"><img src="<%=request.getContextPath()%>/images/capgemini_logo.png" alt="Capgemini" /></div>	
-	</div>
+<div id="header">
+	<button id="show-nav">click me</button>
+	<ul class="overlapping-menu">
+		<li><label>Menu</label></li>
+		<li><a href="<%=request.getContextPath()%>/std/TimeReservationCallList" id="menu-button-delivery-performance">Time Reservation Call List</a></li>
+		<li><a href="<%=request.getContextPath()%>/std/StockManagement1" id="menu-button-logistics"> LOGISTICS</a></li>
+		<li><a href="javascript: openDashboard();" id="menu-button-system-utilization">SYSTEM UTILIZATION</a></li>
+		<li><a href="<%=request.getContextPath()%>/std/AlarmManagementReports" id="menu-button-alarm-management">ALARM MANAGEMENT</a></li>
+		<li><a href="<%=request.getContextPath()%>/std/WorkOrderProgress" id="menu-button-work-order-progress">WORK ORDER PROGRESS</a></li>
+		<li><a href="<%=request.getContextPath()%>/std/AreaProgress" id="menu-button-technician-positioning">AREA PROGRESS</a></li>
+		<li><a href="<%=request.getContextPath()%>/std/AnalyzeFieldWorkEfficiency" id="menu-button-technician-work-load">Field Work Efficiency</a></li>
+		<li><a href="<%=request.getContextPath()%>/std/ViewResourceProjectionAction" id="menu-button-resource-projections">RESOURCE PROJECTIONS</a></li>
+    </ul>
 </div>
+
+
+<script>
+
+	
+</script>

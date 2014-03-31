@@ -36,6 +36,7 @@ document.createElement("figure");
 <script type="text/javascript" src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
 <script type="text/javascript" src="<%=contextPath%>/js/index-init.js"></script>
+<script type="text/javascript" src="<%=contextPath%>/js/common.js"></script>    
 
 <script type="text/javascript" src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>		
 <script type="text/javascript" src="<%=contextPath%>/js/jquery.cookie.js"></script>	
@@ -56,34 +57,6 @@ document.createElement("figure");
 </head>
 <body>
   <div id="wrapper">
-    <div class="off-canvas-wrap">
-      <div class="inner-wrap">
-        <aside class="left-off-canvas-menu">
-          <ul class="off-canvas-list">
-            <li><label>Menu</label></li>
-            <li><a href="<%=request.getContextPath()%>/std/TimeReservationCallList" id="menu-button-delivery-performance">Time Reservation Call List</a></li>
-            <li><a href="<%=request.getContextPath()%>/std/StockManagement1" id="menu-button-logistics"> LOGISTICS</a></li>
-            <li><a href="javascript: openDashboard();" id="menu-button-system-utilization">SYSTEM UTILIZATION</a></li>
-            <li><a href="<%=request.getContextPath()%>/std/AlarmManagementReports" id="menu-button-alarm-management">ALARM MANAGEMENT</a></li>
-            <li><a href="<%=request.getContextPath()%>/std/WorkOrderProgress" id="menu-button-work-order-progress">WORK ORDER PROGRESS</a></li>
-            <li><a href="<%=request.getContextPath()%>/std/AreaProgress" id="menu-button-technician-positioning">AREA PROGRESS</a></li>
-            <li><a href="<%=request.getContextPath()%>/std/AnalyzeFieldWorkEfficiency" id="menu-button-technician-work-load">Field Work Efficiency</a></li>
-            <li><a href="<%=request.getContextPath()%>/std/ViewResourceProjectionAction" id="menu-button-resource-projections">RESOURCE PROJECTIONS</a></li>
-          </ul>
-        </aside>
-        <aside class="right-off-canvas-menu">
-          <ul class="off-canvas-list">
-            <li><label>Foundation</label></li>
-            <li><a href="<%=request.getContextPath()%>/std/TimeReservationCallList" id="menu-button-delivery-performance">Time Reservation Call List</a></li>
-            <li><a href="<%=request.getContextPath()%>/std/StockManagement1" id="menu-button-logistics"> LOGISTICS</a></li>
-            <li><a href="javascript: openDashboard();" id="menu-button-system-utilization">SYSTEM UTILIZATION</a></li>
-            <li><a href="<%=request.getContextPath()%>/std/AlarmManagementReports" id="menu-button-alarm-management">ALARM MANAGEMENT</a></li>
-            <li><a href="<%=request.getContextPath()%>/std/WorkOrderProgress" id="menu-button-work-order-progress">WORK ORDER PROGRESS</a></li>
-            <li><a href="<%=request.getContextPath()%>/std/AreaProgress" id="menu-button-technician-positioning">AREA PROGRESS</a></li>
-            <li><a href="<%=request.getContextPath()%>/std/AnalyzeFieldWorkEfficiency" id="menu-button-technician-work-load">Field Work Efficiency</a></li>
-            <li><a href="<%=request.getContextPath()%>/std/ViewResourceProjectionAction" id="menu-button-resource-projections">RESOURCE PROJECTIONS</a></li>
-          </ul>
-        </aside>
         <%@ include file="headerv311.inc" %>
 
         <section class="main-section">
@@ -108,8 +81,8 @@ document.createElement("figure");
                   <li>
                     <div>
                       <a class="patch" href="<%=contextPath%>/std/ViewResourceProjectionAction" alt="RESOURCE PROJECTIONS" title="RESOURCE PROJECTIONS">
-                        <i class="fi-graph-bar size-74"></i>
-                        <h3>RESOURCE PROJECTIONS</h3>
+                        <i class="fi-graph-bar size-74"></i></br>
+                        <span>RESOURCE PROJECTIONS</span>
                       </a>
                     </div>
                   </li>
@@ -117,8 +90,8 @@ document.createElement("figure");
                   <li>
                     <div>
                       <a class="patch" href="<%=contextPath%>/std/AreaProgress" alt="AREA PROGRESS" title="AREA PROGRESS">
-                        <i class="fi-loop size-74"></i>
-                        <h3>AREA PROGRESS</h3>
+                        <i class="fi-loop size-74"></i></br>
+                        <span>AREA PROGRESS</span>
                       </a>
                     </div>
                   </li>
@@ -126,8 +99,8 @@ document.createElement("figure");
                   <li>
                     <div>
                         <a class="patch" href="<%=contextPath%>/std/StockManagement1" alt="LOGISTICS" title="LOGISTICS">
-                          <i class="fi-alert size-74"></i>
-                          <h3>LOGISTICS</h3>
+                          <i class="fi-alert size-74"></i></br>
+                          <span>LOGISTICS</span>
                         </a>
                     </div>
                   </li>
@@ -135,8 +108,8 @@ document.createElement("figure");
                   <li>
                     <div>
                       <a class="patch" href="<%=contextPath%>/std/AlarmManagementReports" alt="ALARM MANAGEMENT" title="ALARM MANAGEMENT">
-                        <i class="fi-alert size-74"></i>
-                        <h3>ALARM MANAGEMENT</h3>
+                        <i class="fi-alert size-74"></i></br>
+                        <span>ALARM MANAGEMENT</span>
                       </a>
                     </div>
                   </li>
@@ -144,8 +117,8 @@ document.createElement("figure");
                   <li>
                     <div>
                       <a class="patch" href="javascript: openDashboard();" alt="SYSTEM UTILIZATION" title="SYSTEM UTILIZATION">
-                        <i class="fi-monitor size-74"></i>
-                        <h3>SYSTEM UTILIZATION</h3>
+                        <i class="fi-monitor size-74"></i></br>
+                        <span>SYSTEM UTILIZATION</span>
                       </a>
                     </div>
                   </li>
@@ -153,8 +126,8 @@ document.createElement("figure");
                  <li>
                     <div>
                       <a class="patch" href="<%=contextPath%>/std/WorkOrderProgress" alt="WORK ORDER PROGRESS" title="WORK ORDER PROGRESS">
-                        <i class="fi-clock size-74"></i>
-                        <h3>WORK ORDER PROGRESS</h3>
+                        <i class="fi-clock size-74"></i></br>
+                        <span>WORK ORDER PROGRESS</span>
                       </a>
                     </div>
                   </li>
@@ -162,8 +135,8 @@ document.createElement("figure");
                 <li>
                   <div>
                     <a class="patch" href="<%=contextPath%>/std/AnalyzeFieldWorkEfficiency" alt="FIELD WORK EFFICIENCY" title="FIELD WORK EFFICIENCY">
-                      <i class="fi-wrench size-74"></i>
-                      <h3>FIELD WORK EFFICIENCY</h3>
+                      <i class="fi-wrench size-74"></i></br>
+                      <span>FIELD WORK EFFICIENCY</span>
                     </a>
                   </div>
                 </li>
@@ -171,8 +144,8 @@ document.createElement("figure");
                   <li>
                     <div>
                       <a class="patch" href="<%=contextPath%>/std/TimeReservationCallList" alt="TIME RESERVATION CALL LIST" title="TIME RESERVATION CALL LIST">
-                        <i class="fi-list size-74"></i>
-                        <h3>TIME RESERVATION CALL LIST</h3>
+                        <i class="fi-list size-74"></i></br>
+                        <span>TIME RESERVATION CALL LIST</span>
                       </a>
                     </div>
                   </li>
@@ -181,12 +154,6 @@ document.createElement("figure");
               </div><!-- end of large-12 -->
             </div><!-- end of row -->
           </section>
-
-          <a class="exit-off-canvas"></a>
-
-        </div>
-
-      </div> <!-- end of off canvas -->
 
     </div> <!-- end of wrap -->
 
