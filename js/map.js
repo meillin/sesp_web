@@ -492,7 +492,11 @@ function initmap(mapServerURL) {
     map.setCenter(new OpenLayers.LonLat(1962764, 9098493), 4);
 
     //Meilan added this for testing.
-    //filter_submit();
+    try{
+    	filter_submit();
+    } catch (e) {
+    };
+
 }
 
 

@@ -1,47 +1,48 @@
+var pgCode = 9;
+
 jQuery(document).ready(function($){
-	
 	/*
 	 * tabs managing
 	 */
     $("#block-on-pallet-tab1").click(function(){
-    	
+
     	$("#display-tab-name").text(i18nStockSupplierTab);
     	if( !$(this).hasClass("selected")){
 	    	$(".tab").removeClass("selected");
-	    	$(this).addClass("selected");    	
+	    	$(this).addClass("selected");
 
 	    	/**
 			 * TODO action on the first tab
-			 */ 
-    	 
+			 */
+
     	}
     });
-    
-    $("#block-on-pallet-tab2").click(function(){    	
-    	
+
+    $("#block-on-pallet-tab2").click(function(){
+
     	$("#display-tab-name").text(i18nInStockTab);
     	if( !$(this).hasClass("selected")){
 	    	$(".tab").removeClass("selected");
-	    	$(this).addClass("selected"); 
-    	
+	    	$(this).addClass("selected");
+
 	    	/**
 			 * TODO action on the second tab
-			 */  
-    	 
-    	 } 	
+			 */
+
+    	 }
     });
-    
+
     $("#block-on-pallet-tab3").click(function(){
-    	
+
     	$("#display-tab-name").text(i18nStockPalletTab);
-    	if( !$(this).hasClass("selected")){    		
+    	if( !$(this).hasClass("selected")){
 	    	$(".tab").removeClass("selected");
-	    	$(this).addClass("selected");    	
-    	 	
+	    	$(this).addClass("selected");
+
 	    	/**
 			 * TODO action on the thrid tab
 			 */
-    	
+
     	}
     });
 });
@@ -52,7 +53,7 @@ var i18nSelectDeviceType;
 var i18nSelectDomain;
 var i18nSelectDeviceModel;
 var i18nSelectStockSite;
-var i18nerrorPleaseChooseMandatoryFields
+var i18nerrorPleaseChooseMandatoryFields;
 var i18nerrorPleaseChooseCategory;
 var i18nerrorPleaseChooseBreakup;
 var i18nerrorChartError;
@@ -71,19 +72,18 @@ var i18nOptionSelectEntityShown;
 var i18nOptionSelectDivideEntity;
 var i18nOptionSelectEntityShownFromSupplier;
 
-function onLoadSpecial() {			  			
-	// init();
+function onLoadSpecial() {
+
 	$("#display-tab-name").text(i18nStockSupplierTab);
 	updateUnitStatus("fromSupplier");
-	loadDomainList();	
+	loadDomainList();
 	loadDeviceTypesList();
 
 /*	populateSelectModelsList("#block-on-pallet-select-entity-shown", i18nOptionSelectEntityShownFromSupplier);
 	populateSelectModelsList("#block-on-pallet-select-divide-entity", i18nOptionSelectDivideEntity);*/
 }
 
-
-function populateSelectModelsList(modelListId, items) {	
+function populateSelectModelsList(modelListId, items) {
 	$(""+modelListId+"").empty();
 	$(""+modelListId+"").html(items);
 }
@@ -106,81 +106,92 @@ function clearDeviceModelsList() {
 	$("#filter-multiselect-device-model").html(items);
 	$("#filter-multiselect-device-model").multiselect("refresh");
 }
-
-function loadDomainList() {	
+/*
+function loadDomainList() {
 	var obj= {};
-	obj.url=contextPath+"/std/GetDomains.action";		
+	obj.url=contextPath+"/std/GetDomains.action";
 	obj.successfunc = function(data) {
 		var items='';
-		
+
 		$.each(data, function(i, item) {
 			items += '<option value="' + item.id + '">'	+ item.name + '</option>';
 			});
 		$("#filter-multiselect-domain").html(items);
 		$("#filter-multiselect-domain").multiselect("refresh");
-		
+
 	};
 	obj.errorfunc = errorDetails;
 	run_ajax_json(obj);
-	return;	
+	return;
+}
+*/
+function loadDomainList() {
+	var obj= {};
+	obj.url=contextPath+"/std/GetDomains.action";
+	obj.successfunc = function(data) {
+		var items;
+		var savedData = $.cookie(pgCode+"ap_domain");
+		var selected = '" > ';
+
+		if(savedData == null || savedData == ''){
+			selected = '" selected > ';
+		}
+
+		$.each(data, function(i, item) {
+			items += '<option value="' + item.id +selected + item.name + '</option>';
+		});
+
+		populateSavedMultiSelectBox("#filter-multiselect-domain", items,savedData);
+	};
+	obj.errorfunc = errorDetails;
+	run_ajax_json(obj);
+	return;
 }
 
 function loadDeviceModelsList(domainCode) {
-	
 	var obj= {};
 	obj.url=contextPath+"/std/GetDeviceModels.action";
 	obj.pdata = "dc="+domainCode;
 	obj.successfunc = function(data) {
 			clearDeviceModelsList();
-			var items;			
+			var items;
 
-			
 			$.each(data, function(i, item) {
-				items += '<option value="' + item.id + '">'
-						+ item.name + '</option>';
+				items += '<option value="' + item.id + '">' + item.name + '</option>';
 			});
 			$("#filter-multiselect-device-model").html(items);
 			$("#filter-multiselect-device-model").multiselect("refresh");
-			
-
 		};
 	obj.errorfunc = errorDetails;
 	run_ajax_json(obj);
 	return;
-					
 }
 
 function loadDeviceTypesList() {
 	var obj= {};
-	obj.url=contextPath+"/std/GetDeviceTypes.action";		
+	obj.url=contextPath+"/std/GetDeviceTypes.action";
 	obj.successfunc = function(data) {
 		var items;
-		
 		$.each(data, function(i, item) {
 			items += '<option value="' + item.id + '">'	+ item.name + '</option>';
 			});
 		$("#filter-multiselect-device-type").html(items);
 		$("#filter-multiselect-device-type").multiselect("refresh");
-
 	};
 	obj.errorfunc = errorDetails;
 	run_ajax_json(obj);
-	return;	
+	return;
 }
 
 function loadWarehousesList(domainCode) {
-	
 	var obj= {};
 	obj.url=contextPath+"/std/GetWarehouses.action";
 	obj.pdata = "dc="+domainCode;
 	obj.successfunc = function(data) {
-	
-			var items;			
+			var items;
 			$.each(data, function(i, item) {
-				items += '<option value="' + item.id + '">'
-						+ item.name + '</option>';
+				items += '<option value="' + item.id + '">' + item.name + '</option>';
 			});
-
 			$("#filter-multiselect-stock-site").html(items);
 			$("#filter-multiselect-stock-site").multiselect("refresh");
 
@@ -190,11 +201,8 @@ function loadWarehousesList(domainCode) {
 	return;
 }
 
-
 function displayInfo(id) {
-		// alert(id);
 		$("#warehouses").val(id);
-		// submitLogistics();
 	}
 
 
@@ -203,57 +211,28 @@ function infoDataCallback(id) {
 	var obj= {};
 	obj.url=contextPath+"/std/GetStockInformation.action";
 	obj.pdata = "id="+id;
-	obj.successfunc = function(msg){ 
-   		if(msg == "") {
+	obj.successfunc = function(msg){
+		if(msg == "") {
 			return;
 		}
 		var o = eval(msg);
 		if(o == null)
 			return;
-		
-		
-		
-		/*html = "<div id='bubble' class='bubble-stock-management text-grey'>";
-			html += "<div id='bubble-header'></div>";
-		
-			html += "<div id='bubble-content'>";
-				html += "<div class='bubble-line'>";
-					html += "<div class='bubble-category'>"+i18nId+" :</div>";
-					html += "<div class='bubble-value text-light-grey' id='map-bubble-stock-id'>" + v(o.id) +"</div>";
-				html += "</div>";
-				html += "<div class='bubble-line'>";
-					html += "<div class='bubble-category'>"+i18nName+" :</div>";
-					html += "<div class='bubble-value text-light-grey' id='map-bubble-name'>" + v(o.name) +"</div>";
-				html += "</div>";
-				html += "<div class='bubble-line'>";
-					html += "<div class='bubble-category'>"+i18nType+" :</div>";
-					html += "<div class='bubble-value text-light-grey' id='map-bubble-type'>" + v(o.type) +"</div>";
-				html += "</div>";
-			html += "</div>";
-			html += "<div id='bubble-arrow'></div>";
-		html += "</div>";	*/	
-		
+
 		html = "<div style=\"font-size:.8em;background-color:#ffffff;filter:alpha(opacity=80);opacity:.8;border-radius: 5px;\">";
 		html += "<div id='bubble-header'></div>";
 		html += "<div> <b>"+i18nId+" : </b>" + v(o.id) +"</div> ";
 		html += "<div> <b>"+i18nName+" : </b>" + v(o.name) +"</div> ";
 		html += "<div> <b>"+i18nType+" : </b>" + v(o.type) +"</div> ";
-		/*html += "<div> "+i18nInfo+":" + v(o.info) +"</div> ";
-		html += "<div> "+i18nAddress+":" + v(o.address) +"</div> ";
-		html += "<div> "+i18nPostCode+":" + v(o.postCode) +"</div> ";
-		html += "<div> "+i18nPostAddress+":" + v(o.postAddress) +"</div> ";
-		html += "<div> "+i18nContactPerson+":" + v(o.contactPerson) +"</div> ";
-		html += "<div> "+i18nContactMobilePhone+":" + v(o.cellPhone) +"</div> ";
-		html += "<div> "+i18nContactWorkPhone+":" + v(o.workPhone) +"</div> ";*/
 		html += "</div>";
 		returnData =  html;
-		
+
 		function v(d) {
 			if(d == null || d == "undefined") {
 				return "";
 			}
 			return d;
-		}		
+		}
    };
 	obj.errorfunc = errorDetails;
 	run_ajax_Sync(obj);
@@ -264,7 +243,7 @@ function onChangeDomain()
 {
 	var ls_domain = $("#filter-multiselect-domain").val();
 	// alert(ls_domain);
-	if(null != ls_domain) {			
+	if(null != ls_domain) {
 		loadDeviceModelsList(ls_domain);
 		loadWarehousesList(ls_domain);
 	} else {
@@ -273,11 +252,12 @@ function onChangeDomain()
 	}
 	//loadPoints(ls_domain);
 }
-	
+
 
 function submitLogistics() {
-		
-	var validation = false; 
+	console.log('function submitLogistics() called');
+
+	var validation = false;
 	validation = stockValidation();
 	if(validation) {
 		var ls_domain = $("#filter-multiselect-domain").val();
@@ -286,43 +266,50 @@ function submitLogistics() {
 		var ls_warehouses = $("#filter-multiselect-stock-site").val();
 		var ls_breakup = $("#block-on-pallet-select-divide-entity").val();
 		var ls_category = $("#block-on-pallet-select-entity-shown").val();
-		
+
 		loadPoints(ls_domain,ls_warehouses);
-					
+
+		saveAPFilters(ls_domain,ls_warehouses,ls_devicemodels,ls_devicetypes);
+
 		var obj= {};
 		obj.url=contextPath+"/std/GetStockChart.action";
 		obj.pdata = 'domain='+ls_domain+'&xaxis='+ls_category+'&yaxis='+ls_breakup+'&warehouses='+ls_warehouses+
 		   		'&devicemodels='+ls_devicemodels+'&devicetypes='+ls_devicetypes+'&devicestatus='+deviceStatus;
-		obj.successfunc = drawChart;	
+		obj.successfunc = drawChart;
 		obj.errorfunc = errorDetails;
 		run_ajax(obj);
-		return;	
+		return;
 	}
 
-	
+
 }
-	
+
 function stockValidation() {
-		
+
 	var ls_domain = $("#filter-multiselect-domain").val();
 	var ls_devicetypes = $("#filter-multiselect-device-type").val();
 	var ls_devicemodels = $("#filter-multiselect-device-model").val();
 	var ls_warehouses = $("#filter-multiselect-stock-site").val();
-		
+
 	if(ls_domain==null||ls_warehouses==null||ls_devicemodels==null||ls_devicetypes==null) {
 		alert(i18nerrorPleaseChooseMandatoryFields);
 		return false;
-	}		
-		
-	return true;		
+	}
+
+	return true;
 }
-	
+
 var stockChart;
 var chartType = "Stacked3D";
 var suffix = 0;
-	
+
 function drawChart(data) {
-			
+
+		//Generate Javascript Fusion chart with a dummy data
+	var myChart = new FusionCharts("Column2D","stock", "600", "400", "0" );
+      myChart.setJSONUrl(contextPath + "/data/dummydata.json");
+      myChart.render("block-on-pallet-chart-view");
+	/*
 	stockChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/StackedColumn2D.swf", "stockchartId"+suffix, "100%","445");
 	//data = "<graph caption='Model Per Model' subCaption='Divide per Model' xAxisName='Model' yAxisName='Model' plotGradientColor=' ' decimalPrecision='0' rotateNames='1' legendBorderColor='E9E9E9' showAlternateHGridColor='0' legendShadow='0' bgColor='E9E9E9,E9E9E9' legendPosition='RIGHT' labelDisplay='Rotate' slantLabels='1' showValues='0' formatNumberScale='0' showPercentInToolTip = '0'><categories><category name='ASD' /><category name='sim_2_serial' /><category name='meter_ct_rs_rc' /><category name='sim_1_giai' /></categories><dataset seriesName='ASD' color='#FF0000' showValues='0'><set value='2.0' /><set value='0' /><set value='0' /><set value='0' /></dataset><dataset seriesName='sim_2_serial' color='#0174DF' showValues='0'><set value='0' /><set value='1.0' /><set value='0' /><set value='0' /></dataset><dataset seriesName='meter_ct_rs_rc' color='#D7DF01' showValues='0'><set value='0' /><set value='0' /><set value='1.0' /><set value='0' /></dataset><dataset seriesName='sim_1_giai' color='#B45F04' showValues='0'><set value='0' /><set value='0' /><set value='0' /><set value='2.0' /></dataset></graph>";
 	stockChart.setDataXML(data);
@@ -330,14 +317,13 @@ function drawChart(data) {
 	//myChart.setDataXML("<graph caption='Monthly Unit Sales' xAxisName='Month' yAxisName='Units' showNames='1' decimalPrecision='0' formatNumberScale='0'><set name='Jan' value='462' color='AFD8F8' /><set name='Feb' value='857' color='F6BD0F' /><set name='Mar' value='671' color='8BBA00' /><set name='Apr' value='494' color='FF8E46'/><set name='May' value='761' color='008E8E'/><set name='Jun' value='960' color='D64646'/><set name='Jul' value='629' color='8E468E'/><set name='Aug' value='622' color='588526'/><set name='Sep' value='376' color='B3AA00'/><set name='Oct' value='494' color='008ED6'/><set name='Nov' value='761' color='9D080D'/><set name='Dec' value='960' color='A186BE'/></graph>");
 	stockChart.render("block-on-pallet-chart-view");
 	suffix=suffix+1;
+	*/
 }
 
 var deviceStatus='fromSupplier';
 function updateUnitStatus(deviceSts)
 {
-	deviceStatus =  deviceSts;	
-	
-	
+	deviceStatus =  deviceSts;
 	if(deviceSts != "fromSupplier") {
 		populateSelectModelsList("#block-on-pallet-select-entity-shown", i18nOptionSelectEntityShown);
 	} else {
@@ -346,31 +332,28 @@ function updateUnitStatus(deviceSts)
 	onChangeEntity();
 	submitLogistics();
 }
+//Populate the multi-select box with the given data for the given id
+function populateSavedMultiSelectBox(idName, items,savedData){
 
-/*function onChangeEntity()
-{
-	alert("onChangeEntity() default status:"+deviceSts);
-	var ls_entity = $("#block-on-pallet-select-entity-shown").val();		
-	alert("ls_entity="+ls_entity);			
-	
-	alert("onChangeEntity() -> device status:"+deviceStatus);
-//	if(("#block-on-pallet-tab1").hasClass("tab selected") == true){
-	 if(deviceStatus == "fromSupplier") {
-		alert("From supplier");
-		//populateSelectModelsList("#block-on-pallet-select-entity-shown", i18nOptionSelectEntityShownFromSupplier);
-		populateSelectModelsList("#block-on-pallet-select-divide-entity", i18nOptionSelectEntityShownFromSupplier);
-	
-	}else{
-		//populateSelectModelsList("#block-on-pallet-select-entity-shown", i18nOptionSelectEntityShown);
-		populateSelectModelsList("#block-on-pallet-select-divide-entity", i18nOptionSelectDivideEntity);
-	}	
-	
-	$("#block-on-pallet-select-divide-entity > option ").each(function()
-	{
-        if(ls_entity!=null && $(this.val==ls_entity))
-        {
-           $("#block-on-pallet-select-divide-entity option[value=" + ls_entity + "]").remove();
-        }				        
-	});
-}	 */
-	
+	$(idName).find('option').remove();
+	$(idName).multiselect('refresh');
+
+	var selectData = $(idName).multiselect();
+	selectData.append(items);
+
+	if(savedData!=null && savedData!='') {
+		var dataArray = savedData.split(",");
+		$(idName).val(dataArray);
+	}
+	selectData.multiselect('refresh');
+}
+
+function saveAPFilters(ap_domain, ap_stocksite, ap_devicemodel, ap_devicetype) {
+	$.cookie(pgCode+"ap_devicetype",ap_devicetype,{ expires: 7 });
+	$.cookie(pgCode+"ap_devicemodel",ap_devicemodel,{ expires: 7 });
+	$.cookie(pgCode+"ap_stocksite",ap_stocksite,{ expires: 7 });
+	$.cookie(pgCode+"ap_domain",ap_domain,{ expires: 7 });
+}
+function saveAreaProgressFilter(key,value){
+	$.cookie(pgCode+key,value,{ expires: 7 });
+}

@@ -109,7 +109,6 @@ function loadDomainList() {
 
 		$.each(data, function(i, item) {
 			items += '<option value="' + item.id +selected + item.name + '</option>';
-
 		});
 
 		populateSavedMultiSelectBox("#filter-multiselect-domain", items,savedData);
@@ -120,10 +119,8 @@ function loadDomainList() {
 }
 
 function errorDetails(data) {
-
 	alert("Error : " + data.responseText);
-
-	}
+}
 
 function loadAreaTypes(){
 	var obj1= {};
@@ -140,17 +137,14 @@ function loadAreaTypes(){
 
 	$.each(data, function(i, item) {
 		items += '<option value="' + item.id +selected + item.name + '</option>';
-
 	});
 
 	populateSavedMultiSelectBox("#filter-multiselect-area-type", items,savedData);
-	/*$("#filter-multiselect-area").attr('disabled','false');
-	getAreas();*/
 	};
 	obj1.errorfunc = errorDetails;
 	run_ajax_json(obj1);
 	return;
-	}
+}
 
 
 function loadAreaTypes2(){
@@ -191,20 +185,6 @@ function loadWorkOrderTypes(){
 }
 
 function populateWorkOrderTypes(data){
-	/*var items2;
-	$.each(data, function(i, item2) {
-		items2 += '<option value="' + item2.id + '">' + item2.name + '</option>';
-	});
-	$("#filter-multiselect-work-order-type").html(items2);
-
-	var ap_workOrderType = $.cookie(pgCode+"ap_workOrderType");
-	if(ap_workOrderType!=null && ap_workOrderType!='') {
-		var dataarray = ap_workOrderType.split(",");
-		$("#filter-multiselect-work-order-type").val(dataarray);
-	}
-
-	$("#filter-multiselect-work-order-type").multiselect("refresh");*/
-
 	var items;
 	var savedData = $.cookie(pgCode+"ap_workOrderType");
 	var selected = '" > ';
@@ -244,24 +224,6 @@ function getAreas(requestType) {
 }
 
 function fillAreas(data) {
-	/*var items;
-	$("#filter-multiselect-area").find('option').remove();
-	$("#filter-multiselect-area").multiselect('refresh');
-	var msareas = $("#filter-multiselect-area").multiselect();
-	$.each(data, function(i, item) {
-		items += '<option value="' + item.id + '">' + item.name + '</option>';
-	});
-	msareas.append(items);
-
-
-	var ap_area = $.cookie(pgCode+"ap_area");
-	if(ap_area!=null && ap_area!='') {
-		var dataarray = ap_area.split(",");
-		$("#filter-multiselect-area").val(dataarray);
-	}
-
-	msareas.multiselect('refresh');	*/
-
 	var items;
 	var savedData = $.cookie(pgCode+"ap_area");
 	var selected = '" > ';
@@ -281,6 +243,7 @@ function fillAreas(data) {
 
 function filter_submit() {
 
+		//Give it default value in order to show chart on page load
 		var ap_dateInterval = $("#filter-select-date-interval").val();
 		var ap_dateFrom = $("#filter-date-from").val();
 		var ap_dateTo = $("#filter-date-to").val();

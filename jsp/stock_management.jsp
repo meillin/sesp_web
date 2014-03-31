@@ -40,6 +40,7 @@
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/colResizable-1.3.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
+		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.cookie.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-ui-1.10.2.custom.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/bootstrap-datepicker.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.multiselect.js"></script>
@@ -162,16 +163,16 @@
 				}
 			</script>
 
-			<div>
-				<div class="large-12 columns filter">
-					<div class="panel">
+			<div class="big-row">
+				<div class="large-12 columns filter panel">
+					<div>
 						<div class="medium-3 columns">
-							<label><s:text name="webportal.stock.domain"/></label>
+								<label><s:text name="webportal.stock.domain"/></label>
 								<select id="filter-multiselect-domain" onchange="onChangeDomain()" class="custom-multi-select" name="filter-multiselect-domain" multiple="multiple">
 								</select>
 						</div>
 						<div class="medium-3 columns">
-							<label><s:text name="webportal.stock.category.stocksite"/></label>
+								<label><s:text name="webportal.stock.category.stocksite"/></label>
 								<select id="filter-multiselect-stock-site" class="custom-multi-select" name="multiselect-domain" multiple="multiple">
 								</select>
 						</div>
@@ -185,108 +186,63 @@
 								<select id="filter-multiselect-device-type" class="custom-multi-select" name="multiselect-alarm-type" multiple="multiple">
 								</select>
 						</div>
-				</div><!--end of panel -->
-			</div>
-
-			<div>
-				<div class="large-6 columns">map</div>
-				<div class="large-6 columns">
+					</div>
 					<div>
-						<div class="large-12 columns">chart</div>
-						<div class="large-12 columns">chart filter</div>
-					</div>
-				</div>
-			</div>
-			<!--
-			<div class="toberemoved">
-				<div class="large-block block" id="block-on-pallet">
-					<div class="block-title">
-						<span class="block-title-picto"></span>
-						<span class="block-title-name text-blue" id="display-tab-name"></span>
-					</div>
-					<div class="content-wrapper full-height">
-						<div class="content text-grey">
-							<div id="tabs-wrapper" >
-								<a id="block-on-pallet-tab1" class="tab selected" onclick="javascript:updateUnitStatus('fromSupplier')"></a>
-								<a id="block-on-pallet-tab2" class="tab" onclick="javascript:updateUnitStatus('inStock')"></a>
-								<a id="block-on-pallet-tab3" class="tab" onclick="javascript:updateUnitStatus('onPallet')"></a>
-							</div>
-
-							<div style="width: 930px; height: 660px; opacity:0.99;" id="map-wrapper" ></div>
-
-							<div class="block inside-small-block retractable map-filter">
-								<div class="block-title">
-									<span class="block-title-picto"></span>
-									<span class="block-title-name text-blue"><s:text name='webportal.stock.filters'/></span>
-									<span class="block-arrow open"></span>
-								</div>
-								<div class="content-wrapper">
-
-									<div class="content text-grey">
-
-										<div class="select-wrapper">
-											<span class="select-title text-grey"><s:text name="webportal.stock.domain"/></span>
-											<div class="custom-select">
-												<select id="filter-multiselect-domain" onchange="onChangeDomain()" class="custom-multi-select" name="filter-multiselect-domain" multiple="multiple">
-												</select>
-											</div>
-										</div>
-										<div class="select-wrapper">
-											<span class="select-title text-grey"><s:text name="webportal.stock.category.stocksite"/></span>
-											<div class="custom-select">
-												<select id="filter-multiselect-stock-site" class="custom-multi-select" name="multiselect-domain" multiple="multiple">
-												</select>
-											</div>
-										</div>
-										<div class="select-wrapper">
-											<span class="select-title text-grey"><s:text name="webportal.stock.category.devicemodel"/></span>
-											<div class="custom-select">
-												<select id="filter-multiselect-device-model" class="custom-multi-select" name="multiselect-area" multiple="multiple">
-												</select>
-											</div>
-										</div>
-										<div class="select-wrapper">
-											<span class="select-title text-grey"><s:text name="webportal.stock.category.devicetype"/></span>
-											<div class="custom-select">
-												<select id="filter-multiselect-device-type" class="custom-multi-select" name="multiselect-alarm-type" multiple="multiple">
-												</select>
-											</div>
-										</div>
-
-										<div class="button-wrapper">
-											<a href="javascript:submitLogistics();" id="filter-button-update" class="text-blue custom-button"><s:text name="webportal.stock.updatebutton"/></a>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div id="chart-wrapper">
-								<div id="block-on-pallet-chart-view"></div>
-								<div id="chart-legend">
-									<div class="select-wrapper">
-										<span class="select-title text-grey"><s:text name="webportal.stock.entityshowninchart"/></span>
-										<div class="custom-select">
-											<select id="block-on-pallet-select-entity-shown" onchange="onChangeEntity()">
-											</select>
-										</div>
-									</div>
-									<div class="select-wrapper">
-										<span class="select-title text-grey"><s:text name="webportal.stock.divideentityby"/></span>
-										<div class="custom-select">
-											<select id="block-on-pallet-select-divide-entity">
-											</select>
-										</div>
-									</div>
-									<div class="center-wrapper">
-										<div class="button-wrapper">
-											<a href="javascript:submitLogistics();" id="chart-legend-button-update" class="text-blue custom-button"><s:text name="webportal.stock.updatebutton"/></a></div>
-									</div>
-								</div>
-							</div>
+						<hr>
+						<div class="large-12 columns text-center">
+								<a href="javascript:submitLogistics();" id="filter-button-update" class="button"><s:text name="webportal.stock.updatebutton"/></a>
 						</div>
 					</div>
+				</div><!-- end of filter panel -->
+		</div>
+
+			<div class="big-row">
+
+				<div class="large-6 columns panel">
+					<span id="display-tab-name"></span>
+					<div id="tabs-wrapper" >
+						<a id="block-on-pallet-tab1" class="tab selected" onclick="javascript:updateUnitStatus('fromSupplier')">From supplier</a>
+						<a id="block-on-pallet-tab2" class="tab" onclick="javascript:updateUnitStatus('inStock')">In stock</a>
+						<a id="block-on-pallet-tab3" class="tab" onclick="javascript:updateUnitStatus('onPallet')">On pallet</a>
+					</div>
+					<div style="width: 100%; height: 660px; opacity:0.99;" id="map-wrapper" ></div>
 				</div>
-			</div> -->
+
+				<div class="large-6 columns panel">
+
+					<div class="row">
+						<div class="large-12 columns">
+								<div id="block-on-pallet-chart-view"></div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="large-12 columns chart-filter">
+							<div>
+								<span><s:text name="webportal.stock.entityshowninchart"/></span>
+								<div>
+									<select id="block-on-pallet-select-entity-shown" onchange="onChangeEntity()">
+									</select>
+								</div>
+							</div>
+							<div>
+								<span><s:text name="webportal.stock.divideentityby"/></span>
+								<div>
+									<select id="block-on-pallet-select-divide-entity">
+									</select>
+								</div>
+							</div>
+							<div>
+								<a href="javascript:submitLogistics();" id="chart-legend-button-update" class="button">
+									<s:text name="webportal.stock.updatebutton"/>
+								</a>
+							</div>
+						</div><!-- end of chart-filter -->
+					</div><!-- end of chart-filter row -->
+
+				</div>
+
+			</div>
 		</div><!-- end of wrapper -->
 	</body>
 	<script>
