@@ -1,0 +1,8 @@
+.map-list li:first-child{
+	padding-right: 1%;
+	border-right: 1px solid #E7E7E7; 
+}
+
+.map-list li{
+	padding-left: 1%;
+}

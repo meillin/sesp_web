@@ -59,21 +59,12 @@ html, body{
 
 .filterHeader{
 	background: #343d45;
+	margin-top: 50px;
 	/*border-top: 1px solid #E7E7E7;*/
 }
 .filterHeader,
 .filterHeader h4,
 .filterHeader label{
-	color: #fff;
-}
-
-label{
-	font-size: 0.875rem;
-	cursor: pointer;
-	display: block;
-	font-weight: normal;
-	line-height: 1.5;
-	margin-bottom: 0;
 	color: #fff;
 }
 

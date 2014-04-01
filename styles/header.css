@@ -18,7 +18,12 @@ header .row{
 	background: #fff;
 }
 header{
-	border-bottom: 1px solid #E7E7E7
+	/*border-bottom: 1px solid #E7E7E7;*/
+	z-index: 50;
+	min-width: 100%;
+	padding: 0;
+	position: fixed;
+	top: 0;
 }
 
 
