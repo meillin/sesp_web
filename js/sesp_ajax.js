@@ -8,50 +8,50 @@ function run_ajax_json(obj) {
         async:true,
         error: function(data) {
 	    	if(obj.errorfunc){
-	            obj.errorfunc(data); 
+	            obj.errorfunc(data);
 	        }
         },
-        success: function(data) {        	
+        success: function(data) {
             if(obj.successfunc){
-                obj.successfunc(data); 
+                obj.successfunc(data);
             }
         }
     });
 }
-  
-function run_ajax(obj) {	
+
+function run_ajax(obj) {
     $.ajax({
         type:"POST",
         url: obj.url,
-        data: obj.pdata,        
+        data: obj.pdata,
         async:true,
         error: function(data) {
-	    	if(obj.errorfunc){
-	            obj.errorfunc(data); 
-	        }
-    	},
-    	success: function(data) {
-	        if(obj.successfunc){
-	            obj.successfunc(data); 
-	        }
-    	}
-});
+            if(obj.errorfunc){
+                obj.errorfunc(data);
+            }
+        },
+        success: function(data) {
+            if(obj.successfunc){
+                obj.successfunc(data);
+            }
+        }
+    });
 }
 
-function run_ajax_Sync(obj) {	
+function run_ajax_Sync(obj) {
     $.ajax({
         type:"POST",
         url: obj.url,
-        data: obj.pdata,        
+        data: obj.pdata,
         async:false,
         error: function(data) {
 	    	if(obj.errorfunc){
-	            obj.errorfunc(data); 
+	            obj.errorfunc(data);
 	        }
     	},
     	success: function(data) {
 	        if(obj.successfunc){
-	            obj.successfunc(data); 
+	            obj.successfunc(data);
 	        }
     	}
 });
@@ -66,12 +66,12 @@ function download_ajax(obj) {
         async:true,
         error: function(data) {
 	    	if(obj.errorfunc){
-	            obj.errorfunc(data); 
+	            obj.errorfunc(data);
 	        }
         },
-        success: function(data) {        	
+        success: function(data) {
             if(obj.successfunc){
-                obj.successfunc(data); 
+                obj.successfunc(data);
             }
         }
     });

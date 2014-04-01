@@ -65,11 +65,7 @@ function createAreaJSON(json) {
 		area = areas[i];
 		var areaPoints = [];
 
-//		xCoord = '';
-//		yCoord = '';
 		for(var j = 0; j<area.areaCoordinates.length; j++) {
-//			xCoord = xCoord + area.areaCoordinates[j].x + ", ";
-//			yCoord = yCoord + area.areaCoordinates[j].y + ", ";
 
 			point = new OpenLayers.Geometry.Point(area.areaCoordinates[j].y, area.areaCoordinates[j].x);
 			point.transform(

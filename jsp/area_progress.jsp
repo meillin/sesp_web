@@ -248,6 +248,7 @@ function infoDataCallback(id,woid,wostatus, woaddress) {
 						<lable>Unplanned<input type="checkbox" id="filter-checkbox-unplanned" name="unplanned" value="checked"/></lable>
 					</div>
 				</div>
+
 				<div class="big-row"><!-- start of new full width row -->
 					<div class="large-12 columns fillter">
 						<div class="submit-button">
@@ -264,7 +265,7 @@ function infoDataCallback(id,woid,wostatus, woaddress) {
 
 		<div class="page-name">
 			<div class="large-12 columns" >
-				<h2><s:text name="areaprogress.area"/> : <span class="text-light-grey" id="area-name"></span></h2>
+				<h2><s:text name="areaprogress.area"/> : <span id="area-name"></span></h2>
 			</div>
 		</div>
 
@@ -305,18 +306,18 @@ function infoDataCallback(id,woid,wostatus, woaddress) {
 						</div><!-- end of work-order -->
 
 						<div class="large-4 columns charts">
-						<div class="panel">
-							<div id="chart-wrapper">
-								<div class="medium-12 columns" id="block-work-order-chart-view"></div>
-								<div class="medium-12 columns" id="block-work-order-chart-view2"></div>
-								<div>
+							<div class="panel">
+								<div id="chart-wrapper">
+									<div class="medium-12 columns" id="block-work-order-chart-view"></div>
+									<div class="medium-12 columns" id="block-work-order-chart-view2"></div>
 									<div>
-										<div id="block-work-order-status-chart"></div>
-										<div id="block-work-order-status-chart-right"></div>
+										<div>
+											<div id="block-work-order-status-chart"></div>
+											<div id="block-work-order-status-chart-right"></div>
+										</div>
 									</div>
 								</div>
-							</div>
-							</div>
+								</div>
 						</div><!-- end of charts -->
 
 					</div>
