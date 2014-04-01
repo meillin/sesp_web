@@ -1,0 +1,15 @@
+{
+  "impFileStatusXML": "<chart formatNumberScale='0' minimiseWrappingInLegend='1' legendIconScale='0.4' legendBorderAlpha='0' legendShadow='0' legendNumColumns='2' legendBgColor='FFFFFF' legendBorderColor='FFFFFF' bgColor='FFFFFF' enableSmartLabels='0' manageLabelOverflow='1' showPercentInToolTip='0' plotBorderColor='FFFFFF' showBorder='0' skipOverlapLabels='1' showlabels='0' placeValuesInside='1' showValues='1' showLegend='1' legendPosition='bottom'><styles><definition><style name='myLegendFont' type='font' size='7' bold='0' /></definition><application><apply toObject='Legend' styles='myLegendFont' /></application></styles></chart>",
+  "impFileDetails": [
+
+  ],
+  "noOfFilesImp": "0",
+  "noOfBytesImp": "0.00",
+  "impMsgStatusXML": "<chart formatNumberScale='0' minimiseWrappingInLegend='0' legendIconScale='0.4' legendBorderAlpha='0' legendShadow='0' legendNumColumns='2' legendBgColor='FFFFFF' legendBorderColor='CCCCCC' bgColor='FFFFFF' enableSmartLabels='0' manageLabelOverflow='1'  showPercentInToolTip='0' bgAlpha='100' plotBorderColor='FFFFFF' skipOverlapLabels='1' showBorder='0' showlabels='0' placeValuesInside='1' showValues='1' showLegend='1' legendPosition='bottom'><styles><definition><style name='myLegendFont' type='font' size='7' bold='0' /></definition><application><apply toObject='Legend' styles='myLegendFont' /></application></styles></chart>",
+  "noOfImpMsgRec": "0",
+  "woSentToPda": "0",
+  "lockedUsers": "0",
+  "totalUsers": "0",
+  "successfullLogin": "0",
+  "failedLogin": "0"
+}

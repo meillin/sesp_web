@@ -341,13 +341,11 @@ function onSubmit()
 }
 
 function drawTestChart(){
-
 	//Work Order Progress
 		//Generate Javascript Fusion chart with a dummy data
 	var myChart = new FusionCharts("Column2D","testing-chart", "100%", "300", "0" );
 			myChart.setJSONUrl(contextPath + "/data/dummydata.json");
 			myChart.render("block-alarm-charts-view");
-
 }
 
 function loadPoints(domain, from, to, areaT, area, unitCommT, unitModel, InstMepUtilityT, dateInterval,alarmTypes){
