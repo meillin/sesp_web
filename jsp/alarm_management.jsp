@@ -136,10 +136,13 @@
 
 	function displayInfo(id) {}
 	function resetMapNChart(data) {
+		//Remove comment in production
+		/*
 		$("#map-wrapper").html('');
 		initmap('<%=request.getSession().getAttribute("MAP_SERVER_URL")%>');
 		$("#block-alarm-charts-view").html('');
 		alert(i18nerrorChartError);
+		*/
 	}
 
 	function loadPointsSuccess(data) {
