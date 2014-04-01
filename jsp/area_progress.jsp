@@ -274,42 +274,33 @@ function infoDataCallback(id,woid,wostatus, woaddress) {
 				<div style="min-height: 660px">
 					<div class="big-row">
 
-						<div class="large-4 columns map">
+						<div class="large-8 columns map">
 						<div class="panel">
+						<ul class="inline-list">
+							<li style="width: 80%">
 							<div id="tabs-wrapper">
 								<a id="block-work-order-tab1" onclick="javascript:updateWorkOrder('progress')">Progress</a>
 								<a id="block-work-order-tab2" onclick="javascript:updateWorkOrder('status')">Status</a>
 							</div>
-							<div style="width: 500px; height: 600px; opacity:0.99;" id="map-wrapper"></div>
-						</div>
-						</div>
-						<div class="large-4 columns work-order" id="block-summary">
-						<div class="panel">
-							<div>
+							<div style="width: 100%; height: 600px; opacity:0.99;" id="map-wrapper"></div>
+							</li>
+							<li style="width: 20%">
+								<div><s:text name="areaprogress.workorderprogress.summary.numberofworkorders"/> :</div>
+								<div id="block-summary-content-wo-count"></div>
+								<div><s:text name="areaprogress.workorderprogress.summary.workordertypes"/>:</div>
+								<div id="summary-workordertypes-selected" style="max-height:500px;overflow-y:scroll">LOTS OF TEXT HERE</div>
 								<span><s:text name="areaprogress.workorderprogress.summary"/></span>
-							</div>
+							</li>
+						</ul>
 
-							<div>
-								<div>
-									<div><s:text name="areaprogress.workorderprogress.summary.numberofworkorders"/> :</div>
-									<div id="block-summary-content-wo-count"></div>
-								</div>
-
-								<div>
-									<div><s:text name="areaprogress.workorderprogress.summary.workordertypes"/> :</div>
-									<div id="summary-workordertypes-selected" style="max-height:500px;overflow-y:scroll">
-										LOTS OF TEXT HERE
-									</div>
-								</div>
-							</div>
-							</div>
-						</div><!-- end of work-order -->
+						</div>
+						</div>
 
 						<div class="large-4 columns charts">
 							<div class="panel">
 								<div id="chart-wrapper">
-									<div class="medium-12 columns" id="block-work-order-chart-view"></div>
-									<div class="medium-12 columns" id="block-work-order-chart-view2"></div>
+									<div id="block-work-order-chart-view"></div>
+									<div id="block-work-order-chart-view2"></div>
 									<div>
 										<div>
 											<div id="block-work-order-status-chart"></div>

@@ -411,11 +411,11 @@ function drawChart1(data) {
 
 	//Work Order Progress
 		//Generate Javascript Fusion chart with a dummy data
-	var myChart = new FusionCharts("Doughnut2D","order-progress", "400", "300", "0" );
+	var myChart = new FusionCharts("Doughnut2D","order-progress", "100%", "300", "0" );
       myChart.setJSONUrl(contextPath + "/data/dummydata.json");
       myChart.render("block-work-order-chart-view");
 
-  var myChart2 = new FusionCharts( "Line", "work-order-progress", "400", "300" );
+  var myChart2 = new FusionCharts( "Line", "work-order-progress", "100%", "300" );
       myChart2.setJSONUrl(contextPath + "/data/dummydata.json");
 			myChart2.render("block-work-order-chart-view2");
 /*
@@ -433,7 +433,7 @@ function refreshChart1(){
 	console.log('refreshchart1');
 
 	//Generate Javascript Fusion chart with a dummy data
-	var myChart = new FusionCharts("Doughnut2D","myChartId", "400", "300", "0" );
+	var myChart = new FusionCharts("Doughnut2D","myChartId", "100%", "300", "0" );
       myChart.setXMLData("<chart caption='Weekly Sales Summary' xAxisName='Week' " +
         "yAxisName='Sales' numberPrefix='$'>" +
           "<set label='Week 1' value='14400' />" +
@@ -443,7 +443,7 @@ function refreshChart1(){
         "</chart>");
       myChart.render("block-work-order-chart-view");
 
-      var myChart2 = new FusionCharts( "Line", "fakechart", "400", "300" );
+      var myChart2 = new FusionCharts( "Line", "fakechart", "100%", "300" );
 			myChart2.setXMLData("<chart caption='Weekly Sales Summary' xAxisName='Week' " +
         "yAxisName='Sales' numberPrefix='$'>" +
           "<set label='Week 1' value='14400' />" +

@@ -17,6 +17,11 @@ header .row{
 	max-width: initial;
 	background: #fff;
 }
+header{
+	border-bottom: 1px solid #E7E7E7
+}
+
+
 header .row input{margin-bottom: 0;}
 
 header .slide-menu-left a{
