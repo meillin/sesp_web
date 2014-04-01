@@ -67,25 +67,57 @@ header .logo-capgemini img{padding-top: 0.55rem;}
 #show-nav {
 	color: #353535;
 }
+
 .overlapping-menu {
-	background: #2B2B2B;
+	background-image:url(../images/slideout-bg.png);
 	color: #fff;
-	position: absolute;
+	position: fixed;
 	z-index: 100;
 	list-style: none;
 	width: 300px;
-	padding: 1em;
-	opacity: 0.8;
-}
+	padding: 1rem;
+	opacity: 0.95;
+	height: 100%;
+	top: 10;
+	z-index: 1000;
+	}
+
 li {
 	line-height: 22px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   	font-weight: 100; 	
 }
+
+.overlapping-menu > li {
+	padding-left: 0.2rem;
+}
+
+.overlapping-menu .fi-home:before,
+.overlapping-menu .fi-torsos:before,
+.overlapping-menu .fi-graph-horizontal:before,
+.overlapping-menu .fi-mountains:before,
+.overlapping-menu .fi-alert:before,
+.overlapping-menu .fi-monitor:before,
+.overlapping-menu .fi-graph-trend:before,
+.overlapping-menu .fi-arrow-up:before,
+.overlapping-menu .fi-clock:before {
+	width: 21px;
+	padding-bottom: 0.7rem;
+}
+
+.slide-out-text {
+	float: right;
+	padding-left: 1.5rem;
+	padding-top: 0.15rem;
+}
+
 .inline-list li {
 	-moz-box-sizing: border-box;
 	display: inline-block;
 	margin: 0;
 	vertical-align: top;
 }
+
 .inline-list {
 	-moz-box-sizing: border-box;
 	list-style: none outside none;
