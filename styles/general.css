@@ -36,6 +36,7 @@ html, body{
 .panel{
 	background: #fff;
 }
+
 .big-row {
 	/*min-height: 450px;*/
 	max-width: initial;
@@ -66,6 +67,10 @@ html, body{
 .filterHeader h4,
 .filterHeader label{
 	color: #fff;
+}
+
+.colorHeading{
+ 	color: #1abc9c;
 }
 
 button, .button{
