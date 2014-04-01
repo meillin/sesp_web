@@ -108,7 +108,6 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
 
 			<div class="large-5 columns">
@@ -144,36 +143,220 @@
 										<div id="import-statistics-messages-received">110</div>
 									</div>
 								</div>
-
 							</div>
 						</div>
 
+						<div class="row">
+							<hr>
+						<!--<table id="import-statistics-table"> use this table element when there is real data -->
+							<table>
+								<thead>
+									<tr>
+									<th>ID</th>
+									<th>Timestamp</th>
+									<th>File type</th>
+									<th>Status</th>
+									<th>Size</th>
+									<th>Rec.count</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>es Here</td>
+										<td>longer ct</td>
+										<td>es Here</td>
+										<td>es Here</td>
+										<td>es Here</td>
+										<td>es Here</td>
+									</tr>
+									<tr>
+										<td>es Here</td>
+										<td>longer Co</td>
+										<td>es Here</td>
+										<td>es Here</td>
+										<td>es Here</td>
+										<td>es Here</td>
+									</tr>
+									<tr>
+										<td>es Here</td>
+										<td>longer Co</td>
+										<td>es Here</td>
+										<td>es Here</td>
+										<td>es Here</td>
+										<td>es Here</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 
 				<div class="row">
-					<div class="large-12 columns">
-						export statistics
+					<div class="large-12 columns panel">
+						<div class="row">
+							<div class="large-12 columns">Export statistics</div>
+						</div>
+
+						<div class="row">
+							<div class="large-6 columns">
+								<div>Files</div>
+								<div id="export-statistics-files"></div>
+								<div class="row">
+									<div class="small-6 columns">
+										<div>Files exported</div>
+										<div id="export-statistics-files-exported">123</div>
+									</div>
+								<div class="small-6 columns">
+										<div>Data exported</div>
+										<div id="export-statistics-data-exported">321</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="large-6 columns">
+								<div>Messages</div>
+								<div id="export-statistics-messages"></div>
+								<div class="row">
+									<div class="large-12 columns">
+										<div>Messages received</div>
+										<div id="export-statistics-messages-received">110</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+						<hr>
+						<!--<table id="export-statistics-table"> use this table element when there is real data -->
+							<table>
+								<thead>
+									<tr>
+									<th>ID</th>
+									<th>Timestamp</th>
+									<th>File type</th>
+									<th>Status</th>
+									<th>Size</th>
+									<th>Rec.count</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>es Here</td>
+										<td>longer ct</td>
+										<td>es Here</td>
+										<td>es Here</td>
+										<td>es Here</td>
+										<td>es Here</td>
+									</tr>
+									<tr>
+										<td>es Here</td>
+										<td>longer Co</td>
+										<td>es Here</td>
+										<td>es Here</td>
+										<td>es Here</td>
+										<td>es Here</td>
+									</tr>
+									<tr>
+										<td>es Here</td>
+										<td>longer Co</td>
+										<td>es Here</td>
+										<td>es Here</td>
+										<td>es Here</td>
+										<td>es Here</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>
 
 			<div class="large-4 columns">
 				<div class="row">
-					<div class="large-12 columns">
-						users
-					</div>
+					<div class="large-12 columns panel">
+						<div class="row">
+							<div class="large-12 columns">Users</div>
+						</div>
+						<div class="row">
+							<div class="large-12 columns">
+								<div>Users in system</div>
+								<div id="users-system"></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="large-12 columns">
+								<div>Authentications today</div>
+								<div id="users-authentifications-today"></div>
+							</div>
+						</div>
+				</div>
+
+				<div class="row">
+					<div class="large-12 columns panel">
+						<div class="row">
+							<div class="large-12 columns">Errors</div>
+						</div>
+						<div class="row">
+							<div class="large-12 columns">
+								<div>Errors today</div>
+								<div id="errors-today"></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="large-12 columns">
+							<hr>
+						<!--<table id="errors-table"> use this table element when there is real data -->
+							<table>
+								<thead>
+									<tr>
+									<th>ID</th>
+									<th>Timestamp</th>
+									<th>File type</th>
+									<th>Status</th>
+									<th>Size</th>
+									<th>Rec.count</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>es Here</td>
+										<td>longer ct</td>
+										<td>es Here</td>
+										<td>es Here</td>
+										<td>es Here</td>
+										<td>es Here</td>
+									</tr>
+									<tr>
+										<td>es Here</td>
+										<td>longer Co</td>
+										<td>es Here</td>
+										<td>es Here</td>
+										<td>es Here</td>
+										<td>es Here</td>
+									</tr>
+									<tr>
+										<td>es Here</td>
+										<td>longer Co</td>
+										<td>es Here</td>
+										<td>es Here</td>
+										<td>es Here</td>
+										<td>es Here</td>
+									</tr>
+								</tbody>
+							</table>
+							</div>
+						</div>
+				</div>
 				</div>
 
 				<div class="row">
 					<div class="large-12 columns">
-						errors
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="large-12 columns">
-						word orders
+							<div class="dashboard-block-title text-blue">Work orders</div>
+						<div class="dashboard-block-content text-grey">
+							<div class="dashboard-block-content-title">Sent to PDAs today</div>
+							<div class="dashboard-block-content-data">
+								<div id="work-orders-sent-to-pda"></div>
+							</div>
 					</div>
 				</div>
 			</div>
