@@ -79,14 +79,11 @@ header .logo-capgemini img{padding-top: 0.55rem;}
 }
 
 .overlapping-menu {
-	background-image:url(../images/slideout-bg.png);
+	background-image:url(../images/slideout_bg.png);
 	color: #fff;
 	position: fixed;
-	z-index: 100;
 	list-style: none;
 	width: 300px;
-	padding: 1rem;
-	opacity: 0.95;
 	height: 100%;
 	top: 10;
 	z-index: 1000;
@@ -99,7 +96,18 @@ li {
 }
 
 .overlapping-menu > li {
-	padding-left: 0.2rem;
+	width: 100%;
+}
+
+.overlapping-menu a {
+	display: block;
+	color: black;
+	z-index: -1000;
+}
+
+.overlapping-menu a:hover {
+	background: #353d3e;
+	color: #e0e8e9;
 }
 
 .overlapping-menu .fi-home:before,
@@ -113,11 +121,11 @@ li {
 .overlapping-menu .fi-clock:before {
 	width: 21px;
 	padding-bottom: 0.7rem;
+	padding-left: 1.2rem;
 }
 
 .slide-out-text {
-	float: right;
-	padding-left: 1.5rem;
+	padding-left: 2.7rem;
 	padding-top: 0.15rem;
 }
 
