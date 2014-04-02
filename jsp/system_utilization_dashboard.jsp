@@ -23,7 +23,6 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-system-utilization-dashboard.css" />
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/colResizable-1.3.min.js"></script>
 		<script src="<%=request.getContextPath()%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
 		<script src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
 		<script src="<%=request.getContextPath()%>/js/spin.js"></script>
@@ -149,6 +148,7 @@
 
 						<div class="row">
 						<!--<table id="import-statistics-table"> use this table element when there is real data -->
+						<div class="large-12 columns">
 							<table>
 								<thead>
 									<tr>
@@ -187,6 +187,7 @@
 									</tr>
 								</tbody>
 							</table>
+						</div>
 						</div>
 					</div>
 				</div>
@@ -226,6 +227,7 @@
 						</div>
 
 						<div class="row">
+							<div class="large-12 columns">
 						<!--<table id="export-statistics-table"> use this table element when there is real data -->
 							<table>
 								<thead>
@@ -265,6 +267,7 @@
 									</tr>
 								</tbody>
 							</table>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -363,7 +366,7 @@
 				</div>
 			</div>
 
-		</div>
+		</div><!-- end of big-row -->
 
 
 		 <script>
