@@ -1,10 +1,26 @@
+html {
+    height: 100%;
+}
+body {
+    background: #e7e7e7;
+    height: 100%;
+}
+.big-row {
+    min-height: 100%;
+}
 .column-header {
-    padding: 10px;
-    background: pink;
+    padding: 0.6em 0;
+    background: #1abc9c;
     color: white;
     font-weight: bold;
 }
 .column-body {
-    margin-top: 1em;
-    background: yellow;
+    margin-top: 10px;
+    background: #fff;
+}
+.column-body .row:nth-child(2) .columns{
+    margin: 0.5em 0;
+}
+table tr th, table tr td {
+    padding: 0;
 }

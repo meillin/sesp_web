@@ -44,9 +44,9 @@
 			<div class="large-3 columns">
 
 				<div class="row">
-					<div class="medium-12 columns column-body">
+					<div class="medium-6 large-12 columns column-body">
 						<div class="row column-header">
-							<div class="large-12 columns">Import servers</div>
+							<div class="large-12 columns"><i class="fi-graph-pie"></i> Import servers</div>
 						</div>
 						<div class="row">
 							<div class="small-6 columns">
@@ -65,12 +65,10 @@
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="row">
-					<div class="large-12 columns column-body">
+					<div class="medium-6 large-12 columns column-body">
 						<div class="row column-header">
-							<div class="large-12 columns">Export servers</div>
+							<div class="large-12 columns"><i class="fi-graph-pie"></i> Export servers</div>
 						</div>
 						<div class="row">
 							<div class="small-6 columns">
@@ -95,7 +93,7 @@
 				<div class="row">
 					<div class="large-12 columns column-body">
 						<div class="row column-header">
-							<div class="large-12 columns">Transaction servers</div>
+							<div class="large-12 columns"><i class="fi-graph-pie"></i> Transaction servers</div>
 						</div>
 						<div class="row">
 							<div class="small-6 columns">
@@ -113,10 +111,10 @@
 
 			<div class="large-5 columns">
 				<div class="row">
-					<div class="large-12 columns">
+					<div class="large-12 columns column-body">
 
-						<div class="row">
-							<div class="large-12 columns">Import statistics</div>
+						<div class="row column-header">
+							<div class="large-12 columns"><i class="fi-graph-trend"></i> Import statistics</div>
 						</div>
 
 						<div class="row">
@@ -148,7 +146,6 @@
 						</div>
 
 						<div class="row">
-							<hr>
 						<!--<table id="import-statistics-table"> use this table element when there is real data -->
 							<table>
 								<thead>
@@ -193,9 +190,9 @@
 				</div>
 
 				<div class="row">
-					<div class="large-12 columns">
-						<div class="row">
-							<div class="large-12 columns">Export statistics</div>
+					<div class="large-12 columns column-body">
+						<div class="row column-header">
+							<div class="large-12 columns"><i class="fi-graph-trend"></i> Export statistics</div>
 						</div>
 
 						<div class="row">
@@ -227,7 +224,6 @@
 						</div>
 
 						<div class="row">
-						<hr>
 						<!--<table id="export-statistics-table"> use this table element when there is real data -->
 							<table>
 								<thead>
@@ -274,9 +270,9 @@
 
 			<div class="large-4 columns">
 				<div class="row">
-					<div class="large-12 columns">
-						<div class="row">
-							<div class="large-12 columns">Users</div>
+					<div class="large-12 columns column-body">
+						<div class="row column-header">
+							<div class="large-12 columns"><i class="fi-torsos-all"></i> Users</div>
 						</div>
 						<div class="row">
 							<div class="large-12 columns">
@@ -290,13 +286,13 @@
 								<div id="users-authentifications-today"></div>
 							</div>
 						</div>
+					</div>
 				</div>
-			</div>
 
 				<div class="row">
-					<div class="large-12 columns">
-						<div class="row">
-							<div class="large-12 columns">Errors</div>
+					<div class="large-12 columns column-body">
+						<div class="row column-header">
+							<div class="large-12 columns"><i class="fi-alert"></i> Errors</div>
 						</div>
 						<div class="row">
 							<div class="large-12 columns">
@@ -306,7 +302,6 @@
 						</div>
 						<div class="row">
 							<div class="large-12 columns">
-								<hr>
 							<!--<table id="errors-table"> use this table element when there is real data -->
 								<table>
 									<thead>
@@ -352,9 +347,9 @@
 				</div>
 
 				<div class="row">
-					<div class="large-12 columns">
-						<div class="row">
-							<div class="large-12 columns">Work orders</div>
+					<div class="large-12 columns column-body">
+						<div class="row column-header">
+							<div class="large-12 columns"><i class="fi-wrench"></i> Work orders</div>
 						</div>
 						<div class="row">
 							<div class="large-12 columns">
@@ -365,9 +360,9 @@
 					</div>
 				</div>
 			</div>
+
 		</div>
 
-		</div><!-- end of big-row -->
 
 		 <script>
 		 startDashboard();
