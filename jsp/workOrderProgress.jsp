@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Smart Energy Services Platform</title>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Smart Energy Services Platform</title>
 
-		<!-- Enable html5 tags for 6-7-8 -->
-		<!--[if lte IE 8]>
-		<script type="text/javascript">
-		document.createElement("header");
-		document.createElement("footer");
-		document.createElement("section");
-		document.createElement("aside");
-		document.createElement("nav");
-		document.createElement("article");
-		document.createElement("figure");
-		</script>
-		<![endif]-->
-		<%  String contextPath = request.getContextPath(); %>
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
-		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/jquery.multiselect.css"/>
-		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
-		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
-		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/datepicker.css" />
-		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-work-order-progress.css" />
-		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/style.tidy.css" />
-		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/bubble-map.css"/>
-		<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />
+	<!-- Enable html5 tags for 6-7-8 -->
+	<!--[if lte IE 8]>
+	<script type="text/javascript">
+	document.createElement("header");
+	document.createElement("footer");
+	document.createElement("section");
+	document.createElement("aside");
+	document.createElement("nav");
+	document.createElement("article");
+	document.createElement("figure");
+	</script>
+	<![endif]-->
+	<%  String contextPath = request.getContextPath(); %>
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
+	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/jquery.multiselect.css"/>
+	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
+	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
+	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/datepicker.css" />
+	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-work-order-progress.css" />
+	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/style.tidy.css" />
+	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/bubble-map.css"/>
+	<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />
 
-		<script type="text/javascript" src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/bootstrap-datepicker.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/jquery.multiselect.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/jquery.cookie.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/colResizable-1.3.min.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/init.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/common.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/OpenLayers.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/sesp_ajax.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/spin.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/map.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/ajax-loader.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/work-order-progress.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/search-results.js"></script>
+	<script type="text/javascript" src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
+	<script type="text/javascript" src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
+	<script type="text/javascript" src="<%=contextPath%>/js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="<%=contextPath%>/js/jquery.multiselect.js"></script>
+	<script type="text/javascript" src="<%=contextPath%>/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="<%=contextPath%>/js/colResizable-1.3.min.js"></script>
+	<script type="text/javascript" src="<%=contextPath%>/js/init.js"></script>
+	<script type="text/javascript" src="<%=contextPath%>/js/common.js"></script>
+	<script type="text/javascript" src="<%=contextPath%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
+	<script type="text/javascript" src="<%=contextPath%>/js/OpenLayers.js"></script>
+	<script type="text/javascript" src="<%=contextPath%>/js/sesp_ajax.js"></script>
+	<script type="text/javascript" src="<%=contextPath%>/js/spin.js"></script>
+	<script type="text/javascript" src="<%=contextPath%>/js/map.js"></script>
+	<script type="text/javascript" src="<%=contextPath%>/js/ajax-loader.js"></script>
+	<script type="text/javascript" src="<%=contextPath%>/js/work-order-progress.js"></script>
+	<script type="text/javascript" src="<%=contextPath%>/js/search-results.js"></script>
 
-		<script type="text/javascript" src="<%=contextPath%>/js/highchart/highcharts.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/highchart/exporting.js"></script>
+	<script type="text/javascript" src="<%=contextPath%>/js/highchart/highcharts.js"></script>
+	<script type="text/javascript" src="<%=contextPath%>/js/highchart/exporting.js"></script>
 
-	</head>
+</head>
 <script>
 	contextPath = "<%=contextPath%>";
 	from_err_msg="<s:text name='workorderprogress.filters.from.err.msg'/>";
@@ -75,109 +75,109 @@
 		apreqObject.unplanned=unplanned;
 		apreqObject.area=area;
 
-		    	var obj= {};
-			    obj.url=contextPath+"/std/WOMapAreas.action";
+		var obj= {};
+		obj.url=contextPath+"/std/WOMapAreas.action";
 
-			    obj.pdata = 'dateInterval='+dateInterval+'&dateFrom='+dateFrom+'&dateTo='+dateTo+'&domain='+domain+
-		   		'&areatypes='+areaType+'&workOrderType='+workOrderType+'&unplanned='+unplanned+'&area='+area;
-			    areaWOMapInfoRParams = 	'dateInterval='+dateInterval+'&dateFrom='+dateFrom+'&dateTo='+dateTo+'&domain='+domain+
-		   		'&workOrderType='+workOrderType+'&unplanned='+unplanned+'&area='+area;
-			    //obj.pdata = "domains="+domain+"&areatypes="+areaType;
-		obj.successfunc = createWOAreaJSON;
-		obj.errorfunc = errorDetails;
+		obj.pdata = 'dateInterval='+dateInterval+'&dateFrom='+dateFrom+'&dateTo='+dateTo+'&domain='+domain+
+		'&areatypes='+areaType+'&workOrderType='+workOrderType+'&unplanned='+unplanned+'&area='+area;
+		areaWOMapInfoRParams = 	'dateInterval='+dateInterval+'&dateFrom='+dateFrom+'&dateTo='+dateTo+'&domain='+domain+
+		'&workOrderType='+workOrderType+'&unplanned='+unplanned+'&area='+area;
+		    //obj.pdata = "domains="+domain+"&areatypes="+areaType;
+		    obj.successfunc = createWOAreaJSON;
+		    obj.errorfunc = errorDetails;
 
-		run_ajax(obj);
-		return;
-	}
+		    run_ajax(obj);
+		    return;
+		}
 
 
-	function fetchBubbleContent(id) {
-	var obj= {};
-	obj.url=contextPath+"/std/WOMapAreasStatusInfo.action";
-	obj.pdata = areaWOMapInfoRParams+"&area="+id;
-	obj.successfunc = function(msg){
-		if(msg == "") {
-	return;
-	}
-	var o = eval(msg);
-	if(o == null)
-	return;
+		function fetchBubbleContent(id) {
+			var obj= {};
+			obj.url=contextPath+"/std/WOMapAreasStatusInfo.action";
+			obj.pdata = areaWOMapInfoRParams+"&area="+id;
+			obj.successfunc = function(msg){
+				if(msg == "") {
+					return;
+				}
+				var o = eval(msg);
+				if(o == null)
+					return;
 
-	populateBubbleContent(o);
+				populateBubbleContent(o);
 
-	};
-	obj.errorfunc = populateErrorBubbleContent;
-	run_ajax_Sync(obj);
-	return;
-	}
+			};
+			obj.errorfunc = populateErrorBubbleContent;
+			run_ajax_Sync(obj);
+			return;
+		}
 
-	function woAreaProgressCallback(aname,aid) {
-	var returnData;
+		function woAreaProgressCallback(aname,aid) {
+			var returnData;
 
-	//areaprogressLink = contextPath+"/std/AreaProgress.action?"+areaWOMapInfoRParams+"&aid="+aid+"&aname="+aname;
-		//alert(areaprogressLink);
-		html = "<form id=\"bubbleForm\" name=\"bubbleForm\" method=\"post\" action=\""+contextPath+"/std/AreaProgress.action\">";
-		html += "<div id=\"bubble\" class=\"bubble-chart text-grey\" style=\"width:350px; height:350px;\">";
-		html +=	"<div id=\"bubble-header\"></div>";
-		html += "<div class=\"bubble-title\">";
-		html += "	<div class=\"bubble-category\">Area name :</div>";
-		html +=	"	<div class=\"bubble-value text-light-grey\"><a href=\"javascript:document.getElementById('bubbleForm').submit();\">"+aname+"</a></div>";
-		html +=	"</div>";
-		html +=	"<div class=\"bubble-value text-light-grey\" id=\"bubble-content\">";
-		html += "</div>";
-		html += "<div id=\"bubble-arrow\">";
+//areaprogressLink = contextPath+"/std/AreaProgress.action?"+areaWOMapInfoRParams+"&aid="+aid+"&aname="+aname;
+	//alert(areaprogressLink);
+	html = "<form id=\"bubbleForm\" name=\"bubbleForm\" method=\"post\" action=\""+contextPath+"/std/AreaProgress.action\">";
+	html += "<div id=\"bubble\" class=\"bubble-chart text-grey\" style=\"width:350px; height:350px;\">";
+	html +=	"<div id=\"bubble-header\"></div>";
+	html += "<div class=\"bubble-title\">";
+	html += "	<div class=\"bubble-category\">Area name :</div>";
+	html +=	"	<div class=\"bubble-value text-light-grey\"><a href=\"javascript:document.getElementById('bubbleForm').submit();\">"+aname+"</a></div>";
+	html +=	"</div>";
+	html +=	"<div class=\"bubble-value text-light-grey\" id=\"bubble-content\">";
+	html += "</div>";
+	html += "<div id=\"bubble-arrow\">";
 
-		html+= "<input type=\"hidden\" name=\"aid\" value=\""+aname+"\"/>";
-		html+= "<input type=\"hidden\" name=\"aname\" value=\""+aid+"\"/>";
-		html+= "<input type=\"hidden\" name=\"dateInterval\" value=\""+apreqObject.dateInterval+"\"/>";
-		html+= "<input type=\"hidden\" name=\"dateFrom\" value=\""+apreqObject.dateFrom+"\"/>";
-		html+= "<input type=\"hidden\" name=\"dateTo\" value=\""+apreqObject.dateTo+"\"/>";
-		html+= "<input type=\"hidden\" name=\"domain\" value=\""+apreqObject.domain+"\"/>";
-		html+= "<input type=\"hidden\" name=\"areaType\" value=\""+apreqObject.areaType+"\"/>";
-		html+= "<input type=\"hidden\" name=\"workOrderType\" value=\""+apreqObject.workOrderType+"\"/>";
-		html+= "<input type=\"hidden\" name=\"unplanned\" value=\""+apreqObject.unplanned+"\"/>";
-		html+= "<input type=\"hidden\" name=\"area\" value=\""+apreqObject.area+"\"/>";
+	html+= "<input type=\"hidden\" name=\"aid\" value=\""+aname+"\"/>";
+	html+= "<input type=\"hidden\" name=\"aname\" value=\""+aid+"\"/>";
+	html+= "<input type=\"hidden\" name=\"dateInterval\" value=\""+apreqObject.dateInterval+"\"/>";
+	html+= "<input type=\"hidden\" name=\"dateFrom\" value=\""+apreqObject.dateFrom+"\"/>";
+	html+= "<input type=\"hidden\" name=\"dateTo\" value=\""+apreqObject.dateTo+"\"/>";
+	html+= "<input type=\"hidden\" name=\"domain\" value=\""+apreqObject.domain+"\"/>";
+	html+= "<input type=\"hidden\" name=\"areaType\" value=\""+apreqObject.areaType+"\"/>";
+	html+= "<input type=\"hidden\" name=\"workOrderType\" value=\""+apreqObject.workOrderType+"\"/>";
+	html+= "<input type=\"hidden\" name=\"unplanned\" value=\""+apreqObject.unplanned+"\"/>";
+	html+= "<input type=\"hidden\" name=\"area\" value=\""+apreqObject.area+"\"/>";
 
-		html += "</div>";
-		html += "</div></form>";
+	html += "</div>";
+	html += "</div></form>";
 
-		returnData =  html;
+	returnData =  html;
 
-		saveAreaProgressFilters(apreqObject.dateInterval,apreqObject.dateFrom,apreqObject.dateTo,apreqObject.domain,apreqObject.areaType,apreqObject.workOrderType,apreqObject.unplanned,apreqObject.area);
+	saveAreaProgressFilters(apreqObject.dateInterval,apreqObject.dateFrom,apreqObject.dateTo,apreqObject.domain,apreqObject.areaType,apreqObject.workOrderType,apreqObject.unplanned,apreqObject.area);
 
 	return returnData;
-	}
+}
 
-	function populateErrorBubbleContent(data) {
+function populateErrorBubbleContent(data) {
 	document.getElementById("bubble-content").innerHTML=data.responseText;
-	}
+}
 
 
-	function populateBubbleContent(data) {
-	//Work Order Progress
-	var bubbleWOAreaChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/Doughnut2D.swf", "mapWOareaProgressChartId"+bci++,"300","300");
-	bubbleWOAreaChart.setDataXML(data.workOrderProgress);
-	bubbleWOAreaChart.render("bubble-content");
-	}
+function populateBubbleContent(data) {
+//Work Order Progress
+var bubbleWOAreaChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/Doughnut2D.swf", "mapWOareaProgressChartId"+bci++,"300","300");
+bubbleWOAreaChart.setDataXML(data.workOrderProgress);
+bubbleWOAreaChart.render("bubble-content");
+}
 
-	function submitWO2AreaProgress(formRef){
+function submitWO2AreaProgress(formRef){
 	if(formRef.username.value=="")
 	{
-	alert(i18nerrorPleaseEnterUsername);
-	formRef.username.focus();
-	return;
+		alert(i18nerrorPleaseEnterUsername);
+		formRef.username.focus();
+		return;
 	} if(formRef.password.value=="")
 	{
-	alert(i18nerrorPleaseEnterPassword);
-	formRef.password.focus();
-	return;
+		alert(i18nerrorPleaseEnterPassword);
+		formRef.password.focus();
+		return;
 	}
 	document.getElementById("divenable").style.display="none";
 	document.getElementById("divdisable").style.display="block";
 	loginSpinner();
 	formRef.submit();
-	}
-	var bci = 0;
+}
+var bci = 0;
 </script>
 
 <body onload="loadvalues(),initmap('<%=request.getSession().getAttribute("MAP_SERVER_URL")%>')">
@@ -251,69 +251,53 @@
 				</div><!-- end of new full width row -->
 			</div>
 		</div>
-
 		<div class="big-row">
-
 			<div class="large-6 columns">
-
-					<div class="row">
-						<div class="large-12 columns">
-							<div class="row column-header">
-								<div class="large-12 columns">
-									<i class="fi-graph-pie"></i>
-									<s:text name="workorderprogress.workorderstatus"/>
-								</div>
-							</div>
-							<div class="row">
-								<div id="work-order-status">
-								</div>
-								<!--
-								<div id="block-work-order-status-chart"></div>
-								<div id="block-work-order-status-chart-right" class="right"></div>-->
-							</div>
+				<div class="panel-outer">
+					<h4 class="panel-heading"><i class="fi-graph-pie"></i><s:text name="workorderprogress.workorderstatus"/></h4>
+					<div class="panel-inner">
+						<div id="work-order-status">
+						</div>
+							<!--
+							<div id="block-work-order-status-chart"></div>
+							<div id="block-work-order-status-chart-right" class="right"></div>-->
 						</div>
 					</div>
-
-					<div class="row">
-						<div class="large-12 columns">
-							<div class="row column-header">
-								<div class="large-12 columns">
-									<i class="fi-graph-pie"></i>
-									<s:text name="workorderprogress.areaprogress"/>
-								</div>
-							</div>
-							<div class="row">
-								<div style = "height:660px;opacity:0.99;" id="map-wrapper"></div>
-							</div>
+				</div>
+				<div class="large-6 columns">
+					<div class="panel-outer">
+						<h4 class="panel-heading"><i class="fi-graph-pie"></i> <s:text name="workorderprogress.areaprogress"/></h4>
+						<div class="panel-inner">
+							<div style = "height:500px;opacity:0.99;" id="map-wrapper"></div>
+						</div>
 					</div>
 				</div>
 			</div>
-
-			<div class="large-6 columns">
-				<div class="row column-header">
-					<div class="large-12 columns">
-						<i class="fi-graph-pie"></i>
-						<s:text name="workorderprogress.progressoverview"/>
-					</div>
-				</div>
-				<div class="row">
-					<div id="total-progress"></div>
-					<hr>
-					<div id="work-order-progress"></div>
-					<hr>
-					<div id="detailed-progress"></div>
-
-						<!--
-						<div id="block-progress-overview-total-progress"></div>
-						<div id="block-progress-overview-work-order-progress"></div>
-						<div id="block-progress-overview-detailed-progress"></div>
-						<div id="block-progress-overview-detailed-timebased-perfomance-workorders"></div>
-						<div id="block-progress-overview-detailed-timebased-perfomance-notperformed"></div>
-					-->
-					</div>
+			<div class="large-12 columns">
+				<div class="panel-outer">
+					<h4 class="panel-heading"><i class="fi-graph-pie"></i> <s:text name="workorderprogress.progressoverview"/></h4>
+				<div class="panel-inner">
+				<ul class="inline-list">
+					<li>
+						<div id="total-progress"></div>
+					</li>
+					<li>
+						<div id="work-order-progress"></div>
+					</li>
+					<li>
+						<div id="detailed-progress"></div>
+					</li>
+				</ul>
+					<!--
+					<div id="block-progress-overview-total-progress"></div>
+					<div id="block-progress-overview-work-order-progress"></div>
+					<div id="block-progress-overview-detailed-progress"></div>
+					<div id="block-progress-overview-detailed-timebased-perfomance-workorders"></div>
+					<div id="block-progress-overview-detailed-timebased-perfomance-notperformed"></div>
+				-->
 			</div>
-
-		</div><!--end of big-row -->
+			</div>
+		</div>
 	</div>
 	<script type="text/javascript" src="<%=contextPath%>/js/highchart/example-chart.js"></script>
 </body>

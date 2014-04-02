@@ -240,7 +240,6 @@
 									</div>
 								</div><!-- end of chart-filter -->
 							</div><!-- end of chart-filter row -->
-
 						</div>
 					</div>
 				</div>
