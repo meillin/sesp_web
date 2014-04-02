@@ -124,8 +124,18 @@ $(function () {
                     text: 'Total progress'
                 },
                 xAxis: {
-                    categories: ''
+                    categories: '',
+                      labels: {
+                        enabled: false
+                    }
                 },
+                yAxis: {
+                    gridLineWidth: 0,
+                    labels: {
+                        enabled: false
+                    }
+                },
+
                 legend: {
                     backgroundColor: '#FFFFFF',
                     reversed: true
@@ -213,7 +223,7 @@ $(function () {
             }],
             yAxis: [{ // Primary yAxis
                 labels: {
-                    format: '{value}°C',
+                    format: '{value}',
                     style: {
                         color: '#89A54E'
                     }
@@ -232,7 +242,7 @@ $(function () {
                     }
                 },
                 labels: {
-                    format: '{value} mm',
+                    format: '{value}',
                     style: {
                         color: '#4572A7'
                     }
