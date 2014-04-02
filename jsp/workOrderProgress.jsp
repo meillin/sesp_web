@@ -252,6 +252,13 @@ var bci = 0;
 			</div>
 		</div>
 		<div class="big-row">
+					<div class="page-name">
+			<div class="large-12 columns" >
+				<h2>Work order progress</h2>
+			</div>
+		</div>
+		</div>
+		<div class="big-row">
 			<div class="large-6 columns">
 				<div class="panel-outer">
 					<h4 class="panel-heading"><i class="fi-graph-pie"></i><s:text name="workorderprogress.workorderstatus"/></h4>
@@ -278,13 +285,13 @@ var bci = 0;
 					<h4 class="panel-heading"><i class="fi-graph-pie"></i> <s:text name="workorderprogress.progressoverview"/></h4>
 				<div class="panel-inner">
 				<ul class="inline-list">
-					<li>
+					<li class="total-progress">
 						<div id="total-progress"></div>
 					</li>
-					<li>
+					<li class="work-order-progress" >
 						<div id="work-order-progress"></div>
 					</li>
-					<li>
+					<li class="detailed-progress">
 						<div id="detailed-progress"></div>
 					</li>
 				</ul>

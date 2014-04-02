@@ -5,3 +5,15 @@
     color: black;
     font-weight: bold;
 }
+
+
+.total-progress{
+ width: 30%
+}
+
+.work-order-progress{
+ width: 40%
+}
+.detailed-progress{
+ width: 30%
+}
