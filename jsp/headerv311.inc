@@ -42,10 +42,10 @@
 		<div class="large-4 columns">
 			<ul class="inline-list right">
 				<li class="slide-menu-right">
-					<a class="toggle-filter">Filter <i class="fi-filter size-24"></i></a> 
+					<a class="toggle-filter"><i class="fi-filter size-18"></i> Filter </a> 
 				</li>
 				<li class="logout-right">
-					<a href="<%=request.getContextPath()%>/std/Logout" id="logout-button">Log Out <i class="fi-power size-24"></i></a> 
+					<a href="<%=request.getContextPath()%>/std/Logout" id="logout-button"><i class="fi-power size-18"></i> Log Out </a> 
 				</li>
 			</ul>
 		</div>

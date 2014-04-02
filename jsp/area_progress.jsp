@@ -192,7 +192,6 @@ function infoDataCallback(id,woid,wostatus, woaddress) {
 }
 </script>
 <body onload="initmap('<%=request.getSession().getAttribute("MAP_SERVER_URL")%>')">
-
 	<div id="wrapper">
 		<%@include  file="headerv311.inc" %>
 		<div class="big-row">
@@ -228,7 +227,6 @@ function infoDataCallback(id,woid,wostatus, woaddress) {
 							</div>
 						</div>
 					</div>
-
 					<div class="large-4 columns">
 						<lable><s:text name="areaprogress.filters.domain"/></lable>
 						<select id="filter-multiselect-domain" class="custom-multi-select" onchange="domainChanged()" name="multiselect-domain" multiple="multiple">
@@ -237,7 +235,6 @@ function infoDataCallback(id,woid,wostatus, woaddress) {
 						<select id="filter-multiselect-work-order-type" class="custom-multi-select" name="multiselect-work-order-type" multiple="multiple">
 						</select>
 					</div>
-
 					<div class="large-4 columns">
 						<lable><s:text name="areaprogress.filters.areatype"/></lable>
 						<select id="filter-multiselect-area-type" class="custom-multi-select" onchange="areaTypeChanged()" name="multiselect-area-type" multiple="multiple">
@@ -248,7 +245,6 @@ function infoDataCallback(id,woid,wostatus, woaddress) {
 						<lable>Unplanned<input type="checkbox" id="filter-checkbox-unplanned" name="unplanned" value="checked"/></lable>
 					</div>
 				</div>
-
 				<div class="big-row"><!-- start of new full width row -->
 					<div class="large-12 columns fillter">
 						<div class="submit-button">
@@ -262,43 +258,42 @@ function infoDataCallback(id,woid,wostatus, woaddress) {
 				</div><!-- end of new full width row -->
 			</div>
 		</div>
-
 		<div class="page-name">
 			<div class="large-12 columns" >
 				<h2><s:text name="areaprogress.area"/> : <span id="area-name"></span></h2>
 			</div>
 		</div>
-
 		<!-- start of new full width row -->
-			<div class="large-12 columns main-content-wrapper">
-				<div style="min-height: 660px">
-					<div class="big-row">
-						<div class="large-8 columns map">
+		<div class="large-12 columns main-content-wrapper">
+			<div style="min-height: 660px">
+				<div class="big-row">
+					<div class="large-8 columns map">
 						<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Work order progress</h4>
-						<div class="panel-inner">
-							<div id="tabs-wrapper">
-								<a id="block-work-order-tab1" class="tiny button" onclick="javascript:updateWorkOrder('progress')">Progress</a>
-								<a id="block-work-order-tab2" class="tiny button" onclick="javascript:updateWorkOrder('status')">Status</a>
+							<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Work order progress</h4>
+							<div class="panel-inner">
+								<div id="tabs-wrapper">
+									<a id="block-work-order-tab1" class="tiny button" onclick="javascript:updateWorkOrder('progress')">Progress</a>
+									<a id="block-work-order-tab2" class="tiny button" onclick="javascript:updateWorkOrder('status')">Status</a>
+								</div>
+								<ul class="inline-list map-list">
+									<li>
+										<div style="width: 100%; height: 600px; opacity:0.99;" id="map-wrapper"></div>
+									</li>
+									<li>
+										<div><s:text name="areaprogress.workorderprogress.summary.numberofworkorders"/> :</div>
+										<div id="block-summary-content-wo-count"></div>
+										<div><s:text name="areaprogress.workorderprogress.summary.workordertypes"/>:</div>
+										<div id="summary-workordertypes-selected" style="max-height:500px;overflow-y:scroll">LOTS OF TEXT HERE</div>
+										<span><s:text name="areaprogress.workorderprogress.summary"/></span>
+									</li>
+								</ul>
 							</div>
-						<ul class="inline-list map-list">
-							<li>
-								<div style="width: 100%; height: 600px; opacity:0.99;" id="map-wrapper"></div>
-							</li>
-							<li>
-								<div><s:text name="areaprogress.workorderprogress.summary.numberofworkorders"/> :</div>
-								<div id="block-summary-content-wo-count"></div>
-								<div><s:text name="areaprogress.workorderprogress.summary.workordertypes"/>:</div>
-								<div id="summary-workordertypes-selected" style="max-height:500px;overflow-y:scroll">LOTS OF TEXT HERE</div>
-								<span><s:text name="areaprogress.workorderprogress.summary"/></span>
-							</li>
-						</ul>
 						</div>
-						</div>
-						</div>
-
-						<div class="large-4 columns charts">
-							<div class="panel">
+					</div>
+					<div class="large-4 columns charts">
+						<div class="panel-outer">
+						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Charts</h4>
+							<div class="panel-inner">
 								<div id="chart-wrapper">
 									<div id="block-work-order-chart-view"></div>
 									<div id="block-work-order-chart-view2"></div>
@@ -309,17 +304,17 @@ function infoDataCallback(id,woid,wostatus, woaddress) {
 										</div>
 									</div>
 								</div>
-								</div>
-						</div><!-- end of charts -->
+							</div>
+						</div>
+					</div><!-- end of charts -->
+				</div>
+			</div><!-- end of first-child of main-content-wrapper -->
+		</div><!-- end of main-content-wrapper -->
+	</div><!-- end of new full width row -->
 
-					</div>
-				</div><!-- end of first-child of main-content-wrapper -->
-			</div><!-- end of main-content-wrapper -->
-		</div><!-- end of new full width row -->
-
-	</div><!-- end of wrapper -->
-	<script>
-		loadvalues();
-	</script>
+</div><!-- end of wrapper -->
+<script>
+	loadvalues();
+</script>
 </body>
 </html>

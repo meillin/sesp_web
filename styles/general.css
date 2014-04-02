@@ -7,7 +7,7 @@ html, body{
 	height: 100%;
 	margin: 0px;
 	padding: 0px;
-	background-color: #f7f7f7;
+	background-color: #ebefee;
 	font-family: arial, Helvetica, sans-serif;
 }
 
@@ -69,6 +69,32 @@ html, body{
 	color: #fff;
 }
 
+.filterHeader table,
+.filterHeader table td,
+.filterHeader table tr,
+.filterHeader table th{
+	color: #fff;
+	border: none;
+	background: #343d45;
+	border-collapse: collapse;
+}
+
+.filterHeader table th{
+	background: rgba(76, 88, 99, 0.5) !important;
+}
+
+.filterHeader table{
+	width: 100%;
+}
+
+.filterHeader table tr{
+	/*border-bottom: 1px solid #fff;*/
+}
+
+.filterHeader li{
+	width: 50%;
+}
+
 .colorHeading{
  	color: #1abc9c;
 }
@@ -83,6 +109,23 @@ button, .button{
 	border: none;
 	box-shadow: none;
 	background-color: #1abc9c;
+}
+
+.panel-heading{
+	border-bottom: 1px solid #E7E7E7;
+	padding: 0.25rem 0.75rem;
+}
+
+.panel-outer{
+	padding: 0;
+	border: 1px solid #d9d9d9;
+	border-bottom: 4px solid #d9d9d9;
+	background: #fff;
+	margin-bottom: 0.9375em;;
+}
+
+.panel-inner{
+	padding: 0.9375em;
 }
 
 

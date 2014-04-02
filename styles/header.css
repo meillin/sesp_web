@@ -39,6 +39,7 @@ header .slide{
 	border-right: 1px solid #E7E7E7;
 }
 header .logout-right a{
+	font-size: 14px;
 	color: #353535;
 	display: block;
 	padding: 0.75rem 0.25rem 0.75rem 1.25rem;
@@ -50,6 +51,7 @@ header .slide-menu-right a{
 	display: block;
 	padding: 0.75rem 1.25rem;
 	border-left: 1px solid #E7E7E7;
+	font-size: 14px;
 }
 
 header .search-bar{
