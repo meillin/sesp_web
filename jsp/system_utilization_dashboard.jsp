@@ -41,9 +41,9 @@
 
 		<div class="big-row">
 
-			<div class="large-3 columns">
+			<div class="large-3 columns full-height">
 
-				<div class="row">
+				<div class="row height-40">
 					<div class="medium-6 large-12 columns column-body">
 						<div class="row column-header">
 							<div class="large-12 columns"><i class="fi-graph-pie"></i> Import servers</div>
@@ -65,7 +65,9 @@
 							</div>
 						</div>
 					</div>
+				</div>
 
+				<div class="row height-40">
 					<div class="medium-6 large-12 columns column-body">
 						<div class="row column-header">
 							<div class="large-12 columns"><i class="fi-graph-pie"></i> Export servers</div>
@@ -90,7 +92,7 @@
 					</div>
 				</div>
 
-				<div class="row">
+				<div class="row height-20">
 					<div class="large-12 columns column-body">
 						<div class="row column-header">
 							<div class="large-12 columns"><i class="fi-graph-pie"></i> Transaction servers</div>
@@ -109,8 +111,8 @@
 				</div>
 			</div>
 
-			<div class="large-5 columns">
-				<div class="row">
+			<div class="large-5 columns full-height">
+				<div class="row height-50">
 					<div class="large-12 columns column-body">
 
 						<div class="row column-header">
@@ -189,7 +191,7 @@
 					</div>
 				</div>
 
-				<div class="row">
+				<div class="row height-50">
 					<div class="large-12 columns column-body">
 						<div class="row column-header">
 							<div class="large-12 columns"><i class="fi-graph-trend"></i> Export statistics</div>
@@ -268,8 +270,8 @@
 				</div>
 			</div>
 
-			<div class="large-4 columns">
-				<div class="row">
+			<div class="large-4 columns full-height">
+				<div class="row height-45">
 					<div class="large-12 columns column-body">
 						<div class="row column-header">
 							<div class="large-12 columns"><i class="fi-torsos-all"></i> Users</div>
@@ -289,7 +291,7 @@
 					</div>
 				</div>
 
-				<div class="row">
+				<div class="row height-45">
 					<div class="large-12 columns column-body">
 						<div class="row column-header">
 							<div class="large-12 columns"><i class="fi-alert"></i> Errors</div>
@@ -346,7 +348,7 @@
 					</div>
 				</div>
 
-				<div class="row">
+				<div class="row height-10">
 					<div class="large-12 columns column-body">
 						<div class="row column-header">
 							<div class="large-12 columns"><i class="fi-wrench"></i> Work orders</div>
