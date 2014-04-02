@@ -273,17 +273,17 @@ function infoDataCallback(id,woid,wostatus, woaddress) {
 			<div class="large-12 columns main-content-wrapper">
 				<div style="min-height: 660px">
 					<div class="big-row">
-
 						<div class="large-8 columns map">
-						<div class="panel">
+						<div class="panel-outer">
 						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Work order progress</h4>
+						<div class="panel-inner">
 							<div id="tabs-wrapper">
 								<a id="block-work-order-tab1" class="tiny button" onclick="javascript:updateWorkOrder('progress')">Progress</a>
 								<a id="block-work-order-tab2" class="tiny button" onclick="javascript:updateWorkOrder('status')">Status</a>
 							</div>
 						<ul class="inline-list map-list">
 							<li>
-							<div style="width: 100%; height: 600px; opacity:0.99;" id="map-wrapper"></div>
+								<div style="width: 100%; height: 600px; opacity:0.99;" id="map-wrapper"></div>
 							</li>
 							<li>
 								<div><s:text name="areaprogress.workorderprogress.summary.numberofworkorders"/> :</div>
@@ -293,7 +293,7 @@ function infoDataCallback(id,woid,wostatus, woaddress) {
 								<span><s:text name="areaprogress.workorderprogress.summary"/></span>
 							</li>
 						</ul>
-
+						</div>
 						</div>
 						</div>
 
