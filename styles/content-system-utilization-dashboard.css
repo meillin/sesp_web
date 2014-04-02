@@ -41,6 +41,10 @@ body {
 .column-body .row:nth-child(2) .columns{
     margin: 0.5em 0;
 }
+table {
+    width: 100%;
+    border: none;
+}
 table tr th, table tr td {
     padding: 0;
 }

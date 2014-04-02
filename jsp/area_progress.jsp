@@ -279,9 +279,9 @@ symbolCounter++;
 									</li>
 									<li>
 										<h3><s:text name="areaprogress.workorderprogress.summary"/></h3>
-										<div><s:text name="areaprogress.workorderprogress.summary.numberofworkorders"/>: 250</div>
+										<div><strong>Number of work orders:</strong> 250</div>
 										<div id="block-summary-content-wo-count"></div>
-										<div><s:text name="areaprogress.workorderprogress.summary.workordertypes"/>:</div>
+										<div><strong>Work order types:</strong></div>
 										<ul id="summary-workordertypes-selected">LOTS OF TEXT HERE</ul>
 									</li>
 								</ul>

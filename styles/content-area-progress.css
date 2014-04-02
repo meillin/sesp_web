@@ -14,9 +14,14 @@
 	margin: 0;
 }
 #summary-workordertypes-selected {
-	max-height:500px;
+	max-height:510px;
 	overflow-y:scroll;
+	margin: 0;
+	padding: 0.1em;
+	background: #f0f0f0;
+	font-size: 12px;
 }
 #summary-workordertypes-selected li {
 	width: 100%;
+	border-bottom: 1px solid rgb(235, 233, 233);
 }

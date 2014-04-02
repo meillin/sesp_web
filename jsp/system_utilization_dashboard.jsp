@@ -43,7 +43,7 @@
 			<div class="large-3 columns full-height">
 
 				<div class="row height-40">
-					<div class="medium-6 large-12 columns column-body">
+					<div class="large-12 columns column-body">
 						<div class="row column-header">
 							<div class="large-12 columns"><i class="fi-graph-pie"></i> Import servers</div>
 						</div>
@@ -67,7 +67,7 @@
 				</div>
 
 				<div class="row height-40">
-					<div class="medium-6 large-12 columns column-body">
+					<div class="large-12 columns column-body">
 						<div class="row column-header">
 							<div class="large-12 columns"><i class="fi-graph-pie"></i> Export servers</div>
 						</div>
@@ -118,18 +118,22 @@
 							<div class="large-12 columns"><i class="fi-graph-trend"></i> Import statistics</div>
 						</div>
 
-						<div class="row">
+						<div class="row height-50">
 							<div class="large-6 columns">
 								<div>Files</div>
 								<div id="import-statistics-files"></div>
 								<div class="row">
-									<div class="small-6 columns">
-										<div>Files imported</div>
-										<div id="import-statistics-files-imported">123</div>
+									<div class="small-6 columns text-center">
+										<strong>
+											<div>Files imported</div>
+											<div id="import-statistics-files-imported">123</div>
+										</strong>
 									</div>
-								<div class="small-6 columns">
+								<div class="small-6 columns text-center">
+									<strong>
 										<div>Data imported</div>
 										<div id="import-statistics-data-imported">321</div>
+									</strong>
 									</div>
 								</div>
 							</div>
@@ -138,18 +142,19 @@
 								<div>Messages</div>
 								<div id="import-statistics-messages"></div>
 								<div class="row">
-									<div class="large-12 columns">
+									<div class="large-12 columns text-center">
+										<strong>
 										<div>Messages received</div>
 										<div id="import-statistics-messages-received">110</div>
+									</strong>
 									</div>
 								</div>
 							</div>
 						</div>
 
 						<div class="row">
-						<!--<table id="import-statistics-table"> use this table element when there is real data -->
 						<div class="large-12 columns">
-							<table>
+						<table id="import-statistics-table">
 								<thead>
 									<tr>
 									<th>ID</th>
@@ -228,8 +233,7 @@
 
 						<div class="row">
 							<div class="large-12 columns">
-						<!--<table id="export-statistics-table"> use this table element when there is real data -->
-							<table>
+								<table id="export-statistics-table">
 								<thead>
 									<tr>
 									<th>ID</th>
@@ -266,7 +270,7 @@
 										<td>es Here</td>
 									</tr>
 								</tbody>
-							</table>
+								</table>
 							</div>
 						</div>
 					</div>
@@ -307,8 +311,7 @@
 						</div>
 						<div class="row">
 							<div class="large-12 columns">
-							<!--<table id="errors-table"> use this table element when there is real data -->
-								<table>
+							<table id="errors-table">
 									<thead>
 										<tr>
 										<th>ID</th>
