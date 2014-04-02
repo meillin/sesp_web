@@ -35,8 +35,6 @@ document.createElement("figure");
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/style.tidy.css" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/bubble-map.css"/>
 <link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />
-<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-stock-management.css" />
-<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />
 
 <script type="text/javascript" src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
@@ -137,59 +135,59 @@ symbolCounter++;
 
 
 	function loadPointsSuccess(data) {
-//var data1 = eval(data);
-function getPointCollection(object, pointCollections) {
-	var pointCollection = pointCollections[object.idCase];
-	if(typeof pointCollection == "undefined") {
-		<%
-		for(WorkOrderStatusTO woStatusTTO : woStatusTypes) {
-			String selectedIcon = selectedImage.get(woStatusTTO.getStatusId());
-			String unSelectedIcon = unselectedImage.get(woStatusTTO.getStatusId());
-			%>
-			if(object.status == "<%=woStatusTTO.getCode()%>") {
-				pointCollection = createPointsCollection(<%="\"" + unSelectedIcon+"\""%>,<%="\"" + selectedIcon+"\""%>);
+	//var data1 = eval(data);
+	function getPointCollection(object, pointCollections) {
+		var pointCollection = pointCollections[object.idCase];
+		if(typeof pointCollection == "undefined") {
+			<%
+			for(WorkOrderStatusTO woStatusTTO : woStatusTypes) {
+				String selectedIcon = selectedImage.get(woStatusTTO.getStatusId());
+				String unSelectedIcon = unselectedImage.get(woStatusTTO.getStatusId());
+				%>
+				if(object.status == "<%=woStatusTTO.getCode()%>") {
+					pointCollection = createPointsCollection(<%="\"" + unSelectedIcon+"\""%>,<%="\"" + selectedIcon+"\""%>);
+				}
+				<%}	%>
+				pointCollections[object.idCase] = pointCollection;
+				if(typeof pointCollections.objectlist == "undefined") {
+					pointCollections.objectlist  = [];
+				}
+				pointCollections.objectlist.push(pointCollection);
+				return pointCollection;
+			} else {
+				return pointCollection;
 			}
-			<%}	%>
-			pointCollections[object.idCase] = pointCollection;
-			if(typeof pointCollections.objectlist == "undefined") {
-				pointCollections.objectlist  = [];
-			}
-			pointCollections.objectlist.push(pointCollection);
-			return pointCollection;
-		} else {
-			return pointCollection;
-		}
-	};
+		};
 
-	var pointCollections = [];
-	addPoints(data, getPointCollection, pointCollections, displayInfo, infoDataCallback);
-//alert("PointData:\r\n" + data);
-}
-
-function displayInfo(id) {
-	$("#area-name").val(id);
-}
-
-function infoDataCallback(id,woid,wostatus, woaddress) {
-	var returnData;
-
-	html = "<div style=\"font-size:.8em;background-color:#ffffff;filter:alpha(opacity=80);opacity:.8;border-radius: 5px;\">";
-	html += "<div id='bubble-header'></div>";
-	var orderType = $.cookie(pgCode+"block-work-order-tab");
-	if(orderType == 'progress') {
-		html += "<div> <b>Progress : </b>" +wostatus +"</div> ";
-	} else if(orderType=='status') {
-		html += "<div> <b>Status : </b>" +wostatus +"</div> ";
-	} else {
-		html += "<div> <b>Progress : </b>" +wostatus +"</div> ";
+		var pointCollections = [];
+		addPoints(data, getPointCollection, pointCollections, displayInfo, infoDataCallback);
+	//alert("PointData:\r\n" + data);
 	}
-	html += "<div> <b>ID : </b>" + woid +"</div> ";
-	html += "<div> <b>Address : </b>" + woaddress +"</div> ";
 
-	html += "</div>";
-	returnData =  html;
-	return returnData;
-}
+	function displayInfo(id) {
+		$("#area-name").val(id);
+	}
+
+	function infoDataCallback(id,woid,wostatus, woaddress) {
+		var returnData;
+
+		html = "<div style=\"font-size:.8em;background-color:#ffffff;filter:alpha(opacity=80);opacity:.8;border-radius: 5px;\">";
+		html += "<div id='bubble-header'></div>";
+		var orderType = $.cookie(pgCode+"block-work-order-tab");
+		if(orderType == 'progress') {
+			html += "<div> <b>Progress : </b>" +wostatus +"</div> ";
+		} else if(orderType=='status') {
+			html += "<div> <b>Status : </b>" +wostatus +"</div> ";
+		} else {
+			html += "<div> <b>Progress : </b>" +wostatus +"</div> ";
+		}
+		html += "<div> <b>ID : </b>" + woid +"</div> ";
+		html += "<div> <b>Address : </b>" + woaddress +"</div> ";
+
+		html += "</div>";
+		returnData =  html;
+		return returnData;
+	}
 </script>
 <body onload="initmap('<%=request.getSession().getAttribute("MAP_SERVER_URL")%>')">
 	<div id="wrapper">
@@ -280,11 +278,11 @@ function infoDataCallback(id,woid,wostatus, woaddress) {
 										<div style="width: 100%; height: 600px; opacity:0.99;" id="map-wrapper"></div>
 									</li>
 									<li>
-										<div><s:text name="areaprogress.workorderprogress.summary.numberofworkorders"/> :</div>
+										<h3><s:text name="areaprogress.workorderprogress.summary"/></h3>
+										<div><s:text name="areaprogress.workorderprogress.summary.numberofworkorders"/>: 250</div>
 										<div id="block-summary-content-wo-count"></div>
 										<div><s:text name="areaprogress.workorderprogress.summary.workordertypes"/>:</div>
-										<div id="summary-workordertypes-selected" style="max-height:500px;overflow-y:scroll">LOTS OF TEXT HERE</div>
-										<span><s:text name="areaprogress.workorderprogress.summary"/></span>
+										<ul id="summary-workordertypes-selected">LOTS OF TEXT HERE</ul>
 									</li>
 								</ul>
 							</div>

@@ -393,9 +393,9 @@ function drawChart1(data) {
 	console.log('function drawChart1() called');
 
 	showWorkOrderProgressCharts();
-	//$("#block-summary-content-wo-count").html(eval(data).totalNoOfWorkOrders);
+	$("#block-summary-content-wo-count").html(eval(data.totalNoOfWorkOrders));
 
-	$("#block-summary-content-wo-count").html('no data');
+	//$("#block-summary-content-wo-count").html('no data');
 	var summaryWorkOrderId = "#summary-workordertypes-selected";
 	//Removing old data for summaryWorkOrder
 	$(summaryWorkOrderId).html("");
@@ -405,7 +405,7 @@ function drawChart1(data) {
 
 	for ( var i = 0; i < ordersLength; i++) {
 		if (workOrderTypeVals.options[i].selected) {
-			$(summaryWorkOrderId).append(workOrderTypeVals.options[i].text+"<br/>");
+			$(summaryWorkOrderId).append('<li>' + workOrderTypeVals.options[i].text+"</li>");
 		}
 	}
 
@@ -554,7 +554,7 @@ function drawChart2(data){
 	{
 		if (workOrderTypeVals.options[i].selected)
 		{
-			 $(summaryWorkOrderId).append(workOrderTypeVals.options[i].text+"<br/>");
+			$(summaryWorkOrderId).append('<li>' + workOrderTypeVals.options[i].text+"</li>");
 		}
 	}
 
