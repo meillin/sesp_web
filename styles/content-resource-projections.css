@@ -15,3 +15,10 @@ body {
 .resource-projection-content {
 	padding: 1em;
 }
+.filterHeader .big-row {
+	min-height: 308px;
+}
+.filterHeader .big-row > div:not(:last-child) {
+	min-height: 300px;
+	border-right: 1px dotted #6a6a6a;
+}

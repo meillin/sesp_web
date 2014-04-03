@@ -65,6 +65,7 @@ html, body{
 .filterHeader{
 	background: #343d45;
 	margin-top: 50px;
+	padding-top: 1em;
 	/*border-top: 1px solid #E7E7E7;*/
 }
 .filterHeader,
@@ -145,15 +146,15 @@ button, .button{
 	box-shadow: 0px 1px 0px 0px #aaaaaa;
 	font-size: 14px;
 	text-decoration: none;
-	
+
 	/*
 	 * Disable text selection
 	 */
-	-webkit-user-select: none;  
-  	-moz-user-select: none;    
-  	-ms-user-select: none;      
+	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
 	user-select: none;
-	
+
 	/*
 	 * gradient background
 	 */
