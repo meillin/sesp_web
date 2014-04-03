@@ -367,7 +367,7 @@ button, .button{
 	margin-right: 3px;
 }
 
-#main-content button.custom-multi-select{
+/*#main-content button.custom-multi-select{
 	padding-left: 0px;
 	width: 202px;
 	overflow:hidden;
@@ -376,7 +376,7 @@ button, .button{
     background: none;
     border:none;
     padding-left: 5px;
-}
+}*/
 
 #main-content button.custom-multi-select span{
 	font-size: 12px;

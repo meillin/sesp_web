@@ -290,17 +290,20 @@ symbolCounter++;
 					</div>
 					<div class="large-4 columns charts">
 						<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Charts</h4>
+						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Work Order Progress</h4>
 							<div class="panel-inner">
 								<div id="chart-wrapper">
 									<div id="block-work-order-chart-view"></div>
+									<div id="block-work-order-status-chart"></div>
+								</div>
+							</div>
+						</div>
+						<div class="panel-outer">
+						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Detaild Progress</h4>
+							<div class="panel-inner">
+								<div id="chart-wrapper">
 									<div id="block-work-order-chart-view2"></div>
-									<div>
-										<div>
-											<div id="block-work-order-status-chart"></div>
-											<div id="block-work-order-status-chart-right"></div>
-										</div>
-									</div>
+									<div id="block-work-order-status-chart-right"></div>
 								</div>
 							</div>
 						</div>
