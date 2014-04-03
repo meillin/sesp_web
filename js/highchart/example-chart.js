@@ -1,6 +1,5 @@
-$(function () {
+$( document ).ready(function() {
     var colors = Highcharts.getOptions().colors;
-
     function drawWorkOrderStatus() {
            var categories = ['Performed', 'Not performed', 'Not planned', 'Not performed final', 'Opera'],
             name = 'Browser brands',
@@ -46,75 +45,72 @@ $(function () {
         var versionsData = [];
         for (var i = 0; i < data.length; i++) {
 
-        // add browser data
-        browserData.push({
-            name: categories[i],
-            y: data[i].y,
-            color: data[i].color
-        });
-
-        // add version data
-        for (var j = 0; j < data[i].drilldown.data.length; j++) {
-            var brightness = 0.2 - (j / data[i].drilldown.data.length) / 5 ;
-            versionsData.push({
-                name: data[i].drilldown.categories[j],
-                y: data[i].drilldown.data[j],
-                color: Highcharts.Color(data[i].color).brighten(brightness).get()
+            // add browser data
+            browserData.push({
+                name: categories[i],
+                y: data[i].y,
+                color: data[i].color
             });
-        }
-        }
 
+            // add version data
+            for (var j = 0; j < data[i].drilldown.data.length; j++) {
+                var brightness = 0.2 - (j / data[i].drilldown.data.length) / 5 ;
+                versionsData.push({
+                    name: data[i].drilldown.categories[j],
+                    y: data[i].drilldown.data[j],
+                    color: Highcharts.Color(data[i].color).brighten(brightness).get()
+                    });
+                }
+        }
         // Create the chart
         $('#work-order-status').highcharts({
-        chart: {
-            type: 'pie',
-            height: 500,
-            width: ''
-        },
-        title: {
-            text: 'Word order status'
-        },
-        yAxis: {
+            chart: {
+                type: 'pie',
+                height: 500,
+                width: ''
+            },
             title: {
-                text: 'Total percent market share'
-            }
-        },
-        plotOptions: {
-            pie: {
-                shadow: false,
-                center: ['50%', '50%']
-            }
-        },
-        tooltip: {
-            valueSuffix: ''
-        },
-        series: [{
-            name: 'Work Order',
-            data: browserData,
-            size: '60%',
-            dataLabels: {
-                formatter: function() {
-                    //return this.y > 5 ? this.point.name : null;
-                },
-                color: 'white',
-                distance: -30
-            }
-        }, {
-            name: 'Versions',
-            data: versionsData,
-            size: '80%',
-            innerSize: '60%',
-            dataLabels: {
-                formatter: function() {
-                    // display only if larger than 1
-                    return this.y > 1 ? '<b>'+ this.point.name +':</b> '+ this.y +''  : null;
+                text: 'Word order status'
+            },
+            yAxis: {
+                title: {
+                    text: 'Total percent market share'
                 }
-            }
-        }]
+            },
+            plotOptions: {
+                pie: {
+                    shadow: false,
+                    center: ['50%', '50%']
+                }
+            },
+            tooltip: {
+                valueSuffix: ''
+            },
+            series: [{
+                name: 'Work Order',
+                data: browserData,
+                size: '60%',
+                dataLabels: {
+                    formatter: function() {
+                        //return this.y > 5 ? this.point.name : null;
+                    },
+                    color: 'white',
+                    distance: -30
+                }
+            }, {
+                name: 'Versions',
+                data: versionsData,
+                size: '80%',
+                innerSize: '60%',
+                dataLabels: {
+                    formatter: function() {
+                        // display only if larger than 1
+                        return this.y > 1 ? '<b>'+ this.point.name +':</b> '+ this.y +''  : null;
+                    }
+                }
+            }]
         });
-
     }
-
     function drawTotalProgress() {
        $('#total-progress').highcharts({
                 chart: {
@@ -156,10 +152,8 @@ $(function () {
                     data: [65]
                 }]
             });
-   }
-
-   function drawWorkOrderProgress() {
-
+    }
+    function drawWorkOrderProgress() {
     // Build the chart
         $('#work-order-progress').highcharts({
             chart: {
@@ -167,15 +161,15 @@ $(function () {
                 plotBorderWidth: null,
                 plotShadow: false
             },
-               legend: {
-            layout: 'vertical',
-            backgroundColor: '#FFFFFF',
-            align: 'left',
-            verticalAlign: 'top',
-            floating: true,
-            x: 90,
-            y: 45
-        },
+            legend: {
+                layout: 'vertical',
+                backgroundColor: '#FFFFFF',
+                align: 'left',
+                verticalAlign: 'top',
+                floating: true,
+                x: 90,
+                y: 45
+            },
             title: {
                 text: 'Work order progress'
             },
@@ -282,11 +276,11 @@ $(function () {
             }]
         });
     }
+
     drawDetailedProgress();
     drawWorkOrderStatus();
     drawTotalProgress();
     drawWorkOrderProgress();
-
 });
 
 
