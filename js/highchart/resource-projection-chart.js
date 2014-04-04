@@ -163,6 +163,52 @@ function drawTotalResourceProjection() {
         }]
     });
 }
+function drawResourceProjectionKPI(){
+            $('#resource-projections-kpi').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Total available and planned hours'
+            },
+            xAxis: {
+                gridLineWidth: 0,
+                 labels: {
+                    enabled: false
+                 }
+            },
+            yAxis: {
+                 gridLineWidth: 0,
+                 labels: {
+                    enabled: false
+                 }
+            },
+            tooltip: {
+                headerFormat: '',
+                pointFormat: '{series.name}: ' +
+                    '<b>{point.y:1f}hours</b><br/>',
+                footerFormat: '',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Planned hours',
+                data: [340]
+
+            }, {
+                name: 'Total avaiable hours',
+                data: [980]
+
+            }]
+        });
+}
+drawResourceProjectionKPI();
 drawDeviceAssetProjectionPerMonth();
 drawTotalDeviceAssetProjection();
 drawResourceProjectionPerMonth();

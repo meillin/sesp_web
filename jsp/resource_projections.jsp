@@ -51,7 +51,6 @@
 		<script type="text/javascript" src="<%=contextPath%>/js/OpenLayers.js"></script>
 
 		<script type="text/javascript" src="<%=contextPath%>/js/highchart/highcharts.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/highchart/exporting.js"></script>
 
 		<script src="<%=contextPath%>/js/map.js"></script>
 		<script src="<%=contextPath%>/js/sesp_ajax.js"></script>
@@ -275,9 +274,7 @@
 				<div class="large-4 columns">
 					<div class="panel-outer">
 						<h4 class="panel-heading"><i class="fi-graph-trend size-24 colorHeading"></i> Key performance indexes</h4>
-						<div class="panel-inner">
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
-						</div>
+						<div class="panel-inner" id="resource-projections-kpi"></div>
 					</div>
 				</div>
 			</div>

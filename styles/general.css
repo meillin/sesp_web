@@ -7,14 +7,14 @@ html, body{
 	height: 100%;
 	margin: 0px;
 	padding: 0px;
-	background-color: #ebefee;
+	background-color: #e6e6e6;
 	font-family: arial, Helvetica, sans-serif;
 }
 
 #wrapper{
 	min-height: 100%;
 	position: relative;
-	background: #ebefee;
+	background: #e6e6e6;
 }
 
 /*#main-content{
