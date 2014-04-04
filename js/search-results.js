@@ -14,9 +14,50 @@ $(function(){
 	renderTable("#instMupResults");
 	renderTable("#deviceResults");
 	renderTable("#caseResults");
-	$(".accordion ul.subMenu").hide();	
+	$(".accordion ul.subMenu").hide();
 
 });	
+
+function showTable(){
+	$(function() {
+		var instresults = $("#instresults tbody tr");
+		var instMepResults = $("#instMepResults tbody tr");
+		var instMupResults = $("#instMupResults tbody tr");
+		var deviceResults = $("#deviceResults tbody tr");
+		var caseResults = $("#caseResults tbody tr");
+		
+		
+
+		if (instresults.length > 0){
+			$("#block-search-results-installations").show();
+		} else{
+			$("#block-search-results-installations").hide();
+		}
+		if (deviceResults.length > 0){
+			$("#block-search-results-devices").show();
+		} else {
+			$("#block-search-results-devices").hide();
+		}
+		if (instMepResults.length > 0){
+			$("").show();
+		} else{
+			$("").hide();
+		}
+		if (instMupResults.length > 0){
+			$("").show();
+		} else {
+			$("#block-search-results-devices").hide();
+		}
+		if (caseResults.length > 0){
+			$("").show();
+		} else {
+			$("").hide();
+		}
+	});
+}	
+
+
+
 
 
 var contextPath ;
@@ -604,6 +645,7 @@ function populateCaseSearchResults(caseData) {
 				 trString.append("</tr>");			
 			}
 			$("#caseResults > tbody").append(trString.toString());
+			$(showTable);
 			
 			/*$("#block-search-results-cases-submenu").slideDown("normal");
 			$("#block-search-results-cases-arrow").removeClass("close");

@@ -139,14 +139,5 @@ var onSampleResized = function(e){
 };
 
 var renderTable = function(tableId){
-
-	$(""+tableId+"").colResizable({
-		liveDrag:true,
-		gripInnerHtml:"<div class='grip'></div>",
-		draggingClass:"dragging",
-		onResize:onSampleResized,
-		postbackSafe: true,
-		marginLeft: "10px",
-		marginRight: "10px"
-	});
+	$(tableId)
 };

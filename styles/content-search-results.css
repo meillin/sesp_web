@@ -1,4 +1,4 @@
-#main-content .accordion ul.subMenu a {
+/*#main-content .accordion ul.subMenu a {
 	padding-left: 0px;
 }
 
@@ -34,5 +34,37 @@
 
 .block-title-button-close-all {
 	margin-left: 40px;
+}*/
+
+.search-list{
+	width: 100%;
+	list-style: none;
+	margin: 0;
+}
+
+.search-list li{
+	width: 49%;
+	list-style: none;
+	display: inline-block;
+	float: left;
+	padding: 0.5%;
+}
+
+#block-search-results table{
+	width: 90%;
+	border: none;
+	background: none;
+}
+
+#block-search-results th{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	background: none;
+
+}
+
+#block-search-results thead{
+	background: none;
 }
 

@@ -84,8 +84,10 @@ html, body{
 }
 
 .filterHeader{
+	z-index: 20;
+	position: fixed;
 	background: #343d45;
-	margin-top: 40px;
+	margin-top: 35px;
 	padding-top: 1em;
 	/*border-top: 1px solid #E7E7E7;*/
 }
