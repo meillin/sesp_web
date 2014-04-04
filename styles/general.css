@@ -17,7 +17,7 @@ html, body{
 	background: #ebefee;
 }
 
-#main-content{
+/*#main-content{
 	padding:10px 0px 61px 0px;
 	margin-left: auto;
 	margin-right: auto;
@@ -27,7 +27,7 @@ html, body{
 #main-content{
 	color: #fff;
 	text-align: center;
-}
+}*/
 
 .panel button {
 	width: 100%;
@@ -64,7 +64,7 @@ html, body{
 
 .filterHeader{
 	background: #343d45;
-	margin-top: 50px;
+	margin-top: 40px;
 	padding-top: 1em;
 	/*border-top: 1px solid #E7E7E7;*/
 }
@@ -83,19 +83,15 @@ html, body{
 	background: #343d45;
 	border-collapse: collapse;
 }
-
 .filterHeader table th{
 	background: rgba(76, 88, 99, 0.5) !important;
 }
-
 .filterHeader table{
 	width: 100%;
 }
-
 .filterHeader table tr{
 	/*border-bottom: 1px solid #fff;*/
 }
-
 .filterHeader li{
 	width: 50%;
 }
