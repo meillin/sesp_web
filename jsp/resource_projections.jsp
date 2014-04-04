@@ -88,7 +88,7 @@
 				<div class="large-12 columns filterHeader">
 					<div class="big-row">
 						<div class="large-3 columns">
-							<h4><i class="fi-clock colorHeading"> </i> Update planing periods</h4>
+							<h4>1 Update planing periods</h4>
 							<div class="row">
 								<div class="small-12 columns">
 									<label><s:text name="webportal.resourceprojections.time.domain.title"/></label>
@@ -132,45 +132,20 @@
 
 						<div class="large-5 columns">
 							<h4>
-								<i class="fi-calendar colorHeading"></i> Planning Periods
+								2 Planning Periods
 								<small>
 									<a href="#"><s:text name="webportal.resourceprojections.planningperiods.selectall"/></a>
 									<a href="#"><s:text name="webportal.resourceprojections.planningperiods.selectnone"/></a>
 								</small>
 							</h4>
 							<table id="block-planning-periods-table">
-								<thead>
-									<tr>
-										<th><s:text name="webportal.resourceprojections.planningperiods.name"/></th>
-										<th><s:text name="webportal.resourceprojections.planningperiods.startdate"/></th>
-										<th><s:text name="webportal.resourceprojections.planningperiods.enddate"/></th>
-										<th><s:text name="webportal.resourceprojections.planningperiods.domain"/></th>
-									</tr>
-								</thead>
-								<tbody>
-										<tr>
-										<td>Month 2013 March</td>
-										<td>2013-03-01</td>
-										<td>2013-03-01</td>
-										<td>Domain #1</td>
-									</tr>
-									<tr>
-										<td>Month 2013 April</td>
-										<td>2013-03-01</td>
-										<td>2013-03-01</td>
-										<td>Domain #1</td>
-									</tr>
-									<tr>
-										<td>Month 2013 May</td>
-										<td>2013-03-01</td>
-										<td>2013-03-01</td>
-										<td>Domain #1</td>
-									</tr>
-								</tbody>
+								<thead><tr><th>Please update planning period first</th></tr></thead>
 							</table>
 						</div>
 
 						<div class="large-4 columns">
+							<h4>3 Update planing periods</h4>
+
 							<div class="row">
 								<div class="large-6 columns">
 

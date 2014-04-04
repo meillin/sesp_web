@@ -17,17 +17,38 @@ html, body{
 	background: #e6e6e6;
 }
 
-/*#main-content{
-	padding:10px 0px 61px 0px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
+::-webkit-scrollbar
+{
+  width: 12px;  /* for vertical scrollbars */
+  height: 12px; /* for horizontal scrollbars */
 }
 
-#main-content{
-	color: #fff;
-	text-align: center;
-}*/
+::-webkit-scrollbar-track
+{
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: rgba(0, 0, 0, 0.5);
+}
+
+
+::-moz-scrollbar
+{
+  width: 12px;  /* for vertical scrollbars */
+  height: 12px; /* for horizontal scrollbars */
+}
+
+::-moz-scrollbar-track
+{
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-moz-scrollbar-thumb
+{
+  background: rgba(0, 0, 0, 0.5);
+}
 
 .panel button {
 	width: 100%;

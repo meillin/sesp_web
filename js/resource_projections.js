@@ -408,28 +408,20 @@ function updatePlanningPeriod(){
 
 function fillPlanningPeriodsData(data){
 
-	if(data != null){
-		//$('#block-planning-periods-table').append('<div style="height:240px; overflow:auto"> <tbody >');
+	if(data !== null){
+		var tableHeader = "<thead><tr><th>Name</th><th>Start date</th><th>End date</th><th>Domain</th></tr></thead>";
+		$('#block-planning-periods-table').html( tableHeader );
 		for(var i=0; i < data.length; i++){
 			var planningPeriod = data[i];
-			var className = i%2 == 0 ? '' : '';
 			var tableData = '<tr onclick="selectRow('+planningPeriod.planningPeriodId+');" id="'+ planningPeriod.planningPeriodId +
-			'" class="">'+
-			  '<td !important;width:170px;overflow:hidden;">'+planningPeriod.planningName+'</td>'+
-			  '<td !important;width:110px;overflow:hidden;">'+planningPeriod.planningStartDate.substring(0,10)+'</td>'+
-			  '<td !important;width:100px;overflow:hidden;">'+planningPeriod.planningEndDate.substring(0,10)+'</td>'+
-			  '<td !important;width:200px;overflow:hidden;">'+planningPeriod.domainName+'</td>';
-			//alert("tableData:"+tableData);
-			$('#block-planning-periods-table').append(tableData);
-		/*	if(i == 0){
-			   allRowIds =  planningPeriod.planningPeriodId;
-			}else{
-				allRowIds += "," +  planningPeriod.planningPeriodId;
-			}	*/
+			'">'+
+			'<td !important;width:170px;overflow:hidden;">'+planningPeriod.planningName+'</td>'+
+			'<td !important;width:110px;overflow:hidden;">'+planningPeriod.planningStartDate.substring(0,10)+'</td>'+
+			'<td !important;width:100px;overflow:hidden;">'+planningPeriod.planningEndDate.substring(0,10)+'</td>'+
+			'<td !important;width:200px;overflow:hidden;">'+planningPeriod.domainName+'</td>';
+			$('#block-planning-periods-table').append( tableData );
+
 		}
-
-		//$('#block-planning-periods-table').append('</div></tbody>');
-
 	}
 
 

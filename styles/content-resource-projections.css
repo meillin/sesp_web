@@ -28,4 +28,9 @@ body {
 
 table tr {
 	background: #46515C !important;
+	cursor: pointer;
+}
+
+table tr.selected {
+	background: rgb(49, 49, 53) !important;
 }
