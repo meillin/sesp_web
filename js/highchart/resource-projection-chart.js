@@ -7,12 +7,12 @@ function drawDeviceAssetProjectionPerMonth() {
                 text: 'Device assets projections per month'
             },
             xAxis: {
-                categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+                categories: ['March, 2013', 'April, 2013', 'May, 2013', 'June, 2013', 'July, 2013']
             },
             yAxis: {
                 min: 0,
                 title: {
-                    text: 'Total fruit consumption'
+                    text: ''
                 }
             },
             legend: {
@@ -47,7 +47,7 @@ function drawTotalDeviceAssetProjection() {
             plotShadow: false
         },
         title: {
-            text: 'Browser market shares at a specific website, 2010'
+            text: 'Total device asset projection'
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -68,18 +68,15 @@ function drawTotalDeviceAssetProjection() {
             type: 'pie',
             name: 'Browser share',
             data: [
-                ['Firefox',   45.0],
-                ['IE',       26.8],
+                ['Concerntrator installation',   45.0],
+                ['Direct measured',       26.8],
                 {
-                    name: 'Chrome',
+                    name: 'Troubleshoot measurepoint',
                     y: 12.8,
                     sliced: true,
                     selected: true
                 },
-                ['Safari',    8.5],
-                ['Opera',     6.2],
-                ['Others',   0.7]
-            ]
+                ['CT measured',    8.5]]
         }]
     });
 }
@@ -92,12 +89,12 @@ function drawResourceProjectionPerMonth() {
                 text: 'Resource projection per month'
             },
             xAxis: {
-                categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+                categories: ['March, 2013', 'April, 2013', 'May, 2013', 'June, 2013', 'July, 2013']
             },
             yAxis: {
                 min: 0,
                 title: {
-                    text: 'Total fruit consumption'
+                    text: 'Resource projection per month'
                 }
             },
             legend: {
@@ -132,7 +129,7 @@ function drawTotalResourceProjection() {
             plotShadow: false
         },
         title: {
-            text: 'Browser market shares at a specific website, 2010'
+            text: 'Total resource projection'
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -152,19 +149,17 @@ function drawTotalResourceProjection() {
         series: [{
             type: 'pie',
             name: 'Browser share',
-            data: [
-                ['Firefox',   45.0],
-                ['IE',       26.8],
+              data: [
+                ['Concerntrator installation',   45.0],
+                ['Direct measured',       26.8],
                 {
-                    name: 'Chrome',
+                    name: 'Troubleshoot measurepoint',
                     y: 12.8,
                     sliced: true,
                     selected: true
                 },
-                ['Safari',    8.5],
-                ['Opera',     6.2],
-                ['Others',   0.7]
-            ]
+                ['CT measured',    8.5]
+                ]
         }]
     });
 }

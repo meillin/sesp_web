@@ -292,7 +292,7 @@ symbolCounter++;
 						<div class="panel-outer">
 						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Work Order Progress</h4>
 							<div class="panel-inner">
-								<div id="chart-wrapper">
+								<div class="chart-wrapper">
 									<div id="block-work-order-chart-view"></div>
 									<div id="block-work-order-status-chart"></div>
 								</div>
@@ -301,7 +301,7 @@ symbolCounter++;
 						<div class="panel-outer">
 						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Detaild Progress</h4>
 							<div class="panel-inner">
-								<div id="chart-wrapper">
+								<div class="chart-wrapper">
 									<div id="block-work-order-chart-view2"></div>
 									<div id="block-work-order-status-chart-right"></div>
 								</div>

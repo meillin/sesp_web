@@ -149,19 +149,19 @@
 									</tr>
 								</thead>
 								<tbody>
-										<tr class="table-line line-grey">
+										<tr>
 										<td>Month 2013 March</td>
 										<td>2013-03-01</td>
 										<td>2013-03-01</td>
 										<td>Domain #1</td>
 									</tr>
-									<tr class="table-line">
+									<tr>
 										<td>Month 2013 April</td>
 										<td>2013-03-01</td>
 										<td>2013-03-01</td>
 										<td>Domain #1</td>
 									</tr>
-									<tr class="table-line line-grey">
+									<tr>
 										<td>Month 2013 May</td>
 										<td>2013-03-01</td>
 										<td>2013-03-01</td>
@@ -223,32 +223,49 @@
 			</div>
 
 			<div class="big-row">
-				<div class="large-12 columns">
+				<div class="large-6 columns">
 					<div class="panel-outer">
 						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Device assets projections</h4>
-						<div class="panel-inner">
+						<div class="panel-inner" id="device-assets-projections-per-month-view">
 							<!-- IDs for real data chart
 							<div class="large-6 columns" id="block-device-assets-projections-per-month-view"></div>
-							<div class="large-6 columns" id="block-device-assets-projections-total-view"></div>
 							-->
-							<div class="large-6 columns" id="device-assets-projections-per-month-view"></div>
-							<div class="large-6 columns" id="device-assets-projections-total-view"></div>
-						</div>
 					</div>
 				</div>
 			</div>
 
+			<div class="large-6 columns">
+					<div class="panel-outer">
+						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Device assets projections total</h4>
+						<div class="panel-inner" id="device-assets-projections-total-view">
+							<!-- IDs for real data chart
+							<div class="large-6 columns" id="block-device-assets-projections-total-view"></div>
+							-->
+					</div>
+				</div>
+			</div>
+		</div>
+
 			<div class="big-row">
-				<div class="large-12 columns">
+				<div class="large-6 columns">
 					<div class="panel-outer">
 						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Resource projections per month</h4>
-						<div class="panel-inner">
+						<div class="panel-inner" id="resource-projections-per-month-view">
 							<!-- IDs for real data chart
 							<div class="large-6 columns" id="block-resource-projections-per-month-view"></div>
+							-->
+							<div class="large-6 columns" id="resource-projections-total-view"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="large-6 columns">
+					<div class="panel-outer">
+						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Resource projections per month</h4>
+						<div class="panel-inner" id="resource-projections-total-view">
+							<!-- IDs for real data chart
 							<div class="large-6 columns" id="block-resource-projections-total-view"></div>
 							-->
-							<div class="large-6 columns" id="resource-projections-per-month-view"></div>
-							<div class="large-6 columns" id="resource-projections-total-view"></div>
 						</div>
 					</div>
 				</div>
@@ -260,14 +277,6 @@
 						<h4 class="panel-heading"><i class="fi-graph-trend size-24 colorHeading"></i> Key performance indexes</h4>
 						<div class="panel-inner">
 						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
-						</div>
-					</div>
-				</div>
-				<div class="large-8 columns">
-					<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Device assets projections</h4>
-						<div class="panel-inner">
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam process
 						</div>
 					</div>
 				</div>
