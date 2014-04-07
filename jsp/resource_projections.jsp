@@ -32,13 +32,11 @@
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/bubble-map.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
 
-
 		<script type="text/javascript" src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
 		<script type="text/javascript" src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
 		<script type="text/javascript" src="<%=contextPath%>/js/bootstrap-datepicker.js"></script>
 		<script type="text/javascript" src="<%=contextPath%>/js/colResizable-1.3.min.js"></script>
-
 
 		<script type="text/javascript" src="<%=contextPath%>/js/jquery.multiselect.js"></script>
 		<script type="text/javascript" src="<%=contextPath%>/js/jquery.cookie.js"></script>
@@ -88,7 +86,7 @@
 				<div class="large-12 columns filterHeader">
 					<div class="big-row">
 						<div class="large-3 columns">
-							<h4>1 Update planing periods</h4>
+							<h4>1 Search planing periods</h4>
 							<div class="row">
 								<div class="small-12 columns">
 									<label><s:text name="webportal.resourceprojections.time.domain.title"/></label>
@@ -98,13 +96,24 @@
 							</div>
 							<div class="row">
 								<div class="small-12 columns">
+									<label>Period type</label>
+									<select>
+										<option value="week">week</option>
+										<option value="month">month</option>
+										<option value="quarter">quarter</option>
+										<option value="year">year</option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-12 columns">
 									<label><s:text name="webportal.resourceprojections.time.dateinterval.title"/></label>
 									<select id="block-time-select-date-interval" onchange="onDateIntervalSelect()">
-										<option value="upcomingweek"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingweek"/></option>
-										<option value="upcomingmonth"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingmonth"/></option>
-										<option value="upcomingquarter"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingquarter"/></option>
-										<option value="upcomingyear"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingyear"/></option>
-										<option value="custominterval"><s:text name="webportal.resourceprojections.time.dateinterval.custominterval"/></option>
+										<option value="upcomingweek">Upcoming week</option>
+										<option value="upcomingmonth">Upcoming month</option>
+										<option value="upcomingquarter">Upcoming quarter</option>
+										<option value="upcomingyear">Upcoming year</option>
+										<option value="custominterval">Custom interval</option>
 									</select>
 								</div>
 							</div>
@@ -133,7 +142,7 @@
 
 						<div class="large-5 columns">
 							<h4>
-								2 Planning Periods
+								2 Select planning periods
 								<small>
 									<a href="#"><s:text name="webportal.resourceprojections.planningperiods.selectall"/></a>
 									<a href="#"><s:text name="webportal.resourceprojections.planningperiods.selectnone"/></a>
@@ -145,7 +154,7 @@
 						</div>
 
 						<div class="large-4 columns">
-							<h4>3 Update planing periods</h4>
+							<h4>3 Filter</h4>
 
 							<div class="row">
 								<div class="large-6 columns">

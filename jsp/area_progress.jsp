@@ -203,29 +203,34 @@ symbolCounter++;
 				</div>
 				<div class="big-row">
 					<div class="large-4 columns">
-						<label> <s:text name="workorderprogress.filters.dateinterval"/></label>
-						<select id="filter-select-date-interval" onchange="show()">
-							<option value="lastweek" selected="selected"><s:text name="webportal.alarm.dateinterval.lastweek"/></option>
-							<option value="today"><s:text name="webportal.alarm.dateinterval.today"/></option>
-							<option value="lastmonth"><s:text name="webportal.alarm.dateinterval.lastmonth"/></option>
-							<option value="lastquarter"><s:text name="webportal.alarm.dateinterval.lastquarter"/></option>
-							<option value="lastyear"><s:text name="webportal.alarm.dateinterval.lastyear"/></option>
-							<option value="custominterval"><s:text name="webportal.alarm.dateinterval.custominterval"/></option>
-						</select>
 						<div class="row">
-							<div class="medium-6 columns">
-								<label><s:text name="workorderprogress.filters.from"/> :</label>
+							<div class="large-12 columns">
+								<label>Date interval</label>
+								<select id="filter-select-date-interval" onchange="show()">
+									<option value="lastweek" selected="selected">Last week</option>
+									<option value="today">Today</option>
+									<option value="lastmonth">Last month</option>
+									<option value="lastquarter">Last quarter</option>
+									<option value="lastyear">Last year</option>
+									<option value="custominterval">Custom interval</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="small-6 columns">
+								<label>From:</label>
 								<div class="custom-input-datepicker input-append date" data-date="2012-02-12" data-date-format="yyyy-mm-dd">
 									<input id="filter-date-from" type="text" class="input-datepicker"  readonly="readonly"/>
 								</div>
 							</div>
-							<div class="medium-6 columns">
-								<label><s:text name="workorderprogress.filters.to"/> :</label>
+							<div class="small-6 columns">
+								<label>To:</label>
 								<div class="custom-input-datepicker input-append date"  data-date="12-02-2012" data-date-format="yyyy-mm-dd">
 									<input id="filter-date-to" type="text" class="input-datepicker"  readonly="readonly"/>
 								</div>
 							</div>
 						</div>
+
 					</div>
 					<div class="large-4 columns">
 						<lable><s:text name="areaprogress.filters.domain"/></lable>
@@ -246,44 +251,67 @@ symbolCounter++;
 					</div>
 				</div>
 				<div class="big-row"><!-- start of new full width row -->
-					<div class="large-12 columns fillter">
-						<div class="submit-button">
-							<div class="row text-center">
-								<div class="large-12 columns">
-									<a class="button" id="block-filter-button-update" onclick="filter_submit()"><s:text name="workorderprogress.filters.update"/></a>
-								</div>
-							</div>
-						</div><!-- end of submit-button -->
+					<div class="large-12 columns fillter text-center">
+						<a class="button" id="block-filter-button-update" onclick="filter_submit()">Update</a>
 					</div><!-- end of filter -->
 				</div><!-- end of new full width row -->
 			</div>
 		</div>
+
 		<div class="page-name">
 			<div class="large-12 columns" >
 				<h2><s:text name="areaprogress.area"/> : <span id="area-name"></span></h2>
 			</div>
 		</div>
 		<!-- start of new full width row -->
-		<div class="large-12 columns main-content-wrapper">
-			<div style="min-height: 660px">
 				<div class="big-row">
-					<div class="large-7 columns map">
+					<div class="large-5 columns charts">
+						<div class="panel-outer show">
+							<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Area Progress</h4>
+							<div class="panel-inner" id="work-order-chart-view">
+								<!--
+									<div id="block-work-order-chart-view"></div>
+									<div id="block-work-order-status-chart"></div>
+								-->
+							</div>
+						</div>
+						<div class="panel-outer show">
+							<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Detailed Progress</h4>
+							<div class="panel-inner" id="detailed-progress">
+								<!--
+									<div id="block-work-order-chart-view2"></div>
+									<div id="block-work-order-status-chart-right"></div>
+								-->
+							</div>
+						</div>
+
+						<div class="panel-outer hide">
+						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Area Status</h4>
+							<div class="panel-inner" id="work-order-status">
+								<!--
+									<div id="block-work-order-chart-view"></div>
+									<div id="block-work-order-status-chart"></div>
+								-->
+							</div>
+						</div>
+					</div><!-- end of charts -->
+							<div class="large-7 columns map">
 						<div class="panel-outer">
-							<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Work order progress</h4>
+							<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Area progress</h4>
 							<div class="panel-inner">
 								<div id="tabs-wrapper">
-									<a id="block-work-order-tab1" class="tiny button selected" onclick="javascript:updateWorkOrder('progress')">Progress</a>
+									<a id="block-work-order-tab1" class="tiny button" onclick="javascript:updateWorkOrder('progress')">Progress</a>
 									<a id="block-work-order-tab2" class="tiny button" onclick="javascript:updateWorkOrder('status')">Status</a>
 								</div>
 								<ul class="inline-list map-list">
 									<li>
-										<div style="width: 100%; height: 600px; opacity:0.99;" id="map-wrapper"></div>
+										<div style="width: 100%; height: 670px; opacity:0.99;" id="map-wrapper"></div>
 									</li>
 									<li class="panel">
-										<h3><s:text name="areaprogress.workorderprogress.summary"/></h3>
+										<h3>Summary</h3>
 										<div><strong>Number of work orders:</strong> 250</div>
 										<div id="block-summary-content-wo-count"></div>
-										<div><strong>Work order types:</strong></div>
+										<div><strong>Area types:</strong></div>
 										<!--
 										<ul id="summary-workordertypes-selected">
 											<li>Meter Change (2)</li>
@@ -303,40 +331,6 @@ symbolCounter++;
 							</div>
 						</div>
 					</div>
-					<div class="large-5 columns charts">
-						<div class="panel-outer show">
-							<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Work Order Progress</h4>
-							<div class="panel-inner" id="work-order-chart-view">
-								<!--
-									<div id="block-work-order-chart-view"></div>
-									<div id="block-work-order-status-chart"></div>
-								-->
-							</div>
-						</div>
-						<div class="panel-outer show">
-							<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Detaild Progress</h4>
-							<div class="panel-inner" id="detailed-progress">
-								<!--
-									<div id="block-work-order-chart-view2"></div>
-									<div id="block-work-order-status-chart-right"></div>
-								-->
-							</div>
-						</div>
-
-						<div class="panel-outer hide">
-						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Work Order Status</h4>
-							<div class="panel-inner" id="work-order-status">
-								<!--
-									<div id="block-work-order-chart-view"></div>
-									<div id="block-work-order-status-chart"></div>
-								-->
-							</div>
-						</div>
-
-					</div><!-- end of charts -->
-				</div>
-			</div><!-- end of first-child of main-content-wrapper -->
-		</div><!-- end of main-content-wrapper -->
 	</div><!-- end of new full width row -->
 
 </div><!-- end of wrapper -->

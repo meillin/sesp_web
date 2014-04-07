@@ -104,34 +104,45 @@
 							</div>
 							<div class="big-row">
 								<div class="large-4 columns">
-									<label><s:text name="webportal.fieldworkefficiencyanalysis.filters.dateinterval"/></label>
-										<select id="filter-select-date-interval"  onchange="javascript:disbaleDateFilter()" >
-											<option value="lastweek"><s:text name="webportal.fieldworkefficiencyanalysis.filters.dateinterval.lastweek"/></option>
-											<option value="today"><s:text name="webportal.fieldworkefficiencyanalysis.filters.dateinterval.today"/></option>
-											<option value="lastmonth"><s:text name="webportal.fieldworkefficiencyanalysis.filters.dateinterval.lastmonth"/></option>
-											<option value="lastquarter"><s:text name="webportal.fieldworkefficiencyanalysis.filters.dateinterval.lastquarter"/></option>
-											<option value="lastyear"><s:text name="webportal.fieldworkefficiencyanalysis.filters.dateinterval.lastyear"/></option>
-											<option value="custominterval"><s:text name="webportal.fieldworkefficiencyanalysis.filters.dateinterval.custominterval"/></option>
-										</select>
-									<label id="fromLabel"><s:text  name="webportal.fieldworkefficiencyanalysis.filters.from"/>: </label>
-									<div class="custom-input-datepicker input-append date" data-date="2012-02-12" data-date-format="yyyy-mm-dd">
-										<input id="filter-date-from" type="text" class="input-datepicker text-red"  readonly="readonly"/>
+									<div class="row">
+										<div class="medium-12 columns">
+											<label>Date interval</label>
+											<select id="filter-select-date-interval"  onchange="javascript:disbaleDateFilter()" >
+													<option value="lastweek">Last week</option>
+													<option value="today">Today</option>
+													<option value="lastmonth">Last month</option>
+													<option value="lastquarter">Last quarter</option>
+													<option value="lastyear">Last year</option>
+													<option value="custominterval">Custom interval</option>
+											</select>
+										</div>
 									</div>
-									<label id="toLabel"><s:text  name="webportal.fieldworkefficiencyanalysis.filters.to"/> :</label>
-									<div class="custom-input-datepicker input-append date"  data-date="12-02-2012" data-date-format="yyyy-mm-dd">
-										<input id="filter-date-to" type="text" class="input-datepicker text-red"  readonly="readonly"/>
+
+									<div class="row">
+										<div class="medium-6 columns">
+											<label id="fromLabel">From: </label>
+											<div class="custom-input-datepicker input-append date" data-date="2012-02-12" data-date-format="yyyy-mm-dd">
+												<input id="filter-date-from" type="text" class="input-datepicker text-red"  readonly="readonly"/>
+											</div>
+										</div>
+										<div class="medium-6 columns">
+												<label id="toLabel">To:</label>
+												<div class="custom-input-datepicker input-append date"  data-date="12-02-2012" data-date-format="yyyy-mm-dd">
+													<input id="filter-date-to" type="text" class="input-datepicker text-red"  readonly="readonly"/>
+												</div>
+										</div>
 									</div>
 								</div>
 								<div class="large-4 columns">
-									<label><s:text name="webportal.fieldworkefficiencyanalysis.filters.domain"/></label>
+									<label>Domain</label>
 									<select id="filter-multiselect-domain" class="custom-multi-select" name="multiselect-domain" multiple="multiple" onchange="onDomainSelect()"></select>
-									<label><s:text name="webportal.fieldworkefficiencyanalysis.filters.area"/></label>
+									<label>Area</label>
 									<select id="filter-multiselect-area" class="custom-multi-select" name="multiselect-area" multiple="multiple"></select>
 								</div>
 								<div class="large-4 columns">
-									<label><s:text name="webportal.fieldworkefficiencyanalysis.filters.team"/></label>
+									<label>Team</label>
 									<select id="filter-multiselect-team" class="custom-multi-select" name="multiselect-team" multiple="multiple" onchange="onTeamSelectPopulateTechnicians()"></select>
-									<label><s:text name="webportal.fieldworkefficiencyanalysis.filters.technician"/></label>
+									<label>Technician</label>
 									<select id="filter-multiselect-technician" class="custom-multi-select" name="multiselect-technician" multiple="multiple"></select>
 								</div>
 							</div>
@@ -155,10 +166,7 @@
 									</div>
 
 									<div class="panel-outer">
-										<h5 class="panel-heading text-right">
-											<a href="javascript:analysisGrid.toExcel('<%=request.getContextPath()%>/std/DownloadExcel.action','Field Work Analysis','color','HEADER');" id="block-work-order-type-analysis-export-excel" class="button tiny">Export to Excel</a>
-											<a href="javascript:exportAsPDF();" id="block-work-order-type-analysis-export-pdf" class="button tiny">Export to pdf</a>
-										</h5>
+										<h4 class="panel-heading"><i class="fi-list colorHeading"></i> </h4>
 										<div id="meterValuesGridDiv"></div>
 										<div class="panel-inner">
 											<table id="block-work-order-type-analysis-table">
@@ -199,12 +207,16 @@
 													</tr>
 												</tbody>
 											</table>
+											<div class="text-right">
+												<a href="javascript:analysisGrid.toExcel('<%=request.getContextPath()%>/std/DownloadExcel.action','Field Work Analysis','color','HEADER');" id="block-work-order-type-analysis-export-excel" class="button tiny">Export to Excel</a>
+												<a href="javascript:exportAsPDF();" id="block-work-order-type-analysis-export-pdf" class="button tiny">Export to pdf</a>
+											</div>
 										</div>
 									</div>
 								</div>
 								<div class="large-4 columns">
 									<div class="panel-outer" id="block-work-order-type-analysis-chart-filter">
-										<h4 class="panel-heading">Filter</h4>
+										<h4 class="panel-heading"><i class="fi-results colorHeading"></i> Filtered</h4>
 										<div class="panel-inner" id="block-work-order-type-analysis-chart-filter-content">
 											<div id="filter-block-areas">
 												<strong>Areas:</strong><br/>

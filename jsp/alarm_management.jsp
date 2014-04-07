@@ -201,32 +201,36 @@
 				<div class="big-row">
 					<div class="large-3 columns">
 						<div class="row">
-							<label><s:text name="webportal.alarm.domain"/></label>
-							<select id="domains" onchange="onChangeData()" class="custom-multi-select" name="multiselect-domain" multiple="multiple">
-							</select>
+							<div class="large-12 columns">
+								<label>Domain</label>
+								<select id="domains" onchange="onChangeData()" class="custom-multi-select" name="multiselect-domain" multiple="multiple">
+								</select>
+							</div>
 						</div>
 						<div class="row">
-							<label><s:text name="webportal.alarm.dateinterval"/></label>
+							<div class="large-12 columns">
+								<label>Date interval</label>
 								<select id="filter-select-date-interval" onchange="javascript:getdaterange();">
-									<option value="lastweek" selected="selected"><s:text name="webportal.alarm.dateinterval.lastweek"/></option>
-									<option value="today"><s:text name="webportal.alarm.dateinterval.today"/></option>
-									<option value="lastmonth"><s:text name="webportal.alarm.dateinterval.lastmonth"/></option>
-									<option value="lastquarter"><s:text name="webportal.alarm.dateinterval.lastquarter"/></option>
-									<option value="lastyear"><s:text name="webportal.alarm.dateinterval.lastyear"/></option>
-									<option value="custominterval"><s:text name="webportal.alarm.dateinterval.custominterval"/></option>
+									<option value="today">Today</option>
+									<option value="lastweek" selected="selected">Last week</option>
+									<option value="lastmonth">Last month</option>
+									<option value="lastquarter">Last quarter</option>
+									<option value="lastyear">Last year</option>
+									<option value="custominterval">Custom interval</option>
 								</select>
+							</div>
 						</div>
 						<div class="row">
 							<div class="small-6 columns">
-								<label id="fromlabel"><s:text name="webportal.alarm.from"/>:</label>
+								<label id="fromlabel">From:</label>
 								<div class="custom-input-datepicker input-append date" data-date="2012-02-12" data-date-format="yyyy-mm-dd">
-									<input id="filter-date-from" type="text" readonly="readonly"/>
+									<input id="filter-date-from" type="text" class="input-datepicker" readonly="readonly"/>
 								</div>
 							</div>
 							<div class="small-6 columns">
-								<label id="tolabel"><s:text name="webportal.alarm.to"/>:</label>
+								<label id="tolabel">To:</label>
 								<div class="custom-input-datepicker input-append date"  data-date="12-02-2012" data-date-format="yyyy-mm-dd">
-									<input id="filter-date-to" type="text" readonly="readonly"/>
+									<input id="filter-date-to" type="text" class="input-datepicker" readonly="readonly"/>
 								</div>
 							</div>
 						</div>
@@ -234,12 +238,12 @@
 
 					<div class="large-3 columns">
 						<div class="row">
-							<label><s:text name="webportal.alarm.areatype"/></label>
+							<label>Area type</label>
 							<select id="areaTypes" onchange="onChangeData()" class="custom-multi-select" name="multiselect-area-type" multiple="multiple">
 							</select>
 						</div>
 						<div class="row">
-							<label><s:text name="webportal.alarm.area"/></label>
+							<label>Area</label>
 							<select id="areas" class="custom-multi-select" name="multiselect-area" multiple="multiple">
 							</select>
 						</div>
@@ -247,12 +251,12 @@
 
 					<div class="large-3 columns">
 						<div class="row">
-							<label><s:text name="webportal.alarm.alarmtype"/></label>
+							<label>Alarm type</label>
 							<select id="alarmTypes" class="custom-multi-select" name="multiselect-alarm-type" multiple="multiple">
 							</select>
 						</div>
 						<div class="row">
-							<label><s:text name="webportal.alarm.utilitytype"/></label>
+							<label>Utility type</label>
 							<select id="utilitytypes" class="custom-multi-select" name="multiselect-utility-type" multiple="multiple">
 							</select>
 						</div>
@@ -260,12 +264,12 @@
 
 					<div class="large-3 columns">
 						<div class="row">
-							<label><s:text name="webportal.alarm.communicationtype"/></label>
+							<label>Communication type</label>
 							<select id="commtypes" class="custom-multi-select" name="multiselect-communication-type" multiple="multiple">
 							</select>
 						</div>
 						<div class="row">
-							<label><s:text name="webportal.alarm.devicemodel"/></label>
+							<label>Device model</label>
 							<select id="devicemodels" class="custom-multi-select" name="multiselect-device-model" multiple="multiple">
 							</select>
 						</div>
@@ -275,57 +279,58 @@
 
 				<div class="big-row"><!-- start of new full width row -->
 						<div class="large-12 columns text-center">
-								<a class="button" href="javascript:onSubmit();" id="filter-button-update"><s:text name="webportal.alarm.update"/></a>
+								<a class="button" href="javascript:onSubmit();" id="filter-button-update">Update</a>
 						</div>
 				</div><!-- end of submitbutton wrapper -->
 			</div><!-- end of filterheader -->
 		</div><!-- end of headerwrapper -->
+
 		<div class="page-name">
 			<div class="large-12 columns" >
 				<h2>Alarm Management</h2>
 			</div>
 		</div>
+
 			<div class="big-row"><!-- start of new full width row -->
 				<div class="large-6 columns">
 					<div class="panel-outer">
 						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Work order progress</h4>
-							<div class="panel-inner">
-								<div style = "height:660px;width:100%;opacity:0.99;" id="map-wrapper"></div>
-							</div>
+						<div class="panel-inner">
+							<div style = "height:660px;width:100%;opacity:0.99;" id="map-wrapper"></div>
+						</div>
 						</div>
 					</div>
 
-				<div class="large-6 columns chart-container panel">
-
-					<div class="row">
-						<div class="large-12 columns">
-								<div id="block-alarm-charts-title"></div>
-								<div id="block-alarm-charts-period"></div>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="large-12 columns">
-							<div id="block-alarm-charts-view">chart</div>
-						</div>
-					</div>
-
-					<div class="row chart-filter">
-						<div class="large-12 columns">
-								<label>
-									<s:text name="webportal.alarm.groupchartby"/>
-								</label>
-								<div id="block-alarm-charts-radioBox">
-									<form id="chart-form">
-										<input id="block-alarm-charts-radio-area" type="radio" name="block-alarm-charts-radio" value="A" checked="checked" onclick="getChartTitle(this.value); onSubmit();">
-										<label for="block-alarm-charts-radio-area" class="radio-legend legend1"><s:text name="webportal.alarm.area"/></label>
-										<input id="block-alarm-charts-radio-alarm-type" type="radio" name="block-alarm-charts-radio" value="E" onclick="getChartTitle(this.value); onSubmit();">
-										<label for="block-alarm-charts-radio-alarm-type" class="radio-legend legend2"><s:text name="webportal.alarm.alarmtype"/></label>
-									</form>
+				<div class="large-6 columns chart-container">
+					<div class="panel-outer">
+						<h4 class="panel-heading">
+							<i class="fi-graph-trend colorHeading"></i>
+							<span id="block-alarm-charts-title"></span>
+							<span id="block-alarm-charts-period"></span>
+						</h4>
+						<div class="panel-innner">
+							<div class="row">
+								<div class="large-12 columns">
+									<div id="block-alarm-charts-view">chart</div>
 								</div>
-						</div>
-					</div><!-- end of chart-filter -->
+							</div>
 
+							<div class="row chart-filter">
+								<div class="large-12 columns">
+										<label>Group chart by</label>
+										<div id="block-alarm-charts-radioBox">
+											<form id="chart-form">
+												<input id="block-alarm-charts-radio-area" type="radio" name="block-alarm-charts-radio" value="A" checked="checked" onclick="getChartTitle(this.value); onSubmit();">
+												<label for="block-alarm-charts-radio-area" class="radio-legend legend1"><s:text name="webportal.alarm.area"/></label>
+												<input id="block-alarm-charts-radio-alarm-type" type="radio" name="block-alarm-charts-radio" value="E" onclick="getChartTitle(this.value); onSubmit();">
+												<label for="block-alarm-charts-radio-alarm-type" class="radio-legend legend2"><s:text name="webportal.alarm.alarmtype"/></label>
+											</form>
+										</div>
+								</div>
+							</div><!-- end of chart-filter -->
+
+						</div>
+					</div>
 				</div><!-- end of chart-container -->
 			</div><!-- end of big-row -->
 

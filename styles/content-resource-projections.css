@@ -16,10 +16,10 @@ body {
 	padding: 1em;
 }
 .filterHeader .big-row {
-	min-height: 308px;
+	min-height: 406px;
 }
 .filterHeader .big-row > div:not(:last-child) {
-	height: 300px;
+	height: 365px;
 	border-right: 1px dotted #6a6a6a;
 }
 .filterHeader .big-row > div:nth-child(2) {

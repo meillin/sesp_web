@@ -192,15 +192,19 @@ var bci = 0;
 				</div>
 				<div class="big-row">
 					<div class="large-4 columns">
-						<label> <s:text name="workorderprogress.filters.dateinterval"/></label>
-						<select id="filter-select-date-interval" onchange="show()">
-							<option value="lastweek" selected="selected"><s:text name="webportal.alarm.dateinterval.lastweek"/></option>
-							<option value="today"><s:text name="webportal.alarm.dateinterval.today"/></option>
-							<option value="lastmonth"><s:text name="webportal.alarm.dateinterval.lastmonth"/></option>
-							<option value="lastquarter"><s:text name="webportal.alarm.dateinterval.lastquarter"/></option>
-							<option value="lastyear"><s:text name="webportal.alarm.dateinterval.lastyear"/></option>
-							<option value="custominterval"><s:text name="webportal.alarm.dateinterval.custominterval"/></option>
-						</select>
+						<div class="row">
+							<div class="medium-12 columns">
+								<label>Date interval</label>
+								<select id="filter-select-date-interval" onchange="show()">
+									<option value="lastweek" selected="selected"><s:text name="webportal.alarm.dateinterval.lastweek"/></option>
+									<option value="today"><s:text name="webportal.alarm.dateinterval.today"/></option>
+									<option value="lastmonth"><s:text name="webportal.alarm.dateinterval.lastmonth"/></option>
+									<option value="lastquarter"><s:text name="webportal.alarm.dateinterval.lastquarter"/></option>
+									<option value="lastyear"><s:text name="webportal.alarm.dateinterval.lastyear"/></option>
+									<option value="custominterval"><s:text name="webportal.alarm.dateinterval.custominterval"/></option>
+								</select>
+							</div>
+						</div>
 						<div class="row">
 							<div class="medium-6 columns">
 								<label><s:text name="workorderprogress.filters.from"/> :</label>
@@ -218,22 +222,22 @@ var bci = 0;
 					</div>
 
 					<div class="large-4 columns">
-						<lable><s:text name="workorderprogress.filters.domain"/></lable>
+						<lable>Domain</lable>
 						<select id="filter-multiselect-domain" class="custom-multi-select" onchange="domainChanged()" name="multiselect-domain" multiple="multiple">
 						</select>
-						<lable><s:text name="workorderprogress.filters.workordertype"/></lable>
+						<lable>Work order type</lable>
 						<select id="filter-multiselect-work-order-type" class="custom-multi-select" name="multiselect-work-order-type" multiple="multiple">
 						</select>
 					</div>
 
 					<div class="large-4 columns">
-						<lable><s:text name="workorderprogress.filters.areatype"/></lable>
+						<lable>Area type</lable>
 						<select id="filter-multiselect-area-type" class="custom-multi-select" onchange="areaTypeChanged()" name="multiselect-area-type" multiple="multiple">
 						</select>
 
-						<lable><s:text name="webportal.alarm.area"/></lable>
+						<lable>Area</lable>
 						<select id="filter-multiselect-area" class="custom-multi-select" name="multiselect-area" multiple="multiple"></select>
-						<lable>Unplanned<input type="checkbox" id="filter-checkbox-unplanned" name="unplanned" value="checked"/></lable>
+						<lable>Unplanned <input type="checkbox" id="filter-checkbox-unplanned" name="unplanned" value="checked"/></lable>
 					</div>
 				</div>
 
@@ -278,15 +282,22 @@ var bci = 0;
 			</div>
 
 			<div class="big-row">
+
 				<div class="large-6 columns">
 					<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-pie"></i> Total progress</h4>
-						<div class="panel-inner" id="total-progress"></div>
+						<h4 class="panel-heading"><i class="fi-graph-horizontal"></i> Area progress</h4>
+						<div class="panel-inner" id="area-progress"></div>
 					</div>
 				</div>
+
 				<div class="large-6 columns">
 					<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-pie"></i> Detailed progress</h4>
+						<h4 class="panel-heading"><i class="fi-graph-horizontal"></i> Total progress</h4>
+						<div class="panel-inner" id="total-progress"></div>
+					</div>
+
+					<div class="panel-outer">
+						<h4 class="panel-heading"><i class="fi-graph-bar"></i> Detailed progress</h4>
 							<div class="panel-inner" id="detailed-progress"></div>
 					</div>
 				</div>

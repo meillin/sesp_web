@@ -1,45 +1,45 @@
 $( document ).ready(function() {
     var colors = Highcharts.getOptions().colors;
     function drawWorkOrderStatus() {
-           var categories = ['Performed', 'Not performed', 'Not planned', 'Not performed final', 'Opera'],
-            name = 'Browser brands',
-            data = [{
-                    y: 10000,
-                    color: colors[0],
-                    drilldown: {
-                        name: 'Performed versions',
-                        categories: ['Performed'],
-                        data: [10000],
-                        color: colors[0]
-                    }
-                }, {
-                    y: 1000,
-                    color: colors[1],
-                    drilldown: {
-                        name: 'Not performed versions',
-                        categories: ['Not performed'],
-                        data: [1000],
-                        color: colors[1]
-                    }
-                }, {
-                    y: 1000,
-                    color: colors[2],
-                    drilldown: {
-                        name: 'Not planned versions',
-                        categories: ['Not planned versions'],
-                        data: [1000],
-                        color: colors[2]
-                    }
-                }, {
-                    y: 5470,
-                    color: colors[3],
-                    drilldown: {
-                        name: 'Not performed final versions',
-                        categories: ['With time reservation', 'Missed time reservation', 'Planned', 'Saved with errors', 'Undefined'],
-                        data: [2500, 2000, 470, 300, 200],
-                        color: colors[3]
-                    }
-                }];
+       var categories = ['Performed', 'Not performed', 'Not planned', 'Not performed final', 'Opera'],
+        name = 'Browser brands',
+        data = [{
+                y: 10000,
+                color: colors[0],
+                drilldown: {
+                    name: 'Performed versions',
+                    categories: ['Performed'],
+                    data: [10000],
+                    color: colors[0]
+                }
+            }, {
+                y: 1000,
+                color: colors[1],
+                drilldown: {
+                    name: 'Not performed versions',
+                    categories: ['Not performed'],
+                    data: [1000],
+                    color: colors[1]
+                }
+            }, {
+                y: 1000,
+                color: colors[2],
+                drilldown: {
+                    name: 'Not planned versions',
+                    categories: ['Not planned versions'],
+                    data: [1000],
+                    color: colors[2]
+                }
+            }, {
+                y: 5470,
+                color: colors[3],
+                drilldown: {
+                    name: 'Not performed final versions',
+                    categories: ['With time reservation', 'Missed time reservation', 'Planned', 'Saved with errors', 'Undefined'],
+                    data: [2500, 2000, 470, 300, 200],
+                    color: colors[3]
+                }
+            }];
         // Build the data arrays
         var browserData = [];
         var versionsData = [];
@@ -66,16 +66,8 @@ $( document ).ready(function() {
         $('#work-order-status').highcharts({
             chart: {
                 type: 'pie',
-                height: 330,
+                height: 300,
                 width: ''
-            },
-            title: {
-                text: ''
-            },
-            yAxis: {
-                title: {
-                    text: 'Total percent market share'
-                }
             },
             plotOptions: {
                 pie: {
@@ -115,7 +107,7 @@ $( document ).ready(function() {
        $('#total-progress').highcharts({
                 chart: {
                     type: 'bar',
-                    height: 330
+                    height: 280
                 },
                 title: {
                     text: ''
@@ -161,7 +153,7 @@ $( document ).ready(function() {
                 plotBackgroundColor: null,
                 plotBorderWidth: null,
                 plotShadow: false,
-                height: 330
+                height: 300
             },
             legend: {
                 layout: 'vertical',
@@ -169,7 +161,7 @@ $( document ).ready(function() {
                 align: 'right',
                 verticalAlign: 'top',
                 floating: true,
-                x: 10,
+                x: 0,
                 y: 110
             },
             title: {
@@ -186,7 +178,7 @@ $( document ).ready(function() {
                         enabled: false
                     },
                     showInLegend: true,
-                    center: [180, 110],
+                    center: ['30%', '50%'],
                 }
             },
             series: [{
@@ -211,10 +203,7 @@ $( document ).ready(function() {
     function drawDetailedProgress() {
         $('#detailed-progress').highcharts({
             chart: {
-                height: 330
-            },
-            title: {
-                text: ''
+                height: 280
             },
             xAxis: [{
                 categories: ['Week11', 'Week12', 'Week13', 'Week14', 'Week15', 'Week16',
@@ -282,10 +271,48 @@ $( document ).ready(function() {
         });
     }
 
+    function drawAreaProgress() {
+
+        $('#area-progress').highcharts({
+            chart: {
+                type: 'bar',
+                height: 660
+            },
+            xAxis: {
+                categories: ['Area 1', 'Area 2', 'Area 3', 'Area 4', 'Area 5', 'Area 6', 'Area 7', 'Area 8', 'Area 9']
+            },
+            legend: {
+                backgroundColor: '#FFFFFF'
+            },
+            plotOptions: {
+                series: {
+                    stacking: 'normal'
+                }
+            },
+            series: [{
+                        name: 'Performed within plan',
+                        data: [3, 4, 4, 3, 4, 4, 3, 4, 4]
+                    },{
+                        name: 'Unplanned',
+                        data: [5, 3, 4, 5, 3, 4, 5, 3, 4]
+                    }, {
+                        name: 'Performed after plan',
+                        data: [2, 2, 3, 5, 3, 4, 2, 2, 3]
+                    }, {
+                        name: 'Not yet performed after plan',
+                        data: [5, 3, 2, 2, 2, 3, 5, 3, 2]
+                    }, {
+                        name: 'Not yet performed within plan',
+                        data: [4, 2, 3, 5, 3, 2, 4, 2, 3]
+                    }]
+                });
+        }
+
     drawDetailedProgress();
     drawWorkOrderStatus();
     drawTotalProgress();
     drawWorkOrderProgress();
+    drawAreaProgress();
 });
 
 
