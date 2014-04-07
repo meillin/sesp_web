@@ -65,56 +65,57 @@
 			<%@ include file="headerv311.inc"%>			
 
 			<div id="main-content">
+
 				<div class="big-row">
 					<div class="large-12 columns">
 						<h2 style="margin-top: 50px;"><s:text name='webportal.device.results.title'/> : <span id="device-id" class=" text-light-grey"></span></h2>
 					</div>
 				</div>
-				<div class="small-block block retractable" id="block-overview">
+
+
+				<div id="block-overview">
 					<div class="block-title">
-						<span class="block-title-picto"></span>
-						<span class="block-title-name text-blue"><s:text name='webportal.device.overview.device.title'/></span>
-						<span class="block-arrow open"></span>
+						<span><s:text name='webportal.device.overview.device.title'/></span>
 					</div>
-					<div class="content-wrapper">
-						<div class="content">
-						<div class="legend-block text-grey">
+					<div>
+						<div>
+						<div>
 							<table id="overview-table">
 							<tr>
-								<td> <div class="legend-block-title"> <s:text name='webportal.device.overview.device.type'/> : </div> </td>
-								<td> <div class="legend-block-content text-light-grey" id="block-overview-device-type"> </div> </td>
+								<td> <span> <s:text name='webportal.device.overview.device.type'/> : </span> </td>
+								<td> <span id="block-overview-device-type"> </span> </td>
 							</tr>
 							<tr>
-								<td> <div class="legend-block-title"> <s:text name='webportal.device.overview.device.model'/> : </div> </td>
-								<td> <div class="legend-block-content text-light-grey" id="block-overview-device-model"> </div> </td>
+								<td> <span> <s:text name='webportal.device.overview.device.model'/> : </span> </td>
+								<td> <span id="block-overview-device-model"> </span> </td>
 							</tr>
 							<tr>
-								<td> <div id="block-measurepoint-multipoint-title" class="legend-block-title"> </div> </td>
-								<td> <div class="legend-block-content text-light-grey" id="block-overview-measurepoint-id">  </div> </td>
+								<td> <span id="block-measurepoint-multipoint-title"> </span> </td>
+								<td> <span id="block-overview-measurepoint-id">  </span> </td>
 							</tr>
 							<tr>
-								<td> <div class="legend-block-title"> <s:text name='webportal.device.overview.device.giai'/> : </div> </td>
-								<td> <div class="legend-block-content text-light-grey" id="block-overview-giai"> </div> </td>
+								<td> <div> <s:text name='webportal.device.overview.device.giai'/> : </div> </td>
+								<td> <div id="block-overview-giai"> </div> </td>
 							</tr>
 							<tr>
-								<td> <div class="legend-block-title"> <s:text name='webportal.device.overview.device.serial.number'/> : </div> </td>
-								<td> <div class="legend-block-content text-light-grey" id="block-overview-serial-number"></div> </td>
+								<td> <div> <s:text name='webportal.device.overview.device.serial.number'/> : </div> </td>
+								<td> <div id="block-overview-serial-number"></div> </td>
 							</tr>
 							<tr>
-								<td> <div class="legend-block-title"> <s:text name='webportal.device.overview.device.property.number'/> : </div> </td>
-								<td> <div class="legend-block-content text-light-grey" id="block-overview-property-number"></div> </td>
+								<td> <div> <s:text name='webportal.device.overview.device.property.number'/> : </div> </td>
+								<td> <div id="block-overview-property-number"></div> </td>
 							</tr>
 							<tr>
-								<td> <div class="legend-block-title"> <s:text name='webportal.device.overview.device.domain'/> : </div> </td>
-								<td> <div class="legend-block-content text-light-grey" id="block-overview-domain"> </div> </td>
+								<td> <div> <s:text name='webportal.device.overview.device.domain'/> : </div> </td>
+								<td> <div id="block-overview-domain"> </div> </td>
 							</tr>
 							<tr>
-								<td> <div class="legend-block-title"> <s:text name='webportal.device.overview.device.pallet'/> : </div> </td>
-								<td> <div class="legend-block-content text-light-grey" id="block-overview-pallet"></div> </td>
+								<td> <div> <s:text name='webportal.device.overview.device.pallet'/> : </div> </td>
+								<td> <div id="block-overview-pallet"></div> </td>
 							</tr>
 						    <tr>
-								<td> <div class="legend-block-title"> <s:text name='webportal.device.overview.device.stock'/> :  </div> </td>
-								<td> <div class="legend-block-content text-light-grey" id="block-overview-stock-site"></div> </td>
+								<td> <div> <s:text name='webportal.device.overview.device.stock'/> :  </div> </td>
+								<td> <div id="block-overview-stock-site"></div> </td>
 							</tr>
 							</table>
 							</div>
@@ -122,6 +123,8 @@
 						</div>
 					</div>
 				</div>
+
+
 				<div class="small-block block retractable" id="block-location">
 					<div class="block-title">
 						<span class="block-title-picto"></span>
