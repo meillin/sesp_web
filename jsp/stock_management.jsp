@@ -197,7 +197,11 @@
 					</div>
 				</div><!-- end of filter panel -->
 			</div>
-			<h2 class="page-name">Stock Management</h2>
+			<div class="big-row">
+				<div class="large-12 columns">
+					<h2 class="page-name-heading">Stock Management</h2>
+				</div>
+			</div>
 			<div class="big-row">
 				<div class="large-6 columns">
 					<div class="panel-outer">

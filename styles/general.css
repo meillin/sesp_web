@@ -38,6 +38,10 @@ html, body{
 	padding-left: 0.9375em;
 	padding-right: 0.9375em;
 }
+
+.page-name-heading{
+	margin-top: 50px;
+}
 /**
  * 	Custom Generic Button
  */

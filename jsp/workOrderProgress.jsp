@@ -255,11 +255,11 @@ var bci = 0;
 			</div>
 		</div>
 		<div class="big-row">
-			<div class="page-name">
+
 				<div class="large-12 columns" >
-					<h2>Work order progress</h2>
+					<h2 class="page-name-heading">Work order progress</h2>
 				</div>
-			</div>
+
 		</div>
 
 			<div class="big-row">

@@ -154,11 +154,14 @@
 						</div>
 					</div>
 
-
+			<div class="big-row">
+				<div class="large-12 columns">
+					<h2 class="page-name-heading"><s:text name="webportal.fieldworkefficiencyanalysis"/></h2>
+				</div>
+			</div>
 					<div class="big-row">
 						<div class="large-12 columns">
 							<div class="big-row">
-								<h4><i class="fi-filter colorHeading"></i> <s:text name="webportal.fieldworkefficiencyanalysis"/></h4>
 								<div class="large-8 columns">
 									<div class="panel-outer">
 										<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Work order type analysis</h4>

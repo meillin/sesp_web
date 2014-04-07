@@ -202,7 +202,7 @@
 
 			<div class="big-row">
 				<div class="large-12 columns" >
-					<h2><s:text name="webportal.resourceprojections.title"/></h2>
+					<h2 class="page-name-heading"><s:text name="webportal.resourceprojections.title"/></h2>
 				</div>
 			</div>
 

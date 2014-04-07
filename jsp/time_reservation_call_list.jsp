@@ -150,10 +150,14 @@
 						</div>
 				</div>
 			</div><!-- end of filterHeader -->
-
 			<div class="big-row">
-				<div class="large-8 medium-12 large-centered columns">
-					<div class="panel-outer show">
+				<div class="large-12 columns">
+					<h2 class="page-name-heading">Time Reservation Call List</h2>
+				</div>
+			</div>
+			<div class="big-row">
+				<div class="large-12 columns">
+					<div class="panel-outer">
 						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Area Progress</h4>
 							<div class="panel-inner">
 								<div id="callListGridDiv"></div>

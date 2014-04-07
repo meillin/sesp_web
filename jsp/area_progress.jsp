@@ -260,7 +260,7 @@ symbolCounter++;
 
 		<div class="page-name">
 			<div class="large-12 columns" >
-				<h2><s:text name="areaprogress.area"/> : <span id="area-name"></span></h2>
+				<h2 class="page-name-heading"><s:text name="areaprogress.area"/> : <span id="area-name"></span></h2>
 			</div>
 		</div>
 		<!-- start of new full width row -->

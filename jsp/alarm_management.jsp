@@ -191,13 +191,11 @@
 			<%@ include file="headerv311.inc"%>
 		<div class="big-row">
 			<div class="large-12 columns filterHeader">
-
 				<div class="big-row">
 					<div class="large-12 columns">
 						<h4><i class="fi-filter colorHeading"></i> Filters</h4>
 					</div>
 				</div>
-
 				<div class="big-row">
 					<div class="large-3 columns">
 						<div class="row">
@@ -285,9 +283,9 @@
 			</div><!-- end of filterheader -->
 		</div><!-- end of headerwrapper -->
 
-		<div class="page-name">
+		<div class="big-row">
 			<div class="large-12 columns" >
-				<h2>Alarm Management</h2>
+				<h2 class="page-name-heading">Alarm Management</h2>
 			</div>
 		</div>
 
