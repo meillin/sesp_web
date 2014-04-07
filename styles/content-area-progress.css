@@ -4,16 +4,14 @@
 	padding-left: 0;
 	border-right: 1px solid #E7E7E7;
 }
-
+.map-list li:nth-child(2) {
+	background: #f0f0f0;
+}
 .map-list li{
 	width: 25%;
 	padding-left: 1%;
 }
-
-#tabs-wrapper .button{
-	margin: 0;
-}
-#summary-workordertypes-selected {
+#summary-workordertypes-selected, #example-list {
 	max-height:510px;
 	overflow-y:scroll;
 	margin: 0;
@@ -21,7 +19,7 @@
 	background: #f0f0f0;
 	font-size: 12px;
 }
-#summary-workordertypes-selected li {
+#summary-workordertypes-selected li, #example-list li {
 	width: 100%;
 	border-bottom: 1px solid rgb(235, 233, 233);
 }

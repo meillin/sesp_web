@@ -280,12 +280,20 @@
 				</div><!-- end of submitbutton wrapper -->
 			</div><!-- end of filterheader -->
 		</div><!-- end of headerwrapper -->
-
+		<div class="page-name">
+			<div class="large-12 columns" >
+				<h2>Alarm Management</h2>
+			</div>
+		</div>
 			<div class="big-row"><!-- start of new full width row -->
-
-				<div class="large-6 columns map-container panel">
-					<div style = "height:660px;width:100%;opacity:0.99;" id="map-wrapper"></div>
-				</div>
+				<div class="large-6 columns">
+					<div class="panel-outer">
+						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Work order progress</h4>
+							<div class="panel-inner">
+								<div style = "height:660px;width:100%;opacity:0.99;" id="map-wrapper"></div>
+							</div>
+						</div>
+					</div>
 
 				<div class="large-6 columns chart-container panel">
 

@@ -6,8 +6,9 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  *
  */
-.datepicker {
 
+.datepicker {
+	position: absolute;
 	display: none; /*Meilan added display:none;*/
 	top: 0;
 	left: 0;
@@ -15,9 +16,6 @@
 	margin-top: 1px;
 	font-size: 14px;
 	color: #41474c;
-	/*.dow {
-	 border-top: 1px solid #ddd !important;
-	 }*/
 	-webkit-border-radius: 0px;
 	-moz-border-radius: 0px;
 	border-radius: 0px;

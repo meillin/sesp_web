@@ -26,11 +26,11 @@ body {
 	overflow-y : scroll;
 }
 
-table tr {
+#block-planning-periods-table tr {
 	background: #46515C !important;
 	cursor: pointer;
 }
 
-table tr.selected {
+#block-planning-periods-table tr.selected {
 	background: rgb(49, 49, 53) !important;
 }

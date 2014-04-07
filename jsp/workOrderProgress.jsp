@@ -48,7 +48,6 @@
 	<script type="text/javascript" src="<%=contextPath%>/js/search-results.js"></script>
 
 	<script type="text/javascript" src="<%=contextPath%>/js/highchart/highcharts.js"></script>
-	<script type="text/javascript" src="<%=contextPath%>/js/highchart/exporting.js"></script>
 
 </head>
 <script>
@@ -252,19 +251,18 @@ var bci = 0;
 			</div>
 		</div>
 		<div class="big-row">
-					<div class="page-name">
-			<div class="large-12 columns" >
-				<h2>Work order progress</h2>
+			<div class="page-name">
+				<div class="large-12 columns" >
+					<h2>Work order progress</h2>
+				</div>
 			</div>
 		</div>
-		</div>
-		<div class="big-row">
-			<div class="large-6 columns">
-				<div class="panel-outer">
-					<h4 class="panel-heading"><i class="fi-graph-pie"></i><s:text name="workorderprogress.workorderstatus"/></h4>
-					<div class="panel-inner">
-						<div id="work-order-status">
-						</div>
+
+			<div class="big-row">
+				<div class="large-6 columns">
+					<div class="panel-outer">
+						<h4 class="panel-heading"><i class="fi-graph-pie"></i> Work order status</h4>
+						<div class="panel-inner" id="work-order-status">
 							<!--
 							<div id="block-work-order-status-chart"></div>
 							<div id="block-work-order-status-chart-right" class="right"></div>-->
@@ -273,39 +271,29 @@ var bci = 0;
 				</div>
 				<div class="large-6 columns">
 					<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-pie"></i> <s:text name="workorderprogress.areaprogress"/></h4>
-						<div class="panel-inner">
-							<div style = "height:500px;opacity:0.99;" id="map-wrapper"></div>
-						</div>
+						<h4 class="panel-heading"><i class="fi-graph-pie"></i> Work order progress</h4>
+						<div class="panel-inner" id="work-order-progress"></div>
 					</div>
 				</div>
 			</div>
-			<div class="large-12 columns">
-				<div class="panel-outer">
-					<h4 class="panel-heading"><i class="fi-graph-pie"></i> <s:text name="workorderprogress.progressoverview"/></h4>
-				<div class="panel-inner">
-				<ul class="inline-list">
-					<li class="total-progress">
-						<div id="total-progress"></div>
-					</li>
-					<li class="work-order-progress" >
-						<div id="work-order-progress"></div>
-					</li>
-					<li class="detailed-progress">
-						<div id="detailed-progress"></div>
-					</li>
-				</ul>
-					<!--
-					<div id="block-progress-overview-total-progress"></div>
-					<div id="block-progress-overview-work-order-progress"></div>
-					<div id="block-progress-overview-detailed-progress"></div>
-					<div id="block-progress-overview-detailed-timebased-perfomance-workorders"></div>
-					<div id="block-progress-overview-detailed-timebased-perfomance-notperformed"></div>
-				-->
+
+			<div class="big-row">
+				<div class="large-6 columns">
+					<div class="panel-outer">
+						<h4 class="panel-heading"><i class="fi-graph-pie"></i> Total progress</h4>
+						<div class="panel-inner" id="total-progress"></div>
+					</div>
+				</div>
+				<div class="large-6 columns">
+					<div class="panel-outer">
+						<h4 class="panel-heading"><i class="fi-graph-pie"></i> Detailed progress</h4>
+							<div class="panel-inner" id="detailed-progress"></div>
+					</div>
+				</div>
 			</div>
-			</div>
-		</div>
-	</div>
+
+
+	</div><!-- end of wrapper -->
 	<script type="text/javascript" src="<%=contextPath%>/js/highchart/example-chart.js"></script>
 </body>
 </html>

@@ -50,6 +50,8 @@ document.createElement("figure");
 <script src="<%=contextPath%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
 
 <script type="text/javascript" src="<%=contextPath%>/js/area-progress.js"></script>
+<script type="text/javascript" src="<%=contextPath%>/js/highchart/highcharts.js"></script>
+
 
 <script src="<%=contextPath%>/js/map.js"></script>
 <script src="<%=contextPath%>/js/sesp_ajax.js"></script>
@@ -214,13 +216,13 @@ symbolCounter++;
 							<div class="medium-6 columns">
 								<label><s:text name="workorderprogress.filters.from"/> :</label>
 								<div class="custom-input-datepicker input-append date" data-date="2012-02-12" data-date-format="yyyy-mm-dd">
-									<input id="filter-date-from" type="text" class="input-datepicker text-red"  readonly="readonly"/>
+									<input id="filter-date-from" type="text" class="input-datepicker"  readonly="readonly"/>
 								</div>
 							</div>
 							<div class="medium-6 columns">
 								<label><s:text name="workorderprogress.filters.to"/> :</label>
 								<div class="custom-input-datepicker input-append date"  data-date="12-02-2012" data-date-format="yyyy-mm-dd">
-									<input id="filter-date-to" type="text" class="input-datepicker text-red"  readonly="readonly"/>
+									<input id="filter-date-to" type="text" class="input-datepicker"  readonly="readonly"/>
 								</div>
 							</div>
 						</div>
@@ -240,7 +242,7 @@ symbolCounter++;
 
 						<lable><s:text name="webportal.alarm.area"/></lable>
 						<select id="filter-multiselect-area" class="custom-multi-select" name="multiselect-area" multiple="multiple"></select>
-						<lable>Unplanned<input type="checkbox" id="filter-checkbox-unplanned" name="unplanned" value="checked"/></lable>
+						<lable>Unplanned <input type="checkbox" id="filter-checkbox-unplanned" name="unplanned" value="checked"/></lable>
 					</div>
 				</div>
 				<div class="big-row"><!-- start of new full width row -->
@@ -265,48 +267,72 @@ symbolCounter++;
 		<div class="large-12 columns main-content-wrapper">
 			<div style="min-height: 660px">
 				<div class="big-row">
-					<div class="large-8 columns map">
+					<div class="large-7 columns map">
 						<div class="panel-outer">
 							<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Work order progress</h4>
 							<div class="panel-inner">
 								<div id="tabs-wrapper">
-									<a id="block-work-order-tab1" class="tiny button" onclick="javascript:updateWorkOrder('progress')">Progress</a>
+									<a id="block-work-order-tab1" class="tiny button selected" onclick="javascript:updateWorkOrder('progress')">Progress</a>
 									<a id="block-work-order-tab2" class="tiny button" onclick="javascript:updateWorkOrder('status')">Status</a>
 								</div>
 								<ul class="inline-list map-list">
 									<li>
 										<div style="width: 100%; height: 600px; opacity:0.99;" id="map-wrapper"></div>
 									</li>
-									<li>
+									<li class="panel">
 										<h3><s:text name="areaprogress.workorderprogress.summary"/></h3>
 										<div><strong>Number of work orders:</strong> 250</div>
 										<div id="block-summary-content-wo-count"></div>
 										<div><strong>Work order types:</strong></div>
-										<ul id="summary-workordertypes-selected">LOTS OF TEXT HERE</ul>
+										<!--
+										<ul id="summary-workordertypes-selected">
+											<li>Meter Change (2)</li>
+											<li>Meter Installation (4)</li>
+											<li>MRO52 (5)</li>
+											<li>Remote Service (3)</li>
+										</ul>
+									-->
+										<ul id="example-list">
+											<li>Meter Change (2)</li>
+											<li>Meter Installation (4)</li>
+											<li>MRO52 (5)</li>
+											<li>Remote Service (3)</li>
+										</ul>
 									</li>
 								</ul>
 							</div>
 						</div>
 					</div>
-					<div class="large-4 columns charts">
-						<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Work Order Progress</h4>
-							<div class="panel-inner">
-								<div class="chart-wrapper">
+					<div class="large-5 columns charts">
+						<div class="panel-outer show">
+							<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Work Order Progress</h4>
+							<div class="panel-inner" id="work-order-chart-view">
+								<!--
 									<div id="block-work-order-chart-view"></div>
 									<div id="block-work-order-status-chart"></div>
-								</div>
+								-->
 							</div>
 						</div>
-						<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Detaild Progress</h4>
-							<div class="panel-inner">
-								<div class="chart-wrapper">
+						<div class="panel-outer show">
+							<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Detaild Progress</h4>
+							<div class="panel-inner" id="detailed-progress">
+								<!--
 									<div id="block-work-order-chart-view2"></div>
 									<div id="block-work-order-status-chart-right"></div>
-								</div>
+								-->
 							</div>
 						</div>
+
+						<div class="panel-outer hide">
+						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Work Order Status</h4>
+							<div class="panel-inner" id="work-order-status">
+								<!--
+									<div id="block-work-order-chart-view"></div>
+									<div id="block-work-order-status-chart"></div>
+								-->
+							</div>
+						</div>
+
 					</div><!-- end of charts -->
 				</div>
 			</div><!-- end of first-child of main-content-wrapper -->
@@ -316,6 +342,8 @@ symbolCounter++;
 </div><!-- end of wrapper -->
 <script>
 	loadvalues();
+
 </script>
+<script type="text/javascript" src="<%=contextPath%>/js/highchart/area-progress-chart.js"></script>
 </body>
 </html>

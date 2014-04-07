@@ -111,13 +111,13 @@
 							<div class="row">
 								<div class="small-6 columns">
 									<label><s:text name="webportal.resourceprojections.time.fromdate.title"/>:</label>
-									<div class="custom-input-datepicker input-append date" data-date="2012-02-12" data-date-format="yyyy-mm-dd">
+									<div class="input-append date" data-date="2012-02-12" data-date-format="yyyy-mm-dd">
 										<input id="block-time-date-from" type="text" class="input-datepicker"  readonly="readonly"/>
 									</div>
 								</div>
 								<div class="small-6 columns">
 									<label><s:text name="webportal.resourceprojections.time.todate.title"/>:</label>
-									<div class="custom-input-datepicker input-append date"  data-date="12-02-2012" data-date-format="yyyy-mm-dd">
+									<div class="input-append date"  data-date="12-02-2012" data-date-format="yyyy-mm-dd">
 										<input id="block-time-date-to" type="text" class="input-datepicker"  readonly="readonly"/>
 									</div>
 								</div>
@@ -125,6 +125,7 @@
 
 							<div class="row">
 								<div class="small-12 columns">
+									<br/>
 									<a id="block-time-button-update" onclick="javascript:updatePlanningPeriod()" class="button tiny"><s:text name="webportal.resourceprojections.time.update"/></a>
 								</div>
 							</div>

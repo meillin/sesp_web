@@ -25,15 +25,15 @@
 		<script src="<%=request.getContextPath()%>/js/spin.js"></script>
 		<script src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
 		<link rel="shortcut icon" type="image/png" href="<%=request.getContextPath()%>/images/favicon.png" />
-		<style type="text/css">  
+		<style type="text/css">
 			.errors {
 				background-color:#FFCCCC;
 				border:1px solid #CC0000;
 				width:100%;
 				margin-bottom:8px;
 			}
-			.errors li{ 
-				list-style: none; 
+			.errors li{
+				list-style: none;
 				font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
 				width:auto;
 				color:red;
@@ -54,7 +54,6 @@
 			<div id="main-content" class="row">
 
 				<div class="large-12 columns enter-title">
-					<img class="logo-smart-energies" src="<%=request.getContextPath()%>/images/login-ses-icon.png" width="45"/>
 					Smart Energy Services Platform
 				</div>
 
@@ -80,7 +79,7 @@
 							<div class="large-4 right columns">
 								<a href="javascript:submitLogin(document.loginForm)" id="divenable" style="display:block" class="button tiny">
 									<s:text name="webportal.index.signin"/>
-								</a>					
+								</a>
 								<a href="#" disabled="disabled" id="divdisable" style="display:none" class="button tiny custom-deactivebutton">
 									<s:text name="webportal.index.signin"/>
 								</a>
@@ -94,8 +93,8 @@
 						</s:if>
 						<script type="text/javascript">
 							i18nerrorPleaseEnterUsername="<s:text name='webportal.error.enterusername'/>";
-							i18nerrorPleaseEnterPassword="<s:text name='webportal.error.enterpassword'/>";					
-		
+							i18nerrorPleaseEnterPassword="<s:text name='webportal.error.enterpassword'/>";
+
 							function loginSpinner(){
 								$('<div id ="spinner_center" style="position:fixed;top:70px;left:49%;"></div>').appendTo('body');
 								   spinner.spin($('#spinner_center')[0]);

@@ -164,6 +164,11 @@
 			</script>
 			<div class="big-row">
 				<div class="large-12 columns filterHeader">
+					<div class="big-row">
+						<div class="large-12 columns">
+							<h4><i class="fi-filter colorHeading"></i> Filters</h4>
+						</div>
+					</div>
 					<div class="medium-3 columns">
 						<label><s:text name="webportal.stock.domain"/></label>
 						<select id="filter-multiselect-domain" onchange="onChangeDomain()" class="custom-multi-select" name="filter-multiselect-domain" multiple="multiple">
@@ -196,13 +201,12 @@
 			<div class="big-row">
 				<div class="large-6 columns">
 					<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-trend size-24 colorHeading"></i> Key performance indexes</h4>
+						<h4 class="panel-heading"><i class="fi-graph-trend size-24 colorHeading"></i> ON PALLET</h4>
 						<div class="panel-inner">
-							<span id="display-tab-name"></span>
 							<div id="tabs-wrapper" >
-								<a id="block-on-pallet-tab1" class="tab selected" onclick="javascript:updateUnitStatus('fromSupplier')">From supplier</a>
-								<a id="block-on-pallet-tab2" class="tab" onclick="javascript:updateUnitStatus('inStock')">In stock</a>
-								<a id="block-on-pallet-tab3" class="tab" onclick="javascript:updateUnitStatus('onPallet')">On pallet</a>
+								<a id="block-on-pallet-tab1" class="tiny button selected" onclick="javascript:updateUnitStatus('fromSupplier')">From supplier</a>
+								<a id="block-on-pallet-tab2" class="tiny button" onclick="javascript:updateUnitStatus('inStock')">In stock</a>
+								<a id="block-on-pallet-tab3" class="tiny button" onclick="javascript:updateUnitStatus('onPallet')">On pallet</a>
 							</div>
 							<div style="width: 100%; height: 660px; opacity:0.99;" id="map-wrapper" ></div>
 						</div>
@@ -210,7 +214,7 @@
 				</div>
 				<div class="large-6 columns">
 					<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-trend size-24 colorHeading"></i> Key performance indexes</h4>
+						<h4 class="panel-heading"><i class="fi-graph-trend size-24 colorHeading"></i> Device type</h4>
 						<div class="panel-inner">
 							<div class="row">
 								<div class="large-12 columns">

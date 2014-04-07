@@ -540,7 +540,7 @@ function drawChart2(data){
 
 	showWorkOrderStatusCharts();
 	console.log("function drawChart2() called");
-	$("#block-summary-content-wo-count").html(eval(data).totalNoOfWorkOrders);
+	$("#block-summary-content-wo-count").html(eval(data.totalNoOfWorkOrders));
 
 	var summaryWorkOrderId = "#summary-workordertypes-selected";
 

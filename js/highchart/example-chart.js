@@ -66,11 +66,11 @@ $( document ).ready(function() {
         $('#work-order-status').highcharts({
             chart: {
                 type: 'pie',
-                height: 500,
+                height: 330,
                 width: ''
             },
             title: {
-                text: 'Word order status'
+                text: ''
             },
             yAxis: {
                 title: {
@@ -100,8 +100,8 @@ $( document ).ready(function() {
             }, {
                 name: 'Versions',
                 data: versionsData,
-                size: '80%',
-                innerSize: '60%',
+                size: '70%',
+                innerSize: '50%',
                 dataLabels: {
                     formatter: function() {
                         // display only if larger than 1
@@ -114,10 +114,11 @@ $( document ).ready(function() {
     function drawTotalProgress() {
        $('#total-progress').highcharts({
                 chart: {
-                    type: 'bar'
+                    type: 'bar',
+                    height: 330
                 },
                 title: {
-                    text: 'Total progress'
+                    text: ''
                 },
                 xAxis: {
                     categories: '',
@@ -159,19 +160,20 @@ $( document ).ready(function() {
             chart: {
                 plotBackgroundColor: null,
                 plotBorderWidth: null,
-                plotShadow: false
+                plotShadow: false,
+                height: 330
             },
             legend: {
                 layout: 'vertical',
                 backgroundColor: '#FFFFFF',
-                align: 'left',
+                align: 'right',
                 verticalAlign: 'top',
                 floating: true,
-                x: 90,
-                y: 45
+                x: 10,
+                y: 110
             },
             title: {
-                text: 'Work order progress'
+                text: ''
             },
             tooltip: {
                 pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -183,12 +185,14 @@ $( document ).ready(function() {
                     dataLabels: {
                         enabled: false
                     },
-                    showInLegend: true
+                    showInLegend: true,
+                    center: [180, 110],
                 }
             },
             series: [{
                 type: 'pie',
                 name: 'Work order progress',
+                size: '70%',
                 data: [
                     ['Performed within plan', 2100],
                     ['Unplanned', 500],
@@ -207,9 +211,10 @@ $( document ).ready(function() {
     function drawDetailedProgress() {
         $('#detailed-progress').highcharts({
             chart: {
+                height: 330
             },
             title: {
-                text: 'Detailed progress'
+                text: ''
             },
             xAxis: [{
                 categories: ['Week11', 'Week12', 'Week13', 'Week14', 'Week15', 'Week16',

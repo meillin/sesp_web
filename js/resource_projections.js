@@ -415,10 +415,10 @@ function fillPlanningPeriodsData(data){
 			var planningPeriod = data[i];
 			var tableData = '<tr onclick="selectRow('+planningPeriod.planningPeriodId+');" id="'+ planningPeriod.planningPeriodId +
 			'">'+
-			'<td !important;width:170px;overflow:hidden;">'+planningPeriod.planningName+'</td>'+
-			'<td !important;width:110px;overflow:hidden;">'+planningPeriod.planningStartDate.substring(0,10)+'</td>'+
-			'<td !important;width:100px;overflow:hidden;">'+planningPeriod.planningEndDate.substring(0,10)+'</td>'+
-			'<td !important;width:200px;overflow:hidden;">'+planningPeriod.domainName+'</td>';
+			'<td>'+planningPeriod.planningName+'</td>'+
+			'<td>'+planningPeriod.planningStartDate.substring(0,10)+'</td>'+
+			'<td>'+planningPeriod.planningEndDate.substring(0,10)+'</td>'+
+			'<td>'+planningPeriod.domainName+'</td>';
 			$('#block-planning-periods-table').append( tableData );
 
 		}
