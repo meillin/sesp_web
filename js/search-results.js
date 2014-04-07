@@ -30,28 +30,28 @@ function showTable(){
 
 		if (instresults.length > 0){
 			$("#block-search-results-installations").show();
-		} else{
+		} else if (instresults.length <= 0){
 			$("#block-search-results-installations").hide();
 		}
 		if (deviceResults.length > 0){
 			$("#block-search-results-devices").show();
-		} else {
+		} else if (deviceResults.length <= 0) {
 			$("#block-search-results-devices").hide();
 		}
 		if (instMepResults.length > 0){
-			$("").show();
-		} else{
-			$("").hide();
+			$("#block-search-results-measurepoints").show();
+		} else if (instMepResults.length <= 0){
+			$("#block-search-results-measurepoints").hide();
 		}
 		if (instMupResults.length > 0){
-			$("").show();
-		} else {
-			$("#block-search-results-devices").hide();
+			$("#block-search-results-multipoints").show();
+		} else if (instMupResults.length <= 0){
+			$("#block-search-results-multipoints").hide();
 		}
 		if (caseResults.length > 0){
-			$("").show();
-		} else {
-			$("").hide();
+			$("#block-search-results-cases").show();
+		} else if (caseResults.length <= 0){
+			$("#block-search-results-cases").hide();
 		}
 	});
 }	

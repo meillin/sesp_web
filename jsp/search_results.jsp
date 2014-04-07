@@ -90,16 +90,16 @@
 					</div>
 					<div class="big-row">
 						<div class="large-12 columns">
-							<div class="panel-outer" id="block-search-results-measurepoints">
+							<div class="panel-outer" id="block-search-results-measurepoints" style="display: none;">
 								<h4 class="panel-heading">
 									<i class="fi-graph-trend colorHeading"></i> 
 									<s:text name="webportal.search.results.measurepoint.title"/>
 									<span id="block-search-results-measurepoints-number"></span>
 								</h4>
 								<div class="panel-inner">
-									<table id="instMepResults" class="text-grey installation-table">
+									<table id="instMepResults">
 										<thead>
-											<tr class="table-title">
+											<tr>
 												<th> &nbsp;&nbsp;&nbsp; <s:text name="webportal.search.results.measurepoint.id"/></th>
 												<th><s:text name="webportal.search.results.measurepoint.code"/></th>
 												<th><s:text name="webportal.search.results.measurepoint.extcode"/></th>
@@ -124,16 +124,16 @@
 					</div>
 					<div class="big-row">
 						<div class="large-12 columns">
-							<div class="panel-outer" id="block-search-results-multipoints">
+							<div class="panel-outer" id="block-search-results-multipoints" style="display: none;">
 								<h4 class="panel-heading">
 									<i class="fi-graph-trend colorHeading"></i>
 									<s:text name="webportal.search.results.multipoint.title"/>
 									<span id="block-search-results-multipoints-number"></span>
 								</h4>
 								<div class="panel-inner">
-									<table id="instMupResults" class="text-grey installation-table">
+									<table id="instMupResults">
 										<thead>
-											<tr class="table-title">
+											<tr>
 												<th> &nbsp;&nbsp;&nbsp; <s:text name="webportal.search.results.multipoint.id"/></th>
 												<th><s:text name="webportal.search.results.multipoint.code"/></th>
 												<th><s:text name="webportal.search.results.multipoint.domain"/></th>
@@ -188,7 +188,7 @@
 					</div>
 					<div class="big-row">
 						<div class="large-12 columns">
-							<div class="panel-outer" id="block-search-results-cases">
+							<div class="panel-outer" id="block-search-results-cases" style="display: none;">
 								<h4 class="panel-heading">
 									<i class="fi-graph-trend colorHeading"></i>
 									<s:text name="webportal.search.results.case.title"/>

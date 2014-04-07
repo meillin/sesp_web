@@ -51,7 +51,7 @@
 }
 
 #block-search-results table{
-	width: 90%;
+	width: 100%;
 	border: none;
 	background: none;
 }
@@ -68,3 +68,6 @@
 	background: none;
 }
 
+#block-search-results td{
+	border-top: 1px solid #e7e7e7;
+}

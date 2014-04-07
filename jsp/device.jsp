@@ -65,11 +65,11 @@
 			<%@ include file="headerv311.inc"%>			
 
 			<div id="main-content">
-
-				<div class="title-large-block large-block text-grey">
-					<s:text name='webportal.device.results.title'/> : <span id="device-id" class=" text-light-grey"></span>
+				<div class="big-row">
+					<div class="large-12 columns">
+						<h2 style="margin-top: 50px;"><s:text name='webportal.device.results.title'/> : <span id="device-id" class=" text-light-grey"></span></h2>
+					</div>
 				</div>
-
 				<div class="small-block block retractable" id="block-overview">
 					<div class="block-title">
 						<span class="block-title-picto"></span>
@@ -78,9 +78,7 @@
 					</div>
 					<div class="content-wrapper">
 						<div class="content">
-						
 						<div class="legend-block text-grey">
-						
 							<table id="overview-table">
 							<tr>
 								<td> <div class="legend-block-title"> <s:text name='webportal.device.overview.device.type'/> : </div> </td>
@@ -119,7 +117,6 @@
 								<td> <div class="legend-block-content text-light-grey" id="block-overview-stock-site"></div> </td>
 							</tr>
 							</table>
-	
 							</div>
 							<div class="status text-green" id="block-overview-status"> </div>
 						</div>
@@ -149,7 +146,6 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="large-block block retractable" id="block-hardware-configuration">
 					<div class="block-title">
 						<span class="block-title-picto"></span>
@@ -174,7 +170,6 @@
 					</div>
 					<br/>
 				</div>
-
 				<div class="large-block block block-accordion" id="block-history">
 					<div class="block-title">
 						<span class="block-title-picto"></span>
@@ -184,7 +179,6 @@
 					</div>
 					<div class="content-wrapper">
 						<div class="content">
-
 							<ul class="accordion">
 								<li class="toggleSubMenu" id="block-history-installation">
 									<span class="accordion-title">&#149; <span class="accordion-title-name"><s:text name='webportal.device.history.installation.title'/></span> <span id="block-device-installations-number" class="number"> </span><div class="accordion-arrow close"></div></span>
@@ -290,16 +284,10 @@
 									</ul>
 								</li>
 							</ul>
-
 						</div>
 					</div>
 				</div>
-
 			</div>
-			
-			<!-- Footer -->
-			<%@ include file="footerv311.inc"%>
-
 		</div>
 	</body>
 </html>
