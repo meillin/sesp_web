@@ -30,9 +30,7 @@
 
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/colResizable-1.3.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-ui-1.10.2.custom.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/bootstrap-datepicker.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.multiselect.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>

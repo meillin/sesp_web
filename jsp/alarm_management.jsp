@@ -40,7 +40,6 @@
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.selectBox.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/bootstrap-datepicker.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.multiselect.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/colResizable-1.3.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>

@@ -259,8 +259,8 @@ symbolCounter++;
 		</div>
 
 		<div class="page-name">
-			<div class="large-12 columns" >
-				<h2 class="page-name-heading"><s:text name="areaprogress.area"/> : <span id="area-name"></span></h2>
+			<div class="large-12 columns">
+				<h2 class="page-name-heading">Area: <span id="area-name"></span>Missing Milestone Area</h2>
 			</div>
 		</div>
 		<!-- start of new full width row -->
@@ -332,6 +332,7 @@ symbolCounter++;
 						</div>
 					</div>
 	</div><!-- end of new full width row -->
+	<div class="wrapper-blur"></div>
 
 </div><!-- end of wrapper -->
 <script>
