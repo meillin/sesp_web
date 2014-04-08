@@ -6,14 +6,26 @@
     font-weight: bold;
 }
 
-
 .total-progress{
  width: 30%
 }
-
 .work-order-progress{
  width: 40%
 }
 .detailed-progress{
  width: 30%
+}
+.header-selection {
+	float: left;
+	font-size: 1em;
+	font-weight: bold;
+	width: 10%;
+	margin-top: 61px;
+}
+.page-name-heading {
+	width: 15%;
+	float: left;
+}
+.details .panel-heading {
+	height: 50px;
 }

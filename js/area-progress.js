@@ -390,6 +390,8 @@ function showWorkOrderTypes(data){
 
 function drawChart1(data) {
 
+	/*
+
 	console.log('function drawChart1() called');
 
 	showWorkOrderProgressCharts();

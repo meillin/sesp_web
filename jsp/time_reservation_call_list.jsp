@@ -156,7 +156,7 @@
 			<div class="big-row">
 				<div class="large-12 columns">
 					<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Area Progress</h4>
+						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Search results</h4>
 							<div class="panel-inner">
 								<div id="callListGridDiv"></div>
 								<table id="block-time-reservation-call-list-table">
@@ -262,6 +262,7 @@
 					</div>
 				</div>
 			</div>
+	<div class="wrapper-blur"></div>
 
 		</div>
 		<iframe id="myIFrm" name="myIFrm" src="" style="height: 0px; visibility: hidden"> </iframe>

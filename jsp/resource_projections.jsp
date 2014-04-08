@@ -32,29 +32,28 @@
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/bubble-map.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
 
-		<script type="text/javascript" src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/bootstrap-datepicker.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/colResizable-1.3.min.js"></script>
+		<script src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
+		<script src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
+		<script src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
+		<script src="<%=contextPath%>/js/bootstrap-datepicker.js"></script>
 
-		<script type="text/javascript" src="<%=contextPath%>/js/jquery.multiselect.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/jquery.cookie.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/init.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/common.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/resource_projections.js"></script>
+		<script src="<%=contextPath%>/js/jquery.multiselect.js"></script>
+		<script src="<%=contextPath%>/js/jquery.cookie.js"></script>
+		<script src="<%=contextPath%>/js/init.js"></script>
+		<script src="<%=contextPath%>/js/common.js"></script>
+		<script src="<%=contextPath%>/js/resource_projections.js"></script>
 		<script src="<%=contextPath%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
 
 		<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/js/images/favicon.png" />
-		<script type="text/javascript" src="<%=contextPath%>/js/OpenLayers.js"></script>
+		<script src="<%=contextPath%>/js/OpenLayers.js"></script>
 
-		<script type="text/javascript" src="<%=contextPath%>/js/highchart/highcharts.js"></script>
+		<script src="<%=contextPath%>/js/highchart/highcharts.js"></script>
 
 		<script src="<%=contextPath%>/js/map.js"></script>
 		<script src="<%=contextPath%>/js/sesp_ajax.js"></script>
 		<script src="<%=contextPath%>/js/spin.js"></script>
 		<script src="<%=contextPath%>/js/ajax-loader.js"></script>
-		<script type="text/javascript" src="<%=contextPath%>/js/search-results.js"></script>
+		<script src="<%=contextPath%>/js/search-results.js"></script>
 
 		<script>
 			contextPath = "<%=contextPath%>";
@@ -96,7 +95,7 @@
 							</div>
 							<div class="row">
 								<div class="small-12 columns">
-									<label>Period type</label>
+									<label>Planning period type</label>
 									<select>
 										<option value="week">week</option>
 										<option value="month">month</option>
@@ -135,7 +134,7 @@
 							<div class="row">
 								<div class="small-12 columns">
 									<br/>
-									<a id="block-time-button-update" onclick="javascript:updatePlanningPeriod()" class="button tiny"><s:text name="webportal.resourceprojections.time.update"/></a>
+									<a id="block-time-button-update" onclick="javascript:updatePlanningPeriod()" class="button tiny">Search</a>
 								</div>
 							</div>
 						</div>

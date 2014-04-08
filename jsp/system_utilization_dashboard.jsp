@@ -21,6 +21,7 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-system-utilization-dashboard.css" />
+		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/general.css">
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
 		<script src="<%=request.getContextPath()%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
@@ -42,83 +43,80 @@
 
 			<div class="large-3 columns full-height">
 
-				<div class="row height-40">
-					<div class="large-12 columns column-body">
-						<div class="row column-header">
-							<div class="large-12 columns"><i class="fi-graph-pie"></i> Import servers</div>
-						</div>
-						<div class="row">
-							<div class="small-6 columns">
-								<label>CPU</label>
-								<div id="import-servers-cpu"></div>
+				<div class="row height-40 panel-outer">
+						<h4 class="panel-heading">
+							<i class="fi-graph-pie"></i> Import servers
+						</h4>
+						<div class="panel-inner">
+							<div class="row">
+								<div class="small-6 columns">
+									<label>CPU</label>
+									<div id="import-servers-cpu"></div>
+								</div>
+								<div class="small-6 columns">
+									<label>Import threads</label>
+									<div id="import-servers-import-threads"></div>
+								</div>
 							</div>
-							<div class="small-6 columns">
-								<label>Import threads</label>
-								<div id="import-servers-import-threads"></div>
+							<div class="row">
+								<div class="large-12 columns">
+									<label>Memory</label>
+									<div id="import-servers-memory" ></div>
+								</div>
 							</div>
 						</div>
-						<div class="row">
-							<div class="large-12 columns">
-								<label>Memory</label>
-								<div id="import-servers-memory" ></div>
+				</div>
+
+				<div class="row height-40 panel-outer">
+						<h4 class="panel-heading">
+							<i class="fi-graph-pie"></i> Export servers
+						</h4>
+						<div class="panel-inner">
+							<div class="row">
+								<div class="small-6 columns">
+									<label>CPU</label>
+									<div id="export-servers-cpu"></div>
+								</div>
+								<div class="small-6 columns">
+									<label>Export threads</label>
+									<div id="export-servers-export-threads"></div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-12 columns">
+									<label>Memory</label>
+									<div id="export-servers-memory" ></div>
+									</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="row height-40">
-					<div class="large-12 columns column-body">
-						<div class="row column-header">
-							<div class="large-12 columns"><i class="fi-graph-pie"></i> Export servers</div>
-						</div>
+				<div class="row height-20 panel-outer">
+					<h4 class="panel-heading">
+						<i class="fi-graph-pie"></i> Transaction servers
+					</h4>
+					<div class="panel-inner">
 						<div class="row">
-							<div class="small-6 columns">
-								<label>CPU</label>
-								<div id="export-servers-cpu"></div>
-							</div>
-							<div class="small-6 columns">
-								<label>Export threads</label>
-								<div id="export-servers-export-threads"></div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="large-12 columns">
-								<label>Memory</label>
-								<div id="export-servers-memory" ></div>
-
+								<div class="small-6 columns">
+									<label>CPU</label>
+									<div id="transaction-servers-cpu"></div>
+								</div>
+								<div class="small-6 columns">
+									<label>Memory</label>
+									<div id="transaction-servers-memory"></div>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-
-				<div class="row height-20">
-					<div class="large-12 columns column-body">
-						<div class="row column-header">
-							<div class="large-12 columns"><i class="fi-graph-pie"></i> Transaction servers</div>
-						</div>
-						<div class="row">
-							<div class="small-6 columns">
-								<label>CPU</label>
-								<div id="transaction-servers-cpu"></div>
-							</div>
-							<div class="small-6 columns">
-								<label>Memory</label>
-								<div id="transaction-servers-memory"></div>
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 
 			<div class="large-5 columns full-height">
-				<div class="row height-50">
-					<div class="large-12 columns column-body">
+				<div class="row height-50 panel-outer">
 
-						<div class="row column-header">
-							<div class="large-12 columns"><i class="fi-graph-trend"></i> Import statistics</div>
+						<div class="panel-heading">
+							<h4><i class="fi-graph-trend"></i> Import statistics</h4>
 						</div>
-
-						<div class="row height-50">
+						<div class="height-50 panel-inner">
 							<div class="large-6 columns">
 								<div>Files</div>
 								<div id="import-statistics-files"></div>
@@ -144,65 +142,63 @@
 								<div class="row">
 									<div class="large-12 columns text-center">
 										<strong>
-										<div>Messages received</div>
-										<div id="import-statistics-messages-received">110</div>
-									</strong>
+											<div>Messages received</div>
+											<div id="import-statistics-messages-received">110</div>
+										</strong>
 									</div>
 								</div>
 							</div>
-						</div>
 
-						<div class="row">
-						<div class="large-12 columns">
-						<table id="import-statistics-table">
-								<thead>
-									<tr>
-									<th>ID</th>
-									<th>Timestamp</th>
-									<th>File type</th>
-									<th>Status</th>
-									<th>Size</th>
-									<th>Rec.count</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>es Here</td>
-										<td>longer ct</td>
-										<td>es Here</td>
-										<td>es Here</td>
-										<td>es Here</td>
-										<td>es Here</td>
-									</tr>
-									<tr>
-										<td>es Here</td>
-										<td>longer Co</td>
-										<td>es Here</td>
-										<td>es Here</td>
-										<td>es Here</td>
-										<td>es Here</td>
-									</tr>
-									<tr>
-										<td>es Here</td>
-										<td>longer Co</td>
-										<td>es Here</td>
-										<td>es Here</td>
-										<td>es Here</td>
-										<td>es Here</td>
-									</tr>
-								</tbody>
-							</table>
+							<div class="row">
+								<div class="large-12 columns">
+									<table id="import-statistics-table">
+											<thead>
+												<tr>
+												<th>ID</th>
+												<th>Timestamp</th>
+												<th>File type</th>
+												<th>Status</th>
+												<th>Size</th>
+												<th>Rec.count</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>es Here</td>
+													<td>longer ct</td>
+													<td>es Here</td>
+													<td>es Here</td>
+													<td>es Here</td>
+													<td>es Here</td>
+												</tr>
+												<tr>
+													<td>es Here</td>
+													<td>longer Co</td>
+													<td>es Here</td>
+													<td>es Here</td>
+													<td>es Here</td>
+													<td>es Here</td>
+												</tr>
+												<tr>
+													<td>es Here</td>
+													<td>longer Co</td>
+													<td>es Here</td>
+													<td>es Here</td>
+													<td>es Here</td>
+													<td>es Here</td>
+												</tr>
+											</tbody>
+									</table>
+								</div>
+							</div>
 						</div>
-						</div>
-					</div>
 				</div>
 
-				<div class="row height-50">
-					<div class="large-12 columns column-body">
-						<div class="row column-header">
-							<div class="large-12 columns"><i class="fi-graph-trend"></i> Export statistics</div>
-						</div>
-
+				<div class="row height-50 panel-outer">
+					<div class="panel-heading">
+						<h4><i class="fi-graph-trend"></i> Export statistics</h4>
+					</div>
+					<div class="panel-inner">
 						<div class="row">
 							<div class="large-6 columns">
 								<div>Files</div>
@@ -230,7 +226,6 @@
 								</div>
 							</div>
 						</div>
-
 						<div class="row">
 							<div class="large-12 columns">
 								<table id="export-statistics-table">
@@ -278,11 +273,9 @@
 			</div>
 
 			<div class="large-4 columns full-height">
-				<div class="row height-45">
-					<div class="large-12 columns column-body">
-						<div class="row column-header">
-							<div class="large-12 columns"><i class="fi-torsos-all"></i> Users</div>
-						</div>
+				<div class="row height-45 panel-outer">
+					<h4 class="panel-heading"><i class="fi-torsos-all"></i> Users</h4>
+					<div class="panel-inner">
 						<div class="row">
 							<div class="large-12 columns">
 								<div>Users in system</div>
@@ -298,11 +291,9 @@
 					</div>
 				</div>
 
-				<div class="row height-45">
-					<div class="large-12 columns column-body">
-						<div class="row column-header">
-							<div class="large-12 columns"><i class="fi-alert"></i> Errors</div>
-						</div>
+				<div class="row height-45 panel-outer">
+					<h4 class="panel-heading"><i class="fi-alert"></i> Errors</h4>
+					<div class="panel-inner">
 						<div class="row">
 							<div class="large-12 columns">
 								<div>Errors today</div>
@@ -354,11 +345,9 @@
 					</div>
 				</div>
 
-				<div class="row height-10">
-					<div class="large-12 columns column-body">
-						<div class="row column-header">
-							<div class="large-12 columns"><i class="fi-wrench"></i> Work orders</div>
-						</div>
+				<div class="row height-10 panel-outer">
+					<h4 class="panel-heading"><i class="fi-wrench"></i> Work orders</h4>
+					<div class="panel-inner">
 						<div class="row">
 							<div class="large-12 columns">
 								<div>Sent to PDAs today</div>

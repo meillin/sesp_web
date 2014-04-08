@@ -29,14 +29,14 @@ function drawWorkOrderProgress() {
                 dataLabels: {
                     enabled: false
                 },
-                center: [100, 110],
+                center: [120, 110],
                 showInLegend: true
             }
         },
         series: [{
             type: 'pie',
             name: 'Work order progress',
-            size: '60%',
+            size: '100%',
             data: [
                 ['Performed within plan', 2100],
                 ['Unplanned', 500],
@@ -126,7 +126,7 @@ function drawDetailedProgress() {
     });
 }
 var colors = Highcharts.getOptions().colors;
-function drawWorkOrderStatus() {
+function drawAreaStatus() {
        var categories = ['Performed', 'Not performed', 'Not planned', 'Not performed final', 'Opera'],
         name = '',
         data = [{
@@ -237,9 +237,9 @@ function drawWorkOrderStatus() {
         }]
     });
 }
- drawWorkOrderProgress();
-    drawDetailedProgress();
-        drawWorkOrderStatus();
+drawWorkOrderProgress();
+drawDetailedProgress();
+drawAreaStatus();
 
 $('#block-work-order-tab2').click(function(){
     $('.show').hide();

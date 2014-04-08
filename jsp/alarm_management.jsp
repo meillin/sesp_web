@@ -34,19 +34,19 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/style.tidy.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/bubble-map.css"/>
 
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-ui-1.10.2.custom.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.selectBox.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/bootstrap-datepicker.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.multiselect.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/search-results.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/alarm-management.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/OpenLayers.js"></script>
+		<script src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
+		<script src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
+		<script src="<%=request.getContextPath()%>/js/jquery-ui-1.10.2.custom.js"></script>
+		<script src="<%=request.getContextPath()%>/js/jquery.selectBox.js"></script>
+		<script src="<%=request.getContextPath()%>/js/bootstrap-datepicker.js"></script>
+		<script src="<%=request.getContextPath()%>/js/jquery.multiselect.js"></script>
+		<script src="<%=request.getContextPath()%>/js/common.js"></script>
+		<script src="<%=request.getContextPath()%>/js/init.js"></script>
+		<script src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
+		<script src="<%=request.getContextPath()%>/js/search-results.js"></script>
+		<script src="<%=request.getContextPath()%>/js/alarm-management.js"></script>
+		<script src="<%=request.getContextPath()%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
+		<script src="<%=request.getContextPath()%>/js/OpenLayers.js"></script>
 
 		<script src="<%=request.getContextPath()%>/js/map.js"></script>
 		<script src="<%=request.getContextPath()%>/js/spin.js"></script>
@@ -291,7 +291,7 @@
 			<div class="big-row"><!-- start of new full width row -->
 				<div class="large-6 columns">
 					<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Work order progress</h4>
+						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Map view</h4>
 						<div class="panel-inner">
 							<div style = "height:660px;width:100%;opacity:0.99;" id="map-wrapper"></div>
 						</div>
@@ -330,7 +330,7 @@
 					</div>
 				</div><!-- end of chart-container -->
 			</div><!-- end of big-row -->
-
+		<div class="wrapper-blur"></div>
 		</div><!-- end of wrapper -->
 		<script>
 		getChartTitle("A");

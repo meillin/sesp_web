@@ -246,6 +246,8 @@
 						</div>
 					</div>
 				</form>
+					<div class="wrapper-blur"></div>
+
 	</div>
 	<iframe id="myIFrm" name="myIFrm" src="" style="height: 0px; visibility: hidden"> </iframe>
 	<input type="hidden" name="imgfilenames" id="imgfilenames"/>

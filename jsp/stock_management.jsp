@@ -36,18 +36,17 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/bubble-map.css"/>
 
 
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/colResizable-1.3.min.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.cookie.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-ui-1.10.2.custom.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/bootstrap-datepicker.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.multiselect.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/stock-management.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/search-results.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/OpenLayers.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
+		<script src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
+		<script src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
+		<script src="<%=request.getContextPath()%>/js/init.js"></script>
+		<script src="<%=request.getContextPath()%>/js/jquery.cookie.js"></script>
+		<script src="<%=request.getContextPath()%>/js/jquery-ui-1.10.2.custom.js"></script>
+		<script src="<%=request.getContextPath()%>/js/bootstrap-datepicker.js"></script>
+		<script src="<%=request.getContextPath()%>/js/jquery.multiselect.js"></script>
+		<script src="<%=request.getContextPath()%>/js/stock-management.js"></script>
+		<script src="<%=request.getContextPath()%>/js/search-results.js"></script>
+		<script src="<%=request.getContextPath()%>/js/OpenLayers.js"></script>
+		<script src="<%=request.getContextPath()%>/js/common.js"></script>
 
 		<script src="<%=request.getContextPath()%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
 		<script src="<%=request.getContextPath()%>/js/map.js"></script>
@@ -205,14 +204,14 @@
 			<div class="big-row">
 				<div class="large-6 columns">
 					<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-trend size-24 colorHeading"></i> ON PALLET</h4>
+						<h4 class="panel-heading"><i class="fi-graph-trend size-24 colorHeading"></i> On pallet</h4>
 						<div class="panel-inner">
 							<div id="tabs-wrapper" >
 								<a id="block-on-pallet-tab1" class="tiny button selected" onclick="javascript:updateUnitStatus('fromSupplier')">From supplier</a>
 								<a id="block-on-pallet-tab2" class="tiny button" onclick="javascript:updateUnitStatus('inStock')">In stock</a>
 								<a id="block-on-pallet-tab3" class="tiny button" onclick="javascript:updateUnitStatus('onPallet')">On pallet</a>
 							</div>
-							<div style="width: 100%; height: 660px; opacity:0.99;" id="map-wrapper" ></div>
+							<div style="width: 100%; height: 600px; opacity:0.99;" id="map-wrapper" ></div>
 						</div>
 					</div>
 				</div>
@@ -251,7 +250,7 @@
 						</div>
 					</div>
 				</div>
-					<div class="wrapper-blur"></div>
+		<div class="wrapper-blur"></div>
 
 			</div><!-- end of wrapper -->
 		</body>

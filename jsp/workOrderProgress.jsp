@@ -29,24 +29,24 @@
 	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/bubble-map.css"/>
 	<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />
 
-	<script type="text/javascript" src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
-	<script type="text/javascript" src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
-	<script type="text/javascript" src="<%=contextPath%>/js/bootstrap-datepicker.js"></script>
-	<script type="text/javascript" src="<%=contextPath%>/js/jquery.multiselect.js"></script>
-	<script type="text/javascript" src="<%=contextPath%>/js/jquery.cookie.js"></script>
-	<script type="text/javascript" src="<%=contextPath%>/js/init.js"></script>
-	<script type="text/javascript" src="<%=contextPath%>/js/common.js"></script>
-	<script type="text/javascript" src="<%=contextPath%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
-	<script type="text/javascript" src="<%=contextPath%>/js/OpenLayers.js"></script>
-	<script type="text/javascript" src="<%=contextPath%>/js/sesp_ajax.js"></script>
-	<script type="text/javascript" src="<%=contextPath%>/js/spin.js"></script>
-	<script type="text/javascript" src="<%=contextPath%>/js/map.js"></script>
-	<script type="text/javascript" src="<%=contextPath%>/js/ajax-loader.js"></script>
-	<script type="text/javascript" src="<%=contextPath%>/js/work-order-progress.js"></script>
-	<script type="text/javascript" src="<%=contextPath%>/js/search-results.js"></script>
+	<script src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
+	<script src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
+	<script src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
+	<script src="<%=contextPath%>/js/bootstrap-datepicker.js"></script>
+	<script src="<%=contextPath%>/js/jquery.multiselect.js"></script>
+	<script src="<%=contextPath%>/js/jquery.cookie.js"></script>
+	<script src="<%=contextPath%>/js/init.js"></script>
+	<script src="<%=contextPath%>/js/common.js"></script>
+	<script src="<%=contextPath%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
+	<script src="<%=contextPath%>/js/OpenLayers.js"></script>
+	<script src="<%=contextPath%>/js/sesp_ajax.js"></script>
+	<script src="<%=contextPath%>/js/spin.js"></script>
+	<script src="<%=contextPath%>/js/map.js"></script>
+	<script src="<%=contextPath%>/js/ajax-loader.js"></script>
+	<script src="<%=contextPath%>/js/work-order-progress.js"></script>
+	<script src="<%=contextPath%>/js/search-results.js"></script>
 
-	<script type="text/javascript" src="<%=contextPath%>/js/highchart/highcharts.js"></script>
+	<script src="<%=contextPath%>/js/highchart/highcharts.js"></script>
 
 </head>
 <script>
@@ -195,24 +195,24 @@ var bci = 0;
 							<div class="medium-12 columns">
 								<label>Date interval</label>
 								<select id="filter-select-date-interval" onchange="show()">
-									<option value="lastweek" selected="selected"><s:text name="webportal.alarm.dateinterval.lastweek"/></option>
-									<option value="today"><s:text name="webportal.alarm.dateinterval.today"/></option>
-									<option value="lastmonth"><s:text name="webportal.alarm.dateinterval.lastmonth"/></option>
-									<option value="lastquarter"><s:text name="webportal.alarm.dateinterval.lastquarter"/></option>
-									<option value="lastyear"><s:text name="webportal.alarm.dateinterval.lastyear"/></option>
-									<option value="custominterval"><s:text name="webportal.alarm.dateinterval.custominterval"/></option>
+									<option value="lastweek" selected="selected">Last week</option>
+									<option value="today">Today</option>
+									<option value="lastmonth">Last month</option>
+									<option value="lastquarter">Last quarter</option>
+									<option value="lastyear">Last year</option>
+									<option value="custominterval">Custom interval</option>
 								</select>
 							</div>
 						</div>
 						<div class="row">
 							<div class="medium-6 columns">
-								<label><s:text name="workorderprogress.filters.from"/> :</label>
+								<label>From:</label>
 								<div class="custom-input-datepicker input-append date" data-date="2012-02-12" data-date-format="yyyy-mm-dd">
 									<input id="filter-date-from" type="text" class="input-datepicker text-red"  readonly="readonly"/>
 								</div>
 							</div>
 							<div class="medium-6 columns">
-								<label><s:text name="workorderprogress.filters.to"/> :</label>
+								<label>To:</label>
 								<div class="custom-input-datepicker input-append date"  data-date="12-02-2012" data-date-format="yyyy-mm-dd">
 									<input id="filter-date-to" type="text" class="input-datepicker text-red"  readonly="readonly"/>
 								</div>
@@ -241,14 +241,8 @@ var bci = 0;
 				</div>
 
 				<div class="big-row"><!-- start of new full width row -->
-					<div class="large-12 columns fillter">
-						<div class="submit-button">
-							<div class="row text-center">
-								<div class="large-12 columns">
-									<a class="button" id="block-filter-button-update" onclick="filter_submit()"><s:text name="workorderprogress.filters.update"/></a>
-								</div>
-							</div>
-						</div><!-- end of submit-button -->
+					<div class="large-12 columns fillter text-center">
+						<a class="button" id="block-filter-button-update" onclick="filter_submit()">Update</a>
 					</div><!-- end of filter -->
 				</div><!-- end of new full width row -->
 			</div>
@@ -256,53 +250,78 @@ var bci = 0;
 
 		<div class="big-row">
 				<div class="large-12 columns">
-					<h2 class="page-name-heading">Work order progress</h2>
+					<h2 class="page-name-heading">Work order/Area</h2>
+					<select class="header-selection">
+						<option value="progress">Progress</option>
+						<option value="status">Status</option>
+						<option value="details">Details</option>
+					</select>
 				</div>
 		</div>
 
-			<div class="big-row">
-				<div class="large-6 columns">
-					<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-pie"></i> Work order status</h4>
-						<div class="panel-inner" id="work-order-status">
-							<!--
-							<div id="block-work-order-status-chart"></div>
-							<div id="block-work-order-status-chart-right" class="right"></div>-->
-						</div>
-					</div>
+		<div class="big-row progress">
+			<div class="large-6 columns">
+				<div class="panel-outer">
+					<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Work order progress</h4>
+					<div class="panel-inner" id="work-order-progress"></div>
 				</div>
-				<div class="large-6 columns">
-					<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-pie"></i> Work order progress</h4>
-						<div class="panel-inner" id="work-order-progress"></div>
+			</div>
+
+			<div class="large-6 columns">
+				<div class="panel-outer">
+					<h4 class="panel-heading"><i class="fi-graph-horizontal colorHeading"></i> Area progress</h4>
+					<div class="panel-inner" id="area-progress"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="big-row hide status">
+			<div class="large-6 columns">
+				<div class="panel-outer">
+					<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Work order status</h4>
+					<div class="panel-inner" id="work-order-status">
+						<!--
+						<div id="block-work-order-status-chart"></div>
+						<div id="block-work-order-status-chart-right" class="right"></div>-->
 					</div>
 				</div>
 			</div>
 
-			<div class="big-row">
-
-				<div class="large-6 columns">
-					<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-horizontal"></i> Area progress</h4>
-						<div class="panel-inner" id="area-progress"></div>
-					</div>
+			<div class="large-6 columns">
+				<div class="panel-outer">
+					<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Area status</h4>
+					<div class="panel-inner" id="area-status"></div>
 				</div>
+			</div>
+		</div>
 
-				<div class="large-6 columns">
+		<div class="big-row hide details">
+			<div class="large-6 columns">
+						<!--
 					<div class="panel-outer">
 						<h4 class="panel-heading"><i class="fi-graph-horizontal"></i> Total progress</h4>
 						<div class="panel-inner" id="total-progress"></div>
 					</div>
-
-					<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-bar"></i> Detailed progress</h4>
-							<div class="panel-inner" id="detailed-progress"></div>
-					</div>
+				-->
+				<div class="panel-outer">
+					<h4 class="panel-heading">
+						<div class="large-9 columns">
+							<i class="fi-graph-bar colorHeading"></i> Detailed progress
+						</div>
+						<div class="large-3 columns">
+							<select>
+								<option>Week</option>
+								<option>Month</option>
+								<option>Year</option>
+							</select>
+						</div>
+					</h4>
+						<div class="panel-inner" id="detailed-progress"></div>
 				</div>
 			</div>
-
-
+		</div>
+	<div class="wrapper-blur"></div>
 	</div><!-- end of wrapper -->
-	<script type="text/javascript" src="<%=contextPath%>/js/highchart/example-chart.js"></script>
+	<script src="<%=contextPath%>/js/highchart/example-chart.js"></script>
 </body>
 </html>

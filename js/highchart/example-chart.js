@@ -66,11 +66,15 @@ $( document ).ready(function() {
         $('#work-order-status').highcharts({
             chart: {
                 type: 'pie',
-                height: 300,
+                height: 500,
                 width: ''
+            },
+            title: {
+                text: ''
             },
             plotOptions: {
                 pie: {
+                    allowPointSelect: true,
                     shadow: false,
                     center: ['50%', '50%']
                 }
@@ -92,8 +96,8 @@ $( document ).ready(function() {
             }, {
                 name: 'Versions',
                 data: versionsData,
-                size: '70%',
-                innerSize: '50%',
+                size: '80%',
+                innerSize: '60%',
                 dataLabels: {
                     formatter: function() {
                         // display only if larger than 1
@@ -103,6 +107,7 @@ $( document ).ready(function() {
             }]
         });
     }
+    /*
     function drawTotalProgress() {
        $('#total-progress').highcharts({
                 chart: {
@@ -145,7 +150,7 @@ $( document ).ready(function() {
                     data: [65]
                 }]
             });
-    }
+    }*/
     function drawWorkOrderProgress() {
     // Build the chart
         $('#work-order-progress').highcharts({
@@ -153,7 +158,7 @@ $( document ).ready(function() {
                 plotBackgroundColor: null,
                 plotBorderWidth: null,
                 plotShadow: false,
-                height: 300
+                height: 500
             },
             legend: {
                 layout: 'vertical',
@@ -276,7 +281,7 @@ $( document ).ready(function() {
         $('#area-progress').highcharts({
             chart: {
                 type: 'bar',
-                height: 660
+                height: 500
             },
             title: {
                 text: ''
@@ -310,12 +315,123 @@ $( document ).ready(function() {
                     }]
                 });
         }
+function drawAreaStatus() {
+       var categories = ['Performed', 'Not performed', 'Not planned', 'Not performed final', 'Opera'],
+        name = '',
+        data = [{
+                y: 10000,
+                color: colors[0],
+                drilldown: {
+                    name: 'Performed versions',
+                    categories: ['Performed'],
+                    data: [10000],
+                    color: colors[0]
+                }
+            }, {
+                y: 1000,
+                color: colors[1],
+                drilldown: {
+                    name: 'Not performed versions',
+                    categories: ['Not performed'],
+                    data: [1000],
+                    color: colors[1]
+                }
+            }, {
+                y: 1000,
+                color: colors[2],
+                drilldown: {
+                    name: 'Not planned versions',
+                    categories: ['Not planned versions'],
+                    data: [1000],
+                    color: colors[2]
+                }
+            }, {
+                y: 5470,
+                color: colors[3],
+                drilldown: {
+                    name: 'Not performed final versions',
+                    categories: ['With time reservation', 'Missed time reservation', 'Planned', 'Saved with errors', 'Undefined'],
+                    data: [2500, 2000, 470, 300, 200],
+                    color: colors[3]
+                }
+            }];
+    // Build the data arrays
+    var browserData = [];
+    var versionsData = [];
+    for (var i = 0; i < data.length; i++) {
 
+        // add browser data
+        browserData.push({
+            name: categories[i],
+            y: data[i].y,
+            color: data[i].color
+        });
+
+        // add version data
+        for (var j = 0; j < data[i].drilldown.data.length; j++) {
+            var brightness = 0.2 - (j / data[i].drilldown.data.length) / 5 ;
+            versionsData.push({
+                name: data[i].drilldown.categories[j],
+                y: data[i].drilldown.data[j],
+                color: Highcharts.Color(data[i].color).brighten(brightness).get()
+                });
+            }
+    }
+    // Create the chart
+    $('#area-status').highcharts({
+        chart: {
+            type: 'pie',
+            height: 500,
+            width: ''
+        },
+        title: {
+            text: ''
+        },
+        yAxis: {
+            title: {
+                text: 'Total percent market share'
+            }
+        },
+        plotOptions: {
+            pie: {
+                shadow: false,
+                center: ['50%', '50%']
+            }
+        },
+        tooltip: {
+            valueSuffix: ''
+        },
+        series: [{
+            name: 'Work Order',
+            data: browserData,
+            size: '60%',
+            dataLabels: {
+                formatter: function() {
+                    //return this.y > 5 ? this.point.name : null;
+                },
+                color: 'white',
+                distance: -30
+            }
+        }, {
+            name: 'Versions',
+            data: versionsData,
+            size: '80%',
+            innerSize: '60%',
+            dataLabels: {
+                formatter: function() {
+                    // display only if larger than 1
+                    return this.y > 1 ? '<b>'+ this.point.name +':</b> '+ this.y +''  : null;
+                }
+            }
+        }]
+    });
+}
     drawDetailedProgress();
     drawWorkOrderStatus();
-    drawTotalProgress();
+    //drawTotalProgress();
     drawWorkOrderProgress();
     drawAreaProgress();
+    drawAreaStatus();
 });
 
 

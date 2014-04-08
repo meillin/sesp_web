@@ -1,7 +1,8 @@
 
 $('#block-work-order-type-analysis-chart').highcharts({
     chart: {
-        type: 'bar'
+        type: 'bar',
+        height: 300
     },
     title: {
         text: ''

@@ -36,21 +36,18 @@ document.createElement("figure");
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/bubble-map.css"/>
 <link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />
 
-<script type="text/javascript" src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
-<script type="text/javascript" src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
-<script type="text/javascript" src="<%=contextPath%>/js/bootstrap-datepicker.js"></script>
-<script type="text/javascript" src="<%=contextPath%>/js/jquery.multiselect.js"></script>
-<script type="text/javascript" src="<%=contextPath%>/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/colResizable-1.3.min.js"></script>
-<script type="text/javascript" src="<%=contextPath%>/js/init.js"></script>
-<script type="text/javascript" src="<%=contextPath%>/js/common.js"></script>
-<script type="text/javascript" src="<%=contextPath%>/js/search-results.js"></script>
-<script type="text/javascript" src="<%=contextPath%>/js/OpenLayers.js"></script>
-<script src="<%=contextPath%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
-
-<script type="text/javascript" src="<%=contextPath%>/js/area-progress.js"></script>
-<script type="text/javascript" src="<%=contextPath%>/js/highchart/highcharts.js"></script>
+<script src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
+<script src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
+<script src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
+<script src="<%=contextPath%>/js/bootstrap-datepicker.js"></script>
+<script src="<%=contextPath%>/js/jquery.multiselect.js"></script>
+<script src="<%=contextPath%>/js/jquery.cookie.js"></script>
+<script src="<%=contextPath%>/js/init.js"></script>
+<script src="<%=contextPath%>/js/common.js"></script>
+<script src="<%=contextPath%>/js/search-results.js"></script>
+<script src="<%=contextPath%>/js/OpenLayers.js"></script>
+<script src="<%=contextPath%>/js/area-progress.js"></script>
+<script src="<%=contextPath%>/js/highchart/highcharts.js"></script>
 
 
 <script src="<%=contextPath%>/js/map.js"></script>
@@ -339,6 +336,6 @@ symbolCounter++;
 	loadvalues();
 
 </script>
-<script type="text/javascript" src="<%=contextPath%>/js/highchart/area-progress-chart.js"></script>
+<script src="<%=contextPath%>/js/highchart/area-progress-chart.js"></script>
 </body>
 </html>

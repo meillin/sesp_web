@@ -1,16 +1,16 @@
 var contextPath;
 var refreshInterval=1;
 
-function startDashboard() {	
+function startDashboard() {
 	getServerStats();
-	
+
 	getExportStatistics();
 	getImportStatistics();
 	getNoOfWOSent2PDA();
-	getUserStatistics();	
+	getUserStatistics();
 	getErrorStatistics();
-	
-	
+
+
 	startUpdateDashboard();
 	//testImportStatistics("");
 	//testExportStatistics("");
@@ -26,13 +26,13 @@ function startUpdateDashboard() {
 }
 
 
-/** 
+/**
  * Dashboard Column 1 Start
  */
 
 function getServerStats() {
 	var obj = {};
-	obj.url = contextPath + "/std/ServerStats.action";	
+	obj.url = contextPath + "/std/ServerStats.action";
 	obj.successfunc = populateServerStats;
 	obj.errorfunc = errorServerData;
 	run_ajax_json(obj);
@@ -40,19 +40,17 @@ function getServerStats() {
 }
 
 function populateServerStats(sysDashboardData) {
-	
+
 	populateImpServerStats(sysDashboardData);
 	populateExpServerStats(sysDashboardData);
 	populateTransServerStats(sysDashboardData);
-	
+
 }
 
-
-
 function updateServerStats() {
-	
+
 	var obj = {};
-	obj.url = contextPath + "/std/ServerStats.action";	
+	obj.url = contextPath + "/std/ServerStats.action";
 	obj.successfunc = updateServerStatsDashboard;
 	obj.errorfunc = errorServerData;
 	run_ajax_json(obj);
@@ -60,7 +58,7 @@ function updateServerStats() {
 }
 
 function updateServerStatsDashboard(sysDashboardData) {
-	
+
 	FusionCharts("impSvrCPUChartId").dispose();
 	FusionCharts("impSvrThreadsChartId").dispose();
 	FusionCharts("expSvrCPUChartId").dispose();
@@ -69,7 +67,7 @@ function updateServerStatsDashboard(sysDashboardData) {
 	populateImpServerStats(sysDashboardData);
 	populateExpServerStats(sysDashboardData);
 	populateTransServerStats(sysDashboardData);
-	
+
 }
 
 
@@ -88,27 +86,27 @@ function getImpServerStatData() {
 	run_ajax(obj);
 	return;
 }
- 
+
 function populateImpServerStats(sysDashboardData) {
-		
+
 	drawImportServerChart(sysDashboardData.impSvrCPU);
 	updateImportServerMemory(sysDashboardData.impSvrMemory);
 	drawImportServerThreadChart(sysDashboardData.impSvrThreadXML);
-	
+
 }
 
 //draws the imports server cpu chart
 function drawImportServerChart(data) {
-	impSvrCPUChart = new FusionCharts(contextPath+"/js/fusionwidgetsxt/charts/AngularGauge.swf", "impSvrCPUChartId","100%", "100%");	
+	impSvrCPUChart = new FusionCharts(contextPath+"/js/fusionwidgetsxt/charts/AngularGauge.swf", "impSvrCPUChartId","100%", "100%");
 	impSvrCPUChart.setDataXML(data);
 	impSvrCPUChart.setTransparent(true);
 	impSvrCPUChart.render("import-servers-cpu");
 
 }
 
-//draws the imports server threads chart 
+//draws the imports server threads chart
 function drawImportServerThreadChart(data) {
-	
+
 	impSvrThreadsChart = new FusionCharts(contextPath+"/js/fusionwidgetsxt/charts/RealTimeStackedColumn.swf", "impSvrThreadsChartId","100%", "100%");
 	//data="<chart labelDisplay='STAGGER' showRealTimeValue='0' plotGradientColor=' ' showBorder='0' numDivlines='0' showYAxisValues='0' caption='' showLabels='1' showvalues='0' numberPrefix='' showSum='0' decimals='0' useRoundEdges='0' legendBorderAlpha='0' legendShadow='0' legendNumColumns='2' legendBgColor='FFFFFF' legendBorderColor='FFFFFF' legendPosition='Bottom' canvasBgColor='FFFFFF'  canvasBgAlpha='0' canvasBorderColor='FFFFFF' canvasBorderThickness='0' canvasBorderAlpha='0' bgColor='FFFFFF' outCnvBaseFontColor='666666' showPlotBorder='0' showAlternateVGridColor='1' AlternateVGridColor='FFFFFF' divLineColor='FFFFFF' vdivLineColor='E9E9E9'><categories><category label='IMPORT_SERVER_DEFAULT' /></categories><dataset seriesName='Available' color='CCCCCC' ><set value='20' showValue='1'/> </dataset><dataset seriesName='In Progress' color='8BBA00' ><set value='9' showValue='1'/> </dataset><dataset seriesName='Waiting' color='AFD8F8' ><set value='4' showValue='1'/> </dataset><dataset seriesName='Scheduled' color='FF9933' ><set value='5' showValue='1'/> </dataset><styles><definition><style name='dataplot_width' width='120px'/></definition> <application><apply toObject='DATAPLOT' styles='dataplot_width' /></application></styles></chart>";
 	impSvrThreadsChart.setDataXML(data);
@@ -119,8 +117,8 @@ function drawImportServerThreadChart(data) {
 
 
 //fills the imports server memory data
-function updateImportServerMemory(data) {	
-	
+function updateImportServerMemory(data) {
+
 	$('#import-servers-memory').html(data+' Gb');
 }
 
@@ -142,8 +140,8 @@ function getExpServerStatData() {
 	return;
 }
 
-function populateExpServerStats(sysDashboardData) {	
-	
+function populateExpServerStats(sysDashboardData) {
+
 	drawExportServerChart(sysDashboardData.expSvrCPU);
 	updateExportServerMemory(sysDashboardData.expSvrMemory);
 	drawExportServerThreadChart(sysDashboardData.expSvrThreadXML);
@@ -157,9 +155,9 @@ function drawExportServerChart(data) {
 	expSvrCPUChart.render("export-servers-cpu");
 }
 
-//draws the export server threads chart 
+//draws the export server threads chart
 function drawExportServerThreadChart(data) {
-	
+
 	expSvrThreadsChart = new FusionCharts(contextPath+"/js/fusionwidgetsxt/charts/RealTimeStackedColumn.swf", "expSvrThreadsChartId","100%", "100%");
 	//data="<chart labelDisplay='STAGGER' showRealTimeValue='0' plotGradientColor=' ' showBorder='0' numDivlines='0' showYAxisValues='0' caption='' showLabels='1' showvalues='0' numberPrefix='' showSum='0' decimals='0' useRoundEdges='0' legendBorderAlpha='0' legendShadow='0' legendNumColumns='2' legendBgColor='FFFFFF' legendBorderColor='FFFFFF' legendPosition='Bottom' canvasBgColor='FFFFFF'  canvasBgAlpha='0' canvasBorderColor='FFFFFF' canvasBorderThickness='0' canvasBorderAlpha='0' bgColor='FFFFFF' outCnvBaseFontColor='666666' showPlotBorder='0' showAlternateVGridColor='1' AlternateVGridColor='FFFFFF' divLineColor='FFFFFF' vdivLineColor='E9E9E9'><categories><category label='IMPORT_SERVER_DEFAULT' /></categories><dataset seriesName='Available' color='CCCCCC' ><set value='20' showValue='1'/> </dataset><dataset seriesName='In Progress' color='8BBA00' ><set value='9' showValue='1'/> </dataset><dataset seriesName='Waiting' color='AFD8F8' ><set value='4' showValue='1'/> </dataset><dataset seriesName='Scheduled' color='FF9933' ><set value='5' showValue='1'/> </dataset><styles><definition><style name='dataplot_width' width='120px'/></definition> <application><apply toObject='DATAPLOT' styles='dataplot_width' /></application></styles></chart>";
 	expSvrThreadsChart.setDataXML(data);
@@ -170,8 +168,8 @@ function drawExportServerThreadChart(data) {
 
 
 //fills the export server memory data
-function updateExportServerMemory(data) {	
-	
+function updateExportServerMemory(data) {
+
 	$('#export-servers-memory').html(data+' Gb');
 }
 //Export Server stats end
@@ -179,15 +177,15 @@ function updateExportServerMemory(data) {
 
 //draws the export server cpu chart
 function populateTransServerStats(sysDashboardData) {
-	
+
 	drawTrnsServerChart(sysDashboardData.trnsSvrCPU);
 	updateTrnsServerMemory(sysDashboardData.trnsSvrMemory);
-	
+
 }
 
 var trnsSvrCPUChart;
 function drawTrnsServerChart(data) {
-	
+
 	trnsSvrCPUChart = new FusionCharts(contextPath+"/js/fusionwidgetsxt/charts/AngularGauge.swf", "trnsSvrCPUChartId","180","113");
 	trnsSvrCPUChart.setDataXML(data);
 	trnsSvrCPUChart.setTransparent(true);
@@ -196,16 +194,16 @@ function drawTrnsServerChart(data) {
 }
 
 //fills the export server memory data
-function updateTrnsServerMemory(data) {	
-	
+function updateTrnsServerMemory(data) {
+
 	$('#transaction-servers-memory').html(data+' Gb');
 }
 
 function errorServerData() {
-	
+
 }
 
-/** 
+/**
  * Dashboard Column 1 End
  */
 
@@ -216,7 +214,7 @@ function errorServerData() {
  */
 function getExportStatistics() {
 	var obj = {};
-	obj.url = contextPath + "/std/MessageNFileStats.action?isImportStat=false";	
+	obj.url = contextPath + "/std/MessageNFileStats.action?isImportStat=false";
 	obj.successfunc = populateExportStatistics;
 	obj.errorfunc = errorServerData;
 	run_ajax_json(obj);
@@ -225,7 +223,7 @@ function getExportStatistics() {
 
 function updateExportStatistics() {
 	var obj = {};
-	obj.url = contextPath + "/std/MessageNFileStats.action?isImportStat=false";	
+	obj.url = contextPath + "/std/MessageNFileStats.action?isImportStat=false";
 	obj.successfunc = populateExportStatisticsUpdate;
 	obj.errorfunc = errorServerData;
 	run_ajax_json(obj);
@@ -233,9 +231,9 @@ function updateExportStatistics() {
 }
 
 function populateExportStatistics(sysDashboardData) {
-	
+
 	sysDashboardData = eval(sysDashboardData);
-	drawExportFilesstatChart(sysDashboardData.expFileStatusXML);	
+	drawExportFilesstatChart(sysDashboardData.expFileStatusXML);
 	drawExportMsgsstatChart(sysDashboardData.expMsgStatusXML);
 	updateNoFilestExp(sysDashboardData.noOfFilesExp);
 	updateNoBytesExp(sysDashboardData.noOfBytesExp);
@@ -244,12 +242,12 @@ function populateExportStatistics(sysDashboardData) {
 }
 
 function populateExportStatisticsUpdate(sysDashboardData) {
-	
+
 	FusionCharts("expFilesChartId").dispose();
 	FusionCharts("expMsgsChartId").dispose();
-	
+
 	sysDashboardData = eval(sysDashboardData);
-	drawExportFilesstatChart(sysDashboardData.expFileStatusXML);	
+	drawExportFilesstatChart(sysDashboardData.expFileStatusXML);
 	drawExportMsgsstatChart(sysDashboardData.expMsgStatusXML);
 	updateNoFilestExp(sysDashboardData.noOfFilesExp);
 	updateNoBytesExp(sysDashboardData.noOfBytesExp);
@@ -257,7 +255,7 @@ function populateExportStatisticsUpdate(sysDashboardData) {
 	populateExFilesDetails(sysDashboardData.expFileDetails);
 }
 
-function testExportStatistics(sysDashboardData) {	
+function testExportStatistics(sysDashboardData) {
 	testdata= "<chart minimiseWrappingInLegend='0' legendBorderAlpha='0' legendShadow='0' legendNumColumns='2' legendBgColor='FFFFFF' legendBorderColor='FFFFFF' bgColor='FFFFFF' enableSmartLabels='1' manageLabelOverflow='1' showPercentInToolTip='0' plotBorderColor='FFFFFF' showBorder='0' showlabels='1' showValues='1' showLegend='0' legendPosition='bottom'>" +
 	"<set value='673' label='Manual Import Parsed' color=''/>" +
 	"<set value='897' label='Import started' color=''/>" +
@@ -265,7 +263,7 @@ function testExportStatistics(sysDashboardData) {
 	"<set value='378' label='Import Error' color=''/>" +
 	"<set value='545' label='Import Message Error' color=''/>" +
 	"</chart>";
-	drawExportFilesstatChart(testdata);	
+	drawExportFilesstatChart(testdata);
 	testdata= "<chart minimiseWrappingInLegend='0' legendBorderAlpha='0' legendShadow='0' legendNumColumns='2' legendBgColor='F4F4F4' legendBorderColor='CCCCCC' bgColor='F4F4F4' enableSmartLabels='1' manageLabelOverflow='1'  showPercentInToolTip='0' bgAlpha='100' plotBorderColor='F4F4F4' showBorder='0' showlabels='1' showValues='1' showLegend='0' legendPosition='bottom'>" +
 	"<set value='673' label='Manual Import Parsed' color=''/>" +
 	"<set value='897' label='Import started' color=''/>" +
@@ -277,29 +275,29 @@ function testExportStatistics(sysDashboardData) {
 	updateNoFilestExp("281");
 	updateNoBytesExp("502");
 	updateNoExMsgsRecvd("111");
-	
+
 	sysDashboardData = {"caseList":[{"id":"11","timeStamp":"2013-03-02 20:09","fileType":"FILE TYPE1","fileSize":"11","recCount":"12","status":"IMPORT ERROR"},{"id":"11","timeStamp":"2013-03-02 20:09","fileType":"FILE TYPE1","fileSize":"11","recCount":"12","status":"Manual Import Parsed"},{"id":"11","timeStamp":"2013-03-02 20:09","fileType":"FILE TYPE1","fileSize":"11","recCount":"12","status":"IMPORT ERROR"}],"mepList":[]};
 	sysDashboardData = eval(sysDashboardData);
 	//alert(sysDashboardData.caseList);
-	
+
 	populateExFilesDetails(sysDashboardData.caseList);
-	
+
 }
 
 
 var expFilesChart;
 var expMsgsChart;
 function drawExportFilesstatChart(data) {
-	
+
 	expFilesChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/Doughnut2D.swf", "expFilesChartId","100%","100%");
 	expFilesChart.setDataXML(data);
-	expFilesChart.render("export-statistics-files");	
-	
-	
+	expFilesChart.render("export-statistics-files");
+
+
 }
 
 function drawExportMsgsstatChart(data) {
-	
+
 	expMsgsChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/Doughnut2D.swf", "expMsgsChartId","100%","100%");
 	expMsgsChart.setDataXML(data);
 	expMsgsChart.render("export-statistics-messages");
@@ -318,10 +316,10 @@ function updateNoExMsgsRecvd(data) {
 }
 
 function populateExFilesDetails(expFileData) {
-	
-	
+
+
 	/**
-	 * 								
+	 *
 	 *  <tr>
 			<td>2</td>
 			<td>2013-03-02 20:09</td>
@@ -330,61 +328,61 @@ function populateExFilesDetails(expFileData) {
 			<td>32 kb</td>
 			<td>7</td>
 		</tr>
-		
+
 		.append("SELECT top 5 f.id, format(f.receive_timestamp,'yyyy-MM-dd hh:mm') timeStamp,"
 		+ " (SELECT [name] FROM file_t WHERE id = f.id_file_t) fileType,"
 		+ " (SELECT [name] FROM file_status_t WHERE id = f.id_file_status_t) status,"
 	 */
 	if(expFileData != null) {
 
-		var currentexpFileLength = expFileData.length;	
-		
+		var currentexpFileLength = expFileData.length;
+
 		//$("export-statistics-table").empty();
 		//$('#export-statistics-table tbody').empty();
 		$('#export-statistics-table tr').not(function(){if ($(this).has('th').length){return true;}}).remove();
-		if(currentexpFileLength > 0) {			
-					
+		if(currentexpFileLength > 0) {
+
 			var trString = new StringBuffer();
-			for(var i=0; i<currentexpFileLength; i++) {				
-				var statusClass='';				
-				 
+			for(var i=0; i<currentexpFileLength; i++) {
+				var statusClass='';
+
 				var expFileDetail = expFileData[i];
 				 if((expFileDetail.status).toLowerCase().indexOf("error")==-1) {
 					 statusClass="ok";
 				 } else {
 					 statusClass="error";
 				 }
-				 
-				 trString.append("<tr>");				
+
+				 trString.append("<tr>");
 				 if(expFileDetail.id != null) {
-					 trString.append("<td>"+expFileDetail.id+"</td>");	 
+					 trString.append("<td>"+expFileDetail.id+"</td>");
 				 } else {
 					 trString.append("<td></td>");
 				 }
 				 if(expFileDetail.timeStamp != null) {
-					 trString.append("<td>"+expFileDetail.timeStamp+"</td>");	 
+					 trString.append("<td>"+expFileDetail.timeStamp+"</td>");
 				 } else {
 					 trString.append("<td></td>");
 				 }
 				 if(expFileDetail.fileType != null) {
-					 trString.append("<td>"+expFileDetail.fileType+"</td>");	 
+					 trString.append("<td>"+expFileDetail.fileType+"</td>");
 				 } else {
 					 trString.append("<td></td>");
 				 }
 				 if(expFileDetail.status != null) {
-					 trString.append("<td class='"+statusClass+"'>"+expFileDetail.status+"</td>");	 
+					 trString.append("<td class='"+statusClass+"'>"+expFileDetail.status+"</td>");
 				 } else {
 					 trString.append("<td></td>");
 				 }
-				 
-				 trString.append("</tr>");						 
-				
+
+				 trString.append("</tr>");
+
 			}
-			$("#export-statistics-table > tbody").append(trString.toString());	
-		
-		} 
+			$("#export-statistics-table > tbody").append(trString.toString());
+
+		}
 	}
-	
+
 }
 
 /**
@@ -396,7 +394,7 @@ function populateExFilesDetails(expFileData) {
  */
 function getImportStatistics() {
 	var obj = {};
-	obj.url = contextPath + "/std/MessageNFileStats.action?isImportStat=true";	
+	obj.url = contextPath + "/std/MessageNFileStats.action?isImportStat=true";
 	obj.successfunc = populateImportStatistics;
 	obj.errorfunc = errorServerData;
 	run_ajax_json(obj);
@@ -405,17 +403,17 @@ function getImportStatistics() {
 
 function updateImportStatistics() {
 	var obj = {};
-	obj.url = contextPath + "/std/MessageNFileStats.action?isImportStat=true";	
+	obj.url = contextPath + "/std/MessageNFileStats.action?isImportStat=true";
 	obj.successfunc = populateImportStatisticsUpdate;
 	obj.errorfunc = errorServerData;
 	run_ajax_json(obj);
 	return;
 }
 
-function populateImportStatistics(sysDashboardData) {	
-	
+function populateImportStatistics(sysDashboardData) {
+
 	sysDashboardData = eval(sysDashboardData);
-	drawImportFilesstatChart(sysDashboardData.impFileStatusXML);	
+	drawImportFilesstatChart(sysDashboardData.impFileStatusXML);
 	drawImportMsgsstatChart(sysDashboardData.impMsgStatusXML);
 	updateNoFilestImp(sysDashboardData.noOfFilesImp);
 	updateNoBytesImp(sysDashboardData.noOfBytesImp);
@@ -423,14 +421,14 @@ function populateImportStatistics(sysDashboardData) {
 	populateFilesDetails(sysDashboardData.impFileDetails);
 }
 
-function populateImportStatisticsUpdate(sysDashboardData) {	
-	
-	
+function populateImportStatisticsUpdate(sysDashboardData) {
+
+
 	FusionCharts("impFilesChartId").dispose();
 	FusionCharts("impMsgsChartId").dispose();
-	
+
 	sysDashboardData = eval(sysDashboardData);
-	drawImportFilesstatChart(sysDashboardData.impFileStatusXML);	
+	drawImportFilesstatChart(sysDashboardData.impFileStatusXML);
 	drawImportMsgsstatChart(sysDashboardData.impMsgStatusXML);
 	updateNoFilestImp(sysDashboardData.noOfFilesImp);
 	updateNoBytesImp(sysDashboardData.noOfBytesImp);
@@ -438,7 +436,7 @@ function populateImportStatisticsUpdate(sysDashboardData) {
 	populateFilesDetails(sysDashboardData.impFileDetails);
 }
 
-function testImportStatistics(sysDashboardData) {	
+function testImportStatistics(sysDashboardData) {
 	testdata= "<chart minimiseWrappingInLegend='1' legendScrollBgColor='2E9AFE' legendScrollBtnColor='2E9AFE' legendBorderAlpha='0'" +
 			" legendShadow='0' legendNumColumns='2' legendBgColor='FFFFFF' legendBorderColor='FFFFFF' bgColor='FFFFFF' " +
 			"enableSmartLabels='0' manageLabelOverflow='1' showPercentInToolTip='0' plotBorderColor='FFFFFF' showBorder='0'" +
@@ -449,25 +447,25 @@ function testImportStatistics(sysDashboardData) {
 	"<set value='378' label='Import Error' color=''/>" +
 	"<set value='545' label='Import Message Error' color=''/>" +
 	"</chart>";
-	drawImportFilesstatChart(testdata);	
+	drawImportFilesstatChart(testdata);
 	drawImportMsgsstatChart(testdata);
 	updateNoFilestImp("281");
 	updateNoBytesImp("502");
 	updateNoMsgsRecvd("111");
-	
+
 	sysDashboardData = {"caseList":[{"id":"11","timeStamp":"2013-03-02 20:09","fileType":"FILE TYPE1","fileSize":"11","recCount":"12","status":"IMPORT ERROR"},{"id":"11","timeStamp":"2013-03-02 20:09","fileType":"FILE TYPE1","fileSize":"11","recCount":"12","status":"Manual Import Parsed"},{"id":"11","timeStamp":"2013-03-02 20:09","fileType":"FILE TYPE1","fileSize":"11","recCount":"12","status":"IMPORT ERROR"},{"id":"11","timeStamp":"2013-03-02 20:09","fileType":"FILE TYPE1","fileSize":"11","recCount":"12","status":"IMPORT ERROR"},{"id":"11","timeStamp":"2013-03-02 20:09","fileType":"FILE TYPE1","fileSize":"11","recCount":"12","status":"IMPORT ERROR"}],"mepList":[]};
 	sysDashboardData = eval(sysDashboardData);
 	//alert(sysDashboardData.caseList);
-	
+
 	populateFilesDetails(sysDashboardData.caseList);
-	
+
 }
 
 
 var impFilesChart;
 var impMsgsChart;
 function drawImportFilesstatChart(data) {
-	
+
 	/*data = "<chart minimiseWrappingInLegend='1' legendIconScale='0.4' legendBorderAlpha='0' legendShadow='0' legendNumColumns='2'" +
 			" legendBgColor='FFFFFF' legendBorderColor='FFFFFF' bgColor='FFFFFF' enableSmartLabels='0' manageLabelOverflow='1'" +
 			" showPercentInToolTip='0' plotBorderColor='FFFFFF' showBorder='0' skipOverlapLabels='1' showlabels='0' placeValuesInside='1' showValues='1' showLegend='1'" +
@@ -482,16 +480,16 @@ function drawImportFilesstatChart(data) {
 			"</definition><application><apply toObject='Legend' styles='myLegendFont' />" +
 			"</application></styles>  "+
 			"</chart>";*/
-	
+
 	impFilesChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/Doughnut2D.swf", "impFilesChartId","100%","100%");
 	impFilesChart.setDataXML(data);
-	impFilesChart.render("import-statistics-files");	
-	
-	
+	impFilesChart.render("import-statistics-files");
+
+
 }
 
 function drawImportMsgsstatChart(data) {
-	
+
 	impMsgsChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/Doughnut2D.swf", "impMsgsChartId","100%","100%");
 	impMsgsChart.setDataXML(data);
 	impMsgsChart.render("import-statistics-messages");
@@ -510,10 +508,10 @@ function updateNoMsgsRecvd(data) {
 }
 
 function populateFilesDetails(impFileData) {
-	
-	
+
+
 	/**
-	 * 								
+	 *
 	 *  <tr>
 			<td>2</td>
 			<td>2013-03-02 20:09</td>
@@ -525,73 +523,73 @@ function populateFilesDetails(impFileData) {
 	 */
 	if(impFileData != null) {
 
-		var currentimpFileLength = impFileData.length;	
-		
+		var currentimpFileLength = impFileData.length;
+
 		//$("import-statistics-table").empty();
 		$('#import-statistics-table tr').not(function(){if ($(this).has('th').length){return true;}}).remove();
 		//$('#import-statistics-table > tbody > tr').remove();;
-		
-		if(currentimpFileLength > 0) {			
-					
+
+		if(currentimpFileLength > 0) {
+
 			var trString = new StringBuffer();
-			for(var i=0; i<currentimpFileLength; i++) {				
-				var statusClass='';				
-				 
+			for(var i=0; i<currentimpFileLength; i++) {
+				var statusClass='';
+
 				var impFileDetail = impFileData[i];
 				 if((impFileDetail.status).toLowerCase().indexOf("error")==-1) {
 					 statusClass="ok";
 				 } else {
 					 statusClass="error";
 				 }
-				 
-				 trString.append("<tr>");				
+
+				 trString.append("<tr>");
 				 if(impFileDetail.id != null) {
-					 trString.append("<td>"+impFileDetail.id+"</td>");	 
+					 trString.append("<td>"+impFileDetail.id+"</td>");
 				 } else {
 					 trString.append("<td></td>");
 				 }
 				 if(impFileDetail.timeStamp != null) {
-					 trString.append("<td>"+impFileDetail.timeStamp+"</td>");	 
+					 trString.append("<td>"+impFileDetail.timeStamp+"</td>");
 				 } else {
 					 trString.append("<td></td>");
 				 }
 				 if(impFileDetail.fileType != null) {
-					 trString.append("<td>"+impFileDetail.fileType+"</td>");	 
+					 trString.append("<td>"+impFileDetail.fileType+"</td>");
 				 } else {
 					 trString.append("<td></td>");
 				 }
 				 if(impFileDetail.status != null) {
-					 					 
+
 					 if(impFileDetail.status.search("progress") != -1){
-						 fileStatus = "prog"; 
+						 fileStatus = "prog";
 					 }else{
 						 slen = impFileDetail.status.length;
 						 fileStatus=impFileDetail.status.substring(slen-5,slen);
-					 }	 
+					 }
 					// fileStatus=impFileDetail.status.substring(slen-5,slen);
 					 trString.append("<td class='"+statusClass+"'>"
-							 +fileStatus+"</td>");	 
+							 +fileStatus+"</td>");
 				 } else {
 					 trString.append("<td></td>");
 				 }
 				 if(impFileDetail.fileSize != null) {
-					 trString.append("<td>"+impFileDetail.fileSize+"</td>");	 
+					 trString.append("<td>"+impFileDetail.fileSize+"</td>");
 				 } else {
 					 trString.append("<td></td>");
 				 }
 				 if(impFileDetail.recordCount != null) {
-					 trString.append("<td>"+impFileDetail.recordCount+"</td>");	 
+					 trString.append("<td>"+impFileDetail.recordCount+"</td>");
 				 } else {
 					 //trString.append("<td></td>");
 				 }
-				 trString.append("</tr>");						 
-				
-			}			
-			$("#import-statistics-table > tbody").append(trString.toString());	
-		
-		} 
+				 trString.append("</tr>");
+
+			}
+			$("#import-statistics-table > tbody").append(trString.toString());
+
+		}
 	}
-	
+
 }
 
 /**
@@ -603,7 +601,7 @@ function populateFilesDetails(impFileData) {
  */
 function getNoOfWOSent2PDA() {
 	var obj = {};
-	obj.url = contextPath + "/std/NoOfWOsToPDA.action";	
+	obj.url = contextPath + "/std/NoOfWOsToPDA.action";
 	obj.successfunc = populatePDAStats;
 	obj.errorfunc = errorServerData;
 	run_ajax_json(obj);
@@ -611,21 +609,21 @@ function getNoOfWOSent2PDA() {
 }
 
 function populatePDAStats(sysDashboardData) {
-	
+
 	sysDashboardData = eval(sysDashboardData);
 	$('#work-orders-sent-to-pda').html(sysDashboardData.woSentToPda);
-	
+
 }
 /**
  * PDA Statistics : Dashboard Column 3 Row 3 End
  */
 
 /**
- * User Statistics : Dashboard Column 3 Row 1 Start 
+ * User Statistics : Dashboard Column 3 Row 1 Start
  */
-function getUserStatistics() {	
+function getUserStatistics() {
 	var obj = {};
-	obj.url = contextPath + "/std/UserStats.action";	
+	obj.url = contextPath + "/std/UserStats.action";
 	obj.successfunc = populateUserStats;
 	obj.errorfunc = errorServerData;
 	run_ajax_json(obj);
@@ -633,50 +631,50 @@ function getUserStatistics() {
 }
 
 function updateUserStatistics() {
-	
+
 	var obj = {};
-	obj.url = contextPath + "/std/UserStats.action";	
+	obj.url = contextPath + "/std/UserStats.action";
 	obj.successfunc = updateUserStats;
 	obj.errorfunc = errorServerData;
 	run_ajax_json(obj);
 	return;
-	
+
 }
 
 function populateUserStats(sysDashboardData) {
 	sysDashboardData = eval(sysDashboardData);
 	drawUserStats(sysDashboardData.userStatXML);
-	drawLoginStats(sysDashboardData.loginStatXML);	
+	drawLoginStats(sysDashboardData.loginStatXML);
 }
 
 function updateUserStats(sysDashboardData) {
-	
+
 	FusionCharts("userStatsChartId").dispose();
 	FusionCharts("loginStatsChartId").dispose();
-	
+
 	sysDashboardData = eval(sysDashboardData);
 	drawUserStats(sysDashboardData.userStatXML);
-	drawLoginStats(sysDashboardData.loginStatXML);	
+	drawLoginStats(sysDashboardData.loginStatXML);
 }
 
 var usrStatChart;
 var loginStatChart;
 function drawUserStats(data) {
-	
+
 	usrStatChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/StackedBar2D.swf", "userStatsChartId","100%","100%");
 	usrStatChart.setDataXML(data);
-	usrStatChart.render("users-system");			
+	usrStatChart.render("users-system");
 }
 
-function drawLoginStats(data) {	
+function drawLoginStats(data) {
 
 	loginStatChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/StackedBar2D.swf", "loginStatsChartId","100%","100%");
 	loginStatChart.setDataXML(data);
-	loginStatChart.render("users-authentifications-today");			
-	
+	loginStatChart.render("users-authentifications-today");
+
 }
 /**
- * User Statistics : Dashboard Column 3 Row 1 End 
+ * User Statistics : Dashboard Column 3 Row 1 End
  */
 
 
@@ -685,7 +683,7 @@ function drawLoginStats(data) {
  */
 function getErrorStatistics() {
 	var obj = {};
-	obj.url = contextPath + "/std/ErrorStats.action";	
+	obj.url = contextPath + "/std/ErrorStats.action";
 	obj.successfunc = populateErrorStatistics;
 	obj.errorfunc = errorServerData;
 	run_ajax_json(obj);
@@ -694,35 +692,35 @@ function getErrorStatistics() {
 
 function updateErrorStatistics() {
 	var obj = {};
-	obj.url = contextPath + "/std/ErrorStats.action";	
+	obj.url = contextPath + "/std/ErrorStats.action";
 	obj.successfunc = populateErrorStatisticsUpdate;
 	obj.errorfunc = errorServerData;
 	run_ajax_json(obj);
 	return;
 }
 
-function populateErrorStatistics(sysDashboardData) {	
-	
+function populateErrorStatistics(sysDashboardData) {
+
 	sysDashboardData = eval(sysDashboardData);
-	drawErrorStatsChart(sysDashboardData.errorStatisticsXML);	
+	drawErrorStatsChart(sysDashboardData.errorStatisticsXML);
 	populateErrorStatDetails(sysDashboardData.errorList);
 }
 
-function populateErrorStatisticsUpdate(sysDashboardData) {	
-	
-	
-	FusionCharts("errorStatChartId").dispose();	
-	
+function populateErrorStatisticsUpdate(sysDashboardData) {
+
+
+	FusionCharts("errorStatChartId").dispose();
+
 	sysDashboardData = eval(sysDashboardData);
-	drawErrorStatsChart(sysDashboardData.errorStatisticsXML);	
+	drawErrorStatsChart(sysDashboardData.errorStatisticsXML);
 	populateErrorStatDetails(sysDashboardData.errorList);
 }
 
 var errorStatChart;
 
-function drawErrorStatsChart(data) {	
-	
-	
+function drawErrorStatsChart(data) {
+
+
 	/*data = "<chart numDivlines='0' showYAxisValues='0' showBorder='0' showLabels='1' showValues='1' showLegend='0'" +
 			" canvasBgColor='FFFFFF' canvasBgAlpha='100' canvasBorderColor='FFFFFF' " +
 			" canvasBorderThickness='0' canvasBorderAlpha='100' " +
@@ -735,62 +733,62 @@ function drawErrorStatsChart(data) {
 			"</chart>";*/
 	errorStatChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/Bar2D.swf", "errorStatChartId","100%","100%");
 	errorStatChart.setDataXML(data);
-	errorStatChart.render("errors-today");	
-	
-	
+	errorStatChart.render("errors-today");
+
+
 }
 
-function populateErrorStatDetails(errorStatDetails) {	
-	
+function populateErrorStatDetails(errorStatDetails) {
+
 	if(errorStatDetails != null) {
 
-		var currentErrorDetailsLength = errorStatDetails.length;			
-		
+		var currentErrorDetailsLength = errorStatDetails.length;
+
 		$('#errors-table tr').not(function(){if ($(this).has('th').length){return true;}}).remove();
-				
-		if(currentErrorDetailsLength > 0) {			
-					
+
+		if(currentErrorDetailsLength > 0) {
+
 			var trString = new StringBuffer();
-			for(var i=0; i<currentErrorDetailsLength; i++) {				
-				var statusClass='';				
-				 
-				var errorDetail = errorStatDetails[i];				
-				 
-				 trString.append("<tr>");				
+			for(var i=0; i<currentErrorDetailsLength; i++) {
+				var statusClass='';
+
+				var errorDetail = errorStatDetails[i];
+
+				 trString.append("<tr>");
 				 if(errorDetail.id != null) {
-					 trString.append("<td>"+errorDetail.id+"</td>");	 
+					 trString.append("<td>"+errorDetail.id+"</td>");
 				 } else {
 					 trString.append("<td></td>");
 				 }
 				 if(errorDetail.createTimestamp != null) {
-					 trString.append("<td>"+errorDetail.createTimestamp+"</td>");	 
+					 trString.append("<td>"+errorDetail.createTimestamp+"</td>");
 				 } else {
 					 trString.append("<td></td>");
 				 }
 				 if(errorDetail.criticality != null) {
-					 trString.append("<td>"+errorDetail.criticality+"</td>");	 
+					 trString.append("<td>"+errorDetail.criticality+"</td>");
 				 } else {
 					 trString.append("<td></td>");
 				 }
-				 
+
 				 if(errorDetail.source != null) {
-					 trString.append("<td>"+errorDetail.source+"</td>");	 
+					 trString.append("<td>"+errorDetail.source+"</td>");
 				 } else {
 					 trString.append("<td></td>");
 				 }
 				 if(errorDetail.errorGroup != null) {
-					 trString.append("<td>"+errorDetail.errorGroup+"</td>");	 
+					 trString.append("<td>"+errorDetail.errorGroup+"</td>");
 				 } else {
 					 trString.append("<td></td>");
 				 }
-				 trString.append("</tr>");						 
-				
-			}			
-			$("#errors-table > tbody").append(trString.toString());	
-		
-		} 
+				 trString.append("</tr>");
+
+			}
+			$("#errors-table > tbody").append(trString.toString());
+
+		}
 	}
-	
+
 }
 
 /**
@@ -811,6 +809,6 @@ StringBuffer.prototype.append = function append(string) {
 
 StringBuffer.prototype.toString = function toString() {
 		return this.buffer.join("");
-}; 
+};
 
 
