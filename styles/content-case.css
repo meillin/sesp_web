@@ -1,107 +1,26 @@
-#main-content .small-block .content-wrapper table {
-	max-width: 700px;
-	width: 100% !important;
-	table-layout: fixed;
+header .slide-menu-right a{
+	display: none;
 }
-#main-content .small-block .content-wrapper table td {
-	padding-top: 2px;
-	overflow: hidden;
+
+table{
+	width: 100%;
+	border: none;
+	background: none;
+	border-collapse:collapse;
+}
+
+th{
 	white-space: nowrap;
-	text-overflow: ellipsis;
-}
-
-#main-content .large-block .big-table table {
-	width: 100% !important;
-	max-width: 930px;
-	table-layout: fixed;
-	border: solid 5x;
-}
-
-#main-content .large-block .big-table td {
-	padding-top: 8px;
 	overflow: hidden;
-	white-space: nowrap;
 	text-overflow: ellipsis;
-	border-left: 10px solid transparent;
+	background: none;
+
 }
 
-#main-content .large-block .big-table th {
-	padding-top: 8px;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	border-left: 10px solid transparent;
+thead{
+	background: none;
 }
 
-#main-content .large-block .owner-table {
-	width: 100% !important;
-	max-width: 930px;
-	table-layout: fixed;
-}
-
-#main-content .large-block .owner-table td {
-	padding-top: 8px;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	border-left: 10px solid transparent;
-}
-
-#main-content .large-block .owner-table th {
-	padding-top: 8px;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	border-left: 10px solid transparent;
-}
-
-#main-content #block-overview .block-title-picto {
-	background: url(../images/icons-sprite.png) 0 -300px no-repeat;
-}
-
-#main-content #block-location .block-title-picto {
-	background: url(../images/icons-sprite.png) 0 -425px no-repeat;
-}
-
-#main-content #block-installations .block-title-picto {
-	background: url(../images/icons-sprite.png) 0 -75px no-repeat;
-}
-
-#main-content #block-sla .block-title-picto {
-	background: url(../images/icons-sprite.png) 0 -375px no-repeat;
-}
-
-#main-content #block-information .block-title-picto {
-	background: url(../images/icons-sprite.png) 0 -350px no-repeat;
-}
-
-#main-content #block-messages .block-title-picto {
-	background: url(../images/icons-sprite.png) 0 -500px no-repeat;
-}
-
-#main-content #block-history .block-title-picto {
-	background: url(../images/icons-sprite.png) 0 -50px no-repeat;
-}
-
-#main-content #block-work-order-events .block-title-picto {
-	background: url(../images/icons-sprite.png) 0 -275px no-repeat;
-}
-
-/* Added for the Map Functionality */
-#block-case-location-map-wrapper {
-	position: relative;
-}
-
-.block-title-button-open-all {
-	margin-left: 40px;
-}
-
-.block-title-button-close-all {
-	margin-left: 40px;
-}
-
-/* Added for the Export Functionality */
-#woEventsGridDiv {
-	visibility: collapse;
-	height: 1px;
+td{
+	border-top: 1px solid #e7e7e7;
 }

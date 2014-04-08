@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title><s:text name="webportal.head.title"/></title>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title><s:text name="webportal.head.title"/></title>
 
-		<!-- Enable html5 tags for 6-7-8 -->
+	<!-- Enable html5 tags for 6-7-8 -->
 		<!--[if lte IE 8]>
 		<script type="text/javascript">
 		document.createElement("header");
@@ -17,6 +17,9 @@
 		document.createElement("figure");
 		</script>
 		<![endif]-->
+		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
+		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
+
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/bootstrap.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/color.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/jquery.multiselect.css"/>
@@ -29,18 +32,18 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-measurepoint-consumption.css" />		
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/colResizable.css" />
 		
-	
-		
-	
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-ui-1.10.2.custom.js"></script>	
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/colResizable-1.3.min.js"></script>	
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/bootstrap-datepicker.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.multiselect.js"></script>
-			<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
+		<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/search-results.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
+
+		<script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
+
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/measurepoint-consumption.js"></script>
 		<link rel="shortcut icon" type="image/png" href="<%=request.getContextPath()%>/images/favicon.png" />
 		<script src="<%=request.getContextPath()%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
@@ -49,10 +52,10 @@
 		
 		<script>
 			mepId = "<%=request.getAttribute("mepId")%>";  
-        	contextPath = "<%=request.getContextPath()%>";   
-        	i18nerrorInvalidSearchInput="<s:text name='webportal.error.invalidsearchinput'/>";     
-        	i18nerrorNoDataForSearch="<s:text name='webportal.error.nosearchresults'/>"; 
-        	i18nerrorMandatoryMessage="<s:text name='webportal.error.choosemandatory'/>";
+			contextPath = "<%=request.getContextPath()%>";   
+			i18nerrorInvalidSearchInput="<s:text name='webportal.error.invalidsearchinput'/>";     
+			i18nerrorNoDataForSearch="<s:text name='webportal.error.nosearchresults'/>"; 
+			i18nerrorMandatoryMessage="<s:text name='webportal.error.choosemandatory'/>";
 			i18ncomparetoText="<s:text name='webportal.measurepoint.consumption.compareto'/>";			
 			i18nlastweekText="<s:text name='webportal.measurepoint.consumption.lastweek'/>";
 			i18ntodayText="<s:text name='webportal.measurepoint.consumption.today'/>";
@@ -75,58 +78,57 @@
 			i18nov="<s:text name='webportal.reports.daily.selectnov'/>";
 			i18dec="<s:text name='webportal.reports.daily.selectdec'/>";	
 			isAjaxSearch = false;		
-        </script>
-        
+		</script>
+
 	</head>
 	<body onload="onLoadDefault()">
-
 		<div id="wrapper">		
 			<%@ include file="headerv311.inc"%>
 			<div id="main-content">
-
-				<div class="large-block block retractable" id="block-daily-consumption-profile-charts">
-					<div class="block-title">
-						<span class="block-title-picto"></span>
-						<span class="block-title-name text-blue"><s:text name="webportal.measurepoint.consumption.profile"/></span>
-						<span class="block-arrow open"></span>
-					</div>
-					<div class="content-wrapper">
-						<div class="content text-grey">							
-							<div id="block-daily-consumption-profile-charts-title">																
-							</div>
-							<div id="block-daily-consumption-profile-charts-period" class="text-light-grey">
-								<s:text name="webportal.measurepoint.consumption.comparedtolastmonth"/>
-							</div>
-							<div id="block-daily-consumption-profile-charts-options">
-								<a href="#" class="text-blue"><s:text name="webportal.measurepoint.consumption.chartoptions"/></a>
-							</div>
-							<div id="block-daily-consumption-profile-charts-view">								
-							</div>						
-						</div>
+				<div class="big-row">
+					<div class="large-12 columns">
+						<h2 class="page-name-heading">
+							<span class="block-title-name text-blue"><s:text name="webportal.measurepoint.consumption.profile"/></span>
+						</h2>
 					</div>
 				</div>
-
-				<div class="large-block block retractable" id="block-consumption-report-charts">
-					<div class="block-title">
-						<span class="block-title-picto"></span>
-						<span class="block-title-name text-blue"><s:text name="webportal.measurepoint.consumption.consumptionreport"/></span>
-						<span class="block-arrow open"></span>
+				<div class="big-row">
+					<div class="large-4 columns">
+						<div class="panel-outer">
+							<h4 class="panel-heading">
+								<i class="fi-graph-trend colorHeading"></i>
+								<span class="block-title-name text-blue"><s:text name="webportal.measurepoint.consumption.profile"/></span>
+							</h4>
+							<div class="panel-inner">
+								<div id="block-daily-consumption-profile-charts-title">																
+								</div>
+								<div id="block-daily-consumption-profile-charts-period">
+									<s:text name="webportal.measurepoint.consumption.comparedtolastmonth"/>
+								</div>
+								<div id="block-daily-consumption-profile-charts-options">
+									<a href="#" class="text-blue"><s:text name="webportal.measurepoint.consumption.chartoptions"/></a>
+								</div>
+								<div id="block-daily-consumption-profile-charts-view">								
+								</div>	
+							</div>
+						</div>
 					</div>
-					<div class="content-wrapper">
-						<div class="content text-grey">
-							<div id="block-consumption-report-charts-title">								
-							</div>
-							<div id="block-consumption-report-charts-period" class="text-light-grey">
-								<s:text name="webportal.measurepoint.consumption.lastmonth"/>
-							</div>
-							<div id="block-consumption-report-charts-options">
-								<a class="text-blue" href="#"><s:text name="webportal.measurepoint.consumption.chartoptions"/></a>
-							</div>
-							<div id="block-consumption-report-charts-view">
-								
-							</div>
-							<div id="block-consumption-report-charts-legend">
-								<div class="column">
+					<div class="large-4 columns">
+						<div class="panel-outer">
+							<h4 class="panel-heading">
+								<i class="fi-graph-trend colorHeading"></i>
+								<span class="block-title-name text-blue"><s:text name="webportal.measurepoint.consumption.consumptionreport"/></span>
+							</h4>
+							<div class="panel-inner">
+								<div id="block-consumption-report-charts-title"></div>
+								<div id="block-consumption-report-charts-period">
+									<s:text name="webportal.measurepoint.consumption.lastmonth"/>
+								</div>
+								<div id="block-consumption-report-charts-options">
+									<a class="text-blue" href="#"><s:text name="webportal.measurepoint.consumption.chartoptions"/></a>
+								</div>
+								<div id="block-consumption-report-charts-view"></div>
+								<div id="block-consumption-report-charts-legend">
 									<div class="data">
 										<div class="data-title text-grey"><s:text name="webportal.measurepoint.consumption.totalenergyconsumption"/>&#32:</div>
 										<div class="data-value text-light-grey" id="totalenergyconsumption"></div>
@@ -135,8 +137,6 @@
 										<div class="data-title text-grey"><s:text name="webportal.measurepoint.consumption.averageconsumption"/>&#32:</div>
 										<div class="data-value text-light-grey" id="averageconsumption"></div>
 									</div>									
-								</div>
-								<div class="column">
 									<div class="data">
 										<div class="data-title text-grey"><s:text name="webportal.measurepoint.consumption.minimumconsumption"/>&#32:</div>
 										<div class="data-value text-light-grey" id="minimumconsumption"></div>
@@ -146,40 +146,39 @@
 										<div class="data-value text-light-grey" id="maximumconsumption"></div>
 									</div>
 								</div>
-							</div>						
+							</div>
 						</div>
 					</div>
-				</div>
-				
-				<div class="large-block block retractable" id="block-load-profile-charts">
-					<div class="block-title">
-						<span class="block-title-picto"></span>
-						<span class="block-title-name text-blue"><s:text name="webportal.measurepoint.consumption.loadprofile"/></span>
-						<span class="block-arrow open"></span>
-					</div>
-					<div class="content-wrapper">
-						<div class="content text-grey">
-							<div id="block-load-profile-charts-title">
-								<s:text name="webportal.measurepoint.consumption.lastmonth"/>
+					<div class="large-4 columns">
+						<div class="panel-outer">
+							<h4 class="panel-heading">
+								<i class="fi-graph-trend colorHeading"></i>
+								<span class="block-title-name text-blue"><s:text name="webportal.measurepoint.consumption.loadprofile"/></span>
+							</h4>
+							<div class="panel-inner">
+								<div id="block-load-profile-charts-title">
+									<s:text name="webportal.measurepoint.consumption.lastmonth"/>
+								</div>
+								<div id="block-load-profile-charts-options">
+									<a class="text-blue" href="#"><s:text name="webportal.measurepoint.consumption.chartoptions"/></a>
+								</div>
+								<div id="block-load-profile-charts-view"></div>	
 							</div>
-							<div id="block-load-profile-charts-options">
-								<a class="text-blue" href="#"><s:text name="webportal.measurepoint.consumption.chartoptions"/></a>
-							</div>
-							<div id="block-load-profile-charts-view">
-								
-							</div>						
 						</div>
 					</div>
 				</div>
 			</div>
-			<%@ include file="footerv311.inc"%>
 		</div>
+
+
+
+
 		<div id="overlay"></div>
 		
 		
 		<!--  
 			MODAL OF DAILY CONSUMPTION PROFILE 
-			-->
+		-->
 		<div id="modal-daily-consumption-profile" class="modal">
 			<a class="button-quit" href="#"></a>
 			<div class="modal-title text-grey"><s:text name="webportal.measurepoint.consumption.chartoptions"/></div>
@@ -207,7 +206,7 @@
 					</select>
 				</div>
 			</div>
-										
+
 			<div class="select-wrapper">
 				<div class="small-select-wrapper left-select">
 					<span class="select-title text-red"><s:text name="webportal.measurepoint.consumption.from"/>:</span>
@@ -239,14 +238,14 @@
 				<div class="button-wrapper right">
 					<a id="modal-daily-consumption-profile-button-ok" class="text-blue custom-button" onclick="javascript:updateMepConsumptionProfile();"><s:text name="webportal.measurepoint.consumption.ok"/></a>						
 				</div>		
-			
+
 			</div>
 		</div>
 		
 		
 		<!--  
 			MODAL OF CONSUMPTION REPORT
-			-->
+		-->
 		<div id="modal-consumption-report" class="modal">
 			<a class="button-quit" href="#"></a>
 			<div class="modal-title text-grey"><s:text name="webportal.measurepoint.consumption.chartoptions"/></div>
@@ -265,7 +264,7 @@
 					</select>
 				</div>
 			</div>
-										
+
 			<div class="select-wrapper">
 				<div class="small-select-wrapper left-select">
 					<span class="select-title text-red"><s:text name="webportal.measurepoint.consumption.from"/>:</span>
@@ -339,7 +338,7 @@
 				<div class="button-wrapper right">
 					<a id="modal-consumption-report-button-ok" class="text-blue custom-button" onclick="javascript:updateMepConsumptionReport();"><s:text name="webportal.measurepoint.consumption.ok"/></a>						
 				</div>		
-			
+
 			</div>
 			
 		</div>
@@ -347,7 +346,7 @@
 		
 		<!--  
 			MODAL OF LOAD PROFILE 
-			-->
+		-->
 		<div id="modal-load-profile" class="modal">
 			<a class="button-quit" href="#"></a>
 			<div class="modal-title text-grey"><s:text name="webportal.measurepoint.consumption.chartoptions"/></div>
@@ -366,7 +365,7 @@
 					</select>
 				</div>
 			</div>
-										
+
 			<div class="select-wrapper">
 				<div class="small-select-wrapper left-select">
 					<span class="select-title text-red"><s:text name="webportal.measurepoint.consumption.from"/>:</span>
@@ -428,8 +427,8 @@
 				<div class="button-wrapper right">
 					<a id="modal-load-profile-button-ok" class="text-blue custom-button" onclick="javascript:updateMepConsumptionLoadProfile();"><s:text name="webportal.measurepoint.consumption.ok"/></a>						
 				</div>		
-			
+
 			</div>
 		</div>
 	</body>
-</html>
+	</html>

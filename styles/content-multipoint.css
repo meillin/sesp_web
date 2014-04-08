@@ -1,3 +1,26 @@
 header .slide-menu-right a{
 	display: none;
 }
+
+table{
+	width: 100%;
+	border: none;
+	background: none;
+	border-collapse:collapse;
+}
+
+th{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	background: none;
+
+}
+
+thead{
+	background: none;
+}
+
+td{
+	border-top: 1px solid #e7e7e7;
+}

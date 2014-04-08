@@ -33,11 +33,56 @@ html, body{
 .big-row {
 	/*min-height: 450px;*/
 	max-width: initial;
+	clear: both;
+
+}
+/*i{
+	display: inline-block;
+}*/
+
+.big-row :after {
+	clear: both;
+	/*content: " ";
+	display: table;*/  
 }
 
-.big-row:after{
-	clear: both;
+/*.big-row :before, 
+.big-row :after {
+	content: " ";
+	display: table; 
+}*/
+
+/*/
+.big-row {
+	max-width: initial;
+	*zoom: 1; 
 }
+.big-row :before, 
+.big-row :after {
+	content: " ";
+	display: table; 
+}
+.big-row :after {
+	clear: both; 
+}
+
+.big-row .collapse .row {
+	margin-left: 0;
+	margin-right: 0; 
+}
+.big-row .big-row  {
+	width: auto;
+	*zoom: 1; 
+}
+.big-row  .big-row:before, 
+.big-row .big-row:after {
+	content: " ";
+	display: table; 
+}
+.big-row .big-row:after {
+	clear: both; 
+}
+*/
 
 .big-row-padding {
 	/*min-height: 450px;*/
