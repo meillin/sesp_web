@@ -170,13 +170,7 @@ document.createElement("figure");
 				</div>
 				<div class="big-row">
 					<div class="large-12 columns">
-						<span class="block-title-name text-blue"><s:text name='webportal.device.history.title'/></span>
-						<a href="#" class="block-title-button-open-all text-blue">
-							<s:text name='webportal.device.results.options.openall'/>
-						</a>
-						<a href="#" class="block-title-button-close-all text-blue">
-							<s:text name='webportal.device.results.options.closeall'/>
-						</a>
+						<h2><span class="block-title-name text-blue"><s:text name='webportal.device.history.title'/></span></h2>
 					</div>
 				</div>
 				<div class="big-row">
