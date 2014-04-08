@@ -8,4 +8,9 @@ $(document).ready(function() {
 			left: parseInt($lefty.css('left'), 10) === -20 ? - $lefty.outerWidth() - 50 : -20
 		});
 	});
+
+	$('.toggle-filter').click(function(){
+		$('.wrapper-blur').fadeToggle('fast', 'linear');
+	});
+
 });

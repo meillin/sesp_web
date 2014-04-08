@@ -251,6 +251,8 @@
 						</div>
 					</div>
 				</div>
+					<div class="wrapper-blur"></div>
+
 			</div><!-- end of wrapper -->
 		</body>
 		<script>

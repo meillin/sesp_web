@@ -35,7 +35,6 @@
 	<script type="text/javascript" src="<%=contextPath%>/js/bootstrap-datepicker.js"></script>
 	<script type="text/javascript" src="<%=contextPath%>/js/jquery.multiselect.js"></script>
 	<script type="text/javascript" src="<%=contextPath%>/js/jquery.cookie.js"></script>
-	<script type="text/javascript" src="<%=contextPath%>/js/colResizable-1.3.min.js"></script>
 	<script type="text/javascript" src="<%=contextPath%>/js/init.js"></script>
 	<script type="text/javascript" src="<%=contextPath%>/js/common.js"></script>
 	<script type="text/javascript" src="<%=contextPath%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
@@ -254,12 +253,11 @@ var bci = 0;
 				</div><!-- end of new full width row -->
 			</div>
 		</div>
-		<div class="big-row">
 
-				<div class="large-12 columns" >
+		<div class="big-row">
+				<div class="large-12 columns">
 					<h2 class="page-name-heading">Work order progress</h2>
 				</div>
-
 		</div>
 
 			<div class="big-row">

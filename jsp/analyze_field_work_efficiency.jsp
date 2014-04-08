@@ -36,7 +36,6 @@
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-ui-1.10.2.custom.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/bootstrap-datepicker.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.multiselect.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/colResizable-1.3.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
@@ -154,11 +153,12 @@
 						</div>
 					</div>
 
-			<div class="big-row">
-				<div class="large-12 columns">
-					<h2 class="page-name-heading"><s:text name="webportal.fieldworkefficiencyanalysis"/></h2>
+				<div class="big-row">
+					<div class="large-12 columns">
+						<h2 class="page-name-heading">Field work effiency analysis</h2>
+					</div>
 				</div>
-			</div>
+
 					<div class="big-row">
 						<div class="large-12 columns">
 							<div class="big-row">

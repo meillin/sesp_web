@@ -142,10 +142,10 @@
 
 						<div class="large-5 columns">
 							<h4>
-								2 Select planning periods
+								2 Select <span style="text-decoration:underline">weekly</span> planning periods
 								<small>
-									<a href="#"><s:text name="webportal.resourceprojections.planningperiods.selectall"/></a>
-									<a href="#"><s:text name="webportal.resourceprojections.planningperiods.selectnone"/></a>
+									<a href="#">select all | </a>
+									<a href="#">deselect all</a>
 								</small>
 							</h4>
 							<table id="block-planning-periods-table">
@@ -263,6 +263,8 @@
 					</div>
 				</div>
 			</div>
+			<div class="wrapper-blur"></div>
+
 		</div><!--end of wrapper -->
 		<script type="text/javascript" src="<%=contextPath%>/js/highchart/resource-projection-chart.js"></script>
 	</body>
