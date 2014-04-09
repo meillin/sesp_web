@@ -5,7 +5,7 @@ function drawWorkOrderProgress() {
             plotBackgroundColor: null,
             plotBorderWidth: null,
             plotShadow: false,
-            height: 290
+            height: 266
         },
         legend: {
             layout: 'vertical',
@@ -55,7 +55,7 @@ function drawWorkOrderProgress() {
 function drawDetailedProgress() {
     $('#detailed-progress').highcharts({
         chart: {
-            height: 290
+            height: 266
         },
         title: {
             text: ''
@@ -192,7 +192,7 @@ function drawAreaStatus() {
     $('#work-order-status').highcharts({
         chart: {
             type: 'pie',
-            height: 300,
+            height: 634,
             width: ''
         },
         title: {

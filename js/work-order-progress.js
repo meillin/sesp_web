@@ -22,13 +22,13 @@ $('.header-selection').change(function () {
 	var selected = $(this).val();
 	if( selected === 'progress') {
 		$('.status, .details').hide();
-		$('.progress').show();
+		$('.progress-chart').show();
 	} else if ( selected === 'status' ) {
-		$('.progress, .details').hide();
+		$('.progress-chart, .details').hide();
 		$('.status').show();
 	} else {
 		$('.details').show();
-		$('.progress, .status').hide();
+		$('.progress-chart, .status').hide();
 	}
  });
 

@@ -264,7 +264,7 @@ symbolCounter++;
 				<div class="big-row">
 					<div class="large-5 columns charts">
 						<div class="panel-outer show">
-							<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Area Progress</h4>
+							<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Area Progress</h4>
 							<div class="panel-inner" id="work-order-chart-view">
 								<!--
 									<div id="block-work-order-chart-view"></div>
@@ -273,7 +273,7 @@ symbolCounter++;
 							</div>
 						</div>
 						<div class="panel-outer show">
-							<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Detailed Progress</h4>
+							<h4 class="panel-heading"><i class="fi-graph-bar colorHeading"></i> Detailed Progress</h4>
 							<div class="panel-inner" id="detailed-progress">
 								<!--
 									<div id="block-work-order-chart-view2"></div>
@@ -283,7 +283,7 @@ symbolCounter++;
 						</div>
 
 						<div class="panel-outer hide">
-						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Area Status</h4>
+						<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Area Status</h4>
 							<div class="panel-inner" id="work-order-status">
 								<!--
 									<div id="block-work-order-chart-view"></div>
@@ -294,7 +294,7 @@ symbolCounter++;
 					</div><!-- end of charts -->
 							<div class="large-7 columns map">
 						<div class="panel-outer">
-							<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Area progress</h4>
+							<h4 class="panel-heading"><i class="fi-marker colorHeading"></i> Area progress</h4>
 							<div class="panel-inner">
 								<div id="tabs-wrapper">
 									<a id="block-work-order-tab1" class="tiny button" onclick="javascript:updateWorkOrder('progress')">Progress</a>
@@ -302,7 +302,7 @@ symbolCounter++;
 								</div>
 								<ul class="inline-list map-list">
 									<li>
-										<div style="width: 100%; height: 650px; opacity:0.99;" id="map-wrapper"></div>
+										<div style="width: 100%; height: 600px; opacity:0.99;" id="map-wrapper"></div>
 									</li>
 									<li class="panel">
 										<h3>Summary</h3>

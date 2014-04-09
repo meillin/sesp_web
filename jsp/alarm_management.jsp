@@ -291,7 +291,7 @@
 			<div class="big-row"><!-- start of new full width row -->
 				<div class="large-6 columns">
 					<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Map view</h4>
+						<h4 class="panel-heading"><i class="fi-marker colorHeading"></i> Map view</h4>
 						<div class="panel-inner">
 							<div style = "height:660px;width:100%;opacity:0.99;" id="map-wrapper"></div>
 						</div>
@@ -301,7 +301,7 @@
 				<div class="large-6 columns chart-container">
 					<div class="panel-outer">
 						<h4 class="panel-heading">
-							<i class="fi-graph-trend colorHeading"></i>
+							<i class="fi-graph-bar colorHeading"></i>
 							<span id="block-alarm-charts-title"></span>
 							<span id="block-alarm-charts-period"></span>
 						</h4>

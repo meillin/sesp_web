@@ -259,7 +259,7 @@ var bci = 0;
 				</div>
 		</div>
 
-		<div class="big-row progress">
+		<div class="big-row show progress-chart">
 			<div class="large-6 columns">
 				<div class="panel-outer">
 					<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Work order progress</h4>
@@ -289,7 +289,7 @@ var bci = 0;
 
 			<div class="large-6 columns">
 				<div class="panel-outer">
-					<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Area status</h4>
+					<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Area status</h4>
 					<div class="panel-inner" id="area-status"></div>
 				</div>
 			</div>

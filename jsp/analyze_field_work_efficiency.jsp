@@ -178,7 +178,7 @@
 							<div class="big-row">
 								<div class="large-8 columns">
 									<div class="panel-outer">
-										<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Work order type analysis</h4>
+										<h4 class="panel-heading"><i class="fi-graph-horizontal colorHeading"></i> Work order type analysis</h4>
 										<div class="panel-inner" id="block-work-order-type-analysis-chart"></div>
 									</div>
 

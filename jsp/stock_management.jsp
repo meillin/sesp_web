@@ -204,7 +204,7 @@
 			<div class="big-row">
 				<div class="large-6 columns">
 					<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-trend size-24 colorHeading"></i> On pallet</h4>
+						<h4 class="panel-heading"><i class="fi-marker size-24 colorHeading"></i> On pallet</h4>
 						<div class="panel-inner">
 							<div id="tabs-wrapper" >
 								<a id="block-on-pallet-tab1" class="tiny button selected" onclick="javascript:updateUnitStatus('fromSupplier')">From supplier</a>
@@ -217,7 +217,7 @@
 				</div>
 				<div class="large-6 columns">
 					<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-trend size-24 colorHeading"></i> Device type</h4>
+						<h4 class="panel-heading"><i class="fi-graph-bar size-24 colorHeading"></i> Device type</h4>
 						<div class="panel-inner">
 							<div class="row">
 								<div class="large-12 columns">
