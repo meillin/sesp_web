@@ -1,3 +1,28 @@
 a {
 	color: #fff;
 }
+#main-content-index {
+    background-image: url(../images/2014/dashboard_bg.jpg);
+    background-repeat: repeat-x;
+    background-color: #ebefee;
+	font-size:14px;
+	/*text-align: center;*/
+}
+#main-content-index ul li {
+    text-align: center;
+}
+#main-content-index ul li div {
+    background: #5eb785;
+    width: 99.9999%;
+    margin: auto;
+    min-height: 180px;
+    padding: 1.5em;
+}
+#main-content-index h3 {
+    color: #fff;
+}
+.welcome-text {
+    color: #fff;
+    font-size: 4em;
+    padding: 1.5em 0;
+}

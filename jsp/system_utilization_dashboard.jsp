@@ -32,6 +32,9 @@
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/system_dashboard.js"></script>
 		<link rel="shortcut icon" type="image/png" href="<%=request.getContextPath()%>/images/favicon.png" />
 
+		<script src="<%=request.getContextPath()%>/js/highchart/highcharts.js"></script>
+		<script src="<%=request.getContextPath()%>/js/highchart/highcharts-more.js"></script>
+
 	</head>
 	<script>
 		contextPath = "<%=request.getContextPath()%>";
@@ -48,14 +51,13 @@
 							<i class="fi-graph-pie"></i> Import servers
 						</h4>
 						<div class="panel-inner">
+							<!--
 							<div class="row">
 								<div class="small-6 columns">
-									<label>CPU</label>
-									<div id="import-servers-cpu"></div>
+									<div id="import-servers"></div>
 								</div>
 								<div class="small-6 columns">
-									<label>Import threads</label>
-									<div id="import-servers-import-threads"></div>
+									<div id="import-servers-threads"></div>
 								</div>
 							</div>
 							<div class="row">
@@ -64,6 +66,18 @@
 									<div id="import-servers-memory" ></div>
 								</div>
 							</div>
+							-->
+							<div class="row">
+								<div class="large-4 columns">
+									<div id="import-servers"></div>
+									<label>Memory</label>
+									<div id="import-servers-memory" ></div>
+								</div>
+								<div class="large-8 columns">
+									<div id="import-servers-threads"></div>
+								</div>
+							</div>
+
 						</div>
 				</div>
 
@@ -74,12 +88,10 @@
 						<div class="panel-inner">
 							<div class="row">
 								<div class="small-6 columns">
-									<label>CPU</label>
-									<div id="export-servers-cpu"></div>
+									<div id="export-servers"></div>
 								</div>
 								<div class="small-6 columns">
-									<label>Export threads</label>
-									<div id="export-servers-export-threads"></div>
+									<div id="export-servers-threads"></div>
 								</div>
 							</div>
 							<div class="row">
@@ -98,8 +110,7 @@
 					<div class="panel-inner">
 						<div class="row">
 								<div class="small-6 columns">
-									<label>CPU</label>
-									<div id="transaction-servers-cpu"></div>
+									<div id="transaction-servers"></div>
 								</div>
 								<div class="small-6 columns">
 									<label>Memory</label>
@@ -118,33 +129,25 @@
 						</div>
 						<div class="height-50 panel-inner">
 							<div class="large-6 columns">
-								<div>Files</div>
-								<div id="import-statistics-files"></div>
-								<div class="row">
-									<div class="small-6 columns text-center">
-										<strong>
+								<div id="import-files"></div>
+								<div class="row info text-center">
+									<div class="small-6 columns">
 											<div>Files imported</div>
 											<div id="import-statistics-files-imported">123</div>
-										</strong>
 									</div>
-								<div class="small-6 columns text-center">
-									<strong>
-										<div>Data imported</div>
-										<div id="import-statistics-data-imported">321</div>
-									</strong>
+									<div class="small-6 columns">
+											<div>Data imported</div>
+											<div id="import-statistics-data-imported">321</div>
 									</div>
 								</div>
 							</div>
 
 							<div class="large-6 columns">
-								<div>Messages</div>
-								<div id="import-statistics-messages"></div>
-								<div class="row">
-									<div class="large-12 columns text-center">
-										<strong>
+								<div id="import-messages"></div>
+								<div class="row info text-center">
+									<div class="large-12 columns">
 											<div>Messages received</div>
 											<div id="import-statistics-messages-received">110</div>
-										</strong>
 									</div>
 								</div>
 							</div>
@@ -162,32 +165,7 @@
 												<th>Rec.count</th>
 												</tr>
 											</thead>
-											<tbody>
-												<tr>
-													<td>es Here</td>
-													<td>longer ct</td>
-													<td>es Here</td>
-													<td>es Here</td>
-													<td>es Here</td>
-													<td>es Here</td>
-												</tr>
-												<tr>
-													<td>es Here</td>
-													<td>longer Co</td>
-													<td>es Here</td>
-													<td>es Here</td>
-													<td>es Here</td>
-													<td>es Here</td>
-												</tr>
-												<tr>
-													<td>es Here</td>
-													<td>longer Co</td>
-													<td>es Here</td>
-													<td>es Here</td>
-													<td>es Here</td>
-													<td>es Here</td>
-												</tr>
-											</tbody>
+											<tbody></tbody>
 									</table>
 								</div>
 							</div>
@@ -199,16 +177,14 @@
 						<h4><i class="fi-graph-trend"></i> Export statistics</h4>
 					</div>
 					<div class="panel-inner">
-						<div class="row">
 							<div class="large-6 columns">
-								<div>Files</div>
-								<div id="export-statistics-files"></div>
-								<div class="row">
+								<div id="export-files"></div>
+								<div class="row info text-center">
 									<div class="small-6 columns">
 										<div>Files exported</div>
 										<div id="export-statistics-files-exported">123</div>
 									</div>
-								<div class="small-6 columns">
+									<div class="small-6 columns">
 										<div>Data exported</div>
 										<div id="export-statistics-data-exported">321</div>
 									</div>
@@ -216,55 +192,28 @@
 							</div>
 
 							<div class="large-6 columns">
-								<div>Messages</div>
-								<div id="export-statistics-messages"></div>
-								<div class="row">
+								<div id="export-messages"></div>
+								<div class="row info text-center">
 									<div class="large-12 columns">
 										<div>Messages received</div>
 										<div id="export-statistics-messages-received">110</div>
 									</div>
-								</div>
 							</div>
 						</div>
 						<div class="row">
 							<div class="large-12 columns">
 								<table id="export-statistics-table">
-								<thead>
-									<tr>
-									<th>ID</th>
-									<th>Timestamp</th>
-									<th>File type</th>
-									<th>Status</th>
-									<th>Size</th>
-									<th>Rec.count</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>es Here</td>
-										<td>longer ct</td>
-										<td>es Here</td>
-										<td>es Here</td>
-										<td>es Here</td>
-										<td>es Here</td>
-									</tr>
-									<tr>
-										<td>es Here</td>
-										<td>longer Co</td>
-										<td>es Here</td>
-										<td>es Here</td>
-										<td>es Here</td>
-										<td>es Here</td>
-									</tr>
-									<tr>
-										<td>es Here</td>
-										<td>longer Co</td>
-										<td>es Here</td>
-										<td>es Here</td>
-										<td>es Here</td>
-										<td>es Here</td>
-									</tr>
-								</tbody>
+									<thead>
+										<tr>
+										<th>ID</th>
+										<th>Timestamp</th>
+										<th>File type</th>
+										<th>Status</th>
+										<th>Size</th>
+										<th>Rec.count</th>
+										</tr>
+									</thead>
+									<tbody></tbody>
 								</table>
 							</div>
 						</div>
@@ -278,14 +227,12 @@
 					<div class="panel-inner">
 						<div class="row">
 							<div class="large-12 columns">
-								<div>Users in system</div>
-								<div id="users-system"></div>
+								<div id="users-system-chart"></div>
 							</div>
 						</div>
 						<div class="row">
 							<div class="large-12 columns">
-								<div>Authentications today</div>
-								<div id="users-authentifications-today"></div>
+								<div id="users-authentifications-chart"></div>
 							</div>
 						</div>
 					</div>
@@ -296,8 +243,7 @@
 					<div class="panel-inner">
 						<div class="row">
 							<div class="large-12 columns">
-								<div>Errors today</div>
-								<div id="errors-today"></div>
+								<div id="errors"></div>
 							</div>
 						</div>
 						<div class="row">
@@ -359,11 +305,9 @@
 			</div>
 
 		</div><!-- end of big-row -->
-
-
 		 <script>
 		 startDashboard();
 		 </script>
-
+		<script src="<%=request.getContextPath()%>/js/highchart/system-dashboard-chart.js"></script>
 	</body>
 </html>

@@ -540,6 +540,7 @@ function updateWorkOrder(orderType){
 
 function drawChart2(data){
 
+	/*
 	showWorkOrderStatusCharts();
 	console.log("function drawChart2() called");
 	$("#block-summary-content-wo-count").html(eval(data.totalNoOfWorkOrders));
@@ -572,7 +573,7 @@ function drawChart2(data){
 	stockChart.setDataXML(data.notPerformedDetail);
 	//alert("Work Order NP " + data.notPerformedDetail);
 	stockChart.render("block-work-order-status-chart-right");
-
+	*/
 }
 
 function refreshChart2(){
@@ -596,7 +597,6 @@ function refreshChart2(){
 
 //Common method for validating the inputs
 function validateInputs(inputVal,errorMessage){
-	//var inputVal = $(selectName).val();
 	if(inputVal == null || inputVal == ""){
 		alert(errorMessage);
 		return false;

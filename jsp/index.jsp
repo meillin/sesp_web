@@ -24,9 +24,8 @@ document.createElement("figure");
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-index.css" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-search-results.css" />
-<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/hex2.css"> 
-<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/js/images/favicon.png" />
-<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />		
+<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/hex2.css">
+<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/style.tidy.css" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
 
@@ -36,12 +35,12 @@ document.createElement("figure");
 <script type="text/javascript" src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
 <script type="text/javascript" src="<%=contextPath%>/js/index-init.js"></script>
-<script type="text/javascript" src="<%=contextPath%>/js/common.js"></script>    
+<script type="text/javascript" src="<%=contextPath%>/js/common.js"></script>
 
-<script type="text/javascript" src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>		
-<script type="text/javascript" src="<%=contextPath%>/js/jquery.cookie.js"></script>	
+<script type="text/javascript" src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
+<script type="text/javascript" src="<%=contextPath%>/js/jquery.cookie.js"></script>
 <script type="text/javascript" src="<%=contextPath%>/js/foundation.min.js"></script>
-<script type="text/javascript" src="<%=contextPath%>/js/foundation/foundation.offcanvas.js"></script>	
+<script type="text/javascript" src="<%=contextPath%>/js/foundation/foundation.offcanvas.js"></script>
 
 <script src="<%=contextPath%>/js/sesp_ajax.js"></script>
 <script src="<%=contextPath%>/js/spin.js"></script>
@@ -61,7 +60,7 @@ document.createElement("figure");
 
         <section class="main-section">
           <script>
-            contextPath = "<%=request.getContextPath()%>";     
+            contextPath = "<%=request.getContextPath()%>";
             isAjaxSearch = false;
             i18nerrorInvalidSearchInput = "<s:text name='webportal.search.results.error.invalidsearchinput'/>";
             i18nerrorInvalidSearchAction = "<s:text name='webportal.search.results.error.invalidsearchaction'/>";
@@ -99,7 +98,7 @@ document.createElement("figure");
                   <li>
                     <div>
                         <a class="patch" href="<%=contextPath%>/std/StockManagement1" alt="LOGISTICS" title="LOGISTICS">
-                          <i class="fi-alert size-74"></i></br>
+                          <i class="fi-mountains size-74"></i></br>
                           <span>LOGISTICS</span>
                         </a>
                     </div>
@@ -127,7 +126,7 @@ document.createElement("figure");
                     <div>
                       <a class="patch" href="<%=contextPath%>/std/WorkOrderProgress" alt="WORK ORDER PROGRESS" title="WORK ORDER PROGRESS">
                         <i class="fi-clock size-74"></i></br>
-                        <span>WORK ORDER PROGRESS</span>
+                        <span>WORK ORDER/AREA MONITOR</span>
                       </a>
                     </div>
                   </li>
@@ -157,10 +156,10 @@ document.createElement("figure");
 
     </div> <!-- end of wrap -->
 
-    <script type="text/javascript"> 
+    <script type="text/javascript">
       $(document).foundation('offcanvas');
     </script>
-    
+
     <!--[if lt IE 9]>
     <script type="text/javascript" src="https://raw.githubusercontent.com/chuckcarpenter/REM-unit-polyfill/master/js/rem.min.js"></script>
     <![endif]-->

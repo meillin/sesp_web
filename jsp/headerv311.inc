@@ -11,9 +11,9 @@
 						<li><a href="<%=request.getContextPath()%>/std/StockManagement1" id="menu-button-logistics"><i class="fi-mountains size-24"></i><span class="slide-out-text">Logistics</span></a></li>
 						<li><a href="<%=request.getContextPath()%>/std/AlarmManagementReports" id="menu-button-alarm-management"><i class="fi-alert size-24"></i><span class="slide-out-text">Alarm Management</span></a></li>
 						<li><a href="javascript: openDashboard();" id="menu-button-system-utilization"><i class="fi-monitor size-24"></i><span class="slide-out-text">System Utilization</span></a></li>
-						<li><a href="<%=request.getContextPath()%>/std/WorkOrderProgress" id="menu-button-work-order-progress"><i class="fi-graph-trend size-24"></i><span class="slide-out-text">Work Order Progress</span></a></li>
-						<li><a href="<%=request.getContextPath()%>/std/AnalyzeFieldWorkEfficiency" id="menu-button-technician-work-load"><i class="fi-arrow-up size-24"></i><span class="slide-out-text">Field work Efficency</span></a></li>
-						<li><a href="<%=request.getContextPath()%>/std/TimeReservationCallList" id="menu-button-delivery-performance"><i class="fi-clock size-24"></i><span class="slide-out-text">Time Reservation call list</span></a></li>
+						<li><a href="<%=request.getContextPath()%>/std/WorkOrderProgress" id="menu-button-work-order-progress"><i class="fi-graph-trend size-24"></i><span class="slide-out-text">Work Order/Area Monitor</span></a></li>
+						<li><a href="<%=request.getContextPath()%>/std/AnalyzeFieldWorkEfficiency" id="menu-button-technician-work-load"><i class="fi-arrow-up size-24"></i><span class="slide-out-text">Field Work Efficency</span></a></li>
+						<li><a href="<%=request.getContextPath()%>/std/TimeReservationCallList" id="menu-button-delivery-performance"><i class="fi-clock size-24"></i><span class="slide-out-text">Time Reservation Call List</span></a></li>
 					</ul>
 				</li>
 				<!--<li>

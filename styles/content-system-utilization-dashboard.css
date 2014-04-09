@@ -41,6 +41,14 @@ body {
 .column-body .row:nth-child(2) .columns{
     margin: 0.5em 0;
 }
+.panel-inner {
+    padding-top: 0 !important;
+}
+.info {
+    font-weight: bold;
+    padding: 7px;
+    background: linen;
+}
 table {
     width: 100%;
     border: none;

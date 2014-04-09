@@ -244,7 +244,7 @@
 
 				<div class="large-6 columns">
 					<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Resource projections per month</h4>
+						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Total resource projection</h4>
 						<div class="panel-inner" id="resource-projections-total-view">
 							<!-- IDs for real data chart
 							<div class="large-6 columns" id="block-resource-projections-total-view"></div>

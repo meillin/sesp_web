@@ -302,7 +302,7 @@ symbolCounter++;
 								</div>
 								<ul class="inline-list map-list">
 									<li>
-										<div style="width: 100%; height: 670px; opacity:0.99;" id="map-wrapper"></div>
+										<div style="width: 100%; height: 650px; opacity:0.99;" id="map-wrapper"></div>
 									</li>
 									<li class="panel">
 										<h3>Summary</h3>

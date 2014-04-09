@@ -132,17 +132,31 @@
 										</div>
 									</div>
 								</div>
+
 								<div class="large-4 columns">
-									<label>Domain</label>
-									<select id="filter-multiselect-domain" class="custom-multi-select" name="multiselect-domain" multiple="multiple" onchange="onDomainSelect()"></select>
-									<label>Area</label>
-									<select id="filter-multiselect-area" class="custom-multi-select" name="multiselect-area" multiple="multiple"></select>
+									<div class="row">
+										<div class="large-12 medium-6 columns">
+											<label>Domain</label>
+											<select id="filter-multiselect-domain" class="custom-multi-select" name="multiselect-domain" multiple="multiple" onchange="onDomainSelect()"></select>
+										</div>
+										<div class="large-12 medium-6 columns">
+											<label>Area</label>
+											<select id="filter-multiselect-area" class="custom-multi-select" name="multiselect-area" multiple="multiple"></select>
+										</div>
+									</div>
 								</div>
+
 								<div class="large-4 columns">
-									<label>Team</label>
-									<select id="filter-multiselect-team" class="custom-multi-select" name="multiselect-team" multiple="multiple" onchange="onTeamSelectPopulateTechnicians()"></select>
-									<label>Technician</label>
-									<select id="filter-multiselect-technician" class="custom-multi-select" name="multiselect-technician" multiple="multiple"></select>
+									<div class="row">
+										<div class="large-12 medium-6 columns">
+											<label>Team</label>
+											<select id="filter-multiselect-team" class="custom-multi-select" name="multiselect-team" multiple="multiple" onchange="onTeamSelectPopulateTechnicians()"></select>
+										</div>
+										<div class="large-12 medium-6 columns">
+											<label>Technician</label>
+											<select id="filter-multiselect-technician" class="custom-multi-select" name="multiselect-technician" multiple="multiple"></select>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="big-row">

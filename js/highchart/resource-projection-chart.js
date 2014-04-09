@@ -1,10 +1,11 @@
 function drawDeviceAssetProjectionPerMonth() {
         $('#device-assets-projections-per-month-view').highcharts({
             chart: {
-                type: 'bar'
+                type: 'bar',
+                height: 290
             },
             title: {
-                text: 'Device assets projections per month'
+                text: ''
             },
             xAxis: {
                 categories: ['March, 2013', 'April, 2013', 'May, 2013', 'June, 2013', 'July, 2013']
@@ -44,10 +45,11 @@ function drawTotalDeviceAssetProjection() {
         chart: {
             plotBackgroundColor: null,
             plotBorderWidth: null,
-            plotShadow: false
+            plotShadow: false,
+            height: 290
         },
         title: {
-            text: 'Total device asset projection'
+            text: ''
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -83,10 +85,11 @@ function drawTotalDeviceAssetProjection() {
 function drawResourceProjectionPerMonth() {
         $('#resource-projections-per-month-view').highcharts({
             chart: {
-                type: 'bar'
+                type: 'bar',
+                height: 290
             },
             title: {
-                text: 'Resource projection per month'
+                text: ''
             },
             xAxis: {
                 categories: ['March, 2013', 'April, 2013', 'May, 2013', 'June, 2013', 'July, 2013']
@@ -126,10 +129,11 @@ function drawTotalResourceProjection() {
         chart: {
             plotBackgroundColor: null,
             plotBorderWidth: null,
-            plotShadow: false
+            plotShadow: false,
+            height: 290
         },
         title: {
-            text: 'Total resource projection'
+            text: ''
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -169,7 +173,7 @@ function drawResourceProjectionKPI(){
                 type: 'column'
             },
             title: {
-                text: 'Total available and planned hours'
+                text: ''
             },
             xAxis: {
                 gridLineWidth: 0,

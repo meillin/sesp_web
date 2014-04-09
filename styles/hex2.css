@@ -1335,7 +1335,7 @@ legend + .control-group {
 /*
 .close {
     color: #000000;
-    float: right; 
+    float: right;
     font-size: 20px;
     font-weight: 700;
     line-height: 22px;
@@ -1369,7 +1369,7 @@ legend + .control-group {
     line-height: 22px;
     margin-bottom: 0;
     padding: 4px 10px;
-    text-align: left; 
+    text-align: left;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
     vertical-align: middle;
 } */
@@ -5438,34 +5438,6 @@ html.hq .hidden-notice .talk {
 .nav-tabs a, .nav-tabs-tooltip {
     font-weight: 700;
 }
-/* ***********************MODIFIED BY MEILAN*********************************************************************************/
-
-#main-content-index {
-    background-image: url(../images/2014/dashboard_bg.jpg);
-    background-repeat: repeat-x;
-    background-color: #ebefee;
-	font-size:14px;
-	/*text-align: center;*/
-}
-#main-content-index ul li {
-    text-align: center;
-}
-#main-content-index ul li div {
-    background: #5eb785;
-    width: 99.9999%;
-    margin: auto;
-    min-height: 180px;
-    padding: 1em;
-}
-#main-content-index h3 {
-    color: #fff;
-}
-.welcome-text {
-    color: #fff;
-    font-size: 4em;
-    padding: 1.5em 0;
-}
-
 /**********************************************************************************************************************************/
 .content-main {
     background: none repeat scroll 0 0 #EFEFEF;
@@ -10302,7 +10274,7 @@ ul.skills li .graphic {
 ul.skills li .progress-ring {
     display: inline-block;
     height: 193px;
-    
+
     position: relative;
     text-align: left;
     top: 0px;

@@ -7,7 +7,7 @@ html, body{
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	background-color: #e6e6e6;
+	background-color: #ebefee;
 }
 .wrapper-blur {
 	top:0;
@@ -20,7 +20,7 @@ html, body{
 #wrapper{
 	min-height: 100%;
 	position: relative;
-	background: #e6e6e6;
+	background: #ebefee;
 }
 .panel button {
 	width: 100%;
@@ -281,7 +281,7 @@ button, .button{
 
 .custom-input-datepicker,
 .custom-input-datepicker-wide{
-	height: 28px;
+	height: 35px;
 	background-color: #e9e9e9;
 }
 
