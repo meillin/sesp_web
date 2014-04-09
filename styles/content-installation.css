@@ -1,3 +1,41 @@
 header .slide-menu-right a{
 	display: none;
 }
+
+table{
+	width: 100%;
+	border: none;
+	background: none;
+	border-collapse:collapse;
+}
+
+th{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	background: none;
+	max-width: 150px;
+	word-wrap: break-word
+
+}
+
+thead{
+	background: none;
+}
+
+td{
+	border-top: 1px solid #e7e7e7;
+}
+
+
+@media screen and (max-width: 1600px){
+	th{
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		background: none;
+		max-width: 35px;
+		word-wrap: break-word
+
+	}
+}

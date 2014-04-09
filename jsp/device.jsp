@@ -67,12 +67,12 @@ document.createElement("figure");
 			<div class="big-row">
 				<div class="large-12 columns">
 					<h2 class="page-name-heading">
-						<s:text name='webportal.device.results.title'/> : <span id="device-id" class=" text-light-grey"></span>
+						<s:text name='webportal.device.results.title'/> : <span id="device-id"></span>
 					</h2>
 				</div>
 			</div>
 			<div class="big-row">
-				<div class="large-3 columns">
+				<div class="large-6 columns">
 					<div class="panel-outer">
 						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading">
 						</i>Devices<span><s:text name='webportal.device.overview.device.title'/></span>
@@ -124,8 +124,7 @@ document.createElement("figure");
 				<div class="panel-outer">
 					<h4 class="panel-heading">
 						<i class="fi-graph-trend colorHeading"></i>
-						<span class="block-title-name text-blue">
-							<s:text name='webportal.device.location.title'/></span>
+						<span><s:text name='webportal.device.location.title'/></span>
 						</h4>
 						<div class="panel-inner">
 							<div id="block-device-location-map-wrapper" style="width:444px; height:250px">
@@ -144,7 +143,9 @@ document.createElement("figure");
 						</div>
 					</div>
 				</div>
-				<div class="large-3 columns">
+				</div>
+				<div class="big-row">
+									<div class="large-12 columns">
 					<div class="panel-outer">
 						<h4 class="panel-heading">
 							<i class="fi-graph-trend colorHeading"></i>

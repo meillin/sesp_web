@@ -108,16 +108,14 @@
 								<s:text name="webportal.common.location"/>
 							</h4>
 							<div class="panel-inner">
-								<div id="block-location-map-wrapper" style="height:300px">								
+								<div id="block-location-map-wrapper" style="height:350px">								
 								</div>
 								<div class="legend">
-									<div class="address legend-block text-grey">
-										<div class="legend-block-title"><s:text name="webportal.multipoint.address"/> : </div>
-										<div class="legend-block-content text-light-grey" id="block-location-adress"></div>
+									<div>
+										<span><strong><s:text name="webportal.multipoint.address"/>:</strong> </span><span id="block-location-adress"></span>
 									</div>
-									<div class="area legend-block text-grey">
-										<div class="legend-block-title"><s:text name="webportal.multipoint.area"/> : </div>
-										<div class="legend-block-content text-light-grey" id="block-location-area"></div>									
+									<div>
+										<span><strong><s:text name="webportal.multipoint.area"/>:</strong> </span><span id="block-location-area"></span>									
 									</div>
 								</div>
 							</div>

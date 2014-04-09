@@ -50,24 +50,63 @@
 	padding: 0.5%;
 }
 
-#block-search-results table{
+table{
 	width: 100%;
 	border: none;
 	background: none;
+	border-collapse: collapse; 
 }
 
-#block-search-results th{
+th, td{
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	background: none;
+	text-align: left; 
 
 }
 
-#block-search-results thead{
+thead{
 	background: none;
 }
 
-#block-search-results td{
+td{
 	border-top: 1px solid #e7e7e7;
+}
+
+@media only screen and (max-width: 1500px){
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	tr { border: 1px solid #ccc; }
+	td { 
+		/* Behave  like a "row" */
+		display: block !important;
+	}
+	
+	#instresults td:before { 
+		content: attr(data-th)": ";
+		width: 50%;
+		padding-right: 1em;
+		display: inline-block !important;
+		font-weight: bold;
+	}
+	
+	/*
+	Label the data
+	*/
+	/*#instresults td:nth-of-type(1):before { content: "data-th:"; }
+	#instresults td:nth-of-type(2):before { content: "Code:"; }
+	#instresults td:nth-of-type(3):before { content: "Ext code:"; }
+	#instresults td:nth-of-type(4):before { content: "Domain:"; }
+	#instresults td:nth-of-type(5):before { content: "Last Changed:"; }
+	#instresults td:nth-of-type(6):before { content: "Region:"; }
+	#instresults td:nth-of-type(7):before { content: "Milestone Area:"; }
+	#instresults td:nth-of-type(8):before { content: "Net Area:"; }
+	#instresults td:nth-of-type(9):before { content: "Status:"; }*/
 }

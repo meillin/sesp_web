@@ -69,7 +69,7 @@
 									<table id="instresults">
 										<thead>
 											<tr>
-												<th> &nbsp;&nbsp;&nbsp; <s:text name="webportal.search.results.installation.id"/></th>
+												<th><s:text name="webportal.search.results.installation.id"/></th>
 												<th><s:text name="webportal.search.results.installation.code"/></th>
 												<th><s:text name="webportal.search.results.installation.extcode"/></th>
 												<th><s:text name="webportal.search.results.installation.domain"/></th>
@@ -83,7 +83,7 @@
 										<tbody>											
 										</tbody>
 									</table>
-									<a href="javascript:showMoreResults('INST');" id="block-search-results-installations-link-more" class="link-more text-blue"><s:text name="webportal.search.results.installation.options.showmore"/></a>
+									<a href="javascript:showMoreResults('INST');" id="block-search-results-installations-link-more"><s:text name="webportal.search.results.installation.options.showmore"/></a>
 								</div>
 							</div>
 						</div>
@@ -100,7 +100,7 @@
 									<table id="instMepResults">
 										<thead>
 											<tr>
-												<th> &nbsp;&nbsp;&nbsp; <s:text name="webportal.search.results.measurepoint.id"/></th>
+												<th><s:text name="webportal.search.results.measurepoint.id"/></th>
 												<th><s:text name="webportal.search.results.measurepoint.code"/></th>
 												<th><s:text name="webportal.search.results.measurepoint.extcode"/></th>
 												<th><s:text name="webportal.search.results.measurepoint.domain"/></th>
@@ -134,7 +134,7 @@
 									<table id="instMupResults">
 										<thead>
 											<tr>
-												<th> &nbsp;&nbsp;&nbsp; <s:text name="webportal.search.results.multipoint.id"/></th>
+												<th><s:text name="webportal.search.results.multipoint.id"/></th>
 												<th><s:text name="webportal.search.results.multipoint.code"/></th>
 												<th><s:text name="webportal.search.results.multipoint.domain"/></th>
 												<th><s:text name="webportal.search.results.multipoint.netstation"/></th>
@@ -160,13 +160,13 @@
 								<h4 class="panel-heading">
 									<i class="fi-graph-trend colorHeading"></i>
 									<s:text name="webportal.search.results.device.title"/>
-									<span id="block-search-results-devices-number" class="number"></span>
+									<span id="block-search-results-devices-number"></span>
 								</h4>
 								<div class="panel-inner">
 									<table id="deviceResults">
 										<thead>
 											<tr>
-												<th> &nbsp;&nbsp;&nbsp; <s:text name="webportal.search.results.device.id"/></th>
+												<th><s:text name="webportal.search.results.device.id"/></th>
 												<th><s:text name="webportal.search.results.device.giai"/></th>
 												<th><s:text name="webportal.search.results.device.serial"/></th>
 												<th><s:text name="webportal.search.results.device.propno"/></th>
@@ -195,10 +195,10 @@
 									<span id="block-search-results-cases-number"></span>
 								</h4>
 								<div class="panel-inner">
-									<table id="caseResults" class="text-grey installation-table">
+									<table id="caseResults">
 										<thead>
 											<tr class="table-title">
-												<th> &nbsp;&nbsp;&nbsp; <s:text name="webportal.search.results.case.id"/></th>
+												<th><s:text name="webportal.search.results.case.id"/></th>
 												<th><s:text name="webportal.search.results.case.casetype"/></th>
 												<th><s:text name="webportal.search.results.case.user"/></th>
 												<th><s:text name="webportal.search.results.case.lastchanged"/></th>

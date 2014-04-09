@@ -256,49 +256,49 @@ function populateInstSearchResults(instData) {
 				 
 				 trString.append("<tr class='"+trClass+"'>");				 
 				 if(instDetail.id != null) {
-					 trString.append("<td> &nbsp;&nbsp;&nbsp; <a href='"+contextPath+"/std/ViewInstallation?id="+instDetail.id+"' class='text-blue'>"+instDetail.id+"</a></td>");	 
+					 trString.append("<td data-th='ID'> <a href='"+contextPath+"/std/ViewInstallation?id="+instDetail.id+"'class='text-blue'>"+instDetail.id+"</a></td>");	 
 				 } else {
 					 trString.append("<td></td>");
 				 }
 				 if(instDetail.instCode != null) {
-					 trString.append("<td>"+instDetail.instCode+"</td>");	 
+					 trString.append("<td data-th='Code'>"+instDetail.instCode+"</td>");	 
 				 } else {
-					 trString.append("<td></td>");
+					 trString.append("<td data-th='Code'></td>");
 				 }
 				 if(instDetail.instEcode != null) {
-					 trString.append("<td>"+instDetail.instEcode+"</td>");	 
+					 trString.append("<td data-th='Ext code'>"+instDetail.instEcode+"</td>");	 
 				 } else {
-					 trString.append("<td></td>");
+					 trString.append("<td data-th='Ext code'></td>");
 				 }
 				 if(instDetail.domain != null) {
-					 trString.append("<td>"+instDetail.domain+"</td>");	 
+					 trString.append("<td data-th='Domain'>"+instDetail.domain+"</td>");	 
 				 } else {
-					 trString.append("<td></td>");
+					 trString.append("<td data-th='Domain'></td>");
 				 }
 				 if(instDetail.lastChanged != null) {
-					 trString.append("<td>"+instDetail.lastChanged+"</td>");	 
+					 trString.append("<td data-th='Last Changed'>"+instDetail.lastChanged+"</td>");	 
 				 } else {
-					 trString.append("<td></td>");
+					 trString.append("<td data-th='Last Changed'></td>");
 				 }
 				 if(instDetail.regionArea != null) {
-					 trString.append("<td>"+instDetail.regionArea+"</td>");	 
+					 trString.append("<td data-th='Region'>"+instDetail.regionArea+"</td>");	 
 				 } else {
-					 trString.append("<td></td>");
+					 trString.append("<td data-th='Region'></td>");
 				 }
 				 if(instDetail.milestoneArea != null) {
-					 trString.append("<td>"+instDetail.milestoneArea+"</td>");	 
+					 trString.append("<td data-th='Milestone Area'>"+instDetail.milestoneArea+"</td>");	 
 				 } else {
-					 trString.append("<td></td>");
+					 trString.append("<td data-th='Milestone Area'></td>");
 				 }
 				 if(instDetail.netArea != null) {
-					 trString.append("<td>"+instDetail.netArea+"</td>");	 
+					 trString.append("<td data-th='Net Area'>"+instDetail.netArea+"</td>");	 
 				 } else {
-					 trString.append("<td></td>");
+					 trString.append("<td data-th='Net Area'></td>");
 				 }
 				 if(instDetail.instStatus != null) {
-					 trString.append("<td class='"+statusClass+"'>"+instDetail.instStatus+"</td>");	 
+					 trString.append("<td data-th='Status' class='"+statusClass+"'>"+instDetail.instStatus+"</td>");	 
 				 } else {
-					 trString.append("<td></td>");
+					 trString.append("<td data-th='Status'></td>");
 				 }
 				 trString.append("</tr>");						 
 				
