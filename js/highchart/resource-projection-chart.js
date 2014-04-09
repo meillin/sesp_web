@@ -170,7 +170,8 @@ function drawTotalResourceProjection() {
 function drawResourceProjectionKPI(){
             $('#resource-projections-kpi').highcharts({
             chart: {
-                type: 'column'
+                type: 'column',
+                height: 200
             },
             title: {
                 text: ''
@@ -182,10 +183,11 @@ function drawResourceProjectionKPI(){
                  }
             },
             yAxis: {
-                 gridLineWidth: 0,
-                 labels: {
+                title: '',
+                gridLineWidth: 0,
+                labels: {
                     enabled: false
-                 }
+                }
             },
             tooltip: {
                 headerFormat: '',
