@@ -168,30 +168,21 @@ function loadAreaTypes(){
 	var obj1= {};
 	obj1.url=contextPath+"/std/AlertManagementAreaTypes.action";
 	obj1.successfunc = function(data){
-
-	  var items;
-	  var savedData = $.cookie(pgCode+"ap_areaType");
-	  selected = '" > ';
-
-		if(savedData == null || savedData == ''){
+		var items;
+		var savedData = $.cookie(pgCode+"ap_areaType");
+		selected = '" > ';
+		if(savedData === null || savedData === ''){
 			selected = '" selected > ';
 		}
-
-
 		$.each(data, function(i, item) {
 			items += '<option value="' + item.id + selected	+ item.name + '</option>';
-			});
-
-			$('#filter-multiselect-area-type').html(items);
-		//populateSavedMultiSelectBox("#filter-multiselect-area-type",items,savedData);
-
+		});
+		$('#filter-multiselect-area-type').html(items);
 	};
 	obj1.errorfunc = errorDetails;
 	run_ajax_json(obj1);
 	return;
-
-
-	}
+}
 
 function loadWorkOrderTypes(){
 	var obj2= {};

@@ -230,19 +230,17 @@ symbolCounter++;
 
 					</div>
 					<div class="large-4 columns">
-						<lable><s:text name="areaprogress.filters.domain"/></lable>
+						<lable>Domain</lable>
 						<select id="filter-multiselect-domain" class="custom-multi-select" onchange="domainChanged()" name="multiselect-domain" multiple="multiple">
 						</select>
-						<lable><s:text name="workorderprogress.filters.workordertype"/></lable>
+						<lable>Work order type</lable>
 						<select id="filter-multiselect-work-order-type" class="custom-multi-select" name="multiselect-work-order-type" multiple="multiple">
 						</select>
 					</div>
 					<div class="large-4 columns">
-						<lable><s:text name="areaprogress.filters.areatype"/></lable>
-						<select id="filter-multiselect-area-type" class="custom-multi-select" onchange="areaTypeChanged()" name="multiselect-area-type" multiple="multiple">
-						</select>
-
-						<lable><s:text name="webportal.alarm.area"/></lable>
+						<lable>Area type</lable>
+						<select id="filter-multiselect-area-type" onchange="areaTypeChanged()"></select>
+						<lable>Area</lable>
 						<select id="filter-multiselect-area" class="custom-multi-select" name="multiselect-area" multiple="multiple"></select>
 						<lable>Unplanned <input type="checkbox" id="filter-checkbox-unplanned" name="unplanned" value="checked"/></lable>
 					</div>
