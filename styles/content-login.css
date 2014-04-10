@@ -1,32 +1,72 @@
+@font-face
+{
+font-family: roboto-lght;
+src: url(font/Roboto-Light.ttf);
+}
+
+@font-face
+{
+font-family: roboto-med;
+src: url(font/Roboto-Medium.ttf);
+}
+
+
 body {
 	background: url(../images/2014/sesp_bg.png);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
+
 }
 #main-content {
-	margin-top: 10%;
-	font-family: 
-	height: 460px;
+	
 	color: #fff;
 }
 
-.enter-title {
-	text-align: center;
-	font-size: 3em;
+.login-text {
+	font-family: roboto-lght;
+	margin-left: 13rem;
+	margin-top: 13rem;
+	width: 600px;
 }
+
+.login-text h1 {
+	font-family: roboto-lght;
+	color: white;
+	font-size: 2.6rem;
+}
+
+.login-text p {
+	text-align: left;
+	
+	font-family: roboto-lght;
+	font-size: 1.3rem;
+}
+
+
 label {
 	color: #fff;
-	font-weight: bold;
+	font-family: roboto-med;
+	margin-left: 0.5rem;
+	margin-bottom: 0.3rem;
+	font-size: 1rem;
 }
 
 #main-content form{
-	margin-top: 9em;
+	margin-top: 4em;
 	color: #fff;
 }
 .button {
-	background-color: #000;
+	background-color: #322827;
 }
+
+input {
+	-moz-border-radius:5px; /* Firefox */
+	-webkit-border-radius: 5px; /* Safari, Chrome */
+	-khtml-border-radius: 5px; /* KHTML */
+	border-radius: 5px; /* CSS3 */
+}
+
 input:focus {
 	background: #fff;
 }
@@ -37,4 +77,16 @@ textarea:-webkit-autofill {
     background-color: none !important;
 	background-image: none !important;
 	background: none !important;
+}
+
+a#divenable.button.tiny {
+	width: 6.5rem!important;
+	margin-top: 1rem;
+	margin-left: -1.4rem;
+	font-family: roboto-med!important;
+	font-size: 0.8rem;
+}
+
+a#divenable.button.tiny:hover{
+	background-color: green!important;
 }

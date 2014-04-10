@@ -53,32 +53,33 @@
 		<div id="wrapper">
 			<div id="main-content" class="row">
 
-				<div class="large-12 columns enter-title">
-					Smart Energy Services Platform
+				<div class="login-text">
+					<h1>Smart Energy Services Platform</h1>
+					<p>We draw on proven expertise in Consulting, Technology and Outsourcing services to develop strategies, design solutions and provide the capabilities and resources to transform utility operations.</p>
 				</div>
 
 				<div class="medium-4 medium-centered columns">
 					<form name="loginForm" method="post" action="<%=request.getContextPath()%>/std/Login" onKeyPress="return submitOnEnter(this,event)">
 						<div class="row">
 							<div class="large-12 columns">
-								<label>Username
+								<label>Username</label>
 									<input type="text" id="input-login" name="username" placeholder="Please type your username" required/>
-								</label>
+								
 							</div>
 						</div>
 
 						<div class="row">
 							<div class="large-12 columns">
-								<label>Password
+								<label>Password</label>
 									<input type="password" id="input-password" name="password" placeholder="Your password" required/>
-								</label>
+								
 							</div>
 						</div>
 
 						<div class="row">
 							<div class="large-4 right columns">
 								<a href="javascript:submitLogin(document.loginForm)" id="divenable" style="display:block" class="button tiny">
-									<s:text name="webportal.index.signin"/>
+									<!--<s:text name="webportal.index.signin"/>--> Login
 								</a>
 								<a href="#" disabled="disabled" id="divdisable" style="display:none" class="button tiny custom-deactivebutton">
 									<s:text name="webportal.index.signin"/>
