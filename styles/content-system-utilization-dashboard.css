@@ -27,32 +27,43 @@ body {
 .height-10 {
     height: 10%;
 }
-.column-header {
-    padding: 0.6em 0;
-    background: #1abc9c;
-    color: white;
-    font-weight: bold;
-}
-.column-body {
-    margin-top: 0.5em;
-    background: #fff;
-    height: 100%
-}
-.column-body .row:nth-child(2) .columns{
-    margin: 0.5em 0;
+.panel-heading {
+    color: #999a9b;
 }
 .panel-inner {
     padding-top: 0 !important;
 }
+.panel-inner .large-7, .panel-inner .large-6:first-child {
+    border-right: 1px solid #EEEEEE;
+}
+.bold {
+    padding-top: 1em;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+}
+.cpu-container {
+    border-bottom: 1px solid #EEEEEE;
+}
 .info {
     font-weight: bold;
-    padding: 7px;
-    background: linen;
+    padding: 5px;
+    font-size: 1.3em;
 }
 table {
     width: 100%;
-    border: none;
 }
 table tr th, table tr td {
     padding: 0;
+    font-size: 12px;
+}
+.pda-order label {
+    width: 30%;
+    float: left;
+    padding-top: 0.5em;
+}
+.pda-order span{
+    float: left;
+    font-weight: bold;
+    font-size: 2em;
 }

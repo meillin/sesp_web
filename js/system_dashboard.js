@@ -756,7 +756,13 @@ function populateErrorStatDetails(errorStatDetails) {
 
 				 trString.append("<tr>");
 				 if(errorDetail.id != null) {
-					 trString.append("<td>"+errorDetail.id+"</td>");
+
+				 		if(errorDetail.criticality === 'Error') {
+				 			trString.append("<td><i class='fi-alert'></i></td><td>"+errorDetail.id+"</td>");
+				 		} else {
+				 			trString.append("<td><i class='fi-info'></i></td><td>"+errorDetail.id+"</td>");
+				 		}
+
 				 } else {
 					 trString.append("<td></td>");
 				 }

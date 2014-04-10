@@ -159,7 +159,7 @@
 					};
 					var pointCollections = [];
 					addPoints(data, getPointCollection, pointCollections, displayInfo, infoDataCallback);
-				}
+	}
 	</script>
 			<div class="big-row">
 				<div class="large-12 columns filterHeader">
@@ -200,9 +200,9 @@
 				<div class="large-12 columns">
 						<ul class="page-name-heading sub-menu">
 							<li><strong>STOCK MANAGEMENT</strong></li>
-							<li class="progress-chart-li active"><i class="fi-graph-bar"></i> FROM SUPPLIER</li>
+							<li class="progress-chart-li"><i class="fi-check"></i> FROM SUPPLIER</li>
 							<li class="status-chart"><i class="fi-check"></i> IN STOCK</li>
-							<li class="details-chart"><i class="fi-magnifying-glass"></i> ON PALLET</li>
+							<li class="details-chart active"><i class="fi-check"></i> ON PALLET</li>
 						</ul>
 				</div>
 			</div>

@@ -13,7 +13,11 @@ $(function () {
 		  },
 
 		  title: {
-		      text: 'CPU'
+		      text: 'CPU',
+     			style: {
+                fontWeight: 'bold',
+                color: '#000'
+          }
 		  },
 
 		  pane: {
@@ -100,7 +104,11 @@ $(function () {
                 height: height
             },
             title: {
-                text: title
+                text: title,
+                style: {
+                      fontWeight: 'bold',
+                      color: '#000'
+                }
             },
             xAxis: {
                 categories: ['Import server #1', 'Import server #2']
@@ -108,6 +116,7 @@ $(function () {
             yAxis: {
             		title: '',
                 min: 0,
+                gridLineWidth: 0,
                 labels: {
                     enabled: false
                 },
@@ -123,7 +132,6 @@ $(function () {
                 verticalAlign: 'bottom',
                 y: 10,
                 backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColorSolid) || 'white',
-                borderColor: '#CCC',
                 borderWidth: 0,
                 shadow: false
             },
@@ -141,7 +149,7 @@ $(function () {
                         enabled: true,
                         color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
                         style: {
-                            textShadow: '0 0 3px black, 0 0 3px black'
+                            //textShadow: '0 0 3px black, 0 0 3px black'
                         }
                     }
                 }
@@ -174,14 +182,15 @@ $(function () {
 	            verticalAlign: 'top',
 	            floating: true,
 	            x: 0,
-	            y: 50,
+	            y: 60,
 	            padding: 0,
 	            borderWidth: 0
 	        	},
             title: {
                 text: title,
                 style: {
-                        fontWeight: 'bold',
+									fontWeight: 'bold',
+									color: '#000'
                 }
             },
             tooltip: {
@@ -214,7 +223,11 @@ $(function () {
 			      height: 200
 			  },
 			title: {
-			    text: title
+			    text: title,
+         	style: {
+                fontWeight: 'bold',
+                color: '#000'
+          }
 			},
 			xAxis: {
 					title: '',
@@ -263,10 +276,10 @@ $(function () {
 	                ['Import message error',   0.4],
 	                ['Import parse error', 0.3]
 	            	];
-	drawHalfGaugeChart('import-servers', 200);
-	drawHalfGaugeChart('export-servers', 200);
-	drawHalfGaugeChart('transaction-servers', 170);
-	drawStackedColumnChart('import-servers-threads', 250, 'Import threads');
+	drawHalfGaugeChart('import-servers', 150);
+	drawHalfGaugeChart('export-servers', 150);
+	drawHalfGaugeChart('transaction-servers', 150);
+	drawStackedColumnChart('import-servers-threads', 200, 'Import threads');
 	drawStackedColumnChart('export-servers-threads', 200, 'Export threads');
 	drawDonutChart('import-files', fileData, 'File');
 	drawDonutChart('export-files', fileData, 'File');
