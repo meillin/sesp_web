@@ -75,97 +75,45 @@ document.createElement("figure");
 				<div class="large-6 columns">
 					<div class="panel-outer">
 						<h4 class="panel-heading">
-						<i class="fi-graph-trend colorHeading"></i>
-						<span> <s:text name='webportal.device.overview.device.title'/> </span>
-					</h4>
-					<div class="panel-inner">
-						<table id="overview-table">
-							<tr>
-								<td> <span> <s:text name='webportal.device.overview.device.type'/> : </span> </td>
-								<td> <span id="block-overview-device-type"></span></td>
-							</tr>
-							<tr>
-								<td> <span> <s:text name='webportal.device.overview.device.model'/> : </span> </td>
-								<td> <span id="block-overview-device-model"> </span> </td>
-							</tr>
-							<tr>
-								<td> <span id="block-measurepoint-multipoint-title"> </span> </td>
-								<td> <span id="block-overview-measurepoint-id">  </span> </td>
-							</tr>
-							<tr>
-								<td> <div> <s:text name='webportal.device.overview.device.giai'/> : </div> </td>
-								<td> <div id="block-overview-giai"> </div> </td>
-							</tr>
-							<tr>
-								<td> <div> <s:text name='webportal.device.overview.device.serial.number'/> : </div> </td>
-								<td> <div id="block-overview-serial-number"></div> </td>
-							</tr>
-							<tr>
-								<td> <div> <s:text name='webportal.device.overview.device.property.number'/> : </div> </td>
-								<td> <div id="block-overview-property-number"></div> </td>
-							</tr>
-							<tr>
-								<td> <div> <s:text name='webportal.device.overview.device.domain'/> : </div> </td>
-								<td> <div id="block-overview-domain"> </div> </td>
-							</tr>
-							<tr>
-								<td> <div> <s:text name='webportal.device.overview.device.pallet'/> : </div> </td>
-								<td> <div id="block-overview-pallet"></div> </td>
-							</tr>
-							<tr>
-								<td> <div> <s:text name='webportal.device.overview.device.stock'/> :  </div> </td>
-								<td> <div id="block-overview-stock-site"></div> </td>
-							</tr>
-						</table>
-						<div class="status text-green" id="block-overview-status"> </div>
-					</div>
-				</div>
-			</div>
-			<div class="large-6 columns">
-				<div class="panel-outer">
-					<h4 class="panel-heading">
-						<i class="fi-graph-trend colorHeading"></i>
-						<span><s:text name='webportal.device.location.title'/></span>
-					</h4>
-					<div class="panel-inner">
-						<div id="block-device-location-map-wrapper" style="width:444px; height:250px">
-							<!-- <iframe width="444" height="204" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-1.55302,47.19581,-1.50817,47.22307&amp;layer=mapnik&amp;marker=47.21659,-1.53457"></iframe> -->
-						</div>
-						<div class="legend">
-							<div class="address legend-block text-grey">
-								<div class="legend-block-title"><s:text name='webportal.device.location.address'/> :</div>
-								<div class="legend-block-content text-light-grey" id="block-device-location-adress"></div>
-							</div>
-							<div class="area legend-block text-grey">
-								<div class="legend-block-title"><s:text name='webportal.device.location.area'/> :</div>
-								<div class="legend-block-content text-light-grey" id="block-device-location-area"></div>									
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="big-row">
-			<div class="large-12 columns">
-				<div class="panel-outer">
-					<h4 class="panel-heading">
-						<i class="fi-graph-trend colorHeading"></i>
-						<span class="block-title-name text-blue">
-							<s:text name='webportal.device.hardwareconfig.title'/></span>
+							<i class="fi-graph-trend colorHeading"></i>
+							<span> <s:text name='webportal.device.overview.device.title'/> </span>
 						</h4>
 						<div class="panel-inner">
-							<table id="hardware-configuration-table">
-								<thead>	
-									<tr>
-										<th><s:text name='webportal.device.hardwareconfig.type'/></th>
-										<th><s:text name='webportal.device.hardwareconfig.id'/></th>
-										<th><s:text name='webportal.device.hardwareconfig.code'/></th>
-										<th><s:text name='webportal.device.hardwareconfig.info'/></th>
-									</tr>
-								</thead>
-								<tbody>
-								</tbody>
-							</table>
+							<ul id="overview-table">
+								<li><span><s:text name='webportal.device.overview.device.type'/>: </span><span id="block-overview-device-type"></span></li>
+								<li> <span><s:text name='webportal.device.overview.device.model'/>: </span><span id="block-overview-device-model"></span></li>
+								<li><span id="block-measurepoint-multipoint-title"></span> <span id="block-overview-measurepoint-id"></span></li>
+								<li><span><s:text name='webportal.device.overview.device.giai'/>: </span><span id="block-overview-giai"></span></li>
+								<li><span><s:text name='webportal.device.overview.device.serial.number'/>: </span><span id="block-overview-serial-number"></span></li>
+								<li><span> <s:text name='webportal.device.overview.device.property.number'/>: </span><span id="block-overview-property-number"></span></li>
+								<li><span> <s:text name='webportal.device.overview.device.domain'/>: </span><span id="block-overview-domain"></span></li>
+								<li><span> <s:text name='webportal.device.overview.device.pallet'/>: </span><span id="block-overview-pallet"></span></li>
+								<li><span> <s:text name='webportal.device.overview.device.stock'/>: </span><span id="block-overview-stock-site"></span></li>	
+							</ul>
+							<div class="status text-green" id="block-overview-status"></div>
+						</div>
+					</div>
+				</div>
+				<div class="large-6 columns">
+					<div class="panel-outer">
+						<h4 class="panel-heading">
+							<i class="fi-graph-trend colorHeading"></i>
+							<span><s:text name='webportal.device.location.title'/></span>
+						</h4>
+						<div class="panel-inner">
+						<div id="block-device-location-map-wrapper" style="width:444px; height:300px">
+								<!-- <iframe width="444" height="204" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-1.55302,47.19581,-1.50817,47.22307&amp;layer=mapnik&amp;marker=47.21659,-1.53457"></iframe> -->
+							</div>
+							<div class="legend">
+								<div class="address legend-block text-grey">
+									<span><strong><s:text name='webportal.device.location.address'/> :</strong></span>
+									<span id="block-device-location-adress"></span>
+								</div>
+								<div class="area legend-block text-grey">
+									<span><strong><s:text name='webportal.device.location.area'/> :</strong></span>
+									<span id="block-device-location-area"></span>									
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -175,128 +123,153 @@ document.createElement("figure");
 					<div class="panel-outer">
 						<h4 class="panel-heading">
 							<i class="fi-graph-trend colorHeading"></i>
-							<s:text name='webportal.device.history.title'/>
-						</h4>
-						<div class="panel-inner">
-							<p class="status-color">
-							<s:text name='webportal.device.history.installation.title'/> 
-							<span id="block-device-installations-number"> </span> 
-							</p>
-							<table id="device-installation-table">
-								<thead>	
-									<tr class="table-title">
-										<th><s:text name='webportal.device.history.installation.id'/></th>
-										<th><s:text name='webportal.device.history.installation.code'/></th>
-										<th><s:text name='webportal.device.history.installation.mepid'/></th>
-										<th><s:text name='webportal.device.history.installation.mepcode'/></th>
-									</tr>
-								</thead>
-								<tbody>
-								</tbody>
-							</table>
-							<div class="center-wrapper">
-								<a href="javascript:showMoreDeviceResults('INST')" id="block-device-installation-link-more">
-									<s:text name='webportal.device.history.installation.options.showmore'/>
-								</a>
-							</div>
-						</div>
-						<div class="panel-inner">
-							<p class="status-color">
-								<s:text name='webportal.device.history.status.title'/>
-								<span id="block-device-status-number"></span>
-							</p>
-							<table id="device-status-table">
-								<thead>	
-									<tr>
-										<th><s:text name='webportal.device.history.status.type'/></th>
-										<th><s:text name='webportal.device.history.status.start.timestamp'/></th>
-										<th><s:text name='webportal.device.history.status.end.timestamp'/></th>
-										<th><s:text name='webportal.device.history.status.reason'/></th>
-									</tr>
-								</thead>
-								<tbody>
-								</tbody>
-							</table>
-							<div class="center-wrapper">
-								<a href="javascript:showMoreDeviceResults('STATUS')" id="block-device-status-link-more">
-									<s:text name='webportal.device.history.status.options.showmore'/>
-								</a>
-							</div>
-						</div>
-						<div class="panel-inner">
-							<p class="status-color">
-								<s:text name='webportal.device.history.pallet.title'/>
-								<span id="block-device-pallet-number"></span>
-							</p>
-							<table id="device-pallet-table">
-								<thead>
-									<tr>
-										<th><s:text name='webportal.device.history.pallet.code'/></th>
-										<th><s:text name='webportal.device.history.pallet.type'/></th>
-										<th><s:text name='webportal.device.history.pallet.status'/></th>
-										<th><s:text name='webportal.device.history.pallet.sending'/></th>
-										<th><s:text name='webportal.device.history.pallet.destination'/></th>
-										<th><s:text name='webportal.device.history.pallet.receiving'/></th>
-										<th><s:text name='webportal.device.history.pallet.start.timestamp'/></th>
-										<th><s:text name='webportal.device.history.pallet.end.timestamp'/></th>
-									</tr>
-								</thead>
-								<tbody>
-								</tbody>
-							</table>
-							<div class="center-wrapper">
-								<a href="javascript:showMoreDeviceResults('PALLET')" id="block-device-pallet-link-more" class="link-more text-blue">
-									<s:text name='webportal.device.history.pallet.options.showmore'/>
-								</a>
-							</div>
-						</div>
-						<div class="panel-inner">
-							<p class="status-color">
-								<s:text name='webportal.device.history.stocksite.title'/>
-								<span id="block-device-stock-site-number"></span>
-							</p>
-							<table id="device-stock-site-table">
-								<thead>
-									<tr class="table-title">
-										<th><s:text name='webportal.device.history.stocksite.stock.id'/></th>
-										<th><s:text name='webportal.device.history.stocksite.stock.name'/></th>
-										<th><s:text name='webportal.device.history.stocksite.start.timestamp'/></th>
-										<th><s:text name='webportal.device.history.stocksite.end.timestamp'/></th>
-									</tr>
-								</thead>
-								<tbody>
-								</tbody>
-							</table>
-							<div class="center-wrapper">
-								<a href="javascript:showMoreDeviceResults('STOCK_SITE')" id="block-device-stock-site-link-more" class="link-more text-blue">
-									<s:text name='webportal.device.history.stocksite.options.showmore'/>
-								</a>
-							</div>
-						</div>
-						<div class="panel-inner">
-							<p class="status-color">
-								<s:text name='webportal.device.history.owner.title'/>
-								<span id="block-device-owner-number"></span>
-							</p>
-							<table id="device-owner-table"  class="text-grey history-table">
-								<thead>	
-									<tr class="table-title">
-										<th class="col1"><s:text name='webportal.device.history.owner.name'/></th>
-										<th class="col2"><s:text name='webportal.device.history.owner.start.timestamp'/></th>
-										<th class="col3"><s:text name='webportal.device.history.owner.end.timestamp'/></th>
-									</tr>
-								</thead>
-								<tbody>
-								</tbody>
-							</table>
-							<div class="center-wrapper">
-								<a href="javascript:showMoreDeviceResults('OWNER')" id="block-device-owner-link-more" class="link-more text-blue">
-									<s:text name='webportal.device.history.owner.options.showmore'/>
-								</a>
+							<span class="block-title-name text-blue">
+								<s:text name='webportal.device.hardwareconfig.title'/></span>
+							</h4>
+							<div class="panel-inner">
+								<table id="hardware-configuration-table">
+									<thead>	
+										<tr>
+											<th><s:text name='webportal.device.hardwareconfig.type'/></th>
+											<th><s:text name='webportal.device.hardwareconfig.id'/></th>
+											<th><s:text name='webportal.device.hardwareconfig.code'/></th>
+											<th><s:text name='webportal.device.hardwareconfig.info'/></th>
+										</tr>
+									</thead>
+									<tbody>
+									</tbody>
+								</table>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</body>
-		</html>
+				<div class="big-row">
+					<div class="large-12 columns">
+						<div class="panel-outer">
+							<h4 class="panel-heading">
+								<i class="fi-graph-trend colorHeading"></i>
+								<s:text name='webportal.device.history.title'/>
+							</h4>
+							<div class="panel-inner">
+								<p class="status-color">
+									<s:text name='webportal.device.history.installation.title'/> 
+									<span id="block-device-installations-number"> </span> 
+								</p>
+								<table id="device-installation-table">
+									<thead>	
+										<tr class="table-title">
+											<th><s:text name='webportal.device.history.installation.id'/></th>
+											<th><s:text name='webportal.device.history.installation.code'/></th>
+											<th><s:text name='webportal.device.history.installation.mepid'/></th>
+											<th><s:text name='webportal.device.history.installation.mepcode'/></th>
+										</tr>
+									</thead>
+									<tbody>
+									</tbody>
+								</table>
+								<div class="center-wrapper">
+									<a href="javascript:showMoreDeviceResults('INST')" id="block-device-installation-link-more">
+										<s:text name='webportal.device.history.installation.options.showmore'/>
+									</a>
+								</div>
+							</div>
+							<div class="panel-inner">
+								<p class="status-color">
+									<s:text name='webportal.device.history.status.title'/>
+									<span id="block-device-status-number"></span>
+								</p>
+								<table id="device-status-table">
+									<thead>	
+										<tr>
+											<th><s:text name='webportal.device.history.status.type'/></th>
+											<th><s:text name='webportal.device.history.status.start.timestamp'/></th>
+											<th><s:text name='webportal.device.history.status.end.timestamp'/></th>
+											<th><s:text name='webportal.device.history.status.reason'/></th>
+										</tr>
+									</thead>
+									<tbody>
+									</tbody>
+								</table>
+								<div class="center-wrapper">
+									<a href="javascript:showMoreDeviceResults('STATUS')" id="block-device-status-link-more">
+										<s:text name='webportal.device.history.status.options.showmore'/>
+									</a>
+								</div>
+							</div>
+							<div class="panel-inner">
+								<p class="status-color">
+									<s:text name='webportal.device.history.pallet.title'/>
+									<span id="block-device-pallet-number"></span>
+								</p>
+								<table id="device-pallet-table">
+									<thead>
+										<tr>
+											<th><s:text name='webportal.device.history.pallet.code'/></th>
+											<th><s:text name='webportal.device.history.pallet.type'/></th>
+											<th><s:text name='webportal.device.history.pallet.status'/></th>
+											<th><s:text name='webportal.device.history.pallet.sending'/></th>
+											<th><s:text name='webportal.device.history.pallet.destination'/></th>
+											<th><s:text name='webportal.device.history.pallet.receiving'/></th>
+											<th><s:text name='webportal.device.history.pallet.start.timestamp'/></th>
+											<th><s:text name='webportal.device.history.pallet.end.timestamp'/></th>
+										</tr>
+									</thead>
+									<tbody>
+									</tbody>
+								</table>
+								<div class="center-wrapper">
+									<a href="javascript:showMoreDeviceResults('PALLET')" id="block-device-pallet-link-more" class="link-more text-blue">
+										<s:text name='webportal.device.history.pallet.options.showmore'/>
+									</a>
+								</div>
+							</div>
+							<div class="panel-inner">
+								<p class="status-color">
+									<s:text name='webportal.device.history.stocksite.title'/>
+									<span id="block-device-stock-site-number"></span>
+								</p>
+								<table id="device-stock-site-table">
+									<thead>
+										<tr class="table-title">
+											<th><s:text name='webportal.device.history.stocksite.stock.id'/></th>
+											<th><s:text name='webportal.device.history.stocksite.stock.name'/></th>
+											<th><s:text name='webportal.device.history.stocksite.start.timestamp'/></th>
+											<th><s:text name='webportal.device.history.stocksite.end.timestamp'/></th>
+										</tr>
+									</thead>
+									<tbody>
+									</tbody>
+								</table>
+								<div class="center-wrapper">
+									<a href="javascript:showMoreDeviceResults('STOCK_SITE')" id="block-device-stock-site-link-more" class="link-more text-blue">
+										<s:text name='webportal.device.history.stocksite.options.showmore'/>
+									</a>
+								</div>
+							</div>
+							<div class="panel-inner">
+								<p class="status-color">
+									<s:text name='webportal.device.history.owner.title'/>
+									<span id="block-device-owner-number"></span>
+								</p>
+								<table id="device-owner-table"  class="text-grey history-table">
+									<thead>	
+										<tr class="table-title">
+											<th class="col1"><s:text name='webportal.device.history.owner.name'/></th>
+											<th class="col2"><s:text name='webportal.device.history.owner.start.timestamp'/></th>
+											<th class="col3"><s:text name='webportal.device.history.owner.end.timestamp'/></th>
+										</tr>
+									</thead>
+									<tbody>
+									</tbody>
+								</table>
+								<div class="center-wrapper">
+									<a href="javascript:showMoreDeviceResults('OWNER')" id="block-device-owner-link-more" class="link-more text-blue">
+										<s:text name='webportal.device.history.owner.options.showmore'/>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</body>
+			</html>
