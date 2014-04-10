@@ -20,7 +20,7 @@
     margin: auto;
     height: 190px;
     width: 190px;
-    padding: 1.5em 1em 1em 1em;
+    padding: 2em 1em 1em 1em;
     border-radius: 200px;
 }
 
@@ -28,8 +28,13 @@
     cursor: pointer;
     color: #fff;
 }
- a:hover,
- a:focus{
+
+#main-content-index  a{
+    color: #fff;
+}
+
+ #main-content-index  a:hover,
+ #main-content-index  a:focus{
     -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
     -moz-transition: -moz-transform 0.3s, opacity 0.3s;
     transition: transform 0.3s, opacity 0.3s;
