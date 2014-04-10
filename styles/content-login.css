@@ -57,7 +57,7 @@ label {
 	color: #fff;
 }
 .button {
-	background-color: #322827;
+	background-color: #333e45;
 }
 
 input {
@@ -74,9 +74,9 @@ input:focus {
 input:-webkit-autofill, 
 textarea:-webkit-autofill {
     color: #000 !important;
-    background-color: none !important;
-	background-image: none !important;
-	background: none !important;
+    background-color: #fff !important;
+	background-image: #fff !important;
+	background: #fff !important;
 }
 
 a#divenable.button.tiny {
@@ -88,5 +88,13 @@ a#divenable.button.tiny {
 }
 
 a#divenable.button.tiny:hover{
-	background-color: green!important;
+	background-color: #2e363c!important;
+}
+
+.forgot-pass {
+	display: block;
+	color: #fff;
+	font-family: roboto-med;
+	font-size: 0.8rem;
+	margin-top: 2rem;
 }

@@ -159,7 +159,7 @@ document.createElement("figure");
     <script type="text/javascript">
       $(document).foundation('offcanvas');
     </script>
-
+    
     <!--[if lt IE 9]>
     <script type="text/javascript" src="https://raw.githubusercontent.com/chuckcarpenter/REM-unit-polyfill/master/js/rem.min.js"></script>
     <![endif]-->

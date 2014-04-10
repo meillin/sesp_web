@@ -76,6 +76,9 @@
 							</div>
 						</div>
 
+						<a href="#" class="forgot-pass">Forgot Password?</a>
+
+
 						<div class="row">
 							<div class="large-4 right columns">
 								<a href="javascript:submitLogin(document.loginForm)" id="divenable" style="display:block" class="button tiny">
