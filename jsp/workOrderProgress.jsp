@@ -111,40 +111,39 @@
 
 		function woAreaProgressCallback(aname,aid) {
 			var returnData;
+			//areaprogressLink = contextPath+"/std/AreaProgress.action?"+areaWOMapInfoRParams+"&aid="+aid+"&aname="+aname;
+			//alert(areaprogressLink);
+			html = "<form id=\"bubbleForm\" name=\"bubbleForm\" method=\"post\" action=\""+contextPath+"/std/AreaProgress.action\">";
+			html += "<div id=\"bubble\" class=\"bubble-chart text-grey\" style=\"width:350px; height:350px;\">";
+			html +=	"<div id=\"bubble-header\"></div>";
+			html += "<div class=\"bubble-title\">";
+			html += "	<div class=\"bubble-category\">Area name :</div>";
+			html +=	"	<div class=\"bubble-value text-light-grey\"><a href=\"javascript:document.getElementById('bubbleForm').submit();\">"+aname+"</a></div>";
+			html +=	"</div>";
+			html +=	"<div class=\"bubble-value text-light-grey\" id=\"bubble-content\">";
+			html += "</div>";
+			html += "<div id=\"bubble-arrow\">";
 
-//areaprogressLink = contextPath+"/std/AreaProgress.action?"+areaWOMapInfoRParams+"&aid="+aid+"&aname="+aname;
-	//alert(areaprogressLink);
-	html = "<form id=\"bubbleForm\" name=\"bubbleForm\" method=\"post\" action=\""+contextPath+"/std/AreaProgress.action\">";
-	html += "<div id=\"bubble\" class=\"bubble-chart text-grey\" style=\"width:350px; height:350px;\">";
-	html +=	"<div id=\"bubble-header\"></div>";
-	html += "<div class=\"bubble-title\">";
-	html += "	<div class=\"bubble-category\">Area name :</div>";
-	html +=	"	<div class=\"bubble-value text-light-grey\"><a href=\"javascript:document.getElementById('bubbleForm').submit();\">"+aname+"</a></div>";
-	html +=	"</div>";
-	html +=	"<div class=\"bubble-value text-light-grey\" id=\"bubble-content\">";
-	html += "</div>";
-	html += "<div id=\"bubble-arrow\">";
+			html+= "<input type=\"hidden\" name=\"aid\" value=\""+aname+"\"/>";
+			html+= "<input type=\"hidden\" name=\"aname\" value=\""+aid+"\"/>";
+			html+= "<input type=\"hidden\" name=\"dateInterval\" value=\""+apreqObject.dateInterval+"\"/>";
+			html+= "<input type=\"hidden\" name=\"dateFrom\" value=\""+apreqObject.dateFrom+"\"/>";
+			html+= "<input type=\"hidden\" name=\"dateTo\" value=\""+apreqObject.dateTo+"\"/>";
+			html+= "<input type=\"hidden\" name=\"domain\" value=\""+apreqObject.domain+"\"/>";
+			html+= "<input type=\"hidden\" name=\"areaType\" value=\""+apreqObject.areaType+"\"/>";
+			html+= "<input type=\"hidden\" name=\"workOrderType\" value=\""+apreqObject.workOrderType+"\"/>";
+			html+= "<input type=\"hidden\" name=\"unplanned\" value=\""+apreqObject.unplanned+"\"/>";
+			html+= "<input type=\"hidden\" name=\"area\" value=\""+apreqObject.area+"\"/>";
 
-	html+= "<input type=\"hidden\" name=\"aid\" value=\""+aname+"\"/>";
-	html+= "<input type=\"hidden\" name=\"aname\" value=\""+aid+"\"/>";
-	html+= "<input type=\"hidden\" name=\"dateInterval\" value=\""+apreqObject.dateInterval+"\"/>";
-	html+= "<input type=\"hidden\" name=\"dateFrom\" value=\""+apreqObject.dateFrom+"\"/>";
-	html+= "<input type=\"hidden\" name=\"dateTo\" value=\""+apreqObject.dateTo+"\"/>";
-	html+= "<input type=\"hidden\" name=\"domain\" value=\""+apreqObject.domain+"\"/>";
-	html+= "<input type=\"hidden\" name=\"areaType\" value=\""+apreqObject.areaType+"\"/>";
-	html+= "<input type=\"hidden\" name=\"workOrderType\" value=\""+apreqObject.workOrderType+"\"/>";
-	html+= "<input type=\"hidden\" name=\"unplanned\" value=\""+apreqObject.unplanned+"\"/>";
-	html+= "<input type=\"hidden\" name=\"area\" value=\""+apreqObject.area+"\"/>";
+			html += "</div>";
+			html += "</div></form>";
 
-	html += "</div>";
-	html += "</div></form>";
+			returnData =  html;
 
-	returnData =  html;
+			saveAreaProgressFilters(apreqObject.dateInterval,apreqObject.dateFrom,apreqObject.dateTo,apreqObject.domain,apreqObject.areaType,apreqObject.workOrderType,apreqObject.unplanned,apreqObject.area);
 
-	saveAreaProgressFilters(apreqObject.dateInterval,apreqObject.dateFrom,apreqObject.dateTo,apreqObject.domain,apreqObject.areaType,apreqObject.workOrderType,apreqObject.unplanned,apreqObject.area);
-
-	return returnData;
-}
+			return returnData;
+		}
 
 function populateErrorBubbleContent(data) {
 	document.getElementById("bubble-content").innerHTML=data.responseText;

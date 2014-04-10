@@ -46,8 +46,8 @@ document.createElement("figure");
 <script src="<%=contextPath%>/js/common.js"></script>
 <script src="<%=contextPath%>/js/search-results.js"></script>
 <script src="<%=contextPath%>/js/OpenLayers.js"></script>
-<script src="<%=contextPath%>/js/area-progress.js"></script>
 <script src="<%=contextPath%>/js/highchart/highcharts.js"></script>
+<script src="<%=contextPath%>/js/area-progress.js"></script>
 
 
 <script src="<%=contextPath%>/js/map.js"></script>
@@ -253,85 +253,121 @@ symbolCounter++;
 			</div>
 		</div>
 
-		<div class="page-name">
-			<div class="large-12 columns">
-				<h2 class="page-name-heading">Area: <span id="area-name"></span>Missing Milestone Area</h2>
+	<div class="big-row">
+		<div class="large-10 columns">
+			<div class="page-name">
+				<div class="large-12 columns">
+						<ul class="page-name-heading sub-menu">
+							<li><strong>Area: <span id="area-name"></span>Missing Milestone Area</strong></li>
+							<li class="progress-chart-li active" onclick="javascript:updateWorkOrder('progress')">
+								<i class="fi-graph-bar"></i> PROGRESS
+							</li>
+							<li class="status" onclick="javascript:updateWorkOrder('status')">
+								<i class="fi-check"></i> STATUS
+							</li>
+						</ul>
+				</div>
 			</div>
-		</div>
-		<!-- start of new full width row -->
-				<div class="big-row">
-					<div class="large-5 columns charts">
-						<div class="panel-outer show">
-							<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Area Progress</h4>
-							<div class="panel-inner" id="work-order-chart-view">
-								<!--
-									<div id="block-work-order-chart-view"></div>
-									<div id="block-work-order-status-chart"></div>
-								-->
-							</div>
-						</div>
-						<div class="panel-outer show">
-							<h4 class="panel-heading"><i class="fi-graph-bar colorHeading"></i> Detailed Progress</h4>
-							<div class="panel-inner" id="detailed-progress">
-								<!--
-									<div id="block-work-order-chart-view2"></div>
-									<div id="block-work-order-status-chart-right"></div>
-								-->
-							</div>
-						</div>
-
-						<div class="panel-outer hide">
-						<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Area Status</h4>
-							<div class="panel-inner" id="work-order-status">
-								<!--
-									<div id="block-work-order-chart-view"></div>
-									<div id="block-work-order-status-chart"></div>
-								-->
-							</div>
-						</div>
-					</div><!-- end of charts -->
-							<div class="large-7 columns map">
-						<div class="panel-outer">
-							<h4 class="panel-heading"><i class="fi-marker colorHeading"></i> Area progress</h4>
-							<div class="panel-inner">
-								<div id="tabs-wrapper">
-									<a id="block-work-order-tab1" class="tiny button" onclick="javascript:updateWorkOrder('progress')">Progress</a>
-									<a id="block-work-order-tab2" class="tiny button" onclick="javascript:updateWorkOrder('status')">Status</a>
-								</div>
-								<ul class="inline-list map-list">
-									<li>
-										<div style="width: 100%; height: 600px; opacity:0.99;" id="map-wrapper"></div>
-									</li>
-									<li class="panel">
-										<h3>Summary</h3>
-										<div><strong>Number of work orders:</strong> 250</div>
-										<div id="block-summary-content-wo-count"></div>
-										<div><strong>Area types:</strong></div>
-										<!--
-										<ul id="summary-workordertypes-selected">
-											<li>Meter Change (2)</li>
-											<li>Meter Installation (4)</li>
-											<li>MRO52 (5)</li>
-											<li>Remote Service (3)</li>
-										</ul>
+			<!-- start of new full width row -->
+			<div class="big-row">
+				<div class="large-5 columns">
+							<div class="panel-outer progress-chart">
+								<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Area Progress</h4>
+								<div class="panel-inner" id="work-order-chart-view">
+									<!--
+										<div id="block-work-order-chart-view"></div>
+										<div id="block-work-order-status-chart"></div>
 									-->
-										<ul id="example-list">
-											<li>Meter Change (2)</li>
-											<li>Meter Installation (4)</li>
-											<li>MRO52 (5)</li>
-											<li>Remote Service (3)</li>
-										</ul>
-									</li>
-								</ul>
+								</div>
 							</div>
+							<div class="panel-outer detailed-chart">
+								<h4 class="panel-heading"><i class="fi-graph-bar colorHeading"></i> Detailed Progress</h4>
+								<div class="panel-inner" id="detailed-progress">
+									<!--
+										<div id="block-work-order-chart-view2"></div>
+										<div id="block-work-order-status-chart-right"></div>
+									-->
+								</div>
+							</div>
+
+							<div class="panel-outer status-chart hide">
+								<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Area Status</h4>
+								<div class="panel-inner" id="area-status">
+									<!--
+										<div id="block-work-order-chart-view"></div>
+										<div id="block-work-order-status-chart"></div>
+									-->
+								</div>
+							</div>
+				</div><!-- end of charts -->
+				<div class="large-7 columns map">
+					<div class="panel-outer">
+						<h4 class="panel-heading"><i class="fi-marker colorHeading"></i> Area progress</h4>
+						<div class="panel-inner">
+							<div style="width: 100%; height: 550px; opacity:0.99;" id="map-wrapper"></div>
 						</div>
 					</div>
-	</div><!-- end of new full width row -->
+				</div>
+			</div><!-- end of new full width row -->
+		</div>
+
+			<div class="large-2 columns filtered show-for-large-up">
+				<div class="title">Date interval</div>
+				<ul>
+					<li>From: 2009/01/01</li>
+					<li>To: 2017/01/09</li>
+				</ul>
+				<div class="title">Domain <span>(3)</span></div>
+				<ul>
+					<li>EON</li>
+					<li>Eltel</li>
+					<li>Eon-Eltel</li>
+				</ul>
+				<div class="title">Work order type <span>(19)</span></div>
+				<ul>
+					<li>Concentrator installation</li>
+					<li>Measurepoint import(WO)</li>
+					<li>Meter Change CT Measured</li>
+					<li>Meter Change CT Measured</li>
+					<li>Meter Change CT Measured</li>
+					<li>Meter Change CT Measured</li>
+				</ul>
+				<div class="title">Area type <span>(1)</span></div>
+				<ul>
+					<li>Milestone Area</li>
+				</ul>
+				<div class="title">Area <span>(4)</span></div>
+				<ul>
+					<li>Missing Region</li>
+					<li>Missing Milestone Area</li>
+					<li>Missing Collection Area</li>
+					<li>Missing Net Area</li>
+				</ul>
+			</div>
+	</div>
+
+
 	<div class="wrapper-blur"></div>
 
 </div><!-- end of wrapper -->
 <script>
-	loadvalues();
+loadvalues();
+drawAreaProgress();
+drawDetailedProgress();
+
+$('.sub-menu li').click(function(){
+		var active = $(this);
+		if(active.hasClass('progress-chart-li')){
+			$('.progress-chart, .detailed-chart').show();
+			//drawWorkOrderProgress();
+			//drawDetailedProgress();
+			$('.status-chart').hide();
+		} else {
+			$('.status-chart').show();
+			//drawAreaStatus();
+			$('.progress-chart, .detailed-chart').hide();
+		}
+});
 
 </script>
 <script src="<%=contextPath%>/js/highchart/area-progress-chart.js"></script>

@@ -19,8 +19,8 @@
 		<![endif]-->
 		<% String contextPath = request.getContextPath(); %>
 
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
+		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/foundation.css" />
+		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/foundation-icons/foundation-icons.css">
 
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/jquery.multiselect.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
@@ -201,7 +201,9 @@
 
 			<div class="big-row">
 				<div class="large-12 columns" >
-					<h2 class="page-name-heading"><s:text name="webportal.resourceprojections.title"/></h2>
+					<ul class="page-name-heading sub-menu">
+						<li><strong>Resource projections</strong></li>
+					</ul>
 				</div>
 			</div>
 

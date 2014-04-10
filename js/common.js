@@ -1,5 +1,8 @@
 $(document).ready(function() {
-	// Overlapping slide menu
+
+/*
+Main navigation
+ */
 	$('ul.overlapping-menu').css('left', -350);
 	$('#show-nav').click(function() {
 		var $lefty = $('ul.overlapping-menu');
@@ -9,8 +12,22 @@ $(document).ready(function() {
 		});
 	});
 
+/*
+Filter open background
+ */
 	$('.toggle-filter').click(function(){
 		$('.wrapper-blur').fadeToggle('fast', 'linear');
+	});
+
+/*
+Sub menu actions
+ */
+	$('.sub-menu li').click(function(){
+		var active = $(this);
+		if(!active.hasClass('active')){
+			$('.sub-menu li').removeClass('active');
+			active.addClass('active');
+		}
 	});
 
 });

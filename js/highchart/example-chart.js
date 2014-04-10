@@ -315,7 +315,7 @@ $( document ).ready(function() {
                     }]
                 });
         }
-function drawAreaStatus() {
+    function drawAreaStatus() {
        var categories = ['Performed', 'Not performed', 'Not planned', 'Not performed final', 'Opera'],
         name = '',
         data = [{

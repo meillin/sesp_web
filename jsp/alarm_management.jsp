@@ -284,7 +284,9 @@
 
 		<div class="big-row">
 			<div class="large-12 columns" >
-				<h2 class="page-name-heading">Alarm Management</h2>
+				<ul class="page-name-heading sub-menu">
+						<li><strong>ALARM MANAGEMENT</strong></li>
+				</ul>
 			</div>
 		</div>
 

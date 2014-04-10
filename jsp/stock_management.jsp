@@ -160,7 +160,7 @@
 					var pointCollections = [];
 					addPoints(data, getPointCollection, pointCollections, displayInfo, infoDataCallback);
 				}
-			</script>
+	</script>
 			<div class="big-row">
 				<div class="large-12 columns filterHeader">
 					<div class="big-row">
@@ -198,7 +198,12 @@
 			</div>
 			<div class="big-row">
 				<div class="large-12 columns">
-					<h2 class="page-name-heading">Stock Management</h2>
+						<ul class="page-name-heading sub-menu">
+							<li><strong>STOCK MANAGEMENT</strong></li>
+							<li class="progress-chart-li active"><i class="fi-graph-bar"></i> FROM SUPPLIER</li>
+							<li class="status-chart"><i class="fi-check"></i> IN STOCK</li>
+							<li class="details-chart"><i class="fi-magnifying-glass"></i> ON PALLET</li>
+						</ul>
 				</div>
 			</div>
 			<div class="big-row">
@@ -206,11 +211,13 @@
 					<div class="panel-outer">
 						<h4 class="panel-heading"><i class="fi-marker size-24 colorHeading"></i> On pallet</h4>
 						<div class="panel-inner">
+							<!--
 							<div id="tabs-wrapper" >
 								<a id="block-on-pallet-tab1" class="tiny button selected" onclick="javascript:updateUnitStatus('fromSupplier')">From supplier</a>
 								<a id="block-on-pallet-tab2" class="tiny button" onclick="javascript:updateUnitStatus('inStock')">In stock</a>
 								<a id="block-on-pallet-tab3" class="tiny button" onclick="javascript:updateUnitStatus('onPallet')">On pallet</a>
 							</div>
+						-->
 							<div style="width: 100%; height: 600px; opacity:0.99;" id="map-wrapper" ></div>
 						</div>
 					</div>
@@ -252,7 +259,7 @@
 				</div>
 		<div class="wrapper-blur"></div>
 
-			</div><!-- end of wrapper -->
+		</div><!-- end of wrapper -->
 		</body>
 		<script>
 			function onChangeEntity()

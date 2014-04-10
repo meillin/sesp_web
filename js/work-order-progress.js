@@ -17,55 +17,20 @@ var selected = "";
 var defaultStr = "default";
 jQuery(document).ready(function($){
 
-$('.sub-menu li').click(function(){
-	var active = $(this);
-	if(!active.hasClass('active')){
-		$('.sub-menu li').removeClass('active');
-		active.addClass('active');
-	}
-	if( active.hasClass('progress-chart-li')) {
-		$('.status, .details').hide();
-		$('.progress-chart').show();
+	$('.sub-menu li').click(function(){
+		var active = $(this);
 
-	} else if (active.hasClass('status-chart')) {
-		$('.progress-chart, .details').hide();
-		$('.status').show();
-	} else {
-		$('.details').show();
-		$('.progress-chart, .status').hide();
-	}
-});
-
-	/*
-	 * tabs managing
-	 */
-    $("#block-work-order-tab1").click(function(){
-
-    	if( !$(this).hasClass("selected")){
-	    	$(".tab").removeClass("selected");
-	    	$(this).addClass("selected");
-
-	    	/**
-	    	 * TODO
-	    	 * action on the first tab
-	    	 */
-
-    	}
-    });
-
-    $("#block-work-order-tab2").click(function(){
-
-    	if( !$(this).hasClass("selected")){
-	    	$(".tab").removeClass("selected");
-	    	$(this).addClass("selected");
-
-	    	/**
-	    	 * TODO
-	    	 * action on the second tab
-	    	 */
-
-    	 }
-    });
+		if( active.hasClass('progress-chart-li')) {
+			$('.status, .details').hide();
+			$('.progress-chart').show();
+		} else if (active.hasClass('status-chart')) {
+			$('.progress-chart, .details').hide();
+			$('.status').show();
+		} else {
+			$('.details').show();
+			$('.progress-chart, .status').hide();
+		}
+	});
 
 });
 

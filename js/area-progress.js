@@ -13,34 +13,6 @@ var areaWOMapInfoRParams;
 var pgCode = 9;
 var area_name1 = "";
 var defaultStr = "default";
-jQuery(document).ready(function($){
-
-	/*
-	 * tabs managing
-	 */
-    $("#block-work-order-tab1").click(function(){
-
-    	if( !$(this).hasClass("selected")){
-	    	$(".tab").removeClass("selected");
-	    	$(this).addClass("selected");
-	    	/**
-	    	 * TODO
-	    	 * action on the first tab
-	    	 */
-    	}
-    });
-
-    $("#block-work-order-tab2").click(function(){
-    	if( !$(this).hasClass("selected")){
-	    	$(".tab").removeClass("selected");
-	    	$(this).addClass("selected");
-	    	/**
-	    	 * TODO
-	    	 * action on the second tab
-	    	 */
-    	 }
-    });
-});
 
 function loadvalues(){
 	if(area_name1!=null&&area_name1!='') {
@@ -369,8 +341,6 @@ function hideDate()
 }
 
 function showDate(){
-
-	//$("#block_from_and_to_date").show();
 	$("#filter-date-from").show();
 	$("#filter-date-to").show();
 }
@@ -382,86 +352,20 @@ function showWorkOrderTypes(data){
 	});
 	$("#filter-multiselect-work-order-type").html(items2);
 	$("#filter-multiselect-work-order-type").multiselect("refresh");
-	}
-
-function drawChart1(data) {
-
-	/*
-
-	console.log('function drawChart1() called');
-
-	showWorkOrderProgressCharts();
-	$("#block-summary-content-wo-count").html(eval(data.totalNoOfWorkOrders));
-
-	//$("#block-summary-content-wo-count").html('no data');
-	var summaryWorkOrderId = "#summary-workordertypes-selected";
-	//Removing old data for summaryWorkOrder
-	$(summaryWorkOrderId).html("");
-
-	var workOrderTypeVals = document.getElementById('filter-multiselect-work-order-type');
-	var ordersLength = workOrderTypeVals.options.length;
-
-	for ( var i = 0; i < ordersLength; i++) {
-		if (workOrderTypeVals.options[i].selected) {
-			$(summaryWorkOrderId).append('<li>' + workOrderTypeVals.options[i].text+"</li>");
-		}
-	}
-
-	//Work Order Progress
-		//Generate Javascript Fusion chart with a dummy data
-	var myChart = new FusionCharts("Doughnut2D","order-progress", "100%", "300", "0" );
-      myChart.setJSONUrl(contextPath + "/data/dummydata.json");
-      myChart.render("block-work-order-chart-view");
-
-  var myChart2 = new FusionCharts( "Line", "work-order-progress", "100%", "300" );
-      myChart2.setJSONUrl(contextPath + "/data/dummydata.json");
-			myChart2.render("block-work-order-chart-view2");
-/*
-	var stockChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/Doughnut2D.swf", "Work Order Progress"+randomNum,"930","513");
-	stockChart.setDataXML(data.workOrderProgress);
-	stockChart.render("block-work-order-chart-view");
-
-	stockChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/MSCombi2D.swf", "Weekly DetailedProgress"+randomNum,"930","513");
-	stockChart.setDataXML(data.detailedProgress);
-	stockChart.render("block-work-order-chart-view2");
-*/
 }
 
+function drawChart1(data) {
+	drawAreaProgress();
+	drawDetailedProgress();
+}
+function drawChart2(data){
+	drawAreaStatus();
+}
 function refreshChart1(){
-	console.log('refreshchart1');
 
-	//Generate Javascript Fusion chart with a dummy data
-	var myChart = new FusionCharts("Doughnut2D","myChartId", "100%", "300", "0" );
-      myChart.setXMLData("<chart caption='Weekly Sales Summary' xAxisName='Week' " +
-        "yAxisName='Sales' numberPrefix='$'>" +
-          "<set label='Week 1' value='14400' />" +
-          "<set label='Week 2' value='19600' />" +
-          "<set label='Week 3' value='24000' />" +
-          "<set label='Week 4' value='15700' />" +
-        "</chart>");
-      myChart.render("block-work-order-chart-view");
+}
+function refreshChart2(){
 
-      var myChart2 = new FusionCharts( "Line", "fakechart", "100%", "300" );
-			myChart2.setXMLData("<chart caption='Weekly Sales Summary' xAxisName='Week' " +
-        "yAxisName='Sales' numberPrefix='$'>" +
-          "<set label='Week 1' value='14400' />" +
-          "<set label='Week 2' value='19600' />" +
-          "<set label='Week 3' value='24000' />" +
-          "<set label='Week 4' value='15700' />" +
-        "</chart>");
-      myChart2.render("block-work-order-chart-view2");
-	/*
-	var randomNum = Math.random();
-	//Work Order Progress
-
-	var stockChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/Doughnut2D.swf", "Work Order Progress"+randomNum,"930","513");
-	stockChart.setDataXML("");
-	stockChart.render("block-work-order-chart-view");
-
-	stockChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/MSCombi2D.swf", "Weekly DetailedProgress"+randomNum,"930","513");
-	stockChart.setDataXML("");
-	stockChart.render("block-work-order-chart-view2");
-	*/
 }
 
 function updateWorkOrder(orderType){
@@ -530,66 +434,8 @@ function updateWorkOrder(orderType){
 		}
 
 	}
-
 	return;
 }
-
-function drawChart2(data){
-
-	/*
-	showWorkOrderStatusCharts();
-	console.log("function drawChart2() called");
-	$("#block-summary-content-wo-count").html(eval(data.totalNoOfWorkOrders));
-
-	var summaryWorkOrderId = "#summary-workordertypes-selected";
-
-	//Removing old data for summaryWorkOrder
-	$(summaryWorkOrderId).html("");
-
-	var workOrderTypeVals = document.getElementById('filter-multiselect-work-order-type');
-	var ordersLength = workOrderTypeVals.options.length;
-
-	for ( var i = 0; i < ordersLength; i++)
-	{
-		if (workOrderTypeVals.options[i].selected)
-		{
-			$(summaryWorkOrderId).append('<li>' + workOrderTypeVals.options[i].text+"</li>");
-		}
-	}
-
-	var randomNum = Math.random();
-	//Work Order Status Overview
-	stockChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/Pie2D.swf", "Work Order Status"+randomNum, "680", "545");
-	stockChart.setDataXML(data.workOrderStatus);
-	//alert("Work Order status xml " + data.workOrderStatus);
-	stockChart.render("block-work-order-status-chart");
-
-	//Work Order Status - Not Performed
-	stockChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/StackedColumn2D.swf", "Not Performed"+randomNum,"260","500");
-	stockChart.setDataXML(data.notPerformedDetail);
-	//alert("Work Order NP " + data.notPerformedDetail);
-	stockChart.render("block-work-order-status-chart-right");
-	*/
-}
-
-function refreshChart2(){
-	console.log('refreshChart2');
-	/*
-	var randomNum = Math.random();
-	//Work Order Status Overview
-	stockChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/Pie2D.swf", "Work Order Status"+randomNum, "680", "545");
-	stockChart.setDataXML("");
-	//alert("Work Order status xml " + data.workOrderStatus);
-	stockChart.render("block-work-order-status-chart");
-
-	//Work Order Status - Not Performed
-	stockChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/StackedColumn2D.swf", "Not Performed"+randomNum,"260","500");
-	stockChart.setDataXML("");
-	//alert("Work Order NP " + data.notPerformedDetail);
-	stockChart.render("block-work-order-status-chart-right");
-	*/
-}
-
 
 //Common method for validating the inputs
 function validateInputs(inputVal,errorMessage){
@@ -651,7 +497,6 @@ function updateStatusTab(tabId1,tabId2){
 }
 
 function loadDefaultTabs(){
-
 	var orderType = $.cookie(pgCode+"block-work-order-tab");
 	if(orderType != "undefined" && orderType != null && orderType != ""){
 		if(orderType == "progress"){
@@ -675,4 +520,171 @@ function saveAPFilters(ap_dateInterval,ap_dateFrom,ap_dateTo,ap_domain,ap_areaTy
 
 function saveAreaProgressFilter(key,value){
 	$.cookie(pgCode+key,value,{ expires: 7 });
+}
+
+var colors = Highcharts.getOptions().colors;
+function drawAreaProgress() {
+    // Build the chart
+    $('#work-order-chart-view').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            height: 225
+        },
+        legend: {
+            layout: 'vertical',
+            backgroundColor: '#FFFFFF',
+            align: 'right',
+            verticalAlign: 'top',
+            floating: true,
+            x: -10,
+            y: 60
+        },
+        title: {
+            text: ''
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: false
+                },
+                center: [80, 80],
+                showInLegend: true
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Work order progress',
+            size: '100%',
+            data: [
+                ['Performed within plan', 2100],
+                ['Unplanned', 500],
+                {
+                    name: 'Performed after plan',
+                    y: 150,
+                    sliced: true,
+                    selected: true
+                },
+                ['Not yet performed after plan', 201],
+                ['Not yet performed within plan', 1200]
+            ]
+        }]
+    });
+}
+function drawDetailedProgress() {
+    $('#detailed-progress').highcharts({
+        chart: {
+            height: 225
+        },
+        title: {
+            text: ''
+        },
+        xAxis: [{
+            categories: ['Week11', 'Week12', 'Week13', 'Week14', 'Week15', 'Week16',
+                'Week17', 'Week18', 'Week19', 'Week20']
+        }],
+        yAxis: [{ // Primary yAxis
+            labels: {
+                format: '{value}',
+                style: {
+                    color: '#89A54E'
+                }
+            },
+            title: {
+                text: 'Planned work orders',
+                style: {
+                    color: '#89A54E'
+                }
+            }
+        }, { // Secondary yAxis
+            title: {
+                text: 'Available resources',
+                style: {
+                    color: '#4572A7'
+                }
+            },
+            labels: {
+                format: '{value}',
+                style: {
+                    color: '#4572A7'
+                }
+            },
+            opposite: true
+        }],
+        tooltip: {
+            shared: true
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'left',
+            x: 120,
+            verticalAlign: 'top',
+            y: 100,
+            floating: true,
+            backgroundColor: '#FFFFFF'
+        },
+        series: [{
+            name: 'Available resources',
+            color: '#4572A7',
+            type: 'column',
+            yAxis: 1,
+            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1],
+            tooltip: {
+                valueSuffix: ' mm'
+            }
+
+        }, {
+            name: 'Planned work orders',
+            color: '#89A54E',
+            type: 'spline',
+            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3],
+            tooltip: {
+                valueSuffix: '°C'
+            }
+        }]
+    });
+}
+function drawAreaStatus() {
+    $('#area-status').highcharts({
+        chart: {
+            type: 'bar',
+            height: 550
+        },
+        title: {
+            text: ''
+        },
+        xAxis: {
+            categories: ['Area 1', 'Area 2', 'Area 3', 'Area 4', 'Area 5', 'Area 6', 'Area 7', 'Area 8', 'Area 9']
+        },
+        legend: {
+            backgroundColor: '#FFFFFF'
+        },
+        plotOptions: {
+            series: {
+                stacking: 'normal'
+            }
+        },
+        series: [{
+                    name: 'Performed within plan',
+                    data: [3, 4, 4, 3, 4, 4, 3, 4, 4]
+                },{
+                    name: 'Unplanned',
+                    data: [5, 3, 4, 5, 3, 4, 5, 3, 4]
+                }, {
+                    name: 'Performed after plan',
+                    data: [2, 2, 3, 5, 3, 4, 2, 2, 3]
+                }, {
+                    name: 'Not yet performed after plan',
+                    data: [5, 3, 2, 2, 2, 3, 5, 3, 2]
+                }, {
+                    name: 'Not yet performed within plan',
+                    data: [4, 2, 3, 5, 3, 2, 4, 2, 3]
+                }]
+        });
 }
