@@ -231,7 +231,7 @@ var bci = 0;
 
 					<div class="large-4 columns">
 						<lable>Area type</lable>
-						<select id="filter-multiselect-area-type" class="custom-multi-select" onchange="areaTypeChanged()" name="multiselect-area-type" multiple="multiple">
+						<select id="filter-multiselect-area-type" onchange="areaTypeChanged()">
 						</select>
 
 						<lable>Area</lable>
@@ -346,11 +346,11 @@ var bci = 0;
 					<li>Meter Change CT Measured</li>
 					<li>Meter Change CT Measured</li>
 				</ul>
-				<div class="title">Area type <span>(19)</span></div>
+				<div class="title">Area type <span>(1)</span></div>
 				<ul>
 					<li>Milestone Area</li>
 				</ul>
-				<div class="title">Area <span>(19)</span></div>
+				<div class="title">Area <span>(4)</span></div>
 				<ul>
 					<li>Missing Region</li>
 					<li>Missing Milestone Area</li>

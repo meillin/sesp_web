@@ -160,28 +160,15 @@ function loadDomainList() {
 
 
 function errorDetails(data) {
-
 	alert("Error : " + data.responseText);
-
-	}
+}
 
 function loadAreaTypes(){
+
 	var obj1= {};
 	obj1.url=contextPath+"/std/AlertManagementAreaTypes.action";
 	obj1.successfunc = function(data){
-	/*var items1;
-	$.each(data, function(i, item1) {
-		items1 += '<option value="' + item1.id + '">' + item1.name + '</option>';
-	});
-	$("#filter-multiselect-area-type").html(items1);*/
 
-	/*var ap_areaType = $.cookie(pgCode+"ap_areaType");
-	if(ap_areaType!=null && ap_areaType!='') {
-		var dataarray = ap_areaType.split(",");
-		$("#filter-multiselect-area-type").val(dataarray);
-	}
-
-	$("#filter-multiselect-area-type").multiselect("refresh");*/
 	  var items;
 	  var savedData = $.cookie(pgCode+"ap_areaType");
 	  selected = '" > ';
@@ -195,8 +182,8 @@ function loadAreaTypes(){
 			items += '<option value="' + item.id + selected	+ item.name + '</option>';
 			});
 
-	populateSavedMultiSelectBox("#filter-multiselect-area-type",items,savedData);
-
+			$('#filter-multiselect-area-type').html(items);
+		//populateSavedMultiSelectBox("#filter-multiselect-area-type",items,savedData);
 
 	};
 	obj1.errorfunc = errorDetails;
