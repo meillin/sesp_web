@@ -2,11 +2,19 @@ header .slide-menu-right a{
 	display: none;
 }
 
+.status-color{
+	color: #1abc9c;
+	font-weight: bolder;
+	border-bottom: 1px solid #1abc9c;
+	margin-bottom: 0;
+}
+
 table{
 	width: 100%;
 	border: none;
 	background: none;
 	border-collapse:collapse;
+	margin: 0;
 }
 
 th{
@@ -25,6 +33,14 @@ thead{
 
 td{
 	border-top: 1px solid #e7e7e7;
+}
+table tr th, 
+table tr td,
+table thead tr th, 
+table thead tr td,
+table tfoot tr th, 
+table tfoot tr td{
+	padding: 0.4rem 0.4rem;
 }
 
 
