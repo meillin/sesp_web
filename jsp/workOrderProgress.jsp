@@ -249,76 +249,116 @@ var bci = 0;
 		</div>
 
 		<div class="big-row">
-				<div class="large-12 columns">
-					<h2 class="page-name-heading">Work order/Area</h2>
-					<select class="header-selection">
-						<option value="progress">Progress</option>
-						<option value="status">Status</option>
-						<option value="details">Details</option>
-					</select>
-				</div>
-		</div>
 
-		<div class="big-row show progress-chart">
-			<div class="large-6 columns">
-				<div class="panel-outer">
-					<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Work order progress</h4>
-					<div class="panel-inner" id="work-order-progress"></div>
+			<div class="large-10 columns">
+				<div class="big-row">
+					<div class="large-12 columns">
+						<ul class="page-name-heading sub-menu">
+							<li><strong>WORK ORDER/AREA</strong></li>
+							<li class="progress-chart-li active"><i class="fi-graph-bar"></i> PROGRESS</li>
+							<li class="status-chart"><i class="fi-check"></i> STATUS</li>
+							<li class="details-chart"><i class="fi-magnifying-glass"></i> DETAILS</li>
+						</ul>
+					</div>
 				</div>
-			</div>
 
-			<div class="large-6 columns">
-				<div class="panel-outer">
-					<h4 class="panel-heading"><i class="fi-graph-horizontal colorHeading"></i> Area progress</h4>
-					<div class="panel-inner" id="area-progress"></div>
+				<div class="big-row show progress-chart">
+					<div class="large-6 columns">
+						<div class="panel-outer">
+							<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Work order progress</h4>
+							<div class="panel-inner" id="work-order-progress"></div>
+						</div>
+					</div>
+
+					<div class="large-6 columns">
+						<div class="panel-outer">
+							<h4 class="panel-heading"><i class="fi-graph-horizontal colorHeading"></i> Area progress</h4>
+							<div class="panel-inner" id="area-progress"></div>
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
 
-		<div class="big-row hide status">
-			<div class="large-6 columns">
-				<div class="panel-outer">
-					<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Work order status</h4>
-					<div class="panel-inner" id="work-order-status">
-						<!--
-						<div id="block-work-order-status-chart"></div>
-						<div id="block-work-order-status-chart-right" class="right"></div>-->
+				<div class="big-row hide status">
+					<div class="large-6 columns">
+						<div class="panel-outer">
+							<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Work order status</h4>
+							<div class="panel-inner" id="work-order-status">
+								<!--
+								<div id="block-work-order-status-chart"></div>
+								<div id="block-work-order-status-chart-right" class="right"></div>-->
+							</div>
+						</div>
+					</div>
+
+					<div class="large-6 columns">
+						<div class="panel-outer">
+							<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Area status</h4>
+							<div class="panel-inner" id="area-status"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="big-row hide details">
+					<div class="large-6 columns">
+								<!--
+							<div class="panel-outer">
+								<h4 class="panel-heading"><i class="fi-graph-horizontal"></i> Total progress</h4>
+								<div class="panel-inner" id="total-progress"></div>
+							</div>
+						-->
+						<div class="panel-outer">
+							<h4 class="panel-heading">
+								<div class="large-9 columns">
+									<i class="fi-graph-bar colorHeading"></i> Detailed progress
+								</div>
+								<div class="large-3 columns">
+									<select>
+										<option>Week</option>
+										<option>Month</option>
+										<option>Year</option>
+									</select>
+								</div>
+							</h4>
+								<div class="panel-inner" id="detailed-progress"></div>
+						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="large-6 columns">
-				<div class="panel-outer">
-					<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Area status</h4>
-					<div class="panel-inner" id="area-status"></div>
-				</div>
+			<div class="large-2 columns filtered show-for-large-up">
+				<div class="title">Date interval</div>
+				<ul>
+					<li>From: 2009/01/01</li>
+					<li>To: 2017/01/09</li>
+				</ul>
+				<div class="title">Domain <span>(3)</span></div>
+				<ul>
+					<li>EON</li>
+					<li>Eltel</li>
+					<li>Eon-Eltel</li>
+				</ul>
+				<div class="title">Work order type <span>(19)</span></div>
+				<ul>
+					<li>Concentrator installation</li>
+					<li>Measurepoint import(WO)</li>
+					<li>Meter Change CT Measured</li>
+					<li>Meter Change CT Measured</li>
+					<li>Meter Change CT Measured</li>
+					<li>Meter Change CT Measured</li>
+				</ul>
+				<div class="title">Area type <span>(19)</span></div>
+				<ul>
+					<li>Milestone Area</li>
+				</ul>
+				<div class="title">Area <span>(19)</span></div>
+				<ul>
+					<li>Missing Region</li>
+					<li>Missing Milestone Area</li>
+					<li>Missing Collection Area</li>
+					<li>Missing Net Area</li>
+				</ul>
 			</div>
-		</div>
 
-		<div class="big-row hide details">
-			<div class="large-6 columns">
-						<!--
-					<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-horizontal"></i> Total progress</h4>
-						<div class="panel-inner" id="total-progress"></div>
-					</div>
-				-->
-				<div class="panel-outer">
-					<h4 class="panel-heading">
-						<div class="large-9 columns">
-							<i class="fi-graph-bar colorHeading"></i> Detailed progress
-						</div>
-						<div class="large-3 columns">
-							<select>
-								<option>Week</option>
-								<option>Month</option>
-								<option>Year</option>
-							</select>
-						</div>
-					</h4>
-						<div class="panel-inner" id="detailed-progress"></div>
-				</div>
-			</div>
 		</div>
 	<div class="wrapper-blur"></div>
 	</div><!-- end of wrapper -->

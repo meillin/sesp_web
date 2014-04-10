@@ -43,44 +43,44 @@ html, body{
 .big-row :after {
 	clear: both;
 	/*content: " ";
-	display: table;*/  
+	display: table;*/
 }
 
-/*.big-row :before, 
+/*.big-row :before,
 .big-row :after {
 	content: " ";
-	display: table; 
+	display: table;
 }*/
 
 /*/
 .big-row {
 	max-width: initial;
-	*zoom: 1; 
+	*zoom: 1;
 }
-.big-row :before, 
+.big-row :before,
 .big-row :after {
 	content: " ";
-	display: table; 
+	display: table;
 }
 .big-row :after {
-	clear: both; 
+	clear: both;
 }
 
 .big-row .collapse .row {
 	margin-left: 0;
-	margin-right: 0; 
+	margin-right: 0;
 }
 .big-row .big-row  {
 	width: auto;
-	*zoom: 1; 
+	*zoom: 1;
 }
-.big-row  .big-row:before, 
+.big-row  .big-row:before,
 .big-row .big-row:after {
 	content: " ";
-	display: table; 
+	display: table;
 }
 .big-row .big-row:after {
-	clear: both; 
+	clear: both;
 }
 */
 
@@ -95,7 +95,7 @@ html, body{
 }
 .page-name-heading{
 	margin-top: 50px;
-	font-family: Impact, Charcoal, sans-serif;
+	font-family: Georgia, serif;
 }
 /**
  * 	Custom Generic Button

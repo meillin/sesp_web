@@ -17,20 +17,24 @@ var selected = "";
 var defaultStr = "default";
 jQuery(document).ready(function($){
 
-
-$('.header-selection').change(function () {
-	var selected = $(this).val();
-	if( selected === 'progress') {
+$('.sub-menu li').click(function(){
+	var active = $(this);
+	if(!active.hasClass('active')){
+		$('.sub-menu li').removeClass('active');
+		active.addClass('active');
+	}
+	if( active.hasClass('progress-chart-li')) {
 		$('.status, .details').hide();
 		$('.progress-chart').show();
-	} else if ( selected === 'status' ) {
+
+	} else if (active.hasClass('status-chart')) {
 		$('.progress-chart, .details').hide();
 		$('.status').show();
 	} else {
 		$('.details').show();
 		$('.progress-chart, .status').hide();
 	}
- });
+});
 
 	/*
 	 * tabs managing

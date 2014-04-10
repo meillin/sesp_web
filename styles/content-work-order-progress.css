@@ -15,17 +15,41 @@
 .detailed-progress{
  width: 30%
 }
-.header-selection {
-	float: left;
-	font-size: 1em;
-	font-weight: bold;
-	width: 10%;
-	margin-top: 61px;
+.filtered {
+	height: 100%;
+	background: #2c464f;
+	position: absolute;
+	right: 0;
+	top: 0;
+	color: #cfcaca;
+	padding-top: 4em;
+}
+.filtered div {
+	color: #fff;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
+.filtered ul {
+	list-style: none;
+	margin: 0;
+	font-size: 12px;
 }
 .page-name-heading {
-	width: 15%;
-	float: left;
+	background: #fff;
+	border: 1px solid #c4dad5;
+	padding-left: 0.2em;
+	margin-left: 0;
+	padding: 1em;
 }
-.details .panel-heading {
-	height: 50px;
+.sub-menu li {
+	display: inline;
+	padding-right: 3em;
+}
+.sub-menu :not(:first-child){
+	opacity: 0.5;
+	cursor: pointer;
+}
+.sub-menu .active {
+	font-weight: bold;
+	opacity: 1;
 }
