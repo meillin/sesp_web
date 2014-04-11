@@ -31,25 +31,25 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
 		<link rel="shortcut icon" type="image/png" href="<%=request.getContextPath()%>/images/favicon.png" />
 
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-ui-1.10.2.custom.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/bootstrap-datepicker.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.multiselect.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/search-results.js"></script>
+		<script src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
+		<script src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
+		<script src="<%=request.getContextPath()%>/js/jquery-ui-1.10.2.custom.js"></script>
+		<script src="<%=request.getContextPath()%>/js/bootstrap-datepicker.js"></script>
+		<script src="<%=request.getContextPath()%>/js/jquery.multiselect.js"></script>
+		<script src="<%=request.getContextPath()%>/js/init.js"></script>
+		<script src="<%=request.getContextPath()%>/js/common.js"></script>
+		<script src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
+		<script src="<%=request.getContextPath()%>/js/search-results.js"></script>
 		<script src="<%=request.getContextPath()%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
 		<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxcommon.js"></script>
 		<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgrid.js"></script>
 		<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgridcell.js"></script>
 		<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/customdhtmlxgrid_export.js"></script>
 		<script src="<%=request.getContextPath()%>/js/spin.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/analyze_field_work_efficiency.js"></script>
+		<script src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
+		<script src="<%=request.getContextPath()%>/js/analyze_field_work_efficiency.js"></script>
 
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/highchart/highcharts.js"></script>
+		<script src="<%=request.getContextPath()%>/js/highchart/highcharts.js"></script>
 
 	</head>
 	<body onload="loadData()">
@@ -167,22 +167,25 @@
 						</div>
 					</div>
 
-				<div class="big-row">
-					<div class="large-12 columns">
-						<h2 class="page-name-heading">Field work effiency analysis</h2>
-					</div>
-				</div>
-
+			<div class="big-row">
+				<div class="large-10 columns">
 					<div class="big-row">
 						<div class="large-12 columns">
-							<div class="big-row">
-								<div class="large-8 columns">
-									<div class="panel-outer">
-										<h4 class="panel-heading"><i class="fi-graph-horizontal colorHeading"></i> Work order type analysis</h4>
-										<div class="panel-inner" id="block-work-order-type-analysis-chart"></div>
-									</div>
+							<ul class="page-name-heading sub-menu">
+								<strong><li>Field work effiency analysis</li></strong>
+							</ul>
+						</div>
+					</div>
 
-									<div class="panel-outer">
+					<div class="big-row">
+						<div class="large-7 columns">
+							<div class="panel-outer">
+								<h4 class="panel-heading"><i class="fi-graph-horizontal colorHeading"></i> Work order type analysis</h4>
+								<div class="panel-inner" id="block-work-order-type-analysis-chart"></div>
+							</div>
+						</div>
+						<div class="large-5 columns">
+								<div class="panel-outer">
 										<h4 class="panel-heading"><i class="fi-list colorHeading"></i> </h4>
 										<div id="meterValuesGridDiv"></div>
 										<div class="panel-inner">
@@ -230,35 +233,31 @@
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="large-4 columns">
-									<div class="panel-outer" id="block-work-order-type-analysis-chart-filter">
-										<h4 class="panel-heading"><i class="fi-results colorHeading"></i> Filtered</h4>
-										<div class="panel-inner" id="block-work-order-type-analysis-chart-filter-content">
-											<div id="filter-block-areas">
-												<strong>Areas:</strong><br/>
-												Kungsbacka 1 <br/>
-												Goteborg 2 1<br/>
-											</div>
-											<hr>
-											<div id= "filter-block-teams">
-												<strong>Teams:</strong><br/>
-												Team #1<br/>
-												Team #2<br/>
-											</div>
-											<hr>
-											<div id= "filter-block-technicians">
-												<strong>Technicians:</strong><br />
-												Mark Frick<br/>
-												Conny Andersson<br/>
-												Christian Isetjarn<br/>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
+				</div>
+
+				<div class="large-2 columns filtered show-for-large-up">
+						<div class="title">Area</div>
+						<ul id="filter-block-areas">
+							<li>Areas:</li>
+							<li>Kungsbacka 1</li>
+							<li>Goteborg 2 1</li>
+						</ul>
+						<div class="title">Team</div>
+						<ul id= "filter-block-teams">
+							<li>Teams:</li>
+							<li>Team #1</li>
+							<li>Team #2</li>
+						</ul>
+						<div class="title">Technicians</div>
+						<ul id= "filter-block-technicians">
+							<li>Technicians:</li>
+							<li>Mark Frick</li>
+							<li>Conny Andersson</li>
+							<li>Christian Isetjarn</li>
+						</ul>
+				</div>
 				</form>
 					<div class="wrapper-blur"></div>
 

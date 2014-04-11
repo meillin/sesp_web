@@ -15,3 +15,6 @@
 .detailed-progress{
  width: 30%
 }
+.panel-heading {
+	height: 46px;
+}

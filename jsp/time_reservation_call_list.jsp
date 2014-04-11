@@ -150,7 +150,7 @@
 			</div><!-- end of filterHeader -->
 			<div class="big-row">
 				<div class="large-12 columns">
-					<h2 class="page-name-heading">Time Reservation Call List</h2>
+					<ul class="page-name-heading sub-menu"><strong><li>Time Reservation Call List</li></strong></ul>
 				</div>
 			</div>
 			<div class="big-row">

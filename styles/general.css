@@ -147,6 +147,11 @@ html, body{
 .filterHeader li{
 	width: 50%;
 }
+.filterHeader select, .filterHeader .input-append {
+	background: #1abc9c;
+	border: none;
+	color: #ffffff;
+}
 
 /*****************Information column and sub menu ********************************************************/
 
@@ -179,6 +184,9 @@ html, body{
 .sub-menu li {
 	display: inline;
 	padding-right: 3em;
+}
+.sub-menu li:first-child {
+	opacity: 0.5;
 }
 .sub-menu :not(:first-child){
 	opacity: 0.5;

@@ -279,8 +279,8 @@ $(function () {
 	drawHalfGaugeChart('import-servers', 150);
 	drawHalfGaugeChart('export-servers', 150);
 	drawHalfGaugeChart('transaction-servers', 150);
-	drawStackedColumnChart('import-servers-threads', 200, 'Import threads');
-	drawStackedColumnChart('export-servers-threads', 200, 'Export threads');
+	drawStackedColumnChart('import-servers-threads', 170, 'Import threads');
+	drawStackedColumnChart('export-servers-threads', 170, 'Export threads');
 	drawDonutChart('import-files', fileData, 'File');
 	drawDonutChart('export-files', fileData, 'File');
 	drawDonutChart('import-messages', messageData, 'Message');

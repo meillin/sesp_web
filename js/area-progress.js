@@ -651,40 +651,113 @@ function drawDetailedProgress() {
     });
 }
 function drawAreaStatus() {
-    $('#area-status').highcharts({
-        chart: {
-            type: 'bar',
-            height: 550
-        },
-        title: {
-            text: ''
-        },
-        xAxis: {
-            categories: ['Area 1', 'Area 2', 'Area 3', 'Area 4', 'Area 5', 'Area 6', 'Area 7', 'Area 8', 'Area 9']
-        },
-        legend: {
-            backgroundColor: '#FFFFFF'
-        },
-        plotOptions: {
-            series: {
-                stacking: 'normal'
-            }
-        },
-        series: [{
-                    name: 'Performed within plan',
-                    data: [3, 4, 4, 3, 4, 4, 3, 4, 4]
-                },{
-                    name: 'Unplanned',
-                    data: [5, 3, 4, 5, 3, 4, 5, 3, 4]
-                }, {
-                    name: 'Performed after plan',
-                    data: [2, 2, 3, 5, 3, 4, 2, 2, 3]
-                }, {
-                    name: 'Not yet performed after plan',
-                    data: [5, 3, 2, 2, 2, 3, 5, 3, 2]
-                }, {
-                    name: 'Not yet performed within plan',
-                    data: [4, 2, 3, 5, 3, 2, 4, 2, 3]
-                }]
+       var categories = ['Performed', 'Not performed', 'Not planned', 'Not performed final', 'Opera'],
+        name = '',
+        data = [{
+                y: 10000,
+                color: colors[0],
+                drilldown: {
+                    name: 'Performed versions',
+                    categories: ['Performed'],
+                    data: [10000],
+                    color: colors[0]
+                }
+            }, {
+                y: 1000,
+                color: colors[1],
+                drilldown: {
+                    name: 'Not performed versions',
+                    categories: ['Not performed'],
+                    data: [1000],
+                    color: colors[1]
+                }
+            }, {
+                y: 1000,
+                color: colors[2],
+                drilldown: {
+                    name: 'Not planned versions',
+                    categories: ['Not planned versions'],
+                    data: [1000],
+                    color: colors[2]
+                }
+            }, {
+                y: 5470,
+                color: colors[3],
+                drilldown: {
+                    name: 'Not performed final versions',
+                    categories: ['With time reservation', 'Missed time reservation', 'Planned', 'Saved with errors', 'Undefined'],
+                    data: [2500, 2000, 470, 300, 200],
+                    color: colors[3]
+                }
+            }];
+        // Build the data arrays
+        var browserData = [];
+        var versionsData = [];
+        for (var i = 0; i < data.length; i++) {
+
+            // add browser data
+            browserData.push({
+                name: categories[i],
+                y: data[i].y,
+                color: data[i].color
+            });
+
+            // add version data
+            for (var j = 0; j < data[i].drilldown.data.length; j++) {
+                var brightness = 0.2 - (j / data[i].drilldown.data.length) / 5 ;
+                versionsData.push({
+                    name: data[i].drilldown.categories[j],
+                    y: data[i].drilldown.data[j],
+                    color: Highcharts.Color(data[i].color).brighten(brightness).get()
+                    });
+                }
+        }
+        // Create the chart
+        $('#area-status').highcharts({
+            chart: {
+                type: 'pie'
+            },
+            title: {
+                text: ''
+            },
+            yAxis: {
+                title: {
+                    text: 'Total percent market share'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    shadow: false,
+                    center: ['70%', '50%'],
+                    showInLegend: true
+
+                },
+            },
+            tooltip: {
+                valueSuffix: ''
+            },
+            series: [{
+                name: 'Work Order',
+                data: browserData,
+                size: '50%',
+                dataLabels: {
+                    formatter: function() {
+                        //return this.y > 5 ? this.point.name : null;
+                    },
+                    color: 'white',
+                    distance: -30
+                }
+            }, {
+                name: 'Versions',
+                data: versionsData,
+                size: '70%',
+                innerSize: '50%',
+                dataLabels: {
+                    formatter: function() {
+                        // display only if larger than 1
+                        return this.y > 1 ? '<b>'+ this.point.name +':</b> '+ this.y +''  : null;
+                    }
+                }
+            }]
         });
 }

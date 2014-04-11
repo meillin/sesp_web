@@ -256,7 +256,7 @@ var bci = 0;
 							<li><strong>WORK ORDER/AREA</strong></li>
 							<li class="progress-chart-li active"><i class="fi-graph-bar"></i> PROGRESS</li>
 							<li class="status-chart"><i class="fi-check"></i> STATUS</li>
-							<li class="details-chart"><i class="fi-magnifying-glass"></i> DETAILS</li>
+							<li class="details-chart"><i class="fi-page-search"></i> DETAILS</li>
 						</ul>
 					</div>
 				</div>

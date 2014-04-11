@@ -276,9 +276,9 @@ $( document ).ready(function() {
         });
     }
 
-    function drawAreaProgress() {
+    function drawAreaStatus() {
 
-        $('#area-progress').highcharts({
+        $('#area-status').highcharts({
             chart: {
                 type: 'bar',
                 height: 500
@@ -315,7 +315,8 @@ $( document ).ready(function() {
                     }]
                 });
         }
-    function drawAreaStatus() {
+
+    function drawAreaProgress() {
        var categories = ['Performed', 'Not performed', 'Not planned', 'Not performed final', 'Opera'],
         name = '',
         data = [{
@@ -378,7 +379,7 @@ $( document ).ready(function() {
             }
     }
     // Create the chart
-    $('#area-status').highcharts({
+    $('#area-progress').highcharts({
         chart: {
             type: 'pie',
             height: 500,
