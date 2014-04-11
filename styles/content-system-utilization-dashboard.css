@@ -28,7 +28,7 @@ body {
     height: 10%;
 }
 .panel-heading {
-    color: #999a9b;
+   /*color: #999a9b;*/
 }
 .panel-inner {
     padding-top: 0 !important;

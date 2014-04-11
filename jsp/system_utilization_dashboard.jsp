@@ -41,13 +41,10 @@
 		refreshInterval = "<%=request.getAttribute("refreshInterval")%>";
 	</script>
 	<body>
-
 		<div class="big-row">
-
 			<div class="large-3 columns full-height">
-
 				<div class="row height-40 panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-pie"></i> Import servers</h4>
+						<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Import servers</h4>
 						<div class="panel-inner">
 							<div class="row cpu-container">
 								<div class="large-7 columns" id="import-servers"></div>
@@ -61,10 +58,9 @@
 							</div>
 						</div>
 				</div>
-
 				<div class="row height-40 panel-outer">
 					<h4 class="panel-heading">
-						<i class="fi-graph-pie"></i> Export servers
+						<i class="fi-graph-pie colorHeading"></i> Export servers
 					</h4>
 					<div class="panel-inner">
 						<div class="row cpu-container">
@@ -79,10 +75,9 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="row height-20 panel-outer">
 					<h4 class="panel-heading">
-						<i class="fi-graph-pie"></i> Transaction servers
+						<i class="fi-graph-pie colorHeading"></i> Transaction servers
 					</h4>
 					<div class="panel-inner">
 						<div class="row">
@@ -97,11 +92,9 @@
 						</div>
 					</div>
 			</div>
-
 			<div class="large-5 columns full-height">
 				<div class="row height-50 panel-outer">
-
-						<h4 class="panel-heading"><i class="fi-graph-trend"></i> Import statistics</h4>
+						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Import statistics</h4>
 						<div class="height-50 panel-inner">
 							<div class="large-6 columns">
 								<div id="import-files"></div>
@@ -148,7 +141,7 @@
 				</div>
 
 				<div class="row height-50 panel-outer">
-					<h4 class="panel-heading"><i class="fi-graph-trend"></i> Export statistics</h4>
+					<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Export statistics</h4>
 					<div class="panel-inner">
 							<div class="large-6 columns">
 								<div id="export-files"></div>
@@ -196,7 +189,7 @@
 
 			<div class="large-4 columns full-height">
 				<div class="row height-45 panel-outer">
-					<h4 class="panel-heading"><i class="fi-torsos-all"></i> Users</h4>
+					<h4 class="panel-heading"><i class="fi-torsos-all colorHeading"></i> Users</h4>
 					<div class="panel-inner">
 						<div class="row">
 							<div class="large-12 columns">
@@ -212,7 +205,7 @@
 				</div>
 
 				<div class="row height-45 panel-outer">
-					<h4 class="panel-heading"><i class="fi-alert"></i> Errors</h4>
+					<h4 class="panel-heading"><i class="fi-alert colorHeading"></i> Errors</h4>
 					<div class="panel-inner">
 						<div class="row">
 							<div class="large-12 columns">
@@ -266,7 +259,7 @@
 				</div>
 
 				<div class="row height-10 panel-outer">
-					<h4 class="panel-heading"><i class="fi-wrench"></i> Work orders</h4>
+					<h4 class="panel-heading"><i class="fi-wrench colorHeading"></i> Work orders</h4>
 					<div class="panel-inner pda-order">
 						<label>Sent to PDAs today</label>
 							<span id="work-orders-sent-to-pda"></span>
