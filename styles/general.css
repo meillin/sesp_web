@@ -1,8 +1,17 @@
 @font-face
 {
-font-family: myFirstFont;
+font-family: robotoLight;
 src: url(font/Roboto-Light.ttf);
 }
+
+@font-face
+{
+font-family: robotoMedium;
+src: url(font/Roboto-Medium.ttf);
+}
+
+/*myFirstFont*/
+
 /* Enable html5 tags for 6-7-8 */
 header, footer, section, hgroup, aside, nav, article, figure, figcaption, time, dialog {
 	display: block;
@@ -293,6 +302,7 @@ button, .button{
 	border-bottom: 1px solid #E7E7E7;
 	padding: 0.25rem 0.75rem;
 	margin: 0;
+	font-family: robotoMedium;
 }
 
 .panel-outer{
@@ -467,7 +477,7 @@ button, .button{
 
 .ui-multiselect-menu .ui-multiselect-header{
 	height: 30px;
-	background-color: #e9e9e9;
+	background-color: #3C3C3C;
 	margin-bottom: 0px;
 	padding: 4px 0px 4px 6px;
 }
@@ -485,13 +495,14 @@ button, .button{
 }
 
 .ui-multiselect-menu ul a{
-	color:#0b5676;
+	color: #ffffff;
 	text-decoration: none;
 	margin-right: 10px;
 }
 
 .ui-multiselect-menu ul a span{
 	margin-left: 3px;
+	font-size: 14px;
 	text-decoration: underline;
 }
 
@@ -511,7 +522,7 @@ button, .button{
 }
 
 .ui-multiselect-menu .ui-multiselect-checkboxes span{
-	font-size: 12px;
+	font-size: 14px;
 }
 
 /*

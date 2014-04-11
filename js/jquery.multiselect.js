@@ -72,7 +72,7 @@ $.widget("ech.multiselect", {
 				.addClass('ui-helper-reset')
 				.html(function(){
 					if( o.header === true ){
-						return '<li><a class="ui-multiselect-all" href="#"><img class="ico" src="../images/check-icon.png"></img><span>' + o.checkAllText + '</span></a></li><li><a class="ui-multiselect-none" href="#"><img class="ico" src="../images/uncheck-icon.png"></img><span>' + o.uncheckAllText + '</span></a></li>';
+						return '<li><a class="ui-multiselect-all" href="#"><span>' + o.checkAllText + '</span></a></li><li><a class="ui-multiselect-none" href="#"></img><span>' + o.uncheckAllText + '</span></a></li>';
 					} else if(typeof o.header === "string"){
 						return '<li>' + o.header + '</li>';
 					} else {
