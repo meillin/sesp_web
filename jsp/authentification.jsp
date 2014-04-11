@@ -25,21 +25,6 @@
 		<script src="<%=request.getContextPath()%>/js/spin.js"></script>
 		<script src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
 		<link rel="shortcut icon" type="image/png" href="<%=request.getContextPath()%>/images/favicon.png" />
-		<style type="text/css">
-			.errors {
-				background-color:#FFCCCC;
-				border:1px solid #CC0000;
-				width:100%;
-				margin-bottom:8px;
-			}
-			.errors li{
-				list-style: none;
-				font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
-				width:auto;
-				color:red;
-				font-size:10px;
-			}
-		</style>
 
 	<!--[if lt IE 9]>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>

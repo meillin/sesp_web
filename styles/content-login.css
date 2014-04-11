@@ -19,6 +19,22 @@ body {
 
 }
 
+
+.errors {
+	width:100%;
+}
+
+.errors li{
+	list-style: none;
+	font-family: roboto-lght !important;
+	width:auto;
+	color:#fff;
+	font-size: 1rem;
+			}
+
+
+
+
 #main-content {
 	color: #fff;
 }
