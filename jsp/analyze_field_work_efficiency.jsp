@@ -91,179 +91,179 @@
 		</script>
 		<div id="wrapper">
 
-			<%@ include file="headerv311.inc"%>
-				<form name="analyzeFieldWorkEfficiencyForm" method="post" action="<%=request.getContextPath()%>/std/AnalyzeFieldWorkEfficiency">
+		<%@ include file="headerv311.inc"%>
+			<form name="analyzeFieldWorkEfficiencyForm" method="post" action="<%=request.getContextPath()%>/std/AnalyzeFieldWorkEfficiency">
 
-					<div class="big-row">
-						<div class="large-12 columns filterHeader">
-							<div class="big-row">
-								<div class="large-12 columns">
-									<h4><i class="fi-filter colorHeading"></i> Filters</h4>
-								</div>
+				<div class="big-row">
+					<div class="large-12 columns filterHeader">
+						<div class="big-row">
+							<div class="large-12 columns">
+								<h4><i class="fi-filter colorHeading"></i> Filters</h4>
 							</div>
-							<div class="big-row">
-								<div class="large-4 columns">
-									<div class="row">
-										<div class="medium-12 columns">
-											<label>Date interval</label>
-											<select id="filter-select-date-interval"  onchange="javascript:disbaleDateFilter()" >
-													<option value="lastweek">Last week</option>
-													<option value="today">Today</option>
-													<option value="lastmonth">Last month</option>
-													<option value="lastquarter">Last quarter</option>
-													<option value="lastyear">Last year</option>
-													<option value="custominterval">Custom interval</option>
-											</select>
+						</div>
+						<div class="big-row">
+							<div class="large-4 columns">
+								<div class="row">
+									<div class="medium-12 columns">
+										<label>Date interval</label>
+										<select id="filter-select-date-interval"  onchange="javascript:disbaleDateFilter()" >
+												<option value="lastweek">Last week</option>
+												<option value="today">Today</option>
+												<option value="lastmonth">Last month</option>
+												<option value="lastquarter">Last quarter</option>
+												<option value="lastyear">Last year</option>
+												<option value="custominterval">Custom interval</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="medium-6 columns">
+										<label id="fromLabel">From: </label>
+										<div class="custom-input-datepicker input-append date" data-date="2012-02-12" data-date-format="yyyy-mm-dd">
+											<input id="filter-date-from" type="text" class="input-datepicker text-red"  readonly="readonly"/>
 										</div>
 									</div>
-
-									<div class="row">
-										<div class="medium-6 columns">
-											<label id="fromLabel">From: </label>
-											<div class="custom-input-datepicker input-append date" data-date="2012-02-12" data-date-format="yyyy-mm-dd">
-												<input id="filter-date-from" type="text" class="input-datepicker text-red"  readonly="readonly"/>
+									<div class="medium-6 columns">
+											<label id="toLabel">To:</label>
+											<div class="custom-input-datepicker input-append date"  data-date="12-02-2012" data-date-format="yyyy-mm-dd">
+												<input id="filter-date-to" type="text" class="input-datepicker text-red"  readonly="readonly"/>
 											</div>
-										</div>
-										<div class="medium-6 columns">
-												<label id="toLabel">To:</label>
-												<div class="custom-input-datepicker input-append date"  data-date="12-02-2012" data-date-format="yyyy-mm-dd">
-													<input id="filter-date-to" type="text" class="input-datepicker text-red"  readonly="readonly"/>
-												</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="large-4 columns">
-									<div class="row">
-										<div class="large-12 medium-6 columns">
-											<label>Domain</label>
-											<select id="filter-multiselect-domain" class="custom-multi-select" name="multiselect-domain" multiple="multiple" onchange="onDomainSelect()"></select>
-										</div>
-										<div class="large-12 medium-6 columns">
-											<label>Area</label>
-											<select id="filter-multiselect-area" class="custom-multi-select" name="multiselect-area" multiple="multiple"></select>
-										</div>
-									</div>
-								</div>
-
-								<div class="large-4 columns">
-									<div class="row">
-										<div class="large-12 medium-6 columns">
-											<label>Team</label>
-											<select id="filter-multiselect-team" class="custom-multi-select" name="multiselect-team" multiple="multiple" onchange="onTeamSelectPopulateTechnicians()"></select>
-										</div>
-										<div class="large-12 medium-6 columns">
-											<label>Technician</label>
-											<select id="filter-multiselect-technician" class="custom-multi-select" name="multiselect-technician" multiple="multiple"></select>
-										</div>
 									</div>
 								</div>
 							</div>
-							<div class="big-row">
-									<div class="large-12 columns text-center">
-										<a id="block-filter-button-update" class="button" href="javascript:update()">Update</a>
+
+							<div class="large-4 columns">
+								<div class="row">
+									<div class="large-12 medium-6 columns">
+										<label>Domain</label>
+										<select id="filter-multiselect-domain" class="custom-multi-select" name="multiselect-domain" multiple="multiple" onchange="onDomainSelect()"></select>
 									</div>
+									<div class="large-12 medium-6 columns">
+										<label>Area</label>
+										<select id="filter-multiselect-area" class="custom-multi-select" name="multiselect-area" multiple="multiple"></select>
+									</div>
+								</div>
 							</div>
+
+							<div class="large-4 columns">
+								<div class="row">
+									<div class="large-12 medium-6 columns">
+										<label>Team</label>
+										<select id="filter-multiselect-team" class="custom-multi-select" name="multiselect-team" multiple="multiple" onchange="onTeamSelectPopulateTechnicians()"></select>
+									</div>
+									<div class="large-12 medium-6 columns">
+										<label>Technician</label>
+										<select id="filter-multiselect-technician" class="custom-multi-select" name="multiselect-technician" multiple="multiple"></select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="big-row">
+								<div class="large-12 columns text-center">
+									<a id="block-filter-button-update" class="button" href="javascript:update()">Update</a>
+								</div>
 						</div>
 					</div>
+				</div>
 
-			<div class="big-row">
-				<div class="large-10 columns">
-					<div class="big-row">
-						<div class="large-12 columns">
-							<ul class="page-name-heading sub-menu">
-								<strong><li>Field work effiency analysis</li></strong>
-							</ul>
-						</div>
-					</div>
-
-					<div class="big-row">
-						<div class="large-7 columns">
-							<div class="panel-outer">
-								<h4 class="panel-heading"><i class="fi-graph-horizontal colorHeading"></i> Work order type analysis</h4>
-								<div class="panel-inner" id="block-work-order-type-analysis-chart"></div>
+				<div class="big-row">
+					<div class="large-10 columns">
+						<div class="big-row">
+							<div class="large-12 columns">
+								<ul class="page-name-heading sub-menu">
+									<span><strong>Field work effiency analysis</strong></span>
+								</ul>
 							</div>
 						</div>
-						<div class="large-5 columns">
+
+						<div class="big-row">
+							<div class="large-12 columns">
 								<div class="panel-outer">
-										<h4 class="panel-heading"><i class="fi-list colorHeading"></i> </h4>
-										<div id="meterValuesGridDiv"></div>
-										<div class="panel-inner">
-											<table id="block-work-order-type-analysis-table">
-												<thead>
-													<tr id="table-header">
-														<th>Work order type</th>
-														<th>Expected working time</th>
-														<th>Actual working time</th>
-														<th>Travel time</th>
-														<th>Outcome</th>
-														<th>Driving distance</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-													<td>Meter change</td>
-													<td>01:24</td>
-													<td>01:00</td>
-													<td>00:20</td>
-													<td>-29%</td>
-													<td>14.2km</td>
-													</tr>
+									<h4 class="panel-heading"><i class="fi-graph-horizontal colorHeading"></i> Work order type analysis</h4>
+									<div class="panel-inner" id="block-work-order-type-analysis-chart"></div>
+								</div>
+							</div>
+							<div class="large-12 columns">
+									<div class="panel-outer">
+											<h4 class="panel-heading"><i class="fi-list colorHeading"></i> Table view</h4>
+											<div id="meterValuesGridDiv"></div>
+											<div class="panel-inner">
+												<table id="block-work-order-type-analysis-table">
+													<thead>
+														<tr id="table-header">
+															<th>Work order type</th>
+															<th>Expected working time</th>
+															<th>Actual working time</th>
+															<th>Travel time</th>
+															<th>Outcome</th>
+															<th>Driving distance</th>
+														</tr>
+													</thead>
+													<tbody>
 														<tr>
-													<td>Meter change</td>
-													<td>01:24</td>
-													<td>01:00</td>
-													<td>00:20</td>
-													<td>-29%</td>
-													<td>14.2km</td>
-													</tr>
-														<tr>
-													<td>Meter change</td>
-													<td>01:24</td>
-													<td>01:00</td>
-													<td>00:20</td>
-													<td>-29%</td>
-													<td>14.2km</td>
-													</tr>
-												</tbody>
-											</table>
-											<div class="text-right">
-												<a href="javascript:analysisGrid.toExcel('<%=request.getContextPath()%>/std/DownloadExcel.action','Field Work Analysis','color','HEADER');" id="block-work-order-type-analysis-export-excel" class="button tiny">Export to Excel</a>
-												<a href="javascript:exportAsPDF();" id="block-work-order-type-analysis-export-pdf" class="button tiny">Export to pdf</a>
+														<td>Meter change</td>
+														<td>01:24</td>
+														<td>01:00</td>
+														<td>00:20</td>
+														<td>-29%</td>
+														<td>14.2km</td>
+														</tr>
+															<tr>
+														<td>Meter change</td>
+														<td>01:24</td>
+														<td>01:00</td>
+														<td>00:20</td>
+														<td>-29%</td>
+														<td>14.2km</td>
+														</tr>
+															<tr>
+														<td>Meter change</td>
+														<td>01:24</td>
+														<td>01:00</td>
+														<td>00:20</td>
+														<td>-29%</td>
+														<td>14.2km</td>
+														</tr>
+													</tbody>
+												</table>
+												<div class="text-right">
+													<a href="javascript:analysisGrid.toExcel('<%=request.getContextPath()%>/std/DownloadExcel.action','Field Work Analysis','color','HEADER');" id="block-work-order-type-analysis-export-excel" class="button tiny">Export to Excel</a>
+													<a href="javascript:exportAsPDF();" id="block-work-order-type-analysis-export-pdf" class="button tiny">Export to pdf</a>
+												</div>
 											</div>
 										</div>
-									</div>
+							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="large-2 columns filtered show-for-large-up">
-						<div class="title">Area</div>
-						<ul id="filter-block-areas">
-							<li>Areas:</li>
-							<li>Kungsbacka 1</li>
-							<li>Goteborg 2 1</li>
-						</ul>
-						<div class="title">Team</div>
-						<ul id= "filter-block-teams">
-							<li>Teams:</li>
-							<li>Team #1</li>
-							<li>Team #2</li>
-						</ul>
-						<div class="title">Technicians</div>
-						<ul id= "filter-block-technicians">
-							<li>Technicians:</li>
-							<li>Mark Frick</li>
-							<li>Conny Andersson</li>
-							<li>Christian Isetjarn</li>
-						</ul>
+					<div class="large-2 columns filtered show-for-large-up">
+							<div class="title">Area</div>
+							<ul id="filter-block-areas">
+								<li>Areas:</li>
+								<li>Kungsbacka 1</li>
+								<li>Goteborg 2 1</li>
+							</ul>
+							<div class="title">Team</div>
+							<ul id= "filter-block-teams">
+								<li>Teams:</li>
+								<li>Team #1</li>
+								<li>Team #2</li>
+							</ul>
+							<div class="title">Technicians</div>
+							<ul id= "filter-block-technicians">
+								<li>Technicians:</li>
+								<li>Mark Frick</li>
+								<li>Conny Andersson</li>
+								<li>Christian Isetjarn</li>
+							</ul>
+					</div>
 				</div>
-				</form>
-					<div class="wrapper-blur"></div>
-
+			</form>
+		<div class="wrapper-blur"></div>
 	</div>
 	<iframe id="myIFrm" name="myIFrm" src="" style="height: 0px; visibility: hidden"> </iframe>
 	<input type="hidden" name="imgfilenames" id="imgfilenames"/>
-	<script type="text/javascript" src="<%=request.getContextPath()%>/js/highchart/field-work-chart.js"></script>
+	<script src="<%=request.getContextPath()%>/js/highchart/field-work-chart.js"></script>
 </body>
 </html>

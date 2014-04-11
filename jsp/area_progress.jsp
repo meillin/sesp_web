@@ -258,7 +258,7 @@ symbolCounter++;
 			<div class="page-name">
 				<div class="large-12 columns">
 						<ul class="page-name-heading sub-menu">
-							<li><strong>AREA: <span id="area-name"></span>MISSING MILESTONE AREA</strong></li>
+							<span><strong>AREA: <span id="area-name"></span>MISSING MILESTONE AREA</strong></span>
 							<li class="progress-chart-li active" onclick="javascript:updateWorkOrder('progress')">
 								<i class="fi-graph-bar"></i> PROGRESS
 							</li>

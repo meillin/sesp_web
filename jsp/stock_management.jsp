@@ -67,100 +67,101 @@
 			<%@ include file="headerv311.inc" %>
 
 			<%
-			StockService stockService = ServiceProvider.getInstance().getService(StockService.class);
-			List<StockTTO> stockTypes = stockService.getStockTypes();
-			Map<Long, String> selectedImage = new HashMap<Long, String>();
-			Map<Long, String> unselectedImage = new HashMap<Long, String>();
-			String[] symbols = new String[] {"blue","green","orange","pink","purple","red","yellow"};
+				StockService stockService = ServiceProvider.getInstance().getService(StockService.class);
+				List<StockTTO> stockTypes = stockService.getStockTypes();
+				Map<Long, String> selectedImage = new HashMap<Long, String>();
+				Map<Long, String> unselectedImage = new HashMap<Long, String>();
+				String[] symbols = new String[] {"blue","green","orange","pink","purple","red","yellow"};
 
-			int symbolCounter = 0;
-			for(StockTTO stockTTO : stockTypes) {
-			unselectedImage.put(stockTTO.getId(), ((HttpServletRequest)pageContext.getRequest()).getContextPath() + "/images/marker-icon-blue.png");
-			selectedImage.put(stockTTO.getId(),  ((HttpServletRequest)pageContext.getRequest()).getContextPath() + "/images/marker-icon-blue.png");
-			symbolCounter++;
-		}
-		%>
-		<script>
-			contextPath = "<%=request.getContextPath()%>";
-			i18nSelectDeviceType="<s:text name='webportal.stock.selectdevicetype'/>";
-			i18nSelectDomain="<s:text name='webportal.stock.selectdomain'/>";
-			i18nSelectDeviceModel="<s:text name='webportal.stock.selectdevicemodel'/>";
-			i18nSelectStockSite="<s:text name='webportal.stock.selectstock'/>";
-			i18nerrorPleaseChooseCategory="<s:text name='webportal.error.choosecategory'/>";
-			i18nerrorPleaseChooseBreakup="<s:text name='webportal.error.choosebreakup'/>";
-			i18nerrorChartError="<s:text name='webportal.error.nodataavailable'/>";
-			i18nId="<s:text name='webportal.stock.id'/>";
-			i18nName="<s:text name='webportal.stock.name'/>";
-			i18nType="<s:text name='webportal.stock.type'/>";
-			i18nInfo="<s:text name='webportal.stock.info'/>";
-			i18nAddress="<s:text name='webportal.stock.address'/>";
-			i18nPostCode="<s:text name='webportal.stock.postcode'/>";
-			i18nPostAddress="<s:text name='webportal.stock.postaddress'/>";
-			i18nContactPerson="<s:text name='webportal.stock.contactperson'/>";
-			i18nContactWorkPhone="<s:text name='webportal.stock.contactworkphone'/>";
-			i18nContactMobilePhone="<s:text name='webportal.stock.contactmobilephone'/>";
-			i18nStockAll="<s:text name='webportal.alert.all'/>";
-			i18nerrorPleaseChooseMandatoryFields="<s:text name='webportal.error.choosemandatory'/>";
+				int symbolCounter = 0;
+				for(StockTTO stockTTO : stockTypes) {
+					unselectedImage.put(stockTTO.getId(), ((HttpServletRequest)pageContext.getRequest()).getContextPath() + "/images/marker-icon-blue.png");
+					selectedImage.put(stockTTO.getId(),  ((HttpServletRequest)pageContext.getRequest()).getContextPath() + "/images/marker-icon-blue.png");
+					symbolCounter++;
+				}
+			%>
+			<script>
+					contextPath = "<%=request.getContextPath()%>";
+					i18nSelectDeviceType="<s:text name='webportal.stock.selectdevicetype'/>";
+					i18nSelectDomain="<s:text name='webportal.stock.selectdomain'/>";
+					i18nSelectDeviceModel="<s:text name='webportal.stock.selectdevicemodel'/>";
+					i18nSelectStockSite="<s:text name='webportal.stock.selectstock'/>";
+					i18nerrorPleaseChooseCategory="<s:text name='webportal.error.choosecategory'/>";
+					i18nerrorPleaseChooseBreakup="<s:text name='webportal.error.choosebreakup'/>";
+					i18nerrorChartError="<s:text name='webportal.error.nodataavailable'/>";
+					i18nId="<s:text name='webportal.stock.id'/>";
+					i18nName="<s:text name='webportal.stock.name'/>";
+					i18nType="<s:text name='webportal.stock.type'/>";
+					i18nInfo="<s:text name='webportal.stock.info'/>";
+					i18nAddress="<s:text name='webportal.stock.address'/>";
+					i18nPostCode="<s:text name='webportal.stock.postcode'/>";
+					i18nPostAddress="<s:text name='webportal.stock.postaddress'/>";
+					i18nContactPerson="<s:text name='webportal.stock.contactperson'/>";
+					i18nContactWorkPhone="<s:text name='webportal.stock.contactworkphone'/>";
+					i18nContactMobilePhone="<s:text name='webportal.stock.contactmobilephone'/>";
+					i18nStockAll="<s:text name='webportal.alert.all'/>";
+					i18nerrorPleaseChooseMandatoryFields="<s:text name='webportal.error.choosemandatory'/>";
 
-			i18nInStockTab="<s:text name='webportal.stock.instock'/>";
-			i18nStockPalletTab="<s:text name='webportal.stock.onpallet'/>";
-			i18nStockSupplierTab="<s:text name='webportal.stock.fromsupplier'/>";
+					i18nInStockTab="<s:text name='webportal.stock.instock'/>";
+					i18nStockPalletTab="<s:text name='webportal.stock.onpallet'/>";
+					i18nStockSupplierTab="<s:text name='webportal.stock.fromsupplier'/>";
 
-			i18nOptionSelectEntityShown =
-			"<option value='M'><s:text name='webportal.stock.category.devicemodel'/></option>"+
-			"<option value='UT'><s:text name='webportal.stock.category.devicetype'/></option>"+
-			"<option value='US'><s:text name='webportal.stock.category.status'/></option>"+
-			"<option value='W'><s:text name='webportal.stock.category.stocksite'/></option>";
+					i18nOptionSelectEntityShown =
+					"<option value='M'><s:text name='webportal.stock.category.devicemodel'/></option>"+
+					"<option value='UT'><s:text name='webportal.stock.category.devicetype'/></option>"+
+					"<option value='US'><s:text name='webportal.stock.category.status'/></option>"+
+					"<option value='W'><s:text name='webportal.stock.category.stocksite'/></option>";
 
-			i18nOptionSelectEntityShownFromSupplier =
-			"<option value='M'><s:text name='webportal.stock.category.devicemodel'/></option>"+
-			"<option value='UT'><s:text name='webportal.stock.category.devicetype'/></option>"+
-			"<option value='US'><s:text name='webportal.stock.category.status'/></option>";
+					i18nOptionSelectEntityShownFromSupplier =
+					"<option value='M'><s:text name='webportal.stock.category.devicemodel'/></option>"+
+					"<option value='UT'><s:text name='webportal.stock.category.devicetype'/></option>"+
+					"<option value='US'><s:text name='webportal.stock.category.status'/></option>";
 
-			i18nOptionSelectDivideEntity =
-			"<option value='N'><s:text name='webportal.stock.breakup.none'/></option>"+
-			"<option value='M'><s:text name='webportal.stock.category.devicemodel'/></option>"+
-			"<option value='UT'><s:text name='webportal.stock.category.devicetype'/></option>"+
-			"<option value='US'><s:text name='webportal.stock.category.status'/></option>"+
-			"<option value='W'><s:text name='webportal.stock.category.stocksite'/></option>";
+					i18nOptionSelectDivideEntity =
+					"<option value='N'><s:text name='webportal.stock.breakup.none'/></option>"+
+					"<option value='M'><s:text name='webportal.stock.category.devicemodel'/></option>"+
+					"<option value='UT'><s:text name='webportal.stock.category.devicetype'/></option>"+
+					"<option value='US'><s:text name='webportal.stock.category.status'/></option>"+
+					"<option value='W'><s:text name='webportal.stock.category.stocksite'/></option>";
 
-			function loadPoints(domainCode,stockId) {
-				var obj= {};
-				obj.url=contextPath+"/std/GetStockMapPoints.action";
-				obj.pdata = "dc="+domainCode+"&stockId="+stockId;
-				obj.successfunc = loadPointsSuccess;
-				obj.errorfunc = errorDetails;
-				run_ajax(obj);
-				return;
-			}
+					function loadPoints(domainCode,stockId) {
+						var obj= {};
+						obj.url=contextPath+"/std/GetStockMapPoints.action";
+						obj.pdata = "dc="+domainCode+"&stockId="+stockId;
+						obj.successfunc = loadPointsSuccess;
+						obj.errorfunc = errorDetails;
+						run_ajax(obj);
+						return;
+					}
 
-			function loadPointsSuccess(data) {
-				function getPointCollection(object, pointCollections) {
-					var pointCollection = pointCollections[object.idStockT];
-					if(typeof pointCollection == "undefined") {
-						<%
-						for(StockTTO stockTTO : stockTypes) {
-							String selectedIcon = selectedImage.get(stockTTO.getId());
-							String unSelectedIcon = unselectedImage.get(stockTTO.getId());
-							%>
-							if(object.idStockT == <%=stockTTO.getId()%>) {
-								pointCollection = createPointsCollection(<%="\"" + unSelectedIcon+"\""%>,<%="\"" + selectedIcon+"\""%>);
-							}
-							<%}	%>
-							pointCollections[object.idStockT] = pointCollection;
-							if(typeof pointCollections.objectlist == "undefined") {
-								pointCollections.objectlist  = [];
-							}
-							pointCollections.objectlist.push(pointCollection);
-							return pointCollection;
-						} else {
-							return pointCollection;
-						}
-					};
-					var pointCollections = [];
-					addPoints(data, getPointCollection, pointCollections, displayInfo, infoDataCallback);
-	}
-	</script>
+					function loadPointsSuccess(data) {
+						function getPointCollection(object, pointCollections) {
+							var pointCollection = pointCollections[object.idStockT];
+							if(typeof pointCollection == "undefined") {
+								<%
+								for(StockTTO stockTTO : stockTypes) {
+									String selectedIcon = selectedImage.get(stockTTO.getId());
+									String unSelectedIcon = unselectedImage.get(stockTTO.getId());
+									%>
+									if(object.idStockT == <%=stockTTO.getId()%>) {
+										pointCollection = createPointsCollection(<%="\"" + unSelectedIcon+"\""%>,<%="\"" + selectedIcon+"\""%>);
+									}
+									<%}	%>
+									pointCollections[object.idStockT] = pointCollection;
+									if(typeof pointCollections.objectlist == "undefined") {
+										pointCollections.objectlist  = [];
+									}
+									pointCollections.objectlist.push(pointCollection);
+									return pointCollection;
+								} else {
+									return pointCollection;
+								}
+							};
+							var pointCollections = [];
+							addPoints(data, getPointCollection, pointCollections, displayInfo, infoDataCallback);
+				}
+			</script>
+
 			<div class="big-row">
 				<div class="large-12 columns filterHeader">
 					<div class="big-row">
@@ -196,68 +197,109 @@
 					</div>
 				</div><!-- end of filter panel -->
 			</div>
+
 			<div class="big-row">
-				<div class="large-12 columns">
-						<ul class="page-name-heading sub-menu">
-							<li><strong>STOCK MANAGEMENT</strong></li>
-							<li class="progress-chart-li"><i class="fi-check"></i> FROM SUPPLIER</li>
-							<li class="status-chart"><i class="fi-check"></i> IN STOCK</li>
-							<li class="details-chart active"><i class="fi-check"></i> ON PALLET</li>
-						</ul>
-				</div>
-			</div>
-			<div class="big-row">
-				<div class="large-6 columns">
-					<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-marker size-24 colorHeading"></i> On pallet</h4>
-						<div class="panel-inner">
-							<!--
-							<div id="tabs-wrapper" >
-								<a id="block-on-pallet-tab1" class="tiny button selected" onclick="javascript:updateUnitStatus('fromSupplier')">From supplier</a>
-								<a id="block-on-pallet-tab2" class="tiny button" onclick="javascript:updateUnitStatus('inStock')">In stock</a>
-								<a id="block-on-pallet-tab3" class="tiny button" onclick="javascript:updateUnitStatus('onPallet')">On pallet</a>
-							</div>
-						-->
-							<div style="width: 100%; height: 600px; opacity:0.99;" id="map-wrapper" ></div>
-						</div>
+				<div class="large-10 columns">
+					<div class="big-row">
+					<div class="large-12 columns">
+							<ul class="page-name-heading sub-menu">
+								<span><strong>STOCK MANAGEMENT</strong></span>
+								<li class="progress-chart-li"><i class="fi-check"></i> FROM SUPPLIER</li>
+								<li class="status-chart"><i class="fi-check"></i> IN STOCK</li>
+								<li class="details-chart active"><i class="fi-check"></i> ON PALLET</li>
+							</ul>
 					</div>
-				</div>
-				<div class="large-6 columns">
-					<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-bar size-24 colorHeading"></i> Device type</h4>
-						<div class="panel-inner">
-							<div class="row">
-								<div class="large-12 columns">
-									<div id="block-on-pallet-chart-view"></div>
+					</div>
+					<div class="big-row">
+						<div class="large-6 columns">
+							<div class="panel-outer">
+								<h4 class="panel-heading"><i class="fi-marker size-24 colorHeading"></i> On pallet</h4>
+								<div class="panel-inner">
+									<!--
+									<div id="tabs-wrapper" >
+										<a id="block-on-pallet-tab1" class="tiny button selected" onclick="javascript:updateUnitStatus('fromSupplier')">From supplier</a>
+										<a id="block-on-pallet-tab2" class="tiny button" onclick="javascript:updateUnitStatus('inStock')">In stock</a>
+										<a id="block-on-pallet-tab3" class="tiny button" onclick="javascript:updateUnitStatus('onPallet')">On pallet</a>
+									</div>
+								-->
+									<div style="width: 100%; height: 600px; opacity:0.99;" id="map-wrapper" ></div>
 								</div>
 							</div>
-							<div class="row">
-								<div class="large-12 columns chart-filter">
-									<div>
-										<span><s:text name="webportal.stock.entityshowninchart"/></span>
-										<div>
-											<select id="block-on-pallet-select-entity-shown" onchange="onChangeEntity()">
-											</select>
+						</div>
+						<div class="large-6 columns">
+							<div class="panel-outer">
+								<h4 class="panel-heading"><i class="fi-graph-bar size-24 colorHeading"></i> Device type</h4>
+								<div class="panel-inner">
+									<div class="row">
+										<div class="large-12 columns">
+											<div id="block-on-pallet-chart-view"></div>
 										</div>
 									</div>
-									<div>
-										<span><s:text name="webportal.stock.divideentityby"/></span>
-										<div>
-											<select id="block-on-pallet-select-divide-entity">
-											</select>
-										</div>
-									</div>
-									<div>
-										<a href="javascript:submitLogistics();" id="chart-legend-button-update" class="button">
-											<s:text name="webportal.stock.updatebutton"/>
-										</a>
-									</div>
-								</div><!-- end of chart-filter -->
-							</div><!-- end of chart-filter row -->
+									<div class="row">
+										<div class="large-12 columns chart-filter">
+											<div>
+												<span><s:text name="webportal.stock.entityshowninchart"/></span>
+												<div>
+													<select id="block-on-pallet-select-entity-shown" onchange="onChangeEntity()">
+													</select>
+												</div>
+											</div>
+											<div>
+												<span><s:text name="webportal.stock.divideentityby"/></span>
+												<div>
+													<select id="block-on-pallet-select-divide-entity">
+													</select>
+												</div>
+											</div>
+											<div>
+												<a href="javascript:submitLogistics();" id="chart-legend-button-update" class="button">
+													<s:text name="webportal.stock.updatebutton"/>
+												</a>
+											</div>
+										</div><!-- end of chart-filter -->
+									</div><!-- end of chart-filter row -->
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-		<div class="wrapper-blur"></div>
+
+				<div class="large-2 columns filtered show-for-large-up">
+				<div class="title">Date interval</div>
+				<ul>
+					<li>From: 2009/01/01</li>
+					<li>To: 2017/01/09</li>
+				</ul>
+				<div class="title">Domain <span>(3)</span></div>
+				<ul>
+					<li>EON</li>
+					<li>Eltel</li>
+					<li>Eon-Eltel</li>
+				</ul>
+				<div class="title">Work order type <span>(19)</span></div>
+				<ul>
+					<li>Concentrator installation</li>
+					<li>Measurepoint import(WO)</li>
+					<li>Meter Change CT Measured</li>
+					<li>Meter Change CT Measured</li>
+					<li>Meter Change CT Measured</li>
+					<li>Meter Change CT Measured</li>
+				</ul>
+				<div class="title">Area type <span>(1)</span></div>
+				<ul>
+					<li>Milestone Area</li>
+				</ul>
+				<div class="title">Area <span>(4)</span></div>
+				<ul>
+					<li>Missing Region</li>
+					<li>Missing Milestone Area</li>
+					<li>Missing Collection Area</li>
+					<li>Missing Net Area</li>
+				</ul>
+				</div>
+			</div>
+
+			<div class="wrapper-blur"></div>
 
 		</div><!-- end of wrapper -->
 		</body>

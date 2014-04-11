@@ -15,11 +15,11 @@ html, body{
 	background-color: #ebefee;
 }
 
-table tr th, 
+table tr th,
 table tr td,
-table thead tr th, 
+table thead tr th,
 table thead tr td,
-table tfoot tr th, 
+table tfoot tr th,
 table tfoot tr td{
 	padding: 0.4rem;
 	font-size: 0.75rem;
@@ -28,7 +28,7 @@ table tfoot tr td{
 table{
 	border-collapse:collapse;
 	border: none;
-	}
+}
 
 thead{
 	border-bottom: solid 1px #dddddd;
@@ -201,12 +201,14 @@ thead{
 }
 .page-name-heading {
 	background: #fff;
-	border: 1px solid #c4dad5;
 	padding-left: 0.2em;
 	margin-left: 0;
 	padding: 1em;
-	margin-top: 50px;
+	margin-top: 56px;
 	font-family: Georgia, serif;
+
+	border: 1px solid #d9d9d9;
+	border-bottom: 4px solid #d9d9d9;
 }
 
 .page-name-heading-search {
@@ -215,9 +217,9 @@ thead{
 
 .sub-menu li {
 	display: inline;
-	padding-right: 3em;
+	padding: 0 3em;
 }
-.sub-menu li:first-child {
+.sub-menu span {
 	opacity: 0.5;
 }
 .sub-menu :not(:first-child){
@@ -266,6 +268,9 @@ button, .button{
 
 .panel-inner{
 	padding: 0.9375em;
+}
+.panel-inner table {
+	margin-top: -15px;
 }
 
 .button-wrapper .custom-button{

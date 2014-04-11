@@ -28,26 +28,23 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/style.tidy.css" />
 
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-ui-1.10.2.custom.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.multiselect.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jQAllRangeSliders-min.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/search-results.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/time_reservation_call_list.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxcommon.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgrid.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgridcell.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/customdhtmlxgrid_export.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/spin.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
+		<script src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
+		<script src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
+		<script src="<%=request.getContextPath()%>/js/jquery-ui-1.10.2.custom.js"></script>
+		<script src="<%=request.getContextPath()%>/js/jquery.multiselect.js"></script>
+		<script src="<%=request.getContextPath()%>/js/init.js"></script>
+		<script src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
+		<script src="<%=request.getContextPath()%>/js/jQAllRangeSliders-min.js"></script>
+		<script src="<%=request.getContextPath()%>/js/search-results.js"></script>
+		<script src="<%=request.getContextPath()%>/js/time_reservation_call_list.js"></script>
+		<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxcommon.js"></script>
+		<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgrid.js"></script>
+		<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgridcell.js"></script>
+		<script src="<%=request.getContextPath()%>/js/common.js"></script>
+		<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/customdhtmlxgrid_export.js"></script>
+		<script src="<%=request.getContextPath()%>/js/spin.js"></script>
+		<script src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
 
-		<style type="text/css">
-
-		</style>
 	</head>
 	<body>
 	<script>
@@ -148,121 +145,162 @@
 						</div>
 				</div>
 			</div><!-- end of filterHeader -->
-			<div class="big-row">
-				<div class="large-12 columns">
-					<ul class="page-name-heading sub-menu"><strong><li>Time Reservation Call List</li></strong></ul>
-				</div>
-			</div>
-			<div class="big-row">
-				<div class="large-12 columns">
-					<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Search results</h4>
-							<div class="panel-inner">
-								<div id="callListGridDiv"></div>
-								<table id="block-time-reservation-call-list-table">
-									<thead>
-										<tr>
-											<th>Case ID</th>
-											<th>Locked by user</th>
-											<th>Last contact</th>
-											<th>Case type</th>
-											<th>Customer name</th>
-											<th>Milestone area</th>
-											<th>CA bef.FV</th>
-											<th>CA aft.FV</th>
-											<th>DTC aft.FV</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>
-												<a href="#">4324</a>
-											</td>
-											<td>admin</td>
-											<td>2013-01-01 12:00</td>
-											<td>Meter change</td>
-											<td>Martin Frick</td>
-											<td>Area #1</td>
-											<td>1</td>
-											<td>2</td>
-											<td>4</td>
-										</tr>
-										<tr>
-											<td>
-												<a href="#">4324</a>
-											</td>
-											<td>admin</td>
-											<td>2013-01-01 12:00</td>
-											<td>Meter change</td>
-											<td>Martin Frick</td>
-											<td>Area #1</td>
-											<td>1</td>
-											<td>2</td>
-											<td>4</td>
-										</tr>
-										<tr>
-											<td>
-												<a href="#">4324</a>
-											</td>
-											<td>admin</td>
-											<td>2013-01-01 12:00</td>
-											<td>Meter change</td>
-											<td>Martin Frick</td>
-											<td>Area #1</td>
-											<td>1</td>
-											<td>2</td>
-											<td>4</td>
-										</tr>
-										<tr>
-											<td>
-												<a href="#">4324</a>
-											</td>
-											<td>admin</td>
-											<td>2013-01-01 12:00</td>
-											<td>Meter change</td>
-											<td>Martin Frick</td>
-											<td>Area #1</td>
-											<td>1</td>
-											<td>2</td>
-											<td>4</td>
-										</tr>
-										<tr>
-											<td>
-												<a href="#">4324</a>
-											</td>
-											<td>admin</td>
-											<td>2013-01-01 12:00</td>
-											<td>Meter change</td>
-											<td>Martin Frick</td>
-											<td>Area #1</td>
-											<td>1</td>
-											<td>2</td>
-											<td>4</td>
-										</tr>
-										<tr>
-											<td>
-												<a href="#">4324</a>
-											</td>
-											<td>admin</td>
-											<td>2013-01-01 12:00</td>
-											<td>Meter change</td>
-											<td>Martin Frick</td>
-											<td>Area #1</td>
-											<td>1</td>
-											<td>2</td>
-											<td>4</td>
-										</tr>
-									</tbody>
-								</table>
 
-								<div class="text-right">
-									<a href="#" id="block-search-results-export-excel" onclick="javascript:callListExportGrid.toExcel('<%=request.getContextPath()%>/std/TimeReservationCallListExcel.action','TimeReservationCallListResults','color','HEADER');" class="button">Export to Excel</a>
-								</div>
+			<div class="big-row">
+				<div class="large-10 column">
+					<div class="big-row">
+						<div class="large-12 columns">
+							<ul class="page-name-heading sub-menu">
+								<span><strong>Time Reservation Call List</strong></span>
+							</ul>
+						</div>
+					</div>
+					<div class="big-row">
+						<div class="large-12 columns">
+							<div class="panel-outer">
+								<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Search results</h4>
+									<div class="panel-inner">
+										<div id="callListGridDiv"></div>
+										<table id="block-time-reservation-call-list-table">
+											<thead>
+												<tr>
+													<th>Case ID</th>
+													<th>Locked by user</th>
+													<th>Last contact</th>
+													<th>Case type</th>
+													<th>Customer name</th>
+													<th>Milestone area</th>
+													<th>CA bef.FV</th>
+													<th>CA aft.FV</th>
+													<th>DTC aft.FV</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<a href="#">4324</a>
+													</td>
+													<td>admin</td>
+													<td>2013-01-01 12:00</td>
+													<td>Meter change</td>
+													<td>Martin Frick</td>
+													<td>Area #1</td>
+													<td>1</td>
+													<td>2</td>
+													<td>4</td>
+												</tr>
+												<tr>
+													<td>
+														<a href="#">4324</a>
+													</td>
+													<td>admin</td>
+													<td>2013-01-01 12:00</td>
+													<td>Meter change</td>
+													<td>Martin Frick</td>
+													<td>Area #1</td>
+													<td>1</td>
+													<td>2</td>
+													<td>4</td>
+												</tr>
+												<tr>
+													<td>
+														<a href="#">4324</a>
+													</td>
+													<td>admin</td>
+													<td>2013-01-01 12:00</td>
+													<td>Meter change</td>
+													<td>Martin Frick</td>
+													<td>Area #1</td>
+													<td>1</td>
+													<td>2</td>
+													<td>4</td>
+												</tr>
+												<tr>
+													<td>
+														<a href="#">4324</a>
+													</td>
+													<td>admin</td>
+													<td>2013-01-01 12:00</td>
+													<td>Meter change</td>
+													<td>Martin Frick</td>
+													<td>Area #1</td>
+													<td>1</td>
+													<td>2</td>
+													<td>4</td>
+												</tr>
+												<tr>
+													<td>
+														<a href="#">4324</a>
+													</td>
+													<td>admin</td>
+													<td>2013-01-01 12:00</td>
+													<td>Meter change</td>
+													<td>Martin Frick</td>
+													<td>Area #1</td>
+													<td>1</td>
+													<td>2</td>
+													<td>4</td>
+												</tr>
+												<tr>
+													<td>
+														<a href="#">4324</a>
+													</td>
+													<td>admin</td>
+													<td>2013-01-01 12:00</td>
+													<td>Meter change</td>
+													<td>Martin Frick</td>
+													<td>Area #1</td>
+													<td>1</td>
+													<td>2</td>
+													<td>4</td>
+												</tr>
+											</tbody>
+										</table>
+
+										<div class="text-right">
+											<a href="#" id="block-search-results-export-excel" onclick="javascript:callListExportGrid.toExcel('<%=request.getContextPath()%>/std/TimeReservationCallListExcel.action','TimeReservationCallListResults','color','HEADER');" class="button">Export to Excel</a>
+										</div>
+									</div>
 							</div>
+						</div>
 					</div>
 				</div>
+				<div class="large-2 columns filtered show-for-large-up">
+					<div class="title">Date interval</div>
+					<ul>
+						<li>From: 2009/01/01</li>
+						<li>To: 2017/01/09</li>
+					</ul>
+					<div class="title">Domain <span>(3)</span></div>
+					<ul>
+						<li>EON</li>
+						<li>Eltel</li>
+						<li>Eon-Eltel</li>
+					</ul>
+					<div class="title">Work order type <span>(19)</span></div>
+					<ul>
+						<li>Concentrator installation</li>
+						<li>Measurepoint import(WO)</li>
+						<li>Meter Change CT Measured</li>
+						<li>Meter Change CT Measured</li>
+						<li>Meter Change CT Measured</li>
+						<li>Meter Change CT Measured</li>
+					</ul>
+					<div class="title">Area type <span>(1)</span></div>
+					<ul>
+						<li>Milestone Area</li>
+					</ul>
+					<div class="title">Area <span>(4)</span></div>
+					<ul>
+						<li>Missing Region</li>
+						<li>Missing Milestone Area</li>
+						<li>Missing Collection Area</li>
+						<li>Missing Net Area</li>
+					</ul>
+				</div>
 			</div>
-	<div class="wrapper-blur"></div>
+
+			<div class="wrapper-blur"></div>
 
 		</div>
 		<iframe id="myIFrm" name="myIFrm" src="" style="height: 0px; visibility: hidden"> </iframe>

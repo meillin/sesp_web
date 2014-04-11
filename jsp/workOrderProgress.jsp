@@ -86,95 +86,95 @@
 
 		    run_ajax(obj);
 		    return;
-		}
+	}
 
 
-		function fetchBubbleContent(id) {
-			var obj= {};
-			obj.url=contextPath+"/std/WOMapAreasStatusInfo.action";
-			obj.pdata = areaWOMapInfoRParams+"&area="+id;
-			obj.successfunc = function(msg){
-				if(msg == "") {
-					return;
-				}
-				var o = eval(msg);
-				if(o == null)
-					return;
+	function fetchBubbleContent(id) {
+		var obj= {};
+		obj.url=contextPath+"/std/WOMapAreasStatusInfo.action";
+		obj.pdata = areaWOMapInfoRParams+"&area="+id;
+		obj.successfunc = function(msg){
+			if(msg == "") {
+				return;
+			}
+			var o = eval(msg);
+			if(o == null)
+				return;
 
-				populateBubbleContent(o);
+			populateBubbleContent(o);
 
-			};
-			obj.errorfunc = populateErrorBubbleContent;
-			run_ajax_Sync(obj);
-			return;
-		}
-
-		function woAreaProgressCallback(aname,aid) {
-			var returnData;
-			//areaprogressLink = contextPath+"/std/AreaProgress.action?"+areaWOMapInfoRParams+"&aid="+aid+"&aname="+aname;
-			//alert(areaprogressLink);
-			html = "<form id=\"bubbleForm\" name=\"bubbleForm\" method=\"post\" action=\""+contextPath+"/std/AreaProgress.action\">";
-			html += "<div id=\"bubble\" class=\"bubble-chart text-grey\" style=\"width:350px; height:350px;\">";
-			html +=	"<div id=\"bubble-header\"></div>";
-			html += "<div class=\"bubble-title\">";
-			html += "	<div class=\"bubble-category\">Area name :</div>";
-			html +=	"	<div class=\"bubble-value text-light-grey\"><a href=\"javascript:document.getElementById('bubbleForm').submit();\">"+aname+"</a></div>";
-			html +=	"</div>";
-			html +=	"<div class=\"bubble-value text-light-grey\" id=\"bubble-content\">";
-			html += "</div>";
-			html += "<div id=\"bubble-arrow\">";
-
-			html+= "<input type=\"hidden\" name=\"aid\" value=\""+aname+"\"/>";
-			html+= "<input type=\"hidden\" name=\"aname\" value=\""+aid+"\"/>";
-			html+= "<input type=\"hidden\" name=\"dateInterval\" value=\""+apreqObject.dateInterval+"\"/>";
-			html+= "<input type=\"hidden\" name=\"dateFrom\" value=\""+apreqObject.dateFrom+"\"/>";
-			html+= "<input type=\"hidden\" name=\"dateTo\" value=\""+apreqObject.dateTo+"\"/>";
-			html+= "<input type=\"hidden\" name=\"domain\" value=\""+apreqObject.domain+"\"/>";
-			html+= "<input type=\"hidden\" name=\"areaType\" value=\""+apreqObject.areaType+"\"/>";
-			html+= "<input type=\"hidden\" name=\"workOrderType\" value=\""+apreqObject.workOrderType+"\"/>";
-			html+= "<input type=\"hidden\" name=\"unplanned\" value=\""+apreqObject.unplanned+"\"/>";
-			html+= "<input type=\"hidden\" name=\"area\" value=\""+apreqObject.area+"\"/>";
-
-			html += "</div>";
-			html += "</div></form>";
-
-			returnData =  html;
-
-			saveAreaProgressFilters(apreqObject.dateInterval,apreqObject.dateFrom,apreqObject.dateTo,apreqObject.domain,apreqObject.areaType,apreqObject.workOrderType,apreqObject.unplanned,apreqObject.area);
-
-			return returnData;
-		}
-
-function populateErrorBubbleContent(data) {
-	document.getElementById("bubble-content").innerHTML=data.responseText;
-}
-
-
-function populateBubbleContent(data) {
-//Work Order Progress
-var bubbleWOAreaChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/Doughnut2D.swf", "mapWOareaProgressChartId"+bci++,"300","300");
-bubbleWOAreaChart.setDataXML(data.workOrderProgress);
-bubbleWOAreaChart.render("bubble-content");
-}
-
-function submitWO2AreaProgress(formRef){
-	if(formRef.username.value=="")
-	{
-		alert(i18nerrorPleaseEnterUsername);
-		formRef.username.focus();
-		return;
-	} if(formRef.password.value=="")
-	{
-		alert(i18nerrorPleaseEnterPassword);
-		formRef.password.focus();
+		};
+		obj.errorfunc = populateErrorBubbleContent;
+		run_ajax_Sync(obj);
 		return;
 	}
-	document.getElementById("divenable").style.display="none";
-	document.getElementById("divdisable").style.display="block";
-	loginSpinner();
-	formRef.submit();
-}
-var bci = 0;
+
+	function woAreaProgressCallback(aname,aid) {
+		var returnData;
+		//areaprogressLink = contextPath+"/std/AreaProgress.action?"+areaWOMapInfoRParams+"&aid="+aid+"&aname="+aname;
+		//alert(areaprogressLink);
+		html = "<form id=\"bubbleForm\" name=\"bubbleForm\" method=\"post\" action=\""+contextPath+"/std/AreaProgress.action\">";
+		html += "<div id=\"bubble\" class=\"bubble-chart text-grey\" style=\"width:350px; height:350px;\">";
+		html +=	"<div id=\"bubble-header\"></div>";
+		html += "<div class=\"bubble-title\">";
+		html += "	<div class=\"bubble-category\">Area name :</div>";
+		html +=	"	<div class=\"bubble-value text-light-grey\"><a href=\"javascript:document.getElementById('bubbleForm').submit();\">"+aname+"</a></div>";
+		html +=	"</div>";
+		html +=	"<div class=\"bubble-value text-light-grey\" id=\"bubble-content\">";
+		html += "</div>";
+		html += "<div id=\"bubble-arrow\">";
+
+		html+= "<input type=\"hidden\" name=\"aid\" value=\""+aname+"\"/>";
+		html+= "<input type=\"hidden\" name=\"aname\" value=\""+aid+"\"/>";
+		html+= "<input type=\"hidden\" name=\"dateInterval\" value=\""+apreqObject.dateInterval+"\"/>";
+		html+= "<input type=\"hidden\" name=\"dateFrom\" value=\""+apreqObject.dateFrom+"\"/>";
+		html+= "<input type=\"hidden\" name=\"dateTo\" value=\""+apreqObject.dateTo+"\"/>";
+		html+= "<input type=\"hidden\" name=\"domain\" value=\""+apreqObject.domain+"\"/>";
+		html+= "<input type=\"hidden\" name=\"areaType\" value=\""+apreqObject.areaType+"\"/>";
+		html+= "<input type=\"hidden\" name=\"workOrderType\" value=\""+apreqObject.workOrderType+"\"/>";
+		html+= "<input type=\"hidden\" name=\"unplanned\" value=\""+apreqObject.unplanned+"\"/>";
+		html+= "<input type=\"hidden\" name=\"area\" value=\""+apreqObject.area+"\"/>";
+
+		html += "</div>";
+		html += "</div></form>";
+
+		returnData =  html;
+
+		saveAreaProgressFilters(apreqObject.dateInterval,apreqObject.dateFrom,apreqObject.dateTo,apreqObject.domain,apreqObject.areaType,apreqObject.workOrderType,apreqObject.unplanned,apreqObject.area);
+
+		return returnData;
+	}
+
+	function populateErrorBubbleContent(data) {
+		document.getElementById("bubble-content").innerHTML=data.responseText;
+	}
+
+
+	function populateBubbleContent(data) {
+	//Work Order Progress
+	var bubbleWOAreaChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/Doughnut2D.swf", "mapWOareaProgressChartId"+bci++,"300","300");
+	bubbleWOAreaChart.setDataXML(data.workOrderProgress);
+	bubbleWOAreaChart.render("bubble-content");
+	}
+
+	function submitWO2AreaProgress(formRef){
+		if(formRef.username.value=="")
+		{
+			alert(i18nerrorPleaseEnterUsername);
+			formRef.username.focus();
+			return;
+		} if(formRef.password.value=="")
+		{
+			alert(i18nerrorPleaseEnterPassword);
+			formRef.password.focus();
+			return;
+		}
+		document.getElementById("divenable").style.display="none";
+		document.getElementById("divdisable").style.display="block";
+		loginSpinner();
+		formRef.submit();
+	}
+	var bci = 0;
 </script>
 
 <body onload="loadvalues(),initmap('<%=request.getSession().getAttribute("MAP_SERVER_URL")%>')">
@@ -253,7 +253,7 @@ var bci = 0;
 				<div class="big-row">
 					<div class="large-12 columns">
 						<ul class="page-name-heading sub-menu">
-							<li><strong>WORK ORDER/AREA</strong></li>
+							<span><strong>WORK ORDER/AREA</strong></span>
 							<li class="progress-chart-li active"><i class="fi-graph-bar"></i> PROGRESS</li>
 							<li class="status-chart"><i class="fi-check"></i> STATUS</li>
 							<li class="details-chart"><i class="fi-page-search"></i> DETAILS</li>
