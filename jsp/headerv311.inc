@@ -41,6 +41,14 @@
 
 		<div class="large-4 columns">
 			<ul class="inline-list right">
+			<li>
+			<select>
+				<option value="English">English (UK)</option>
+				<option value="Swedish">Swedish (SE)</option>
+				<option value="German">German (GE)</option>
+				<option value="French">French (FR)</option>
+			</select>
+			</li>
 				<li class="slide-menu-right">
 					<a class="toggle-filter"><i class="fi-filter size-18"></i> Filter </a>
 				</li>

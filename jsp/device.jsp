@@ -66,7 +66,7 @@ document.createElement("figure");
 		<div id="main-content">
 			<div class="big-row">
 				<div class="large-12 columns">
-					<h2 class="page-name-heading">
+					<h2 class="page-name-heading-search">
 						<s:text name='webportal.device.results.title'/> : <span id="device-id"></span>
 					</h2>
 				</div>

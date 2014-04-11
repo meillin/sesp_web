@@ -14,6 +14,26 @@ html, body{
 	padding: 0;
 	background-color: #ebefee;
 }
+
+table tr th, 
+table tr td,
+table thead tr th, 
+table thead tr td,
+table tfoot tr th, 
+table tfoot tr td{
+	padding: 0.4rem;
+	font-size: 0.75rem;
+}
+
+table{
+	border-collapse:collapse;
+	border: none;
+	}
+
+thead{
+	border-bottom: solid 1px #dddddd;
+}
+
 .wrapper-blur {
 	top:0;
 	height: 200%;
@@ -95,13 +115,7 @@ html, body{
 	padding-left: 0.9375em;
 	padding-right: 0.9375em;
 }
-.page-name {
-	background: gray;
-}
-.page-name-heading{
-	margin-top: 50px;
-	font-family: Georgia, serif;
-}
+
 /**
  * 	Custom Generic Button
  */
@@ -119,6 +133,17 @@ html, body{
 	padding: 2em 0em;
 	background-image:url(../images/filter_bg.png);
 	background-size: cover;
+}
+
+.filterHeader select{
+	color: #fff;
+	background-color: #1abc9c;
+	border: none;
+
+}
+
+.filterHeader thead {
+	border: none;
 }
 
 .filterHeader,
@@ -180,7 +205,14 @@ html, body{
 	padding-left: 0.2em;
 	margin-left: 0;
 	padding: 1em;
+	margin-top: 50px;
+	font-family: Georgia, serif;
 }
+
+.page-name-heading-search {
+	margin-top: 50px;
+}
+
 .sub-menu li {
 	display: inline;
 	padding-right: 3em;
@@ -221,6 +253,7 @@ button, .button{
 .panel-heading{
 	border-bottom: 1px solid #E7E7E7;
 	padding: 0.25rem 0.75rem;
+	margin: 0;
 }
 
 .panel-outer{
