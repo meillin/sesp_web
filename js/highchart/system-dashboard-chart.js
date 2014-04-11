@@ -1,4 +1,8 @@
 $(function () {
+	Highcharts.setOptions({
+	//Green - #1abc9c //Blue - #428bca // Orange - #f0ad4e // Red - #d9534f //
+     colors: ['#1abc9c', '#428bca', '#d9534f', '#f0ad4e', '#5bc0de', '#1d2939']
+    });
 
 	function drawHalfGaugeChart(divId, height){
 		$( '#'+divId ).highcharts({
@@ -24,7 +28,7 @@ $(function () {
 		      startAngle: -90,
 		      endAngle: 90,
 		      background: [{
-		          backgroundColor: '#ff0000',
+		          backgroundColor: 'transparent',
 		          borderWidth: 0,
 		          outerRadius: '50%',
 		          innerRadius: '50%'
@@ -56,25 +60,36 @@ $(function () {
 		          text: ''
 		      },
 		      plotBands: [{
-		          from: 0,
-		          to: 30,
-		          color: '#55BF3B' // green
+					from: 0,
+					to: 30,
+					innerRadius: '85%',
+					outerRadius: '135%',
+					color: '#1abc9c' // green
 		      }, {
-		          from: 30,
-		          to: 70,
-		          color: '#DDDF0D' // yellow
+					from: 30,
+					to: 70,
+					innerRadius: '85%',
+					outerRadius: '135%',
+					color: '#f0ad4e' // yellow
 		      }, {
-		          from: 70,
-		          to: 100,
-		          color: '#DF5353' // red
+					from: 70,
+					to: 100,
+					innerRadius: '85%',
+					outerRadius: '135%',
+					color: '#d9534f' // red
 		      }]
 		  },
 
 		  series: [{
 		      name: '',
 		      data: [80],
+				dataLabels: {
+				formatter: function () {
+				return '<span style="color:#000"> '+this.y+' %</span>';
+				}
+			},
 		      tooltip: {
-		          valueSuffix: ''
+		          valueSuffix: '%'
 		      }
 		  }]
 			},
@@ -189,8 +204,8 @@ $(function () {
             title: {
                 text: title,
                 style: {
-									fontWeight: 'bold',
-									color: '#000'
+					fontWeight: 'bold',
+					color: '#000'
                 }
             },
             tooltip: {
@@ -246,7 +261,7 @@ $(function () {
 			        stacking: 'normal'
 			    }
 			},
-			series: data
+			series: data,
 		});
 	}
 
@@ -261,7 +276,9 @@ $(function () {
 										data: [15]
 									}
 								];
-	var errorData = [{data: [3, 4, 1, 5]}];
+	//Green - #1abc9c //Blue - #428bca // Orange - #f0ad4e // Red -#d9534f //
+	var errorData = [{data : [{y:50,color:'#1abc9c'}, {y:30,color:'#428bca'}, {y:20,color:'#f0ad4e'}, {y:10,color:'#d9534f'}]}];
+
 	var messageData = [
 			                ['Import ready',   45.0],
 			                ['Import error',       26.8],

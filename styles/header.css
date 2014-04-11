@@ -30,9 +30,11 @@ header .row input{margin-bottom: 0;}
 
 header select{
 	border: none;
+    outline: 0px;
 	margin: 0;
-	padding: 1rem 1.25rem;
+	line-height: 2rem;
 	height: 100%;
+	background-color: #fff;
 }
 
 header .slide-menu-left a{

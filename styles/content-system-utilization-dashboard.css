@@ -57,7 +57,7 @@ table tr th {
     line-height: 0px !important;
 }
 table tr th, table tr td {
-    padding: 0;
+    padding: 5px;
     font-size: 12px;
 }
 .pda-order label {

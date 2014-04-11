@@ -28,7 +28,8 @@ table tfoot tr td{
 table{
 	border-collapse:collapse;
 	border: none;
-}
+	padding: 0.4rem;
+	}
 
 thead{
 	border-bottom: solid 1px #dddddd;
@@ -139,11 +140,21 @@ thead{
 	color: #fff;
 	background-color: #1abc9c;
 	border: none;
-
+	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	line-height: normal;
+	text-align: center;
+	font-size: 1rem;
+	padding: 0;
 }
 
 .filterHeader thead {
 	border: none;
+}
+
+.filterHeader button:hover,
+.filterHeader a:hover{
+	background: rgba(26, 188, 156, 0.5);
 }
 
 .filterHeader,
@@ -173,9 +184,9 @@ thead{
 	width: 50%;
 }
 .filterHeader select, .filterHeader .input-append {
-	background: #1abc9c;
+	background-color: #1abc9c;
 	border: none;
-	color: #ffffff;
+	color: #fff;
 }
 
 /*****************Information column and sub menu ********************************************************/
@@ -204,7 +215,7 @@ thead{
 	padding-left: 0.2em;
 	margin-left: 0;
 	padding: 1em;
-	margin-top: 56px;
+	margin-top: 65px;
 	font-family: Georgia, serif;
 
 	border: 1px solid #d9d9d9;
@@ -250,6 +261,10 @@ button, .button{
 	border: none;
 	box-shadow: none;
 	background-color: #1abc9c;
+}
+
+.custom-multi-select a:hover{
+	background: rgba(26, 188, 156, 0.5);
 }
 
 .panel-heading{

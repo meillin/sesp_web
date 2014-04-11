@@ -1,4 +1,9 @@
 function drawDeviceAssetProjectionPerMonth() {
+    Highcharts.setOptions({
+     colors: ['#1abc9c', '#428bca', '#d9534f', '#f0ad4e', '#5bc0de', '#1d2939']
+    });
+
+
         $('#device-assets-projections-per-month-view').highcharts({
             chart: {
                 type: 'bar',
