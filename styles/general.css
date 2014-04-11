@@ -306,10 +306,6 @@ button, .button{
 .panel-inner{
 	padding: 0.9375em;
 }
-.panel-inner table {
-	margin-top: -15px;
-}
-
 .button-wrapper .custom-button{
 	display: inline-block;
 	padding: 8px 20px 1px 20px;

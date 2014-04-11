@@ -3,11 +3,10 @@ function drawDeviceAssetProjectionPerMonth() {
      colors: ['#1abc9c', '#428bca', '#d9534f', '#f0ad4e', '#5bc0de', '#1d2939']
     });
 
-
     $('#device-assets-projections-per-month-view').highcharts({
         chart: {
             type: 'bar',
-            height: 250
+            height: 230
         },
         title: {
             text: ''
@@ -51,7 +50,7 @@ function drawTotalDeviceAssetProjection() {
             plotBackgroundColor: null,
             plotBorderWidth: null,
             plotShadow: false,
-            height: 250
+            height: 230
         },
         title: {
             text: ''
@@ -92,7 +91,7 @@ function drawResourceProjectionPerMonth() {
         $('#resource-projections-per-month-view').highcharts({
             chart: {
                 type: 'bar',
-                height: 250
+                height: 230
             },
             title: {
                 text: ''
@@ -136,7 +135,7 @@ function drawTotalResourceProjection() {
             plotBackgroundColor: null,
             plotBorderWidth: null,
             plotShadow: false,
-            height: 250
+            height: 230
         },
         title: {
             text: ''
