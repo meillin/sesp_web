@@ -10,6 +10,11 @@ font-family: roboto-med;
 src: url(font/Roboto-Medium.ttf);
 }
 
+@font-face
+{
+font-family: roboto-bld;
+src: url(font/Roboto-Bold.ttf);
+}
 
 body {
 	background: url(../images/2014/sesp_bg.png);
@@ -19,22 +24,23 @@ body {
 
 }
 
-
+/*ERROR WINDOW*/
 .errors {
-	width:100%;
+	background-color:#ffebe8;
+	border:1px solid #dd3c10;
+	padding-top: 1rem;
+	margin-top: 1rem;
 }
 
 .errors li{
 	list-style: none;
-	font-family: roboto-lght !important;
-	width:auto;
-	color:#fff;
-	font-size: 1rem;
-			}
+	font-family: roboto-bld!important;
+	color:#000;
+	font-size: 0.8rem;
+	}
+/*ERROR WINDOW*/
 
-
-
-
+/*LOGIN PAGE TEXT*/
 #main-content {
 	color: #fff;
 }
@@ -42,7 +48,7 @@ body {
 .login-text {
 	font-family: roboto-lght;
 	margin: 0 auto;
-	margin-top: 12rem ;
+	margin-top: 8.5rem ;
 	width: 60%;
 }
 
@@ -59,13 +65,15 @@ body {
 }
 
 @media screen and (max-width: 700px) {
-		.login-text {
-		font-family: roboto-lght;
-		margin: 0 auto;
-		margin-top: 12rem ;
-		width: 95%;
+	.login-text {
+	font-family: roboto-lght;
+	margin: 0 auto;
+	margin-top: 12rem ;
+	width: 95%;
 	}
 }
+/*LOGIN PAGE TEXT*/
+
 
 label {
 	color: #fff;
@@ -76,7 +84,7 @@ label {
 }
 
 #main-content form{
-	margin-top: 4em;
+	margin-top: 2.5em;
 	color: #fff;
 }
 .button {
