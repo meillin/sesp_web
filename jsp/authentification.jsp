@@ -60,6 +60,7 @@
 
 				<div class="medium-4 medium-centered columns">
 					<form name="loginForm" method="post" action="<%=request.getContextPath()%>/std/Login" onKeyPress="return submitOnEnter(this,event)">
+						
 						<div class="row">
 							<div class="large-12 columns">
 								<label>Username</label>
@@ -76,20 +77,19 @@
 							</div>
 						</div>
 
-						<a href="#" class="forgot-pass">Forgot Password?</a>
-
-
 						<div class="row">
-							<div class="large-4 right columns">
-								<a href="javascript:submitLogin(document.loginForm)" id="divenable" style="display:block" class="button tiny">
-									<!--<s:text name="webportal.index.signin"/>--> Login
+						<div class="large-12 columns">
+							<div class="right">
+								<a href="#" class="forgot-pass">Forgot Password?</a>
+								<a href="javascript:submitLogin(document.loginForm)" id="divenable" class="button tiny">
+									<!--<s:text name="webportal.index.signin"/>-->Login
 								</a>
 								<a href="#" disabled="disabled" id="divdisable" style="display:none" class="button tiny custom-deactivebutton">
 									<s:text name="webportal.index.signin"/>
 								</a>
 							</div>
+								</div>
 						</div>
-
 						<s:if test="hasActionErrors()">
 							  <div class="errors">
 							     <s:actionerror/>

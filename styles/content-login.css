@@ -18,16 +18,16 @@ body {
 	background-size: cover;
 
 }
+
 #main-content {
-	
 	color: #fff;
 }
 
 .login-text {
 	font-family: roboto-lght;
-	margin-left: 13rem;
-	margin-top: 13rem;
-	width: 600px;
+	margin: 0 auto;
+	margin-top: 12rem ;
+	width: 60%;
 }
 
 .login-text h1 {
@@ -38,11 +38,18 @@ body {
 
 .login-text p {
 	text-align: left;
-	
 	font-family: roboto-lght;
 	font-size: 1.3rem;
 }
 
+@media screen and (max-width: 700px) {
+		.login-text {
+		font-family: roboto-lght;
+		margin: 0 auto;
+		margin-top: 12rem ;
+		width: 95%;
+	}
+}
 
 label {
 	color: #fff;
@@ -79,22 +86,33 @@ textarea:-webkit-autofill {
 	background: #fff !important;
 }
 
+
+
 a#divenable.button.tiny {
-	width: 6.5rem!important;
-	margin-top: 1rem;
-	margin-left: -1.4rem;
-	font-family: roboto-med!important;
+	float: none!important;
+	display: inline-block;
+	padding: 0.6rem 2.7rem !important;
+	font-family: roboto-med !important;
 	font-size: 0.8rem;
+	margin-left: 1rem;
+	margin-top: 1.2rem;
 }
 
 a#divenable.button.tiny:hover{
 	background-color: #2e363c!important;
 }
 
+
+.row 
+
 .forgot-pass {
-	display: block;
+	float: none!important;
+	display: inline-block!important;
 	color: #fff;
-	font-family: roboto-med;
+	font-family: roboto-med!important;
 	font-size: 0.8rem;
-	margin-top: 2rem;
+}
+
+.forgot-pass:hover {
+	color: #fff;
 }
