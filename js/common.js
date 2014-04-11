@@ -30,4 +30,9 @@ Sub menu actions
 		}
 	});
 
+	$('dd a').click(function(){
+		var target = $(this).next();
+		target.slideToggle('fast');
+	});
+
 });

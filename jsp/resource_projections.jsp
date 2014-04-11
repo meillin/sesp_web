@@ -40,7 +40,6 @@
 		<script src="<%=contextPath%>/js/jquery.multiselect.js"></script>
 		<script src="<%=contextPath%>/js/jquery.cookie.js"></script>
 		<script src="<%=contextPath%>/js/init.js"></script>
-		<script src="<%=contextPath%>/js/common.js"></script>
 		<script src="<%=contextPath%>/js/resource_projections.js"></script>
 		<script src="<%=contextPath%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
 
@@ -48,6 +47,7 @@
 		<script src="<%=contextPath%>/js/OpenLayers.js"></script>
 
 		<script src="<%=contextPath%>/js/highchart/highcharts.js"></script>
+
 
 		<script src="<%=contextPath%>/js/map.js"></script>
 		<script src="<%=contextPath%>/js/sesp_ajax.js"></script>
@@ -87,14 +87,13 @@
 						<div class="large-3 columns">
 							<h4>1 Search planing periods</h4>
 							<div class="row">
-								<div class="small-12 columns">
+								<div class="small-6 large-12 columns">
 									<label><s:text name="webportal.resourceprojections.time.domain.title"/></label>
 									<select id="block-time-multiselect-domain" class="custom-multi-select" name="multiselect-domain" multiple="multiple" onchange="domainChanged()">
 									</select>
 								</div>
-							</div>
-							<div class="row">
-								<div class="small-12 columns">
+
+								<div class="small-6 large-12 columns">
 									<label>Planning period type</label>
 									<select>
 										<option value="week">week</option>
@@ -156,7 +155,7 @@
 							<h4>3 Filter</h4>
 
 							<div class="row">
-								<div class="large-6 columns">
+								<div class="large-6 small-6 columns">
 
 									<label>Utility type</label>
 									<div>
@@ -174,7 +173,7 @@
 										<select id="filter-multiselect-area-type" class="custom-multi-select" name="multiselect-area-type" multiple="multiple"></select>
 									</div>
 								</div>
-								<div class="large-6 columns">
+								<div class="large-6 small-6 columns">
 
 									<label>Work order type</label>
 									<div>
@@ -211,25 +210,25 @@
 
 					<div class="big-row">
 						<div class="large-6 columns">
-									<div class="panel-outer">
-										<h4 class="panel-heading"><i class="fi-graph-horizontal colorHeading"></i> Device assets projections</h4>
-										<div class="panel-inner" id="device-assets-projections-per-month-view">
-											<!-- IDs for real data chart
-											<div class="large-6 columns" id="block-device-assets-projections-per-month-view"></div>
-											-->
-										</div>
-									</div>
+							<div class="panel-outer">
+								<h4 class="panel-heading"><i class="fi-graph-horizontal colorHeading"></i> Device assets projections</h4>
+								<div class="panel-inner" id="device-assets-projections-per-month-view">
+									<!-- IDs for real data chart
+									<div class="large-6 columns" id="block-device-assets-projections-per-month-view"></div>
+									-->
+								</div>
+							</div>
 						</div>
 
 						<div class="large-6 columns">
-									<div class="panel-outer">
-										<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Device assets projections total</h4>
-										<div class="panel-inner" id="device-assets-projections-total-view">
-												<!-- IDs for real data chart
-												<div class="large-6 columns" id="block-device-assets-projections-total-view"></div>
-												-->
-										</div>
-									</div>
+							<div class="panel-outer">
+								<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Device assets projections total</h4>
+								<div class="panel-inner" id="device-assets-projections-total-view">
+										<!-- IDs for real data chart
+										<div class="large-6 columns" id="block-device-assets-projections-total-view"></div>
+										-->
+								</div>
+							</div>
 						</div>
 
 						<div class="big-row">
@@ -259,7 +258,7 @@
 					</div>
 
 					<div class="big-row">
-						<div class="large-4 columns">
+						<div class="large-6 columns">
 							<div class="panel-outer">
 								<h4 class="panel-heading"><i class="fi-graph-bar size-24 colorHeading"></i> Key performance indexes</h4>
 								<div class="panel-inner" id="resource-projections-kpi"></div>
@@ -268,12 +267,70 @@
 					</div>
 				</div>
 				<div class="large-2 columns filtered show-for-large-up">
+					<h5 class="text-center">YOU HAVE FILTERED</h5>
+					<dl class="accordion" data-accordion>
+						<dd>
+							<a href="#panel1">Domain<span class="round label">3</span></a>
+							<div id="panel1 selected-domain" class="content">
+								<ul>
+									<li>Domain1</li>
+									<li>Domain2</li>
+									<li>Domain3</li>
+								</ul>
+							</div>
+						</dd>
+						<dd>
+							<a href="#panel2">Planning period type</a>
+							<div id="panel2 selected-period-type" class="content">
+								<ul>
+									<li>Week</li>
+								</ul>
+							</div>
+						</dd>
+						<dd>
+							<a href="#panel3">Date interval</a>
+							<div id="panel3 selected-date" class="content">
+								<ul>
+									<li>From: 2009-01-01</li>
+									<li>To: 2017-12-31</li>
+								</ul>
+							</div>
+						</dd>
+						<dd>
+							<a href="#panel4">Planning periods <span class="round label">6</span></a>
+							<div id="panel4 selected-date" class="content">
+								<ul>
+									<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
+									<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
+									<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
+									<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
+									<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
+									<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
+								</ul>
+							</div>
+						</dd>
+						<dd>
+							<a href="#panel4">Utlity type <span class="round label">4</span></a>
+							<div id="panel4 selected-date" class="content">
+								<ul>
+									<li>Electrical</li>
+									<li>Gas</li>
+									<li>Heat</li>
+									<li>Water</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
 				</div>
 			</div>
 
 			<div class="wrapper-blur"></div>
 
 		</div><!--end of wrapper -->
-		<script type="text/javascript" src="<%=contextPath%>/js/highchart/resource-projection-chart.js"></script>
+		<script src="<%=contextPath%>/js/highchart/resource-projection-chart.js"></script>
+
+		<script src="<%=contextPath%>/js/foundation/foundation.js"></script>
+		<script src="<%=contextPath%>/js/foundation/foundation.accordion.js"></script>
+		<script src="<%=contextPath%>/js/common.js"></script>
 	</body>
 	</html>

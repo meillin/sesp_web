@@ -215,14 +215,7 @@
 							<div class="panel-outer">
 								<h4 class="panel-heading"><i class="fi-marker size-24 colorHeading"></i> On pallet</h4>
 								<div class="panel-inner">
-									<!--
-									<div id="tabs-wrapper" >
-										<a id="block-on-pallet-tab1" class="tiny button selected" onclick="javascript:updateUnitStatus('fromSupplier')">From supplier</a>
-										<a id="block-on-pallet-tab2" class="tiny button" onclick="javascript:updateUnitStatus('inStock')">In stock</a>
-										<a id="block-on-pallet-tab3" class="tiny button" onclick="javascript:updateUnitStatus('onPallet')">On pallet</a>
-									</div>
-								-->
-									<div style="width: 100%; height: 600px; opacity:0.99;" id="map-wrapper" ></div>
+									<div style="width: 100%; height: 550px; opacity:0.99;" id="map-wrapper" ></div>
 								</div>
 							</div>
 						</div>
@@ -265,37 +258,52 @@
 				</div>
 
 				<div class="large-2 columns filtered show-for-large-up">
-				<div class="title">Date interval</div>
-				<ul>
-					<li>From: 2009/01/01</li>
-					<li>To: 2017/01/09</li>
-				</ul>
-				<div class="title">Domain <span>(3)</span></div>
-				<ul>
-					<li>EON</li>
-					<li>Eltel</li>
-					<li>Eon-Eltel</li>
-				</ul>
-				<div class="title">Work order type <span>(19)</span></div>
-				<ul>
-					<li>Concentrator installation</li>
-					<li>Measurepoint import(WO)</li>
-					<li>Meter Change CT Measured</li>
-					<li>Meter Change CT Measured</li>
-					<li>Meter Change CT Measured</li>
-					<li>Meter Change CT Measured</li>
-				</ul>
-				<div class="title">Area type <span>(1)</span></div>
-				<ul>
-					<li>Milestone Area</li>
-				</ul>
-				<div class="title">Area <span>(4)</span></div>
-				<ul>
-					<li>Missing Region</li>
-					<li>Missing Milestone Area</li>
-					<li>Missing Collection Area</li>
-					<li>Missing Net Area</li>
-				</ul>
+								<h5 class="text-center">YOU HAVE FILTERED</h5>
+			<dl class="accordion" data-accordion>
+				<dd>
+					<a href="#panel1">Domain<span class="round label">3</span></a>
+					<div id="panel1 selected-domain" class="content">
+						<ul>
+							<li>Domain1</li>
+							<li>Domain2</li>
+							<li>Domain3</li>
+						</ul>
+					</div>
+				</dd>
+				<dd>
+					<a href="#panel3">Date interval</a>
+					<div id="panel3 selected-date" class="content">
+						<ul>
+							<li>From: 2009-01-01</li>
+							<li>To: 2017-12-31</li>
+						</ul>
+					</div>
+				</dd>
+				<dd>
+					<a href="#panel4">Planning periods <span class="round label">6</span></a>
+					<div id="panel4 selected-date" class="content">
+						<ul>
+							<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
+							<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
+							<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
+							<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
+							<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
+							<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
+						</ul>
+					</div>
+				</dd>
+				<dd>
+					<a href="#panel4">Utlity type <span class="round label">4</span></a>
+					<div id="panel4 selected-date" class="content">
+						<ul>
+							<li>Electrical</li>
+							<li>Gas</li>
+							<li>Heat</li>
+							<li>Water</li>
+						</ul>
+					</div>
+				</dd>
+			</dl>
 				</div>
 			</div>
 

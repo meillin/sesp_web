@@ -2,7 +2,7 @@
 $('#block-work-order-type-analysis-chart').highcharts({
     chart: {
         type: 'bar',
-        height: 300
+        height: 280
     },
     title: {
         text: ''

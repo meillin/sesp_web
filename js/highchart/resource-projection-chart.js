@@ -4,54 +4,54 @@ function drawDeviceAssetProjectionPerMonth() {
     });
 
 
-        $('#device-assets-projections-per-month-view').highcharts({
-            chart: {
-                type: 'bar',
-                height: 290
-            },
+    $('#device-assets-projections-per-month-view').highcharts({
+        chart: {
+            type: 'bar',
+            height: 250
+        },
+        title: {
+            text: ''
+        },
+        xAxis: {
+            categories: ['March, 2013', 'April, 2013', 'May, 2013', 'June, 2013', 'July, 2013']
+        },
+        yAxis: {
+            min: 0,
             title: {
                 text: ''
-            },
-            xAxis: {
-                categories: ['March, 2013', 'April, 2013', 'May, 2013', 'June, 2013', 'July, 2013']
-            },
-            yAxis: {
-                min: 0,
-                title: {
-                    text: ''
-                }
-            },
-            legend: {
-                backgroundColor: '#FFFFFF',
-                reversed: true
-            },
-            plotOptions: {
-                series: {
-                    stacking: 'normal'
-                }
-            },
-                series: [{
-                name: 'Concerntrator installation',
-                data: [5, 3, 4, 7, 2]
-            }, {
-                name: 'Direct measured',
-                data: [2, 2, 3, 2, 1]
-            }, {
-                name: 'Troubleshoot measurepoint',
-                data: [3, 4, 4, 2, 5]
-            },{
-                name: 'CT measured',
-                data: [3, 4, 4, 2, 5]
-            }]
-        });
-    }
+            }
+        },
+        legend: {
+            backgroundColor: '#FFFFFF',
+            reversed: true
+        },
+        plotOptions: {
+            series: {
+                stacking: 'normal'
+            }
+        },
+            series: [{
+            name: 'Concerntrator installation',
+            data: [5, 3, 4, 7, 2]
+        }, {
+            name: 'Direct measured',
+            data: [2, 2, 3, 2, 1]
+        }, {
+            name: 'Troubleshoot measurepoint',
+            data: [3, 4, 4, 2, 5]
+        },{
+            name: 'CT measured',
+            data: [3, 4, 4, 2, 5]
+        }]
+    });
+}
 function drawTotalDeviceAssetProjection() {
      $('#device-assets-projections-total-view').highcharts({
         chart: {
             plotBackgroundColor: null,
             plotBorderWidth: null,
             plotShadow: false,
-            height: 290
+            height: 250
         },
         title: {
             text: ''
@@ -64,11 +64,12 @@ function drawTotalDeviceAssetProjection() {
                 allowPointSelect: true,
                 cursor: 'pointer',
                 dataLabels: {
-                    enabled: true,
+                    enabled: false,
                     color: '#000000',
                     connectorColor: '#000000',
                     format: '<b>{point.name}</b>: {point.percentage:.1f} %'
-                }
+                },
+                showInLegend: true
             }
         },
         series: [{
@@ -91,7 +92,7 @@ function drawResourceProjectionPerMonth() {
         $('#resource-projections-per-month-view').highcharts({
             chart: {
                 type: 'bar',
-                height: 290
+                height: 250
             },
             title: {
                 text: ''
@@ -135,7 +136,7 @@ function drawTotalResourceProjection() {
             plotBackgroundColor: null,
             plotBorderWidth: null,
             plotShadow: false,
-            height: 290
+            height: 250
         },
         title: {
             text: ''
@@ -148,16 +149,17 @@ function drawTotalResourceProjection() {
                 allowPointSelect: true,
                 cursor: 'pointer',
                 dataLabels: {
-                    enabled: true,
+                    enabled: false,
                     color: '#000000',
                     connectorColor: '#000000',
                     format: '<b>{point.name}</b>: {point.percentage:.1f} %'
-                }
+                },
+                showInLegend: true
             }
         },
         series: [{
             type: 'pie',
-            name: 'Browser share',
+            name: '',
               data: [
                 ['Concerntrator installation',   45.0],
                 ['Direct measured',       26.8],
