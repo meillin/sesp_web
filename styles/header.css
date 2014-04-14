@@ -131,7 +131,7 @@ li {
 .overlapping-menu .fi-arrow-up:before,
 .overlapping-menu .fi-clock:before {
 	width: 21px;
-	padding-bottom: 0.7rem;
+	padding-bottom: 0.3rem;
 	padding-left: 1.2rem;
 }
 

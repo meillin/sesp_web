@@ -48,7 +48,7 @@ body {
 .login-text {
 	font-family: roboto-lght;
 	margin: 0 auto;
-	margin-top: 8.5rem ;
+	margin-top: 13%;
 	width: 60%;
 }
 
@@ -62,15 +62,26 @@ body {
 	text-align: left;
 	font-family: roboto-lght;
 	font-size: 1.3rem;
+	margin-top: 6%;
+	margin-bottom: 6%;
 }
 
 @media screen and (max-width: 700px) {
 	.login-text {
 	font-family: roboto-lght;
 	margin: 0 auto;
-	margin-top: 12rem ;
+	margin-top: 30%;
 	width: 95%;
 	}
+
+	.login-text h1 {
+	font-size: 1.9rem;
+	}
+
+	.login-text p {
+	font-size: 1rem;
+	}
+
 }
 /*LOGIN PAGE TEXT*/
 
@@ -127,9 +138,6 @@ a#divenable.button.tiny:hover{
 	opacity:0.8;
 }
 
-
-.row 
-
 .forgot-pass {
 	float: none!important;
 	display: inline-block!important;
@@ -140,4 +148,15 @@ a#divenable.button.tiny:hover{
 
 .forgot-pass:hover {
 	color: #fff;
+}
+
+.button[disabled] {
+	float: none!important;
+	display: inline-block;
+	padding: 0.6rem 2.7rem !important;
+	font-family: roboto-med !important;
+	font-size: 0.8rem;
+	margin-left: 1rem;
+	margin-top: 1.2rem;
+	background-color: #2e363c!important;
 }

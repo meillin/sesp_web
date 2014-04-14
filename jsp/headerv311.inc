@@ -29,7 +29,7 @@
 				<div class="large-12 columns">
 					<ul class="inline-list search-bar">
 						<li class="search-input">
-							<input type="text" id="search-input" placeholder="SEARCH" onKeyPress="return submitOnEnter(this,event)"/>
+							<input type="text" id="search-input" placeholder="Search" onKeyPress="return submitOnEnter(this,event)"/>
 						</li>
 						<li class="search-button">
 							<a href="javascript:searchentities()"  id="search-button" class="postfix"><i class="fi-magnifying-glass size-20"></i></a>

@@ -23,7 +23,7 @@
 		<%-- <script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script> --%>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/authentification.js"></script>
 		<script src="<%=request.getContextPath()%>/js/spin.js"></script>
-		<script src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
+		<script src="<%=request.getContextPath()%>/js/ajax-loader-login-page.js"></script>
 		<link rel="shortcut icon" type="image/png" href="<%=request.getContextPath()%>/images/favicon.png" />
 
 	<!--[if lt IE 9]>
@@ -69,8 +69,8 @@
 								<a href="javascript:submitLogin(document.loginForm)" id="divenable" class="button tiny">
 									<!--<s:text name="webportal.index.signin"/>-->Login
 								</a>
-								<a href="#" disabled="disabled" id="divdisable" style="display:none" class="button tiny custom-deactivebutton">
-									<s:text name="webportal.index.signin"/>
+								<a href="#" disabled="disabled" id="divdisable" style="display:none" class="button tiny">
+									<!--<s:text name="webportal.index.signin"/>-->Login
 								</a>
 							</div>
 								</div>
@@ -80,6 +80,8 @@
 							     <s:actionerror/>
 							  </div>
 						</s:if>
+						
+						<div class="spinner-style">
 						<script type="text/javascript">
 							i18nerrorPleaseEnterUsername="<s:text name='webportal.error.enterusername'/>";
 							i18nerrorPleaseEnterPassword="<s:text name='webportal.error.enterpassword'/>";
@@ -90,6 +92,7 @@
 								   ajax_cnt++;
 							}
 						</script>
+						<div>
 					</form>
 				</div>
 			</div><!-- end of main content -->

@@ -7,14 +7,14 @@ var opts = {
   corners: 1, // Corner roundness (0..1)
   rotate: 0, // The rotation offset
   direction: 1, // 1: clockwise, -1: counterclockwise
-  color: '#000', // #rgb or #rrggbb or array of colors
+  color: '#fff', // #rgb or #rrggbb or array of colors
   speed: 1.6, // Rounds per second
   trail: 100, // Afterglow percentage
   shadow: false, // Whether to render a shadow
   hwaccel: false, // Whether to use hardware acceleration
   className: 'spinner', // The CSS class to assign to the spinner
   zIndex: 2e9, // The z-index (defaults to 2000000000)
-  top: '350%', // Top position relative to parent in px
+  top: '280%', // Top position relative to parent in px
   left: 'auto' // Left position relative to parent in px
 };
 
@@ -26,7 +26,7 @@ var ajax_cnt = 0; // Support for parallel AJAX requests
 $(document).ajaxStart(function() {
    $('<div id ="spinner_center" style="position:fixed;top:70px;left:49%;"></div>').appendTo('body');
    spinner.spin($('#spinner_center')[0]);
-   ajax_cnt++;	
+   ajax_cnt++;  
 });
  
 $(document).ajaxStop(function() {
@@ -36,5 +36,5 @@ $(document).ajaxStop(function() {
       $('#spinner_center').remove();
       ajax_cnt = 0;
    }
-	//alert('stop');
+  //alert('stop');
 });

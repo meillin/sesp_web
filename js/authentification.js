@@ -17,7 +17,7 @@
 			return;
 		}
 		document.getElementById("divenable").style.display="none";
-		document.getElementById("divdisable").style.display="block";
+		document.getElementById("divdisable").style.display="inline-block";
 		loginSpinner();
 		formRef.submit();	
 	}
