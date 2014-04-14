@@ -42,7 +42,7 @@
 		<div class="large-4 columns">
 			<ul class="inline-list right">
 			<li>
-			<select>
+			<select class="lang-dropdown">
 				<option value="English">English (UK)</option>
 				<option value="Swedish">Swedish (SE)</option>
 				<option value="German">German (GE)</option>

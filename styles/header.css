@@ -1,3 +1,20 @@
+@font-face
+{
+font-family: roboto-lght;
+src: url(font/Roboto-Light.ttf);
+}
+
+@font-face
+{
+font-family: roboto-med;
+src: url(font/Roboto-Medium.ttf);
+}
+
+@font-face
+{
+font-family: roboto-bld;
+src: url(font/Roboto-Bold.ttf);
+}
 /**
  * 	Header
  */
@@ -40,7 +57,7 @@ header select{
 header .slide-menu-left a{
 	color: #fff;
 	display: block;
-	padding: 0.75rem 1.25rem 0.75rem 0rem;
+	padding: 0.79rem 1.25rem 0.75rem 0.25rem;
 
 }
 header .slide{
@@ -52,6 +69,7 @@ header .logout-right a{
 	display: block;
 	padding: 0.85rem 0.25rem 0.85rem 1.25rem;
 	border-left: 1px solid #E7E7E7;
+	font-family: roboto-lght!important;
 }
 
 header .slide-menu-right a{
@@ -60,6 +78,7 @@ header .slide-menu-right a{
 	padding: 0.85rem 1.25rem;
 	border-left: 1px solid #E7E7E7;
 	font-size: 14px;
+	font-family: roboto-lght!important;
 }
 
 header .search-bar{
@@ -103,8 +122,7 @@ header .logo-capgemini img{padding-top: 0.55rem;}
 
 li {
 	line-height: 22px;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-   	font-weight: 100;
+	font-family: roboto-lght!important;
 }
 
 .overlapping-menu > li {

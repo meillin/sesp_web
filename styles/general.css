@@ -548,3 +548,7 @@ button, .button{
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
 	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
 }
+
+.lang-dropdown {
+	outline: none!important;
+}
