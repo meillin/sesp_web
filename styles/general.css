@@ -68,58 +68,14 @@ thead{
 }
 
 .big-row {
-	/*min-height: 450px;*/
 	max-width: initial;
 	clear: both;
-
-}
-/*i{
-	display: inline-block;
-}*/
-
-.big-row :after {
-	clear: both;
-	/*content: " ";
-	display: table;*/
 }
 
-/*.big-row :before,
-.big-row :after {
-	content: " ";
-	display: table;
-}*/
-
-/*/
-.big-row {
-	max-width: initial;
-	*zoom: 1;
-}
-.big-row :before,
-.big-row :after {
-	content: " ";
-	display: table;
-}
 .big-row :after {
 	clear: both;
 }
 
-.big-row .collapse .row {
-	margin-left: 0;
-	margin-right: 0;
-}
-.big-row .big-row  {
-	width: auto;
-	*zoom: 1;
-}
-.big-row  .big-row:before,
-.big-row .big-row:after {
-	content: " ";
-	display: table;
-}
-.big-row .big-row:after {
-	clear: both;
-}
-*/
 
 .big-row-padding {
 	/*min-height: 450px;*/
@@ -139,6 +95,7 @@ thead{
 }
 
 .filterHeader{
+	font-family: roboto-lght;
 	z-index: 20;
 	position: fixed;
 	margin-top: 35px;
@@ -150,14 +107,13 @@ thead{
 
 .filterHeader select{
 	color: #fff;
-	background-color: #1abc9c;
 	border: none;
-	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-	font-weight: normal;
-	line-height: normal;
 	text-align: center;
 	font-size: 1rem;
 	padding: 0;
+	background-color: #333e45;
+	border: 1px solid #1abc9c;
+	outline: none!important;
 }
 
 .filterHeader thead {
@@ -195,11 +151,11 @@ thead{
 .filterHeader li{
 	width: 50%;
 }
-.filterHeader select, .filterHeader .input-append {
+/*.filterHeader select, .filterHeader .input-append {
 	background-color: #1abc9c;
 	border: none;
 	color: #fff;
-}
+}*/
 
 /*****************Information column and sub menu ********************************************************/
 

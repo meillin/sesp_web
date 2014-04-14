@@ -519,7 +519,7 @@ select,  [type="file"] {
 }
 select {
     background-color: #FFFFFF;
-    width: 220px;
+    /*width: 220px;*/
 }
 select[multiple], select[size] {
     height: auto;
