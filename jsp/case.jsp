@@ -72,7 +72,7 @@
 				<div class="big-row">
 					<div class="large-12 columns">
 						<h2 class="page-name-heading-search">
-							<s:text name="webportal.case.results.text.description"/> : <span id="case-id"> </span>
+							<s:text name="webportal.case.results.text.description"/>:<span id="case-id"> </span>
 						</h2>
 					</div>
 				</div>
@@ -239,7 +239,7 @@
 									</tbody>
 								</table>
 								<div class="center-wrapper">
-									<a href="javascript:showMoreResults('INFO')" id="block-case-information-link-more" class="link-more text-blue"><s:text name="webportal.case.information.options.showmore"/></a>
+									<a href="javascript:showMoreResults('INFO')" id="block-case-information-link-more"><s:text name="webportal.case.information.options.showmore"/></a>
 								</div>
 							</div>
 						</div>
@@ -278,13 +278,13 @@
 						<div class="panel-outer">
 							<h4 class="panel-heading">
 								<i class="fi-graph-trend colorHeading"></i>
-								<span class="block-title-name text-blue"><s:text name="webportal.case.work.order.events.title"/></span>
-								<span class="block-title-number text-blue"><span id="block-work-order-events-number" class="number"></span>	
+								<s:text name="webportal.case.work.order.events.title"/>
+								<span id="block-work-order-events-number"></span>	
 							</h4>
 							<div class="panel-inner">
 								<table id="caseWoEvents">
 									<thead>
-										<tr class="table-title" >
+										<tr>
 											<th><s:text name="webportal.case.work.order.events.type"/></th>
 											<th><s:text name="webportal.case.work.order.events.timestamp"/></th>
 											<th><s:text name="webportal.case.work.order.events.result"/></th>
@@ -297,7 +297,7 @@
 									</tbody>
 								</table>
 								<div class="center-wrapper">
-									<a href="javascript:showMoreResults('WORK_ORDER')" id="block-case-wo-events-link-more" class="link-more text-blue"><s:text name="webportal.case.work.order.events.options.showmore"/></a>
+									<a href="javascript:showMoreResults('WORK_ORDER')" id="block-case-wo-events-link-more"><s:text name="webportal.case.work.order.events.options.showmore"/></a>
 									<span id="block-work-order-events-export-link">
 										<a href="#" onclick="javascript:woEventsExportGrid.toExcel('<%=request.getContextPath()%>/std/DownloadWoEventsExcel.action','WO Case Event','color','HEADER');" align="right">Export to Excel</a>
 									</span>
@@ -308,33 +308,51 @@
 				</div>
 				<div class="big-row">
 					<div class="large-12 columns">
+						<h2 class="page-name-heading-search">
+							<s:text name="webportal.case.history.title"/>
+						</h2>
+					</div>
+				</div>
+
+
+				<div class="big-row">
+
+					<div class="large-12 columns">
 						<div class="panel-outer">
 							<h4 class="panel-heading">
 								<i class="fi-graph-trend colorHeading"></i>
-								<span><s:text name="webportal.case.history.title"/></span>
+								<s:text name="webportal.case.history.status.title"/> 
+								<span id="block-case-status-history-number"></span>
 							</h4>
 							<div class="panel-inner">
-								<span class="accordion-title"><span class="accordion-title-name">
-									<s:text name="webportal.case.history.status.title"/></span> <span id="block-case-status-history-number" class="number"></span><div class="accordion-arrow close"></div></span>
-									<table id="caseStatusHistory">
-										<thead>
-											<tr class="table-title">
-												<th><s:text name="webportal.case.history.status.case.status"/></th>
-												<th><s:text name="webportal.case.history.status.start.timestamp"/></th>
-												<th><s:text name="webportal.case.history.status.end.timestamp"/></th>
-												<th><s:text name="webportal.case.history.status.created.by"/></th>
-												<th><s:text name="webportal.case.history.status.changed.by"/></th>
-												<th><s:text name="webportal.case.history.status.create.timestamp"/></th>
-												<th><s:text name="webportal.case.history.status.change.timestamp"/></th>
-											</tr>
-										</thead>
-										<tbody>
-										</tbody>
-									</table>
-									<div class="center-wrapper">
-										<a href="javascript:showMoreResults('HISTORY_STATUS')" id="block-case-history-status-link-more"><s:text name="webportal.case.history.status.options.showmore"/></a>
-									</div>
-									<span><span><s:text name="webportal.case.action.history.title"/></span> <span id="block-case-status-action-number"> </span></span>
+								<table id="caseStatusHistory">
+									<thead>
+										<tr class="table-title">
+											<th><s:text name="webportal.case.history.status.case.status"/></th>
+											<th><s:text name="webportal.case.history.status.start.timestamp"/></th>
+											<th><s:text name="webportal.case.history.status.end.timestamp"/></th>
+											<th><s:text name="webportal.case.history.status.created.by"/></th>
+											<th><s:text name="webportal.case.history.status.changed.by"/></th>
+											<th><s:text name="webportal.case.history.status.create.timestamp"/></th>
+											<th><s:text name="webportal.case.history.status.change.timestamp"/></th>
+										</tr>
+									</thead>
+									<tbody>
+									</tbody>
+								</table>
+								<div class="center-wrapper">
+									<a href="javascript:showMoreResults('HISTORY_STATUS')" id="block-case-history-status-link-more"><s:text name="webportal.case.history.status.options.showmore"/></a>
+								</div>
+							</div>
+						</div>
+
+						<div class="panel-outer">
+							<h4 class="panel-heading">
+								<i class="fi-graph-trend colorHeading"></i>
+								<s:text name="webportal.case.action.history.title"/> 
+								<span id="block-case-status-action-number"></span>
+							</h4>
+								<div class="panel-inner">
 									<table id="caseActionHistory">
 										<thead>
 											<tr>
@@ -349,31 +367,49 @@
 									</table>
 									<div class="center-wrapper">
 										<a href="javascript:showMoreResults('HISTORY_ACTION')" id="block-case-history-action-link-more">
-											<s:text name="webportal.case.action.history.options.showmore"/></a>
-										</div>
-										<span><span><s:text name="webportal.case.customer.contact.history.title"/></span> 
-										<span id="block-case-cust-contact-number"></span></span>
-										<table id="caseCustContactHistory">
-											<thead>
-												<tr class="table-title">
-													<th><s:text name="webportal.case.customer.contact.history.contact.type"/></th>
-													<th><s:text name="webportal.case.customer.contact.history.comm.type"/></th>
-													<th><s:text name="webportal.case.customer.contact.history.local.date"/></th>
-													<th><s:text name="webportal.case.customer.contact.history.customer.date"/></th>
-													<th><s:text name="webportal.case.customer.contact.history.result"/></th>
-													<th><s:text name="webportal.case.customer.contact.history.note"/></th>
-													<th><s:text name="webportal.case.customer.contact.history.create.signature"/></th>
-													<th><s:text name="webportal.case.customer.contact.history.create.timestamp"/></th>
-												</tr>
-											</thead>
-											<tbody>
-											</tbody>
-										</table>
-										<div class="center-wrapper">
-											<a href="javascript:showMoreResults('HISTORY_CONTACT')" id="block-case-history-customer-contact-link-more"><s:text name="webportal.case.customer.contact.options.showmore"/></a>
-										</div>
+											<s:text name="webportal.case.action.history.options.showmore"/>
+										</a>
 									</div>
 								</div>
+							</div>
+
+								<div class="panel-outer">
+									<h4 class="panel-heading">
+									<i class="fi-graph-trend colorHeading"></i>
+										<s:text name="webportal.case.customer.contact.history.title"/>
+										<span id="block-case-cust-contact-number"></span>
+									</h4>
+										<div class="panel-inner">
+											<table id="caseCustContactHistory">
+												<thead>
+													<tr>
+														<th><s:text name="webportal.case.customer.contact.history.contact.type"/></th>
+														<th><s:text name="webportal.case.customer.contact.history.comm.type"/></th>
+														<th><s:text name="webportal.case.customer.contact.history.local.date"/></th>
+														<th><s:text name="webportal.case.customer.contact.history.customer.date"/></th>
+														<th><s:text name="webportal.case.customer.contact.history.result"/></th>
+														<th><s:text name="webportal.case.customer.contact.history.note"/></th>
+														<th><s:text name="webportal.case.customer.contact.history.create.signature"/></th>
+														<th><s:text name="webportal.case.customer.contact.history.create.timestamp"/></th>
+													</tr>
+												</thead>
+												<tbody>
+												</tbody>
+											</table>
+											<div class="center-wrapper">
+												<a href="javascript:showMoreResults('HISTORY_CONTACT')" id="block-case-history-customer-contact-link-more">
+													<s:text name="webportal.case.customer.contact.options.showmore"/>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+
+								</div>
+
+
 							</div>
 						</div>
 					</div>

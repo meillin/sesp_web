@@ -16,6 +16,11 @@ font-family: roboto-bld;
 src: url(font/Roboto-Bold.ttf);
 }
 
+header .slide-menu-right a{
+    display: none;
+}
+
+
 #main-content-index ul li {
     text-align: center;
     cursor: pointer;

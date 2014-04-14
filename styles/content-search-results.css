@@ -36,6 +36,11 @@
 	margin-left: 40px;
 }*/
 
+header .slide-menu-right a{
+    display: none;
+}
+
+
 .search-list{
 	width: 100%;
 	list-style: none;
