@@ -69,7 +69,7 @@ document.createElement("figure");
           <div id="main-content-index">
             <div class="row">
             <div class="large-12 columns welcome-text text-center">
-            Welcome to the dashboard
+            Smart Energy Services Platform
             </div>
             </div>
             <div class="row">
@@ -81,7 +81,7 @@ document.createElement("figure");
                     <div>
                       <a class="patch" href="<%=contextPath%>/std/ViewResourceProjectionAction" alt="RESOURCE PROJECTIONS" title="RESOURCE PROJECTIONS">
                         <i class="fi-graph-bar size-74"></i></br>
-                        <span>RESOURCE PROJECTIONS</span>
+                        <span>Resource Projections</span>
                       </a>
                     </div>
                   </li>
@@ -90,7 +90,7 @@ document.createElement("figure");
                     <div>
                       <a class="patch" href="<%=contextPath%>/std/AreaProgress" alt="AREA PROGRESS" title="AREA PROGRESS">
                         <i class="fi-loop size-74"></i></br>
-                        <span>AREA PROGRESS</span>
+                        <span>Area Progress</span>
                       </a>
                     </div>
                   </li>
@@ -99,7 +99,7 @@ document.createElement("figure");
                     <div>
                         <a class="patch" href="<%=contextPath%>/std/StockManagement1" alt="LOGISTICS" title="LOGISTICS">
                           <i class="fi-mountains size-74"></i></br>
-                          <span>LOGISTICS</span>
+                          <span>Logistics</span>
                         </a>
                     </div>
                   </li>
@@ -108,7 +108,7 @@ document.createElement("figure");
                     <div>
                       <a class="patch" href="<%=contextPath%>/std/AlarmManagementReports" alt="ALARM MANAGEMENT" title="ALARM MANAGEMENT">
                         <i class="fi-alert size-74"></i></br>
-                        <span>ALARM MANAGEMENT</span>
+                        <span>Alarm Management</span>
                       </a>
                     </div>
                   </li>
@@ -117,7 +117,7 @@ document.createElement("figure");
                     <div>
                       <a class="patch" href="javascript: openDashboard();" alt="SYSTEM UTILIZATION" title="SYSTEM UTILIZATION">
                         <i class="fi-monitor size-74"></i></br>
-                        <span>SYSTEM UTILIZATION</span>
+                        <span>System Utilization</span>
                       </a>
                     </div>
                   </li>
@@ -126,7 +126,7 @@ document.createElement("figure");
                     <div>
                       <a class="patch" href="<%=contextPath%>/std/WorkOrderProgress" alt="WORK ORDER PROGRESS" title="WORK ORDER PROGRESS">
                         <i class="fi-clock size-74"></i></br>
-                        <span>WORK ORDER/AREA MONITOR</span>
+                        <span>Work Order/Area Monitor</span>
                       </a>
                     </div>
                   </li>
@@ -135,7 +135,7 @@ document.createElement("figure");
                   <div>
                     <a class="patch" href="<%=contextPath%>/std/AnalyzeFieldWorkEfficiency" alt="FIELD WORK EFFICIENCY" title="FIELD WORK EFFICIENCY">
                       <i class="fi-wrench size-74"></i></br>
-                      <span>FIELD WORK EFFICIENCY</span>
+                      <span>Field Work Efficiency</span>
                     </a>
                   </div>
                 </li>
@@ -144,7 +144,7 @@ document.createElement("figure");
                     <div>
                       <a class="patch" href="<%=contextPath%>/std/TimeReservationCallList" alt="TIME RESERVATION CALL LIST" title="TIME RESERVATION CALL LIST">
                         <i class="fi-list size-74"></i></br>
-                        <span>TIME RESERVATION CALL LIST</span>
+                        <span>Time Reservation Call List</span>
                       </a>
                     </div>
                   </li>
