@@ -101,7 +101,7 @@ document.createElement("figure");
 							<span><s:text name='webportal.device.location.title'/></span>
 						</h4>
 						<div class="panel-inner">
-						<div id="block-device-location-map-wrapper" style="width:444px; height:300px">
+							<div id="block-device-location-map-wrapper" style="width:444px; height:300px">
 								<!-- <iframe width="444" height="204" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-1.55302,47.19581,-1.50817,47.22307&amp;layer=mapnik&amp;marker=47.21659,-1.53457"></iframe> -->
 							</div>
 							<div class="legend">
@@ -145,16 +145,20 @@ document.createElement("figure");
 				</div>
 				<div class="big-row">
 					<div class="large-12 columns">
+						<h2 class="page-name-heading-search">
+							<s:text name='webportal.device.history.title'/>
+						</h2>
+					</div>
+				</div>
+				<div class="big-row">
+					<div class="large-12 columns">
 						<div class="panel-outer">
 							<h4 class="panel-heading">
 								<i class="fi-graph-trend colorHeading"></i>
-								<s:text name='webportal.device.history.title'/>
+								<s:text name='webportal.device.history.installation.title'/> 
+								<span id="block-device-installations-number"> </span> 
 							</h4>
 							<div class="panel-inner">
-								<p class="status-color">
-									<s:text name='webportal.device.history.installation.title'/> 
-									<span id="block-device-installations-number"> </span> 
-								</p>
 								<table id="device-installation-table">
 									<thead>	
 										<tr class="table-title">
@@ -173,11 +177,14 @@ document.createElement("figure");
 									</a>
 								</div>
 							</div>
+						</div>
+						<div class="panel-outer">
+							<h4 class="panel-heading">
+								<i class="fi-graph-trend colorHeading"></i>
+								<s:text name='webportal.device.history.status.title'/>
+								<span id="block-device-status-number"></span>
+							</h4>
 							<div class="panel-inner">
-								<p class="status-color">
-									<s:text name='webportal.device.history.status.title'/>
-									<span id="block-device-status-number"></span>
-								</p>
 								<table id="device-status-table">
 									<thead>	
 										<tr>
@@ -196,11 +203,14 @@ document.createElement("figure");
 									</a>
 								</div>
 							</div>
+						</div>
+						<div class="panel-outer">
+							<h4 class="panel-heading">
+								<i class="fi-graph-trend colorHeading"></i>
+								<s:text name='webportal.device.history.pallet.title'/>
+								<span id="block-device-pallet-number"></span>
+							</h4>
 							<div class="panel-inner">
-								<p class="status-color">
-									<s:text name='webportal.device.history.pallet.title'/>
-									<span id="block-device-pallet-number"></span>
-								</p>
 								<table id="device-pallet-table">
 									<thead>
 										<tr>
@@ -223,14 +233,19 @@ document.createElement("figure");
 									</a>
 								</div>
 							</div>
+						</div>
+
+						<div class="panel-outer">
+							<h4 class="panel-heading">
+								<i class="fi-graph-trend colorHeading"></i>
+								<s:text name='webportal.device.history.stocksite.title'/>
+								<span id="block-device-stock-site-number"></span>
+							</h4>
+
 							<div class="panel-inner">
-								<p class="status-color">
-									<s:text name='webportal.device.history.stocksite.title'/>
-									<span id="block-device-stock-site-number"></span>
-								</p>
 								<table id="device-stock-site-table">
 									<thead>
-										<tr class="table-title">
+										<tr>
 											<th><s:text name='webportal.device.history.stocksite.stock.id'/></th>
 											<th><s:text name='webportal.device.history.stocksite.stock.name'/></th>
 											<th><s:text name='webportal.device.history.stocksite.start.timestamp'/></th>
@@ -246,17 +261,20 @@ document.createElement("figure");
 									</a>
 								</div>
 							</div>
+						</div>
+						<div class="panel-outer">
+							<h4 class="panel-heading">
+								<i class="fi-graph-trend colorHeading"></i>
+								<s:text name='webportal.device.history.owner.title'/>
+								<span id="block-device-owner-number"></span>
+							</h4>
 							<div class="panel-inner">
-								<p class="status-color">
-									<s:text name='webportal.device.history.owner.title'/>
-									<span id="block-device-owner-number"></span>
-								</p>
-								<table id="device-owner-table"  class="text-grey history-table">
+								<table id="device-owner-table">
 									<thead>	
-										<tr class="table-title">
-											<th class="col1"><s:text name='webportal.device.history.owner.name'/></th>
-											<th class="col2"><s:text name='webportal.device.history.owner.start.timestamp'/></th>
-											<th class="col3"><s:text name='webportal.device.history.owner.end.timestamp'/></th>
+										<tr>
+											<th><s:text name='webportal.device.history.owner.name'/></th>
+											<th><s:text name='webportal.device.history.owner.start.timestamp'/></th>
+											<th><s:text name='webportal.device.history.owner.end.timestamp'/></th>
 										</tr>
 									</thead>
 									<tbody>
@@ -271,5 +289,6 @@ document.createElement("figure");
 						</div>
 					</div>
 				</div>
-			</body>
-			</html>
+			</div>
+		</body>
+		</html>

@@ -53,7 +53,9 @@
 			<div id="main-content">
 				<div class="big-row">
 					<div class="large-12 columns">
-						<h2 style="margin-top: 50px;"><s:text name="webportal.search.results.text.description"/> :<span id="result-id"></span></h2>
+						<h2 class="page-name-heading-search">
+							<s:text name="webportal.search.results.text.description"/> :<span id="result-id"></span>
+						</h2>
 					</div>
 				</div>
 				<div id="block-search-results">

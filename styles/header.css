@@ -90,7 +90,8 @@ header .logo-capgemini img{padding-top: 0.55rem;}
 
 .overlapping-menu {
 	margin-top: 1px;
-	background-image:url(../images/slideout_bg.png);
+	background: #333e45;
+	/*background-image:url(../images/slideout_bg.png);*/
 	color: #fff;
 	position: fixed;
 	list-style: none;
@@ -117,7 +118,7 @@ li {
 }
 
 .overlapping-menu a:hover {
-	background: #353d3e;
+	background: #2F3138;
 	color: #e0e8e9;
 }
 

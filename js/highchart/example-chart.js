@@ -1,6 +1,7 @@
 $( document ).ready(function() {
     var colors = Highcharts.getOptions().colors;
     function drawWorkOrderStatus() {
+
        var categories = ['Performed', 'Not performed', 'Not planned', 'Not performed final', 'Opera'],
         name = 'Browser brands',
         data = [{
@@ -152,13 +153,18 @@ $( document ).ready(function() {
             });
     }*/
     function drawWorkOrderProgress() {
+            Highcharts.setOptions({
+    //Green - #1abc9c //Blue - #428bca // Orange - #f0ad4e // Red - #d9534f //
+     colors: ['#1abc9c', '#428bca', '#d9534f', '#f0ad4e', '#5bc0de', '#1d2939']
+    });
+
     // Build the chart
         $('#work-order-progress').highcharts({
             chart: {
                 plotBackgroundColor: null,
                 plotBorderWidth: null,
                 plotShadow: false,
-                height: 500
+                height: 500,
             },
             legend: {
                 layout: 'vertical',

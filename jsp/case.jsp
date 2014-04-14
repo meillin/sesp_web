@@ -71,7 +71,7 @@
 			<div id="main-content">
 				<div class="big-row">
 					<div class="large-12 columns">
-						<h2 class="page-name-heading">
+						<h2 class="page-name-heading-search">
 							<s:text name="webportal.case.results.text.description"/> : <span id="case-id"> </span>
 						</h2>
 					</div>

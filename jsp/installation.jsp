@@ -63,7 +63,7 @@
 			<div id="main-content">
 				<div class="big-row">
 					<div class="large-12 columns">
-						<h2 style="margin-top: 50px;">
+						<h2 class="page-name-heading-search">
 							<s:text name="webportal.installation.installationid"/>: <span id="installation-id" class=" text-light-grey">458785</span>
 						</h2>
 					</div>
@@ -78,32 +78,32 @@
 						<div class="panel-inner">
 							<table id="overview-table">	
 								<tr>								
-									<td><div class="legend-block-title"><s:text name="webportal.installation.installationcode"/> :</div></td>
-									<td><div class="legend-block-content text-light-grey" id="block-overview-installation-code"></div></td>
+									<td><s:text name="webportal.installation.installationcode"/>:</td>
+									<td><div id="block-overview-installation-code"></div></td>
 								</tr>
 								<tr>
-									<td><div class="legend-block-title"><s:text name="webportal.installation.externalcode"/> :</div></td>
-									<td><div class="legend-block-content text-light-grey" id="block-overview-external-code"></div></td>
+									<td><s:text name="webportal.installation.externalcode"/>:</td>
+									<td><div id="block-overview-external-code"></div></td>
 								</tr>
 								<tr>
-									<td><div class="legend-block-title"><s:text name="webportal.installation.type"/> :</div></td>
-									<td><div class="legend-block-content text-light-grey" id="block-overview-type"></div></td>
+									<td><s:text name="webportal.installation.type"/>:</td>
+									<td><div id="block-overview-type"></div></td>
 								</tr>
 								<tr>
-									<td><div class="legend-block-title"><s:text name="webportal.installation.domain"/> :</div></td>
-									<td><div class="legend-block-content text-light-grey" id="block-overview-domain"></div></td>
+									<td><s:text name="webportal.installation.domain"/>:</td>
+									<td><div id="block-overview-domain"></div></td>
 								</tr>
 								<tr>
-									<td><div class="legend-block-title"><s:text name="webportal.installation.keynumber"/>:</div></td>
-									<td><div class="legend-block-content text-light-grey" id="block-overview-key-number"></div></td>
+									<td><s:text name="webportal.installation.keynumber"/>:</div></td>
+									<td><div id="block-overview-key-number"></div></td>
 								</tr>
 								<tr>
-									<td><div class="legend-block-title"><s:text name="webportal.installation.keyinfo"/> :</div></td>
-									<td><div class="legend-block-content text-light-grey" id="block-overview-key-info"></div></td>
+									<td><s:text name="webportal.installation.keyinfo"/>:</td>
+									<td><div id="block-overview-key-info"></div></td>
 								</tr>
 								<tr>
-									<td><div class="legend-block-title"><s:text name="webportal.installation.accessibletotech"/> :</div></td>
-									<td><div class="legend-block-content text-light-grey" id="block-overview-accessible-tech"></div></td>
+									<td><s:text name="webportal.installation.accessibletotech"/>:</div></td>
+									<td><div id="block-overview-accessible-tech"></div></td>
 								</tr>
 							</table>
 							<div class="status text-green" id="block-overview-status"></div>
@@ -121,16 +121,16 @@
 						<div id="osmap" style="height:300px">
 							<!-- <iframe width="444" height="195" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-1.55302,47.19581,-1.50817,47.22307&amp;layer=mapnik&amp;marker=47.21659,-1.53457"></iframe>  -->
 						</div>
-						<div class="legend">
-							<div class="address legend-block text-grey">
-								<div class="legend-block-title"><s:text name="webportal.installation.address"/> :</div>
-								<div class="legend-block-content text-light-grey" id="block-location-address"></div>
+
+							<div>
+								<strong><s:text name="webportal.installation.address"/>:</strong>
+								<span id="block-location-address"></span>
 							</div>
-							<div class="area legend-block text-grey">
-								<div class="legend-block-title"><s:text name="webportal.installation.area"/> :</div>
-								<div class="legend-block-content text-light-grey" id="block-location-area"></div>									
+							<div>
+								<strong><s:text name="webportal.installation.area"/>:</strong>
+								<span id="block-location-area"></span>									
 							</div>
-						</div>
+
 					</div>
 				</div>
 			</div>

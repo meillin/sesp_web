@@ -1,5 +1,6 @@
 function drawDeviceAssetProjectionPerMonth() {
     Highcharts.setOptions({
+    //Green - #1abc9c //Blue - #428bca // Orange - #f0ad4e // Red - #d9534f //
      colors: ['#1abc9c', '#428bca', '#d9534f', '#f0ad4e', '#5bc0de', '#1d2939']
     });
 
@@ -174,6 +175,10 @@ function drawTotalResourceProjection() {
     });
 }
 function drawResourceProjectionKPI(){
+        Highcharts.setOptions({
+            //Green - #1abc9c //Blue - #428bca // Orange - #f0ad4e // Red - #d9534f //
+            colors: ['#d9534f', '#428bca']
+        });
             $('#resource-projections-kpi').highcharts({
             chart: {
                 type: 'column',

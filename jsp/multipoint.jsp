@@ -58,7 +58,7 @@
 			<div id="main-content">
 				<div class="big-row">
 					<div class="large-12 columns">
-						<h2 style="margin-top: 50px;">
+						<h2 class="page-name-heading-search">
 							<s:text name="webportal.multipoint.multipointid"/> : <span id="multipoint-id"></span>
 						</h2>
 					</div>
@@ -124,7 +124,7 @@
 				</div>
 				<div class="big-row">
 					<div class="large-12 columns">
-						<h2>
+						<h2 class="page-name-heading-search">
 							<s:text name="webportal.multipoint.information"/>
 						</h2>
 					</div>

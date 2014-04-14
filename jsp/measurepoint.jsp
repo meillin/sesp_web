@@ -78,7 +78,7 @@
 			<div id="main-content">
 				<div class="big-row">
 					<div class="large-12 columns">
-						<h2 class="page-name-heading">
+						<h2 class="page-name-heading-search">
 							<s:text name="webportal.measurepoint.measurepointid"/>&#32: <span id="measurepoint-id"></span>
 						</h2>
 					</div>
@@ -165,7 +165,7 @@
 				</div>
 				<div class="big-row">
 					<div class="large-12 columns">
-						<h2 class="page-name-heading">
+						<h2 class="page-name-heading-search">
 							<span><s:text name="webportal.measurepoint.measurepointinformation"/></span>
 						</h2>
 					</div>

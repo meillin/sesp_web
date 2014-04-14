@@ -213,7 +213,7 @@ function populateCaseInstallation(instData) {
 				
 				$("#caseInstallation > tbody").append(
 					"<tr class='" + trClass+ "'> " +
-						"<td>  &nbsp;&nbsp;&nbsp; <a href='"+contextPath+"/std/ViewInstallation?id="+instDetail.id+"' class='text-blue'>" + instDetail.id + "</a></td>" +
+						"<td><a href='"+contextPath+"/std/ViewInstallation?id="+instDetail.id+"' class='text-blue'>" + instDetail.id + "</a></td>" +
 						"<td>" + instDetail.instCode + "</td>" +
 						"<td>" + instDetail.instEcode + "</td>" +
 						"<td>" + instDetail.lastChanged + "</td>" +
@@ -303,7 +303,7 @@ function populateCaseSla(slaData) {
 				
 				$("#caseSla > tbody").append(
 					"<tr class='" + trClass+ "'> " +
-						"<td> &nbsp;&nbsp;&nbsp; " + slaDetail.slaName + "</td>" +
+						"<td>" + slaDetail.slaName + "</td>" +
 						"<td>" + slaDetail.orderingCompany + "</td>" +
 						"<td>" + slaDetail.executingCompany + "</td>" +
 						"<td>" + slaDetail.slaStart + "</td>" +
@@ -383,7 +383,7 @@ function populateCaseInformation(infoData) {
 				
 				$("#caseInformation > tbody").append(
 					"<tr class='" + trClass+ "'> " +
-						"<td> &nbsp;&nbsp;&nbsp; " + infoDetail.infoType + "</td>" +
+						"<td>" + infoDetail.infoType + "</td>" +
 						"<td>" + infoDetail.text + "</td>" +
 						"<td>" + infoDetail.timestamp + "</td>" +
 						"<td>" + infoDetail.userSignature + "</td>" +
@@ -463,7 +463,7 @@ function populateCaseMessage(messagesData) {
 						
 				$("#caseMessages > tbody").append(
 					"<tr class='" + trClass+ "'> " +
-						"<td> &nbsp;&nbsp;&nbsp; " + messageDetail.id + "</td>" +
+						"<td>" + messageDetail.id + "</td>" +
 						"<td>" + messageDetail.type + "</td>" +
 						"<td>" + messageDetail.status + "</td>" +
 						"<td>" + messageDetail.executeTimestamp + "</td>" +
@@ -551,7 +551,7 @@ function populateCaseWoEvents(woEventsData) {
 				 
 				$("#caseWoEvents > tbody").append(
 						"<tr class='" + trClass+ "'> " +
-							"<td> &nbsp;&nbsp; " + woEventsDetail.type + "</td>" +
+							"<td>" + woEventsDetail.type + "</td>" +
 							"<td>" + woEventsDetail.timestamp + "</td>" +
 							"<td>" + woEventsDetail.result + "</td>" +
 							"<td>" + woEventsDetail.source + "</td>" +
@@ -657,7 +657,7 @@ function populateCaseStatusHistory(statusHistoryData) {
 						
 				$("#caseStatusHistory > tbody").append(
 					"<tr class='" + trClass+ "'> " +
-						"<td> &nbsp;&nbsp;&nbsp; " + statusHistoryDetail.caseStatus + "</td>" +
+						"<td>  " + statusHistoryDetail.caseStatus + "</td>" +
 						"<td>" + statusHistoryDetail.startTimestamp + "</td>" +
 						"<td>" + statusHistoryDetail.endTimestamp + "</td>" +
 						"<td>" + statusHistoryDetail.createdBy + "</td>" +
@@ -732,7 +732,7 @@ function populateCaseActionHistory(actionHistoryData) {
 				
 				$("#caseActionHistory > tbody").append(
 					"<tr class='" + trClass+ "'> " +
-						"<td> &nbsp;&nbsp;&nbsp; " + actionHistoryDetail.action + "</td>" +
+						"<td>  " + actionHistoryDetail.action + "</td>" +
 						"<td>" + actionHistoryDetail.timestamp + "</td>" +
 						"<td>" + actionHistoryDetail.createSignature + "</td>" +
 						"<td>" + actionHistoryDetail.createTimestamp + "</td>" +		
@@ -817,7 +817,7 @@ function populateCaseCustContactHistory(custContactHistoryData) {
 						
 				$("#caseCustContactHistory > tbody").append(
 					"<tr class='" + trClass+ "'> " +
-						"<td> &nbsp;&nbsp;&nbsp; " + custContactDetail.contactType + "</td>" +
+						"<td>" + custContactDetail.contactType + "</td>" +
 						"<td>" + custContactDetail.commType + "</td>" +
 						"<td>" + custContactDetail.localDate + "</td>" +
 						"<td>" + custContactDetail.customerDate + "</td>" +

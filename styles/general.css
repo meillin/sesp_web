@@ -1,15 +1,17 @@
-@font-face
-{
-font-family: robotoLight;
+@font-face{
+font-family: roboto-lght;
 src: url(font/Roboto-Light.ttf);
 }
 
-@font-face
-{
-font-family: robotoMedium;
+@font-face{
+font-family: roboto-med;
 src: url(font/Roboto-Medium.ttf);
 }
 
+@font-face{
+font-family: roboto-bld;
+src: url(font/Roboto-Bold.ttf);
+}
 /*myFirstFont*/
 
 /* Enable html5 tags for 6-7-8 */
@@ -46,7 +48,7 @@ thead{
 
 .wrapper-blur {
 	top:0;
-	height: 200%;
+	height: 100%;
 	width: 100%;
 	background: #f0f0f0;
 	position: absolute;
@@ -141,7 +143,8 @@ thead{
 	position: fixed;
 	margin-top: 35px;
 	padding: 2em 0em;
-	background-image:url(../images/filter_bg.png);
+	background: #333e45;
+	/*background-image:url(../images/filter_bg.png);*/
 	background-size: cover;
 }
 
@@ -181,7 +184,7 @@ thead{
 	border-collapse: collapse;
 }
 .filterHeader table th{
-	background: rgba(76, 88, 99, 0.5) !important;
+	background: #2F3138!important;
 }
 .filterHeader table{
 	width: 100%;
@@ -203,7 +206,7 @@ thead{
 .filtered {
 	min-height: 100%;
 	height: auto;
-	background: #2c464f;
+	background: #333e45;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -214,7 +217,8 @@ thead{
 }
 
 .filtered h5 {
-	color: #cfcaca;
+	font-family: roboto-lght;
+	color: #fff;
 }
 
 .page-name-heading {
@@ -231,6 +235,7 @@ thead{
 
 .page-name-heading-search {
 	margin-top: 50px;
+	font-family: roboto-lght;
 }
 
 .sub-menu li {
@@ -262,13 +267,14 @@ dl span {
 	margin-left: 0;
 }
 .accordion dd > a {
-	border-bottom: 1px solid #596069;
-	background: #1d2939;
-	color: #cfcaca;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+	background: #2F3138;
+	font-family: roboto-lght;
+	color: #fff;
 	padding: 0.5em 0.9em;
 }
 .accordion dd > a:hover {
-	background: #1d2939;
+	background: rgba(47, 49, 56, 0.2);
 }
 .content {
 	padding-top: 0 !important;
@@ -302,7 +308,7 @@ button, .button{
 	border-bottom: 1px solid #E7E7E7;
 	padding: 0.25rem 0.75rem;
 	margin: 0;
-	font-family: robotoLight;
+	font-family: roboto-lght;
 }
 
 .panel-outer{
