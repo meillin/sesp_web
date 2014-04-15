@@ -52,6 +52,8 @@
 		<script src="<%=request.getContextPath()%>/js/spin.js"></script>
 		<script src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
 
+		<script src="<%=request.getContextPath()%>/js/highchart/highcharts.js"></script>
+
 	</head>
 	<body onload="populateFilters(),getdaterange(),initmap('<%=request.getSession().getAttribute("MAP_SERVER_URL")%>')">
 	<%
@@ -297,7 +299,7 @@
 								<div class="panel-outer">
 									<h4 class="panel-heading"><i class="fi-marker colorHeading"></i><span>Map view</span></h4>
 									<div class="panel-inner">
-										<div style = "height:660px;width:100%;opacity:0.99;" id="map-wrapper"></div>
+										<div style = "height:550px;width:100%;opacity:0.99;" id="map-wrapper"></div>
 									</div>
 									</div>
 								</div>
@@ -311,8 +313,7 @@
 									</h4>
 									<div class="panel-innner">
 										<div class="row">
-											<div class="large-12 columns">
-												<div id="block-alarm-charts-view">chart</div>
+											<div class="large-12 columns" id="alarm-charts-view">
 											</div>
 										</div>
 
@@ -400,5 +401,6 @@
 		<script>
 		getChartTitle("A");
 		</script>
+		<script src="<%=request.getContextPath()%>/js/highchart/alarm-management-chart.js"></script>
 	</body>
 </html>

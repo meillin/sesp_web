@@ -273,6 +273,7 @@ function validateAlarmFilters(al_fromdate, al_todate,al_areatypes,al_domain, al_
 
 var chartType;
 function drawChart(data) {
+	/*
 
 	var alertChart;
 	if (data != "" || data != null) {
@@ -288,6 +289,7 @@ function drawChart(data) {
 		alertChart.setDataXML(data);
 		alertChart.render("block-alarm-charts-view");
 	}
+	*/
 	//loadPoints(ls_domain, ls_fromdate, ls_todate, ls_areatypes, ls_areas, ls_unitCommTypes, ls_devicemodels, ls_utilitytypes);
 }
 
