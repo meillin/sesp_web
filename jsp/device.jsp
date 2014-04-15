@@ -66,9 +66,9 @@ document.createElement("figure");
 		<div id="main-content">
 			<div class="big-row">
 				<div class="large-12 columns">
-					<h2 class="page-name-heading-search">
+					<h3 class="page-name-heading-search">
 						<s:text name='webportal.device.results.title'/> : <span id="device-id"></span>
-					</h2>
+					</h3>
 				</div>
 			</div>
 			<div class="big-row">
@@ -145,9 +145,9 @@ document.createElement("figure");
 				</div>
 				<div class="big-row">
 					<div class="large-12 columns">
-						<h2 class="page-name-heading-search">
+						<h3 class="page-name-heading-no-margin">
 							<s:text name='webportal.device.history.title'/>
-						</h2>
+						</h3>
 					</div>
 				</div>
 				<div class="big-row">

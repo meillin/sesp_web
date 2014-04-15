@@ -67,20 +67,16 @@
 				meterValueGrid.init();
 			}			
 		</script>
-
 	</head>
 	<body onload="javascript:measurepointDetails()">
-		
 		<div id="wrapper">
-
 			<%@ include file="headerv311.inc"%>
-			
 			<div id="main-content">
 				<div class="big-row">
 					<div class="large-12 columns">
-						<h2 class="page-name-heading-search">
-							<s:text name="webportal.measurepoint.measurepointid"/>&#32: <span id="measurepoint-id"></span>
-						</h2>
+						<h3 class="page-name-heading-search">
+							<s:text name="webportal.measurepoint.measurepointid"/>:<span id="measurepoint-id"></span>
+						</h3>
 					</div>
 				</div>
 				<div class="big-row">
@@ -93,19 +89,19 @@
 							<div class="panel-inner">
 								<table id="overview-table">
 									<tr>	
-										<td><div><s:text name="webportal.measurepoint.installationid"/>&#32:</div></td>
+										<td><div><s:text name="webportal.measurepoint.installationid"/>:</div></td>
 										<td> <div id="block-overview-installation-id"></div></td>									
 									</tr>
 									<tr>	
-										<td><div><s:text name="webportal.measurepoint.installationcode"/>&#32:</div></td>
+										<td><div><s:text name="webportal.measurepoint.installationcode"/>:</div></td>
 										<td><div id="block-overview-installation-code"></div></td>
 									</tr>
 									<tr>
-										<td><div><s:text name="webportal.measurepoint.externalcode"/>&#32:</div></td>
+										<td><div><s:text name="webportal.measurepoint.externalcode"/>:</div></td>
 										<td><div id="block-overview-external-code"></div></td>
 									</tr>
 									<tr>
-										<td><div class="legend-block-title"><s:text name="webportal.measurepoint.utility"/>&#32:</div></td>
+										<td><div class="legend-block-title"><s:text name="webportal.measurepoint.utility"/>:</div></td>
 										<td>
 											<table class="text-light-grey" align="left">
 												<tr>
@@ -116,27 +112,34 @@
 										</td>									
 									</tr>
 									<tr>	
-										<td><div><s:text name="webportal.measurepoint.domain"/>&#32:</div></td>
+										<td><div><s:text name="webportal.measurepoint.domain"/>:</div></td>
 										<td><div id="block-overview-domain"></div></td>
 									</tr>
 									<tr>	
-										<td><div><s:text name="webportal.measurepoint.meterplacement"/>&#32:</div></td>
+										<td><div><s:text name="webportal.measurepoint.meterplacement"/>:</div></td>
 										<td><div id="block-overview-meter-placement"></div></td>
 									</tr>
 									<tr>	
-										<td><div><s:text name="webportal.measurepoint.measurepointcode"/>&#32:</div></td>
+										<td><div><s:text name="webportal.measurepoint.measurepointcode"/>:</div></td>
 										<td><div id="block-overview-measurepoint-code"></div></td>
 									</tr>
 									<tr>	
-										<td><div><s:text name="webportal.measurepoint.gsrn"/>&#32:</div></td>
+										<td><div><s:text name="webportal.measurepoint.gsrn"/>:</div></td>
 										<td><div id="block-overview-gsrn"></div></td>
 									</tr>
 									<tr>	
-										<td><div><s:text name="webportal.measurepoint.powerstatus"/>&#32:</div></td>
+										<td><div><s:text name="webportal.measurepoint.powerstatus"/>:</div></td>
 										<td><div id="block-overview-power-status"></div></td>
 									</tr>
 								</table>
-								<div class="status text-green" id="block-overview-status"></div>
+								<ul class="inline-list">
+									<li>
+										<span class="status text-green" id="block-overview-status"></span>
+									</li>
+									<li class="right">
+										<span><a href="<%=request.getContextPath()%>/std/CreateCase" id="menu-button-resource-projections" class="button tiny">Create Case</a></span>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -151,12 +154,12 @@
 								</div>
 								<div class="legend">
 									<div class="address legend-block text-grey">
-										<span><s:text name="webportal.measurepoint.address"/>&#32:</span>
+										<span><s:text name="webportal.measurepoint.address"/>:</span>
 										<span id="block-location-adress"></span>
 									</div>
 									<div class="area legend-block text-grey">
-										<div class="legend-block-title"><s:text name="webportal.measurepoint.area"/>&#32:</div>
-										<div class="legend-block-content text-light-grey" id="block-location-area"></div>									
+										<span><s:text name="webportal.measurepoint.area"/>:</span>
+										<span id="block-location-area"></span>			
 									</div>
 								</div>
 							</div>
@@ -165,9 +168,9 @@
 				</div>
 				<div class="big-row">
 					<div class="large-12 columns">
-						<h2 class="page-name-heading-search">
+						<h3 class="page-name-heading-no-margin">
 							<span><s:text name="webportal.measurepoint.measurepointinformation"/></span>
-						</h2>
+						</h3>
 					</div>
 				</div>
 				<div class="big-row">

@@ -52,7 +52,10 @@ header .top-menu-first,
 header .top-menu-second,
 header .top-menu-third{
 	width: 33.33%;
+}
 
+header .top-menu-third li:first-child{
+	margin-right: 10px;
 }
 
 header .row input{
@@ -98,9 +101,12 @@ header .slide-menu-right a{
 header .search-bar{
 	padding: 0.75rem;
 	width: 100%;
+
 }
-header .search-bar li:first-child{width: 90%;}
-header .search-bar li{width: 10%;}
+
+
+header .search-bar li:first-child{width: 94%;}
+header .search-bar li{width: 6%;}
 header .search-button a{
 	color: #353535;
 	border: none;
@@ -125,6 +131,9 @@ header .search-input input{
 	border-bottom-left-radius:20px;
 	-webkit-border-bottom-left-radius:20px;
 	border-right: 0; 
+	-webkit-appearance: none!important;
+	-webkit-box-shadow: none!important;
+	box-shadow: none!important;
 
 }
 header .logo-capgemini img{padding-top: 0.55rem;}
