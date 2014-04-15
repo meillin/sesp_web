@@ -173,43 +173,51 @@ thead{
 }
 
 .filtered h5 {
-	font-family: roboto-lght;
+	font-family: roboto-lght!important;
 	color: #fff;
 }
 
 .page-name-heading {
-	background: #fff;
-	padding-left: 0.2em;
 	margin-left: 0;
-	padding: 1em;
-	margin-top: 65px;
-	font-family: Georgia, serif;
-
-	border: 1px solid #d9d9d9;
-	border-bottom: 4px solid #d9d9d9;
+	margin-top: 4.5rem;
+	font-family: roboto-lght!important;
+	color: #2e363c!important;
+	font-size: 16px;
+	padding-left: 1.1rem;
 }
 
 .page-name-heading-search {
 	margin-top: 50px;
-	font-family: roboto-lght;
+	font-family: roboto-lght!important;
 }
 
 .sub-menu li {
 	display: inline;
-	padding: 0 3em;
+	padding: 0 1em;
+	float: right;
+	font-family: roboto-lght!important;
+	color: #333e45!important;
 }
 .sub-menu span {
-	opacity: 0.5;
+	/*opacity: 0.5;*/
 }
 .sub-menu :not(:first-child){
-	opacity: 0.5;
+	/*opacity: 0.5;*/
 	cursor: pointer;
 }
 .sub-menu .active {
-	font-weight: bold;
+	font-family: roboto-med!important;
+	color: #1abc9c !important;
 	opacity: 1;
 }
 
+/*.progress-chart-li {
+	float: right;
+}
+
+.status {
+	float: right;
+}*/
 /*************************************************************************/
 
 /***********Accordion******************************************/
@@ -239,6 +247,7 @@ dl span {
 
 .colorHeading{
  	color: #1abc9c;
+ 	font-size: 24px;
 }
 
 button, .button{
@@ -262,9 +271,23 @@ button, .button{
 
 .panel-heading{
 	border-bottom: 1px solid #E7E7E7;
-	padding: 0.25rem 0.75rem;
+	padding: 0.5rem 0.5rem 0.3rem 1.2rem;
+	/*padding-top: 0.5rem;
+	padding-bottom: 0.5rem;*/
 	margin: 0;
 	font-family: roboto-lght;
+	font-size: 18px;
+}
+
+.panel-heading .colorHeading {
+	float: left;
+	display: inline-block;
+	
+}
+
+.panel-heading span {
+	padding: 4px 10px;
+	display: inline-block;
 }
 
 .panel-outer{

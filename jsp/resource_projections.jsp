@@ -203,7 +203,7 @@
 					<div class="big-row">
 						<div class="large-12 columns" >
 							<ul class="page-name-heading sub-menu">
-								<span><strong>RESOURCE PROJECTION</strong></span>
+								<span>RESOURCE PROJECTIONS</span>
 							</ul>
 						</div>
 					</div>
@@ -211,7 +211,7 @@
 					<div class="big-row">
 						<div class="large-6 columns">
 							<div class="panel-outer">
-								<h4 class="panel-heading"><i class="fi-graph-horizontal colorHeading"></i> Device assets projections</h4>
+								<h4 class="panel-heading"><i class="fi-graph-horizontal colorHeading"></i><span> Device assets projections</span></h4>
 								<div class="panel-inner" id="device-assets-projections-per-month-view">
 									<!-- IDs for real data chart
 									<div class="large-6 columns" id="block-device-assets-projections-per-month-view"></div>
@@ -222,7 +222,7 @@
 
 						<div class="large-6 columns">
 							<div class="panel-outer">
-								<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Device assets projections total</h4>
+								<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i><span> Device assets projections total</span></h4>
 								<div class="panel-inner" id="device-assets-projections-total-view">
 										<!-- IDs for real data chart
 										<div class="large-6 columns" id="block-device-assets-projections-total-view"></div>
@@ -234,7 +234,7 @@
 						<div class="big-row">
 							<div class="large-6 columns">
 								<div class="panel-outer">
-									<h4 class="panel-heading"><i class="fi-graph-horizontal colorHeading"></i> Resource projections per month</h4>
+									<h4 class="panel-heading"><i class="fi-graph-horizontal colorHeading"></i><span> Resource projections per month</span></h4>
 									<div class="panel-inner" id="resource-projections-per-month-view">
 										<!-- IDs for real data chart
 										<div class="large-6 columns" id="block-resource-projections-per-month-view"></div>
@@ -246,7 +246,7 @@
 
 							<div class="large-6 columns">
 								<div class="panel-outer">
-									<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Total resource projection</h4>
+									<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i><span> Total resource projection</span></h4>
 									<div class="panel-inner" id="resource-projections-total-view">
 										<!-- IDs for real data chart
 										<div class="large-6 columns" id="block-resource-projections-total-view"></div>
@@ -260,7 +260,7 @@
 					<div class="big-row">
 						<div class="large-6 columns">
 							<div class="panel-outer">
-								<h4 class="panel-heading"><i class="fi-graph-bar size-24 colorHeading"></i> Key performance indexes</h4>
+								<h4 class="panel-heading"><i class="fi-graph-bar size-24 colorHeading"></i><span> Key performance indexes</span></h4>
 								<div class="panel-inner" id="resource-projections-kpi"></div>
 							</div>
 						</div>
