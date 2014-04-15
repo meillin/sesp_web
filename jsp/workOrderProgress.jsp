@@ -253,10 +253,10 @@
 				<div class="big-row">
 					<div class="large-12 columns">
 						<ul class="page-name-heading sub-menu">
-							<span><strong>WORK ORDER/AREA</strong></span>
-							<li class="progress-chart-li active"><i class="fi-graph-bar"></i> PROGRESS</li>
-							<li class="status-chart"><i class="fi-check"></i> STATUS</li>
-							<li class="details-chart"><i class="fi-page-search"></i> DETAILS</li>
+							<span>WORK ORDER/AREA</span>
+							<li class="progress-chart-li active"><i class="fi-graph-bar"></i> Progress</li>
+							<li class="status-chart"><i class="fi-check"></i> Status</li>
+							<li class="details-chart"><i class="fi-page-search"></i> Details</li>
 						</ul>
 					</div>
 				</div>
@@ -264,14 +264,14 @@
 				<div class="big-row show progress-chart">
 					<div class="large-6 columns">
 						<div class="panel-outer">
-							<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Work order progress</h4>
+							<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i><span> Work order progress</span></h4>
 							<div class="panel-inner" id="work-order-progress"></div>
 						</div>
 					</div>
 
 					<div class="large-6 columns">
 						<div class="panel-outer">
-							<h4 class="panel-heading"><i class="fi-graph-horizontal colorHeading"></i> Area progress</h4>
+							<h4 class="panel-heading"><i class="fi-graph-horizontal colorHeading"></i><span> Area progress</span></h4>
 							<div class="panel-inner" id="area-progress"></div>
 						</div>
 					</div>
@@ -280,7 +280,7 @@
 				<div class="big-row hide status">
 					<div class="large-6 columns">
 						<div class="panel-outer">
-							<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Work order status</h4>
+							<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i><span> Work order status</span></h4>
 							<div class="panel-inner" id="work-order-status">
 								<!--
 								<div id="block-work-order-status-chart"></div>
@@ -291,7 +291,7 @@
 
 					<div class="large-6 columns">
 						<div class="panel-outer">
-							<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Area status</h4>
+							<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i><span> Area status</span></h4>
 							<div class="panel-inner" id="area-status"></div>
 						</div>
 					</div>
@@ -308,7 +308,7 @@
 						<div class="panel-outer">
 							<h4 class="panel-heading">
 								<div class="large-9 columns">
-									<i class="fi-graph-bar colorHeading"></i> Detailed progress
+									<i class="fi-graph-bar colorHeading"></i><span>Detailed progress</span>
 								</div>
 								<div class="large-3 columns">
 									<select>

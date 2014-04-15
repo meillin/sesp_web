@@ -172,7 +172,7 @@
 						<div class="big-row">
 							<div class="large-12 columns">
 								<ul class="page-name-heading sub-menu field-work-submenu">
-									<span><strong>FIELD WORK EFFIENCY ANALYSIS</strong></span>
+									<span>FIELD WORK EFFIENCY ANALYSIS</span>
 								</ul>
 							</div>
 						</div>

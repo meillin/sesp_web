@@ -287,7 +287,7 @@
 					<div class="big-row">
 						<div class="large-12 columns" >
 							<ul class="page-name-heading sub-menu">
-									<span><strong>ALARM MANAGEMENT</strong></span>
+									<span>Alarm Management</span>
 							</ul>
 						</div>
 					</div>
@@ -295,7 +295,7 @@
 						<div class="big-row"><!-- start of new full width row -->
 							<div class="large-6 columns">
 								<div class="panel-outer">
-									<h4 class="panel-heading"><i class="fi-marker colorHeading"></i> Map view</h4>
+									<h4 class="panel-heading"><i class="fi-marker colorHeading"></i><span>Map view</span></h4>
 									<div class="panel-inner">
 										<div style = "height:660px;width:100%;opacity:0.99;" id="map-wrapper"></div>
 									</div>

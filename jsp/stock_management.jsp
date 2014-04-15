@@ -205,17 +205,17 @@
 					<div class="big-row">
 					<div class="large-12 columns">
 							<ul class="page-name-heading sub-menu">
-								<span><strong>STOCK MANAGEMENT</strong></span>
-								<li class="progress-chart-li"><i class="fi-check"></i> FROM SUPPLIER</li>
-								<li class="status-chart"><i class="fi-check"></i> IN STOCK</li>
-								<li class="details-chart active"><i class="fi-check"></i> ON PALLET</li>
+								<span>STOCK MANAGEMENT</span>
+								<li class="progress-chart-li"><i class="fi-check"></i> From Supplier</li>
+								<li class="status-chart"><i class="fi-check"></i> In Stock</li>
+								<li class="details-chart active"><i class="fi-check"></i> On Pallet</li>
 							</ul>
 					</div>
 					</div>
 					<div class="big-row">
 						<div class="large-6 columns">
 							<div class="panel-outer">
-								<h4 class="panel-heading"><i class="fi-marker size-24 colorHeading"></i> On pallet</h4>
+								<h4 class="panel-heading"><i class="fi-marker size-24 colorHeading"></i><span> On pallet</span></h4>
 								<div class="panel-inner">
 									<div style="width: 100%; height: 550px; opacity:0.99;" id="map-wrapper" ></div>
 								</div>
@@ -223,7 +223,7 @@
 						</div>
 						<div class="large-6 columns">
 							<div class="panel-outer">
-								<h4 class="panel-heading"><i class="fi-graph-bar size-24 colorHeading"></i> Device type</h4>
+								<h4 class="panel-heading"><i class="fi-graph-bar size-24 colorHeading"></i><span> Device type</span></h4>
 								<div class="panel-inner">
 									<div class="row">
 										<div class="large-12 columns" id="on-pallet-chart-view">
