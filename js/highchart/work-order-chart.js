@@ -1,14 +1,19 @@
 $( document ).ready(function() {
-    var colors = Highcharts.getOptions().colors;
+    var colors = ['#1abc9c', '#428bca', '#d9534f', '#f0ad4e', '#5bc0de', '#1d2939'];
+    Highcharts.setOptions({
+    //Green - #1abc9c //Blue - #428bca // Orange - #f0ad4e // Red - #d9534f //
+        colors: ['#1abc9c', '#428bca', '#d9534f', '#f0ad4e', '#5bc0de', '#1d2939']
+    });
+
     function drawWorkOrderStatus() {
 
        var categories = ['Performed', 'Not performed', 'Not planned', 'Not performed final', 'Opera'],
-        name = 'Browser brands',
+        name = '',
         data = [{
                 y: 10000,
                 color: colors[0],
                 drilldown: {
-                    name: 'Performed versions',
+                    name: 'Performed categories',
                     categories: ['Performed'],
                     data: [10000],
                     color: colors[0]
@@ -17,7 +22,7 @@ $( document ).ready(function() {
                 y: 1000,
                 color: colors[1],
                 drilldown: {
-                    name: 'Not performed versions',
+                    name: 'Not performed categories',
                     categories: ['Not performed'],
                     data: [1000],
                     color: colors[1]
@@ -26,8 +31,8 @@ $( document ).ready(function() {
                 y: 1000,
                 color: colors[2],
                 drilldown: {
-                    name: 'Not planned versions',
-                    categories: ['Not planned versions'],
+                    name: 'Not planned categories',
+                    categories: ['Not planned categories'],
                     data: [1000],
                     color: colors[2]
                 }
@@ -35,7 +40,7 @@ $( document ).ready(function() {
                 y: 5470,
                 color: colors[3],
                 drilldown: {
-                    name: 'Not performed final versions',
+                    name: 'Not performed final categories',
                     categories: ['With time reservation', 'Missed time reservation', 'Planned', 'Saved with errors', 'Undefined'],
                     data: [2500, 2000, 470, 300, 200],
                     color: colors[3]
@@ -77,7 +82,11 @@ $( document ).ready(function() {
                 pie: {
                     allowPointSelect: true,
                     shadow: false,
-                    center: ['50%', '50%']
+                    center: ['50%', '50%'],
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true,
                 }
             },
             tooltip: {
@@ -153,11 +162,6 @@ $( document ).ready(function() {
             });
     }*/
     function drawWorkOrderProgress() {
-        Highcharts.setOptions({
-        //Green - #1abc9c //Blue - #428bca // Orange - #f0ad4e // Red - #d9534f //
-            colors: ['#1abc9c', '#428bca', '#d9534f', '#f0ad4e', '#5bc0de', '#1d2939']
-        });
-
         // Build the chart
         $('#work-order-progress').highcharts({
             chart: {
@@ -166,15 +170,7 @@ $( document ).ready(function() {
                 plotShadow: false,
                 height: 500,
             },
-            legend: {
-                layout: 'vertical',
-                backgroundColor: '#FFFFFF',
-                align: 'right',
-                verticalAlign: 'top',
-                floating: true,
-                x: 0,
-                y: 110
-            },
+
             title: {
                 text: ''
             },
@@ -189,13 +185,13 @@ $( document ).ready(function() {
                         enabled: false
                     },
                     showInLegend: true,
-                    center: ['30%', '50%'],
+                    center: ['50%', '50%'],
                 }
             },
             series: [{
                 type: 'pie',
                 name: 'Work order progress',
-                size: '70%',
+                size: '80%',
                 data: [
                     ['Performed within plan', 2100],
                     ['Unplanned', 500],
@@ -365,14 +361,12 @@ $( document ).ready(function() {
     var browserData = [];
     var versionsData = [];
     for (var i = 0; i < data.length; i++) {
-
         // add browser data
         browserData.push({
             name: categories[i],
             y: data[i].y,
             color: data[i].color
         });
-
         // add version data
         for (var j = 0; j < data[i].drilldown.data.length; j++) {
             var brightness = 0.2 - (j / data[i].drilldown.data.length) / 5 ;
@@ -381,7 +375,7 @@ $( document ).ready(function() {
                 y: data[i].drilldown.data[j],
                 color: Highcharts.Color(data[i].color).brighten(brightness).get()
                 });
-            }
+        }
     }
     // Create the chart
     $('#area-progress').highcharts({
@@ -401,7 +395,11 @@ $( document ).ready(function() {
         plotOptions: {
             pie: {
                 shadow: false,
-                center: ['50%', '50%']
+                center: ['50%', '50%'],
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true,
             }
         },
         tooltip: {

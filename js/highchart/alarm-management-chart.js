@@ -6,7 +6,7 @@ $(function () {
         $('#alarm-charts-view').highcharts({
             chart: {
                 type: 'column',
-                height: 503
+                height: 512
             },
             title: {
                 text: 'Product Comparison'

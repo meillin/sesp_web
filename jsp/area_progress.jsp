@@ -259,7 +259,7 @@ symbolCounter++;
 				<div class="large-12 columns">
 						<ul class="page-name-heading sub-menu">
 							<span>AREA PROGRESS: <span id="area-name"></span>MISSING MILESTONE AREA</span>
-							
+
 							<li class="progress-chart-li active" onclick="javascript:updateWorkOrder('progress')"><i class="fi-graph-bar"></i> Progress</li>
 							<li class="status" onclick="javascript:updateWorkOrder('status')"><i class="fi-check"></i> Status</li>
 						</ul>
@@ -269,7 +269,7 @@ symbolCounter++;
 			<div class="big-row">
 				<div class="large-5 columns">
 							<div class="panel-outer progress-chart">
-								<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i><span> Area Progress</span></h4>
+								<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i><span> Area progress</span></h4>
 								<div class="panel-inner" id="work-order-chart-view">
 									<!--
 										<div id="block-work-order-chart-view"></div>
@@ -278,7 +278,7 @@ symbolCounter++;
 								</div>
 							</div>
 							<div class="panel-outer detailed-chart">
-								<h4 class="panel-heading"><i class="fi-graph-bar colorHeading"></i><span> Detailed Progress</span></h4>
+								<h4 class="panel-heading"><i class="fi-graph-bar colorHeading"></i><span> Detailed progress</span></h4>
 								<div class="panel-inner" id="detailed-progress">
 									<!--
 										<div id="block-work-order-chart-view2"></div>
@@ -288,7 +288,7 @@ symbolCounter++;
 							</div>
 
 							<div class="panel-outer status-chart hide">
-								<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i><span> Area Status</span></h4>
+								<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i><span> Area status</span></h4>
 								<div class="panel-inner" id="area-status">
 									<!--
 										<div id="block-work-order-chart-view"></div>

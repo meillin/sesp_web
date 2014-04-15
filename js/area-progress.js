@@ -522,7 +522,12 @@ function saveAreaProgressFilter(key,value){
 	$.cookie(pgCode+key,value,{ expires: 7 });
 }
 
-var colors = Highcharts.getOptions().colors;
+
+Highcharts.setOptions({
+//Green - #1abc9c //Blue - #428bca // Orange - #f0ad4e // Red - #d9534f //
+ colors: ['#1abc9c', '#428bca', '#d9534f', '#f0ad4e', '#5bc0de', '#1d2939']
+});
+var colors = ['#1abc9c', '#428bca', '#d9534f', '#f0ad4e', '#5bc0de', '#1d2939'];
 function drawAreaProgress() {
     // Build the chart
     $('#work-order-chart-view').highcharts({
@@ -578,10 +583,7 @@ function drawAreaProgress() {
     });
 }
 function drawDetailedProgress() {
-    Highcharts.setOptions({
-    //Green - #1abc9c //Blue - #428bca // Orange - #f0ad4e // Red - #d9534f //
-     colors: ['#1abc9c', '#428bca', '#d9534f', '#f0ad4e', '#5bc0de', '#1d2939']
-    });
+
     $('#detailed-progress').highcharts({
         chart: {
             height: 225
