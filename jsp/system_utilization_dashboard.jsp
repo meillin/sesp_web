@@ -42,6 +42,7 @@
 	</script>
 	<body>
 		<div class="big-row">
+
 			<div class="large-3 columns full-height">
 				<div class="row height-40 panel-outer">
 						<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i> Import servers</h4>
@@ -58,6 +59,7 @@
 							</div>
 						</div>
 				</div>
+
 				<div class="row height-40 panel-outer">
 					<h4 class="panel-heading">
 						<i class="fi-graph-pie colorHeading"></i> Export servers
@@ -75,6 +77,7 @@
 						</div>
 					</div>
 				</div>
+
 				<div class="row height-20 panel-outer">
 					<h4 class="panel-heading">
 						<i class="fi-graph-pie colorHeading"></i> Transaction servers
@@ -90,10 +93,12 @@
 								</div>
 							</div>
 						</div>
-					</div>
+				</div>
 			</div>
+
+
 			<div class="large-5 columns full-height">
-				<div class="row height-50 panel-outer">
+				<div class="height-50 panel-outer">
 						<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Import statistics</h4>
 						<div class="height-50 panel-inner">
 							<div class="large-6 columns">
@@ -140,7 +145,7 @@
 						</div>
 				</div>
 
-				<div class="row height-50 panel-outer">
+				<div class="height-50 panel-outer">
 					<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Export statistics</h4>
 					<div class="panel-inner">
 							<div class="large-6 columns">
@@ -265,7 +270,6 @@
 							<span id="work-orders-sent-to-pda"></span>
 					</div>
 					</div>
-				</div>
 			</div>
 
 		</div><!-- end of big-row -->
