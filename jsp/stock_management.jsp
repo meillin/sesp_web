@@ -54,6 +54,8 @@
 		<script src="<%=request.getContextPath()%>/js/spin.js"></script>
 		<script src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
 
+		<script src="<%=request.getContextPath()%>/js/highchart/highcharts.js"></script>
+
 		<link rel="shortcut icon" type="image/png" href="<%=request.getContextPath()%>/images/favicon.png" />
 
 	</head>
@@ -224,31 +226,31 @@
 								<h4 class="panel-heading"><i class="fi-graph-bar size-24 colorHeading"></i> Device type</h4>
 								<div class="panel-inner">
 									<div class="row">
-										<div class="large-12 columns">
-											<div id="block-on-pallet-chart-view"></div>
+										<div class="large-12 columns" id="on-pallet-chart-view">
 										</div>
 									</div>
 									<div class="row">
-										<div class="large-12 columns chart-filter">
+										<div class="large-6 medium-6 columns">
+											<span><s:text name="webportal.stock.entityshowninchart"/></span>
 											<div>
-												<span><s:text name="webportal.stock.entityshowninchart"/></span>
-												<div>
-													<select id="block-on-pallet-select-entity-shown" onchange="onChangeEntity()">
-													</select>
-												</div>
+												<select id="block-on-pallet-select-entity-shown" onchange="onChangeEntity()">
+												</select>
 											</div>
+										</div>
+
+										<div class="large-6 medium-6 columns">
+											<span><s:text name="webportal.stock.divideentityby"/></span>
 											<div>
-												<span><s:text name="webportal.stock.divideentityby"/></span>
-												<div>
-													<select id="block-on-pallet-select-divide-entity">
-													</select>
-												</div>
+												<select id="block-on-pallet-select-divide-entity">
+												</select>
 											</div>
-											<div>
-												<a href="javascript:submitLogistics();" id="chart-legend-button-update" class="button">
-													<s:text name="webportal.stock.updatebutton"/>
-												</a>
-											</div>
+										</div>
+
+										<div class="large-12 columns">
+											<a href="javascript:submitLogistics();" id="chart-legend-button-update" class="button">
+												<s:text name="webportal.stock.updatebutton"/>
+											</a>
+										</div>
 										</div><!-- end of chart-filter -->
 									</div><!-- end of chart-filter row -->
 								</div>
@@ -258,8 +260,8 @@
 				</div>
 
 				<div class="large-2 columns filtered show-for-large-up">
-								<h5 class="text-center">YOU HAVE FILTERED</h5>
-			<dl class="accordion" data-accordion>
+					<h5 class="text-center">YOU HAVE FILTERED</h5>
+					<dl class="accordion" data-accordion>
 				<dd>
 					<a href="#panel1">Domain<span class="round label">3</span></a>
 					<div id="panel1 selected-domain" class="content">
@@ -303,46 +305,47 @@
 						</ul>
 					</div>
 				</dd>
-			</dl>
+					</dl>
 				</div>
 			</div>
 
 			<div class="wrapper-blur"></div>
 
 		</div><!-- end of wrapper -->
-		</body>
-		<script>
-			function onChangeEntity()
-			{
-				var optionStr = "<option value='N'><s:text name='webportal.stock.breakup.none'/></option>"
-				+"<option value='M'><s:text name='webportal.stock.category.devicemodel'/></option>"
-				+"<option value='UT'><s:text name='webportal.stock.category.devicetype'/></option>"
-				+"<option value='US'><s:text name='webportal.stock.category.status'/></option>"
-				+"<option value='W'><s:text name='webportal.stock.category.stocksite'/></option>";
+	</body>
+	<script>
+		function onChangeEntity()
+		{
+			var optionStr = "<option value='N'><s:text name='webportal.stock.breakup.none'/></option>"
+			+"<option value='M'><s:text name='webportal.stock.category.devicemodel'/></option>"
+			+"<option value='UT'><s:text name='webportal.stock.category.devicetype'/></option>"
+			+"<option value='US'><s:text name='webportal.stock.category.status'/></option>"
+			+"<option value='W'><s:text name='webportal.stock.category.stocksite'/></option>";
 
 
-				var fromSupplierOptions = "<option value='N'><s:text name='webportal.stock.breakup.none'/></option>"
-				+"<option value='M'><s:text name='webportal.stock.category.devicemodel'/></option>"
-				+"<option value='UT'><s:text name='webportal.stock.category.devicetype'/></option>"
-				+"<option value='US'><s:text name='webportal.stock.category.status'/></option>";
+			var fromSupplierOptions = "<option value='N'><s:text name='webportal.stock.breakup.none'/></option>"
+			+"<option value='M'><s:text name='webportal.stock.category.devicemodel'/></option>"
+			+"<option value='UT'><s:text name='webportal.stock.category.devicetype'/></option>"
+			+"<option value='US'><s:text name='webportal.stock.category.status'/></option>";
 
-				$("#block-on-pallet-select-divide-entity").html('');
+			$("#block-on-pallet-select-divide-entity").html('');
 
 
-				if(deviceStatus == "fromSupplier"){
-					$("#block-on-pallet-select-divide-entity").html(fromSupplierOptions);
-				}else{
-					$("#block-on-pallet-select-divide-entity").html(optionStr);
-				}
-
-				var ls_entity = $("#block-on-pallet-select-entity-shown").val();
-				$("#block-on-pallet-select-divide-entity > option ").each(function()
-				{
-					if($(this.val==ls_entity))
-					{
-						$("#block-on-pallet-select-divide-entity option[value=" + ls_entity + "]").remove();
-					}
-				});
+			if(deviceStatus == "fromSupplier"){
+				$("#block-on-pallet-select-divide-entity").html(fromSupplierOptions);
+			}else{
+				$("#block-on-pallet-select-divide-entity").html(optionStr);
 			}
-		</script>
-		</html>
+
+			var ls_entity = $("#block-on-pallet-select-entity-shown").val();
+			$("#block-on-pallet-select-divide-entity > option ").each(function()
+			{
+				if($(this.val==ls_entity))
+				{
+					$("#block-on-pallet-select-divide-entity option[value=" + ls_entity + "]").remove();
+				}
+			});
+		}
+	</script>
+	<script src="<%=request.getContextPath()%>/js/highchart/stock-management-chart.js"></script>
+</html>

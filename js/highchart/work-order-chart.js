@@ -153,12 +153,12 @@ $( document ).ready(function() {
             });
     }*/
     function drawWorkOrderProgress() {
-            Highcharts.setOptions({
-    //Green - #1abc9c //Blue - #428bca // Orange - #f0ad4e // Red - #d9534f //
-     colors: ['#1abc9c', '#428bca', '#d9534f', '#f0ad4e', '#5bc0de', '#1d2939']
-    });
+        Highcharts.setOptions({
+        //Green - #1abc9c //Blue - #428bca // Orange - #f0ad4e // Red - #d9534f //
+            colors: ['#1abc9c', '#428bca', '#d9534f', '#f0ad4e', '#5bc0de', '#1d2939']
+        });
 
-    // Build the chart
+        // Build the chart
         $('#work-order-progress').highcharts({
             chart: {
                 plotBackgroundColor: null,
@@ -283,7 +283,6 @@ $( document ).ready(function() {
     }
 
     function drawAreaStatus() {
-
         $('#area-status').highcharts({
             chart: {
                 type: 'bar',
@@ -320,7 +319,7 @@ $( document ).ready(function() {
                         data: [4, 2, 3, 5, 3, 2, 4, 2, 3]
                     }]
                 });
-        }
+    }
 
     function drawAreaProgress() {
        var categories = ['Performed', 'Not performed', 'Not planned', 'Not performed final', 'Opera'],

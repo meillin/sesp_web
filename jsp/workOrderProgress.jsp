@@ -385,6 +385,6 @@
 		</div>
 	<div class="wrapper-blur"></div>
 	</div><!-- end of wrapper -->
-	<script src="<%=contextPath%>/js/highchart/example-chart.js"></script>
+	<script src="<%=contextPath%>/js/highchart/work-order-chart.js"></script>
 </body>
 </html>

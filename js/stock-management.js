@@ -305,11 +305,7 @@ var suffix = 0;
 
 function drawChart(data) {
 
-		//Generate Javascript Fusion chart with a dummy data
-	var myChart = new FusionCharts("Column2D","stock", "600", "400", "0" );
-      myChart.setJSONUrl(contextPath + "/data/dummydata.json");
-      myChart.render("block-on-pallet-chart-view");
-	/*
+/*
 	stockChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/StackedColumn2D.swf", "stockchartId"+suffix, "100%","445");
 	//data = "<graph caption='Model Per Model' subCaption='Divide per Model' xAxisName='Model' yAxisName='Model' plotGradientColor=' ' decimalPrecision='0' rotateNames='1' legendBorderColor='E9E9E9' showAlternateHGridColor='0' legendShadow='0' bgColor='E9E9E9,E9E9E9' legendPosition='RIGHT' labelDisplay='Rotate' slantLabels='1' showValues='0' formatNumberScale='0' showPercentInToolTip = '0'><categories><category name='ASD' /><category name='sim_2_serial' /><category name='meter_ct_rs_rc' /><category name='sim_1_giai' /></categories><dataset seriesName='ASD' color='#FF0000' showValues='0'><set value='2.0' /><set value='0' /><set value='0' /><set value='0' /></dataset><dataset seriesName='sim_2_serial' color='#0174DF' showValues='0'><set value='0' /><set value='1.0' /><set value='0' /><set value='0' /></dataset><dataset seriesName='meter_ct_rs_rc' color='#D7DF01' showValues='0'><set value='0' /><set value='0' /><set value='1.0' /><set value='0' /></dataset><dataset seriesName='sim_1_giai' color='#B45F04' showValues='0'><set value='0' /><set value='0' /><set value='0' /><set value='2.0' /></dataset></graph>";
 	stockChart.setDataXML(data);
