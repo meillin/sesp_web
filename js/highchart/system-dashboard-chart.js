@@ -231,11 +231,11 @@ $(function () {
             }]
         });
 	}
-	function drawStackedBarChart(divId, title, data, cat, boo) {
+	function drawStackedBarChart(divId, title, data, cat, boo, height) {
 		$('#' + divId).highcharts({
 			chart: {
 			      type: 'bar',
-			      height: 200
+			      height: height
 			  },
 			title: {
 			    text: title,
@@ -302,8 +302,8 @@ $(function () {
 	drawDonutChart('export-files', fileData, 'File');
 	drawDonutChart('import-messages', messageData, 'Message');
 	drawDonutChart('export-messages', messageData, 'Message');
-	drawStackedBarChart('users-system-chart', 'Users in system', userData, userCat, true);
-	drawStackedBarChart('users-authentifications-chart', 'Authentifications today', userData, userCat, true);
-	drawStackedBarChart('errors', ' ', errorData, errorCat, false);
+	drawStackedBarChart('users-system-chart', 'Users in system', userData, userCat, true, 200);
+	drawStackedBarChart('users-authentifications-chart', 'Authentifications today', userData, userCat, true, 200);
+	drawStackedBarChart('errors', ' ', errorData, errorCat, false, 216);
 
 });
