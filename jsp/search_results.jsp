@@ -19,14 +19,15 @@
 		<![endif]-->	
 
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
+		
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
-
 
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/general.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/header.css" />
 
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-search-results.css" />
 		<!--<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/colResizable.css" />-->
+		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/responsive-tables.css" />
 		
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
@@ -34,10 +35,13 @@
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
 
+
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/search-results.js"></script>		
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/spin.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
+
+		<script type="text/javascript" src="<%=request.getContextPath()%>/js/foundation/responsive-tables.js"></script>
 		
 	</head>
 	<body onload="searchentities()">	
@@ -68,7 +72,7 @@
 									<span id="block-search-results-installations-number"></span> 
 								</h4>
 								<div class="panel-inner">
-									<table id="instresults">
+									<table id="instresults" class="responsive">
 										<thead>
 											<tr>
 												<th><s:text name="webportal.search.results.installation.id"/></th>
@@ -99,7 +103,7 @@
 									<span id="block-search-results-measurepoints-number"></span>
 								</h4>
 								<div class="panel-inner">
-									<table id="instMepResults">
+									<table id="instMepResults" class="responsive">
 										<thead>
 											<tr>
 												<th><s:text name="webportal.search.results.measurepoint.id"/></th>
@@ -133,7 +137,7 @@
 									<span id="block-search-results-multipoints-number"></span>
 								</h4>
 								<div class="panel-inner">
-									<table id="instMupResults">
+									<table id="instMupResults" class="responsive">
 										<thead>
 											<tr>
 												<th><s:text name="webportal.search.results.multipoint.id"/></th>
@@ -165,7 +169,7 @@
 									<span id="block-search-results-devices-number"></span>
 								</h4>
 								<div class="panel-inner">
-									<table id="deviceResults">
+									<table id="deviceResults" class="responsive">
 										<thead>
 											<tr>
 												<th><s:text name="webportal.search.results.device.id"/></th>
@@ -197,7 +201,7 @@
 									<span id="block-search-results-cases-number"></span>
 								</h4>
 								<div class="panel-inner">
-									<table id="caseResults">
+									<table id="caseResults" class="responsive">
 										<thead>
 											<tr class="table-title">
 												<th><s:text name="webportal.search.results.case.id"/></th>
