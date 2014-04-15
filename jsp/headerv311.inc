@@ -1,8 +1,6 @@
 <header id="header">
-
-
-	<div class="row">
-		<div class="small-2 large-4 columns">
+	<ul class="inline-list top-menu">
+		<li class="top-menu-first">
 			<ul class="inline-list">
 				<li class="slide-menu-left">
 					<a class="slide" id="show-nav"><i class="fi-list size-24"></i></a>
@@ -18,39 +16,28 @@
 						<li><a href="<%=request.getContextPath()%>/std/TimeReservationCallList" id="menu-button-delivery-performance"><i class="fi-clock size-24"></i><span class="slide-out-text">Time Reservation Call List</span></a></li>
 					</ul>
 				</li>
-				<!--<li>
-					<a href="<%=request.getContextPath()%>/std/Index" id="logo-home" class="logo-capgemini">
-						<img src="<%=request.getContextPath()%>/images/logo-cap-header.png" />
-					</a>
-				</li>-->
 			</ul>
-		</div>
-
-		<div class="small-10 large-4 columns">
-			<div class="row">
-				<div class="large-12 columns">
-					<ul class="inline-list search-bar">
-						<li class="search-input">
-							<input type="text" id="search-input" placeholder="Search" onKeyPress="return submitOnEnter(this,event)"/>
-						</li>
-						<li class="search-button">
-							<a href="javascript:searchentities()"  id="search-button" class="postfix"><i class="fi-magnifying-glass size-20"></i></a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
-		<div class="large-4 columns">
+		</li>
+		<li class="top-menu-second">
+			<ul class="inline-list search-bar">
+				<li class="search-input">
+					<input type="text" id="search-input" placeholder="Search" onKeyPress="return submitOnEnter(this,event)"/>
+				</li>
+				<li class="search-button">
+					<a href="javascript:searchentities()"  id="search-button" class="postfix"><i class="fi-magnifying-glass size-20"></i></a>
+				</li>
+			</ul>	
+		</li>
+		<li class="top-menu-third">
 			<ul class="inline-list right">
-			<li>
-			<select class="lang-dropdown">
-				<option value="English">English (UK)</option>
-				<option value="Swedish">Swedish (SE)</option>
-				<option value="German">German (GE)</option>
-				<option value="French">French (FR)</option>
-			</select>
-			</li>
+				<li>
+					<select class="lang-dropdown">
+						<option value="English">English (UK)</option>
+						<option value="Swedish">Swedish (SE)</option>
+						<option value="German">German (GE)</option>
+						<option value="French">French (FR)</option>
+					</select>
+				</li>
 				<li class="slide-menu-right">
 					<a class="toggle-filter"><i class="fi-filter size-18"></i> Filter </a>
 				</li>
@@ -58,9 +45,9 @@
 					<a href="<%=request.getContextPath()%>/std/Logout" id="logout-button"><i class="fi-power size-18"></i> Log Out </a>
 				</li>
 			</ul>
-		</div>
+		</li>
+	</ul>
 
-	</div>
 </header>
 <script>
 	function openDashboard() { window.open('<%=request.getContextPath()%>/std/SysDashboard?refreshInterval=5', '', '');}
