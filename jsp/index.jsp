@@ -98,7 +98,7 @@ document.createElement("figure");
                   <li>
                     <div>
                         <a class="patch" href="<%=contextPath%>/std/StockManagement1" alt="LOGISTICS" title="LOGISTICS">
-                          <i class="fi-mountains size-74"></i></br>
+                          <i class=""><img src="../images/logi_icon.png" class="logi-icon" width="64" height=""></i></br>
                           <span>Logistics</span>
                         </a>
                     </div>
