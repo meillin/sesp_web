@@ -281,12 +281,17 @@ button, .button{
 
 .panel-heading .colorHeading {
 	display: inline-block;
-	
+	float: left;
 }
 
 .panel-heading span {
 	padding: 4px 10px;
 	display: inline-block;
+}
+
+.box-heading {
+	display: inline-block;
+	padding: 3rem;
 }
 
 .panel-outer{

@@ -14,18 +14,24 @@ body {
 }
 .height-40 {
     height: 38%;
+    clear: both;
 }
 .height-50 {
     height: 48.5%;
+    clear: both;
 }
 .height-45 {
     height: 43%;
+    clear: both;
 }
+
 .height-20 {
     height: 20%;
+    clear: both;
 }
 .height-10 {
     height: 10%;
+    clear: both;
 }
 .panel-heading {
    /*color: #999a9b;*/

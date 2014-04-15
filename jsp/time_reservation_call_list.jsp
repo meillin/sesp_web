@@ -151,14 +151,14 @@
 					<div class="big-row">
 						<div class="large-12 columns">
 							<ul class="page-name-heading sub-menu">
-								<span><strong>Time Reservation Call List</strong></span>
+								<span>TIME RESERVATION CALL LIST</span>
 							</ul>
 						</div>
 					</div>
 					<div class="big-row">
 						<div class="large-12 columns">
 							<div class="panel-outer">
-								<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i> Search results</h4>
+								<h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i><span>Search results</span></h4>
 									<div class="panel-inner">
 										<div id="callListGridDiv"></div>
 										<table id="block-time-reservation-call-list-table">

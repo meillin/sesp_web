@@ -211,7 +211,7 @@
 					<div class="big-row">
 						<div class="large-6 columns">
 							<div class="panel-outer">
-								<h4 class="panel-heading"><i class="fi-graph-horizontal colorHeading"></i><span> Device assets projections</span></h4>
+								<h4 class="panel-heading"><i class="fi-graph-horizontal colorHeading test"></i><span> Device assets projections</span></h4>
 								<div class="panel-inner" id="device-assets-projections-per-month-view">
 									<!-- IDs for real data chart
 									<div class="large-6 columns" id="block-device-assets-projections-per-month-view"></div>
