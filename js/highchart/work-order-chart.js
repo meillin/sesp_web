@@ -277,7 +277,6 @@ $( document ).ready(function() {
             }]
         });
     }
-
     function drawAreaStatus() {
         $('#area-status').highcharts({
             chart: {
@@ -294,8 +293,8 @@ $( document ).ready(function() {
                 backgroundColor: '#FFFFFF'
             },
             plotOptions: {
-                series: {
-                    stacking: 'normal'
+                bar: {
+                    stacking: 'percent'
                 }
             },
             series: [{
@@ -316,7 +315,6 @@ $( document ).ready(function() {
                     }]
                 });
     }
-
     function drawAreaProgress() {
        var categories = ['Performed', 'Not performed', 'Not planned', 'Not performed final', 'Opera'],
         name = '',
