@@ -39,6 +39,34 @@ header .slide-menu-right a{
     font-family: roboto-lght!important;
 }
 
+.logistics-icon-temp {
+    fill: #168c7b;
+    display: inline-block;
+}
+
+.logistics-icon-pos {
+    margin: 0.2rem 0rem -0.2rem 0.6rem;
+    display: inline-block;
+}
+
+.logistics-icon {
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+  fill: #fff;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.logistics-icon:hover {
+    fill: #168c7b;
+
+  }
+
 #main-content-index ul li div {
     cursor: pointer;
     background: #1CAF9A;
