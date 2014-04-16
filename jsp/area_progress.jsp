@@ -56,44 +56,44 @@ document.createElement("figure");
 <script src="<%=contextPath%>/js/ajax-loader.js"></script>
 </head>
 <%
-WorkOrderProgressService woProgressService = ServiceProvider.getInstance().getService(WorkOrderProgressService.class);
-List<WorkOrderStatusTO> woStatusTypes = woProgressService.getWOStatusTypes();
-Map<String, String> selectedImage = new HashMap<String, String>();
-Map<String, String> unselectedImage = new HashMap<String, String>();
+	WorkOrderProgressService woProgressService = ServiceProvider.getInstance().getService(WorkOrderProgressService.class);
+	List<WorkOrderStatusTO> woStatusTypes = woProgressService.getWOStatusTypes();
+	Map<String, String> selectedImage = new HashMap<String, String>();
+	Map<String, String> unselectedImage = new HashMap<String, String>();
 
-String[] symbols = new String[] {"blue","red","green","purple","yellow","pink","ltblue"};
+	String[] symbols = new String[] {"blue","red","green","purple","yellow","pink","ltblue"};
 
-int imageCount = 1;
-int symbolCounter = 0;
-String imagePath = null;
+	int imageCount = 1;
+	int symbolCounter = 0;
+	String imagePath = null;
 
-/*
-10	CANCELLED	Cancelled
-9	CLOSED	Closed
-11	ERROR	Error
-12	ERROR_STARTING	Error Starting
-8	IN_PROGRESS	In Progress
-7	SCHEDULED	Scheduled*/
+	/*
+	10	CANCELLED	Cancelled
+	9	CLOSED	Closed
+	11	ERROR	Error
+	12	ERROR_STARTING	Error Starting
+	8	IN_PROGRESS	In Progress
+	7	SCHEDULED	Scheduled*/
 
-for(WorkOrderStatusTO woStatusTTO : woStatusTypes) {
-if(woStatusTTO.getCode().equals("CANCELLED")) {
-imagePath = "/images/marker-icon-blue-dot.png";
-} else if (woStatusTTO.getCode().equals("CLOSED")) {
-imagePath = "/images/marker-icon-green-dot.png";
-}  else if (woStatusTTO.getCode().equals("ERROR"))  {
-imagePath = "/images/marker-icon-red-dot.png";
-}  else if (woStatusTTO.getCode().equals("ERROR_STARTING"))  {
-imagePath = "/images/marker-icon-red-dot.png";
-}  else if (woStatusTTO.getCode().equals("IN_PROGRESS"))  {
-imagePath = "/images/marker-icon-yellow-dot.png";
-} else if (woStatusTTO.getCode().equals("SCHEDULED"))  {
-imagePath = "/images/marker-icon-yellow-dot.png";
-}
+	for(WorkOrderStatusTO woStatusTTO : woStatusTypes) {
+	if(woStatusTTO.getCode().equals("CANCELLED")) {
+	imagePath = "/images/marker-icon-blue-dot.png";
+	} else if (woStatusTTO.getCode().equals("CLOSED")) {
+	imagePath = "/images/marker-icon-green-dot.png";
+	}  else if (woStatusTTO.getCode().equals("ERROR"))  {
+	imagePath = "/images/marker-icon-red-dot.png";
+	}  else if (woStatusTTO.getCode().equals("ERROR_STARTING"))  {
+	imagePath = "/images/marker-icon-red-dot.png";
+	}  else if (woStatusTTO.getCode().equals("IN_PROGRESS"))  {
+	imagePath = "/images/marker-icon-yellow-dot.png";
+	} else if (woStatusTTO.getCode().equals("SCHEDULED"))  {
+	imagePath = "/images/marker-icon-yellow-dot.png";
+	}
 
-unselectedImage.put(woStatusTTO.getStatusId(), ((HttpServletRequest)pageContext.getRequest()).getContextPath() + imagePath);
-selectedImage.put(woStatusTTO.getStatusId(),  ((HttpServletRequest)pageContext.getRequest()).getContextPath() + imagePath);
-symbolCounter++;
-}
+	unselectedImage.put(woStatusTTO.getStatusId(), ((HttpServletRequest)pageContext.getRequest()).getContextPath() + imagePath);
+	selectedImage.put(woStatusTTO.getStatusId(),  ((HttpServletRequest)pageContext.getRequest()).getContextPath() + imagePath);
+	symbolCounter++;
+	}
 %>
 <script>
 	contextPath = "<%=request.getContextPath()%>";
@@ -363,23 +363,21 @@ symbolCounter++;
 
 </div><!-- end of wrapper -->
 <script>
-loadvalues();
-drawAreaProgress();
-drawDetailedProgress();
+	loadvalues();
+	drawAreaProgress();
+	drawDetailedProgress();
 
-$('.sub-menu li').click(function(){
-		var active = $(this);
-		if(active.hasClass('progress-chart-li')){
-			$('.progress-chart, .detailed-chart').show();
-			//drawWorkOrderProgress();
-			//drawDetailedProgress();
-			$('.status-chart').hide();
-		} else {
-			$('.status-chart').show();
-			//drawAreaStatus();
-			$('.progress-chart, .detailed-chart').hide();
-		}
-});
+	$('.sub-menu li').click(function(){
+			var active = $(this);
+			if(active.hasClass('progress-chart-li')){
+				$('.progress-chart, .detailed-chart').show();
+				$('.status-chart').hide();
+			} else {
+				$('.status-chart').show();
+				drawAreaStatus();
+				$('.progress-chart, .detailed-chart').hide();
+			}
+	});
 
 </script>
 <script src="<%=contextPath%>/js/highchart/area-progress-chart.js"></script>

@@ -39,10 +39,6 @@ header .slide-menu-right a{
     font-family: roboto-lght!important;
 }
 
-.logi-icon {
-    margin: 0.63rem;
-}
-
 #main-content-index ul li div {
     cursor: pointer;
     background: #1CAF9A;

@@ -8,7 +8,9 @@ body {
 .big-row {
     height: 100%;
 }
-
+.containter {
+    margin-top: 0.5em;
+}
 @media only screen and (min-width: 2000px){
     .big-row .full-height {
         height: 100%;

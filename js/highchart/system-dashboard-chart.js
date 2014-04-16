@@ -60,38 +60,42 @@ $(function () {
 		          text: ''
 		      },
 		      plotBands: [{
-					from: 0,
-					to: 30,
-					innerRadius: '85%',
-					outerRadius: '135%',
-					color: '#1abc9c' // green
-		      }, {
-					from: 30,
-					to: 70,
-					innerRadius: '85%',
-					outerRadius: '135%',
-					color: '#f0ad4e' // yellow
-		      }, {
-					from: 70,
-					to: 100,
-					innerRadius: '85%',
-					outerRadius: '135%',
-					color: '#d9534f' // red
-		      }]
-		  },
+								from: 0,
+								to: 30,
+								innerRadius: '85%',
+								outerRadius: '135%',
+								color: '#1abc9c', // green
+				      	zIndex: 5
+
+			      	}, {
+								from: 30,
+								to: 70,
+								innerRadius: '85%',
+								outerRadius: '135%',
+								color: '#f0ad4e', // yellow
+								zIndex: 5
+
+							}, {
+								from: 70,
+								to: 100,
+								innerRadius: '85%',
+								outerRadius: '135%',
+								color: '#d9534f', // red
+								zIndex: 5
+							}
+					]
+				},
 
 		  series: [{
-		      name: '',
-		      data: [80],
-				dataLabels: {
-				formatter: function () {
-				return '<span style="color:#000"> '+this.y+' %</span>';
-				}
-			},
-		      tooltip: {
-		          valueSuffix: '%'
-		      }
-		  }]
+								name: '',
+								data: [80],
+								dataLabels: {
+									formatter: function () {
+										return '<span style="color:#000"> '+this.y+' %</span>';
+									}
+								},
+								tooltip: { valueSuffix: '%' }
+							}]
 			},
 		// Add some life
 		function (chart) {

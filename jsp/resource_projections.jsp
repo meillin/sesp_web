@@ -85,7 +85,7 @@
 				<div class="large-12 columns filterHeader">
 					<div class="big-row">
 						<div class="large-3 columns">
-							<h4>1 Search planing periods</h4>
+							<h4><s:text name="webportal.resourceprojections.time.first"/></h4>
 							<div class="row">
 								<div class="small-6 large-12 columns">
 									<label><s:text name="webportal.resourceprojections.time.domain.title"/></label>
@@ -96,10 +96,10 @@
 								<div class="small-6 large-12 columns">
 									<label>Planning period type</label>
 									<select>
-										<option value="week">week</option>
-										<option value="month">month</option>
-										<option value="quarter">quarter</option>
-										<option value="year">year</option>
+										<option value="week"><s:text name="webportal.week"/></option>
+										<option value="month"><s:text name="webportal.month"/></option>
+										<option value="quarter"><s:text name="webportal.quarter"/></option>
+										<option value="year"><s:text name="webportal.year"/></option>
 									</select>
 								</div>
 							</div>
@@ -107,11 +107,11 @@
 								<div class="small-12 columns">
 									<label><s:text name="webportal.resourceprojections.time.dateinterval.title"/></label>
 									<select id="block-time-select-date-interval" onchange="onDateIntervalSelect()">
-										<option value="upcomingweek">Upcoming week</option>
-										<option value="upcomingmonth">Upcoming month</option>
-										<option value="upcomingquarter">Upcoming quarter</option>
-										<option value="upcomingyear">Upcoming year</option>
-										<option value="custominterval">Custom interval</option>
+										<option value="upcomingweek"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingweek"/></option>
+										<option value="upcomingmonth"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingmonth"/></option>
+										<option value="upcomingquarter"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingquarter"/></option>
+										<option value="upcomingyear"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingyear"/></option>
+										<option value="custominterval"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingweek"/></option>
 									</select>
 								</div>
 							</div>

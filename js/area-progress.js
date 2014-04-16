@@ -118,7 +118,6 @@ function loadAreaTypes(){
 	return;
 }
 
-
 function loadAreaTypes2(){
 	var obj1= {};
 	obj1.url=contextPath+"/std/AlertManagementAreaTypes.action";
@@ -208,7 +207,6 @@ function fillAreas(data) {
 	populateSavedMultiSelectBox("#filter-multiselect-area", items,savedData);
 }
 
-
 function filter_submit() {
 
 		//Give it default value in order to show chart on page load
@@ -270,18 +268,12 @@ function filter_submit() {
 		if(orderType != "undefined" && orderType != null && orderType != ""){
 
 			if(orderType == "progress"){
-				updateStatusTab("#block-work-order-tab1","#block-work-order-tab2");
 				obj3.successfunc = drawChart1;
-				//run_ajax(obj3);
-
 			}else if(orderType == "status"){
-				updateStatusTab("#block-work-order-tab2","#block-work-order-tab1");
 				obj3.successfunc = drawChart2;
-				//run_ajax(obj3);
 			}
 		}else{
 			obj3.successfunc = drawChart1;
-			//run_ajax(obj3);
 		}
 
 		obj3.errorfunc = errorDetails;
@@ -320,16 +312,11 @@ function xyz(data) {
 }
 
 function show(){
-
 	if($("#filter-select-date-interval").val()=="custominterval"){
-		//document.getElementById("filter-custom-date-interval").style.visibility="visible";
 		showDate();
-			//$('#filter-custom-date-interval').css("visibility","visible");
-		} else {
+	} else {
 			hideDate();
-			//document.getElementById("filter-custom-date-interval").style.visibility="hidden";
-			//$('#filter-custom-date-interval').css("visibility","hidden");
-		}
+	}
 }
 
 function hideDate()

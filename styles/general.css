@@ -34,14 +34,12 @@ table tfoot tr th,
 table tfoot tr td{
 	padding: 0.4rem;
 	font-size: 0.75rem;
-
 }
 
 table{
 	border-collapse:collapse;
 	border: none;
 	padding: 0.4rem;
-	margin-bottom: 0;
 	}
 
 thead{
@@ -189,12 +187,7 @@ thead{
 }
 
 .page-name-heading-search {
-	margin-top: 55px;
-	font-family: roboto-lght!important;
-}
-
-.page-name-heading-no-margin {
-	margin-top: 0;
+	margin-top: 50px;
 	font-family: roboto-lght!important;
 }
 
@@ -473,27 +466,11 @@ button, .button{
 
 .ui-multiselect-menu .ui-multiselect-header{
 	height: 30px;
-	background-color: #2F3138;
-	border-right: 1px solid #1abc9c;
-	border-left: 1px solid #1abc9c;
+	background-color: #3C3C3C;
 	margin-bottom: 0px;
 	padding: 4px 0px 4px 6px;
 }
 
-.ui-multiselect-menu .ui-multiselect-checkboxes{
-	background-color: #333e45;
-	border: 1px solid #1abc9c;
-	border-top: 0;
-}
-
-
- .ui-multiselect-menu input[type="checkbox"]{
- 	margin: 0;
- }
-
-.ui-corner-all{
-	color: #fff;
-}
 .ui-multiselect-menu ul{
 	list-style: none;
 	text-decoration: none;
@@ -534,7 +511,7 @@ button, .button{
 }
 
 .ui-multiselect-menu .ui-multiselect-checkboxes span{
-	font-size: 16px;
+	font-size: 14px;
 }
 
 /*
