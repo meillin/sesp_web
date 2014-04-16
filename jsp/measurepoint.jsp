@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title><s:text name="webportal.head.title"/></title>
-	<link rel="shortcut icon" type="image/png" href="<%=request.getContextPath()%>/images/favicon.png" />	
+	<link rel="shortcut icon" type="image/png" href="<%=request.getContextPath()%>/images/favicon.png" />
 	<!-- Enable html5 tags for 6-7-8 -->
 		<!--[if lte IE 8]>
 		<script type="text/javascript">
@@ -27,13 +27,13 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/footer.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-measurepoint.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/style.tidy.css" />		
+		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/style.tidy.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/colResizable.css" />
-		
+
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/colResizable-1.3.min.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>	
+		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
 
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
 
@@ -43,38 +43,44 @@
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/OpenLayers.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/map.js"></script>
 
-		<script src="<%=request.getContextPath()%>/js/fusionchartsxt/charts/FusionCharts.js"></script>		
+		<script src="<%=request.getContextPath()%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
 		<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxcommon.js"></script>
 		<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgrid.js"></script>
 		<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgridcell.js"></script>
-		<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/customdhtmlxgrid_export.js"></script>	
+		<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/customdhtmlxgrid_export.js"></script>
 		<script src="<%=request.getContextPath()%>/js/spin.js"></script>
-		<script src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>		
+		<script src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
 		<script>
-			mepId = "<%=request.getAttribute("mepId")%>";  
-			contextPath = "<%=request.getContextPath()%>";   
-			i18nerrorInvalidSearchInput="<s:text name='webportal.error.invalidsearchinput'/>";     
-			i18nerrorNoDataForSearch="<s:text name='webportal.error.nosearchresults'/>";  
-			mapServerUrl= "<%=application.getAttribute("MAP_SERVER_URL")%>";  
+			mepId = "<%=request.getAttribute("mepId")%>";
+			contextPath = "<%=request.getContextPath()%>";
+			i18nerrorInvalidSearchInput="<s:text name='webportal.error.invalidsearchinput'/>";
+			i18nerrorNoDataForSearch="<s:text name='webportal.error.nosearchresults'/>";
+			mapServerUrl= "<%=application.getAttribute("MAP_SERVER_URL")%>";
 			isAjaxSearch = false;
-			function initMeterValueGrid(){            	
-				meterValueGrid = new dhtmlXGridObject('meterValuesGridDiv');		
-				meterValueGrid.setImagePath("<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/imgs/");		   
-				meterValueGrid.setHeader("<s:text name='webportal.measurepoint.metervalue.register'/>,<s:text name='webportal.measurepoint.metervalue.tariff'/>,<s:text name='webportal.measurepoint.metervalue.readtimestamp'/>,<s:text name='webportal.measurepoint.metervalue.receivetimestamp'/>,<s:text name='webportal.measurepoint.metervalue.consumption'/>,<s:text name='webportal.measurepoint.metervalue.status'/>");				
-				meterValueGrid.setInitWidths("*,*,*,*,*,*"); 
-				meterValueGrid.setColAlign("center,center,center,center,center,center"); 
-				meterValueGrid.setSkin("xp"); 
+			function initMeterValueGrid(){
+				meterValueGrid = new dhtmlXGridObject('meterValuesGridDiv');
+				meterValueGrid.setImagePath("<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/imgs/");
+				meterValueGrid.setHeader("<s:text name='webportal.measurepoint.metervalue.register'/>,<s:text name='webportal.measurepoint.metervalue.tariff'/>,<s:text name='webportal.measurepoint.metervalue.readtimestamp'/>,<s:text name='webportal.measurepoint.metervalue.receivetimestamp'/>,<s:text name='webportal.measurepoint.metervalue.consumption'/>,<s:text name='webportal.measurepoint.metervalue.status'/>");
+				meterValueGrid.setInitWidths("*,*,*,*,*,*");
+				meterValueGrid.setColAlign("center,center,center,center,center,center");
+				meterValueGrid.setSkin("xp");
 				meterValueGrid.init();
-			}			
+			}
 		</script>
 
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+	<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+	<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+	<![endif]-->
 	</head>
 	<body onload="javascript:measurepointDetails()">
-		
+
 		<div id="wrapper">
 
 			<%@ include file="headerv311.inc"%>
-			
+
 			<div id="main-content">
 				<div class="big-row">
 					<div class="large-12 columns">
@@ -92,11 +98,11 @@
 							</h4>
 							<div class="panel-inner">
 								<table id="overview-table">
-									<tr>	
+									<tr>
 										<td><div><s:text name="webportal.measurepoint.installationid"/>&#32:</div></td>
-										<td> <div id="block-overview-installation-id"></div></td>									
+										<td> <div id="block-overview-installation-id"></div></td>
 									</tr>
-									<tr>	
+									<tr>
 										<td><div><s:text name="webportal.measurepoint.installationcode"/>&#32:</div></td>
 										<td><div id="block-overview-installation-code"></div></td>
 									</tr>
@@ -113,25 +119,25 @@
 													<td valign="middle"><span id="block-overview-utility"></span></td>
 												</tr>
 											</table>
-										</td>									
+										</td>
 									</tr>
-									<tr>	
+									<tr>
 										<td><div><s:text name="webportal.measurepoint.domain"/>&#32:</div></td>
 										<td><div id="block-overview-domain"></div></td>
 									</tr>
-									<tr>	
+									<tr>
 										<td><div><s:text name="webportal.measurepoint.meterplacement"/>&#32:</div></td>
 										<td><div id="block-overview-meter-placement"></div></td>
 									</tr>
-									<tr>	
+									<tr>
 										<td><div><s:text name="webportal.measurepoint.measurepointcode"/>&#32:</div></td>
 										<td><div id="block-overview-measurepoint-code"></div></td>
 									</tr>
-									<tr>	
+									<tr>
 										<td><div><s:text name="webportal.measurepoint.gsrn"/>&#32:</div></td>
 										<td><div id="block-overview-gsrn"></div></td>
 									</tr>
-									<tr>	
+									<tr>
 										<td><div><s:text name="webportal.measurepoint.powerstatus"/>&#32:</div></td>
 										<td><div id="block-overview-power-status"></div></td>
 									</tr>
@@ -147,7 +153,7 @@
 								<span><s:text name="webportal.common.location"/></span>
 							</h4>
 							<div class="panel-inner">
-								<div id="block-location-map-wrapper" style="height:280px">								
+								<div id="block-location-map-wrapper" style="height:280px">
 								</div>
 								<div class="legend">
 									<div class="address legend-block text-grey">
@@ -156,7 +162,7 @@
 									</div>
 									<div class="area legend-block text-grey">
 										<div class="legend-block-title"><s:text name="webportal.measurepoint.area"/>&#32:</div>
-										<div class="legend-block-content text-light-grey" id="block-location-area"></div>									
+										<div class="legend-block-content text-light-grey" id="block-location-area"></div>
 									</div>
 								</div>
 							</div>
@@ -178,7 +184,7 @@
 								<span><s:text name="webportal.measurepoint.consumption"/></span>
 							</h4>
 							<div class="panel-inner">
-								<div id="block-consumption-chart-wrapper">								
+								<div id="block-consumption-chart-wrapper">
 								</div>
 								<div class="center-wrapper">
 									<a href="<%=request.getContextPath()%>/std/ViewMeasurepointConsumptionReportAction?id=<%=request.getAttribute("mepId")%>">
@@ -207,9 +213,9 @@
 												<!--<th class="col6"><s:text name="webportal.measurepoint.metervalue.reading"/></th>
 											--><th><s:text name="webportal.measurepoint.metervalue.status"/></th>
 										</tr>
-									</thead>	
-									<tbody>											
-									</tbody>											
+									</thead>
+									<tbody>
+									</tbody>
 								</table>
 
 								<div class="center-wrapper">
@@ -240,11 +246,11 @@
 													<th><s:text name="webportal.measurepoint.case.user"/></th>
 													<th><s:text name="webportal.measurepoint.case.domain"/></th>
 													<th><s:text name="webportal.measurepoint.case.lastchanged"/></th>
-													<th><s:text name="webportal.measurepoint.case.status"/></th>												
+													<th><s:text name="webportal.measurepoint.case.status"/></th>
 												</tr>
-											</thead>	
-											<tbody>											
-											</tbody>												
+											</thead>
+											<tbody>
+											</tbody>
 										</table>
 										<div class="center-wrapper">
 											<a href="javascript:showmoremepcase()" id="block-measurepoint-information-cases-link-more">
@@ -272,10 +278,10 @@
 													<th><s:text name="webportal.measurepoint.deviations.starttimestamp"/></th>
 													<th><s:text name="webportal.measurepoint.deviations.endtimestamp"/></th>
 													<th><s:text name="webportal.measurepoint.deviations.deviationgroup"/></th>
-												</tr>	
-											</thead>	
-											<tbody>											
-											</tbody>										
+												</tr>
+											</thead>
+											<tbody>
+											</tbody>
 										</table>
 										<div class="center-wrapper">
 											<a href="javascript:showmoremepdeviation()" id="block-measurepoint-information-deviations-link-more">
@@ -308,9 +314,9 @@
 													<th><s:text name="webportal.measurepoint.devices.endtimestamp"/></th>
 													<th><s:text name="webportal.measurepoint.devices.status"/></th>
 												</tr>
-											</thead>	
-											<tbody>											
-											</tbody>											
+											</thead>
+											<tbody>
+											</tbody>
 										</table>
 										<div class="center-wrapper">
 											<a href="javascript:showmoremepdevice()" id="block-measurepoint-information-devices-link-more" class="link-more text-blue">
@@ -338,9 +344,9 @@
 													<th><s:text name="webportal.measurepoint.events.endtimestamp"/></th>
 													<th><s:text name="webportal.measurepoint.events.receivetimestamp"/></th>
 												</tr>
-											</thead>	
-											<tbody>											
-											</tbody>											
+											</thead>
+											<tbody>
+											</tbody>
 										</table>
 										<div class="center-wrapper">
 											<a href="javascript:showmoremepevent()" id="block-measurepoint-information-events-link-more">
@@ -354,5 +360,9 @@
 					</div>
 				</div>
 				<iframe id="myIFrm" name="myIFrm" src="" style="height: 0px; visibility: hidden"> </iframe>
-			</body>
-			</html>
+
+			<!--[if lt IE 9]>
+			<script type="text/javascript" src="https://raw.githubusercontent.com/chuckcarpenter/REM-unit-polyfill/master/js/rem.min.js"></script>
+			<![endif]-->
+		</body>
+	</html>

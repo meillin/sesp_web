@@ -28,29 +28,36 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-multipoint.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/style.tidy.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/colResizable.css" />
-		
+
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/colResizable-1.3.min.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>	
+		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
 
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>	
+		<script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
 
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/search-results.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/multipoint.js"></script>	
+		<script type="text/javascript" src="<%=request.getContextPath()%>/js/multipoint.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/OpenLayers.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/map.js"></script>	
+		<script type="text/javascript" src="<%=request.getContextPath()%>/js/map.js"></script>
 		<script src="<%=request.getContextPath()%>/js/spin.js"></script>
 		<script src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
 		<script>
-			multipointId = "<%=request.getAttribute("multipointId")%>";  
-			contextPath = "<%=request.getContextPath()%>";   
-			i18nerrorInvalidSearchInput="<s:text name='webportal.error.invalidsearchinput'/>";     
-			i18nerrorNoDataForSearch="<s:text name='webportal.error.nosearchresults'/>";  
-			mapServerUrl= "<%=application.getAttribute("MAP_SERVER_URL")%>";  
-			isAjaxSearch = false;   	
+			multipointId = "<%=request.getAttribute("multipointId")%>";
+			contextPath = "<%=request.getContextPath()%>";
+			i18nerrorInvalidSearchInput="<s:text name='webportal.error.invalidsearchinput'/>";
+			i18nerrorNoDataForSearch="<s:text name='webportal.error.nosearchresults'/>";
+			mapServerUrl= "<%=application.getAttribute("MAP_SERVER_URL")%>";
+			isAjaxSearch = false;
 		</script>
+
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+	<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+	<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+	<![endif]-->
 	</head>
 	<body onload="javascript:multipointDetails()">
 		<div id="wrapper">
@@ -72,15 +79,15 @@
 							</h4>
 							<div class="panel-inner">
 								<table id="overview-table">
-									<tr>	
+									<tr>
 										<td><div class="legend-block-title"><s:text name="webportal.multipoint.installationid"/>&#32:</div> </td>
-										<td><div class="legend-block-content text-light-grey" id="block-overview-installation-id">  </div></td>	
+										<td><div class="legend-block-content text-light-grey" id="block-overview-installation-id">  </div></td>
 									</tr>
-									<tr>	
+									<tr>
 										<td><div class="legend-block-title"><s:text name="webportal.multipoint.installationcode"/>&#32:</div></td>
-										<td><div class="legend-block-content text-light-grey" id="block-overview-installation-code"></div></td>							
-									</tr>							
-									<tr>	
+										<td><div class="legend-block-content text-light-grey" id="block-overview-installation-code"></div></td>
+									</tr>
+									<tr>
 										<td><div class="legend-block-title"><s:text name="webportal.multipoint.externalcode"/>&#32:</div></td>
 										<td><div class="legend-block-content text-light-grey" id="block-overview-external-code"></div></td>
 									</tr>
@@ -95,7 +102,7 @@
 									<tr>
 										<td><div class="legend-block-title"><s:text name="webportal.multipoint.deviceplacement"/>&#32:</div></td>
 										<td><div class="legend-block-content text-light-grey" id="block-overview-device-placement"></div></td>
-									</tr>	
+									</tr>
 								</table>
 								<div class="status text-green" id="block-overview-status"></div>
 							</div>
@@ -108,14 +115,14 @@
 								<s:text name="webportal.common.location"/>
 							</h4>
 							<div class="panel-inner">
-								<div id="block-location-map-wrapper" style="height:350px">								
+								<div id="block-location-map-wrapper" style="height:350px">
 								</div>
 								<div class="legend">
 									<div>
 										<span><strong><s:text name="webportal.multipoint.address"/>:</strong> </span><span id="block-location-adress"></span>
 									</div>
 									<div>
-										<span><strong><s:text name="webportal.multipoint.area"/>:</strong> </span><span id="block-location-area"></span>									
+										<span><strong><s:text name="webportal.multipoint.area"/>:</strong> </span><span id="block-location-area"></span>
 									</div>
 								</div>
 							</div>
@@ -150,14 +157,14 @@
 											<th><s:text name="webportal.multipoint.case.lastchanged"/></th>
 											<th><s:text name="webportal.multipoint.case.status"/></th>
 										</tr>
-									</thead>	
-									<tbody>											
-									</tbody>										
+									</thead>
+									<tbody>
+									</tbody>
 								</table>
 								<div class="center-wrapper">
 									<a href="javascript:showmorecase();" id="block-multipoint-information-cases-link-more">
 										<s:text name="webportal.multipoint.case.showmorecases"/>
-									</a>										
+									</a>
 								</div>
 							</div>
 						</div>
@@ -182,8 +189,8 @@
 											<th><s:text name="webportal.multipoint.deviations.endtimestamp"/></th>
 											<th><s:text name="webportal.multipoint.deviations.deviationgroup"/></th>
 										</tr>
-									</thead>	
-									<tbody>											
+									</thead>
+									<tbody>
 									</tbody>
 								</table>
 								<div class="center-wrapper">
@@ -199,7 +206,7 @@
 							<div class="panel-outer">
 								<h4 class="panel-heading">
 									<i class="fi-graph-trend colorHeading"></i>
-									<span class="accordion-title"> 
+									<span class="accordion-title">
 										<s:text name="webportal.multipoint.cases"/>
 										<span id="block-multipoint-information-cases-number"></span>
 									</span>
@@ -218,8 +225,8 @@
 												<th><s:text name="webportal.multipoint.devices.endtimestamp"/></th>
 												<th><s:text name="webportal.multipoint.devices.status"/></th>
 											</tr>
-										</thead>	
-										<tbody>											
+										</thead>
+										<tbody>
 										</tbody>
 									</table>
 									<div class="center-wrapper">
@@ -234,7 +241,7 @@
 							<div class="panel-outer">
 								<h4 class="panel-heading">
 									<i class="fi-graph-trend colorHeading"></i>
-									<span class="accordion-title"> 
+									<span class="accordion-title">
 										<s:text name="webportal.multipoint.events"/>
 										<span id="block-multipoint-information-events-number"></span>
 									</span>
@@ -250,9 +257,9 @@
 												<th><s:text name="webportal.multipoint.events.endtimestamp"/></th>
 												<th><s:text name="webportal.multipoint.events.receivetimestamp"/></th>
 											</tr>
-										</thead>	
-										<tbody>											
-										</tbody>											
+										</thead>
+										<tbody>
+										</tbody>
 									</table>
 									<div class="center-wrapper">
 										<a href="javascript:showmoreevent()" id="block-multipoint-information-events-link-more">
@@ -265,5 +272,9 @@
 					</div>
 				</div>
 			</div>
-		</body>
-		</html>
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="https://raw.githubusercontent.com/chuckcarpenter/REM-unit-polyfill/master/js/rem.min.js"></script>
+		<![endif]-->
+	</body>
+</html>

@@ -16,7 +16,7 @@
 		document.createElement("article");
 		document.createElement("figure");
 		</script>
-		<![endif]-->	
+		<![endif]-->
 
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
@@ -27,7 +27,7 @@
 
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-search-results.css" />
 		<!--<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/colResizable.css" />-->
-		
+
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
 		<!--<script type="text/javascript" src="<%=request.getContextPath()%>/js/colResizable-1.3.min.js"></script>-->
@@ -35,18 +35,23 @@
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
 
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/search-results.js"></script>		
+		<script type="text/javascript" src="<%=request.getContextPath()%>/js/search-results.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/spin.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
-		
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+	<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+	<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+	<![endif]-->
 	</head>
-	<body onload="searchentities()">	
+	<body onload="searchentities()">
 		<script>
-			contextPath = "<%=request.getContextPath()%>";   
-			i18nerrorInvalidSearchInput = "<s:text name='webportal.search.results.error.invalidsearchinput'/>"; 
-			i18nerrorInvalidSearchAction = "<s:text name='webportal.search.results.error.invalidsearchaction'/>";        
-			i18nerrorNoDataForSearch = "<s:text name='webportal.search.results.error.nosearchresults'/>";   
-			isAjaxSearch = true;      	
+			contextPath = "<%=request.getContextPath()%>";
+			i18nerrorInvalidSearchInput = "<s:text name='webportal.search.results.error.invalidsearchinput'/>";
+			i18nerrorInvalidSearchAction = "<s:text name='webportal.search.results.error.invalidsearchaction'/>";
+			i18nerrorNoDataForSearch = "<s:text name='webportal.search.results.error.nosearchresults'/>";
+			isAjaxSearch = true;
 		</script>
 		<div id="wrapper">
 			<%@ include file="headerv311.inc" %>
@@ -63,9 +68,9 @@
 						<div class="large-12 columns">
 							<div class="panel-outer" id="block-search-results-installations" style="display: none;">
 								<h4 class="panel-heading">
-									<i class="fi-graph-trend colorHeading"></i> 
-									<s:text name="webportal.search.results.installation.title"/> 
-									<span id="block-search-results-installations-number"></span> 
+									<i class="fi-graph-trend colorHeading"></i>
+									<s:text name="webportal.search.results.installation.title"/>
+									<span id="block-search-results-installations-number"></span>
 								</h4>
 								<div class="panel-inner">
 									<table id="instresults">
@@ -82,7 +87,7 @@
 												<th><s:text name="webportal.search.results.installation.status"/></th>
 											</tr>
 										</thead>
-										<tbody>											
+										<tbody>
 										</tbody>
 									</table>
 									<a href="javascript:showMoreResults('INST');" id="block-search-results-installations-link-more"><s:text name="webportal.search.results.installation.options.showmore"/></a>
@@ -94,7 +99,7 @@
 						<div class="large-12 columns">
 							<div class="panel-outer" id="block-search-results-measurepoints" style="display: none;">
 								<h4 class="panel-heading">
-									<i class="fi-graph-trend colorHeading"></i> 
+									<i class="fi-graph-trend colorHeading"></i>
 									<s:text name="webportal.search.results.measurepoint.title"/>
 									<span id="block-search-results-measurepoints-number"></span>
 								</h4>
@@ -114,7 +119,7 @@
 												<th><s:text name="webportal.search.results.measurepoint.status"/></th>
 											</tr>
 										</thead>
-										<tbody>											
+										<tbody>
 										</tbody>
 									</table>
 									<div class="center-wrapper">
@@ -146,7 +151,7 @@
 												<th><s:text name="webportal.search.results.multipoint.netarea"/></th>
 											</tr>
 										</thead>
-										<tbody>											
+										<tbody>
 										</tbody>
 									</table>
 									<div class="center-wrapper">
@@ -178,8 +183,8 @@
 												<th><s:text name="webportal.search.results.device.status"/></th>
 											</tr>
 										</thead>
-										<tbody>											
-										</tbody>		
+										<tbody>
+										</tbody>
 									</table>
 									<div class="center-wrapper">
 										<a href="javascript:showMoreResults('DEVICE')" id="block-search-results-devices-link-more" class="link-more text-blue"><s:text name="webportal.search.results.device.options.showmore"/></a>
@@ -207,8 +212,8 @@
 												<th><s:text name="webportal.search.results.case.status"/></th>
 											</tr>
 										</thead>
-										<tbody>											
-										</tbody>	
+										<tbody>
+										</tbody>
 									</table>
 									<div class="center-wrapper">
 										<a href="javascript:showMoreResults('CASE')" id="block-search-results-cases-link-more" class="link-more text-blue"><s:text name="webportal.search.results.case.options.showmore"/></a>
@@ -229,9 +234,13 @@
 			/*$('#block-search-results-installations-link-more').hide();
 			$('#block-search-results-measurepoints-link-more').hide();
 			$('#block-search-results-multipoints-link-more').hide();
-			$('#block-search-results-devices-link-more').hide();	
+			$('#block-search-results-devices-link-more').hide();
 			$('#block-search-results-cases-link-more').hide();*/
 		</script>
 	</div>
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="https://raw.githubusercontent.com/chuckcarpenter/REM-unit-polyfill/master/js/rem.min.js"></script>
+<![endif]-->
 </body>
 </html>

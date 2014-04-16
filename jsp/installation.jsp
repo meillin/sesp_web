@@ -24,10 +24,10 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/general.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/header.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-block.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/footer.css" />		
+		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/footer.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-installation.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/style.tidy.css" />		
-		
+		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/style.tidy.css" />
+
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
@@ -44,22 +44,29 @@
 		<script src="<%=request.getContextPath()%>/js/spin.js"></script>
 		<script src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
 		<script type="text/javascript">
-			$(function(){	
+			$(function(){
 				renderTable("#overview-table");
 				renderTable("#block-cases-table");
 				renderTable("#block-multipoint-measurepoints-table");
-			});		
+			});
 		</script>
+
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+	<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+	<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+	<![endif]-->
 	</head>
 	<body>
 		<script>
-			contextPath = "<%=request.getContextPath()%>";       
-			id="<%=request.getAttribute("id")%>"; 
-			mapServerUrl= "<%=application.getAttribute("MAP_SERVER_URL")%>";   
-			isAjaxSearch = false;    	
+			contextPath = "<%=request.getContextPath()%>";
+			id="<%=request.getAttribute("id")%>";
+			mapServerUrl= "<%=application.getAttribute("MAP_SERVER_URL")%>";
+			isAjaxSearch = false;
 		</script>
 		<div id="wrapper">
-			<%@ include file="headerv311.inc"%>			
+			<%@ include file="headerv311.inc"%>
 			<div id="main-content">
 				<div class="big-row">
 					<div class="large-12 columns">
@@ -76,8 +83,8 @@
 							<span class="block-title-name text-blue"><s:text name="webportal.common.overview"/></span>
 						</h4>
 						<div class="panel-inner">
-							<table id="overview-table">	
-								<tr>								
+							<table id="overview-table">
+								<tr>
 									<td><s:text name="webportal.installation.installationcode"/>:</td>
 									<td><div id="block-overview-installation-code"></div></td>
 								</tr>
@@ -128,7 +135,7 @@
 							</div>
 							<div>
 								<strong><s:text name="webportal.installation.area"/>:</strong>
-								<span id="block-location-area"></span>									
+								<span id="block-location-area"></span>
 							</div>
 
 					</div>
@@ -158,7 +165,7 @@
 							</tr>
 						</thead>
 						<tbody>
-						</tbody>								
+						</tbody>
 					</table>
 					<div class="center-wrapper">
 						<a href="javascript:showMoreInstCases();" id="block-cases-link-more" class="text-blue"><s:text name="webportal.installation.cases.showmore"/></a>
@@ -202,6 +209,10 @@
 </div>
 <script>
 	initInstallation();
-</script>  
+</script>
+
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="https://raw.githubusercontent.com/chuckcarpenter/REM-unit-polyfill/master/js/rem.min.js"></script>
+	<![endif]-->
 </body>
 </html>

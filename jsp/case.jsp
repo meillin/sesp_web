@@ -37,32 +37,38 @@
 
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
 
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>		
+		<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/search-results.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/case.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/OpenLayers.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/map.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxcommon.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgrid.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgridcell.js"></script>    
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/customdhtmlxgrid_export.js"></script>	
+		<script type="text/javascript" src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgridcell.js"></script>
+		<script type="text/javascript" src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/customdhtmlxgrid_export.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/spin.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
 
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+	<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+	<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+	<![endif]-->
 	</head>
 	<body>
 		<script>
-			contextPath = "<%=request.getContextPath()%>";       
-			caseId="<%=request.getAttribute("id")%>";     
-			mapServerUrl= "<%=application.getAttribute("MAP_SERVER_URL")%>";    
+			contextPath = "<%=request.getContextPath()%>";
+			caseId="<%=request.getAttribute("id")%>";
+			mapServerUrl= "<%=application.getAttribute("MAP_SERVER_URL")%>";
 			i18nerrorNoCaseData = "<s:text name='webportal.case.results.error.nocaseresults'/>";
-			i18nerrorInvalidCaseAction = "<s:text name='webportal.case.results.error.invalidcaseaction'/>"; 
+			i18nerrorInvalidCaseAction = "<s:text name='webportal.case.results.error.invalidcaseaction'/>";
 			woEventsExportHeader = "<s:text name='webportal.case.work.order.events.type'/>, " +
 			" <s:text name='webportal.case.work.order.events.timestamp'/>, " +
 			" <s:text name='webportal.case.work.order.events.result'/>, " +
 			" <s:text name='webportal.case.work.order.events.source'/>, " +
 			" <s:text name='webportal.case.work.order.events.create.signature'/>, " +
-			" <s:text name='webportal.case.work.order.events.create.timestamp'/> ";                    
+			" <s:text name='webportal.case.work.order.events.create.timestamp'/> ";
 
 		</script>
 		<div id="wrapper">
@@ -84,7 +90,7 @@
 								<span><s:text name="webportal.case.overview.title"/></span>
 							</h4>
 							<div class="panel-inner">
-								<table id="overview-table">	
+								<table id="overview-table">
 									<tr>
 										<td><div><s:text name="webportal.case.overview.case.type"/> : </div></td>
 										<td><div id="block-overview-case-type"></div></td>
@@ -147,7 +153,7 @@
 									</div>
 									<div>
 										<div><s:text name="webportal.case.location.area"/> :</div>
-										<div id="block-location-area"></div>									
+										<div id="block-location-area"></div>
 									</div>
 								</div>
 							</div>
@@ -213,7 +219,7 @@
 								</table>
 								<div class="center-wrapper">
 									<a href="javascript:showMoreResults('SLA')" id="block-case-sla-link-more"><s:text name="webportal.case.sla.options.showmore"/></a>
-								</div>	
+								</div>
 							</div>
 						</div>
 					</div>
@@ -270,7 +276,7 @@
 								</table>
 								<div class="center-wrapper">
 									<a href="javascript:showMoreResults('MESSAGES')" id="block-case-messages-link-more"><s:text name="webportal.case.messages.options.showmore"/></a>
-								</div>	
+								</div>
 							</div>
 						</div>
 					</div>
@@ -279,7 +285,7 @@
 							<h4 class="panel-heading">
 								<i class="fi-graph-trend colorHeading"></i>
 								<s:text name="webportal.case.work.order.events.title"/>
-								<span id="block-work-order-events-number"></span>	
+								<span id="block-work-order-events-number"></span>
 							</h4>
 							<div class="panel-inner">
 								<table id="caseWoEvents">
@@ -321,7 +327,7 @@
 						<div class="panel-outer">
 							<h4 class="panel-heading">
 								<i class="fi-graph-trend colorHeading"></i>
-								<s:text name="webportal.case.history.status.title"/> 
+								<s:text name="webportal.case.history.status.title"/>
 								<span id="block-case-status-history-number"></span>
 							</h4>
 							<div class="panel-inner">
@@ -349,7 +355,7 @@
 						<div class="panel-outer">
 							<h4 class="panel-heading">
 								<i class="fi-graph-trend colorHeading"></i>
-								<s:text name="webportal.case.action.history.title"/> 
+								<s:text name="webportal.case.action.history.title"/>
 								<span id="block-case-status-action-number"></span>
 							</h4>
 								<div class="panel-inner">
@@ -416,5 +422,9 @@
 					<!-- Footer -->
 				</div>
 				<iframe id="myIFrm" name="myIFrm" src="" style="height: 0px; visibility: hidden"> </iframe>
-			</body>
-			</html>
+
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="https://raw.githubusercontent.com/chuckcarpenter/REM-unit-polyfill/master/js/rem.min.js"></script>
+	<![endif]-->
+	</body>
+</html>

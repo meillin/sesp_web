@@ -77,6 +77,12 @@
 			i18nplanningdomain="<s:text name="webportal.resourceprojections.planningperiods.domain"/>";
 		</script>
 
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+	<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+	<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+	<![endif]-->
 	</head>
 	<body onload="loadDefaultData()">
 		<div id="wrapper">
@@ -111,7 +117,7 @@
 										<option value="upcomingmonth"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingmonth"/></option>
 										<option value="upcomingquarter"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingquarter"/></option>
 										<option value="upcomingyear"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingyear"/></option>
-										<option value="custominterval"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingweek"/></option>
+										<option value="custominterval"><s:text name="webportal.resourceprojections.time.dateinterval.custominterval"/></option>
 									</select>
 								</div>
 							</div>
@@ -330,7 +336,10 @@
 		<script src="<%=contextPath%>/js/highchart/resource-projection-chart.js"></script>
 
 		<script src="<%=contextPath%>/js/foundation/foundation.js"></script>
-		<script src="<%=contextPath%>/js/foundation/foundation.accordion.js"></script>
 		<script src="<%=contextPath%>/js/common.js"></script>
+
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="https://raw.githubusercontent.com/chuckcarpenter/REM-unit-polyfill/master/js/rem.min.js"></script>
+	<![endif]-->
 	</body>
 	</html>
