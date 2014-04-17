@@ -613,15 +613,6 @@ function drawDetailedProgress() {
         tooltip: {
             shared: true
         },
-        legend: {
-            layout: 'vertical',
-            align: 'left',
-            x: 120,
-            verticalAlign: 'top',
-            y: 100,
-            floating: true,
-            backgroundColor: '#FFFFFF'
-        },
         series: [{
             name: 'Planned Work Order',
             color: '#4572A7',

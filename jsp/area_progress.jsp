@@ -282,7 +282,15 @@ document.createElement("figure");
 			</div>
 			<!-- start of new full width row -->
 			<div class="big-row">
-				<div class="large-5 columns">
+				<div class="large-6 columns map">
+					<div class="panel-outer">
+						<h4 class="panel-heading"><i class="fi-marker colorHeading"></i><span> Area progress</span></h4>
+						<div class="panel-inner">
+							<div style="width: 100%; height: 550px; opacity:0.99;" id="map-wrapper"></div>
+						</div>
+					</div>
+				</div>
+				<div class="large-6 columns">
 							<div class="panel-outer progress-chart">
 								<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i><span> Area progress</span></h4>
 								<div class="panel-inner" id="work-order-chart-view">
@@ -312,14 +320,6 @@ document.createElement("figure");
 								</div>
 							</div>
 				</div><!-- end of charts -->
-				<div class="large-7 columns map">
-					<div class="panel-outer">
-						<h4 class="panel-heading"><i class="fi-marker colorHeading"></i><span> Area progress</span></h4>
-						<div class="panel-inner">
-							<div style="width: 100%; height: 550px; opacity:0.99;" id="map-wrapper"></div>
-						</div>
-					</div>
-				</div>
 			</div><!-- end of new full width row -->
 		</div>
 
