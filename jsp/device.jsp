@@ -72,9 +72,9 @@ document.createElement("figure");
 		<div id="main-content">
 			<div class="big-row">
 				<div class="large-12 columns">
-					<h2 class="page-name-heading-search">
+					<h3 class="page-name-heading-search">
 						<s:text name='webportal.device.results.title'/> : <span id="device-id"></span>
-					</h2>
+					</h3>
 				</div>
 			</div>
 			<div class="big-row">
@@ -96,7 +96,7 @@ document.createElement("figure");
 								<li><span> <s:text name='webportal.device.overview.device.pallet'/>: </span><span id="block-overview-pallet"></span></li>
 								<li><span> <s:text name='webportal.device.overview.device.stock'/>: </span><span id="block-overview-stock-site"></span></li>
 							</ul>
-							<div class="status text-green" id="block-overview-status"></div>
+							<h3 class="status text-green" id="block-overview-status"></h3>
 						</div>
 					</div>
 				</div>
@@ -151,17 +151,17 @@ document.createElement("figure");
 				</div>
 				<div class="big-row">
 					<div class="large-12 columns">
-						<h2 class="page-name-heading-search">
+						<h3 class="page-name-heading-nomargin">
 							<s:text name='webportal.device.history.title'/>
-						</h2>
+						</h3>
 					</div>
 				</div>
 				<div class="big-row">
 					<div class="large-12 columns">
 						<div class="panel-outer">
 							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"></i>
-								<s:text name='webportal.device.history.installation.title'/>
+								<i class="fi-graph-trend colorHeading"> </i>
+								<span><s:text name='webportal.device.history.installation.title'/></span>
 								<span id="block-device-installations-number"> </span>
 							</h4>
 							<div class="panel-inner">
@@ -186,8 +186,8 @@ document.createElement("figure");
 						</div>
 						<div class="panel-outer">
 							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"></i>
-								<s:text name='webportal.device.history.status.title'/>
+								<i class="fi-graph-trend colorHeading"> </i>
+								<span><s:text name='webportal.device.history.status.title'/></span>
 								<span id="block-device-status-number"></span>
 							</h4>
 							<div class="panel-inner">
@@ -212,9 +212,9 @@ document.createElement("figure");
 						</div>
 						<div class="panel-outer">
 							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"></i>
-								<s:text name='webportal.device.history.pallet.title'/>
-								<span id="block-device-pallet-number"></span>
+								<i class="fi-graph-trend colorHeading"> </i> 
+								<span><s:text name='webportal.device.history.pallet.title'/></span> 
+								<span id="block-device-pallet-number"> </span>
 							</h4>
 							<div class="panel-inner">
 								<table id="device-pallet-table">
@@ -234,7 +234,7 @@ document.createElement("figure");
 									</tbody>
 								</table>
 								<div class="center-wrapper">
-									<a href="javascript:showMoreDeviceResults('PALLET')" id="block-device-pallet-link-more" class="link-more text-blue">
+									<a href="javascript:showMoreDeviceResults('PALLET')" id="block-device-pallet-link-more">
 										<s:text name='webportal.device.history.pallet.options.showmore'/>
 									</a>
 								</div>
@@ -243,8 +243,8 @@ document.createElement("figure");
 
 						<div class="panel-outer">
 							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"></i>
-								<s:text name='webportal.device.history.stocksite.title'/>
+								<i class="fi-graph-trend colorHeading"></i> 
+								<span><s:text name='webportal.device.history.stocksite.title'/></span>
 								<span id="block-device-stock-site-number"></span>
 							</h4>
 
@@ -270,8 +270,8 @@ document.createElement("figure");
 						</div>
 						<div class="panel-outer">
 							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"></i>
-								<s:text name='webportal.device.history.owner.title'/>
+								<i class="fi-graph-trend colorHeading"> </i> 
+								<span><s:text name='webportal.device.history.owner.title'/></span> 
 								<span id="block-device-owner-number"></span>
 							</h4>
 							<div class="panel-inner">

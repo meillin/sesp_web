@@ -187,7 +187,12 @@ thead{
 }
 
 .page-name-heading-search {
-	margin-top: 50px;
+	margin-top: 55px;
+	font-family: roboto-lght!important;
+}
+
+.page-name-heading-nomargin{
+	margin-top: 0;
 	font-family: roboto-lght!important;
 }
 
@@ -209,6 +214,14 @@ thead{
 	font-family: roboto-med!important;
 	color: #1abc9c !important;
 	opacity: 1;
+}
+
+.text-green{
+	color: #1abc9c;
+	padding: 5px;
+	font-weight: bolder;
+	font-size: 18px;
+	margin: 0;
 }
 
 /*.progress-chart-li {

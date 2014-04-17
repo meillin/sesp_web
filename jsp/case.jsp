@@ -77,9 +77,9 @@
 			<div id="main-content">
 				<div class="big-row">
 					<div class="large-12 columns">
-						<h2 class="page-name-heading-search">
+						<h3 class="page-name-heading-search">
 							<s:text name="webportal.case.results.text.description"/>:<span id="case-id"> </span>
-						</h2>
+						</h3>
 					</div>
 				</div>
 				<div class="big-row">
@@ -132,14 +132,14 @@
 										<td><div id="block-overview-case-result"></div></td>
 									</tr>
 								</table>
-								<div id="block-overview-status">  </div>
+								<h3 class="status text-green" id="block-overview-status"></h3>
 							</div>
 						</div>
 					</div>
 					<div class="large-6 columns">
 						<div class="panel-outer">
 							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"></i>
+								<span><i class="fi-graph-trend colorHeading"></i></span>
 								<s:text name="webportal.case.location.title"/>
 							</h4>
 							<div class="panel-inner">
@@ -165,7 +165,7 @@
 						<div class="panel-outer">
 							<h4 class="panel-heading">
 								<i class="fi-graph-trend colorHeading"></i>
-								<s:text name="webportal.case.installation.title"/>
+								<span><s:text name="webportal.case.installation.title"/></span>
 								<span id="block-installations-number"></span>
 							</h4>
 							<div class="panel-inner">
@@ -193,7 +193,7 @@
 					</div>
 				</div>
 				<div class="big-row">
-					<div class="large-8 columns">
+					<div class="large-12 columns">
 						<div class="panel-outer">
 							<h4 class="panel-heading">
 								<i class="fi-graph-trend colorHeading"></i>
@@ -223,7 +223,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="large-4 columns">
+				</div>
+				<div class="big-row">
+					<div class="large-12 columns">
 						<div class="panel-outer">
 							<h4 class="panel-heading">
 								<i class="fi-graph-trend colorHeading"></i>
@@ -252,7 +254,7 @@
 					</div>
 				</div>
 				<div class="big-row">
-					<div class="large-6 columns">
+					<div class="large-12 columns">
 						<div class="panel-outer">
 							<h4 class="panel-heading">
 								<i class="fi-graph-trend colorHeading"></i>
@@ -260,7 +262,7 @@
 								<span><span id="block-messages-number"></span></span>
 							</h4>
 							<div class="panel-inner">
-								<table id="caseMessages" class="text-grey owner-table big-table">
+								<table id="caseMessages">
 									<thead>
 										<tr class="table-title">
 											<th><s:text name="webportal.case.messages.id"/></th>
@@ -280,11 +282,13 @@
 							</div>
 						</div>
 					</div>
-					<div class="large-6 columns">
+				</div>
+				<div class="big-row">
+					<div class="large-12 columns">
 						<div class="panel-outer">
 							<h4 class="panel-heading">
 								<i class="fi-graph-trend colorHeading"></i>
-								<s:text name="webportal.case.work.order.events.title"/>
+								<span><s:text name="webportal.case.work.order.events.title"/></span>
 								<span id="block-work-order-events-number"></span>
 							</h4>
 							<div class="panel-inner">
@@ -314,20 +318,17 @@
 				</div>
 				<div class="big-row">
 					<div class="large-12 columns">
-						<h2 class="page-name-heading-search">
+						<h3 class="page-name-heading-nomargin">
 							<s:text name="webportal.case.history.title"/>
-						</h2>
+						</h3>
 					</div>
 				</div>
-
-
 				<div class="big-row">
-
 					<div class="large-12 columns">
 						<div class="panel-outer">
 							<h4 class="panel-heading">
 								<i class="fi-graph-trend colorHeading"></i>
-								<s:text name="webportal.case.history.status.title"/>
+								<span><s:text name="webportal.case.history.status.title"/></span>
 								<span id="block-case-status-history-number"></span>
 							</h4>
 							<div class="panel-inner">
@@ -355,7 +356,7 @@
 						<div class="panel-outer">
 							<h4 class="panel-heading">
 								<i class="fi-graph-trend colorHeading"></i>
-								<s:text name="webportal.case.action.history.title"/>
+								<span><s:text name="webportal.case.action.history.title"/></span>
 								<span id="block-case-status-action-number"></span>
 							</h4>
 								<div class="panel-inner">
@@ -382,7 +383,7 @@
 								<div class="panel-outer">
 									<h4 class="panel-heading">
 									<i class="fi-graph-trend colorHeading"></i>
-										<s:text name="webportal.case.customer.contact.history.title"/>
+										<span><s:text name="webportal.case.customer.contact.history.title"/></span>
 										<span id="block-case-cust-contact-number"></span>
 									</h4>
 										<div class="panel-inner">
@@ -410,12 +411,7 @@
 											</div>
 										</div>
 									</div>
-
-
-
 								</div>
-
-
 							</div>
 						</div>
 					</div>

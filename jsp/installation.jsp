@@ -57,27 +57,27 @@
 	<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
 	<![endif]-->
-	</head>
-	<body>
-		<script>
-			contextPath = "<%=request.getContextPath()%>";
-			id="<%=request.getAttribute("id")%>";
-			mapServerUrl= "<%=application.getAttribute("MAP_SERVER_URL")%>";
-			isAjaxSearch = false;
-		</script>
-		<div id="wrapper">
-			<%@ include file="headerv311.inc"%>
-			<div id="main-content">
-				<div class="big-row">
-					<div class="large-12 columns">
-						<h2 class="page-name-heading-search">
-							<s:text name="webportal.installation.installationid"/>: <span id="installation-id" class=" text-light-grey">458785</span>
-						</h2>
-					</div>
+</head>
+<body>
+	<script>
+		contextPath = "<%=request.getContextPath()%>";
+		id="<%=request.getAttribute("id")%>";
+		mapServerUrl= "<%=application.getAttribute("MAP_SERVER_URL")%>";
+		isAjaxSearch = false;
+	</script>
+	<div id="wrapper">
+		<%@ include file="headerv311.inc"%>
+		<div id="main-content">
+			<div class="big-row">
+				<div class="large-12 columns">
+					<h3 class="page-name-heading-search">
+						<s:text name="webportal.installation.installationid"/>: <span id="installation-id" class=" text-light-grey">458785</span>
+					</h3>
 				</div>
-				<div class="big-row">
-					<div class="large-6 columns">
-						<div class="panel-outer">
+			</div>
+			<div class="big-row">
+				<div class="large-6 columns">
+					<div class="panel-outer">
 						<h4 class="panel-heading">
 							<i class="fi-graph-trend colorHeading"></i>
 							<span class="block-title-name text-blue"><s:text name="webportal.common.overview"/></span>
@@ -113,22 +113,20 @@
 									<td><div id="block-overview-accessible-tech"></div></td>
 								</tr>
 							</table>
-							<div class="status text-green" id="block-overview-status"></div>
+							<h3 class="status text-green" id="block-overview-status"></h3>
 						</div>
 					</div>
 				</div>
-
 				<div class="large-6 columns">
 					<div class="panel-outer">
 						<h4 class="panel-heading">
-						<i class="fi-graph-trend colorHeading"></i>
-						<span class="block-title-name text-blue"><s:text name="webportal.common.location"/></span>
+							<i class="fi-graph-trend colorHeading"></i>
+							<span class="block-title-name text-blue"><s:text name="webportal.common.location"/></span>
 						</h4>
-					<div class="panel-inner">
-						<div id="osmap" style="height:300px">
-							<!-- <iframe width="444" height="195" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-1.55302,47.19581,-1.50817,47.22307&amp;layer=mapnik&amp;marker=47.21659,-1.53457"></iframe>  -->
-						</div>
-
+						<div class="panel-inner">
+							<div id="osmap" style="height:300px">
+								<!-- <iframe width="444" height="195" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-1.55302,47.19581,-1.50817,47.22307&amp;layer=mapnik&amp;marker=47.21659,-1.53457"></iframe>  -->
+							</div>
 							<div>
 								<strong><s:text name="webportal.installation.address"/>:</strong>
 								<span id="block-location-address"></span>
@@ -137,75 +135,70 @@
 								<strong><s:text name="webportal.installation.area"/>:</strong>
 								<span id="block-location-area"></span>
 							</div>
-
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="big-row">
-			<div class="large-6 columns">
-				<div class="panel-outer">
-					<h4 class="panel-heading">
-					<i class="fi-graph-trend colorHeading"></i>
-					<span><s:text name='webportal.device.overview.device.title'/></span>
-					<span id="block-cases-number-value"></span>
-				</h4>
-				<div class="panel-inner">
-					<table class="big-table cases" id="block-cases-table">
-						<thead>
-							<tr class="table-title">
-								<th> &nbsp;&nbsp;&nbsp; <s:text name="webportal.installation.cases.id"/></th>
-								<th><s:text name="webportal.installation.cases.externalid"/></th>
-								<th><s:text name="webportal.installation.cases.casetype"/></th>
-								<th><s:text name="webportal.installation.cases.user"/></th>
-								<th><s:text name="webportal.installation.cases.domain"/></th>
-								<th><s:text name="webportal.installation.cases.lastchanged"/></th>
-								<th><s:text name="webportal.installation.cases.status"/></th>
-							</tr>
-						</thead>
-						<tbody>
-						</tbody>
-					</table>
-					<div class="center-wrapper">
-						<a href="javascript:showMoreInstCases();" id="block-cases-link-more" class="text-blue"><s:text name="webportal.installation.cases.showmore"/></a>
+			<div class="big-row">
+				<div class="large-12 columns">
+					<div class="panel-outer">
+						<h4 class="panel-heading">
+							<i class="fi-graph-trend colorHeading"></i>
+							<span><s:text name='webportal.device.overview.device.title'/></span>
+							<span id="block-cases-number-value"></span>
+						</h4>
+						<div class="panel-inner">
+							<table class="big-table cases" id="block-cases-table">
+								<thead>
+									<tr class="table-title">
+										<th><s:text name="webportal.installation.cases.id"/></th>
+										<th><s:text name="webportal.installation.cases.externalid"/></th>
+										<th><s:text name="webportal.installation.cases.casetype"/></th>
+										<th><s:text name="webportal.installation.cases.user"/></th>
+										<th><s:text name="webportal.installation.cases.domain"/></th>
+										<th><s:text name="webportal.installation.cases.lastchanged"/></th>
+										<th><s:text name="webportal.installation.cases.status"/></th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+							<div class="center-wrapper">
+								<a href="javascript:showMoreInstCases();" id="block-cases-link-more" class="text-blue"><s:text name="webportal.installation.cases.showmore"/></a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-
-
-		<div class="large-6 columns">
-			<div class="panel-outer"><h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i>
-			<span class="block-title-name text-blue"><s:text name="webportal.installation.multimeasurepoint.multipointandmeasurepoints"/></span>
-			<span id="block-multipoint-measurepoints-number-value"></span>
-			</h4>
-			<div class="panel-inner">
-				<table class="big-table cases" id="block-multipoint-measurepoints-table">
-					<thead>
-						<tr class="table-title">
-							<th></th>
-							<th><s:text name="webportal.installation.multimeasurepoint.id"/></th>
-							<th><s:text name="webportal.installation.multimeasurepoint.code"/></th>
-							<th><s:text name="webportal.installation.multimeasurepoint.type"/></th>
-							<th><s:text name="webportal.installation.multimeasurepoint.utility"/></th>
-							<th><s:text name="webportal.installation.multimeasurepoint.status"/></th>
-						</tr>
-					</thead>
-					<tbody>
-					</tbody>
-				</table>
-				<div class="center-wrapper">
-					<a href="javascript:showMoreInstMultiMeasurePoints();" id="block-multipoint-measurepoints-link-more" class="text-blue"><s:text name="webportal.installation.multimeasurepoint.showmore"/></a>
+			<div class="big-row">
+				<div class="large-12 columns">
+					<div class="panel-outer"><h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i>
+						<span class="block-title-name text-blue"><s:text name="webportal.installation.multimeasurepoint.multipointandmeasurepoints"/></span>
+						<span id="block-multipoint-measurepoints-number-value"></span>
+					</h4>
+					<div class="panel-inner">
+						<table class="big-table cases" id="block-multipoint-measurepoints-table">
+							<thead>
+								<tr class="table-title">
+									<th><s:text name="webportal.installation.multimeasurepoint.id"/></th>
+									<th><s:text name="webportal.installation.multimeasurepoint.code"/></th>
+									<th><s:text name="webportal.installation.multimeasurepoint.type"/></th>
+									<th><s:text name="webportal.installation.multimeasurepoint.utility"/></th>
+									<th><s:text name="webportal.installation.multimeasurepoint.status"/></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+						<div class="center-wrapper">
+							<a href="javascript:showMoreInstMultiMeasurePoints();" id="block-multipoint-measurepoints-link-more" class="text-blue"><s:text name="webportal.installation.multimeasurepoint.showmore"/></a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-
-
-</div>
-<%@ include file="footerv311.inc"%>
 </div>
 <script>
 	initInstallation();
