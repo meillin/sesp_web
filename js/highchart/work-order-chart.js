@@ -278,7 +278,7 @@ $( document ).ready(function() {
         });
     }
     function drawAreaStatus() {
-        $('#area-status').highcharts({
+        $('#area-progress').highcharts({
             chart: {
                 type: 'bar',
                 height: 500
@@ -287,14 +287,39 @@ $( document ).ready(function() {
                 text: ''
             },
             xAxis: {
+                title: '',
+                stackLabels: {
+                    enabled: true,
+                    style: {
+                        fontWeight: 'bold',
+                        color: 'gray'
+                    }
+                },
                 categories: ['Area 1', 'Area 2', 'Area 3', 'Area 4', 'Area 5', 'Area 6', 'Area 7', 'Area 8', 'Area 9']
+            },
+            yAxis: {
+                title: '',
+                stackLabels: {
+                    enabled: true,
+                    style: {
+                        fontWeight: 'bold',
+                        color:'gray'
+                    }
+                }
             },
             legend: {
                 backgroundColor: '#FFFFFF'
             },
             plotOptions: {
                 bar: {
-                    stacking: 'percent'
+                    stacking: 'percent',
+                    dataLabels: {
+                        enabled: true,
+                        color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                        style: {
+                            //textShadow: '0 0 3px black, 0 0 3px black'
+                        }
+                    }
                 }
             },
             series: [{
@@ -315,118 +340,66 @@ $( document ).ready(function() {
                     }]
                 });
     }
-    function drawAreaProgress() {
-       var categories = ['Performed', 'Not performed', 'Not planned', 'Not performed final', 'Opera'],
-        name = '',
-        data = [{
-                y: 10000,
-                color: colors[0],
-                drilldown: {
-                    name: 'Performed versions',
-                    categories: ['Performed'],
-                    data: [10000],
-                    color: colors[0]
-                }
-            }, {
-                y: 1000,
-                color: colors[1],
-                drilldown: {
-                    name: 'Not performed versions',
-                    categories: ['Not performed'],
-                    data: [1000],
-                    color: colors[1]
-                }
-            }, {
-                y: 1000,
-                color: colors[2],
-                drilldown: {
-                    name: 'Not planned versions',
-                    categories: ['Not planned versions'],
-                    data: [1000],
-                    color: colors[2]
-                }
-            }, {
-                y: 5470,
-                color: colors[3],
-                drilldown: {
-                    name: 'Not performed final versions',
-                    categories: ['With time reservation', 'Missed time reservation', 'Planned', 'Saved with errors', 'Undefined'],
-                    data: [2500, 2000, 470, 300, 200],
-                    color: colors[3]
-                }
-            }];
-    // Build the data arrays
-    var browserData = [];
-    var versionsData = [];
-    for (var i = 0; i < data.length; i++) {
-        // add browser data
-        browserData.push({
-            name: categories[i],
-            y: data[i].y,
-            color: data[i].color
-        });
-        // add version data
-        for (var j = 0; j < data[i].drilldown.data.length; j++) {
-            var brightness = 0.2 - (j / data[i].drilldown.data.length) / 5 ;
-            versionsData.push({
-                name: data[i].drilldown.categories[j],
-                y: data[i].drilldown.data[j],
-                color: Highcharts.Color(data[i].color).brighten(brightness).get()
-                });
+function drawAreaProgress() {
+        // Define a custom symbol path
+        Highcharts.SVGRenderer.prototype.symbols.cross = function (x, y, w, h) {
+            return ['M', x, y-20, 'L', x , y + h+30,'z'];
+        };
+        if (Highcharts.VMLRenderer) {
+            Highcharts.VMLRenderer.prototype.symbols.cross = Highcharts.SVGRenderer.prototype.symbols.cross;
         }
-    }
-    // Create the chart
-    $('#area-progress').highcharts({
+
+    $('#area-status').highcharts({
         chart: {
-            type: 'pie',
-            height: 500,
-            width: ''
+            height: 500
         },
         title: {
             text: ''
         },
+        xAxis: {
+            categories: ['Meter rollout', 'Concentrator installation', 'Meter change']
+        },
         yAxis: {
-            title: {
-                text: 'Total percent market share'
-            }
+        },
+        legend: {
+            backgroundColor: '#FFFFFF'
         },
         plotOptions: {
-            pie: {
-                shadow: false,
-                center: ['50%', '50%'],
-                    dataLabels: {
-                        enabled: false
-                    },
-                    showInLegend: true,
-            }
+            series: {
+                stacking: 'normal'
+            },
+            scatter: {
+                color: '#428bca',
+            },
         },
-        tooltip: {
-            valueSuffix: ''
-        },
-        series: [{
-            name: 'Work Order',
-            data: browserData,
-            size: '60%',
-            dataLabels: {
-                formatter: function() {
-                    //return this.y > 5 ? this.point.name : null;
-                },
-                color: 'white',
-                distance: -30
-            }
-        }, {
-            name: 'Versions',
-            data: versionsData,
-            size: '80%',
-            innerSize: '60%',
-            dataLabels: {
-                formatter: function() {
-                    // display only if larger than 1
-                    return this.y > 1 ? '<b>'+ this.point.name +':</b> '+ this.y +''  : null;
+        series: [ {
+            type: 'bar',
+            name: 'Closed',
+            data: [5]
+        },{
+            type: 'scatter',
+            name: 'Open',
+            data: [5],
+             marker: {
+                    symbol: 'cross',
+                    lineColor: null,
+                    lineWidth: 2,
+
                 }
-            }
+        }, {
+            type: 'bar',
+            name: 'Actual working time',
+            data: [5]
         }]
-    });
+    },function(chart){
+            $.each(chart.series[1].data,function(i,point){
+                point.angle = 90;
+                this.graphic.attr({
+                    rotation:point.angle
+                })
+                .translate(10,-10);
+            });
+        });
 }
     drawDetailedProgress();
     drawWorkOrderStatus();

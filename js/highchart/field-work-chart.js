@@ -10,7 +10,6 @@ $(function () {
         Highcharts.VMLRenderer.prototype.symbols.cross = Highcharts.SVGRenderer.prototype.symbols.cross;
     }
 
-
     $('#block-work-order-type-analysis-chart').highcharts({
     chart: {
         height: 280
