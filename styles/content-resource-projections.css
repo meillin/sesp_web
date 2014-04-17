@@ -9,6 +9,10 @@ body {
 	/*min-height: 450px;*/
 	max-width: initial;
 }
+a:hover {
+	background: none !important;
+	color: #1abc9c;
+}
 .panel {
 	min-height: 100% !important;
 }
@@ -16,11 +20,11 @@ body {
 	padding: 1em;
 }
 .filterHeader .big-row {
-	min-height: 406px;
+	min-height: 330px;
 }
 .filterHeader .big-row > div:not(:last-child) {
-	height: 365px;
-	border-right: 1px dotted #6a6a6a;
+	height: 310px;
+	border-right: 1px solid #6a6a6a;
 }
 .filterHeader .big-row > div:nth-child(2) {
 	overflow-y : scroll;
@@ -34,12 +38,18 @@ body {
 #block-planning-periods-table tr.selected {
 	background: #1abc9c !important;
 }
-
 h4 small {
 	margin: 1.2em 0;
 	float: right;
 }
-
 h4 small a {
 	color: #fff;
+}
+@media only screen and (max-width: 1025px){
+
+	.filterHeader .big-row > div:not(:last-child) {
+		border-right: none;
+		border-bottom: 1px solid #6a6a6a;
+	}
+
 }
