@@ -20,7 +20,7 @@
 
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
-
+		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/responsive-tables.css" />
 
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/general.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/header.css" />
@@ -33,6 +33,7 @@
 		<!--<script type="text/javascript" src="<%=request.getContextPath()%>/js/colResizable-1.3.min.js"></script>-->
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
+		<script type="text/javascript" src="<%=request.getContextPath()%>/js/foundation/responsive-tables.js"></script>
 
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/search-results.js"></script>
@@ -73,7 +74,7 @@
 									<span id="block-search-results-installations-number"></span>
 								</h4>
 								<div class="panel-inner">
-									<table id="instresults">
+									<table id="instresults" class="responsive">
 										<thead>
 											<tr>
 												<th><s:text name="webportal.search.results.installation.id"/></th>
