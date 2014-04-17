@@ -468,6 +468,8 @@ button, .button{
 	background-color: #3C3C3C;
 	margin-bottom: 0px;
 	padding: 4px 0px 4px 6px;
+	border-left: 1px solid #1abc9c;
+	border-right: 1px solid #1abc9c;
 }
 
 .ui-multiselect-menu ul{
@@ -507,10 +509,15 @@ button, .button{
 .ui-multiselect-menu .ui-multiselect-checkboxes{
 	height: auto;
 	max-height: 175px;
+	background: #333e45;
+	color: #fff;
+	border: 1px solid #1abc9c;
+	border-top: none;
 }
 
 .ui-multiselect-menu .ui-multiselect-checkboxes span{
 	font-size: 14px;
+	color: #fff;
 }
 
 /*
@@ -533,4 +540,9 @@ button, .button{
 
 .lang-dropdown {
 	outline: none!important;
+}
+
+.ui-multiselect-menu .ui-multiselect-checkboxes input,
+.ui-multiselect-menu .ui-multiselect-checkboxes select {
+margin: 0 0 0 0!important;
 }
