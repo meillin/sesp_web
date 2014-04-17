@@ -200,7 +200,7 @@
 
 					<div>
 						<div class="large-12 columns text-center">
-							<a href="javascript:submitLogistics();" id="filter-button-update" class="button">
+							<a href="javascript:submitLogistics();" id="filter-button-update" class="button small">
 								<s:text name="webportal.stock.updatebutton"/>
 							</a>
 						</div>

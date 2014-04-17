@@ -205,14 +205,11 @@
 					</div>
 					<div class="big-row">
 						<div class="large-3 columns">
-							<div class="row">
 								<div class="large-12 columns">
 									<label>Domain</label>
 									<select id="domains" onchange="onChangeData()" class="custom-multi-select" name="multiselect-domain" multiple="multiple">
 									</select>
 								</div>
-							</div>
-							<div class="row">
 								<div class="large-12 columns">
 									<label>Date interval</label>
 									<select id="filter-select-date-interval" onchange="javascript:getdaterange();">
@@ -224,8 +221,6 @@
 										<option value="custominterval">Custom interval</option>
 									</select>
 								</div>
-							</div>
-							<div class="row">
 								<div class="small-6 columns">
 									<label id="fromlabel">From:</label>
 									<div class="custom-input-datepicker input-append date" data-date="2012-02-12" data-date-format="yyyy-mm-dd">
@@ -238,16 +233,16 @@
 										<input id="filter-date-to" type="text" class="input-datepicker" readonly="readonly"/>
 									</div>
 								</div>
-							</div>
 						</div><!-- end of domain, date interval and daypicker wrapper -->
 
 						<div class="large-3 columns">
-							<div class="row">
+							<br/>
+							<div class="large-12 small-6 columns">
 								<label>Area type</label>
 								<select id="areaTypes" onchange="onChangeData()" class="custom-multi-select" name="multiselect-area-type" multiple="multiple">
 								</select>
 							</div>
-							<div class="row">
+							<div class="large-12 small-6 columns">
 								<label>Area</label>
 								<select id="areas" class="custom-multi-select" name="multiselect-area" multiple="multiple">
 								</select>
@@ -255,12 +250,12 @@
 						</div>
 
 						<div class="large-3 columns">
-							<div class="row">
+							<div class="large-12 small-6 columns">
 								<label>Alarm type</label>
 								<select id="alarmTypes" class="custom-multi-select" name="multiselect-alarm-type" multiple="multiple">
 								</select>
 							</div>
-							<div class="row">
+							<div class="large-12 small-6 columns">
 								<label>Utility type</label>
 								<select id="utilitytypes" class="custom-multi-select" name="multiselect-utility-type" multiple="multiple">
 								</select>
@@ -268,12 +263,12 @@
 						</div>
 
 						<div class="large-3 columns">
-							<div class="row">
+							<div class="large-12 small-6 columns">
 								<label>Communication type</label>
 								<select id="commtypes" class="custom-multi-select" name="multiselect-communication-type" multiple="multiple">
 								</select>
 							</div>
-							<div class="row">
+							<div class="large-12 small-6 columns">
 								<label>Device model</label>
 								<select id="devicemodels" class="custom-multi-select" name="multiselect-device-model" multiple="multiple">
 								</select>
@@ -284,7 +279,7 @@
 
 					<div class="big-row"><!-- start of new full width row -->
 							<div class="large-12 columns text-center">
-									<a class="button" href="javascript:onSubmit();" id="filter-button-update">Update</a>
+									<a class="button small" href="javascript:onSubmit();" id="filter-button-update">Update</a>
 							</div>
 					</div><!-- end of submitbutton wrapper -->
 				</div><!-- end of filterheader -->

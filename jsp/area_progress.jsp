@@ -262,7 +262,7 @@ document.createElement("figure");
 				</div>
 				<div class="big-row"><!-- start of new full width row -->
 					<div class="large-12 columns fillter text-center">
-						<a class="button" id="block-filter-button-update" onclick="filter_submit()">Update</a>
+						<a class="button small" id="block-filter-button-update" onclick="filter_submit()">Update</a>
 					</div><!-- end of filter -->
 				</div><!-- end of new full width row -->
 			</div>
