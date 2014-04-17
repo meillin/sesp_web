@@ -560,3 +560,54 @@ button, .button{
 .ui-multiselect-menu .ui-multiselect-checkboxes select {
 margin: 0 0 0 0!important;
 }
+
+.logistics-icon-temp {
+    fill: #168c7b;
+    display: inline-block;
+}
+
+.logistics-icon-pos {
+    margin: 0.2rem 0rem -0.2rem 0.6rem;
+    display: inline-block;
+}
+
+.logistics-icon {
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+  fill: #fff;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.logistics-icon:hover {
+    fill: #168c7b;
+
+  }
+
+.logistics-icon-pos-slideout {
+    margin: 0 0 -0.5rem 1rem;
+    display: inline-block;
+}
+
+.logistics-icon-slideout {
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    text-decoration: inherit;
+    fill: #fff;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    fill: #fff;    
+}
+
+.logistics-icon-slideout:hover {
+    fill: #e0e8e9;
+}

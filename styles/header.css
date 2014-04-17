@@ -184,6 +184,11 @@ li {
 	padding-top: 0.15rem;
 }
 
+.slide-out-text_logi {
+	padding-left: 1rem;
+	padding-top: 0.15rem;
+}
+
 .inline-list li {
 	-moz-box-sizing: border-box;
 	display: inline-block;
