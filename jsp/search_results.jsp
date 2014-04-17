@@ -105,7 +105,7 @@
 									<span id="block-search-results-measurepoints-number"></span>
 								</h4>
 								<div class="panel-inner">
-									<table id="instMepResults">
+									<table id="instMepResults" class="responsive">
 										<thead>
 											<tr>
 												<th><s:text name="webportal.search.results.measurepoint.id"/></th>
@@ -139,7 +139,7 @@
 									<span id="block-search-results-multipoints-number"></span>
 								</h4>
 								<div class="panel-inner">
-									<table id="instMupResults">
+									<table id="instMupResults" class="responsive">
 										<thead>
 											<tr>
 												<th><s:text name="webportal.search.results.multipoint.id"/></th>
@@ -171,7 +171,7 @@
 									<span id="block-search-results-devices-number"></span>
 								</h4>
 								<div class="panel-inner">
-									<table id="deviceResults">
+									<table id="deviceResults" class="responsive">
 										<thead>
 											<tr>
 												<th><s:text name="webportal.search.results.device.id"/></th>
@@ -203,7 +203,7 @@
 									<span id="block-search-results-cases-number"></span>
 								</h4>
 								<div class="panel-inner">
-									<table id="caseResults">
+									<table id="caseResults" class="responsive">
 										<thead>
 											<tr class="table-title">
 												<th><s:text name="webportal.search.results.case.id"/></th>
