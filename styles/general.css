@@ -99,9 +99,8 @@ thead{
 	z-index: 20;
 	position: fixed;
 	margin-top: 35px;
-	padding: 2em 0em;
+	padding-top: 1.5em;
 	background: #333e45;
-	/*background-image:url(../images/filter_bg.png);*/
 	background-size: cover;
 }
 
