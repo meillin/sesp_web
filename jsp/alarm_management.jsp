@@ -237,12 +237,12 @@
 
 						<div class="large-3 columns">
 							<br/>
-							<div class="large-12 small-6 columns">
+							<div class="large-12 medium-6 columns">
 								<label>Area type</label>
 								<select id="areaTypes" onchange="onChangeData()" class="custom-multi-select" name="multiselect-area-type" multiple="multiple">
 								</select>
 							</div>
-							<div class="large-12 small-6 columns">
+							<div class="large-12 medium-6 columns">
 								<label>Area</label>
 								<select id="areas" class="custom-multi-select" name="multiselect-area" multiple="multiple">
 								</select>
@@ -250,12 +250,12 @@
 						</div>
 
 						<div class="large-3 columns">
-							<div class="large-12 small-6 columns">
+							<div class="large-12 medium-6 columns">
 								<label>Alarm type</label>
 								<select id="alarmTypes" class="custom-multi-select" name="multiselect-alarm-type" multiple="multiple">
 								</select>
 							</div>
-							<div class="large-12 small-6 columns">
+							<div class="large-12 medium-6 columns">
 								<label>Utility type</label>
 								<select id="utilitytypes" class="custom-multi-select" name="multiselect-utility-type" multiple="multiple">
 								</select>
@@ -263,12 +263,12 @@
 						</div>
 
 						<div class="large-3 columns">
-							<div class="large-12 small-6 columns">
+							<div class="large-12 medium-6 columns">
 								<label>Communication type</label>
 								<select id="commtypes" class="custom-multi-select" name="multiselect-communication-type" multiple="multiple">
 								</select>
 							</div>
-							<div class="large-12 small-6 columns">
+							<div class="large-12 medium-6 columns">
 								<label>Device model</label>
 								<select id="devicemodels" class="custom-multi-select" name="multiselect-device-model" multiple="multiple">
 								</select>

@@ -20,11 +20,9 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
 
-
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/jquery.multiselect.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/general.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/header.css" />
-
 
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/datepicker.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-analyze-field-work-efficiency.css" />
@@ -109,7 +107,6 @@
 						</div>
 						<div class="big-row">
 							<div class="large-4 columns">
-								<div class="row">
 									<div class="medium-12 columns">
 										<label>Date interval</label>
 										<select id="filter-select-date-interval"  onchange="javascript:disbaleDateFilter()" >
@@ -120,27 +117,24 @@
 												<option value="lastyear">Last year</option>
 												<option value="custominterval">Custom interval</option>
 										</select>
-									</div>
 								</div>
 
-								<div class="row">
-									<div class="medium-6 columns">
+									<div class="small-6 columns">
 										<label id="fromLabel">From: </label>
 										<div class="custom-input-datepicker input-append date" data-date="2012-02-12" data-date-format="yyyy-mm-dd">
 											<input id="filter-date-from" type="text" class="input-datepicker text-red"  readonly="readonly"/>
 										</div>
 									</div>
-									<div class="medium-6 columns">
+									<div class="small-6 columns">
 											<label id="toLabel">To:</label>
 											<div class="custom-input-datepicker input-append date"  data-date="12-02-2012" data-date-format="yyyy-mm-dd">
 												<input id="filter-date-to" type="text" class="input-datepicker text-red"  readonly="readonly"/>
 											</div>
 									</div>
-								</div>
 							</div>
 
 							<div class="large-4 columns">
-								<div class="row">
+								<br/>
 									<div class="large-12 medium-6 columns">
 										<label>Domain</label>
 										<select id="filter-multiselect-domain" class="custom-multi-select" name="multiselect-domain" multiple="multiple" onchange="onDomainSelect()"></select>
@@ -149,11 +143,9 @@
 										<label>Area</label>
 										<select id="filter-multiselect-area" class="custom-multi-select" name="multiselect-area" multiple="multiple"></select>
 									</div>
-								</div>
 							</div>
 
 							<div class="large-4 columns">
-								<div class="row">
 									<div class="large-12 medium-6 columns">
 										<label>Team</label>
 										<select id="filter-multiselect-team" class="custom-multi-select" name="multiselect-team" multiple="multiple" onchange="onTeamSelectPopulateTechnicians()"></select>
@@ -162,12 +154,11 @@
 										<label>Technician</label>
 										<select id="filter-multiselect-technician" class="custom-multi-select" name="multiselect-technician" multiple="multiple"></select>
 									</div>
-								</div>
 							</div>
 						</div>
 						<div class="big-row">
 								<div class="large-12 columns text-center">
-									<a id="block-filter-button-update" class="button" href="javascript:update()">Update</a>
+									<a id="block-filter-button-update" class="button small" href="javascript:update()">Update</a>
 								</div>
 						</div>
 					</div>

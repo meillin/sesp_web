@@ -145,7 +145,7 @@
 
 							<div class="row">
 								<div class="medium-12 columns text-center">
-									<a id="block-filter-button-update" onclick="validateOnSubmit()" class="button">Update</a>
+									<a id="block-filter-button-update" onclick="validateOnSubmit()" class="button small">Update</a>
 								</div>
 							</div>
 						</div>

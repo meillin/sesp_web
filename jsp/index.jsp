@@ -146,7 +146,7 @@ document.createElement("figure");
                     <div>
                       <a class="patch" href="<%=contextPath%>/std/WorkOrderProgress" alt="WORK ORDER PROGRESS" title="WORK ORDER PROGRESS">
                         <i class="fi-clock size-74"></i></br>
-                        <span>Work Order/Area Monitor</span>
+                        <span>Work Order Overview</span>
                       </a>
                     </div>
                   </li>
@@ -179,7 +179,7 @@ document.createElement("figure");
     <script type="text/javascript">
       $(document).foundation('offcanvas');
     </script>
-    
+
     <!--[if lt IE 9]>
     <script type="text/javascript" src="https://raw.githubusercontent.com/chuckcarpenter/REM-unit-polyfill/master/js/rem.min.js"></script>
     <![endif]-->

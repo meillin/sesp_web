@@ -234,12 +234,12 @@ document.createElement("figure");
 
 					<div class="large-4 columns">
 						<br/>
-							<div class="small-6 large-12 columns">
+							<div class="medium-6 large-12 columns">
 								<lable>Domain</lable>
 								<select id="filter-multiselect-domain" class="custom-multi-select" onchange="domainChanged()" name="multiselect-domain" multiple="multiple">
 								</select>
 							</div>
-							<div class="small-6 large-12 columns">
+							<div class="medium-6 large-12 columns">
 								<lable>Work order type</lable>
 								<select id="filter-multiselect-work-order-type" class="custom-multi-select" name="multiselect-work-order-type" multiple="multiple">
 								</select>
@@ -247,11 +247,11 @@ document.createElement("figure");
 					</div>
 
 					<div class="large-4 columns">
-						<div class="small-6 large-12 columns">
+						<div class="medium-6 large-12 columns">
 							<lable>Area type</lable>
 							<select id="filter-multiselect-area-type" onchange="areaTypeChanged()"></select>
 						</div>
-						<div class="small-6 large-12 columns">
+						<div class="medium-6 large-12 columns">
 							<lable>Area</lable>
 							<select id="filter-multiselect-area" class="custom-multi-select" name="multiselect-area" multiple="multiple"></select>
 						</div>

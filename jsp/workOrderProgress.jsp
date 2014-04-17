@@ -196,7 +196,6 @@
 				</div>
 				<div class="big-row">
 					<div class="large-4 columns">
-						<div class="row">
 							<div class="medium-12 columns">
 								<label>Date interval</label>
 								<select id="filter-select-date-interval" onchange="show()">
@@ -208,46 +207,52 @@
 									<option value="custominterval">Custom interval</option>
 								</select>
 							</div>
-						</div>
-						<div class="row">
-							<div class="medium-6 columns">
+							<div class="small-6 columns">
 								<label>From:</label>
 								<div class="custom-input-datepicker input-append date" data-date="2012-02-12" data-date-format="yyyy-mm-dd">
-									<input id="filter-date-from" type="text" class="input-datepicker text-red"  readonly="readonly"/>
+									<input id="filter-date-from" type="text" class="input-datepicker"  readonly="readonly"/>
 								</div>
 							</div>
-							<div class="medium-6 columns">
+							<div class="small-6 columns">
 								<label>To:</label>
 								<div class="custom-input-datepicker input-append date"  data-date="12-02-2012" data-date-format="yyyy-mm-dd">
-									<input id="filter-date-to" type="text" class="input-datepicker text-red"  readonly="readonly"/>
+									<input id="filter-date-to" type="text" class="input-datepicker"  readonly="readonly"/>
 								</div>
 							</div>
+					</div>
+
+					<div class="large-4 columns">
+						<br/>
+						<div class="large-12 medium-6 columns">
+							<lable>Domain</lable>
+							<select id="filter-multiselect-domain" class="custom-multi-select" onchange="domainChanged()" name="multiselect-domain" multiple="multiple">
+							</select>
+						</div>
+						<div class="large-12 medium-6 columns">
+							<lable>Work order type</lable>
+							<select id="filter-multiselect-work-order-type" class="custom-multi-select" name="multiselect-work-order-type" multiple="multiple">
+							</select>
 						</div>
 					</div>
 
 					<div class="large-4 columns">
-						<lable>Domain</lable>
-						<select id="filter-multiselect-domain" class="custom-multi-select" onchange="domainChanged()" name="multiselect-domain" multiple="multiple">
-						</select>
-						<lable>Work order type</lable>
-						<select id="filter-multiselect-work-order-type" class="custom-multi-select" name="multiselect-work-order-type" multiple="multiple">
-						</select>
-					</div>
-
-					<div class="large-4 columns">
-						<lable>Area type</lable>
-						<select id="filter-multiselect-area-type" onchange="areaTypeChanged()">
-						</select>
-
-						<lable>Area</lable>
-						<select id="filter-multiselect-area" class="custom-multi-select" name="multiselect-area" multiple="multiple"></select>
-						<lable>Unplanned <input type="checkbox" id="filter-checkbox-unplanned" name="unplanned" value="checked"/></lable>
+						<div class="large-12 medium-6 columns">
+							<lable>Area type</lable>
+							<select id="filter-multiselect-area-type" onchange="areaTypeChanged()"></select>
+						</div>
+						<div class="large-12 medium-6 columns">
+							<lable>Area</lable>
+							<select id="filter-multiselect-area" class="custom-multi-select" name="multiselect-area" multiple="multiple"></select>
+						</div>
+						<div class="large-12 columns text-right">
+							<lable>Unplanned <input type="checkbox" id="filter-checkbox-unplanned" name="unplanned" value="checked"/></lable>
+						</div>
 					</div>
 				</div>
 
 				<div class="big-row"><!-- start of new full width row -->
 					<div class="large-12 columns fillter text-center">
-						<a class="button" id="block-filter-button-update" onclick="filter_submit()">Update</a>
+						<a class="button small" id="block-filter-button-update" onclick="filter_submit()">Update</a>
 					</div><!-- end of filter -->
 				</div><!-- end of new full width row -->
 			</div>
