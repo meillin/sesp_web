@@ -98,7 +98,7 @@
 								</div>
 
 								<div class="small-6 columns">
-									<label><s:text name="webportal.resourceprojections.planningperiods.type" /></label>
+									<label>Period type</label>
 									<select>
 										<option value="week"><s:text name="webportal.week"/></option>
 										<option value="month"><s:text name="webportal.month"/></option>
