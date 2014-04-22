@@ -47,7 +47,6 @@
 
 		<script src="<%=contextPath%>/js/highchart/highcharts.js"></script>
 
-
 		<script src="<%=contextPath%>/js/map.js"></script>
 		<script src="<%=contextPath%>/js/sesp_ajax.js"></script>
 		<script src="<%=contextPath%>/js/spin.js"></script>
@@ -91,7 +90,7 @@
 					<div class="big-row">
 						<div class="large-3 columns">
 							<h4><s:text name="webportal.resourceprojections.time.first"/></h4>
-								<div class="small-6 large-12 columns">
+								<div class="large-12 columns">
 									<label><s:text name="webportal.resourceprojections.time.domain.title"/></label>
 									<select id="block-time-multiselect-domain" class="custom-multi-select" name="multiselect-domain" multiple="multiple" onchange="domainChanged()">
 									</select>
@@ -99,7 +98,7 @@
 
 								<div class="small-6 columns">
 									<label>Period type</label>
-									<select>
+									<select id="period-type">
 										<option value="week"><s:text name="webportal.week"/></option>
 										<option value="month"><s:text name="webportal.month"/></option>
 										<option value="quarter"><s:text name="webportal.quarter"/></option>
@@ -130,7 +129,7 @@
 									</div>
 								</div>
 
-								<div class="small-12 columns">
+								<div class="small-12 columns text-right">
 									<br/>
 									<a id="block-time-button-update" onclick="javascript:updatePlanningPeriod()" class="button tiny">Search</a>
 								</div>
@@ -153,7 +152,7 @@
 							<h4>3 Filter</h4>
 
 							<div class="row">
-								<div class="large-6 small-6 columns">
+								<div class="small-6 columns">
 
 									<label>Utility type</label>
 									<div>
@@ -171,7 +170,7 @@
 										<select id="filter-multiselect-area-type" class="custom-multi-select" name="multiselect-area-type" multiple="multiple"></select>
 									</div>
 								</div>
-								<div class="large-6 small-6 columns">
+								<div class="small-6 columns">
 
 									<label>Work order type</label>
 									<div>
@@ -187,8 +186,10 @@
 									<div>
 										<select id="filter-multiselect-device-model" class="custom-multi-select" name="multiselect-device-model" multiple="multiple"></select>
 									</div>
-
-										<a class="button tiny" id="block-filter-button-update" onclick="javascript:processProjections()"><s:text name="webportal.resourceprojections.filters.update"/></a>
+								</div>
+								<div class="large-12 columns text-right">
+									<a class="button tiny" id="block-filter-button-update" onclick="javascript:processProjections()">
+										<s:text name="webportal.resourceprojections.filters.update"/></a>
 								</div>
 							</div>
 						</div>
@@ -267,57 +268,52 @@
 				<div class="large-2 columns filtered show-for-large-up">
 					<h5 class="text-center">YOU HAVE FILTERED</h5>
 					<dl class="accordion" data-accordion>
-						<dd>
-							<a href="#panel1">Domain<span class="round label">3</span></a>
-							<div id="panel1 selected-domain" class="content">
-								<ul>
-									<li>Domain1</li>
-									<li>Domain2</li>
-									<li>Domain3</li>
-								</ul>
+						<dd id="selected-domain">
+							<a href="#">Domain<span class="round label">3</span></a>
+							<div id="panel1" class="content">
+								<ul></ul>
 							</div>
 						</dd>
 
 						<dd>
-							<a href="#panel2">Planning period</a>
-							<div id="panel2 selected-period-type" class="content">
-								<ul>
-									<li>Type: <span>Week</span></li>
-									<li>From: <span>2009-01-01</span></li>
-									<li>To: <span>2017-12-31</span></li>
-								</ul>
+							<a href="#">Planning period</a>
+							<div id="" class="content">
+								<ul id="selected-period-type"></ul>
 							</div>
 						</dd>
 
 						<dd>
-							<a href="#panel4">Selected planning periods <span class="round label">7</span></a>
-							<div id="panel4 selected-date" class="content">
-								<ul>
-									<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
-									<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
-									<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
-									<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
-									<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
-									<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
+							<a href="#">Selected planning periods <span class="round label">7</span></a>
+							<div id="" class="content">
+								<ul id="selected-date">
 								</ul>
 							</div>
 						</dd>
 
-						<dd>
-							<a href="#panel4">Utlity type <span class="round label">4</span></a>
-							<div id="panel4 selected-date" class="content">
-								<ul>
-									<li>Electrical</li>
-									<li>Gas</li>
-									<li>Heat</li>
-									<li>Water</li>
-								</ul>
+						<dd id="selected-utility-type">
+							<a href="#">Utility type <span class="round label">4</span></a>
+							<div id="" class="content">
+								<ul></ul>
 							</div>
 						</dd>
 
-						<dd>
-							<a href="#panel4">Area <span class="round label">9</span></a>
-							<div id="panel4 selected-date" class="content">
+						<dd id="selected-area">
+							<a href="#">Area <span class="round label">9</span></a>
+							<div id="" class="content">
+								<ul></ul>
+							</div>
+						</dd>
+
+						<dd id="selected-area-type">
+							<a href="#">Area type <span class="round label">74</span></a>
+							<div class="content">
+								<ul></ul>
+							</div>
+						</dd>
+
+						<dd id="">
+							<a href="#">Work order type <span class="round label">74</span></a>
+							<div id=" selected-date" class="content">
 								<ul>
 									<li>Missing Region</li>
 									<li>Missing Region</li>
@@ -328,8 +324,8 @@
 						</dd>
 
 						<dd>
-							<a href="#panel4">Work order type <span class="round label">74</span></a>
-							<div id="panel4 selected-date" class="content">
+							<a href="#">Device type <span class="round label">9</span></a>
+							<div id=" selected-date" class="content">
 								<ul>
 									<li>Missing Region</li>
 									<li>Missing Region</li>
@@ -340,20 +336,8 @@
 						</dd>
 
 						<dd>
-							<a href="#panel4">Device type <span class="round label">9</span></a>
-							<div id="panel4 selected-date" class="content">
-								<ul>
-									<li>Missing Region</li>
-									<li>Missing Region</li>
-									<li>Missing Region</li>
-									<li>Missing Region</li>
-								</ul>
-							</div>
-						</dd>
-
-						<dd>
-							<a href="#panel4">Device model <span class="round label">9</span></a>
-							<div id="panel4 selected-date" class="content">
+							<a href="#">Device model <span class="round label">9</span></a>
+							<div id=" selected-date" class="content">
 								<ul>
 									<li>Missing Region</li>
 									<li>Missing Region</li>
