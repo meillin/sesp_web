@@ -46,8 +46,6 @@ document.createElement("figure");
 <script src="<%=contextPath%>/js/spin.js"></script>
 <script src="<%=contextPath%>/js/ajax-loader.js"></script>
 
-<script src="<%=contextPath%>/js/ie7.js"></script>
-
 <!--[if lt IE 9]>
 <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
 <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
@@ -101,7 +99,7 @@ document.createElement("figure");
                   <li>
                     <div>
                         <a class="patch" href="<%=contextPath%>/std/StockManagement1" alt="LOGISTICS" title="LOGISTICS">
-                          <i class="logistics-icon logi-main size-54"></i></br>
+                          <i class="capicons size-74"></i></br>
                           <span>Logistics</span>
                         </a>
                     </div>

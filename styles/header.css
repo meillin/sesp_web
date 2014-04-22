@@ -173,20 +173,22 @@ li {
 .overlapping-menu .fi-monitor:before,
 .overlapping-menu .fi-graph-trend:before,
 .overlapping-menu .fi-arrow-up:before,
-.overlapping-menu .fi-clock:before {
+.overlapping-menu .fi-clock:before,
+.overlapping-menu .capicons:before {
+	margin-top: 0.2rem;
+	margin-bottom: 0.4rem;
 	width: 21px;
-	padding-bottom: 0.3rem;
-	padding-left: 1.2rem;
+	/*padding-bottom: 0.3rem;*/
 }
 
 .slide-out-text {
-	padding-left: 2.7rem;
-	padding-top: 0.15rem;
+	padding-left: 2.5rem;
+	line-height: 200%;
 }
 
-.slide-out-text_logi {
-	padding-left: 1rem;
-	padding-top: 0.15rem;
+.slide-out-text-logistics {
+	padding-left: 2.4rem;
+	line-height: 150%;
 }
 
 .inline-list li {
