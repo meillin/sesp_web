@@ -20,7 +20,7 @@ a:hover {
 	padding: 1em;
 }
 .filterHeader .big-row {
-	min-height: 330px;
+	min-height: 340px;
 }
 .filterHeader .big-row > div:not(:last-child) {
 	height: 310px;
