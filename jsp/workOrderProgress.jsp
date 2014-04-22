@@ -336,10 +336,10 @@
 			</div>
 
 			<div class="large-2 columns filtered show-for-large-up">
-									<h5 class="text-center">YOU HAVE FILTERED</h5>
+					<h5 class="text-center">YOU HAVE FILTERED</h5>
 					<dl class="accordion" data-accordion>
 						<dd>
-							<a href="#panel1">Domain<span class="round label">3</span></a>
+							<a href="#panel1">Domain<span class="round label">15</span></a>
 							<div id="panel1 selected-domain" class="content">
 								<ul>
 									<li>Domain1</li>
@@ -366,7 +366,7 @@
 							</div>
 						</dd>
 						<dd>
-							<a href="#panel4">Planning periods <span class="round label">6</span></a>
+							<a href="#panel4">Planning periods <span class="round label">123</span></a>
 							<div id="panel4 selected-date" class="content">
 								<ul>
 									<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>

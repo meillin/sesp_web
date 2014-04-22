@@ -92,14 +92,13 @@
 					<div class="big-row">
 						<div class="large-3 columns">
 							<h4><s:text name="webportal.resourceprojections.time.first"/></h4>
-							<div class="row">
 								<div class="small-6 large-12 columns">
 									<label><s:text name="webportal.resourceprojections.time.domain.title"/></label>
 									<select id="block-time-multiselect-domain" class="custom-multi-select" name="multiselect-domain" multiple="multiple" onchange="domainChanged()">
 									</select>
 								</div>
 
-								<div class="small-6 large-12 columns">
+								<div class="small-6 columns">
 									<label>Planning period type</label>
 									<select>
 										<option value="week"><s:text name="webportal.week"/></option>
@@ -108,9 +107,8 @@
 										<option value="year"><s:text name="webportal.year"/></option>
 									</select>
 								</div>
-							</div>
-							<div class="row">
-								<div class="small-12 columns">
+
+								<div class="small-6 columns">
 									<label><s:text name="webportal.resourceprojections.time.dateinterval.title"/></label>
 									<select id="block-time-select-date-interval" onchange="onDateIntervalSelect()">
 										<option value="upcomingweek"><s:text name="webportal.resourceprojections.time.dateinterval.upcomingweek"/></option>
@@ -120,17 +118,16 @@
 										<option value="custominterval"><s:text name="webportal.resourceprojections.time.dateinterval.custominterval"/></option>
 									</select>
 								</div>
-							</div>
 							<div class="row">
 								<div class="small-6 columns">
 									<label><s:text name="webportal.resourceprojections.time.fromdate.title"/>:</label>
-									<div class="input-append date" data-date="2012-02-12" data-date-format="yyyy-mm-dd">
+									<div class="custom-input-datepicker input-append date" data-date="2012-02-12" data-date-format="yyyy-mm-dd">
 										<input id="block-time-date-from" type="text" class="input-datepicker"  readonly="readonly"/>
 									</div>
 								</div>
 								<div class="small-6 columns">
 									<label><s:text name="webportal.resourceprojections.time.todate.title"/>:</label>
-									<div class="input-append date"  data-date="12-02-2012" data-date-format="yyyy-mm-dd">
+									<div class="custom-input-datepicker input-append date"  data-date="12-02-2012" data-date-format="yyyy-mm-dd">
 										<input id="block-time-date-to" type="text" class="input-datepicker"  readonly="readonly"/>
 									</div>
 								</div>
@@ -148,8 +145,8 @@
 							<h4>
 								2 Select <span style="text-decoration:underline">weekly</span> planning periods
 								<small>
-									<a href="#">select all | </a>
-									<a href="#">deselect all</a>
+									<a href="#"><s:text name="webportal.resourceprojections.planningperiods.selectall"/> | </a>
+									<a href="#"><s:text name="webportal.resourceprojections.planningperiods.selectnone"/></a>
 								</small>
 							</h4>
 							<table id="block-planning-periods-table">

@@ -340,67 +340,68 @@ $( document ).ready(function() {
                     }]
                 });
     }
-function drawAreaProgress() {
-        // Define a custom symbol path
+    function drawAreaProgress() {
+            // Define a custom symbol path
         Highcharts.SVGRenderer.prototype.symbols.cross = function (x, y, w, h) {
-            return ['M', x, y-20, 'L', x , y + h+30,'z'];
+            return ['M', x, y-40, 'L', x , y + h+50,'z'];
         };
         if (Highcharts.VMLRenderer) {
             Highcharts.VMLRenderer.prototype.symbols.cross = Highcharts.SVGRenderer.prototype.symbols.cross;
         }
 
-    $('#area-status').highcharts({
-        chart: {
-            height: 500
-        },
-        title: {
-            text: ''
-        },
-        xAxis: {
-            categories: ['Meter rollout', 'Concentrator installation', 'Meter change']
-        },
-        yAxis: {
-        },
-        legend: {
-            backgroundColor: '#FFFFFF'
-        },
-        plotOptions: {
-            series: {
-                stacking: 'normal'
+        $('#area-status').highcharts({
+            chart: {
+                height: 200
             },
-            scatter: {
-                color: '#428bca',
+            title: {
+                text: ''
             },
-        },
-        series: [ {
-            type: 'bar',
-            name: 'Closed',
-            data: [5]
-        },{
-            type: 'scatter',
-            name: 'Open',
-            data: [5],
-             marker: {
-                    symbol: 'cross',
-                    lineColor: null,
-                    lineWidth: 2,
+            xAxis: {
+                categories: ['Total progress']
+            },
+            yAxis: {
+                title: ''
+            },
+            legend: {
+                backgroundColor: '#FFFFFF'
+            },
+            plotOptions: {
+                series: {
+                    stacking: 'normal'
+                },
+                scatter: {
+                    color: '#ff0000',
+                },
+            },
+            series: [ {
+                type: 'bar',
+                name: 'Closed',
+                data: [5]
+            },{
+                type: 'scatter',
+                name: 'Open',
+                data: [5],
+                 marker: {
+                        symbol: 'cross',
+                        lineColor: null,
+                        lineWidth: 2,
 
-                }
-        }, {
-            type: 'bar',
-            name: 'Actual working time',
-            data: [5]
-        }]
-    },function(chart){
-            $.each(chart.series[1].data,function(i,point){
-                point.angle = 90;
-                this.graphic.attr({
-                    rotation:point.angle
-                })
-                .translate(10,-10);
+                    }
+            }, {
+                type: 'bar',
+                name: 'Actual working time',
+                data: [5]
+            }]
+        },function(chart){
+                $.each(chart.series[1].data,function(i,point){
+                    point.angle = 90;
+                    this.graphic.attr({
+                        rotation:point.angle
+                    })
+                    .translate(10,-10);
+                });
             });
-        });
-}
+    }
     drawDetailedProgress();
     drawWorkOrderStatus();
     //drawTotalProgress();

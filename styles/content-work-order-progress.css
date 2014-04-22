@@ -18,3 +18,7 @@
 .panel-heading {
 	height: 46px;
 }
+#area-status {
+	height: 530px;
+	padding-top: 23%;
+}
