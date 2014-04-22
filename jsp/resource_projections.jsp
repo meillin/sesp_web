@@ -41,7 +41,6 @@
 		<script src="<%=contextPath%>/js/jquery.cookie.js"></script>
 		<script src="<%=contextPath%>/js/init.js"></script>
 		<script src="<%=contextPath%>/js/resource_projections.js"></script>
-		<script src="<%=contextPath%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
 
 		<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/js/images/favicon.png" />
 		<script src="<%=contextPath%>/js/OpenLayers.js"></script>
@@ -99,7 +98,7 @@
 								</div>
 
 								<div class="small-6 columns">
-									<label>Planning period type</label>
+									<label><s:text name="webportal.resourceprojections.planningperiods.type" /></label>
 									<select>
 										<option value="week"><s:text name="webportal.week"/></option>
 										<option value="month"><s:text name="webportal.month"/></option>
@@ -118,7 +117,6 @@
 										<option value="custominterval"><s:text name="webportal.resourceprojections.time.dateinterval.custominterval"/></option>
 									</select>
 								</div>
-							<div class="row">
 								<div class="small-6 columns">
 									<label><s:text name="webportal.resourceprojections.time.fromdate.title"/>:</label>
 									<div class="custom-input-datepicker input-append date" data-date="2012-02-12" data-date-format="yyyy-mm-dd">
@@ -131,14 +129,11 @@
 										<input id="block-time-date-to" type="text" class="input-datepicker"  readonly="readonly"/>
 									</div>
 								</div>
-							</div>
 
-							<div class="row">
 								<div class="small-12 columns">
 									<br/>
 									<a id="block-time-button-update" onclick="javascript:updatePlanningPeriod()" class="button tiny">Search</a>
 								</div>
-							</div>
 						</div>
 
 						<div class="large-5 columns">
@@ -282,25 +277,20 @@
 								</ul>
 							</div>
 						</dd>
+
 						<dd>
-							<a href="#panel2">Planning period type</a>
+							<a href="#panel2">Planning period</a>
 							<div id="panel2 selected-period-type" class="content">
 								<ul>
-									<li>Week</li>
+									<li>Type: <span>Week</span></li>
+									<li>From: <span>2009-01-01</span></li>
+									<li>To: <span>2017-12-31</span></li>
 								</ul>
 							</div>
 						</dd>
+
 						<dd>
-							<a href="#panel3">Date interval</a>
-							<div id="panel3 selected-date" class="content">
-								<ul>
-									<li>From: 2009-01-01</li>
-									<li>To: 2017-12-31</li>
-								</ul>
-							</div>
-						</dd>
-						<dd>
-							<a href="#panel4">Planning periods <span class="round label">6</span></a>
+							<a href="#panel4">Selected planning periods <span class="round label">7</span></a>
 							<div id="panel4 selected-date" class="content">
 								<ul>
 									<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
@@ -312,6 +302,7 @@
 								</ul>
 							</div>
 						</dd>
+
 						<dd>
 							<a href="#panel4">Utlity type <span class="round label">4</span></a>
 							<div id="panel4 selected-date" class="content">
@@ -323,6 +314,55 @@
 								</ul>
 							</div>
 						</dd>
+
+						<dd>
+							<a href="#panel4">Area <span class="round label">9</span></a>
+							<div id="panel4 selected-date" class="content">
+								<ul>
+									<li>Missing Region</li>
+									<li>Missing Region</li>
+									<li>Missing Region</li>
+									<li>Missing Region</li>
+								</ul>
+							</div>
+						</dd>
+
+						<dd>
+							<a href="#panel4">Work order type <span class="round label">74</span></a>
+							<div id="panel4 selected-date" class="content">
+								<ul>
+									<li>Missing Region</li>
+									<li>Missing Region</li>
+									<li>Missing Region</li>
+									<li>Missing Region</li>
+								</ul>
+							</div>
+						</dd>
+
+						<dd>
+							<a href="#panel4">Device type <span class="round label">9</span></a>
+							<div id="panel4 selected-date" class="content">
+								<ul>
+									<li>Missing Region</li>
+									<li>Missing Region</li>
+									<li>Missing Region</li>
+									<li>Missing Region</li>
+								</ul>
+							</div>
+						</dd>
+
+						<dd>
+							<a href="#panel4">Device model <span class="round label">9</span></a>
+							<div id="panel4 selected-date" class="content">
+								<ul>
+									<li>Missing Region</li>
+									<li>Missing Region</li>
+									<li>Missing Region</li>
+									<li>Missing Region</li>
+								</ul>
+							</div>
+						</dd>
+
 					</dl>
 				</div>
 			</div>

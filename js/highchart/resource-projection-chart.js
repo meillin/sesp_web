@@ -1,9 +1,8 @@
 function drawDeviceAssetProjectionPerMonth() {
     Highcharts.setOptions({
     //Green - #1abc9c //Blue - #428bca // Orange - #f0ad4e // Red - #d9534f //
-     colors: ['#1abc9c', '#428bca', '#d9534f', '#f0ad4e', '#5bc0de', '#1d2939']
+        colors: ['#1abc9c', '#428bca', '#d9534f', '#f0ad4e', '#5bc0de', '#1d2939']
     });
-
     $('#device-assets-projections-per-month-view').highcharts({
         chart: {
             type: 'bar',
@@ -103,7 +102,7 @@ function drawResourceProjectionPerMonth() {
             yAxis: {
                 min: 0,
                 title: {
-                    text: 'Resource projection per month'
+                    text: ''
                 }
             },
             legend: {
