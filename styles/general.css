@@ -226,6 +226,7 @@ thead{
 	display: inline-block;
 }
 
+
 /*.progress-chart-li {
 	float: right;
 }
@@ -535,6 +536,38 @@ button, .button{
 	font-size: 14px;
 	color: #fff;
 }
+
+ul#overview-table{
+	list-style: none;
+	margin: 0;
+	margin-bottom: 0.5rem;
+	height: 283px;
+}
+
+ul#overview-table li{
+	border-bottom: 1px solid #e7e7e7;
+	padding: 0.3rem;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+ul#overview-table li:nth-child(even){
+	background: #F5F5F5;
+}
+
+ul#overview-table li span:first-child{
+	font-weight: bold;
+	width: 190px;
+	display: inline-block;
+}
+
+.status-color{
+	color: #1abc9c;
+	font-weight: bolder;
+	border-bottom: 1px solid #DDDDDD;
+	margin-bottom: 0;
+}
+
 
 /*
  * Overlay

@@ -34,6 +34,8 @@ document.createElement("figure");
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.treeTable.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
 
+<script type="text/javascript" src="<%=request.getContextPath()%>/js/vendor/jquery.nicescroll.js"></script>
+
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
 
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
@@ -44,7 +46,7 @@ document.createElement("figure");
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/spin.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
 
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/vendor/jquery.nicescroll.js"></script>
+
 
 
 	<!--[if lt IE 9]>

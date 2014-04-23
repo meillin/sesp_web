@@ -33,6 +33,8 @@
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
 
+		<script type="text/javascript" src="<%=request.getContextPath()%>/js/vendor/jquery.nicescroll.js"></script>
+
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
 
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/colResizable-1.3.min.js"></script>
@@ -83,37 +85,16 @@
 							<span class="block-title-name text-blue"><s:text name="webportal.common.overview"/></span>
 						</h4>
 						<div class="panel-inner">
-							<table id="overview-table">
-								<tr>
-									<td><s:text name="webportal.installation.installationcode"/>:</td>
-									<td><div id="block-overview-installation-code"></div></td>
-								</tr>
-								<tr>
-									<td><s:text name="webportal.installation.externalcode"/>:</td>
-									<td><div id="block-overview-external-code"></div></td>
-								</tr>
-								<tr>
-									<td><s:text name="webportal.installation.type"/>:</td>
-									<td><div id="block-overview-type"></div></td>
-								</tr>
-								<tr>
-									<td><s:text name="webportal.installation.domain"/>:</td>
-									<td><div id="block-overview-domain"></div></td>
-								</tr>
-								<tr>
-									<td><s:text name="webportal.installation.keynumber"/>:</div></td>
-									<td><div id="block-overview-key-number"></div></td>
-								</tr>
-								<tr>
-									<td><s:text name="webportal.installation.keyinfo"/>:</td>
-									<td><div id="block-overview-key-info"></div></td>
-								</tr>
-								<tr>
-									<td><s:text name="webportal.installation.accessibletotech"/>:</div></td>
-									<td><div id="block-overview-accessible-tech"></div></td>
-								</tr>
-							</table>
-							<h3 class="status text-green" id="block-overview-status"></h3>
+							<ul id="overview-table">
+								<li><span><s:text name="webportal.installation.installationcode"/></span><span id="block-overview-installation-code"></span></li>
+								<li> <span><s:text name="webportal.installation.externalcode"/></span><span id="block-overview-external-code"></span></li>
+								<li><span><s:text name="webportal.installation.type"/></span><span id="block-overview-type"></span></li>
+								<li><span><s:text name="webportal.installation.domain"/></span><span id="block-overview-domain"></span></li>
+								<li><span><s:text name="webportal.installation.keynumber"/></span><span id="block-overview-key-number"></span></li>
+								<li><span><s:text name="webportal.installation.keyinfo"/></span><span id="block-overview-key-info"></span></li>
+								<li><span><s:text name="webportal.installation.accessibletotech"/></span><span id="block-overview-accessible-tech"></span></li>
+							</ul>
+							<span>Status:</span><h3 class="status text-green" id="block-overview-status"></h3>
 						</div>
 					</div>
 				</div>
