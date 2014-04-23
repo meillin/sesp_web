@@ -218,9 +218,11 @@ thead{
 .text-green{
 	color: #1abc9c;
 	padding: 5px;
-	font-weight: bolder;
+	font-weight: lighter;
 	font-size: 18px;
 	margin: 0;
+	font-family: roboto-lght!important;
+	display: inline-block;
 }
 
 /*.progress-chart-li {

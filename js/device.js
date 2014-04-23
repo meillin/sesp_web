@@ -94,13 +94,13 @@ function populateDeviceOverview(data)
 		$("#block-overview-stock-site").text(overviewDetails.stockSite);
 		
 		if(overviewDetails.mepId != null) {	
-			$("#block-measurepoint-multipoint-title").html(overviewMeasurepointTitle+" : ");
+			$("#block-measurepoint-multipoint-title").html(overviewMeasurepointTitle);
 			$("#block-overview-measurepoint-id").html("<a href='"+contextPath+"/std/ViewMeasurepoint?id="+overviewDetails.mepId+"' class='text-blue'> "+overviewDetails.mepId+" </a>");
 		} else if(overviewDetails.mupId != null) {
-			$("#block-measurepoint-multipoint-title").html(overviewMultipointTitle+" : ");
+			$("#block-measurepoint-multipoint-title").html(overviewMultipointTitle);
 			$("#block-overview-measurepoint-id").html("<a href='"+contextPath+"/std/ViewMultipoint?id="+overviewDetails.mupId+"' class='text-blue'> "+overviewDetails.mupId+" </a>");
 		} else {
-			$("#block-measurepoint-multipoint-title").html(overviewMeasurepointTitle+" : ");
+			$("#block-measurepoint-multipoint-title").html(overviewMeasurepointTitle);
 			$("#block-overview-measurepoint-id").html(" ");
 		}
 		

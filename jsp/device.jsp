@@ -44,6 +44,8 @@ document.createElement("figure");
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/spin.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
 
+<script type="text/javascript" src="<%=request.getContextPath()%>/js/vendor/jquery.nicescroll.js"></script>
+
 
 	<!--[if lt IE 9]>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
@@ -86,17 +88,17 @@ document.createElement("figure");
 						</h4>
 						<div class="panel-inner">
 							<ul id="overview-table">
-								<li><span><s:text name='webportal.device.overview.device.type'/>: </span><span id="block-overview-device-type"></span></li>
-								<li> <span><s:text name='webportal.device.overview.device.model'/>: </span><span id="block-overview-device-model"></span></li>
+								<li><span><s:text name='webportal.device.overview.device.type'/></span><span id="block-overview-device-type"></span></li>
+								<li> <span><s:text name='webportal.device.overview.device.model'/></span><span id="block-overview-device-model"></span></li>
 								<li><span id="block-measurepoint-multipoint-title"></span> <span id="block-overview-measurepoint-id"></span></li>
-								<li><span><s:text name='webportal.device.overview.device.giai'/>: </span><span id="block-overview-giai"></span></li>
-								<li><span><s:text name='webportal.device.overview.device.serial.number'/>: </span><span id="block-overview-serial-number"></span></li>
-								<li><span> <s:text name='webportal.device.overview.device.property.number'/>: </span><span id="block-overview-property-number"></span></li>
-								<li><span> <s:text name='webportal.device.overview.device.domain'/>: </span><span id="block-overview-domain"></span></li>
-								<li><span> <s:text name='webportal.device.overview.device.pallet'/>: </span><span id="block-overview-pallet"></span></li>
-								<li><span> <s:text name='webportal.device.overview.device.stock'/>: </span><span id="block-overview-stock-site"></span></li>
+								<li><span><s:text name='webportal.device.overview.device.giai'/></span><span id="block-overview-giai"></span></li>
+								<li><span><s:text name='webportal.device.overview.device.serial.number'/></span><span id="block-overview-serial-number"></span></li>
+								<li><span><s:text name='webportal.device.overview.device.property.number'/></span><span id="block-overview-property-number"></span></li>
+								<li><span><s:text name='webportal.device.overview.device.domain'/></span><span id="block-overview-domain"></span></li>
+								<li><span><s:text name='webportal.device.overview.device.pallet'/></span><span id="block-overview-pallet"></span></li>
+								<li><span><s:text name='webportal.device.overview.device.stock'/></span><span id="block-overview-stock-site"></span></li>
 							</ul>
-							<h3 class="status text-green" id="block-overview-status"></h3>
+							<span>Status:</span><h3 class="status text-green" id="block-overview-status"></h3>
 						</div>
 					</div>
 				</div>

@@ -39,6 +39,7 @@
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/search-results.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/spin.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
+		<script type="text/javascript" src="<%=request.getContextPath()%>/js/vendor/jquery.nicescroll.js"></script>
 	<!--[if lt IE 9]>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
 	<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
@@ -59,9 +60,9 @@
 			<div id="main-content">
 				<div class="big-row">
 					<div class="large-12 columns">
-						<h2 class="page-name-heading-search">
+						<h3 class="page-name-heading-search">
 							<s:text name="webportal.search.results.text.description"/> :<span id="result-id"></span>
-						</h2>
+						</h3>
 					</div>
 				</div>
 				<div id="block-search-results">
@@ -70,7 +71,7 @@
 							<div class="panel-outer" id="block-search-results-installations" style="display: none;">
 								<h4 class="panel-heading">
 									<i class="fi-graph-trend colorHeading"></i>
-									<s:text name="webportal.search.results.installation.title"/>
+									<span><s:text name="webportal.search.results.installation.title"/></span>
 									<span id="block-search-results-installations-number"></span>
 								</h4>
 								<div class="panel-inner">
@@ -101,7 +102,7 @@
 							<div class="panel-outer" id="block-search-results-measurepoints" style="display: none;">
 								<h4 class="panel-heading">
 									<i class="fi-graph-trend colorHeading"></i>
-									<s:text name="webportal.search.results.measurepoint.title"/>
+									<span><s:text name="webportal.search.results.measurepoint.title"/></span>
 									<span id="block-search-results-measurepoints-number"></span>
 								</h4>
 								<div class="panel-inner">
@@ -135,7 +136,7 @@
 							<div class="panel-outer" id="block-search-results-multipoints" style="display: none;">
 								<h4 class="panel-heading">
 									<i class="fi-graph-trend colorHeading"></i>
-									<s:text name="webportal.search.results.multipoint.title"/>
+									<span><s:text name="webportal.search.results.multipoint.title"/></span>
 									<span id="block-search-results-multipoints-number"></span>
 								</h4>
 								<div class="panel-inner">
@@ -167,7 +168,7 @@
 							<div class="panel-outer" id="block-search-results-devices" style="display: none;">
 								<h4 class="panel-heading">
 									<i class="fi-graph-trend colorHeading"></i>
-									<s:text name="webportal.search.results.device.title"/>
+									<span><s:text name="webportal.search.results.device.title"/></span>
 									<span id="block-search-results-devices-number"></span>
 								</h4>
 								<div class="panel-inner">
@@ -199,7 +200,7 @@
 							<div class="panel-outer" id="block-search-results-cases" style="display: none;">
 								<h4 class="panel-heading">
 									<i class="fi-graph-trend colorHeading"></i>
-									<s:text name="webportal.search.results.case.title"/>
+									<span><s:text name="webportal.search.results.case.title"/></span>
 									<span id="block-search-results-cases-number"></span>
 								</h4>
 								<div class="panel-inner">
