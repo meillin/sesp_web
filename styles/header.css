@@ -174,20 +174,24 @@ li {
 .overlapping-menu .fi-graph-trend:before,
 .overlapping-menu .fi-arrow-up:before,
 .overlapping-menu .fi-clock:before,
-.overlapping-menu .capicons:before {
-	margin-top: 0.2rem;
-	margin-bottom: 0.4rem;
+.overlapping-menu .capicons:after {
+	display: inline-block;	
+	margin-top: 0.1rem;
+	margin-bottom: 0.5rem;
 	width: 21px;
 	/*padding-bottom: 0.3rem;*/
 }
 
-.slide-out-text {
-	padding-left: 2.5rem;
-	line-height: 200%;
+.overlapping-menu .capicons:after {
+	display: inline-block;
+	margin-top: 0.3rem;
+	margin-bottom: 0.3rem;
+	width: 21px;
+	vertical-align: top;	
 }
 
-.slide-out-text-logistics {
-	padding-left: 2.4rem;
+.slide-out-text {
+	padding-left: 2.5rem;
 	line-height: 150%;
 }
 
