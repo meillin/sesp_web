@@ -29,9 +29,21 @@ Sub menu actions
 		}
 	});
 
-	$('dd a').click(function(){
+	$('dd a').click(function(event){
+		event.preventDefault();
 		var target = $(this).next();
 		target.slideToggle('fast');
+		$(".filtered").getNiceScroll().resize();
 	});
+
+/*
+Nice scroll
+ */
+	$(".filtered").niceScroll({
+		cursorcolor:"#fff",
+		railalign: 'right'
+	});
+
+	$('.nicescroll-rails').css('right', 0);
 
 });

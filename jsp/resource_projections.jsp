@@ -36,6 +36,7 @@
 		<script src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
 		<script src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
 		<script src="<%=contextPath%>/js/bootstrap-datepicker.js"></script>
+		<script src="<%=contextPath%>/js/vendor/jquery.nicescroll.js"></script>
 
 		<script src="<%=contextPath%>/js/jquery.multiselect.js"></script>
 		<script src="<%=contextPath%>/js/jquery.cookie.js"></script>
@@ -269,21 +270,21 @@
 					<h5 class="text-center">YOU HAVE FILTERED</h5>
 					<dl class="accordion" data-accordion>
 						<dd id="selected-domain">
-							<a href="#">Domain<span class="round label">3</span></a>
+							<a>Domain<span class="round label">3</span></a>
 							<div id="panel1" class="content">
 								<ul></ul>
 							</div>
 						</dd>
 
 						<dd>
-							<a href="#">Planning period</a>
+							<a>Planning period</a>
 							<div id="" class="content">
 								<ul id="selected-period-type"></ul>
 							</div>
 						</dd>
 
 						<dd>
-							<a href="#">Selected planning periods <span class="round label">7</span></a>
+							<a>Selected planning periods <span class="round label">7</span></a>
 							<div id="" class="content">
 								<ul id="selected-date">
 								</ul>
@@ -291,28 +292,28 @@
 						</dd>
 
 						<dd id="selected-utility-type">
-							<a href="#">Utility type <span class="round label">4</span></a>
+							<a>Utility type <span class="round label">4</span></a>
 							<div id="" class="content">
 								<ul></ul>
 							</div>
 						</dd>
 
 						<dd id="selected-area">
-							<a href="#">Area <span class="round label">9</span></a>
+							<a>Area <span class="round label">9</span></a>
 							<div id="" class="content">
 								<ul></ul>
 							</div>
 						</dd>
 
 						<dd id="selected-area-type">
-							<a href="#">Area type <span class="round label">74</span></a>
+							<a>Area type <span class="round label">74</span></a>
 							<div class="content">
 								<ul></ul>
 							</div>
 						</dd>
 
 						<dd id="">
-							<a href="#">Work order type <span class="round label">74</span></a>
+							<a>Work order type <span class="round label">74</span></a>
 							<div id=" selected-date" class="content">
 								<ul>
 									<li>Missing Region</li>
@@ -324,7 +325,7 @@
 						</dd>
 
 						<dd>
-							<a href="#">Device type <span class="round label">9</span></a>
+							<a>Device type <span class="round label">9</span></a>
 							<div id=" selected-date" class="content">
 								<ul>
 									<li>Missing Region</li>
@@ -336,7 +337,7 @@
 						</dd>
 
 						<dd>
-							<a href="#">Device model <span class="round label">9</span></a>
+							<a>Device model <span class="round label">9</span></a>
 							<div id=" selected-date" class="content">
 								<ul>
 									<li>Missing Region</li>
