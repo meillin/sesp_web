@@ -37,12 +37,12 @@ document.createElement("figure");
 <link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />
 
 <script src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
+<script src="<%=contextPath%>/js/vendor/jquery.nicescroll.js"></script>
 <script src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
 <script src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
 <script src="<%=contextPath%>/js/bootstrap-datepicker.js"></script>
 <script src="<%=contextPath%>/js/jquery.multiselect.js"></script>
 <script src="<%=contextPath%>/js/jquery.cookie.js"></script>
-<script src="<%=contextPath%>/js/init.js"></script>
 <script src="<%=contextPath%>/js/common.js"></script>
 <script src="<%=contextPath%>/js/search-results.js"></script>
 <script src="<%=contextPath%>/js/OpenLayers.js"></script>
@@ -233,7 +233,6 @@ document.createElement("figure");
 					</div>
 
 					<div class="large-4 columns">
-						<br/>
 							<div class="medium-6 large-12 columns">
 								<lable>Domain</lable>
 								<select id="filter-multiselect-domain" class="custom-multi-select" onchange="domainChanged()" name="multiselect-domain" multiple="multiple">
@@ -323,54 +322,46 @@ document.createElement("figure");
 			</div><!-- end of new full width row -->
 		</div>
 
-		<div class="large-2 columns filtered show-for-large-up">
-			<h5 class="text-center">YOU HAVE FILTERED</h5>
-			<dl class="accordion" data-accordion>
-				<dd>
-					<a href="#panel1">Domain<span class="round label">3</span></a>
-					<div id="panel1 selected-domain" class="content">
-						<ul>
-							<li>Domain1</li>
-							<li>Domain2</li>
-							<li>Domain3</li>
-						</ul>
-					</div>
-				</dd>
-				<dd>
-					<a href="#panel3">Date interval</a>
-					<div id="panel3 selected-date" class="content">
-						<ul>
-							<li>From: 2009-01-01</li>
-							<li>To: 2017-12-31</li>
-						</ul>
-					</div>
-				</dd>
-				<dd>
-					<a href="#panel4">Planning periods <span class="round label">6</span></a>
-					<div id="panel4 selected-date" class="content">
-						<ul>
-							<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
-							<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
-							<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
-							<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
-							<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
-							<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
-						</ul>
-					</div>
-				</dd>
-				<dd>
-					<a href="#panel4">Utlity type <span class="round label">4</span></a>
-					<div id="panel4 selected-date" class="content">
-						<ul>
-							<li>Electrical</li>
-							<li>Gas</li>
-							<li>Heat</li>
-							<li>Water</li>
-						</ul>
-					</div>
-				</dd>
-			</dl>
-		</div>
+				<div class="large-2 columns filtered show-for-large-up">
+					<h5 class="text-center">YOU HAVE FILTERED</h5>
+					<dl class="accordion" data-accordion>
+						<dd id="selected-domain">
+							<a>Domain<span class="round label"></span></a>
+							<div id="panel1" class="content">
+								<ul></ul>
+							</div>
+						</dd>
+
+						<dd>
+							<a>Period</a>
+							<div id="" class="content">
+								<ul id="selected-period-type"></ul>
+							</div>
+						</dd>
+
+						<dd id="selected-area-type">
+							<a>Area type <span class="round label"></span></a>
+							<div class="content">
+								<ul></ul>
+							</div>
+						</dd>
+
+						<dd id="selected-area">
+							<a>Area <span class="round label"></span></a>
+							<div class="content">
+								<ul></ul>
+							</div>
+						</dd>
+
+						<dd id="selected-work-order-type">
+							<a>Work order type <span class="round label"></span></a>
+							<div class="content">
+								<ul></ul>
+							</div>
+						</dd>
+
+					</dl>
+				</div>
 	</div>
 
 

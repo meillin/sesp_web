@@ -203,8 +203,24 @@ function fillAreas(data) {
 		items += '<option value="' + item.id +selected + item.name + '</option>';
 
 	});
-
 	populateSavedMultiSelectBox("#filter-multiselect-area", items,savedData);
+}
+
+function insertPeriod(f, t, type){
+	type = type === true ? 'Unplanned' : 'Planned';
+	var periodType ='<li>Type: ' + type + '</li>';
+	var from = '<li>From: ' + f + '</li>';
+	var to = '<li>To: ' + t + '</li>';
+	$('#selected-period-type').html(periodType + from + to);
+}
+
+function insertValues(value, context, divId){
+	var values = '';
+	for(var i = 0 ; i < value.length ; i++){
+		values +='<li>' + $("#"+context+" option[value="+value[i]+"]").text()+ "</li>";
+	}
+	$('#'+divId+' ul').html(values);
+	$('#'+divId+' span.label').html(value.length);
 }
 
 function filter_submit() {
@@ -213,11 +229,21 @@ function filter_submit() {
 		var ap_dateInterval = $("#filter-select-date-interval").val();
 		var ap_dateFrom = $("#filter-date-from").val();
 		var ap_dateTo = $("#filter-date-to").val();
-		var ap_domain = $("#filter-multiselect-domain").val() || '6, 7, 8';
-		var ap_areaType = $("#filter-multiselect-area-type").val() || '10,9,8,11,7,12,13';
-		var ap_workOrderType = $("#filter-multiselect-work-order-type").val() || '41,44,81,51,53,55,57,59,61,63,65,112,130,152,128,140,460,207,107,126,136,173,462,110,256,147,168,149,143,464,145,466,211,68,69,70,82,135,154,74,77,78,84,179,180,183,184,185,186,187,188,189,190,191,192,193,194,195,175,196,197,176,198,199,200,177,178,201,202,203,204,205,181,182';
 		var ap_unplanned = $("#filter-checkbox-unplanned").prop('checked');
-		var ap_area = $("#filter-multiselect-area").val() || '7,8,9,10,11,12,13,14,15';
+		insertPeriod(ap_dateFrom, ap_dateTo, ap_unplanned);
+
+		var ap_domain = $("#filter-multiselect-domain").val();
+		insertValues(ap_domain, 'filter-multiselect-domain','selected-domain');
+
+		var ap_areaType = $("#filter-multiselect-area-type").val();
+		insertValues([ap_areaType], 'filter-multiselect-area-type','selected-area-type');
+
+		var ap_workOrderType = $("#filter-multiselect-work-order-type").val();
+		insertValues(ap_workOrderType, 'filter-multiselect-work-order-type','selected-work-order-type');
+
+		var ap_area = $("#filter-multiselect-area").val();
+		insertValues(ap_area, 'filter-multiselect-area','selected-area');
+
 
 		if(ap_dateInterval == "custominterval"){
 				if(!validateInputs(ap_dateFrom,from_err_msg)){
