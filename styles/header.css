@@ -168,18 +168,23 @@ li {
 .overlapping-menu .fi-home:before,
 .overlapping-menu .fi-torsos:before,
 .overlapping-menu .fi-graph-horizontal:before,
-.overlapping-menu .fi-mountains:before,
 .overlapping-menu .fi-alert:before,
 .overlapping-menu .fi-monitor:before,
 .overlapping-menu .fi-graph-trend:before,
 .overlapping-menu .fi-arrow-up:before,
 .overlapping-menu .fi-clock:before,
-.overlapping-menu .cap-logistics:after {
+.overlapping-menu .cap-logistics:after,
+.overlapping-menu .fi-power:before {
 	display: inline-block;
 	margin-top: 0.1rem;
 	margin-bottom: 0.1rem;
 	width: 21px;
 	vertical-align: top;
+}
+
+.overlapping-menu .logout-button {
+	border-top: 1px solid #485760;
+	border-bottom: 1px solid #485760;
 }
 
 .slide-out-text {
