@@ -30,6 +30,7 @@
 	<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />
 
 	<script src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
+	<script src="<%=contextPath%>/js/vendor/jquery.nicescroll.js"></script>
 	<script src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
 	<script src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
 	<script src="<%=contextPath%>/js/bootstrap-datepicker.js"></script>
@@ -222,7 +223,6 @@
 					</div>
 
 					<div class="large-4 columns">
-						<br/>
 						<div class="large-12 medium-6 columns">
 							<lable>Domain</lable>
 							<select id="filter-multiselect-domain" class="custom-multi-select" onchange="domainChanged()" name="multiselect-domain" multiple="multiple">

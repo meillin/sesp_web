@@ -88,7 +88,6 @@ function populateSelectModelsList(modelListId, items) {
 	$(""+modelListId+"").html(items);
 }
 
-
 function errorDetails(data) {
 	alert(i18nerrorChartError);
 }
@@ -106,25 +105,7 @@ function clearDeviceModelsList() {
 	$("#filter-multiselect-device-model").html(items);
 	$("#filter-multiselect-device-model").multiselect("refresh");
 }
-/*
-function loadDomainList() {
-	var obj= {};
-	obj.url=contextPath+"/std/GetDomains.action";
-	obj.successfunc = function(data) {
-		var items='';
 
-		$.each(data, function(i, item) {
-			items += '<option value="' + item.id + '">'	+ item.name + '</option>';
-			});
-		$("#filter-multiselect-domain").html(items);
-		$("#filter-multiselect-domain").multiselect("refresh");
-
-	};
-	obj.errorfunc = errorDetails;
-	run_ajax_json(obj);
-	return;
-}
-*/
 function loadDomainList() {
 	var obj= {};
 	obj.url=contextPath+"/std/GetDomains.action";

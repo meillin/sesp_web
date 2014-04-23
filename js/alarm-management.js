@@ -17,9 +17,10 @@ var i18nerrorSelectArea;
 var i18nerrorSelectEvent;
 var i18nerrorSelectEventType;
 var i18nerrorChartError;
+var pageCode = "Alarm_m";
 
-function populateFilters()
-{
+
+function populateFilters(){
 	getAreaTypes();
 	getDomains();
 	getAlarmTypes();
@@ -31,11 +32,27 @@ function populateFilters()
 
 function errorAlarmDetails(data) {
 	alert(i18nerrorChartError);
-
 }
 
 function errorAutoFill(data) {
 	alert("ERROR : " + data.responseText);
+}
+
+//Populate the multi-select box with the given data for the given id
+function populateSavedMultiSelectBox(idName, items, savedData){
+
+	$(idName).find('option').remove();
+	$(idName).multiselect('refresh');
+	var selectData = $(idName).multiselect();
+	selectData.append(items);
+
+	//var savedData = $.cookie(pageCode+idName);
+	if(savedData!=null && savedData!='') {
+		var dataArray = savedData.split(",");
+		$(idName).val(dataArray);
+	}
+
+	selectData.multiselect('refresh');
 }
 
 function getDomains() {
@@ -49,12 +66,21 @@ function getDomains() {
 
 function fillDomains(data) {
 	var items;
+	var savedData = $.cookie(pageCode + "domains");
+	var selected = '">';
+	if(savedData === null || savedData === ''){
+		selected = '"selected > ';
+	}
 	$.each(data, function(i, item) {
-		items += '<option value="' + item.id + '">' + item.name + '</option>';
+		items += '<option value="' + item.id +selected + item.name + '</option>';
 	});
+
+	populateSavedMultiSelectBox("#domains", items, savedData);
+	/*
 	var msdomains = $("#domains").multiselect();
 	msdomains.append(items);
 	msdomains.multiselect('refresh');
+	*/
 }
 
 function getAreaTypes() {
@@ -130,7 +156,6 @@ function getCommTypes() {
 	obj.errorfunc = errorAutoFill;
 	run_ajax_json(obj);
 	return;
-
 }
 
 function fillCommTypes(data) {
@@ -329,7 +354,7 @@ function onSubmit()
 		run_ajax(obj);
 
 		//Draw a dummy data chart to see the result. To be removed
-		drawTestChart();
+		//drawTestChart();
 
 		//Get all the new areas in the map
 		var obj1= {};
@@ -340,6 +365,10 @@ function onSubmit()
 		run_ajax(obj1);
 		return;
 	}
+}
+
+function saveAlarmManagementFilter(key,value){
+	$.cookie(pageCode+key,value,{ expires: 7 });
 }
 
 function drawTestChart(){

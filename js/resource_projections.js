@@ -88,7 +88,6 @@ function getDomainList() {
 	return;
 }
 
-
 function getArea() {
 
 	if(domainCodes == null || domainCodes == ""){
@@ -102,7 +101,6 @@ function getArea() {
 	run_ajax_json(obj);
 	return;
 }
-
 
 function getUtilityTypes(){
 
@@ -397,9 +395,6 @@ function fillDomain(data){
 //Populate the multi-select box with the given data for the given id
 function populateSavedMultiSelectBox(idName, items,savedData){
 
-	/*$(idName).html(items);
-	$(idName).multiselect("refresh");*/
-
 	$(idName).find('option').remove();
 	$(idName).multiselect('refresh');
 	var selectData = $(idName).multiselect();
@@ -428,8 +423,6 @@ function populateMultiSelectBox(idName, items){
 function errorAutoFill(data) {
 	alert("Error : " + data.responseText);
 }
-
-
 
 function selectRow(id){
 
@@ -541,12 +534,13 @@ function processProjections(){
 	return;
 
 }
+
 function insertInfiltered(){
 	insertValues(domainCodes, 'block-time-multiselect-domain','selected-domain');
 	insertPeriod();
 }
 
-function insertValues(value, context,divId){
+function insertValues(value, context, divId){
 	var values = '';
 	for(var i = 0 ; i < value.length ; i++){
 		values +='<li>' + $("#"+context+" option[value="+value[i]+"]").text()+ "</li>";

@@ -33,15 +33,14 @@
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
 
 		<script src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
-		<script src="<%=contextPath%>/js/common.js"></script>
 		<script src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
+		<script src="<%=contextPath%>/js/common.js"></script>
 		<script src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
 		<script src="<%=contextPath%>/js/bootstrap-datepicker.js"></script>
 		<script src="<%=contextPath%>/js/vendor/jquery.nicescroll.js"></script>
 
 		<script src="<%=contextPath%>/js/jquery.multiselect.js"></script>
 		<script src="<%=contextPath%>/js/jquery.cookie.js"></script>
-		<script src="<%=contextPath%>/js/init.js"></script>
 		<script src="<%=contextPath%>/js/resource_projections.js"></script>
 
 		<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/js/images/favicon.png" />

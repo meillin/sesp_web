@@ -24,11 +24,9 @@ document.createElement("figure");
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-index.css" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-search-results.css" />
-<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/hex2.css">
 <link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/style.tidy.css" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
-
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/jquery.multiselect.css"/>
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/bubble-map.css"/>
 
@@ -39,8 +37,6 @@ document.createElement("figure");
 
 <script type="text/javascript" src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
 <script type="text/javascript" src="<%=contextPath%>/js/jquery.cookie.js"></script>
-<script type="text/javascript" src="<%=contextPath%>/js/foundation.min.js"></script>
-<script type="text/javascript" src="<%=contextPath%>/js/foundation/foundation.offcanvas.js"></script>
 
 <script src="<%=contextPath%>/js/sesp_ajax.js"></script>
 <script src="<%=contextPath%>/js/spin.js"></script>
@@ -52,7 +48,6 @@ document.createElement("figure");
 <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
 <![endif]-->
-
 
 </head>
 <body>
