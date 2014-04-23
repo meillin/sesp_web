@@ -36,8 +36,8 @@
 
 
 		<script src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
+		<script src="<%=request.getContextPath()%>/js/vendor/jquery.nicescroll.js"></script>
 		<script src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
-		<script src="<%=request.getContextPath()%>/js/init.js"></script>
 		<script src="<%=request.getContextPath()%>/js/jquery.cookie.js"></script>
 		<script src="<%=request.getContextPath()%>/js/jquery-ui-1.10.2.custom.js"></script>
 		<script src="<%=request.getContextPath()%>/js/bootstrap-datepicker.js"></script>
@@ -213,9 +213,9 @@
 					<div class="large-12 columns">
 							<ul class="page-name-heading sub-menu">
 								<span>STOCK MANAGEMENT</span>
-								<li class="progress-chart-li"><i class="fi-check"></i> From Supplier</li>
+								<li class="progress-chart-li active"><i class="fi-check"></i> From Supplier</li>
 								<li class="status-chart"><i class="fi-check"></i> In Stock</li>
-								<li class="details-chart active"><i class="fi-check"></i> On Pallet</li>
+								<li class="details-chart"><i class="fi-check"></i> On Pallet</li>
 							</ul>
 					</div>
 					</div>

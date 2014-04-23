@@ -1,54 +1,6 @@
-var pgCode = 9;
-
-jQuery(document).ready(function($){
-	/*
-	 * tabs managing
-	 */
-    $("#block-on-pallet-tab1").click(function(){
-
-    	$("#display-tab-name").text(i18nStockSupplierTab);
-    	if( !$(this).hasClass("selected")){
-	    	$(".tab").removeClass("selected");
-	    	$(this).addClass("selected");
-
-	    	/**
-			 * TODO action on the first tab
-			 */
-
-    	}
-    });
-
-    $("#block-on-pallet-tab2").click(function(){
-
-    	$("#display-tab-name").text(i18nInStockTab);
-    	if( !$(this).hasClass("selected")){
-	    	$(".tab").removeClass("selected");
-	    	$(this).addClass("selected");
-
-	    	/**
-			 * TODO action on the second tab
-			 */
-
-    	 }
-    });
-
-    $("#block-on-pallet-tab3").click(function(){
-
-    	$("#display-tab-name").text(i18nStockPalletTab);
-    	if( !$(this).hasClass("selected")){
-	    	$(".tab").removeClass("selected");
-	    	$(this).addClass("selected");
-
-	    	/**
-			 * TODO action on the thrid tab
-			 */
-
-    	}
-    });
-});
+var pgCode = 7;
 
 var contextPath = "";
-
 var i18nSelectDeviceType;
 var i18nSelectDomain;
 var i18nSelectDeviceModel;
@@ -75,12 +27,9 @@ var i18nOptionSelectEntityShownFromSupplier;
 function onLoadSpecial() {
 
 	$("#display-tab-name").text(i18nStockSupplierTab);
-	updateUnitStatus("fromSupplier");
+	//updateUnitStatus("fromSupplier");
 	loadDomainList();
 	loadDeviceTypesList();
-
-/*	populateSelectModelsList("#block-on-pallet-select-entity-shown", i18nOptionSelectEntityShownFromSupplier);
-	populateSelectModelsList("#block-on-pallet-select-divide-entity", i18nOptionSelectDivideEntity);*/
 }
 
 function populateSelectModelsList(modelListId, items) {
@@ -113,6 +62,7 @@ function loadDomainList() {
 		var items;
 		var savedData = $.cookie(pgCode+"ap_domain");
 		var selected = '" > ';
+		var ids = [];
 
 		if(savedData == null || savedData == ''){
 			selected = '" selected > ';
@@ -120,9 +70,13 @@ function loadDomainList() {
 
 		$.each(data, function(i, item) {
 			items += '<option value="' + item.id +selected + item.name + '</option>';
+			ids.push(item.id);
 		});
 
-		populateSavedMultiSelectBox("#filter-multiselect-domain", items,savedData);
+		populateSavedMultiSelectBox("#filter-multiselect-domain", items, savedData);
+
+		loadWarehousesList(ids);
+		loadDeviceModelsList(ids);
 	};
 	obj.errorfunc = errorDetails;
 	run_ajax_json(obj);
@@ -133,16 +87,20 @@ function loadDeviceModelsList(domainCode) {
 	var obj= {};
 	obj.url=contextPath+"/std/GetDeviceModels.action";
 	obj.pdata = "dc="+domainCode;
+
 	obj.successfunc = function(data) {
 			clearDeviceModelsList();
 			var items;
+			var savedData = $.cookie(pgCode+"ap_devicemodel");
+			var selected = '" > ';
+			if(savedData === null || savedData === ''){ selected = '" selected > '; }
 
 			$.each(data, function(i, item) {
-				items += '<option value="' + item.id + '">' + item.name + '</option>';
+				items += '<option value="' + item.id +selected + item.name + '</option>';
 			});
-			$("#filter-multiselect-device-model").html(items);
-			$("#filter-multiselect-device-model").multiselect("refresh");
+			populateSavedMultiSelectBox("#filter-multiselect-device-model", items,savedData);
 		};
+
 	obj.errorfunc = errorDetails;
 	run_ajax_json(obj);
 	return;
@@ -153,11 +111,14 @@ function loadDeviceTypesList() {
 	obj.url=contextPath+"/std/GetDeviceTypes.action";
 	obj.successfunc = function(data) {
 		var items;
+		var savedData = $.cookie(pgCode+"ap_devicetype");
+		var selected = '" > ';
+		if(savedData === null || savedData === ''){ selected = '" selected > '; }
+
 		$.each(data, function(i, item) {
-			items += '<option value="' + item.id + '">'	+ item.name + '</option>';
-			});
-		$("#filter-multiselect-device-type").html(items);
-		$("#filter-multiselect-device-type").multiselect("refresh");
+				items += '<option value="' + item.id +selected + item.name + '</option>';
+		});
+		populateSavedMultiSelectBox("#filter-multiselect-device-type", items,savedData);
 	};
 	obj.errorfunc = errorDetails;
 	run_ajax_json(obj);
@@ -167,16 +128,21 @@ function loadDeviceTypesList() {
 function loadWarehousesList(domainCode) {
 	var obj= {};
 	obj.url=contextPath+"/std/GetWarehouses.action";
+	console.log($("#filter-multiselect-domain").val());
 	obj.pdata = "dc="+domainCode;
+
 	obj.successfunc = function(data) {
 			var items;
-			$.each(data, function(i, item) {
-				items += '<option value="' + item.id + '">' + item.name + '</option>';
-			});
-			$("#filter-multiselect-stock-site").html(items);
-			$("#filter-multiselect-stock-site").multiselect("refresh");
+			var savedData = $.cookie(pgCode+"ap_stocksite");
+			var selected = '" > ';
+			if(savedData == null || savedData == ''){ selected = '" selected > '; }
 
+			$.each(data, function(i, item) {
+				items += '<option value="' + item.id +selected + item.name + '</option>';
+			});
+			populateSavedMultiSelectBox("#filter-multiselect-stock-site", items,savedData);
 		};
+
 	obj.errorfunc = errorDetails;
 	run_ajax_json(obj);
 	return;
@@ -185,7 +151,6 @@ function loadWarehousesList(domainCode) {
 function displayInfo(id) {
 		$("#warehouses").val(id);
 	}
-
 
 function infoDataCallback(id) {
 	var returnData;
@@ -220,8 +185,7 @@ function infoDataCallback(id) {
 	return returnData;
 }
 
-function onChangeDomain()
-{
+function onChangeDomain(){
 	var ls_domain = $("#filter-multiselect-domain").val();
 	// alert(ls_domain);
 	if(null != ls_domain) {
@@ -233,7 +197,6 @@ function onChangeDomain()
 	}
 	//loadPoints(ls_domain);
 }
-
 
 function submitLogistics() {
 	console.log('function submitLogistics() called');
@@ -261,8 +224,6 @@ function submitLogistics() {
 		run_ajax(obj);
 		return;
 	}
-
-
 }
 
 function stockValidation() {
@@ -276,7 +237,6 @@ function stockValidation() {
 		alert(i18nerrorPleaseChooseMandatoryFields);
 		return false;
 	}
-
 	return true;
 }
 

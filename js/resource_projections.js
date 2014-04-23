@@ -629,14 +629,3 @@ function populateSavedValue(nameId,value){
 	}
 	return false;
 }
-
-/*function saveResourceProjectionsFilters(ap_dateInterval,ap_dateFrom,ap_dateTo,ap_domain,ap_areaType,ap_workOrderType,ap_unplanned,ap_area) {
-	$.cookie(pgCode+"ap_dateInterval",ap_dateInterval,{ expires: 7 });
-	$.cookie(pgCode+"ap_dateFrom",ap_dateFrom,{ expires: 7 });
-	$.cookie(pgCode+"ap_dateTo",ap_dateTo,{ expires: 7 });
-	$.cookie(pgCode+"ap_domain",ap_domain,{ expires: 7 });
-	$.cookie(pgCode+"ap_areaType",ap_areaType,{ expires: 7 });
-	$.cookie(pgCode+"ap_workOrderType",ap_workOrderType,{ expires: 7 });
-	$.cookie(pgCode+"ap_unplanned",ap_unplanned,{ expires: 7 });
-	$.cookie(pgCode+"ap_area",ap_area,{ expires: 7 });
-}*/
