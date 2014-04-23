@@ -42,6 +42,7 @@ Nice scroll
 	$(".filtered, .filterHeader .big-row > div:nth-child(2)").niceScroll({
 		cursorcolor:"#ffffff ",
 		cursoropacitymax: '0.7',
+		cursorwidth: '10',
 		cursorborder: '0',
 		railalign: 'right'
 	});
@@ -86,8 +87,6 @@ Nice scroll
 			selectedList: 2 // Number of item listed in the header befor the generic "x selected"
 		});
 	}
-
-//
 
 });
 

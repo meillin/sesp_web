@@ -17,12 +17,12 @@ var i18nerrorSelectArea;
 var i18nerrorSelectEvent;
 var i18nerrorSelectEventType;
 var i18nerrorChartError;
-var pageCode = "Alarm_m";
+var pageCode = "6";
 
 
 function populateFilters(){
-	getAreaTypes();
 	getDomains();
+	getAreaTypes();
 	getAlarmTypes();
 	getAreas(null,null);
 	getUtilityTypes();
@@ -66,21 +66,15 @@ function getDomains() {
 
 function fillDomains(data) {
 	var items;
-	var savedData = $.cookie(pageCode + "domains");
+	var savedData = $.cookie(pageCode + "al_domain");
 	var selected = '">';
-	if(savedData === null || savedData === ''){
-		selected = '"selected > ';
-	}
+	if(savedData === null || savedData === ''){ selected = '"selected > '; }
+
 	$.each(data, function(i, item) {
 		items += '<option value="' + item.id +selected + item.name + '</option>';
 	});
 
 	populateSavedMultiSelectBox("#domains", items, savedData);
-	/*
-	var msdomains = $("#domains").multiselect();
-	msdomains.append(items);
-	msdomains.multiselect('refresh');
-	*/
 }
 
 function getAreaTypes() {
@@ -278,7 +272,6 @@ function validateAlarmFilters(al_fromdate, al_todate,al_areatypes,al_domain, al_
 	return false;
 	}
 
-
 	if(al_breakup =="A" && ( al_areas=='null' || al_areas == null))
 	{
 	alert(i18nerrorSelectArea);
@@ -298,24 +291,6 @@ function validateAlarmFilters(al_fromdate, al_todate,al_areatypes,al_domain, al_
 
 var chartType;
 function drawChart(data) {
-	/*
-
-	var alertChart;
-	if (data != "" || data != null) {
-		if (chartType == 'A') {
-			alertChart = new FusionCharts(contextPath
-					+ "/js/fusionchartsxt/charts/StackedColumn2D.swf",
-					"amchartId", "750", "306");
-		} else {
-			alertChart = new FusionCharts(contextPath
-					+ "/js/fusionchartsxt/charts/StackedColumn2D.swf", "amchartId",
-					" 750", "306");
-		}
-		alertChart.setDataXML(data);
-		alertChart.render("block-alarm-charts-view");
-	}
-	*/
-	//loadPoints(ls_domain, ls_fromdate, ls_todate, ls_areatypes, ls_areas, ls_unitCommTypes, ls_devicemodels, ls_utilitytypes);
 }
 
 function onSubmit()
@@ -331,6 +306,16 @@ function onSubmit()
 	var al_fromdate = $("#filter-date-from").val();
 	var al_todate = $("#filter-date-to").val();
 	var al_dateinterval = $("#filter-select-date-interval").val();
+
+	saveAlarmManagementFilter('al_domain', al_domain);
+	saveAlarmManagementFilter('al_areatypes', al_areatypes);
+	saveAlarmManagementFilter('al_areas', al_areas);
+	saveAlarmManagementFilter('al_alarmtypes', al_areas);
+	saveAlarmManagementFilter('al_utilitytypes', al_utilitytypes);
+	saveAlarmManagementFilter('al_unitCommTypes', al_unitCommTypes);
+	saveAlarmManagementFilter('al_devicemodels', al_devicemodels);
+	saveAlarmManagementFilter('al_fromdate', al_fromdate);
+	saveAlarmManagementFilter('al_todate', al_todate);
 
 	chartType=al_breakup;
 	var dateInterval = {};
