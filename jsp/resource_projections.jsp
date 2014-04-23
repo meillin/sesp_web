@@ -22,9 +22,9 @@
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/foundation.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/foundation-icons/foundation-icons.css">
 
+		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/jquery.multiselect.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
-		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
 
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/datepicker.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-resource-projections.css" />
@@ -33,6 +33,7 @@
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
 
 		<script src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
+		<script src="<%=contextPath%>/js/common.js"></script>
 		<script src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
 		<script src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
 		<script src="<%=contextPath%>/js/bootstrap-datepicker.js"></script>
@@ -270,7 +271,7 @@
 					<h5 class="text-center">YOU HAVE FILTERED</h5>
 					<dl class="accordion" data-accordion>
 						<dd id="selected-domain">
-							<a>Domain<span class="round label">3</span></a>
+							<a>Domain<span class="round label"></span></a>
 							<div id="panel1" class="content">
 								<ul></ul>
 							</div>
@@ -283,68 +284,53 @@
 							</div>
 						</dd>
 
-						<dd>
-							<a>Selected planning periods <span class="round label">7</span></a>
+						<dd id="selected-date">
+							<a>Selected planning periods <span class="round label"></span></a>
 							<div id="" class="content">
-								<ul id="selected-date">
+								<ul>
 								</ul>
 							</div>
 						</dd>
 
 						<dd id="selected-utility-type">
-							<a>Utility type <span class="round label">4</span></a>
+							<a>Utility type <span class="round label"></span></a>
 							<div id="" class="content">
 								<ul></ul>
 							</div>
 						</dd>
 
 						<dd id="selected-area">
-							<a>Area <span class="round label">9</span></a>
-							<div id="" class="content">
-								<ul></ul>
-							</div>
-						</dd>
-
-						<dd id="selected-area-type">
-							<a>Area type <span class="round label">74</span></a>
+							<a>Area <span class="round label"></span></a>
 							<div class="content">
 								<ul></ul>
 							</div>
 						</dd>
 
-						<dd id="">
-							<a>Work order type <span class="round label">74</span></a>
-							<div id=" selected-date" class="content">
-								<ul>
-									<li>Missing Region</li>
-									<li>Missing Region</li>
-									<li>Missing Region</li>
-									<li>Missing Region</li>
-								</ul>
+						<dd id="selected-area-type">
+							<a>Area type <span class="round label"></span></a>
+							<div class="content">
+								<ul></ul>
 							</div>
 						</dd>
 
-						<dd>
-							<a>Device type <span class="round label">9</span></a>
-							<div id=" selected-date" class="content">
-								<ul>
-									<li>Missing Region</li>
-									<li>Missing Region</li>
-									<li>Missing Region</li>
-									<li>Missing Region</li>
-								</ul>
+						<dd id="selected-work-order-type">
+							<a>Work order type <span class="round label"></span></a>
+							<div class="content">
+								<ul></ul>
 							</div>
 						</dd>
 
-						<dd>
-							<a>Device model <span class="round label">9</span></a>
-							<div id=" selected-date" class="content">
-								<ul>
-									<li>Missing Region</li>
-									<li>Missing Region</li>
-									<li>Missing Region</li>
-									<li>Missing Region</li>
-								</ul>
+						<dd id="selected-device-type">
+							<a>Device type <span class="round label"></span></a>
+							<div class="content">
+								<ul></ul>
+							</div>
+						</dd>
+
+						<dd id="selected-device-model">
+							<a>Device model <span class="round label"></span></a>
+							<div class="content">
+								<ul></ul>
 							</div>
 						</dd>
 
@@ -356,9 +342,6 @@
 
 		</div><!--end of wrapper -->
 		<script src="<%=contextPath%>/js/highchart/resource-projection-chart.js"></script>
-
-		<script src="<%=contextPath%>/js/foundation/foundation.js"></script>
-		<script src="<%=contextPath%>/js/common.js"></script>
 
 	<!--[if lt IE 9]>
 	<script type="text/javascript" src="https://raw.githubusercontent.com/chuckcarpenter/REM-unit-polyfill/master/js/rem.min.js"></script>

@@ -434,14 +434,18 @@ function errorAutoFill(data) {
 function selectRow(id){
 
 	var rowId = "#"+id;
+	var numOfRow = 0;
 
 	if($(rowId).hasClass(SELECTED) === true){
 		$(rowId).removeClass(SELECTED);
-		$( "#selected-date"  + " " + rowId ).remove();
+		$( "#selected-date ul"  + " " + rowId ).remove();
+		numOfRow--;
 	}else{
 		$(rowId).addClass(SELECTED);
-		$(rowId).clone().appendTo('#selected-date');
+		$(rowId).clone().appendTo('#selected-date ul');
+		numOfRow++;
 	}
+	$('#selected-date span.label').html(numOfRow);
 }
 
 function processProjections(){
@@ -505,11 +509,17 @@ function processProjections(){
 	insertValues(area, 'filter-multiselect-area','selected-area');
 
 	var areaType = $("#filter-multiselect-area-type").val();
-	insertValues(area, 'filter-multiselect-area-type','selected-area-type');
+	insertValues(areaType, 'filter-multiselect-area-type','selected-area-type');
 
 	var workOrderType = $("#filter-multiselect-work-order-type").val();
+	insertValues(workOrderType, 'filter-multiselect-work-order-type','selected-work-order-type');
+
 	var deviceType = $("#filter-multiselect-device-type").val();
+	insertValues(deviceType, 'filter-multiselect-device-type','selected-device-type');
+
 	var deviceModel = $("#filter-multiselect-device-model").val();
+	insertValues(deviceModel, 'filter-multiselect-device-model','selected-device-model');
+
 
 	saveResourceProjectionFilter("filter-multiselect-utility-type", utilityType);
 	saveResourceProjectionFilter("filter-multiselect-area", area);
@@ -557,48 +567,6 @@ function fillResourceProjectsData(data){
 	//alert("filling rp");
 	if(data != null){
 
-
-	//var stackedData = data.deviceAssetsPerMonth;
-	//alert("data:"+stackedData);
-	/*alert("data-filling rp:"+deviceAssetsList);
-	var daLength = 2;//deviceAssetsList.size();
-	var concenDataSet = "";
-	var directDataSet = "";
-	var troubleDataSet = "";
-	var ctDataSet = "";
-
-	for(var i = 0; i < daLength; i++){
-
-		var deviceAsset = deviceAssetsList[i];
-		concenDataSet = concenDataSet +"<set value='"+deviceAsset.getConInstallation()+"'/>";
-		directDataSet = directDataSet +"<set value='"+deviceAsset.getDirectMeasured()+"'/>";
-		troubleDataSet = troubleDataSet +"<set value='"+deviceAsset.getTroubleMeasurePoint()+"'/>";
-		ctDataSet = ctDataSet +"<set value='"+deviceAsset.getCtMeaured()+"'/>";
-	}
-	var stackedData = "<chart caption='' xAxisName='' yAxisName='' showAlternateVGridColor='0' canvasBorderThickness='1' canvasBgColor='E9E9E9' vdivLineColor='E9E9E9'  ><categories><category label='Jan' /><category label='Feb' /><category label='Mar' /><category label='Apr' /><category label='May' /><category label='Jun' /><category label='Jul' /><category label='Aug' /><category label='Sep' /><category label='Oct' /><category label='Nov' /><category label='Dec' /></categories>"+
-	"<dataset seriesName='Concentrator Installation' color='AFD8F8' showValues='1' alpha='90' thickness='1' ><set value='270' /><set value='298'/><set value='258' /><set value='268' /><set value='296' /><set value='326' /><set value='318' /><set value='367' /><set value='297' /><set value='319' /><set value='329' /><set value='348' /></dataset>"+
-	"<dataset seriesName='Direct measured' color='F984A1' showValues='1' alpha='90'  ><set value='270' /><set value='298'/><set value='258' /><set value='268' /><set value='296' /><set value='326' /><set value='318' /><set value='367' /><set value='297' /><set value='319' /><set value='329' /><set value='348' /></dataset>"+
-	"<dataset seriesName='Troubleshoot measurepoint' color='8BBA00' showValues='1' alpha='90' ><set value='270' /><set value='298'/><set value='258' /><set value='268' /><set value='296' /><set value='326' /><set value='318' /><set value='367' /><set value='297' /><set value='319' /><set value='329' /><set value='348' /></dataset>"+
-	"<dataset seriesName='CT measured' color='F6BD0F' showValues='1' alpha='90' ><set value='270' /><set value='298'/><set value='258' /><set value='268' /><set value='296' /><set value='326' /><set value='318' /><set value='367' /><set value='297' /><set value='319' /><set value='329' /><set value='348' /></dataset>"+
-	//"<dataset seriesName='2001' color='F6BD0F' showValues='1'><set value='450'/><set value='650'/><set value='760' /><set value='680' /><set value='118' /><set value='197' /><set value='217' /><set value='219' /><set value='229' /><set value='298' /></dataset>" +
-	"</chart>";
-
-	var stackedData = "<chart caption='' xAxisName='' yAxisName='' showAlternateVGridColor='0' canvasBorderThickness='1' canvasBgColor='E9E9E9' vdivLineColor='E9E9E9'  ><categories><category label='Jan' /><category label='Feb' /><category label='Mar' /><category label='Apr' /><category label='May' /><category label='Jun' /><category label='Jul' /><category label='Aug' /><category label='Sep' /><category label='Oct' /><category label='Nov' /><category label='Dec' /></categories>"+
-	"<dataset seriesName='Concentrator Installation' color='AFD8F8' showValues='1' alpha='90' thickness='1' >"+concenDataSet+"</dataset>"+
-	"<dataset seriesName='Direct measured' color='F984A1' showValues='1' alpha='90'  >"+directDataSet+"</dataset>"+
-	"<dataset seriesName='Troubleshoot measurepoint' color='8BBA00' showValues='1' alpha='90' >"+troubleDataSet+"</dataset>"+
-	"<dataset seriesName='CT measured' color='F6BD0F' showValues='1' alpha='90' >"+ctDataSet+"</dataset>"+
-	//"<dataset seriesName='2001' color='F6BD0F' showValues='1'><set value='450'/><set value='650'/><set value='760' /><set value='680' /><set value='118' /><set value='197' /><set value='217' /><set value='219' /><set value='229' /><set value='298' /></dataset>" +
-	"</chart>";*/
-
-//	///<chart bgColor='E9E9E9' outCnvBaseFontColor='666666' caption='Monthly Sales Summary Comparison' xAxisName='Month' yAxisName='Sales' numberPrefix='$' showValues='0' numVDivLines='10' showAlternateVGridColor='1' AlternateVGridColor='e1f5ff' divLineColor='e1f5ff' vdivLineColor='e1f5ff' baseFontColor='666666' toolTipBgColor='F3F3F3' toolTipBorderColor='666666' canvasBorderColor='666666' canvasBorderThickness='1' showPlotBorder='1' plotFillAlpha='80'><categories><category label='Jan' /><category label='Feb' /><category label='Mar' /><category label='Apr' /><category label='May' /><category label='Jun' /><category label='Jul' /><category label='Aug' /><category label='Sep' /><category label='Oct' /><category label='Nov' /><category label='Dec' /></categories><dataset seriesName='2004' color='B1D1DC' plotBorderColor='B1D1DC'><set value='27400' /><set value='29800'/><set value='25800' /><set value='26800' /><set value='29600' /><set value='32600' /><set value='31800' /><set value='36700' /><set value='29700' /><set value='31900' /><set value='32900' /><set value='34800' /></dataset><dataset seriesName='2003' color='C8A1D1' plotBorderColor='C8A1D1'><set /><set /><set value='4500'/><set value='6500'/><set value='7600' /><set value='6800' /><set value='11800' /><set value='19700' /><set value='21700' /><set value='21900' /><set value='22900' /><set value='29800' /></dataset><trendlines><line startValue='22000' endValue='58000' color='999999' displayValue='Target' dashed='1' thickness='2' dashGap='6' alpha='100' showOnTop='1'/></trendlines><styles><definition><style type='animation' name='TrendAnim' param='_alpha' duration='1' start='0' /></definition><application><apply toObject='TRENDLINES' styles='TrendAnim' /></application></styles></chart>Reload Chart View chart in: Flash JavaScript
-	//<chart palette='2' caption='Product Comparison' showLabels='1' showvalues='0' numberPrefix='$' showSum='1' decimals='0' useRoundEdges='1' legendBorderAlpha='0'><categories>
-	//drawDeviceAssetStackedChart("<chart palette='2' caption='Product Comparison' showLabels='1' showvalues='0' numberPrefix='$' showSum='1' decimals='0' useRoundEdges='1' legendBorderAlpha='0'><categories>");
-	//	//<chart caption='Airline Delay Causes' showPercentageInLabel='1' showValues='0' showLabels='0' showLegend='1'><set value='14.94' label='Weather' color='429EAD'/><set value='19.17' label='Volume' color='4249AD'/><set value='7.14' label='Closed Runway' color='AD42A2'/><set value='7.75' label='Others' color='D4AC31'/></chart>
-    /*var pieData = "<chart caption='' showValues='1' showLabels='0' showLegend='1'>"+
-	"<set value='14.94' label='Concentrator Installation' color='AFD8F8' showValues='1'/><set value='19.17' label='Direct measured' color='F984A1'/>"+
-	"<set value='7.14' label='Troubleshoot measurepoint' color='8BBA00'/><set value='7.75' label='CT measured' color='F6BD0F'/></chart>";*/
-
 	//Assets
 	var monthlyAssets = data.deviceAssetsPerMonth;
 	var totalAssets = data.totalDeviceAssets;
@@ -617,7 +585,7 @@ function fillResourceProjectsData(data){
     //resource-projections-per-month
     drawStackedBarChart(monthlyResources,"block-resource-projections-per-month-view","75%","500");
     //resource-projections-total
-	drawPieChart(totalResoures,"block-resource-projections-total-view","75%","500");
+		drawPieChart(totalResoures,"block-resource-projections-total-view","75%","500");
 
 	}
 }
@@ -638,8 +606,6 @@ function drawPieChart(data,idName,percentage, hight){
 	devAssetPieChart.setDataXML(data);
 	devAssetPieChart.render(idName);
 }
-
-
 
 //Common method for validating the inputs
 function validateInputs(idName,errorMessage){

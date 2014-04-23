@@ -4,7 +4,7 @@
 			<ul class="inline-list">
 				<li class="slide-menu-left">
 					<a class="slide" id="show-nav"><i class="fi-list size-24"></i></a>
-					<ul class="overlapping-menu">
+					<ul class="overlapping-menu" style="display:none">
 						<li><a href="<%=request.getContextPath()%>/std/Index" id="menu-button-delivery-performance"><i class="fi-home size-24"></i><span class="slide-out-text">Home</span></a></li>
 						<li><a href="<%=request.getContextPath()%>/std/ViewResourceProjectionAction" id="menu-button-resource-projections"><i class="fi-torsos size-24"></i><span class="slide-out-text">Resources Projections</span></a></li>
 						<li><a href="<%=request.getContextPath()%>/std/AreaProgress" id="menu-button-technician-positioning"><i class="fi-graph-horizontal size-24"></i><span class="slide-out-text">Area Progress</span></a></li>
