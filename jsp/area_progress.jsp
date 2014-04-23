@@ -322,7 +322,7 @@ document.createElement("figure");
 			</div><!-- end of new full width row -->
 		</div>
 
-				<div class="large-2 columns filtered show-for-large-up">
+		<div class="large-2 columns filtered show-for-large-up">
 					<h5 class="text-center">YOU HAVE FILTERED</h5>
 					<dl class="accordion" data-accordion>
 						<dd id="selected-domain">
@@ -361,7 +361,7 @@ document.createElement("figure");
 						</dd>
 
 					</dl>
-				</div>
+		</div>
 	</div>
 
 

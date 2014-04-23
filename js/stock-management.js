@@ -198,8 +198,16 @@ function onChangeDomain(){
 	//loadPoints(ls_domain);
 }
 
+function insertValues(value, context, divId){
+	var values = '';
+	for(var i = 0 ; i < value.length ; i++){
+		values +='<li>' + $("#"+context+" option[value="+value[i]+"]").text()+ "</li>";
+	}
+	$('#'+divId+' ul').html(values);
+	$('#'+divId+' span.label').html(value.length);
+}
+
 function submitLogistics() {
-	console.log('function submitLogistics() called');
 
 	var validation = false;
 	validation = stockValidation();
@@ -211,14 +219,18 @@ function submitLogistics() {
 		var ls_breakup = $("#block-on-pallet-select-divide-entity").val();
 		var ls_category = $("#block-on-pallet-select-entity-shown").val();
 
-		loadPoints(ls_domain,ls_warehouses);
+		insertValues(ls_domain, 'filter-multiselect-domain','selected-domain');
+		insertValues(ls_devicetypes, 'filter-multiselect-device-type','device-type');
+		insertValues(ls_devicemodels, 'filter-multiselect-device-model','device-model');
+		insertValues(ls_warehouses, 'filter-multiselect-stock-site','selected-stocksite');
 
+		loadPoints(ls_domain,ls_warehouses);
 		saveAPFilters(ls_domain,ls_warehouses,ls_devicemodels,ls_devicetypes);
 
 		var obj= {};
 		obj.url=contextPath+"/std/GetStockChart.action";
 		obj.pdata = 'domain='+ls_domain+'&xaxis='+ls_category+'&yaxis='+ls_breakup+'&warehouses='+ls_warehouses+
-		   		'&devicemodels='+ls_devicemodels+'&devicetypes='+ls_devicetypes+'&devicestatus='+deviceStatus;
+				'&devicemodels='+ls_devicemodels+'&devicetypes='+ls_devicetypes+'&devicestatus='+deviceStatus;
 		obj.successfunc = drawChart;
 		obj.errorfunc = errorDetails;
 		run_ajax(obj);
