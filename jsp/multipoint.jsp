@@ -34,6 +34,8 @@
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/colResizable-1.3.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
 
+		<script type="text/javascript" src="<%=request.getContextPath()%>/js/vendor/jquery.nicescroll.js"></script>
+
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
 
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
@@ -58,223 +60,205 @@
 	<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
 	<![endif]-->
-	</head>
-	<body onload="javascript:multipointDetails()">
-		<div id="wrapper">
-			<%@ include file="headerv311.inc"%>
-			<div id="main-content">
-				<div class="big-row">
-					<div class="large-12 columns">
-						<h2 class="page-name-heading-search">
-							<s:text name="webportal.multipoint.multipointid"/> : <span id="multipoint-id"></span>
-						</h2>
-					</div>
+</head>
+<body onload="javascript:multipointDetails()">
+	<div id="wrapper">
+		<%@ include file="headerv311.inc"%>
+		<div id="main-content">
+			<div class="big-row">
+				<div class="large-12 columns">
+					<h3 class="page-name-heading-search">
+						<s:text name="webportal.multipoint.multipointid"/> : <span id="multipoint-id"></span>
+					</h3>
 				</div>
-				<div class="big-row">
-					<div class="large-6 columns">
-						<div class="panel-outer">
-							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"></i>
-								<span class="block-title-name text-blue"><s:text name="webportal.common.overview"/></span>
-							</h4>
-							<div class="panel-inner">
-								<table id="overview-table">
-									<tr>
-										<td><div class="legend-block-title"><s:text name="webportal.multipoint.installationid"/>&#32:</div> </td>
-										<td><div class="legend-block-content text-light-grey" id="block-overview-installation-id">  </div></td>
-									</tr>
-									<tr>
-										<td><div class="legend-block-title"><s:text name="webportal.multipoint.installationcode"/>&#32:</div></td>
-										<td><div class="legend-block-content text-light-grey" id="block-overview-installation-code"></div></td>
-									</tr>
-									<tr>
-										<td><div class="legend-block-title"><s:text name="webportal.multipoint.externalcode"/>&#32:</div></td>
-										<td><div class="legend-block-content text-light-grey" id="block-overview-external-code"></div></td>
-									</tr>
-									<tr>
-										<td><div class="legend-block-title"><s:text name="webportal.multipoint.domain"/>&#32:</div></td>
-										<td><div class="legend-block-content text-light-grey" id="block-overview-domain"></div></td>
-									</tr>
-									<tr>
-										<td><div class="legend-block-title"><s:text name="webportal.multipoint.multipointcode"/>&#32:</div></td>
-										<td><div class="legend-block-content text-light-grey" id="block-overview-multipoint-code"></div></td>
-									</tr>
-									<tr>
-										<td><div class="legend-block-title"><s:text name="webportal.multipoint.deviceplacement"/>&#32:</div></td>
-										<td><div class="legend-block-content text-light-grey" id="block-overview-device-placement"></div></td>
-									</tr>
-								</table>
-								<div class="status text-green" id="block-overview-status"></div>
-							</div>
-						</div>
-					</div>
-					<div class="large-6 columns">
-						<div class="panel-outer">
-							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"></i>
-								<s:text name="webportal.common.location"/>
-							</h4>
-							<div class="panel-inner">
-								<div id="block-location-map-wrapper" style="height:350px">
-								</div>
-								<div class="legend">
-									<div>
-										<span><strong><s:text name="webportal.multipoint.address"/>:</strong> </span><span id="block-location-adress"></span>
-									</div>
-									<div>
-										<span><strong><s:text name="webportal.multipoint.area"/>:</strong> </span><span id="block-location-area"></span>
-									</div>
-								</div>
-							</div>
+			</div>
+			<div class="big-row">
+				<div class="large-6 columns">
+					<div class="panel-outer">
+						<h4 class="panel-heading">
+							<i class="fi-graph-trend colorHeading"></i>
+							<span class="block-title-name text-blue"><s:text name="webportal.common.overview"/></span>
+						</h4>
+						<div class="panel-inner">
+							<ul id="overview-table">
+								<li><span><s:text name="webportal.multipoint.installationid"/></span><span id="block-overview-installation-id"></span></li>
+								<li><span><s:text name="webportal.multipoint.installationcode"/></span><span id="block-overview-installation-code"></span></li>
+								<li><span><s:text name="webportal.multipoint.externalcode"/></span><span id="block-overview-external-code"></span></li>
+								<li><span><s:text name="webportal.multipoint.domain"/></span><span id="block-overview-domain"></span></li>
+								<li><span><s:text name="webportal.multipoint.multipointcode"/></span><span id="block-overview-multipoint-code"></span></li>
+
+								<li><span><s:text name="webportal.multipoint.deviceplacement"/></span><span id="block-overview-device-placement"></span></li>
+							</ul>
+							<span>Status:</span><h3 class="status text-green" id="block-overview-status"></h3>
 						</div>
 					</div>
 				</div>
-				<div class="big-row">
-					<div class="large-12 columns">
-						<h2 class="page-name-heading-search">
-							<s:text name="webportal.multipoint.information"/>
-						</h2>
-					</div>
-				</div>
-				<div class="big-row">
-					<div class="large-6 columns">
-						<div class="panel-outer">
-							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"></i>
-								<span class="accordion-title"> <s:text name="webportal.multipoint.cases"/>
-									<span id="block-multipoint-information-cases-number" class="number"></span>
-								</span>
-							</h4>
-							<div class="panel-inner">
-								<table id="caseresults">
-									<thead>
-										<tr class="table-title">
-											<th><s:text name="webportal.multipoint.case.id"/></th>
-											<th><s:text name="webportal.multipoint.case.externalid"/></th>
-											<th><s:text name="webportal.multipoint.case.casetype"/></th>
-											<th><s:text name="webportal.multipoint.case.user"/></th>
-											<th><s:text name="webportal.multipoint.domain"/></th>
-											<th><s:text name="webportal.multipoint.case.lastchanged"/></th>
-											<th><s:text name="webportal.multipoint.case.status"/></th>
-										</tr>
-									</thead>
-									<tbody>
-									</tbody>
-								</table>
-								<div class="center-wrapper">
-									<a href="javascript:showmorecase();" id="block-multipoint-information-cases-link-more">
-										<s:text name="webportal.multipoint.case.showmorecases"/>
-									</a>
-								</div>
+				<div class="large-6 columns">
+					<div class="panel-outer">
+						<h4 class="panel-heading">
+							<i class="fi-graph-trend colorHeading"></i>
+							<s:text name="webportal.common.location"/>
+						</h4>
+						<div class="panel-inner">
+							<div id="block-location-map-wrapper" style="height:350px">
 							</div>
-						</div>
-					</div>
-					<div class="large-6 columns">
-						<div class="panel-outer">
-							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"></i>
-								<span class="accordion-title"><s:text name="webportal.multipoint.deviations"/>
-									<span id="block-multipoint-information-deviations-number" class="number"></span>
-								</span>
-							</h4>
-							<div class="panel-inner">
-								<table id="deviationresults">
-									<thead>
-										<tr class="table-title">
-											<th><s:text name="webportal.multipoint.deviations.id"/></th>
-											<th><s:text name="webportal.multipoint.deviations.type"/></th>
-											<th><s:text name="webportal.multipoint.deviations.source"/></th>
-											<th><s:text name="webportal.multipoint.deviations.valid"/></th>
-											<th><s:text name="webportal.multipoint.deviations.starttimestamp"/></th>
-											<th><s:text name="webportal.multipoint.deviations.endtimestamp"/></th>
-											<th><s:text name="webportal.multipoint.deviations.deviationgroup"/></th>
-										</tr>
-									</thead>
-									<tbody>
-									</tbody>
-								</table>
-								<div class="center-wrapper">
-									<a href="javascript:showmoredeviation()" id="block-multipoint-information-deviations-link-more" class="link-more text-blue">
-										<s:text name="webportal.multipoint.deviations.showmoredeviations"/></a>
-									</div>
+							<div class="legend">
+								<div>
+									<span><strong><s:text name="webportal.multipoint.address"/></strong> </span><span id="block-location-adress"></span>
 								</div>
-							</div>
-						</div>
-					</div>
-					<div class="big-row">
-						<div class="large-6 columns">
-							<div class="panel-outer">
-								<h4 class="panel-heading">
-									<i class="fi-graph-trend colorHeading"></i>
-									<span class="accordion-title">
-										<s:text name="webportal.multipoint.cases"/>
-										<span id="block-multipoint-information-cases-number"></span>
-									</span>
-								</h4>
-								<div class="panel-inner">
-									<table id="deviceresults" class="text-grey big-table">
-										<thead>
-											<tr class="table-title">
-												<th><s:text name="webportal.multipoint.devices.deviceid"/></th>
-												<th><s:text name="webportal.multipoint.devices.giai"/></th>
-												<th><s:text name="webportal.multipoint.devices.serialno"/>.</th>
-												<th><s:text name="webportal.multipoint.devices.propno"/>.</th>
-												<th><s:text name="webportal.multipoint.devices.type"/></th>
-												<th><s:text name="webportal.multipoint.devices.model"/></th>
-												<th><s:text name="webportal.multipoint.devices.starttimestamp"/></th>
-												<th><s:text name="webportal.multipoint.devices.endtimestamp"/></th>
-												<th><s:text name="webportal.multipoint.devices.status"/></th>
-											</tr>
-										</thead>
-										<tbody>
-										</tbody>
-									</table>
-									<div class="center-wrapper">
-										<a href="javascript:showmoredevice()" id="block-multipoint-information-devices-link-more">
-											<s:text name="webportal.multipoint.devices.showmoredevices"/>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="large-6 columns">
-							<div class="panel-outer">
-								<h4 class="panel-heading">
-									<i class="fi-graph-trend colorHeading"></i>
-									<span class="accordion-title">
-										<s:text name="webportal.multipoint.events"/>
-										<span id="block-multipoint-information-events-number"></span>
-									</span>
-								</h4>
-								<div class="panel-inner">
-									<table id="eventresults">
-										<thead>
-											<tr class="table-title">
-												<th><s:text name="webportal.multipoint.events.type"/></th>
-												<th><s:text name="webportal.multipoint.events.deviceid"/></th>
-												<th><s:text name="webportal.multipoint.events.phase"/></th>
-												<th><s:text name="webportal.multipoint.events.starttimestamp"/></th>
-												<th><s:text name="webportal.multipoint.events.endtimestamp"/></th>
-												<th><s:text name="webportal.multipoint.events.receivetimestamp"/></th>
-											</tr>
-										</thead>
-										<tbody>
-										</tbody>
-									</table>
-									<div class="center-wrapper">
-										<a href="javascript:showmoreevent()" id="block-multipoint-information-events-link-more">
-										<s:text name="webportal.multipoint.events.showmoreevents"/>
-										</a>
-									</div>
+								<div>
+									<span><strong><s:text name="webportal.multipoint.area"/></strong> </span><span id="block-location-area"></span>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="big-row">
+				<div class="large-12 columns">
+					<h3 class="page-name-heading-search">
+						<s:text name="webportal.multipoint.information"/>
+					</h3>
+				</div>
+			</div>
+			<div class="big-row">
+				<div class="large-12 columns">
+					<div class="panel-outer">
+						<h4 class="panel-heading">
+							<i class="fi-graph-trend colorHeading"></i>
+							<span> <s:text name="webportal.multipoint.cases"/></span>
+							<span id="block-multipoint-information-cases-number"></span>
+						</h4>
+						<div class="panel-inner">
+							<table id="caseresults">
+								<thead>
+									<tr class="table-title">
+										<th><s:text name="webportal.multipoint.case.id"/></th>
+										<th><s:text name="webportal.multipoint.case.externalid"/></th>
+										<th><s:text name="webportal.multipoint.case.casetype"/></th>
+										<th><s:text name="webportal.multipoint.case.user"/></th>
+										<th><s:text name="webportal.multipoint.domain"/></th>
+										<th><s:text name="webportal.multipoint.case.lastchanged"/></th>
+										<th><s:text name="webportal.multipoint.case.status"/></th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+							<div class="center-wrapper">
+								<a href="javascript:showmorecase();" id="block-multipoint-information-cases-link-more">
+									<s:text name="webportal.multipoint.case.showmorecases"/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="big-row">
+				<div class="large-12 columns">
+					<div class="panel-outer">
+						<h4 class="panel-heading">
+							<i class="fi-graph-trend colorHeading"></i>
+							<span><s:text name="webportal.multipoint.deviations"/></span>
+							<span id="block-multipoint-information-deviations-number"></span>
+						</h4>
+						<div class="panel-inner">
+							<table id="deviationresults">
+								<thead>
+									<tr class="table-title">
+										<th><s:text name="webportal.multipoint.deviations.id"/></th>
+										<th><s:text name="webportal.multipoint.deviations.type"/></th>
+										<th><s:text name="webportal.multipoint.deviations.source"/></th>
+										<th><s:text name="webportal.multipoint.deviations.valid"/></th>
+										<th><s:text name="webportal.multipoint.deviations.starttimestamp"/></th>
+										<th><s:text name="webportal.multipoint.deviations.endtimestamp"/></th>
+										<th><s:text name="webportal.multipoint.deviations.deviationgroup"/></th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+							<div class="center-wrapper">
+								<a href="javascript:showmoredeviation()" id="block-multipoint-information-deviations-link-more" class="link-more text-blue">
+									<s:text name="webportal.multipoint.deviations.showmoredeviations"/></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="big-row">
+					<div class="large-12 columns">
+						<div class="panel-outer">
+							<h4 class="panel-heading">
+								<i class="fi-graph-trend colorHeading"></i>
+								<span><s:text name="webportal.multipoint.cases"/></span>
+								<span id="block-multipoint-information-cases-number"></span>
+							</h4>
+							<div class="panel-inner">
+								<table id="deviceresults" class="text-grey big-table">
+									<thead>
+										<tr class="table-title">
+											<th><s:text name="webportal.multipoint.devices.deviceid"/></th>
+											<th><s:text name="webportal.multipoint.devices.giai"/></th>
+											<th><s:text name="webportal.multipoint.devices.serialno"/>.</th>
+											<th><s:text name="webportal.multipoint.devices.propno"/>.</th>
+											<th><s:text name="webportal.multipoint.devices.type"/></th>
+											<th><s:text name="webportal.multipoint.devices.model"/></th>
+											<th><s:text name="webportal.multipoint.devices.starttimestamp"/></th>
+											<th><s:text name="webportal.multipoint.devices.endtimestamp"/></th>
+											<th><s:text name="webportal.multipoint.devices.status"/></th>
+										</tr>
+									</thead>
+									<tbody>
+									</tbody>
+								</table>
+								<div class="center-wrapper">
+									<a href="javascript:showmoredevice()" id="block-multipoint-information-devices-link-more">
+										<s:text name="webportal.multipoint.devices.showmoredevices"/>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="big-row">
+				<div class="large-12 columns">
+						<div class="panel-outer">
+							<h4 class="panel-heading">
+								<i class="fi-graph-trend colorHeading"></i>
+								<span><s:text name="webportal.multipoint.events"/></span>
+								<span id="block-multipoint-information-events-number"></span>
+							</h4>
+							<div class="panel-inner">
+								<table id="eventresults">
+									<thead>
+										<tr class="table-title">
+											<th><s:text name="webportal.multipoint.events.type"/></th>
+											<th><s:text name="webportal.multipoint.events.deviceid"/></th>
+											<th><s:text name="webportal.multipoint.events.phase"/></th>
+											<th><s:text name="webportal.multipoint.events.starttimestamp"/></th>
+											<th><s:text name="webportal.multipoint.events.endtimestamp"/></th>
+											<th><s:text name="webportal.multipoint.events.receivetimestamp"/></th>
+										</tr>
+									</thead>
+									<tbody>
+									</tbody>
+								</table>
+								<div class="center-wrapper">
+									<a href="javascript:showmoreevent()" id="block-multipoint-information-events-link-more">
+										<s:text name="webportal.multipoint.events.showmoreevents"/>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
 
 		<!--[if lt IE 9]>
 		<script type="text/javascript" src="https://raw.githubusercontent.com/chuckcarpenter/REM-unit-polyfill/master/js/rem.min.js"></script>
 		<![endif]-->
 	</body>
-</html>
+	</html>

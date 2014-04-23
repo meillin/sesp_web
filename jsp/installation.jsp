@@ -87,7 +87,7 @@
 						<div class="panel-inner">
 							<ul id="overview-table">
 								<li><span><s:text name="webportal.installation.installationcode"/></span><span id="block-overview-installation-code"></span></li>
-								<li> <span><s:text name="webportal.installation.externalcode"/></span><span id="block-overview-external-code"></span></li>
+								<li><span><s:text name="webportal.installation.externalcode"/></span><span id="block-overview-external-code"></span></li>
 								<li><span><s:text name="webportal.installation.type"/></span><span id="block-overview-type"></span></li>
 								<li><span><s:text name="webportal.installation.domain"/></span><span id="block-overview-domain"></span></li>
 								<li><span><s:text name="webportal.installation.keynumber"/></span><span id="block-overview-key-number"></span></li>
