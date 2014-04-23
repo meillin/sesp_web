@@ -33,14 +33,15 @@ Sub menu actions
 		event.preventDefault();
 		var target = $(this).next();
 		target.slideToggle('fast');
-		$(".filtered").getNiceScroll().resize();
 	});
 
 /*
 Nice scroll
  */
-	$(".filtered").niceScroll({
-		cursorcolor:"#fff",
+	$(".filtered, .filterHeader .big-row > div:nth-child(2)").niceScroll({
+		cursorcolor:"#ffffff ",
+		cursoropacitymax: '0.7',
+		cursorborder: '0',
 		railalign: 'right'
 	});
 

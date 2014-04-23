@@ -26,9 +26,6 @@ a:hover {
 	height: 310px;
 	border-right: 1px solid #6a6a6a;
 }
-.filterHeader .big-row > div:nth-child(2) {
-	overflow-y : scroll;
-}
 
 #block-planning-periods-table tr {
 	background: #000 !important;
