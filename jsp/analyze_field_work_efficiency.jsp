@@ -177,13 +177,13 @@
 						<div class="big-row">
 							<div class="large-12 columns">
 								<div class="panel-outer">
-									<h4 class="panel-heading"><i class="fi-graph-horizontal colorHeading"></i> Work order type analysis</h4>
+									<h4 class="panel-heading"><i class="fi-graph-horizontal colorHeading"></i><span> Work order type analysis</span></h4>
 									<div class="panel-inner" id="block-work-order-type-analysis-chart"></div>
 								</div>
 							</div>
 							<div class="large-12 columns">
 									<div class="panel-outer">
-											<h4 class="panel-heading"><i class="fi-list colorHeading"></i> Table view</h4>
+											<h4 class="panel-heading"><i class="fi-list colorHeading"></i><span>Table view</span></h4>
 											<div id="meterValuesGridDiv"></div>
 											<div class="panel-inner">
 												<table id="block-work-order-type-analysis-table">

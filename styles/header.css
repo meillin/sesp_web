@@ -174,18 +174,10 @@ li {
 .overlapping-menu .fi-graph-trend:before,
 .overlapping-menu .fi-arrow-up:before,
 .overlapping-menu .fi-clock:before,
-.overlapping-menu .capicons:after {
+.overlapping-menu .cap-logistics:after {
 	display: inline-block;
 	margin-top: 0.1rem;
-	margin-bottom: 0.5rem;
-	width: 21px;
-	/*padding-bottom: 0.3rem;*/
-}
-
-.overlapping-menu .capicons:after {
-	display: inline-block;
-	margin-top: 0.3rem;
-	margin-bottom: 0.3rem;
+	margin-bottom: 0.1rem;
 	width: 21px;
 	vertical-align: top;
 }

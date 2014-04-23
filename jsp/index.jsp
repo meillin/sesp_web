@@ -94,7 +94,7 @@ document.createElement("figure");
                   <li>
                     <div>
                         <a class="patch" href="<%=contextPath%>/std/StockManagement1" alt="LOGISTICS" title="LOGISTICS">
-                          <i class="capicons size-74"></i></br>
+                          <i class="cap-logistics size-74"></i></br>
                           <span>Logistics</span>
                         </a>
                     </div>

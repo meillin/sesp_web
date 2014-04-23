@@ -12,7 +12,7 @@
 
 						<li>
 							<a href="<%=request.getContextPath()%>/std/StockManagement1" id="menu-button-logistics">
-							<i class="capicons size-24"></i><span class="slide-out-text">Logistics</span></a>
+							<i class="cap-logistics size-24"></i><span class="slide-out-text">Logistics</span></a>
 						</li>
 
 
