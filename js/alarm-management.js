@@ -24,7 +24,6 @@ function populateFilters(){
 	getDomains();
 	getAreaTypes();
 	getAlarmTypes();
-	getAreas(null,null);
 	getUtilityTypes();
 	getCommTypes();
 	getDeviceModels(null);
@@ -71,9 +70,8 @@ function fillDomains(data) {
 	if(savedData === null || savedData === ''){ selected = '"selected > '; }
 
 	$.each(data, function(i, item) {
-		items += '<option value="' + item.id +selected + item.name + '</option>';
+		items += '<option value="' + item.id + selected + item.name + '</option>';
 	});
-
 	populateSavedMultiSelectBox("#domains", items, savedData);
 }
 
@@ -88,12 +86,20 @@ function getAreaTypes() {
 
 function fillAreaTypes(data) {
 	var items;
+	var savedData = $.cookie(pageCode + 'al_areatypes');
+	var selected = '">';
+	if(savedData === null || savedData === ''){ selected = '"selected > '; }
+
 	$.each(data, function(i, item) {
-		items += '<option value="' + item.id + '">' + item.name + '</option>';
+		items += '<option value="' + item.id + selected + item.name + '</option>';
 	});
-	var msareatypes = $("#areaTypes").multiselect();
-	msareatypes.append(items);
-	msareatypes.multiselect('refresh');
+	populateSavedMultiSelectBox('#areaTypes', items, savedData);
+
+	//Fill Area depending on Area Types
+	var ls_domain = $("#domains").val(),
+			ls_areatype = $("#areaTypes").val();
+	getAreas(ls_domain,ls_areatype);
+	getDeviceModels(ls_domain);
 }
 
 function getAlarmTypes() {
@@ -103,21 +109,17 @@ function getAlarmTypes() {
 	obj.errorfunc = errorAutoFill;
 	run_ajax_json(obj);
 	return;
-
 }
 
 function fillAlarmTypes(data) {
 	var items;
-	//items += '<option value=null>' + i18nSelectEventType + '</option>';
-	/*if (data != "") {
-		items += '<option value=all>' + i18nAll + '</option>';
-	}*/
+	var savedData = $.cookie(pageCode + 'al_alarmtypes');
+	var selected = '">';
+	if(savedData === null || savedData === ''){ selected = '"selected > '; }
 	$.each(data, function(i, item) {
-		items += '<option value="' + item.id + '">' + item.name + '</option>';
+		items += '<option value="' + item.id + selected + item.name + '</option>';
 	});
-	var msalarmtypes = $("#alarmTypes").multiselect();
-	msalarmtypes.append(items);
-	msalarmtypes.multiselect('refresh');
+	populateSavedMultiSelectBox('#alarmTypes', items, savedData);
 }
 
 function getUtilityTypes() {
@@ -131,19 +133,17 @@ function getUtilityTypes() {
 
 function fillUtilityTypes(data) {
 	var items;
-	/*if (data != "") {
-		items += '<option value=all>' + i18nAll + '</option>';
-	}*/
+	var savedData = $.cookie(pageCode + 'al_utilitytypes');
+	var selected = '">';
+	if(savedData === null || savedData === ''){ selected = '"selected > '; }
+
 	$.each(data, function(i, item) {
-		items += '<option value="' + item.id + '">' + item.name + '</option>';
+		items += '<option value="' + item.id + selected + item.name + '</option>';
 	});
-	var msutilitytypes = $("#utilitytypes").multiselect();
-	msutilitytypes.append(items);
-	msutilitytypes.multiselect('refresh');
+	populateSavedMultiSelectBox('#utilitytypes', items, savedData);
 }
 
 function getCommTypes() {
-
 	var obj = {};
 	obj.url = contextPath + "/std/AlarmManagementUnitCommTypes.action";
 	obj.successfunc = fillCommTypes;
@@ -154,12 +154,14 @@ function getCommTypes() {
 
 function fillCommTypes(data) {
 	var items;
+	var savedData = $.cookie(pageCode + 'al_unitCommTypes');
+	var selected = '">';
+	if(savedData === null || savedData === ''){ selected = '"selected > '; }
+
 	$.each(data, function(i, item) {
-		items += '<option value="' + item.id + '">' + item.name + '</option>';
+		items += '<option value="' + item.id + selected + item.name + '</option>';
 	});
-	var mscommtypes = $("#commtypes").multiselect();
-	mscommtypes.append(items);
-	mscommtypes.multiselect('refresh');
+	populateSavedMultiSelectBox('#commtypes', items, savedData);
 }
 
 function getAreas(domainCode, areaCode) {
@@ -176,18 +178,15 @@ function getAreas(domainCode, areaCode) {
 
 function fillAreas(data) {
 	var items;
-	$("#areas").find('option').remove();
-	$("#areas").multiselect('refresh');
-	var msareas = $("#areas").multiselect();
-	var msoptions = $("#areas").multiselect('option');
-	/*if (data != "") {
-		items += '<option value=all>' + i18nAll + '</option>';
-	}*/
+	var savedData = $.cookie(pageCode + 'al_areas');
+	var selected = '">';
+	if(savedData === null || savedData === ''){ selected = '"selected > '; }
+
 	$.each(data, function(i, item) {
-		items += '<option value="' + item.id + '">' + item.name + '</option>';
+		items += '<option value="' + item.id + selected + item.name + '</option>';
 	});
-	msareas.append(items);
-	msareas.multiselect('refresh');
+
+	populateSavedMultiSelectBox('#areas', items, savedData);
 }
 
 function getDeviceModels(domainCode) {
@@ -203,17 +202,14 @@ function getDeviceModels(domainCode) {
 
 function fillDeviceModels(data) {
 	var items;
-	$("#devicemodels").find('option').remove();
-	$("#devicemodels").multiselect('refresh');
-	/*if (data != "") {
-		items += '<option value=all>' + i18nAll + '</option>';
-	}*/
+	var savedData = $.cookie(pageCode + 'al_devicemodels');
+	var selected = '">';
+	if(savedData === null || savedData === ''){ selected = '"selected > '; }
+
 	$.each(data, function(i, item) {
-		items += '<option value="' + item.id + '">' + item.name + '</option>';
+		items += '<option value="' + item.id + selected + item.name + '</option>';
 	});
-	var msdevicemodels = $("#devicemodels").multiselect();
-	msdevicemodels.append(items);
-	msdevicemodels.multiselect('refresh');
+	populateSavedMultiSelectBox('#devicemodels', items, savedData);
 }
 
 function onChangeData()	{
@@ -222,7 +218,6 @@ function onChangeData()	{
 	getDeviceModels(ls_domain);
 	getAreas(ls_domain, ls_areatype);
 }
-
 
 function getdaterange() {
 

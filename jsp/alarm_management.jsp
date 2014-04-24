@@ -45,7 +45,6 @@
 		<script src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
 		<script src="<%=request.getContextPath()%>/js/search-results.js"></script>
 		<script src="<%=request.getContextPath()%>/js/alarm-management.js"></script>
-		<script src="<%=request.getContextPath()%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
 		<script src="<%=request.getContextPath()%>/js/OpenLayers.js"></script>
 
 		<script src="<%=request.getContextPath()%>/js/map.js"></script>
