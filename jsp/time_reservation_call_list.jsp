@@ -29,10 +29,10 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/style.tidy.css" />
 
 		<script src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
+		<script src="<%=request.getContextPath()%>/js/vendor/jquery.nicescroll.js"></script>
 		<script src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
 		<script src="<%=request.getContextPath()%>/js/jquery-ui-1.10.2.custom.js"></script>
 		<script src="<%=request.getContextPath()%>/js/jquery.multiselect.js"></script>
-		<script src="<%=request.getContextPath()%>/js/init.js"></script>
 		<script src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
 		<script src="<%=request.getContextPath()%>/js/jQAllRangeSliders-min.js"></script>
 		<script src="<%=request.getContextPath()%>/js/search-results.js"></script>

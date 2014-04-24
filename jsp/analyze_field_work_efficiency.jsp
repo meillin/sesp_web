@@ -17,24 +17,25 @@
 		document.createElement("figure");
 		</script>
 		<![endif]-->
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
 
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/jquery.multiselect.css"/>
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/general.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/header.css" />
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/jquery.multiselect.css"/>
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/general.css" />
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/header.css" />
 
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/datepicker.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-analyze-field-work-efficiency.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
-		<link rel="shortcut icon" type="image/png" href="<%=request.getContextPath()%>/images/favicon.png" />
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/datepicker.css" />
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-analyze-field-work-efficiency.css" />
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
+	<link rel="shortcut icon" type="image/png" href="<%=request.getContextPath()%>/images/favicon.png" />
 
 		<script src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
+		<script src="<%=request.getContextPath()%>/js/vendor/jquery.nicescroll.js"></script>
 		<script src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
 		<script src="<%=request.getContextPath()%>/js/jquery-ui-1.10.2.custom.js"></script>
 		<script src="<%=request.getContextPath()%>/js/bootstrap-datepicker.js"></script>
 		<script src="<%=request.getContextPath()%>/js/jquery.multiselect.js"></script>
-		<script src="<%=request.getContextPath()%>/js/init.js"></script>
+		<script src="<%=request.getContextPath()%>/js/jquery.cookie.js"></script>
 		<script src="<%=request.getContextPath()%>/js/common.js"></script>
 		<script src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
 		<script src="<%=request.getContextPath()%>/js/search-results.js"></script>
@@ -49,12 +50,12 @@
 
 		<script src="<%=request.getContextPath()%>/js/highchart/highcharts.js"></script>
 
-	<!--[if lt IE 9]>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
-	<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
-	<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
-	<![endif]-->
+		<!--[if lt IE 9]>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+		<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+		<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+		<![endif]-->
 	</head>
 	<body onload="loadData()">
 
@@ -89,8 +90,6 @@
 				analysisGrid.setColAlign("center,center,center,center,center,center");
 				analysisGrid.setSkin("xp");
 				analysisGrid.init();
-
-
 			}
 		</script>
 		<div id="wrapper">
@@ -117,7 +116,7 @@
 												<option value="lastyear">Last year</option>
 												<option value="custominterval">Custom interval</option>
 										</select>
-								</div>
+									</div>
 
 									<div class="small-6 columns">
 										<label id="fromLabel">From: </label>
@@ -125,6 +124,7 @@
 											<input id="filter-date-from" type="text" class="input-datepicker text-red"  readonly="readonly"/>
 										</div>
 									</div>
+
 									<div class="small-6 columns">
 											<label id="toLabel">To:</label>
 											<div class="custom-input-datepicker input-append date"  data-date="12-02-2012" data-date-format="yyyy-mm-dd">
@@ -134,15 +134,14 @@
 							</div>
 
 							<div class="large-4 columns">
-								<br/>
-									<div class="large-12 medium-6 columns">
-										<label>Domain</label>
-										<select id="filter-multiselect-domain" class="custom-multi-select" name="multiselect-domain" multiple="multiple" onchange="onDomainSelect()"></select>
-									</div>
-									<div class="large-12 medium-6 columns">
-										<label>Area</label>
-										<select id="filter-multiselect-area" class="custom-multi-select" name="multiselect-area" multiple="multiple"></select>
-									</div>
+								<div class="large-12 medium-6 columns">
+									<label>Domain</label>
+									<select id="filter-multiselect-domain" class="custom-multi-select" name="multiselect-domain" multiple="multiple" onchange="onDomainSelect()"></select>
+								</div>
+								<div class="large-12 medium-6 columns">
+									<label>Area</label>
+									<select id="filter-multiselect-area" class="custom-multi-select" name="multiselect-area" multiple="multiple"></select>
+								</div>
 							</div>
 
 							<div class="large-4 columns">
@@ -157,9 +156,9 @@
 							</div>
 						</div>
 						<div class="big-row">
-								<div class="large-12 columns text-center">
-									<a id="block-filter-button-update" class="button small" href="javascript:update()">Update</a>
-								</div>
+							<div class="large-12 columns text-center">
+								<a id="block-filter-button-update" class="button small" href="javascript:update()">Update</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -182,54 +181,54 @@
 								</div>
 							</div>
 							<div class="large-12 columns">
-									<div class="panel-outer">
-											<h4 class="panel-heading"><i class="fi-list colorHeading"></i><span>Table view</span></h4>
-											<div id="meterValuesGridDiv"></div>
-											<div class="panel-inner">
-												<table id="block-work-order-type-analysis-table">
-													<thead>
-														<tr id="table-header">
-															<th>Work order type</th>
-															<th>Expected working time</th>
-															<th>Actual working time</th>
-															<th>Travel time</th>
-															<th>Outcome</th>
-															<th>Driving distance</th>
-														</tr>
-													</thead>
-													<tbody>
+								<div class="panel-outer">
+									<h4 class="panel-heading"><i class="fi-list colorHeading"></i><span>Table view</span></h4>
+									<div id="meterValuesGridDiv"></div>
+									<div class="panel-inner">
+											<table id="block-work-order-type-analysis-table">
+												<thead>
+													<tr id="table-header">
+														<th>Work order type</th>
+														<th>Expected working time</th>
+														<th>Actual working time</th>
+														<th>Travel time</th>
+														<th>Outcome</th>
+														<th>Driving distance</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+													<td>Meter change</td>
+													<td>01:24</td>
+													<td>01:00</td>
+													<td>00:20</td>
+													<td>-29%</td>
+													<td>14.2km</td>
+													</tr>
 														<tr>
-														<td>Meter change</td>
-														<td>01:24</td>
-														<td>01:00</td>
-														<td>00:20</td>
-														<td>-29%</td>
-														<td>14.2km</td>
-														</tr>
-															<tr>
-														<td>Meter change</td>
-														<td>01:24</td>
-														<td>01:00</td>
-														<td>00:20</td>
-														<td>-29%</td>
-														<td>14.2km</td>
-														</tr>
-															<tr>
-														<td>Meter change</td>
-														<td>01:24</td>
-														<td>01:00</td>
-														<td>00:20</td>
-														<td>-29%</td>
-														<td>14.2km</td>
-														</tr>
-													</tbody>
-												</table>
-												<div class="text-right">
-													<a href="javascript:analysisGrid.toExcel('<%=request.getContextPath()%>/std/DownloadExcel.action','Field Work Analysis','color','HEADER');" id="block-work-order-type-analysis-export-excel" class="button tiny">Export to Excel</a>
-													<a href="javascript:exportAsPDF();" id="block-work-order-type-analysis-export-pdf" class="button tiny">Export to pdf</a>
-												</div>
+													<td>Meter change</td>
+													<td>01:24</td>
+													<td>01:00</td>
+													<td>00:20</td>
+													<td>-29%</td>
+													<td>14.2km</td>
+													</tr>
+														<tr>
+													<td>Meter change</td>
+													<td>01:24</td>
+													<td>01:00</td>
+													<td>00:20</td>
+													<td>-29%</td>
+													<td>14.2km</td>
+													</tr>
+												</tbody>
+											</table>
+											<div class="text-right">
+												<a href="javascript:analysisGrid.toExcel('<%=request.getContextPath()%>/std/DownloadExcel.action','Field Work Analysis','color','HEADER');" id="block-work-order-type-analysis-export-excel" class="button tiny">Export to Excel</a>
+												<a href="javascript:exportAsPDF();" id="block-work-order-type-analysis-export-pdf" class="button tiny">Export to pdf</a>
 											</div>
-										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

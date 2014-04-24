@@ -39,15 +39,16 @@ Sub menu actions
 /*
 Nice scroll
  */
-	$(".filtered, .nice-scroll").niceScroll({
-		cursorcolor:"#ffffff ",
-		cursoropacitymax: '0.7',
-		cursorwidth: '10',
-		cursorborder: '0',
-		railalign: 'right'
-	});
-	$('.nicescroll-rails').css('right', 0);
-
+ 	if($('.filtered').length > 0){
+		$(".filtered, .nice-scroll").niceScroll({
+			cursorcolor:"#ffffff ",
+			cursoropacitymax: '0.7',
+			cursorwidth: '10',
+			cursorborder: '0',
+			railalign: 'right'
+		});
+		$('.nicescroll-rails').css('right', 0);
+	}
 
 //Moved code from init.js to common.js
 	//Event of menu button

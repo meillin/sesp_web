@@ -49,7 +49,6 @@ function loadDefaultData(){
 	getAreaType();
 	getDeviceType();
 	getDeviceModels();
-
 }
 
 function defaultDateInterval(){
@@ -106,9 +105,7 @@ function getUtilityTypes(){
 
 	var obj= {};
 	obj.url=contextPath+"/std/AlertManagementUtilityTypes.action";
-	//obj.url=contextPath+"/std/ResourceProjectionAction.action";
 
-//	alert("resource domain:url :"+obj.url);
 	obj.successfunc = fillUtilityTypes;
 	obj.errorfunc = errorAutoFill;
 	run_ajax_json(obj);
@@ -119,9 +116,7 @@ function getUtilityTypes(){
 function getAreaType(){
 	var obj= {};
 	obj.url=contextPath+"/std/AlarmManagementAreaTypes.action";
-	//obj.url=contextPath+"/std/ResourceProjectionAction.action";
 
-//	alert("resource domain:url :"+obj.url);
 	obj.successfunc = fillAreaType;
 	obj.errorfunc = errorAutoFill;
 	run_ajax_json(obj);
@@ -131,9 +126,7 @@ function getAreaType(){
 function getDeviceType(){
 	var obj= {};
 	obj.url=contextPath+"/std/GetDeviceTypes.action";
-	//obj.url=contextPath+"/std/ResourceProjectionAction.action";
 
-//	alert("resource domain:url :"+obj.url);
 	obj.successfunc = fillDeviceType;
 	obj.errorfunc = errorAutoFill;
 	run_ajax_json(obj);
@@ -143,9 +136,7 @@ function getDeviceType(){
 function getWorkOrderTypes(){
 	var obj= {};
 	obj.url=contextPath+"/std/getWorkOrderTypes.action";
-	//obj.url=contextPath+"/std/ResourceProjectionAction.action";
 
-//	alert("resource domain:url :"+obj.url);
 	obj.successfunc = fillWorkOrderTypes;
 	obj.errorfunc = errorAutoFill;
 	run_ajax_json(obj);
@@ -168,12 +159,6 @@ function getDeviceModels(){
 
 function fillDeviceModels(data){
 
-	/*var items;
-	$.each(data, function(i, item) {
-		items += '<option value="' + item.id + '" selected>' + item.name + '</option>';
-	});
-	populateMultiSelectBox("#filter-multiselect-device-model", items);*/
-
 	var items;
 	var savedData = $.cookie(pageCode+"filter-multiselect-device-model");
 	var selected = '" > ';
@@ -188,16 +173,9 @@ function fillDeviceModels(data){
 	});
 
 	populateSavedMultiSelectBox("#filter-multiselect-device-model", items,savedData);
-
 }
 
 function fillWorkOrderTypes(data){
-
-	/*var items;
-	$.each(data, function(i, item) {
-		items += '<option value="' + item.id + '" selected>' + item.name + '</option>';
-	});
-	populateMultiSelectBox("#filter-multiselect-work-order-type", items);*/
 
 	var items;
 	var savedData = $.cookie(pageCode+"filter-multiselect-work-order-type");
@@ -216,13 +194,6 @@ function fillWorkOrderTypes(data){
 }
 
 function fillDeviceType(data){
-
-	/*var items;
-	$.each(data, function(i, item) {
-		items += '<option value="' + item.id + '" selected>' + item.name + '</option>';
-	});
-	populateMultiSelectBox("#filter-multiselect-device-type", items);*/
-
 	var items;
 	var savedData = $.cookie(pageCode+"filter-multiselect-device-type");
 	var selected = '" > ';
@@ -240,7 +211,6 @@ function fillDeviceType(data){
 }
 
 function fillArea(data){
-
 	var items;
 	var savedData = $.cookie(pageCode+"filter-multiselect-area");
 	var selected = '" > ';
@@ -258,7 +228,6 @@ function fillArea(data){
 }
 
 function fillAreaType(data){
-
 	var items;
 	var savedData = $.cookie(pageCode+"filter-multiselect-area-type");
 	var selected = '" > ';
@@ -276,7 +245,6 @@ function fillAreaType(data){
 }
 
 function fillUtilityTypes(data){
-
 	var items;
 	var savedData = $.cookie(pageCode+"filter-multiselect-utility-type");
 	var selected = '" > ';
@@ -296,8 +264,8 @@ function domainChanged(){
 
 	domainCodes = $("#block-time-multiselect-domain").val();
 	if(domainCodes != null && domainCodes != ""){
-	    getArea();
-	    getDeviceModels();
+		getArea();
+		getDeviceModels();
 	}else{
 		refreshMultiSelectBox("#filter-multiselect-area");
 		refreshMultiSelectBox("#filter-multiselect-device-model");
@@ -415,7 +383,6 @@ function populateSavedMultiSelectBox(idName, items,savedData){
 
 //Populate the multi-select box with the given data for the given id
 function populateMultiSelectBox(idName, items){
-
 	$(idName).html(items);
 	$(idName).multiselect("refresh");
 }
@@ -512,7 +479,6 @@ function processProjections(){
 
 	var deviceModel = $("#filter-multiselect-device-model").val();
 	insertValues(deviceModel, 'filter-multiselect-device-model','selected-device-model');
-
 
 	saveResourceProjectionFilter("filter-multiselect-utility-type", utilityType);
 	saveResourceProjectionFilter("filter-multiselect-area", area);
