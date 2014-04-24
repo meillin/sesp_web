@@ -36,13 +36,11 @@ jQuery(document).ready(function($){
 });
 
 function loadvalues(){
-
 	populateAPDateIntervalFilters();
 	loadDomainList();
 	loadAreaTypes();
 	getAreas(defaultStr);
 	loadWorkOrderTypes();
-
 }
 
 
@@ -111,7 +109,6 @@ function errorDetails(data) {
 }
 
 function loadAreaTypes(){
-
 	var obj1= {};
 	obj1.url=contextPath+"/std/AlertManagementAreaTypes.action";
 	obj1.successfunc = function(data){
@@ -355,8 +352,6 @@ function drawChart2(data) {
 	stockChart.render("block-progress-overview-detailed-progress");
 }
 
-
-
 //Common method for validating the inputs
 function validateMultiSelectBox(selectName,errorMessage){
 	var inputVal = $(selectName).val();
@@ -366,7 +361,6 @@ function validateMultiSelectBox(selectName,errorMessage){
 	}
 	return true;
 }
-
 
 function createWOAreaJSON(json) {
 	var layers = map.getLayersByName("AreasLayer");
@@ -464,16 +458,10 @@ function createWOAreaJSON(json) {
 
 //Populate the multi-select box with the given data for the given id
 function populateSavedMultiSelectBox(idName, items, savedData){
-
-	/*$(idName).html(items);
-	$(idName).multiselect("refresh");*/
-
 	$(idName).find('option').remove();
 	$(idName).multiselect('refresh');
 	var selectData = $(idName).multiselect();
-	/*$.each(data, function(i, item) {
-		items += '<option value="' + item.id + '">' + item.name + '</option>';
-	});	*/
+
 	selectData.append(items);
 
 	//var savedData = $.cookie(pageCode+idName);
@@ -481,9 +469,7 @@ function populateSavedMultiSelectBox(idName, items, savedData){
 		var dataArray = savedData.split(",");
 		$(idName).val(dataArray);
 	}
-
 	selectData.multiselect('refresh');
-
 }
 
 function saveWOProgressFilters(ap_dateInterval,ap_dateFrom,ap_dateTo,ap_domain,ap_areaType,ap_workOrderType,ap_unplanned,ap_area) {

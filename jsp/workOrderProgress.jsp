@@ -182,7 +182,7 @@
 	var bci = 0;
 </script>
 
-<body onload="loadvalues(),initmap('<%=request.getSession().getAttribute("MAP_SERVER_URL")%>')">
+<body onload="loadvalues()">
 
 	<div id="wrapper">
 		<%@ include file="headerv311.inc"%>
