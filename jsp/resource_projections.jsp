@@ -34,10 +34,10 @@
 
 		<script src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
 		<script src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
-		<script src="<%=contextPath%>/js/common.js"></script>
 		<script src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
 		<script src="<%=contextPath%>/js/bootstrap-datepicker.js"></script>
 		<script src="<%=contextPath%>/js/vendor/jquery.nicescroll.js"></script>
+		<script src="<%=contextPath%>/js/common.js"></script>
 
 		<script src="<%=contextPath%>/js/jquery.multiselect.js"></script>
 		<script src="<%=contextPath%>/js/jquery.cookie.js"></script>
@@ -136,7 +136,7 @@
 								</div>
 						</div>
 
-						<div class="large-5 columns">
+						<div class="large-5 columns nice-scroll">
 							<h4>
 								2 Select <span style="text-decoration:underline">weekly</span> planning periods
 								<small>

@@ -327,14 +327,14 @@ document.createElement("figure");
 					<dl class="accordion" data-accordion>
 						<dd id="selected-domain">
 							<a>Domain<span class="round label"></span></a>
-							<div id="panel1" class="content">
+							<div class="content">
 								<ul></ul>
 							</div>
 						</dd>
 
 						<dd>
 							<a>Period</a>
-							<div id="" class="content">
+							<div class="content">
 								<ul id="selected-period-type"></ul>
 							</div>
 						</dd>

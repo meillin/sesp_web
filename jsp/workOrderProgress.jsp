@@ -67,6 +67,7 @@
 	area_err_msg="<s:text name='webportal.error.selectarea'/>";
 	var apreqObject = {};
 
+/*
 	function loadPointsForAreaMap(domain,areaType,workOrderType,unplanned,dateInterval,dateFrom,dateTo,area){
 
 		apreqObject.dateInterval=dateInterval;
@@ -92,7 +93,7 @@
 		    run_ajax(obj);
 		    return;
 	}
-
+	*/
 
 	function fetchBubbleContent(id) {
 		var obj= {};
@@ -336,59 +337,42 @@
 			<div class="large-2 columns filtered show-for-large-up">
 					<h5 class="text-center">YOU HAVE FILTERED</h5>
 					<dl class="accordion" data-accordion>
-						<dd>
-							<a href="#panel1">Domain<span class="round label">15</span></a>
-							<div id="panel1 selected-domain" class="content">
-								<ul>
-									<li>Domain1</li>
-									<li>Domain2</li>
-									<li>Domain3</li>
-								</ul>
+						<dd id="selected-domain">
+							<a>Domain<span class="round label"></span></a>
+							<div class="content">
+								<ul></ul>
 							</div>
 						</dd>
-						<dd>
-							<a href="#panel2">Planning period type</a>
-							<div id="panel2 selected-period-type" class="content">
-								<ul>
-									<li>Week</li>
-								</ul>
-							</div>
-						</dd>
-						<dd>
-							<a href="#panel3">Date interval</a>
-							<div id="panel3 selected-date" class="content">
-								<ul>
-									<li>From: 2009-01-01</li>
-									<li>To: 2017-12-31</li>
-								</ul>
-							</div>
-						</dd>
-						<dd>
-							<a href="#panel4">Planning periods <span class="round label">123</span></a>
-							<div id="panel4 selected-date" class="content">
-								<ul>
-									<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
-									<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
-									<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
-									<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
-									<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
-									<li>BG46 2013-11-10/2013-11-17 Eon-Eltel</li>
-								</ul>
-							</div>
-						</dd>
-						<dd>
-							<a href="#panel4">Utlity type <span class="round label">4</span></a>
-							<div id="panel4 selected-date" class="content">
-								<ul>
-									<li>Electrical</li>
-									<li>Gas</li>
-									<li>Heat</li>
-									<li>Water</li>
-								</ul>
-							</div>
-						</dd>
-					</dl>
 
+						<dd>
+							<a>Period</a>
+							<div class="content">
+								<ul id="selected-period-type"></ul>
+							</div>
+						</dd>
+
+						<dd id="selected-work-order-type">
+							<a>Work order type <span class="round label"></span></a>
+							<div class="content">
+								<ul></ul>
+							</div>
+						</dd>
+
+						<dd id="selected-area-type">
+							<a>Area type <span class="round label"></span></a>
+							<div class="content">
+								<ul></ul>
+							</div>
+						</dd>
+
+						<dd id="selected-area">
+							<a>Area <span class="round label"></span></a>
+							<div class="content">
+								<ul></ul>
+							</div>
+						</dd>
+
+					</dl>
 			</div>
 
 		</div>

@@ -179,6 +179,23 @@ function fillAreas(data) {
 	populateSavedMultiSelectBox("#filter-multiselect-area", items, savedData);
 }
 
+function insertPeriod(f, t, d, type){
+	type = type === true ? 'Unplanned' : 'Planned';
+	var periodType ='<li>Type: ' + type + '</li>',
+			from = '<li>From: ' + f + '</li>',
+			to = '<li>To: ' + t + '</li>',
+			dateInterval = '<li>Date interval: ' + d + '</li>';
+	$('#selected-period-type').html(periodType + dateInterval + from + to);
+}
+
+function insertValues(value, context, divId){
+	var values = '';
+	for(var i = 0 ; i < value.length ; i++){
+		values +='<li>' + $("#"+context+" option[value="+value[i]+"]").text()+ "</li>";
+	}
+	$('#'+divId+' ul').html(values);
+	$('#'+divId+' span.label').html(value.length);
+}
 
 function filter_submit() {
 
@@ -193,6 +210,13 @@ function filter_submit() {
 		var ap_workOrderType = $("#filter-multiselect-work-order-type").val();
 		var ap_area = $("#filter-multiselect-area").val();
 		var ap_unplanned = $("#filter-checkbox-unplanned").prop('checked');
+
+		insertValues(ap_domain, 'filter-multiselect-domain','selected-domain');
+		insertValues([ap_areaType], 'filter-multiselect-area-type','selected-area-type');
+		insertValues(ap_workOrderType, 'filter-multiselect-work-order-type','selected-work-order-type');
+		insertValues(ap_area, 'filter-multiselect-area','selected-area');
+
+		insertPeriod(ap_dateFrom, ap_dateTo, ap_dateInterval, ap_unplanned);
 
 		saveWOProgressFilters(ap_dateInterval,ap_dateFrom,ap_dateTo,ap_domain,ap_areaType,ap_workOrderType,ap_unplanned,ap_area);
 
@@ -263,7 +287,6 @@ function show(){
 		hideDate();
 	}
 }
-
 
 function hideDate()
 {
@@ -361,6 +384,7 @@ function validateMultiSelectBox(selectName,errorMessage){
 	}
 	return true;
 }
+
 
 function createWOAreaJSON(json) {
 	var layers = map.getLayersByName("AreasLayer");

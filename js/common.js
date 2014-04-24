@@ -39,7 +39,7 @@ Sub menu actions
 /*
 Nice scroll
  */
-	$(".filtered, .filterHeader .big-row > div:nth-child(2)").niceScroll({
+	$(".filtered, .nice-scroll").niceScroll({
 		cursorcolor:"#ffffff ",
 		cursoropacitymax: '0.7',
 		cursorwidth: '10',
@@ -50,20 +50,20 @@ Nice scroll
 
 
 //Moved code from init.js to common.js
-    //Event of menu button
-    $('#menu-button').click(function (e) {
-        if ($('#menu').css('display') == "none") {
-            $('#menu').slideDown("medium");
-            $("#menu-button").children('.menu-button-arrow').removeClass('close');
-        	$("#menu-button").children('.menu-button-arrow').addClass('open');
-        }else{
-        	$('#menu').slideUp("medium");
-        	$("#menu-button").children('.menu-button-arrow').removeClass('open');
-        	$("#menu-button").children('.menu-button-arrow').addClass('close');
-        }
-        //prevent the body click event;
-        e.stopPropagation();
-    });
+	//Event of menu button
+	$('#menu-button').click(function (e) {
+		if ($('#menu').css('display') == "none") {
+			$('#menu').slideDown("medium");
+			$("#menu-button").children('.menu-button-arrow').removeClass('close');
+			$("#menu-button").children('.menu-button-arrow').addClass('open');
+		}else{
+			$('#menu').slideUp("medium");
+			$("#menu-button").children('.menu-button-arrow').removeClass('open');
+			$("#menu-button").children('.menu-button-arrow').addClass('close');
+		}
+		//prevent the body click event;
+		e.stopPropagation();
+	});
 
     //stop propagation to not close the menu
     $('#menu-inner').click(function(e){

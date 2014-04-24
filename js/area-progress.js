@@ -341,8 +341,6 @@ function show(){
 
 function hideDate()
 {
-	//$("#block_from_and_to_date").hide();
-
 	$("#filter-date-from").hide();
 	$("#filter-date-to").hide();
 }
@@ -365,9 +363,11 @@ function drawChart1(data) {
 	drawAreaProgress();
 	drawDetailedProgress();
 }
+
 function drawChart2(data){
 	drawAreaStatus();
 }
+
 function refreshChart1(){
 
 }
