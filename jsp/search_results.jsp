@@ -101,7 +101,7 @@
 						<div class="large-12 columns">
 							<div class="panel-outer" id="block-search-results-measurepoints" style="display: none;">
 								<h4 class="panel-heading">
-									<i class="cap-measurepoints colorHeading-capicons"></i>
+									<i class="cap-measure-points colorHeading-capicons"></i>
 									<span><s:text name="webportal.search.results.measurepoint.title"/></span>
 									<span id="block-search-results-measurepoints-number"></span>
 								</h4>
@@ -135,7 +135,7 @@
 						<div class="large-12 columns">
 							<div class="panel-outer" id="block-search-results-multipoints" style="display: none;">
 								<h4 class="panel-heading">
-									<i class="cap-measurepoints colorHeading-capicons"></i>
+									<i class="cap-measure-points colorHeading-capicons"></i>
 									<span><s:text name="webportal.search.results.multipoint.title"/></span>
 									<span id="block-search-results-multipoints-number"></span>
 								</h4>
@@ -199,7 +199,7 @@
 						<div class="large-12 columns">
 							<div class="panel-outer" id="block-search-results-cases" style="display: none;">
 								<h4 class="panel-heading">
-									<i class="fi-graph-trend colorHeading"></i>
+									<i class="fi-magnifying-glass colorHeading"></i>
 									<span><s:text name="webportal.search.results.case.title"/></span>
 									<span id="block-search-results-cases-number"></span>
 								</h4>
