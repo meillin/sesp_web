@@ -36,9 +36,7 @@
 	<script src="<%=contextPath%>/js/bootstrap-datepicker.js"></script>
 	<script src="<%=contextPath%>/js/jquery.multiselect.js"></script>
 	<script src="<%=contextPath%>/js/jquery.cookie.js"></script>
-	<script src="<%=contextPath%>/js/init.js"></script>
 	<script src="<%=contextPath%>/js/common.js"></script>
-	<script src="<%=contextPath%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
 	<script src="<%=contextPath%>/js/OpenLayers.js"></script>
 	<script src="<%=contextPath%>/js/sesp_ajax.js"></script>
 	<script src="<%=contextPath%>/js/spin.js"></script>

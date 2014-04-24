@@ -15,6 +15,7 @@ var i18nerrorFromDateOlderThanToDate;
 var areaWOMapInfoRParams;
 var selected = "";
 var defaultStr = "default";
+
 jQuery(document).ready(function($){
 
 	$('.sub-menu li').click(function(){
@@ -61,7 +62,6 @@ function populateAPDateIntervalFilters() {
 		$("#filter-select-date-interval").val(ap_dateInterval);
 	}
 
-
 	if(ap_dateInterval == "custominterval") {
 		var ap_dateFrom = $.cookie(pgCode+"ap_dateFrom");
 		if(ap_dateFrom!=null && ap_dateFrom!='') {
@@ -96,33 +96,15 @@ function loadDomainList() {
 			selected = '" selected > ';
 		}
 
-
 		$.each(data, function(i, item) {
 			items += '<option value="' + item.id + selected	+ item.name + '</option>';
 			});
-		/*$("#filter-multiselect-domain").html(items);
-
-
-		if(ap_domain!=null && ap_domain!='') {
-			var dataarray = ap_domain.split(",");
-			$("#filter-multiselect-domain").val(dataarray);
-		}
-
-		$("#filter-multiselect-domain").multiselect("refresh"); */
-
 		populateSavedMultiSelectBox("#filter-multiselect-domain",items,savedData);
-
 	};
 	obj.errorfunc = errorDetails;
 	run_ajax_json(obj);
 	return;
-
-
-
 }
-
-
-
 
 function errorDetails(data) {
 	alert("Error : " + data.responseText);
@@ -134,12 +116,11 @@ function loadAreaTypes(){
 	obj1.url=contextPath+"/std/AlertManagementAreaTypes.action";
 	obj1.successfunc = function(data){
 		var items;
-		var savedData = $.cookie(pgCode+"ap_areaType");
-		selected = '" > ';
-		if(savedData === null || savedData === ''){
-			selected = '" selected > ';
-		}
+		var savedData = $.cookie(pgCode + "ap_areaType");
+		var selected;
+
 		$.each(data, function(i, item) {
+			selected = item.id == savedData ? '" selected="selected" > ' : '" > ';
 			items += '<option value="' + item.id + selected	+ item.name + '</option>';
 		});
 		$('#filter-multiselect-area-type').html(items);
@@ -156,39 +137,19 @@ function loadWorkOrderTypes(){
 	obj2.errorfunc = errorDetails;
 	run_ajax_json(obj2);
 	return;
-
-
 }
 
 function populateWorkOrderTypes(data){
-	/*var items2;
-	$.each(data, function(i, item2) {
-		items2 += '<option value="' + item2.id + '">' + item2.name + '</option>';
+	var items;
+	var savedData = $.cookie(pgCode+"ap_workOrderType");
+	selected = '" > ';
+	if(savedData == null || savedData == ''){ selected = '" selected > '; }
+
+	$.each(data, function(i, item) {
+		items += '<option value="' + item.id + selected	+ item.name + '</option>';
 	});
-	$("#filter-multiselect-work-order-type").html(items2);
 
-	var ap_workOrderType = $.cookie(pgCode+"ap_workOrderType");
-	if(ap_workOrderType!=null && ap_workOrderType!='') {
-		var dataarray = ap_workOrderType.split(",");
-		$("#filter-multiselect-work-order-type").val(dataarray);
-	}
-
-	$("#filter-multiselect-work-order-type").multiselect("refresh");*/
-
-	 var items;
-	  var savedData = $.cookie(pgCode+"ap_workOrderType");
-	  selected = '" > ';
-
-		if(savedData == null || savedData == ''){
-			selected = '" selected > ';
-		}
-
-
-		$.each(data, function(i, item) {
-			items += '<option value="' + item.id + selected	+ item.name + '</option>';
-			});
-
-	populateSavedMultiSelectBox("#filter-multiselect-work-order-type",items,savedData);
+	populateSavedMultiSelectBox("#filter-multiselect-work-order-type", items, savedData);
 }
 
 function getAreas(requestType) {
@@ -202,8 +163,6 @@ function getAreas(requestType) {
 
 	var obj = {};
 	obj.url = contextPath + "/std/AlarmManagementAreas.action";
-//	var domainCode= (ap_domain==null ? null : ap_domain.join(","));
-//	var areaCode = (ap_areaType==null ? null : ap_areaType.join(","));
 	obj.pdata = "domainCode=" + ap_domain + "&areaTypeCode=" + ap_areaType;
 	obj.successfunc = fillAreas;
 	obj.errorfunc = errorDetails;
@@ -212,37 +171,15 @@ function getAreas(requestType) {
 }
 
 function fillAreas(data) {
-	/*var items;
-	$("#filter-multiselect-area").find('option').remove();
-	$("#filter-multiselect-area").multiselect('refresh');
-	var msareas = $("#filter-multiselect-area").multiselect();
-	$.each(data, function(i, item) {
-		items += '<option value="' + item.id + '">' + item.name + '</option>';
-	});
-	msareas.append(items);
-
-
-	var ap_area = $.cookie(pgCode+"ap_area");
-	if(ap_area!=null && ap_area!='') {
-		var dataarray = ap_area.split(",");
-		$("#filter-multiselect-area").val(dataarray);
-	}
-
-	msareas.multiselect('refresh');	*/
 	var items;
-	  var savedData = $.cookie(pgCode+"ap_area");
-	  selected = '" > ';
+	var savedData = $.cookie(pgCode+"ap_area");
+	selected = '" > ';
+	if(savedData == null || savedData == ''){ selected = '" selected > '; }
 
-		if(savedData == null || savedData == ''){
-			selected = '" selected > ';
-		}
-
-
-		$.each(data, function(i, item) {
-			items += '<option value="' + item.id + selected	+ item.name + '</option>';
-			});
-
-	populateSavedMultiSelectBox("#filter-multiselect-area",items,savedData);
+	$.each(data, function(i, item) {
+		items += '<option value="' + item.id + selected	+ item.name + '</option>';
+	});
+	populateSavedMultiSelectBox("#filter-multiselect-area", items, savedData);
 }
 
 
@@ -254,19 +191,18 @@ function filter_submit() {
 		var ap_dateInterval = $("#filter-select-date-interval").val();
 		var ap_dateFrom = $("#filter-date-from").val();
 		var ap_dateTo = $("#filter-date-to").val();
-		var ap_domain = $("#filter-multiselect-domain").val().join(",");
+		var ap_domain = $("#filter-multiselect-domain").val();
 		var ap_areaType = $("#filter-multiselect-area-type").val();
-		var ap_workOrderType = $("#filter-multiselect-work-order-type").val().join(",");
-		var ap_area = $("#filter-multiselect-area").val().join(",");
+		var ap_workOrderType = $("#filter-multiselect-work-order-type").val();
+		var ap_area = $("#filter-multiselect-area").val();
 		var ap_unplanned = $("#filter-checkbox-unplanned").prop('checked');
-		//alert(ap_unplanned);
 
 		saveWOProgressFilters(ap_dateInterval,ap_dateFrom,ap_dateTo,ap_domain,ap_areaType,ap_workOrderType,ap_unplanned,ap_area);
 
 		var obj3= {};
 		obj3.url=contextPath+"/std/WorkOrderStatusChart.action";
 		obj3.pdata = 'dateInterval='+ap_dateInterval+'&dateFrom='+ap_dateFrom+'&dateTo='+ap_dateTo+'&domain='+ap_domain+
-		   		'&areaType='+ap_areaType+'&workOrderType='+ap_workOrderType+'&unplanned='+ap_unplanned+'&area='+ap_area;
+			'&areaType='+ap_areaType+'&workOrderType='+ap_workOrderType+'&unplanned='+ap_unplanned+'&area='+ap_area;
 		obj3.successfunc = drawChart1;
 		obj3.errorfunc = errorDetails;
 		run_ajax(obj3);
@@ -274,7 +210,7 @@ function filter_submit() {
 		/*var obj4= {};
 		obj4.url=contextPath+"/std/ProgressOverviewChart.action";
 		obj4.pdata = 'dateInterval='+ap_dateInterval+'&dateFrom='+ap_dateFrom+'&dateTo='+ap_dateTo+'&domain='+ap_domain+
-   		'&areaType='+ap_areaType+'&workOrderType='+ap_workOrderType;
+		'&areaType='+ap_areaType+'&workOrderType='+ap_workOrderType;
 		obj4.successfunc = drawChart2;
 		obj4.errorfunc = errorDetails;
 		run_ajax(obj4);*/
@@ -284,46 +220,9 @@ function filter_submit() {
 
 		return;
 	}
-
-
 }
 
 function submitValidation() {
-	/*var dateInterval = $("#filter-select-date-interval").val();
-	var dateFrom = $("#filter-date-from").val();
-	var dateTo = $("#filter-date-to").val();
-	var domain = $("#filter-multiselect-domain").val();
-	var areaType = $("#filter-multiselect-area-type").val();
-	var workOrderType = $("#filter-multiselect-work-order-type").val();
-	var area = $("#filter-multiselect-area").val();*/
-
-
-
-
-	/*if((dateInterval=='Custom interval' && dateFrom==null)||(dateInterval=='Custom interval'&&dateFrom=='')) {
-		criteria += from_err_msg;
-		bool = false;
-	}
-	if((dateInterval=='Custom interval'&&dateTo==null)||(dateInterval=='Custom interval'&&dateTo=='')) {
-		criteria += to_err_msg;
-		bool = false;
-	}
-	if(domain==null||domain=='') {
-		criteria += domain_err_msg;
-		bool = false;
-	}
-	if(areaType==null||areaType=='') {
-		criteria += areatype_err_msg;
-		bool = false;
-	}
-	if(workOrderType==null||workOrderType=='') {
-		criteria += workordertype_err_msg;
-		bool = false;
-	}
-	if(dateInterval=='Custom interval'&&dateFrom!=null&&dateTo!=null&&!(dateFrom <= dateTo)) {
-		criteria += dateinterval_err_msg;
-		bool = false;
-	}*/
 
 	if ($("#filter-select-date-interval").val() == "custominterval") {
 
@@ -357,57 +256,25 @@ function submitValidation() {
 		return false;
 	}
 
-	/*if(domain==null||domain=='') {
-		criteria += domain_err_msg;
-		bool = false;
-	}
-	if(areaType==null||areaType=='') {
-		criteria += areatype_err_msg;
-		bool = false;
-	}
-	if(area==null||area=='') {
-		criteria += area_err_msg;
-		bool = false;
-	}
-	if(workOrderType==null||workOrderType=='') {
-		criteria += workordertype_err_msg;
-		bool = false;
-	}*/
-
-    return true;
+	return true;
 }
 
 function show(){
 	if($("#filter-select-date-interval").val()=="custominterval"){
-	//document.getElementById("filter-custom-date-interval").style.visibility="visible";
 		showDate();
-		//$('#filter-custom-date-interval').css("visibility","visible");
-		//$('#filter-date-to').css("visibility","visible");
-
 	} else {
 		hideDate();
-		//document.getElementById("filter-custom-date-interval").style.visibility="hidden";
-		//$('#filter-custom-date-interval').css("visibility","hidden");
-		//$('#filter-date-to').css("visibility","hidden");
-		//$('#filter-date-to').css("visibility","hidden");
-
 	}
 }
 
 
 function hideDate()
 {
-
-
-	//$("#block_from_and_to_date").hide();
-
 	$("#filter-date-from").hide();
 	$("#filter-date-to").hide();
 }
 
 function showDate(){
-
-	//$("#block_from_and_to_date").show();
 	$("#filter-date-from").show();
 	$("#filter-date-to").show();
 }
@@ -596,7 +463,7 @@ function createWOAreaJSON(json) {
 }
 
 //Populate the multi-select box with the given data for the given id
-function populateSavedMultiSelectBox(idName, items,savedData){
+function populateSavedMultiSelectBox(idName, items, savedData){
 
 	/*$(idName).html(items);
 	$(idName).multiselect("refresh");*/

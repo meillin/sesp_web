@@ -24,7 +24,6 @@ function loadvalues(){
 	getAreas(defaultStr);
 	loadWorkOrderTypes();
 	loadDefaultTabs();
-
 }
 
 function populateAPDateIntervalFilters() {
@@ -80,7 +79,7 @@ function loadDomainList() {
 			items += '<option value="' + item.id +selected + item.name + '</option>';
 		});
 
-		populateSavedMultiSelectBox("#filter-multiselect-domain", items,savedData);
+		populateSavedMultiSelectBox("#filter-multiselect-domain", items, savedData);
 	};
 	obj.errorfunc = errorDetails;
 	run_ajax_json(obj);
@@ -108,7 +107,7 @@ function loadAreaTypes(){
 		items += '<option value="' + item.id +selected + item.name + '</option>';
 	});
 
-	populateSavedMultiSelectBox("#filter-multiselect-area-type", items,savedData);
+	populateSavedMultiSelectBox("#filter-multiselect-area-type", items, savedData);
 	};
 	obj1.errorfunc = errorDetails;
 	run_ajax_json(obj1);
