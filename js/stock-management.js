@@ -187,7 +187,6 @@ function infoDataCallback(id) {
 
 function onChangeDomain(){
 	var ls_domain = $("#filter-multiselect-domain").val();
-	// alert(ls_domain);
 	if(null != ls_domain) {
 		loadDeviceModelsList(ls_domain);
 		loadWarehousesList(ls_domain);
@@ -195,7 +194,6 @@ function onChangeDomain(){
 		clearDeviceModelsList();
 		clearWarehousesList();
 	}
-	//loadPoints(ls_domain);
 }
 
 function insertValues(value, context, divId){

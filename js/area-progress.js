@@ -25,9 +25,6 @@ function loadvalues(){
 	loadWorkOrderTypes();
 	loadDefaultTabs();
 
-	//filter_submit();
-	//getAreas();
-	//Meilan added this function. tobe removed
 }
 
 function populateAPDateIntervalFilters() {
@@ -179,8 +176,6 @@ function getAreas(requestType) {
 
 	var obj = {};
 	obj.url = contextPath + "/std/AlarmManagementAreas.action";
-	/*var domainCode= (ap_domain==null ? null : ap_domain);
-	var areaCode = (ap_areaType==null ? null : ap_areaType);*/
 
 	obj.pdata = "domainCode=" + ap_domain + "&areaTypeCode=" + ap_areaType;
 	obj.successfunc = fillAreas;

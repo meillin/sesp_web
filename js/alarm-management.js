@@ -283,24 +283,50 @@ function validateAlarmFilters(al_fromdate, al_todate,al_areatypes,al_domain, al_
 
 }
 
-
 var chartType;
 function drawChart(data) {
 }
 
+function insertPeriod(f, t, d){
+
+	var dateinterval ='<li>Date interval: ' + d + '</li>';
+	var from = '<li>From: ' + f + '</li>';
+	var to = '<li>To: ' + t + '</li>';
+	$('#selected-period-type').html(dateinterval + from + to);
+}
+
+function insertValues(value, context, divId){
+	var values = '';
+	for(var i = 0 ; i < value.length ; i++){
+		values +='<li>' + $("#"+context+" option[value="+value[i]+"]").text()+ "</li>";
+	}
+	$('#'+divId+' ul').html(values);
+	$('#'+divId+' span.label').html(value.length);
+}
+
 function onSubmit()
 {
-	var al_domain = $("#domains").val() === null ? null:$("#domains").val().join(",");
-	var al_areatypes = $("#areaTypes").val() === null ? null:$("#areaTypes").val().join(",");
-	var al_areas = $("#areas").val() === null ? null:$("#areas").val().join(",");
-	var al_alarmtypes = $("#alarmTypes").val() === null ? null: $("#alarmTypes").val().join(",");
-	var al_utilitytypes = $("#utilitytypes").val() === null ? null:$("#utilitytypes").val().join(",");
-	var al_unitCommTypes = $("#commtypes").val() === null ? null:$("#commtypes").val().join(",");
-	var al_devicemodels = $("#devicemodels").val() === null ? null:$("#devicemodels").val().join(",");
+	var al_domain = $("#domains").val();
+	var al_areatypes = $("#areaTypes").val();
+	var al_areas = $("#areas").val();
+	var al_alarmtypes = $("#alarmTypes").val();
+	var al_utilitytypes = $("#utilitytypes").val();
+	var al_unitCommTypes = $("#commtypes").val();
+	var al_devicemodels = $("#devicemodels").val();
 	var al_breakup = $('input:radio[name=block-alarm-charts-radio]:checked').val();
 	var al_fromdate = $("#filter-date-from").val();
 	var al_todate = $("#filter-date-to").val();
 	var al_dateinterval = $("#filter-select-date-interval").val();
+
+	insertValues(al_domain, 'domains', 'selected-domain');
+	insertValues(al_areatypes, 'areaTypes', 'selected-area-type');
+	insertValues(al_areas, 'areas', 'selected-area');
+	insertValues(al_alarmtypes, 'alarmTypes', 'selected-alarm-type');
+	insertValues(al_utilitytypes, 'utilitytypes', 'selected-utility-type');
+	insertValues(al_unitCommTypes, 'commtypes', 'selected-comm-type');
+	insertValues(al_devicemodels, 'devicemodels', 'selected-device-model');
+	insertValues(al_areatypes, 'areaTypes', 'selected-area-type');
+	insertPeriod(al_fromdate, al_todate, al_dateinterval);
 
 	saveAlarmManagementFilter('al_domain', al_domain);
 	saveAlarmManagementFilter('al_areatypes', al_areatypes);

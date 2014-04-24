@@ -255,15 +255,13 @@ function filter_submit() {
 		var ap_dateFrom = $("#filter-date-from").val();
 		var ap_dateTo = $("#filter-date-to").val();
 		var ap_domain = $("#filter-multiselect-domain").val().join(",");
-		var ap_areaType = $("#filter-multiselect-area-type").val().join(",");
+		var ap_areaType = $("#filter-multiselect-area-type").val();
 		var ap_workOrderType = $("#filter-multiselect-work-order-type").val().join(",");
 		var ap_area = $("#filter-multiselect-area").val().join(",");
 		var ap_unplanned = $("#filter-checkbox-unplanned").prop('checked');
 		//alert(ap_unplanned);
 
 		saveWOProgressFilters(ap_dateInterval,ap_dateFrom,ap_dateTo,ap_domain,ap_areaType,ap_workOrderType,ap_unplanned,ap_area);
-
-
 
 		var obj3= {};
 		obj3.url=contextPath+"/std/WorkOrderStatusChart.action";
