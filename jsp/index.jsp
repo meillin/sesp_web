@@ -76,7 +76,7 @@ document.createElement("figure");
                   <li>
                     <div>
                       <a class="patch" href="<%=contextPath%>/std/ViewResourceProjectionAction" alt="RESOURCE PROJECTIONS" title="RESOURCE PROJECTIONS">
-                        <i class="fi-graph-bar size-74"></i></br>
+                        <i class="fi-torsos size-74"></i></br>
                         <span>Resource Projections</span>
                       </a>
                     </div>
@@ -85,7 +85,7 @@ document.createElement("figure");
                   <li>
                     <div>
                       <a class="patch" href="<%=contextPath%>/std/AreaProgress" alt="AREA PROGRESS" title="AREA PROGRESS">
-                        <i class="fi-loop size-74"></i></br>
+                        <i class="fi-graph-horizontal size-74"></i></br>
                         <span>Area Progress</span>
                       </a>
                     </div>
@@ -121,7 +121,7 @@ document.createElement("figure");
                  <li>
                     <div>
                       <a class="patch" href="<%=contextPath%>/std/WorkOrderProgress" alt="WORK ORDER PROGRESS" title="WORK ORDER PROGRESS">
-                        <i class="fi-clock size-74"></i></br>
+                        <i class="fi-graph-trend size-74"></i></br>
                         <span>Work Order Overview</span>
                       </a>
                     </div>
@@ -130,7 +130,7 @@ document.createElement("figure");
                 <li>
                   <div>
                     <a class="patch" href="<%=contextPath%>/std/AnalyzeFieldWorkEfficiency" alt="FIELD WORK EFFICIENCY" title="FIELD WORK EFFICIENCY">
-                      <i class="fi-wrench size-74"></i></br>
+                      <i class="fi-arrow-up size-74"></i></br>
                       <span>Field Work Efficiency</span>
                     </a>
                   </div>
@@ -139,7 +139,7 @@ document.createElement("figure");
                   <li>
                     <div>
                       <a class="patch" href="<%=contextPath%>/std/TimeReservationCallList" alt="TIME RESERVATION CALL LIST" title="TIME RESERVATION CALL LIST">
-                        <i class="fi-list size-74"></i></br>
+                        <i class="fi-clock size-74"></i></br>
                         <span>Time Reservation Call List</span>
                       </a>
                     </div>

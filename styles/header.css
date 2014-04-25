@@ -183,8 +183,7 @@ li {
 }
 
 .overlapping-menu .logout-button {
-	border-top: 1px solid #485760;
-	border-bottom: 1px solid #485760;
+	border-top: 1px solid #fff;
 }
 
 .slide-out-text {
