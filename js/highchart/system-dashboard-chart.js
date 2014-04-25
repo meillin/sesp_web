@@ -306,8 +306,8 @@ $(function () {
 	drawDonutChart('export-files', fileData, 'File');
 	drawDonutChart('import-messages', messageData, 'Message');
 	drawDonutChart('export-messages', messageData, 'Message');
-	drawStackedBarChart('users-system-chart', 'Users in system', userData, userCat, true, 200);
-	drawStackedBarChart('users-authentifications-chart', 'Authentifications today', userData, userCat, true, 200);
+	drawStackedBarChart('users-system-chart', 'Users in system', userData, userCat, true, 190);
+	drawStackedBarChart('users-authentifications-chart', 'Authentifications today', userData, userCat, true, 190);
 	drawStackedBarChart('errors', ' ', errorData, errorCat, false, 216);
 
 });

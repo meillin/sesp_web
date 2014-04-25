@@ -312,8 +312,8 @@
 									</h4>
 									<div class="panel-innner">
 										<div class="row">
-											<div class="large-12 columns" id="alarm-charts-view">
-											</div>
+										<div class="large-12 columns" id="alarm-charts-view"></div>
+
 										</div>
 
 										<div class="row chart-filter">

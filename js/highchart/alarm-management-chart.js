@@ -57,6 +57,14 @@ $(function () {
     }
     drawAlarmChart();
 
+    /*
+    function drawAlarmFusionChart() {
+    var myChart = new FusionCharts(contextPath + "/js/fusionchartsxt/charts/Column2D.swf", "myChartId", "400", "300", "0" );
+    myChart.setDataURL(contextPath + "/js/highchart/data.xml");
+    myChart.render("fusion-charts-view");
+    }
+    drawAlarmFusionChart();
+    */
 });
 
 

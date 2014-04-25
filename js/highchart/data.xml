@@ -1,0 +1,6 @@
+<chart caption='Work Order Status' numberprefix="$" plotgradientcolor=" " bgcolor="FFFFFF" showalternatehgridcolor="0" showplotborder="0" showvalues="0" divlinecolor="CCCCCC" showcanvasborder="0"  captionpadding="30" tooltipbgcolor="00396d" tooltipcolor="FFFFFF" tooltipbordercolor="FFFFFF" palettecolors="008ee4" canvasborderalpha="0">
+	<set value='37' label='Performed'/>
+	<set value='161' label='Not Performed'/>
+	<set value='1' label='Not Performed Final'/>
+	<set value='4' label='Cancelled'/>
+</chart>
