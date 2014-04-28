@@ -98,7 +98,7 @@
 								</div>
 
 								<div class="small-6 columns">
-									<label>Period type</label>
+									<label><s:text name="webportal.resourceprojections.planningperiods.type" /></label>
 									<select id="period-type">
 										<option value="week"><s:text name="webportal.week"/></option>
 										<option value="month"><s:text name="webportal.month"/></option>
@@ -132,7 +132,7 @@
 
 								<div class="small-12 columns text-right">
 									<br/>
-									<a id="block-time-button-update" onclick="javascript:updatePlanningPeriod()" class="button tiny">Search</a>
+									<a id="block-time-button-update" onclick="javascript:updatePlanningPeriod()" class="button tiny"><s:text name="webportal.resourceprojections.filters.search"/></a>
 								</div>
 						</div>
 
@@ -145,45 +145,51 @@
 								</small>
 							</h4>
 							<table id="block-planning-periods-table">
-								<thead><tr><th>Please update planning period first</th></tr></thead>
+								<thead>
+									<tr>
+										<th>
+											<s:text name="webportal.resourceprojections.planningperiods.errorMessage" />
+										</th>
+									</tr>
+								</thead>
 							</table>
 						</div>
 
 						<div class="large-4 columns">
-							<h4>3 Filter</h4>
+							<h4><s:text name="webportal.resourceprojections.planningperiods.selectall"/></h4>
 
 							<div class="row">
 								<div class="small-6 columns">
 
-									<label>Utility type</label>
+									<label><s:text name="webportal.resourceprojections.filters.utilitytype" /></label>
 									<div>
 										<select id="filter-multiselect-utility-type" class="custom-multi-select" name="multiselect-utility-type" multiple="multiple"></select>
 									</div>
 
 
-									<label>Area</label>
+									<label><s:text name="webportal.resourceprojections.filters.area" /></label>
 									<div>
 										<select id="filter-multiselect-area" class="custom-multi-select" name="multiselect-area" multiple="multiple"></select>
 									</div>
 
-									<label>Area type</label>
+									<label><s:text name="webportal.resourceprojections.filters.areatype" /></label>
 									<div>
 										<select id="filter-multiselect-area-type" class="custom-multi-select" name="multiselect-area-type" multiple="multiple"></select>
 									</div>
 								</div>
 								<div class="small-6 columns">
 
-									<label>Work order type</label>
+									<label><s:text name="webportal.resourceprojections.filters.workordertype" /></label>
 									<div>
 										<select id="filter-multiselect-work-order-type" class="custom-multi-select" name="multiselect-work-order-type" multiple="multiple"></select>
 									</div>
 
-									<label>Device type</label>
+									<label><s:text name="webportal.resourceprojections.filters.devicetype" /></label>
 									<div>
 										<select id="filter-multiselect-device-type" class="custom-multi-select" name="multiselect-device-type" multiple="multiple"></select>
 									</div>
 
-									<label>Device model</label>
+									<label><s:text name="webportal.resourceprojections.filters.devicemodel" /></label>
 									<div>
 										<select id="filter-multiselect-device-model" class="custom-multi-select" name="multiselect-device-model" multiple="multiple"></select>
 									</div>
@@ -203,7 +209,7 @@
 					<div class="big-row">
 						<div class="large-12 columns" >
 							<ul class="page-name-heading sub-menu">
-								<span>RESOURCE PROJECTIONS</span>
+								<span>RESOURCE PROJECTIONS / DEVICE ASSETS PROJECTIONS</span>
 							</ul>
 						</div>
 					</div>
@@ -211,7 +217,10 @@
 					<div class="big-row">
 						<div class="large-6 columns">
 							<div class="panel-outer">
-								<h4 class="panel-heading"><i class="fi-graph-horizontal colorHeading test"></i><span> Device assets projections</span></h4>
+								<h4 class="panel-heading">
+									<i class="fi-graph-horizontal colorHeading test"></i>
+									<span> <s:text name="webportal.resourceprojections.deviceassets.permonth"/></span>
+								</h4>
 								<div class="panel-inner" id="device-assets-projections-per-month-view">
 									<!-- IDs for real data chart
 									<div class="large-6 columns" id="block-device-assets-projections-per-month-view"></div>
@@ -222,7 +231,10 @@
 
 						<div class="large-6 columns">
 							<div class="panel-outer">
-								<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i><span> Device assets projections total</span></h4>
+								<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i>
+									<span> <s:text name="webportal.resourceprojections.deviceassets.total"/>
+									</span>
+								</h4>
 								<div class="panel-inner" id="device-assets-projections-total-view">
 										<!-- IDs for real data chart
 										<div class="large-6 columns" id="block-device-assets-projections-total-view"></div>
@@ -234,7 +246,10 @@
 						<div class="big-row">
 							<div class="large-6 columns">
 								<div class="panel-outer">
-									<h4 class="panel-heading"><i class="fi-graph-horizontal colorHeading"></i><span> Resource projections per month</span></h4>
+									<h4 class="panel-heading">
+										<i class="fi-graph-horizontal colorHeading"></i>
+										<span> <s:text name="webportal.resourceprojections.resourceprojections.permonth" /></span>
+									</h4>
 									<div class="panel-inner" id="resource-projections-per-month-view">
 										<!-- IDs for real data chart
 										<div class="large-6 columns" id="block-resource-projections-per-month-view"></div>
@@ -246,7 +261,10 @@
 
 							<div class="large-6 columns">
 								<div class="panel-outer">
-									<h4 class="panel-heading"><i class="fi-graph-pie colorHeading"></i><span> Total resource projection</span></h4>
+									<h4 class="panel-heading">
+										<i class="fi-graph-pie colorHeading"></i>
+										<span> <s:text name="webportal.resourceprojections.resourceprojections.total" /></span>
+									</h4>
 									<div class="panel-inner" id="resource-projections-total-view">
 										<!-- IDs for real data chart
 										<div class="large-6 columns" id="block-resource-projections-total-view"></div>
@@ -260,7 +278,10 @@
 					<div class="big-row">
 						<div class="large-6 columns">
 							<div class="panel-outer">
-								<h4 class="panel-heading"><i class="fi-graph-bar size-24 colorHeading"></i><span> Key performance indexes</span></h4>
+								<h4 class="panel-heading">
+									<i class="fi-graph-bar size-24 colorHeading"></i>
+									<span> <s:text name="webportal.resourceprojections.resourceprojections.key" /></span>
+								</h4>
 								<div class="panel-inner" id="resource-projections-kpi"></div>
 							</div>
 						</div>
