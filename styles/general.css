@@ -77,7 +77,6 @@ thead{
 	clear: both;
 }
 
-
 .big-row-padding {
 	/*min-height: 450px;*/
 	max-width: initial;
@@ -151,15 +150,11 @@ thead{
 .filterHeader li{
 	width: 50%;
 }
-/*.filterHeader select, .filterHeader .input-append {
-	background-color: #1abc9c;
-	border: none;
-	color: #fff;
-}*/
 
 /*****************Information column and sub menu ********************************************************/
 
 .filtered {
+	font-family: roboto-lght !important;
 	height: 100%;
 	background: #333e45;
 	position: fixed;
@@ -172,14 +167,13 @@ thead{
 }
 
 .filtered h5 {
-	font-family: roboto-lght!important;
 	color: #fff;
 }
 
 .page-name-heading {
 	margin-left: 0;
 	margin-top: 4.5rem;
-	font-family: roboto-lght!important;
+	font-family: roboto-lght !important;
 	color: #2e363c!important;
 	font-size: 16px;
 	padding-left: 1.1rem;
@@ -225,14 +219,6 @@ thead{
 	display: inline-block;
 }
 
-
-/*.progress-chart-li {
-	float: right;
-}
-
-.status {
-	float: right;
-}*/
 /*************************************************************************/
 
 /***********Accordion******************************************/
@@ -248,7 +234,6 @@ dl .label {
 .accordion dd > a {
 	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 	background: #2F3138;
-	font-family: roboto-lght;
 	color: #fff;
 	padding: 0.5em 0.9em;
 }
@@ -292,8 +277,6 @@ button, .button{
 .panel-heading{
 	border-bottom: 1px solid #E7E7E7;
 	padding: 0.5rem 0.5rem 0.3rem 1.2rem;
-	/*padding-top: 0.5rem;
-	padding-bottom: 0.5rem;*/
 	margin: 0;
 	font-family: roboto-lght;
 	font-size: 18px;

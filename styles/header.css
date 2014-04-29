@@ -5,6 +5,7 @@
 body,html{
     height:100%;
     width:100%;
+    font-family: roboto-lght;
 }
 .off-canvas-wrap,.inner-wrap{height:100%;}
 

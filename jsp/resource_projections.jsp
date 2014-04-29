@@ -1,34 +1,20 @@
 <!DOCTYPE html>
 <%@ taglib prefix="s" uri="/struts-tags"%>
-<!--[if IE 8]>     <html class="ie8"> <![endif]-->
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title><s:text name='webportal.head.title'/></title>
 
-	<!-- Enable html5 tags for 6-7-8 -->
-		<!--[if lte IE 8]>
-		<script type="text/javascript">
-		document.createElement("header");
-		document.createElement("footer");
-		document.createElement("section");
-		document.createElement("aside");
-		document.createElement("nav");
-		document.createElement("article");
-		document.createElement("figure");
-		</script>
-		<![endif]-->
 		<% String contextPath = request.getContextPath(); %>
 
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/foundation.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/foundation-icons/foundation-icons.css">
-
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/jquery.multiselect.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
-<!--[if IE 8]>
-<link rel="stylesheet" href="<%=contextPath%>/styles/ie8.css">
-<![endif]-->
+		<!--[if IE 8]>
+		<link rel="stylesheet" href="<%=contextPath%>/styles/ie8.css">
+		<![endif]-->
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/datepicker.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-resource-projections.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/style.tidy.css" />
@@ -36,6 +22,8 @@
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
 
 		<script src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
+		<script src="<%=contextPath%>/js/highchart/highcharts.js"></script>
+
 		<script src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
 		<script src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
 		<script src="<%=contextPath%>/js/bootstrap-datepicker.js"></script>
@@ -49,7 +37,6 @@
 		<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/js/images/favicon.png" />
 		<script src="<%=contextPath%>/js/OpenLayers.js"></script>
 
-		<script src="<%=contextPath%>/js/highchart/highcharts.js"></script>
 
 		<script src="<%=contextPath%>/js/map.js"></script>
 		<script src="<%=contextPath%>/js/sesp_ajax.js"></script>
@@ -78,7 +65,9 @@
 			i18nplanningenddate="<s:text name="webportal.resourceprojections.planningperiods.enddate"/>";
 			i18nplanningdomain="<s:text name="webportal.resourceprojections.planningperiods.domain"/>";
 		</script>
-
+		<style>
+v\:* { behavior: url(#default#VML); display:inline-block}
+</style>
 	<!--[if lt IE 9]>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
 	<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
@@ -159,7 +148,7 @@
 						</div>
 
 						<div class="large-4 columns">
-							<h4><s:text name="webportal.resourceprojections.planningperiods.selectall"/></h4>
+							<h4><s:text name="webportal.resourceprojections.time.third"/></h4>
 
 							<div class="row">
 								<div class="small-6 columns">

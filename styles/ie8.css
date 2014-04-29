@@ -2,10 +2,10 @@
 	border: none;
 }
 .top-menu * {
-		margin-left: 0px !important;
+		margin-left: 0 !important;
 }
 .top-menu li ul {
-	margin-bottom: 0px;
+	margin-bottom: 0;
 }
 .top-menu-first {
 	margin-left: 10px;
@@ -16,3 +16,14 @@
 .top-menu-third {
 	padding-top: 15px;
 }
+.top-menu-third ul li:first-child {
+	padding-right: 10px;
+}
+.top-menu-third ul li a {
+	padding: 0 10px;
+	border-left: 1px solid;
+}
+
+/*
+ YOU HAVE FILTERED
+ */

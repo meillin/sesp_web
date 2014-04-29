@@ -29,6 +29,11 @@ document.createElement("figure");
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/jquery.multiselect.css"/>
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
+
+<!--[if IE 8]>
+<link rel="stylesheet" href="<%=contextPath%>/styles/ie8.css">
+<![endif]-->
+
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/datepicker.css" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-area-progress.css" />
 
