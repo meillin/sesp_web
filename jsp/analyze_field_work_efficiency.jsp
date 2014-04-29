@@ -23,7 +23,9 @@
 	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/jquery.multiselect.css"/>
 	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/general.css" />
 	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/header.css" />
-
+	<!--[if IE 8]>
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/styles/ie8.css">
+	<![endif]-->
 	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/datepicker.css" />
 	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-analyze-field-work-efficiency.css" />
 	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />

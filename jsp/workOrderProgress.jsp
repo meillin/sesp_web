@@ -23,6 +23,9 @@
 	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/jquery.multiselect.css"/>
 	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
 	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
+	<!--[if IE 8]>
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/styles/ie8.css">
+	<![endif]-->
 	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/datepicker.css" />
 	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-work-order-progress.css" />
 	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/style.tidy.css" />

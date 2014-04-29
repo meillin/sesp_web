@@ -30,6 +30,11 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/jquery.multiselect.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/general.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/header.css" />
+
+		<!--[if IE 8]>
+		<link rel="stylesheet" href="<%=request.getContextPath()%>/styles/ie8.css">
+		<![endif]-->
+
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-stock-management.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/style.tidy.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/bubble-map.css"/>
