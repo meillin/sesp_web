@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <%@ taglib prefix="s" uri="/struts-tags"%>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Smart Energy Services Platform</title>
@@ -23,6 +23,11 @@ document.createElement("figure");
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-index.css" />
+
+<!--[if IE 8]>
+<link rel="stylesheet" href="<%=contextPath%>/styles/ie8.css">
+<![endif]-->
+
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-search-results.css" />
 <link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/style.tidy.css" />
@@ -157,4 +162,4 @@ document.createElement("figure");
     <![endif]-->
 
   </body>
-  </html>
+</html>

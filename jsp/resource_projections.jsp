@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <%@ taglib prefix="s" uri="/struts-tags"%>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!--[if IE 8]>     <html class="ie8"> <![endif]-->
+<html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title><s:text name='webportal.head.title'/></title>
@@ -25,7 +26,9 @@
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/jquery.multiselect.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
-
+<!--[if IE 8]>
+<link rel="stylesheet" href="<%=contextPath%>/styles/ie8.css">
+<![endif]-->
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/datepicker.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-resource-projections.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/style.tidy.css" />

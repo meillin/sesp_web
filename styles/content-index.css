@@ -20,7 +20,6 @@ header .slide-menu-right a{
     display: none;
 }
 
-
 #main-content-index ul li {
     text-align: center;
     cursor: pointer;
@@ -30,13 +29,17 @@ header .slide-menu-right a{
 }
 
 #main-content-index {
+    font-family: roboto-lght!important;
     font-size:14px;
     text-align: center;
+    background: url(../images/2014/dashboard_bg.jpg);
+    background-repeat: repeat-x;
+    /*
     background-image: linear-gradient(to top, #333e45 100%, #333e45 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333e45', endColorstr='#333e45');
     background-size: 100% 52%, 100% 50%, 100% 100%;
     background-position: 0 0, 0 100%, 0 0;
-    background-repeat: no-repeat;
-    font-family: roboto-lght!important;
+    */
 }
 
 #main-content-index ul li div {

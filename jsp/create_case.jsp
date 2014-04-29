@@ -24,48 +24,48 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-block.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/footer.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-case.css" />
-	    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
+		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/style.tidy.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/colResizable.css" />
-				
+
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/colResizable-1.3.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
-				
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>		
+
+		<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/search-results.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/case.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/OpenLayers.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/map.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxcommon.js"></script>
         <script type="text/javascript" src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgrid.js"></script>
-        <script type="text/javascript" src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgridcell.js"></script>    
-        <script type="text/javascript" src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/customdhtmlxgrid_export.js"></script>	
+        <script type="text/javascript" src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgridcell.js"></script>
+        <script type="text/javascript" src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/customdhtmlxgrid_export.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/spin.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
-			
+
 	</head>
 	<body>
 	<script>
-        contextPath = "<%=request.getContextPath()%>";       
-        caseId="<%=request.getAttribute("id")%>";     
-        mapServerUrl= "<%=application.getAttribute("MAP_SERVER_URL")%>";    
+        contextPath = "<%=request.getContextPath()%>";
+        caseId="<%=request.getAttribute("id")%>";
+        mapServerUrl= "<%=application.getAttribute("MAP_SERVER_URL")%>";
         i18nerrorNoCaseData = "<s:text name='webportal.case.results.error.nocaseresults'/>";
-        i18nerrorInvalidCaseAction = "<s:text name='webportal.case.results.error.invalidcaseaction'/>"; 
+        i18nerrorInvalidCaseAction = "<s:text name='webportal.case.results.error.invalidcaseaction'/>";
 		woEventsExportHeader = "<s:text name='webportal.case.work.order.events.type'/>, " +
 					" <s:text name='webportal.case.work.order.events.timestamp'/>, " +
 					" <s:text name='webportal.case.work.order.events.result'/>, " +
 					" <s:text name='webportal.case.work.order.events.source'/>, " +
 					" <s:text name='webportal.case.work.order.events.create.signature'/>, " +
-					" <s:text name='webportal.case.work.order.events.create.timestamp'/> ";                    
-		
+					" <s:text name='webportal.case.work.order.events.create.timestamp'/> ";
+
     </script>
-    
+
 		<div id="wrapper">
-			
+
 			<!--  Header -->
-			<%@ include file="headerv311.inc"%>			
+			<%@ include file="headerv311.inc"%>
 
 			<div id="main-content">
 
@@ -74,20 +74,20 @@
 				</div>
 
 				<div class="small-block block retractable" id="block-overview">
-					
+
 					<div class="block-title">
 						<span class="block-title-picto"></span>
 						<span class="block-title-name text-blue"><s:text name="webportal.case.overview.title"/></span>
 						<span class="block-arrow open"></span>
 					</div>
-					
+
 					<div class="content-wrapper">
-						
+
 						<div class="content">
-						
+
 						<div class="legend-block text-grey">
-							
-							<table id="overview-table">	
+
+							<table id="overview-table">
 								<tr>
 									<td width="44%"><div class="legend-block-title"><s:text name="webportal.case.overview.case.type"/> : </div></td>
 									<td width="55%"><div class="legend-block-content text-light-grey" id="block-overview-case-type"></div></td>
@@ -130,9 +130,9 @@
 								</tr>
 							</table>
 							<div id="block-overview-status">  </div>
-							
+
 							</div>
-							
+
 						</div>
 					</div>
 				</div>
@@ -145,9 +145,9 @@
 						<span class="block-arrow open"></span>
 					</div>
 					<div class="content-wrapper">
-						
+
 						<div class="content">
-							
+
 							<div id="block-case-location-map-wrapper" style="width:444px; height:288px">
 								<!-- <iframe width="444" height="264" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-1.55302,47.19581,-1.50817,47.22307&amp;layer=mapnik&amp;marker=47.21659,-1.53457"></iframe>  -->
 							</div>
@@ -158,13 +158,13 @@
 								</div>
 								<div class="area legend-block text-grey">
 									<div class="legend-block-title"><s:text name="webportal.case.location.area"/> :</div>
-									<div class="legend-block-content text-light-grey" id="block-location-area"></div>									
+									<div class="legend-block-content text-light-grey" id="block-location-area"></div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="large-block block retractable" id="block-installations">
 					<div class="block-title">
 						<span class="block-title-picto"></span>
@@ -196,7 +196,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="large-block block retractable" id="block-sla">
 					<div class="block-title">
 						<span class="block-title-picto"></span>
@@ -225,11 +225,11 @@
 							<div class="center-wrapper">
 								<a href="javascript:showMoreResults('SLA')" id="block-case-sla-link-more" class="link-more text-blue"><s:text name="webportal.case.sla.options.showmore"/></a>
 							</div>
-							
+
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="large-block block retractable" id="block-information">
 					<div class="block-title">
 						<span class="block-title-picto"></span>
@@ -255,11 +255,11 @@
 							<div class="center-wrapper">
 								<a href="javascript:showMoreResults('INFO')" id="block-case-information-link-more" class="link-more text-blue"><s:text name="webportal.case.information.options.showmore"/></a>
 							</div>
-							
+
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="large-block block retractable" id="block-messages">
 					<div class="block-title">
 						<span class="block-title-picto"></span>
@@ -286,12 +286,12 @@
 							<div class="center-wrapper">
 								<a href="javascript:showMoreResults('MESSAGES')" id="block-case-messages-link-more" class="link-more text-blue"><s:text name="webportal.case.messages.options.showmore"/></a>
 							</div>
-							
+
 						</div>
 					</div>
 				</div>
-				
-				
+
+
 					<div class="large-block block block-accordion" id="block-history">
 					<div class="block-title">
 						<span class="block-title-picto"></span>
@@ -303,8 +303,8 @@
 						<div class="content">
 
 							<ul class="accordion">
-								
-								<li class="toggleSubMenu" id="block-history-status">									
+
+								<li class="toggleSubMenu" id="block-history-status">
 									<span class="accordion-title">&#149; <span class="accordion-title-name"><s:text name="webportal.case.history.status.title"/></span> <span id="block-case-status-history-number" class="number"></span><div class="accordion-arrow close"></div></span>
 									<ul class="subMenu">
 										<table id="caseStatusHistory" class="text-grey owner-table">
@@ -327,7 +327,7 @@
 										</div>
 									</ul>
 								</li>
-								<li class="toggleSubMenu" id="block-history-action">									
+								<li class="toggleSubMenu" id="block-history-action">
 									<span class="accordion-title">&#149; <span class="accordion-title-name"><s:text name="webportal.case.action.history.title"/></span> <span id="block-case-status-action-number" class="number"> </span><div class="accordion-arrow close"></div></span>
 									<ul class="subMenu">
 										<table id="caseActionHistory" class="text-grey owner-table">
@@ -347,7 +347,7 @@
 										</div>
 									</ul>
 								</li>
-								<li class="toggleSubMenu" id="block-history-customer-contact">									
+								<li class="toggleSubMenu" id="block-history-customer-contact">
 									<span class="accordion-title">&#149; <span class="accordion-title-name"><s:text name="webportal.case.customer.contact.history.title"/></span> <span id="block-case-cust-contact-number" class="number"></span><div class="accordion-arrow close"></div></span>
 									<ul class="subMenu">
 										<table id="caseCustContactHistory" class="text-grey owner-table">
@@ -376,18 +376,18 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="large-block block retractable" id="block-work-order-events">
 					<div class="block-title">
 						<span class="block-title-picto"></span>
 						<span class="block-title-name text-blue"><s:text name="webportal.case.work.order.events.title"/></span>
-						<span class="block-title-number text-blue"><span id="block-work-order-events-number" class="number"></span>	
+						<span class="block-title-number text-blue"><span id="block-work-order-events-number" class="number"></span>
 						<span class="block-arrow open"></span>
 					</div>
-					
+
 					<div class="content-wrapper">
 						<div class="content">
-							
+
 							<div id="woEventsGridDiv"></div>
 							<table id="caseWoEvents" class="text-grey owner-table big-table">
 							<thead>
@@ -414,17 +414,17 @@
 						</div>
 					</div>
 				</div>
-				
-				
+
+
 
 			</div>
-			
+
 			<!-- Footer -->
 			<%@ include file="footerv311.inc"%>
 
 		</div>
-		
+
 		<iframe id="myIFrm" name="myIFrm" src="" style="height: 0px; visibility: hidden"> </iframe>
-		
+
 	</body>
 </html>
