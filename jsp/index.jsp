@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Smart Energy Services Platform</title>
 
-  <!-- Enable html5 tags for 6-7-8 -->
+<!-- Enable html5 tags for 6-7-8 -->
 <!--[if lte IE 8]>
 <script type="text/javascript">
 document.createElement("header");
@@ -18,22 +18,33 @@ document.createElement("figure");
 </script>
 <![endif]-->
 <%String contextPath = request.getContextPath(); %>
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/ie7.css">
+<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/ie8.css">
+<![endif]-->
+
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-index.css" />
 
-<!--[if IE 8]>
-<link rel="stylesheet" href="<%=contextPath%>/styles/ie8.css">
-<![endif]-->
-
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-search-results.css" />
 <link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />
+
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/style.tidy.css" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/jquery.multiselect.css"/>
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/bubble-map.css"/>
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="<%=contextPath%>/js/ie7.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+<![endif]-->
 
 <script type="text/javascript" src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
@@ -46,13 +57,6 @@ document.createElement("figure");
 <script src="<%=contextPath%>/js/sesp_ajax.js"></script>
 <script src="<%=contextPath%>/js/spin.js"></script>
 <script src="<%=contextPath%>/js/ajax-loader.js"></script>
-
-<!--[if lt IE 9]>
-<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
-<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
-<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
-<![endif]-->
 
 </head>
 <body>
