@@ -26,9 +26,9 @@ var ajax_cnt = 0; // Support for parallel AJAX requests
 $(document).ajaxStart(function() {
    $('<div id ="spinner_center" style="position:fixed;top:70px;left:49%;"></div>').appendTo('body');
    spinner.spin($('#spinner_center')[0]);
-   ajax_cnt++;	
+   ajax_cnt++;
 });
- 
+
 $(document).ajaxStop(function() {
    ajax_cnt--;
    if (ajax_cnt <= 0) {

@@ -31,26 +31,26 @@
 	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
 	<link rel="shortcut icon" type="image/png" href="<%=request.getContextPath()%>/images/favicon.png" />
 
-		<script src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
-		<script src="<%=request.getContextPath()%>/js/vendor/jquery.nicescroll.js"></script>
-		<script src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
-		<script src="<%=request.getContextPath()%>/js/jquery-ui-1.10.2.custom.js"></script>
-		<script src="<%=request.getContextPath()%>/js/bootstrap-datepicker.js"></script>
-		<script src="<%=request.getContextPath()%>/js/jquery.multiselect.js"></script>
-		<script src="<%=request.getContextPath()%>/js/jquery.cookie.js"></script>
-		<script src="<%=request.getContextPath()%>/js/common.js"></script>
-		<script src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
-		<script src="<%=request.getContextPath()%>/js/search-results.js"></script>
-		<script src="<%=request.getContextPath()%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
-		<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxcommon.js"></script>
-		<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgrid.js"></script>
-		<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgridcell.js"></script>
-		<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/customdhtmlxgrid_export.js"></script>
-		<script src="<%=request.getContextPath()%>/js/spin.js"></script>
-		<script src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
-		<script src="<%=request.getContextPath()%>/js/analyze_field_work_efficiency.js"></script>
+	<script src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
+	<script src="<%=request.getContextPath()%>/js/vendor/jquery.nicescroll.js"></script>
+	<script src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
+	<script src="<%=request.getContextPath()%>/js/jquery-ui-1.10.2.custom.js"></script>
+	<script src="<%=request.getContextPath()%>/js/bootstrap-datepicker.js"></script>
+	<script src="<%=request.getContextPath()%>/js/jquery.multiselect.js"></script>
+	<script src="<%=request.getContextPath()%>/js/jquery.cookie.js"></script>
+	<script src="<%=request.getContextPath()%>/js/common.js"></script>
+	<script src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
+	<script src="<%=request.getContextPath()%>/js/search-results.js"></script>
+	<script src="<%=request.getContextPath()%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
+	<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxcommon.js"></script>
+	<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgrid.js"></script>
+	<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgridcell.js"></script>
+	<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/customdhtmlxgrid_export.js"></script>
+	<script src="<%=request.getContextPath()%>/js/spin.js"></script>
+	<script src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
+	<script src="<%=request.getContextPath()%>/js/analyze_field_work_efficiency.js"></script>
 
-		<script src="<%=request.getContextPath()%>/js/highchart/highcharts.js"></script>
+	<script src="<%=request.getContextPath()%>/js/highchart/highcharts.js"></script>
 
 		<!--[if lt IE 9]>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
@@ -58,7 +58,7 @@
 		<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
 		<![endif]-->
-	</head>
+</head>
 	<body onload="loadData()">
 
 		<script type ="text/javascript">

@@ -13,7 +13,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
 <title><s:text name="webportal.head.title"/></title>
-<% 	
+<%
 	//Connect ion con = DBConnection.getConnection();
 	//List<UnitEventTTO> unitEventTypes = ServiceClass.getUnitEventTypes(con);
 	AlertService alertService = ServiceProvider.getInstance().getService(AlertService.class);
@@ -21,13 +21,13 @@
 	Map<Long, String> selectedImage = new HashMap<Long, String>();
 	Map<Long, String> unselectedImage = new HashMap<Long, String>();
 	String[] symbols = new String[] {"blue","green","orange","pink","purple","red","yellow"};
-	
+
 	int symbolCounter = 0;
 	for(UnitEventTTO unitEventTTO : unitEventTypes) {
 		unselectedImage.put(unitEventTTO.getId(), ((HttpServletRequest)pageContext.getRequest()).getContextPath() + "/images/silk/bullet_" + symbols[symbolCounter%symbols.length] + ".png");
 		selectedImage.put(unitEventTTO.getId(),  ((HttpServletRequest)pageContext.getRequest()).getContextPath() + "/images/silk/flag_" +symbols[symbolCounter%symbols.length] + ".png");
-		symbolCounter++;	
-	}	
+		symbolCounter++;
+	}
 %>
 
 <link href="<%=request.getContextPath()%>/styles/stock_style.css" rel="stylesheet" type="text/css" />
@@ -50,15 +50,15 @@
 <script src="<%=request.getContextPath()%>/js/fusioncharts/charts/FusionCharts.js"></script>
 <script src="<%=request.getContextPath()%>/js/spin.js"></script>
 <script src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
-<script type ="text/javascript">   
+<script type ="text/javascript">
     $(document).ready(function(){
         $('.head').click(function(e){
             e.preventDefault();
             $(this).closest('li').find('.contentMT').slideToggle();
-        });    
+        });
     });
 
-    contextPath = "<%=request.getContextPath()%>";    
+    contextPath = "<%=request.getContextPath()%>";
 
     i18nMeasurePoint="<s:text name='webportal.alert.measurepoint'/>";
     i18nStart="<s:text name='webportal.alert.start'/>";
@@ -84,8 +84,8 @@
     		function displayInfo(id) {
    				//alert(id);
    			}
-   		
-   			function loadPoints(idDomain, from, to, idAreaT, idArea, idUnitCommT, idUnitModel, idInstMepUtilityT) {   	   			  	   			
+
+   			function loadPoints(idDomain, from, to, idAreaT, idArea, idUnitCommT, idUnitModel, idInstMepUtilityT) {
    				$.get(
    					"<%=request.getContextPath()%>/jsp/alert-management-get-data.jsp?rt=getMapPoints" +
    							"&domainCode=" + idDomain +
@@ -107,7 +107,7 @@
    								%>
 	   									if(object.idUnitEventT == <%=unitEventTTO.getId()%>) {
 		   									pointCollection = createPointsCollection(
-			   		   										<%="\"" + unSelectedIcon+"\""%>, 
+			   		   										<%="\"" + unSelectedIcon+"\""%>,
 			   		   										<%="\"" + selectedIcon+"\""%>
 		   		   							);
 	   									}
@@ -124,32 +124,32 @@
    								return pointCollection;
    							}
    						}
-   						
+
    						var pointCollections = [];
    						addPoints(data, getPointCollection, pointCollections, displayInfo, infoDataCallback);
    				  		//alert("PointData:\r\n" + data);
-   					}	
+   					}
    				);
-   				
+
    				//Get all the new areas in the map
 				var obj= {};
-			    obj.url=contextPath+"/std/AlertManagementMapAreas.action";   				
+			    obj.url=contextPath+"/std/AlertManagementMapAreas.action";
 			    obj.pdata = "domainCode="+idDomain+"&areaTypeCode="+idAreaT;
 			 	obj.successfunc = createAreaJSON;
 			    obj.errorfunc = errorAlarmDetails;
 				run_ajax(obj);
 			    //return;
-			    
-   			}   			
+
+   			}
 
    			function onChangeData()
    	   		{
    	   			var ls_domain = $("#domains").val();
    	   			var ls_areatype = $("#areatypes").val();
-   	   			getDeviceModels(ls_domain); 
+   	   			getDeviceModels(ls_domain);
    	   			getAreas(ls_domain, ls_areatype);
    	   		}
-   	   		
+
    			function onLoadSpecial() {
    			 $('#loadFromDate').datepicker({
 	    			//dateFormat: 'DD, MM dd, yy',
@@ -165,9 +165,9 @@
 	    			buttonImage: "<%=request.getContextPath()%>/images/calendar.gif",
 	    			buttonImageOnly: true
 	    			});
-   	   				getDomains();   	   				
-   	   				getAreaTypes();   	   				
-   	   				getEventTypes();   	   				
+   	   				getDomains();
+   	   				getAreaTypes();
+   	   				getEventTypes();
    	   				getUtilityTypes();
    	   				getUnitCommTypes();
    	   				getDeviceModels(null);
@@ -175,17 +175,17 @@
 					init("<%=request.getSession().getAttribute("MAP_SERVER_URL")%>");
 					loadUnitEvents();
 				}
-  
+
    		function submitAlert()  		{
-	   		var ls_domain = $("#domains").val();	   		
-	   		var ls_areatypes = $("#areatypes").val();	   		
-	   		var ls_areas = $("#areas").val();   			   		
-	   		var ls_eventtypes = $("#eventtypes").val();	   		
+	   		var ls_domain = $("#domains").val();
+	   		var ls_areatypes = $("#areatypes").val();
+	   		var ls_areas = $("#areas").val();
+	   		var ls_eventtypes = $("#eventtypes").val();
 	   		var ls_utilitytypes = $("#utilitytypes").val();
 	   		var ls_unitCommTypes = $("#unitCommTypes").val();
-	   		var ls_devicemodels = $("#DeviceModels").val();	   		
-	   		var ls_breakup = $('input:radio[name=breakup]:checked').val();	   		
-	   		var ls_fromdate = $("#loadFromDate").val();	   		
+	   		var ls_devicemodels = $("#DeviceModels").val();
+	   		var ls_breakup = $('input:radio[name=breakup]:checked').val();
+	   		var ls_fromdate = $("#loadFromDate").val();
 	   		var ls_todate = $("#loadToDate").val();
 	   		if (ls_fromdate =="") {
 		   		alert(i18nerrorEnterValidPeriod);
@@ -196,12 +196,12 @@
 		   		alert(i18nerrorEnterValidPeriod);
 		   		return;
 	   		}
-			
+
 	   		if (ls_areatypes =="null") {
 		   		alert(i18nerrorAreaTypeRequired);
 		   		return;
 	   		}
-	   			
+
 	   		$('#graph').attr('src', '');
 
 	   		$.getJSON('/ast_sep_webportal/jsp/generate-graph.jsp?domain='+ls_domain+
@@ -214,77 +214,77 @@
 	        	});
 
 	   		loadPoints(ls_domain, ls_fromdate, ls_todate, ls_areatypes, ls_areas, ls_unitCommTypes, ls_devicemodels, ls_utilitytypes);
-    	
+
    		}
 
    		function onSubmit()
    		{
    			var ls_domain = $("#domains").val();
-   			var ls_areatypes = $("#areatypes").val();   			
-   			var ls_areas = $("#areas").val();   				   		
-   			var ls_eventtypes = $("#eventtypes").val();   			
-   			var ls_utilitytypes = $("#utilitytypes").val();   			
-   			var ls_unitCommTypes = $("#unitCommTypes").val();   			
-   			var ls_devicemodels = $("#DeviceModels").val();   			
-   			var ls_breakup = $('input:radio[name=breakup]:checked').val();   			
-   			var ls_fromdate = $("#loadFromDate").val();   			
-   			var ls_todate = $("#loadToDate").val();   			
+   			var ls_areatypes = $("#areatypes").val();
+   			var ls_areas = $("#areas").val();
+   			var ls_eventtypes = $("#eventtypes").val();
+   			var ls_utilitytypes = $("#utilitytypes").val();
+   			var ls_unitCommTypes = $("#unitCommTypes").val();
+   			var ls_devicemodels = $("#DeviceModels").val();
+   			var ls_breakup = $('input:radio[name=breakup]:checked').val();
+   			var ls_fromdate = $("#loadFromDate").val();
+   			var ls_todate = $("#loadToDate").val();
    		    chartType=ls_breakup;
-   		    
+
    			if (ls_fromdate =='') {
    		   	alert(i18nerrorEnterValidPeriod);
    		   	return;
    			}
-   			
+
    			if (ls_todate =='') {
    		   	alert(i18nerrorEnterValidPeriod);
    		   	return;
    			}
-   			
+
    			if(ls_domain == 'null')
    			{
    			alert(i18nerrorDomainRequired);
    			return;
    			}
-   			
+
    			if (ls_areatypes =='null') {
    		   	alert(i18nerrorAreaTypeRequired);
    		   	return;
    			}
-   			
+
    			if(ls_breakup =="E" && (ls_areas=='all' || ls_areas =='null') )
    			{
    			alert(i18nerrorSelectArea);
    			return;
    			}
-   			
+
    			if(ls_breakup =="A" && ls_areas=='null')
    			{
    			alert(i18nerrorSelectArea);
    			return;
    			}
-   			
+
    			if(ls_breakup =="A" && ls_eventtypes=='null')
    			{
    			alert(i18nerrorSelectEvent);
    			return;
    			}
-   			
-   			
+
+
    			if(ls_breakup =="AE" && (ls_areas=='all' || ls_areas =='null'))
    			{
    			alert(i18nerrorSelectArea);
    			return;
    			}
-   			
+
    			if(ls_breakup =="AE" && (ls_eventtypes =='all' || ls_eventtypes == 'null'))
    			{
    			alert(i18nerrorSelectEventType);
    			return;
    			}
-   			
+
    			//loadPoints(ls_domain, ls_fromdate, ls_todate, ls_areatypes, ls_areas, ls_unitCommTypes, ls_devicemodels, ls_utilitytypes);
-   			
+
    			var obj= {};
    			obj.url=contextPath+"/std/AlertManagementChart.action";
    			obj.pdata = "loadFromDate="+ls_fromdate+"&loadToDate="+ls_todate+"&domains="+ls_domain+"&areatypes="+ls_areatypes+"+&areas="+ls_areas+"&eventtypes="+ls_eventtypes+"&utilitytypes="+ls_utilitytypes+"&unitCommTypes="+ls_unitCommTypes+"&DeviceModels="+ls_devicemodels+"&breakup="+ls_breakup;// post variable data
@@ -292,7 +292,7 @@
    			obj.errorfunc = errorAlarmDetails;
    			run_ajax(obj);
    			return;
-   			
+
    			}
    		</script>
 </head>
@@ -300,28 +300,28 @@
 
 <div id="wrapper">
 <%@ include file="header.inc"%>
-	
-	
+
+
 <div id="middlecontainer">
 <div class="headSearch">
 <h2 class="mainHead"><s:text name="webportal.alert.header"/></h2>
 </div>
 
-<div id="content_1">	
+<div id="content_1">
 	<!-- tab start here -->
 	<form name="alertForm" method="get" action="/ast_sep_webportal/AlertServlet" >
     <div id="formLogistic">
 	<table width="100%" border="0" cellspacing="1" cellpadding="5">
 	<tr>
-    <td>		
+    <td>
     <input type="text"  name="loadFromDate" id="loadFromDate" class="text ui-widget-content ui-corner-all"></input> <font color="red">*</font> </td>
-    <td>	
+    <td>
     <input type="text"  name="loadToDate" id="loadToDate" class="text ui-widget-content ui-corner-all"></input><font color="red">*</font></td>
     <td><select name="domains" id="domains" onchange="onChangeData()"></select></td>
     	<td>	<select name="areatypes" id="areatypes" onchange="onChangeData()"></select><font color="red">*</font></td>
     <td valign="top"> </td>
 	</tr>
-			
+
     <tr>
 		<td><select name="areas" id="areas"></select></td>
 		<td><select name="eventtypes" id="eventtypes"></select></td>
@@ -331,17 +331,17 @@
     	<td><select name="unitCommTypes" id="unitCommTypes"></select></td>
     	<td><select name="DeviceModels" id="DeviceModels"></select></td>
     	<td><div class="suboptioncheckbox alertbreakup">
-    	
-            <input type="radio" name="breakup" value="A" checked="checked" /><s:text name="webportal.alert.breakup.area"/>&nbsp; 
-            <input type="radio" name="breakup" value="E"/><s:text name="webportal.alert.breakup.event"/>&nbsp;    
-            <input type="radio" name="breakup" value="AE"/><s:text name="webportal.alert.breakup.areaneventbydate"/>           
-	    
-		</div></td>          
+
+            <input type="radio" name="breakup" value="A" checked="checked" /><s:text name="webportal.alert.breakup.area"/>&nbsp;
+            <input type="radio" name="breakup" value="E"/><s:text name="webportal.alert.breakup.event"/>&nbsp;
+            <input type="radio" name="breakup" value="AE"/><s:text name="webportal.alert.breakup.areaneventbydate"/>
+
+		</div></td>
           <td><a href="javascript:onSubmit()"><img title="<s:text name='webportal.reports.viewgraph_tooltip'/>" src="<%=request.getContextPath()%>/images/viewgraph.png" alt="<s:text name='webportal.reports.viewgraph_tooltip'/>" border="0"/></a></td>
-      </tr>      
-      </table>   </div>    
+      </tr>
+      </table>   </div>
 	  </form>
-	  
+
 	  </div>
 	  <div class="column1ME">
 	  <div id="basicMap" style="width: 430px; height: 445px; border: 1px solid #ccc;"></div>
@@ -352,19 +352,19 @@
 						        				<span>
 							        				<%=unitEventTTO.getName()%>
 							        			</span>
-							        			<% 
+							        			<%
 						        			}
-						        		%>	
+						        		%>
 	</div>
 	</div>
-	<div class="column1ME">					 
+	<div class="column1ME">
 	<div class="graphLogistics">
 	<!-- <iframe id="graph" src="" height="513" width="511" scrolling="no" frameborder="0" ></iframe>  -->
 	 <div id="alertchartdiv"></div>
 	</div> </div>
 </div>
 
-						 	
+
 <%@ include file="footer.inc"%>
 </div>
 
