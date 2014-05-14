@@ -20,20 +20,14 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
 
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/color.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/general.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/header.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-block.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/footer.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-case.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/style.tidy.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/colResizable.css" />
 
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/colResizable-1.3.min.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
 
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/vendor/jquery.nicescroll.js"></script>
 
@@ -88,7 +82,7 @@
 					<div class="large-6 columns">
 						<div class="panel-outer">
 							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"></i>
+								<i class="fi-eye colorHeading"></i>
 								<span><s:text name="webportal.case.overview.title"/></span>
 							</h4>
 							<div class="panel-inner">
@@ -141,7 +135,7 @@
 					<div class="large-6 columns">
 						<div class="panel-outer">
 							<h4 class="panel-heading">
-								<span><i class="fi-graph-trend colorHeading"></i></span>
+								<span><i class="fi-marker colorHeading"></i></span>
 								<s:text name="webportal.case.location.title"/>
 							</h4>
 							<div class="panel-inner">
@@ -166,7 +160,7 @@
 					<div class="large-12 columns">
 						<div class="panel-outer">
 							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"></i>
+								<i class="fi-list colorHeading"></i>
 								<span><s:text name="webportal.case.installation.title"/></span>
 								<span id="block-installations-number"></span>
 							</h4>
@@ -198,9 +192,9 @@
 					<div class="large-12 columns">
 						<div class="panel-outer">
 							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"></i>
+								<i class="fi-list colorHeading"></i>
 								<span><s:text name="webportal.case.sla.title"/></span>
-								<span><span id="block-sla-number"></span></span>
+								<span id="block-sla-number"></span>
 							</h4>
 							<div class="panel-inner">
 								<table id="caseSla">
@@ -230,9 +224,9 @@
 					<div class="large-12 columns">
 						<div class="panel-outer">
 							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"></i>
+								<i class="fi-list colorHeading"></i>
 								<span><s:text name="webportal.case.information.title"/></span>
-								<span><span id="block-information-number"></span></span>
+								<span id="block-information-number"></span>
 							</h4>
 							<div class="panel-inner">
 								<table id="caseInformation">
@@ -259,9 +253,9 @@
 					<div class="large-12 columns">
 						<div class="panel-outer">
 							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"></i>
+								<i class="fi-list colorHeading"></i>
 								<span><s:text name="webportal.case.messages.title"/></span>
-								<span><span id="block-messages-number"></span></span>
+								<span id="block-messages-number"></span>
 							</h4>
 							<div class="panel-inner">
 								<table id="caseMessages">
@@ -289,7 +283,7 @@
 					<div class="large-12 columns">
 						<div class="panel-outer">
 							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"></i>
+								<i class="fi-list colorHeading"></i>
 								<span><s:text name="webportal.case.work.order.events.title"/></span>
 								<span id="block-work-order-events-number"></span>
 							</h4>
@@ -329,7 +323,7 @@
 					<div class="large-12 columns">
 						<div class="panel-outer">
 							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"></i>
+								<i class="fi-list colorHeading"></i>
 								<span><s:text name="webportal.case.history.status.title"/></span>
 								<span id="block-case-status-history-number"></span>
 							</h4>
@@ -357,7 +351,7 @@
 
 						<div class="panel-outer">
 							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"></i>
+								<i class="fi-list colorHeading"></i>
 								<span><s:text name="webportal.case.action.history.title"/></span>
 								<span id="block-case-status-action-number"></span>
 							</h4>
@@ -384,7 +378,7 @@
 
 								<div class="panel-outer">
 									<h4 class="panel-heading">
-									<i class="fi-graph-trend colorHeading"></i>
+									<i class="fi-list colorHeading"></i>
 										<span><s:text name="webportal.case.customer.contact.history.title"/></span>
 										<span id="block-case-cust-contact-number"></span>
 									</h4>

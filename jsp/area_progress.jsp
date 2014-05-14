@@ -279,7 +279,7 @@ document.createElement("figure");
 						<ul class="page-name-heading sub-menu">
 							<span>AREA PROGRESS: <span id="area-name"></span>MISSING MILESTONE AREA</span>
 
-							<li class="progress-chart-li active" onclick="javascript:updateWorkOrder('progress')"><i class="cap-progress size-14"></i> Progress</li>
+							<li class="progress-chart-li active" onclick="javascript:updateWorkOrder('progress')"><i class="icon-stats"></i> Progress</li>
 							<li class="status" onclick="javascript:updateWorkOrder('status')"><i class="fi-check"></i> Status</li>
 						</ul>
 				</div>

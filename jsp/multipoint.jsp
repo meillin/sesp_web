@@ -20,19 +20,14 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
 
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/color.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/general.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/header.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-block.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/footer.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-multipoint.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/style.tidy.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/colResizable.css" />
 
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/colResizable-1.3.min.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
 
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/vendor/jquery.nicescroll.js"></script>
 
@@ -76,8 +71,8 @@
 				<div class="large-6 columns">
 					<div class="panel-outer">
 						<h4 class="panel-heading">
-							<i class="fi-graph-trend colorHeading"></i>
-							<span class="block-title-name text-blue"><s:text name="webportal.common.overview"/></span>
+							<i class="fi-eye colorHeading"></i>
+							<span class="block-title-name"><s:text name="webportal.common.overview"/></span>
 						</h4>
 						<div class="panel-inner">
 							<ul id="overview-table">
@@ -96,8 +91,8 @@
 				<div class="large-6 columns">
 					<div class="panel-outer">
 						<h4 class="panel-heading">
-							<i class="fi-graph-trend colorHeading"></i>
-							<s:text name="webportal.common.location"/>
+							<i class="fi-marker colorHeading"></i>
+							<span><s:text name="webportal.common.location"/></span>
 						</h4>
 						<div class="panel-inner">
 							<div id="block-location-map-wrapper" style="height:350px">
@@ -125,7 +120,7 @@
 				<div class="large-12 columns">
 					<div class="panel-outer">
 						<h4 class="panel-heading">
-							<i class="fi-graph-trend colorHeading"></i>
+							<i class="fi-list colorHeading"></i>
 							<span> <s:text name="webportal.multipoint.cases"/></span>
 							<span id="block-multipoint-information-cases-number"></span>
 						</h4>
@@ -158,7 +153,7 @@
 				<div class="large-12 columns">
 					<div class="panel-outer">
 						<h4 class="panel-heading">
-							<i class="fi-graph-trend colorHeading"></i>
+							<i class="fi-list colorHeading"></i>
 							<span><s:text name="webportal.multipoint.deviations"/></span>
 							<span id="block-multipoint-information-deviations-number"></span>
 						</h4>
@@ -190,7 +185,7 @@
 					<div class="large-12 columns">
 						<div class="panel-outer">
 							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"></i>
+								<i class="fi-list colorHeading"></i>
 								<span><s:text name="webportal.multipoint.cases"/></span>
 								<span id="block-multipoint-information-cases-number"></span>
 							</h4>
@@ -225,7 +220,7 @@
 				<div class="large-12 columns">
 						<div class="panel-outer">
 							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"></i>
+								<i class="fi-list colorHeading"></i>
 								<span><s:text name="webportal.multipoint.events"/></span>
 								<span id="block-multipoint-information-events-number"></span>
 							</h4>

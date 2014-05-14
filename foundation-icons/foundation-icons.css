@@ -1,4 +1,4 @@
-/* 
+/*
  * Foundation Icons v 3.0
  * Made by ZURB 2013 http://zurb.com/playground/foundation-icon-fonts-3
  * MIT License
@@ -600,3 +600,214 @@
 .fi-yen:before { content: "\f218"; }
 .fi-zoom-in:before { content: "\f219"; }
 .fi-zoom-out:before { content: "\f21a"; }
+
+/*
+iconmoon custom icons
+ */
+
+@font-face {
+  font-family: 'icomoon';
+  src:url('icomoon.eot?-j648jm');
+  src:url('icomoon.eot?#iefix-j648jm') format('embedded-opentype'),
+    url('icomoon.woff?-j648jm') format('woff'),
+    url('icomoon.ttf?-j648jm') format('truetype'),
+    url('icomoon.svg?-j648jm#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-calendar:before {
+  content: "\e61c";
+}
+.icon-file:before {
+  content: "\e61f";
+}
+.icon-monitor:before {
+  content: "\e626";
+}
+.icon-checkmark:before {
+  content: "\e63e";
+}
+.icon-cancel:before {
+  content: "\e640";
+}
+.icon-plus:before {
+  content: "\e642";
+}
+.icon-minus:before {
+  content: "\e644";
+}
+.icon-notice:before {
+  content: "\e646";
+}
+.icon-warning:before {
+  content: "\e64b";
+}
+.icon-chronometer:before {
+  content: "\e658";
+}
+.icon-time:before {
+  content: "\e65b";
+}
+.icon-time2:before {
+  content: "\e65c";
+}
+.icon-checkmark3:before {
+  content: "\e65f";
+}
+.icon-cancel3:before {
+  content: "\e660";
+}
+.icon-eye:before {
+  content: "\e661";
+}
+.icon-position:before {
+  content: "\e662";
+}
+.icon-cloud:before {
+  content: "\e665";
+}
+.icon-upload2:before {
+  content: "\e666";
+}
+.icon-chart:before {
+  content: "\e667";
+}
+.icon-chart3:before {
+  content: "\e669";
+}
+.icon-chart4:before {
+  content: "\e66a";
+}
+.icon-chart5:before {
+  content: "\e66b";
+}
+.icon-chart6:before {
+  content: "\e66c";
+}
+.icon-location:before {
+  content: "\e66d";
+}
+.icon-download2:before {
+  content: "\e66e";
+}
+.icon-map:before {
+  content: "\e67a";
+}
+.icon-trashcan:before {
+  content: "\e67b";
+}
+.icon-cord:before {
+  content: "\e696";
+}
+.icon-locked:before {
+  content: "\e697";
+}
+.icon-magnifier:before {
+  content: "\e69b";
+}
+.icon-zoomin:before {
+  content: "\e69c";
+}
+.icon-zoomout:before {
+  content: "\e69d";
+}
+.icon-stack2:before {
+  content: "\e69f";
+}
+.icon-lamp3:before {
+  content: "\e6b9";
+}
+.icon-lamp5:before {
+  content: "\e6bb";
+}
+.icon-cube:before {
+  content: "\e6bc";
+}
+.icon-list:before {
+  content: "\e6c4";
+}
+.icon-layout5:before {
+  content: "\e6cc";
+}
+.icon-tools:before {
+  content: "\e6d6";
+}
+.icon-calculator:before {
+  content: "\e6ea";
+}
+.icon-stats:before {
+  content: "\e6ee";
+}
+.icon-stats2:before {
+  content: "\e6ef";
+}
+.icon-presentation:before {
+  content: "\e715";
+}
+.icon-info:before {
+  content: "\e71a";
+}
+.icon-info2:before {
+  content: "\e71b";
+}
+.icon-error:before {
+  content: "\e743";
+}
+.icon-add:before {
+  content: "\e744";
+}
+.icon-minus3:before {
+  content: "\e745";
+}
+.icon-shipping:before {
+  content: "\e74c";
+}
+.icon-clipboard:before {
+  content: "\e759";
+}
+.icon-clipboard2:before {
+  content: "\e75a";
+}
+.icon-clipboard3:before {
+  content: "\e75b";
+}
+.icon-switch2:before {
+  content: "\e75c";
+}
+.icon-home:before {
+  content: "\e600";
+}
+.icon-clock:before {
+  content: "\e601";
+}
+.icon-users:before {
+  content: "\e602";
+}
+.icon-truck:before {
+  content: "\e603";
+}
+.icon-filter:before {
+  content: "\e605";
+}
+.icon-upload:before {
+  content: "\e604";
+}
+.icon-download:before {
+  content: "\e606";
+}
+

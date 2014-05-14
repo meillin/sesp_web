@@ -72,7 +72,7 @@ document.createElement("figure");
 					<div class="large-12 columns">
 						<div class="panel-outer" id="block-search-results-installations" style="display: none;">
 							<h4 class="panel-heading">
-								<i class="fi-wrench colorHeading"></i>
+								<i class="fi-list colorHeading"></i>
 								<span><s:text name="webportal.search.results.installation.title"/></span>
 								<span id="block-search-results-installations-number"></span>
 							</h4>
@@ -103,7 +103,7 @@ document.createElement("figure");
 					<div class="large-12 columns">
 						<div class="panel-outer" id="block-search-results-measurepoints" style="display: none;">
 							<h4 class="panel-heading">
-								<i class="cap-measure-points colorHeading-capicons"></i>
+								<i class="fi-list colorHeading"></i>
 								<span><s:text name="webportal.search.results.measurepoint.title"/></span>
 								<span id="block-search-results-measurepoints-number"></span>
 							</h4>
@@ -137,7 +137,7 @@ document.createElement("figure");
 					<div class="large-12 columns">
 						<div class="panel-outer" id="block-search-results-multipoints" style="display: none;">
 							<h4 class="panel-heading">
-								<i class="cap-measure-points colorHeading-capicons"></i>
+								<i class="fi-list colorHeading"></i>
 								<span><s:text name="webportal.search.results.multipoint.title"/></span>
 								<span id="block-search-results-multipoints-number"></span>
 							</h4>
@@ -169,7 +169,7 @@ document.createElement("figure");
 					<div class="large-12 columns">
 						<div class="panel-outer" id="block-search-results-devices" style="display: none;">
 							<h4 class="panel-heading">
-								<i class="cap-devices colorHeading-capicons"></i>
+								<i class="fi-list colorHeading"></i>
 								<span><s:text name="webportal.search.results.device.title"/></span>
 								<span id="block-search-results-devices-number"></span>
 							</h4>
@@ -201,7 +201,7 @@ document.createElement("figure");
 					<div class="large-12 columns">
 						<div class="panel-outer" id="block-search-results-cases" style="display: none;">
 							<h4 class="panel-heading">
-								<i class="fi-magnifying-glass colorHeading"></i>
+								<i class="fi-list colorHeading"></i>
 								<span><s:text name="webportal.search.results.case.title"/></span>
 								<span id="block-search-results-cases-number"></span>
 							</h4>

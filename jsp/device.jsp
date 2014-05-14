@@ -22,17 +22,12 @@ document.createElement("figure");
 
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/general.css" />
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/header.css" />
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-block.css" />
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/footer.css" />
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-device.css" />
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/style.tidy.css" />
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/colResizable.css" />
 
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/colResizable-1.3.min.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.treeTable.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
 
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/vendor/jquery.nicescroll.js"></script>
 
@@ -45,8 +40,6 @@ document.createElement("figure");
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/map.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/spin.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
-
-
 
 
 	<!--[if lt IE 9]>
@@ -85,7 +78,7 @@ document.createElement("figure");
 				<div class="large-6 columns">
 					<div class="panel-outer">
 						<h4 class="panel-heading">
-							<i class="fi-graph-trend colorHeading"></i>
+							<i class="fi-eye colorHeading"></i>
 							<span> <s:text name='webportal.device.overview.device.title'/> </span>
 						</h4>
 						<div class="panel-inner">
@@ -107,19 +100,18 @@ document.createElement("figure");
 				<div class="large-6 columns">
 					<div class="panel-outer">
 						<h4 class="panel-heading">
-							<i class="fi-graph-trend colorHeading"></i>
+							<i class="fi-marker colorHeading"></i>
 							<span><s:text name='webportal.device.location.title'/></span>
 						</h4>
 						<div class="panel-inner">
-							<div id="block-device-location-map-wrapper" style="width:444px; height:300px">
-								<!-- <iframe width="444" height="204" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-1.55302,47.19581,-1.50817,47.22307&amp;layer=mapnik&amp;marker=47.21659,-1.53457"></iframe> -->
-							</div>
+							<div id="block-device-location-map-wrapper" style="width:400px; height:278px"></div>
 							<div class="legend">
-								<div class="address legend-block text-grey">
+								<br/>
+								<div class="address legend-block">
 									<span><strong><s:text name='webportal.device.location.address'/> :</strong></span>
 									<span id="block-device-location-adress"></span>
 								</div>
-								<div class="area legend-block text-grey">
+								<div class="area legend-block">
 									<span><strong><s:text name='webportal.device.location.area'/> :</strong></span>
 									<span id="block-device-location-area"></span>
 								</div>
@@ -132,7 +124,7 @@ document.createElement("figure");
 				<div class="large-12 columns">
 					<div class="panel-outer">
 						<h4 class="panel-heading">
-							<i class="fi-graph-trend colorHeading"></i>
+							<i class="fi-list colorHeading"></i>
 							<span class="block-title-name text-blue">
 								<s:text name='webportal.device.hardwareconfig.title'/></span>
 							</h4>
@@ -164,7 +156,7 @@ document.createElement("figure");
 					<div class="large-12 columns">
 						<div class="panel-outer">
 							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"> </i>
+								<i class="fi-list colorHeading"> </i>
 								<span><s:text name='webportal.device.history.installation.title'/></span>
 								<span id="block-device-installations-number"> </span>
 							</h4>
@@ -190,7 +182,7 @@ document.createElement("figure");
 						</div>
 						<div class="panel-outer">
 							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"> </i>
+								<i class="fi-list colorHeading"> </i>
 								<span><s:text name='webportal.device.history.status.title'/></span>
 								<span id="block-device-status-number"></span>
 							</h4>
@@ -216,8 +208,8 @@ document.createElement("figure");
 						</div>
 						<div class="panel-outer">
 							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"> </i> 
-								<span><s:text name='webportal.device.history.pallet.title'/></span> 
+								<i class="fi-list colorHeading"> </i>
+								<span><s:text name='webportal.device.history.pallet.title'/></span>
 								<span id="block-device-pallet-number"> </span>
 							</h4>
 							<div class="panel-inner">
@@ -247,7 +239,7 @@ document.createElement("figure");
 
 						<div class="panel-outer">
 							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"></i> 
+								<i class="fi-list colorHeading"></i>
 								<span><s:text name='webportal.device.history.stocksite.title'/></span>
 								<span id="block-device-stock-site-number"></span>
 							</h4>
@@ -274,8 +266,8 @@ document.createElement("figure");
 						</div>
 						<div class="panel-outer">
 							<h4 class="panel-heading">
-								<i class="fi-graph-trend colorHeading"> </i> 
-								<span><s:text name='webportal.device.history.owner.title'/></span> 
+								<i class="fi-list colorHeading"> </i>
+								<span><s:text name='webportal.device.history.owner.title'/></span>
 								<span id="block-device-owner-number"></span>
 							</h4>
 							<div class="panel-inner">

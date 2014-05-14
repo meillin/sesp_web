@@ -218,9 +218,9 @@
 					<div class="large-12 columns">
 							<ul class="page-name-heading sub-menu">
 								<span>STOCK MANAGEMENT</span>
-								<li class="progress-chart-li active"><i class="fi-check"></i> From Supplier</li>
-								<li class="status-chart"><i class="fi-check"></i> In Stock</li>
-								<li class="details-chart"><i class="fi-check"></i> On Pallet</li>
+								<li class="progress-chart-li active"><i class="icon-shipping"></i> From Supplier</li>
+								<li class="status-chart"><i class="icon-cube"></i> In Stock</li>
+								<li class="details-chart"><i class="icon-layout5"></i> On Pallet</li>
 							</ul>
 					</div>
 					</div>

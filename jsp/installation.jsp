@@ -19,25 +19,17 @@
 		<![endif]-->
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
-
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/color.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/general.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/header.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-block.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/footer.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-installation.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/style.tidy.css" />
 
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
-
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/vendor/jquery.nicescroll.js"></script>
-
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
 
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/colResizable-1.3.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/installation.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/search-results.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/OpenLayers.js"></script>
@@ -81,7 +73,7 @@
 				<div class="large-6 columns">
 					<div class="panel-outer">
 						<h4 class="panel-heading">
-							<i class="fi-graph-trend colorHeading"></i>
+							<i class="fi-eye colorHeading"></i>
 							<span class="block-title-name text-blue"><s:text name="webportal.common.overview"/></span>
 						</h4>
 						<div class="panel-inner">
@@ -101,13 +93,12 @@
 				<div class="large-6 columns">
 					<div class="panel-outer">
 						<h4 class="panel-heading">
-							<i class="fi-graph-trend colorHeading"></i>
+							<i class="fi-marker colorHeading"></i>
 							<span class="block-title-name text-blue"><s:text name="webportal.common.location"/></span>
 						</h4>
 						<div class="panel-inner">
-							<div id="osmap" style="height:300px">
-								<!-- <iframe width="444" height="195" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-1.55302,47.19581,-1.50817,47.22307&amp;layer=mapnik&amp;marker=47.21659,-1.53457"></iframe>  -->
-							</div>
+							<div id="osmap" style="height:278px"></div>
+							<br />
 							<div>
 								<strong><s:text name="webportal.installation.address"/>:</strong>
 								<span id="block-location-address"></span>
@@ -125,7 +116,7 @@
 				<div class="large-12 columns">
 					<div class="panel-outer">
 						<h4 class="panel-heading">
-							<i class="fi-graph-trend colorHeading"></i>
+							<i class="fi-eye colorHeading"></i>
 							<span><s:text name='webportal.device.overview.device.title'/></span>
 							<span id="block-cases-number-value"></span>
 						</h4>
@@ -154,10 +145,12 @@
 			</div>
 			<div class="big-row">
 				<div class="large-12 columns">
-					<div class="panel-outer"><h4 class="panel-heading"><i class="fi-graph-trend colorHeading"></i>
-						<span class="block-title-name text-blue"><s:text name="webportal.installation.multimeasurepoint.multipointandmeasurepoints"/></span>
-						<span id="block-multipoint-measurepoints-number-value"></span>
-					</h4>
+					<div class="panel-outer">
+						<h4 class="panel-heading">
+							<i class="icon-position colorHeading"></i>
+							<span><s:text name="webportal.installation.multimeasurepoint.multipointandmeasurepoints"/></span>
+							<span id="block-multipoint-measurepoints-number-value"></span>
+						</h4>
 					<div class="panel-inner">
 						<table class="big-table cases" id="block-multipoint-measurepoints-table">
 							<thead>

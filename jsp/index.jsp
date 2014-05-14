@@ -2,7 +2,6 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <html>
 <head>
-<<<<<<< 090fa047975993d976eeb5e2b22088a9dca8fe90
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Smart Energy Services Platform</title>
 
@@ -25,8 +24,8 @@ document.createElement("figure");
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/ie8.css">
 <![endif]-->
 
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
+<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/foundation.css" />
+<link rel="stylesheet" type="text/css" href="<%=contextPath%>/foundation-icons/foundation-icons.css">
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-index.css" />
@@ -58,7 +57,6 @@ document.createElement("figure");
 <script src="<%=contextPath%>/js/sesp_ajax.js"></script>
 <script src="<%=contextPath%>/js/spin.js"></script>
 <script src="<%=contextPath%>/js/ajax-loader.js"></script>
-=======
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Smart Energy Services Platform</title>
 
@@ -74,9 +72,8 @@ document.createElement("figure");
     document.createElement("figure");
     </script>
     <![endif]-->
-    <%String contextPath = request.getContextPath(); %>
-    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
-    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
+    <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="<%=contextPath%>/foundation-icons/foundation-icons.css">
     <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
     <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
     <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-index.css" />
@@ -110,7 +107,6 @@ document.createElement("figure");
     <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
     <![endif]-->
->>>>>>> 4287ceb185263827d3a611862b9a838d87b20179
 
 </head>
 <body>
@@ -119,7 +115,6 @@ document.createElement("figure");
 
         <section class="main-section">
           <script>
-            contextPath = "<%=request.getContextPath()%>";
             isAjaxSearch = false;
             i18nerrorInvalidSearchInput = "<s:text name='webportal.search.results.error.invalidsearchinput'/>";
             i18nerrorInvalidSearchAction = "<s:text name='webportal.search.results.error.invalidsearchaction'/>";
@@ -148,7 +143,7 @@ document.createElement("figure");
                   <li>
                     <div>
                       <a class="patch" href="<%=contextPath%>/std/AreaProgress" alt="AREA PROGRESS" title="AREA PROGRESS">
-                        <i class="fi-graph-horizontal size-74"></i></br>
+                        <i class="icon-cube size-74"></i></br>
                         <span>Area Progress</span>
                       </a>
                     </div>
@@ -157,7 +152,7 @@ document.createElement("figure");
                   <li>
                     <div>
                         <a class="patch" href="<%=contextPath%>/std/StockManagement1" alt="LOGISTICS" title="LOGISTICS">
-                          <i class="cap-logistics size-74"></i></br>
+                          <i class="icon-truck size-74"></i></br>
                           <span>Logistics</span>
                         </a>
                     </div>

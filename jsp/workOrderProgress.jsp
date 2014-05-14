@@ -267,7 +267,7 @@
 					<div class="large-12 columns">
 						<ul class="page-name-heading sub-menu">
 							<span>WORK ORDER/AREA</span>
-							<li class="progress-chart-li active"><i class="fi-graph-bar"></i> Progress</li>
+							<li class="progress-chart-li active"><i class="icon-stats"></i> Progress</li>
 							<li class="status-chart"><i class="fi-check"></i> Status</li>
 							<li class="details-chart"><i class="fi-page-search"></i> Details</li>
 						</ul>

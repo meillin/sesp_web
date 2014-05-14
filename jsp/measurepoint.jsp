@@ -20,20 +20,14 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
 
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/color.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/general.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/header.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-block.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/footer.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-measurepoint.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/style.tidy.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/colResizable.css" />
 
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/colResizable-1.3.min.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
 
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
 
@@ -90,7 +84,7 @@
 				<div class="large-6 columns">
 					<div class="panel-outer">
 						<h4 class="panel-heading">
-							<i class="fi-graph-trend colorHeading"></i>
+							<i class="fi-eye colorHeading"></i>
 							<span><s:text name="webportal.common.overview"/></span>
 						</h4>
 						<div class="panel-inner">
@@ -146,7 +140,7 @@
 				<div class="large-6 columns">
 					<div class="panel-outer">
 						<h4 class="panel-heading">
-							<i class="fi-graph-trend colorHeading"></i>
+							<i class="fi-marker colorHeading"></i>
 							<span><s:text name="webportal.common.location"/></span>
 						</h4>
 						<div class="panel-inner">
@@ -177,7 +171,7 @@
 				<div class="large-6 columns">
 					<div class="panel-outer">
 						<h4 class="panel-heading">
-							<i class="fi-graph-trend colorHeading"></i>
+							<i class="fi-list colorHeading"></i>
 							<span><s:text name="webportal.measurepoint.consumption"/></span>
 						</h4>
 						<div class="panel-inner">
@@ -194,7 +188,7 @@
 				<div class="large-6 columns">
 					<div class="panel-outer">
 						<h4 class="panel-heading">
-							<i class="fi-graph-trend colorHeading"></i>
+							<i class="fi-list colorHeading"></i>
 							<span><s:text name="webportal.measurepoint.metervalues"/></span>
 						</h4>
 						<div class="panel-inner">
@@ -229,7 +223,7 @@
 						<div class="large-12 columns">
 							<div class="panel-outer">
 								<h4 class="panel-heading">
-									<i class="fi-graph-trend colorHeading"></i>
+									<i class="fi-list colorHeading"></i>
 									<span><s:text name="webportal.measurepoint.cases"/></span>
 									<span id="block-measurepoint-information-cases-number"></span>
 								</h4>
@@ -262,7 +256,7 @@
 						<div class="large-12 columns">
 							<div class="panel-outer">
 								<h4 class="panel-heading">
-									<i class="fi-graph-trend colorHeading"></i>
+									<i class="fi-list colorHeading"></i>
 									<span><s:text name="webportal.measurepoint.deviations"/></span>
 									<span id="block-measurepoint-information-deviations-number"></span>
 								</h4>
@@ -295,7 +289,7 @@
 						<div class="large-12 columns">
 							<div class="panel-outer">
 								<h4 class="panel-heading">
-									<i class="fi-graph-trend colorHeading"></i>
+									<i class="fi-list colorHeading"></i>
 									<span><s:text name="webportal.measurepoint.devices"/></span>
 									<span id="block-measurepoint-information-devices-number"></span>
 								</h4>
@@ -330,7 +324,7 @@
 						<div class="large-12 columns">
 							<div class="panel-outer">
 								<h4 class="panel-heading">
-									<i class="fi-graph-trend colorHeading"></i>
+									<i class="fi-list colorHeading"></i>
 									<span><s:text name="webportal.measurepoint.events"/></span>
 									<span id="block-measurepoint-information-events-number"></span>
 								</h4>
