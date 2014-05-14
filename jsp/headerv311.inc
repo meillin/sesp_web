@@ -22,10 +22,9 @@
 							<i class="fi-graph-horizontal size-24"></i><span class="slide-out-text">Area Progress</span></a>
 						</li>
 
-
 						<li>
 							<a href="<%=request.getContextPath()%>/std/StockManagement1" id="menu-button-logistics">
-							<i class="icon-truck size-24"></i><span class="slide-out-text">Logistics</span></a>
+							<i class="icon-truck size-22"></i><span class="slide-out-text">Logistics</span></a>
 						</li>
 
 						<li>
