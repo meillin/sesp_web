@@ -413,7 +413,6 @@ button, .button{
 	height: 35px;
 	background-color: #1abc9c;
 }
-
 .custom-input-datepicker input,
 .custom-input-datepicker-wide input{
 	border: none;
@@ -581,7 +580,7 @@ ul#overview-table li span:first-child{
 .ui-multiselect-menu .ui-multiselect-checkboxes select {
 margin: 0 0 0 0!important;
 }
-/*
+
 @font-face {
 	font-family: 'capicons';
 	src: url('fonts/capicons.eot');
@@ -613,12 +612,10 @@ margin: 0 0 0 0!important;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-*/
-/*
+
 .cap-logistics:after { content: "A"; }
 .cap-progress:after {content: "B"; }
-.cap-measure-points:after { content: "C"; font-size: 18px; }
-.cap-devices:after { content: "D"; font-size: 18px;  }
+.cap-measure-points:after { content: "C"; }
+.cap-devices:after { content: "D"; }
 .cap-import:after { content: "E"; }
 .cap-export:after { content: "F"; }
-*/

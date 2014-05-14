@@ -75,12 +75,147 @@
 		<li class="top-menu-third">
 			<ul class="inline-list right">
 				<li>
-					<select class="lang-dropdown">
-						<option value="English">English (UK)</option>
-						<option value="Swedish">Swedish (SE)</option>
-						<option value="German">German (GE)</option>
-						<option value="French">French (FR)</option>
-					</select>
+                  				   
+				   <select id="localeId" name="localeName" class="lang-dropdown" onchange="changeLocale()">	
+				
+				   		<s:if test="%{#session.I18N_LOCALE == 'English_US'}">					
+							<option value="English_US" selected><s:text name="webportal.sesp.locale.english.us"/></option>
+						</s:if> 
+						<s:else> 
+							<option value="English_US"><s:text name="webportal.sesp.locale.english.us"/></option>
+						</s:else>	
+						
+						<s:if test="%{#session.I18N_LOCALE == 'English_GB'}">					
+							<option value="English_GB" selected><s:text name="webportal.sesp.locale.english.gb"/></option>
+						</s:if> 
+						<s:else> 
+							<option value="English_GB"><s:text name="webportal.sesp.locale.english.gb"/></option>
+						</s:else>
+						
+						<s:if test="%{#session.I18N_LOCALE == 'English_UA'}">					
+							<option value="English_UA" selected><s:text name="webportal.sesp.locale.english.au"/></option>
+						</s:if> 
+						<s:else> 
+							<option value="English_UA"><s:text name="webportal.sesp.locale.english.au"/></option>
+						</s:else>
+						
+						<s:if test="%{#session.I18N_LOCALE == 'English_CA'}">					
+							<option value="English_CA" selected><s:text name="webportal.sesp.locale.english.ca"/></option>
+						</s:if> 
+						<s:else> 
+							<option value="English_CA"><s:text name="webportal.sesp.locale.english.ca"/></option>
+						</s:else>
+						
+						<s:if test="%{#session.I18N_LOCALE == 'Swedish_SE'}">
+							<option value="Swedish_SE" selected><s:text name="webportal.sesp.locale.swedish.se"/></option>
+						</s:if> 
+						<s:else> 
+							<option value="Swedish_SE"><s:text name="webportal.sesp.locale.swedish.se"/></option>
+						</s:else>
+						
+						<s:if test="%{#session.I18N_LOCALE == 'German_AT'}">					
+							<option value="German_AT" selected><s:text name="webportal.sesp.locale.german.at"/></option>
+						</s:if> 
+						<s:else> 
+							<option value="German_AT"><s:text name="webportal.sesp.locale.german.at"/></option>
+						</s:else>
+						
+						<s:if test="%{#session.I18N_LOCALE == 'German_DE'}">					
+							<option value="German_DE" selected><s:text name="webportal.sesp.locale.german.de"/></option>
+						</s:if> 
+						<s:else> 
+							<option value="German_DE"><s:text name="webportal.sesp.locale.german.de"/></option>
+						</s:else>
+						
+						<s:if test="%{#session.I18N_LOCALE == 'German_LU'}">					
+							<option value="German_LU" selected><s:text name="webportal.sesp.locale.german.lu"/></option>
+						</s:if> 
+						<s:else> 
+							<option value="German_LU"><s:text name="webportal.sesp.locale.german.lu"/></option>
+						</s:else>
+						<s:if test="%{#session.I18N_LOCALE == 'German_CH'}">					
+							<option value="German_CH" selected><s:text name="webportal.sesp.locale.german.ch"/></option>
+						</s:if> 
+						<s:else> 
+							<option value="German_CH"><s:text name="webportal.sesp.locale.german.ch"/></option>
+						</s:else>
+						
+						<s:if test="%{#session.I18N_LOCALE == 'French_BE'}">					
+							<option value="French_BE" selected><s:text name="webportal.sesp.locale.french.be"/></option>
+						</s:if> 
+						<s:else> 
+							<option value="French_BE"><s:text name="webportal.sesp.locale.french.be"/></option>
+						</s:else>
+						
+						<s:if test="%{#session.I18N_LOCALE == 'French_CA'}">					
+							<option value="French_CA" selected><s:text name="webportal.sesp.locale.french.ca"/></option>
+						</s:if> 
+						<s:else> 
+							<option value="French_CA"><s:text name="webportal.sesp.locale.french.ca"/></option>
+						</s:else>
+						<s:if test="%{#session.I18N_LOCALE == 'French_FR'}">					
+							<option value="French_FR" selected><s:text name="webportal.sesp.locale.french.fr"/></option>
+						</s:if> 
+						<s:else> 
+							<option value="French_FR"><s:text name="webportal.sesp.locale.french.fr"/></option>
+						</s:else>
+						<s:if test="%{#session.I18N_LOCALE == 'French_LU'}">					
+							<option value="French_LU" selected><s:text name="webportal.sesp.locale.french.lu"/></option>
+						</s:if> 
+						<s:else> 
+							<option value="French_LU"><s:text name="webportal.sesp.locale.french.lu"/></option>
+						</s:else>
+						<s:if test="%{#session.I18N_LOCALE == 'French_CH'}">					
+							<option value="French_CH" selected><s:text name="webportal.sesp.locale.french.ch"/></option>
+						</s:if> 
+						<s:else> 
+							<option value="French_CH"><s:text name="webportal.sesp.locale.french.ch"/></option>
+						</s:else>
+																		
+						<s:if test="%{#session.I18N_LOCALE == 'Finnish_FI'}">
+							<option value="Finnish_FI" selected><s:text name="webportal.sesp.locale.finnish.fi"/></option>
+						</s:if>
+						<s:else>
+							<option value="Finnish_FI"><s:text name="webportal.sesp.locale.finnish.fi"/></option>
+						</s:else>
+						
+						<s:if test="%{#session.I18N_LOCALE == 'Norwegian_NO'}">
+							<option value="Norwegian_NO" selected><s:text name="webportal.sesp.locale.norwegian.no"/></option>
+						</s:if>
+						<s:else>
+							<option value="Norwegian_NO"><s:text name="webportal.sesp.locale.norwegian.no"/></option>
+						</s:else>
+						
+						<s:if test="%{#session.I18N_LOCALE == 'Chinese_CN'}">
+							<option value="Chinese_CN" selected><s:text name="webportal.sesp.locale.chinese.cn"/></option>
+						</s:if>
+						<s:else>
+							<option value="Chinese_CN"><s:text name="webportal.sesp.locale.chinese.cn"/></option>
+						</s:else>
+						
+						<s:if test="%{#session.I18N_LOCALE == 'Chinese_HK'}">
+							<option value="Chinese_HK" selected><s:text name="webportal.sesp.locale.chinese.hk"/></option>
+						</s:if>
+						<s:else>
+							<option value="Chinese_HK"><s:text name="webportal.sesp.locale.chinese.hk"/></option>
+						</s:else>
+						
+						<s:if test="%{#session.I18N_LOCALE == 'Chinese_SG'}">
+							<option value="Chinese_SG" selected><s:text name="webportal.sesp.locale.chinese.sg"/></option>
+						</s:if>
+						<s:else>
+							<option value="Chinese_SG"><s:text name="webportal.sesp.locale.chinese.sg"/></option>
+						</s:else>
+						
+						<s:if test="%{#session.I18N_LOCALE == 'Chinese_TW'}">
+							<option value="Chinese_TW" selected><s:text name="webportal.sesp.locale.chinese.tw"/></option>
+						</s:if>
+						<s:else>
+							<option value="Chinese_TW"><s:text name="webportal.sesp.locale.chinese.tw"/></option>
+						</s:else>
+						
+				     <select>
+				     
 				</li>
 				<li class="slide-menu-right">
 					<a class="toggle-filter"><i class="fi-filter size-18"></i> Filter </a>
@@ -94,5 +229,6 @@
 
 </header>
 <script>
+	<!--window.onload = changeLocale; -->
 	function openDashboard() { window.open('<%=request.getContextPath()%>/std/SysDashboard?refreshInterval=5', '', '');}
 </script>

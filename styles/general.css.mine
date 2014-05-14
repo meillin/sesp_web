@@ -389,12 +389,12 @@ button, .button{
 
 .custom-select select{
 	width:222px; /* this percentage effectively extends the drop down button out of view */
-	background-color:transparent; /* this hides the select's background making any styling visible from the div */
-	background-image:none;
-	-webkit-appearance: none /* this is required for Webkit browsers */;
-	border:none;
-	box-shadow:none;
-	padding:0.3em 2px; /* padding should be added to the select, not the div */
+    background-color:transparent; /* this hides the select's background making any styling visible from the div */
+    background-image:none;
+    -webkit-appearance: none /* this is required for Webkit browsers */;
+    border:none;
+    box-shadow:none;
+    padding:0.3em 2px; /* padding should be added to the select, not the div */
 	outline: none;
 	color : #41474c;
 	font-size: 12px !important;
@@ -613,7 +613,6 @@ margin: 0 0 0 0!important;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-*/
 /*
 .cap-logistics:after { content: "A"; }
 .cap-progress:after {content: "B"; }
