@@ -5,7 +5,7 @@
 				<li class="slide-menu-left">
 					<a class="slide" id="show-nav"><i class="fi-list size-24"></i></a>
 
-					<ul class="overlapping-menu" style="display:none">
+					<ul class="overlapping-menu nice-scroll" style="display:none">
 
 						<li>
 							<a href="<%=request.getContextPath()%>/std/Index" id="menu-button-delivery-performance">

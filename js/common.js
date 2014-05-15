@@ -37,7 +37,7 @@ Sub menu actions
 	});
 
 /*
-Nice scroll
+Nice scroll filter
  */
 
  	if($('.filtered').length > 0){
@@ -47,6 +47,17 @@ Nice scroll
 			cursorwidth: '10',
 			cursorborder: '0',
 			railalign: 'right'
+		});
+		$('.nicescroll-rails').css('right', 0);
+	}
+/* niceScroll left menu */
+	if($('.overlapping-menu').height() < 480){
+		$(".overlapping-menu").niceScroll({
+			cursorcolor:"#ffffff ",
+			cursoropacitymax: '0.7',
+			cursorwidth: '10',
+			cursorborder: '0',
+			railalign: 'left'
 		});
 		$('.nicescroll-rails').css('right', 0);
 	}

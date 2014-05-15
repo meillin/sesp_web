@@ -355,6 +355,17 @@ thead{
 .filterHeader h4,
 .filterHeader label{
 	color: #fff;
+	font-size: 0.875rem;
+	cursor: pointer;
+	font-weight: normal;
+	line-height: 1.5;
+}
+
+.filterHeader label{
+	font-size: 0.875rem;
+	cursor: pointer;
+	font-weight: normal;
+	line-height: 1.5;
 }
 
 .filterHeader table,
@@ -408,9 +419,21 @@ thead{
 	margin-top: 4.5rem;
 	font-family: roboto-lght !important;
 	color: #2e363c!important;
-	font-size: 16px;
+	font-size: 1rem;
 	padding-left: 1.1rem;
 }
+
+@media screen and (max-width: 460px) {
+	.page-name-heading {
+		font-size: 0.65rem;
+		padding-left: 0;
+	}
+
+	.page-name-heading span{
+		display: block;
+	}
+}
+
 
 .page-name-heading-search {
 	margin-top: 55px;
@@ -504,6 +527,7 @@ button, .button{
 .custom-multi-select{
 	height: 2.3125rem !important;
 	width: 100% !important;
+	margin: 0 0 1rem 0;
 	border: none;
 	box-shadow: none;
 	background-color: #1abc9c;
@@ -814,11 +838,31 @@ ul#overview-table li span:first-child{
 .lang-dropdown {
 	outline: none!important;
 }
-
 .ui-multiselect-menu .ui-multiselect-checkboxes input,
 .ui-multiselect-menu .ui-multiselect-checkboxes select {
 margin: 0 0 0 0!important;
 }
+
+@media screen and (max-width: 460px) {
+	.big-row > .column,
+	 .big-row > .columns {
+		padding-left: 0.5em !important;
+		padding-right: 0.5em !important;
+	}
+	.panel-inner{
+		padding: 0.5em;
+	}
+}
+
+@media only screen and (max-width: 460px) {
+	.big-row > .column,
+	 .big-row > .columns {
+		padding-left: 0.5em !important;
+		padding-right: 0.5em !important;
+	}
+}
+
+
 /*
 @font-face {
 	font-family: 'capicons';
