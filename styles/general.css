@@ -137,6 +137,7 @@ header .search-input input{
 	border-bottom-left-radius:20px;
 	-webkit-border-bottom-left-radius:20px;
 	border-right: 0;
+	font-size: 13px;
 
 }
 header .logo-capgemini img{padding-top: 0.55rem;}

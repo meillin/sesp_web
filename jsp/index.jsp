@@ -18,6 +18,7 @@
   <script type="text/javascript" src="<%=contextPath%>/js/index-init.js"></script>
   <script type="text/javascript" src="<%=contextPath%>/js/common.js"></script>
   <script type="text/javascript" src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
+  <script src="<%=contextPath%>/js/search-results.js"></script>
 
   <!--[if lt IE 9]>
   <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/ie7.css">

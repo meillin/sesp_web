@@ -37,7 +37,6 @@
 	<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />
 
 	<script src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
-	<script src="<%=contextPath%>/js/vendor/jquery.nicescroll.js"></script>
 	<script src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
 	<script src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
 	<script src="<%=contextPath%>/js/bootstrap-datepicker.js"></script>
@@ -48,6 +47,7 @@
 	<script src="<%=contextPath%>/js/OpenLayers.js"></script>
 	<script src="<%=contextPath%>/js/highchart/highcharts.js"></script>
 	<script src="<%=contextPath%>/js/area-progress.js"></script>
+	<script src="<%=contextPath%>/js/vendor/jquery.nicescroll.js"></script>
 
 	<script src="<%=contextPath%>/js/map.js"></script>
 	<script src="<%=contextPath%>/js/sesp_ajax.js"></script>
@@ -103,7 +103,7 @@
 	}
 %>
 <script>
-	contextPath = "<%=contextPath%>";
+	contextPath = "<%=request.getContextPath()%>";
 	area_name1 = "<%=request.getAttribute("aname")%>";
 	from_err_msg="<s:text name='areaprogress.filters.from.err.msg'/>";
 	to_err_msg="<s:text name='areaprogress.filters.to.err.msg'/>";
