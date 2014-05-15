@@ -11,9 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/foundation-icons/foundation-icons.css">
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/jquery.multiselect.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
-		<!--[if IE 8]>
-		<link rel="stylesheet" href="<%=contextPath%>/styles/ie8.css">
-		<![endif]-->
+
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/datepicker.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-resource-projections.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/style.tidy.css" />
@@ -35,8 +33,6 @@
 
 		<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/js/images/favicon.png" />
 		<script src="<%=contextPath%>/js/OpenLayers.js"></script>
-
-
 		<script src="<%=contextPath%>/js/map.js"></script>
 		<script src="<%=contextPath%>/js/sesp_ajax.js"></script>
 		<script src="<%=contextPath%>/js/spin.js"></script>
@@ -64,15 +60,13 @@
 			i18nplanningenddate="<s:text name="webportal.resourceprojections.planningperiods.enddate"/>";
 			i18nplanningdomain="<s:text name="webportal.resourceprojections.planningperiods.domain"/>";
 		</script>
-		<style>
-v\:* { behavior: url(#default#VML); display:inline-block}
-</style>
-	<!--[if lt IE 9]>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
-	<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
-	<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
-	<![endif]-->
+		<!--[if lt IE 9]>
+		<link rel="stylesheet" href="<%=contextPath%>/styles/ie8.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+		<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+		<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+		<![endif]-->
 	</head>
 	<body onload="loadDefaultData()">
 		<div id="wrapper">

@@ -5,41 +5,22 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title><s:text name='webportal.head.title'/></title>
-  <!-- Enable html5 tags for 6-7-8 -->
-  <!--[if lte IE 8]>
-  <script type="text/javascript">
-  document.createElement("header");
-  document.createElement("footer");
-  document.createElement("section");
-  document.createElement("aside");
-  document.createElement("nav");
-  document.createElement("article");
-  document.createElement("figure");
-  </script>
-  <![endif]-->
   <%String contextPath = request.getContextPath(); %>
-  <!--[if lt IE 9]>
-  <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/ie7.css">
-  <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/ie8.css">
-  <![endif]-->
 
   <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/foundation.css" />
   <link rel="stylesheet" type="text/css" href="<%=contextPath%>/foundation-icons/foundation-icons.css">
   <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
-  <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
   <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-index.css" />
-  <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-search-results.css" />
   <link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />
   <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/style.tidy.css" />
   <link rel="stylesheet" type="text/css" href="<%=contextPath%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
   <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/jquery.multiselect.css"/>
-  <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/bubble-map.css"/>
 
   <script type="text/javascript" src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
   <script type="text/javascript" src="<%=contextPath%>/js/index-init.js"></script>
   <script type="text/javascript" src="<%=contextPath%>/js/common.js"></script>
-  <script type="text/javascript" src="<%=request.getContextPath()%>/js/search-results.js"></script>
+  <script type="text/javascript" src="<%=contextPath%>/js/search-results.js"></script>
   <script type="text/javascript" src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
   <script type="text/javascript" src="<%=contextPath%>/js/jquery.cookie.js"></script>
 
@@ -48,6 +29,8 @@
   <script src="<%=contextPath%>/js/ajax-loader.js"></script>
 
   <!--[if lt IE 9]>
+  <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/ie7.css">
+  <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/ie8.css">
   <script type="text/javascript" src="<%=contextPath%>/js/ie7.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
   <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>

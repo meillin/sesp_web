@@ -22,27 +22,24 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/responsive-tables.css" />
-
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/general.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/header.css" />
 
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-search-results.css" />
-		<!--<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/colResizable.css" />-->
 
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
-		<!--<script type="text/javascript" src="<%=request.getContextPath()%>/js/colResizable-1.3.min.js"></script>-->
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/foundation/responsive-tables.js"></script>
 
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
-		
+
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/spin.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/vendor/jquery.nicescroll.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/search-results.js"></script>
-		
+
 	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/styles/ie8.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
 	<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
 	<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
@@ -72,7 +69,7 @@
 						<div class="large-12 columns">
 							<div class="panel-outer" id="block-search-results-installations" style="display: none;">
 								<h4 class="panel-heading">
-									<i class="fi-wrench colorHeading"></i>
+															<i class="fi-list colorHeading"></i>
 									<span><s:text name="webportal.search.results.installation.title"/></span>
 									<span id="block-search-results-installations-number"></span>
 								</h4>
@@ -103,7 +100,7 @@
 						<div class="large-12 columns">
 							<div class="panel-outer" id="block-search-results-measurepoints" style="display: none;">
 								<h4 class="panel-heading">
-									<i class="cap-measure-points colorHeading-capicons"></i>
+															<i class="fi-list colorHeading"></i>
 									<span><s:text name="webportal.search.results.measurepoint.title"/></span>
 									<span id="block-search-results-measurepoints-number"></span>
 								</h4>
@@ -137,7 +134,7 @@
 						<div class="large-12 columns">
 							<div class="panel-outer" id="block-search-results-multipoints" style="display: none;">
 								<h4 class="panel-heading">
-									<i class="cap-measure-points colorHeading-capicons"></i>
+															<i class="fi-list colorHeading"></i>
 									<span><s:text name="webportal.search.results.multipoint.title"/></span>
 									<span id="block-search-results-multipoints-number"></span>
 								</h4>
@@ -169,7 +166,7 @@
 						<div class="large-12 columns">
 							<div class="panel-outer" id="block-search-results-devices" style="display: none;">
 								<h4 class="panel-heading">
-									<i class="cap-devices colorHeading-capicons"></i>
+															<i class="fi-list colorHeading"></i>
 									<span><s:text name="webportal.search.results.device.title"/></span>
 									<span id="block-search-results-devices-number"></span>
 								</h4>
@@ -201,7 +198,7 @@
 						<div class="large-12 columns">
 							<div class="panel-outer" id="block-search-results-cases" style="display: none;">
 								<h4 class="panel-heading">
-									<i class="fi-magnifying-glass colorHeading"></i>
+									<i class="fi-list colorHeading"></i>
 									<span><s:text name="webportal.search.results.case.title"/></span>
 									<span id="block-search-results-cases-number"></span>
 								</h4>
