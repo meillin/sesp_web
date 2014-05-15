@@ -391,11 +391,9 @@ function errorAutoFill(data) {
 	alert("Error : " + data.responseText);
 }
 
+var numOfRow = 0;
 function selectRow(id){
-
 	var rowId = "#"+id;
-	var numOfRow = 0;
-
 	if($(rowId).hasClass(SELECTED) === true){
 		$(rowId).removeClass(SELECTED);
 		$( "#selected-date ul"  + " " + rowId ).remove();
