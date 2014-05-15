@@ -9,7 +9,6 @@
 
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/foundation.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/foundation-icons/foundation-icons.css">
-		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/jquery.multiselect.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
 		<!--[if IE 8]>

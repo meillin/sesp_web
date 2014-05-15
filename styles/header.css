@@ -1,12 +1,6 @@
 /**
  * 	Header
  */
-
-body,html{
-    height:100%;
-    width:100%;
-    font-family: roboto-lght;
-}
 .off-canvas-wrap,.inner-wrap{height:100%;}
 
 body{background: #E7E7E7 !important;}
