@@ -27,3 +27,12 @@
 /*
  YOU HAVE FILTERED
  */
+.filtered {
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+
+}
+
+dd a:hover {
+	background: #3b3d42 !important;
+}

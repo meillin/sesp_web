@@ -168,8 +168,7 @@ function drawTotalResourceProjection() {
                     sliced: true,
                     selected: true
                 },
-                ['CT measured',    8.5]
-                ]
+                ['CT measured',    8.5]]
         }]
     });
 }
