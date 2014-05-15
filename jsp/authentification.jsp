@@ -20,18 +20,17 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-login.css" />
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
-		<%-- <script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script> --%>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/authentification.js"></script>
 		<script src="<%=request.getContextPath()%>/js/spin.js"></script>
 		<script src="<%=request.getContextPath()%>/js/ajax-loader-login-page.js"></script>
 		<link rel="shortcut icon" type="image/png" href="<%=request.getContextPath()%>/images/favicon.png" />
 
-	<!--[if lt IE 9]>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
-	<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
-	<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
-	<![endif]-->
+		<!--[if lt IE 9]>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+		<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+		<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+		<![endif]-->
 	</head>
 	<body onload=getLoginFocus(document.loginForm)>
 
@@ -45,12 +44,12 @@
 
 				<div class="medium-4 medium-centered columns">
 					<form name="loginForm" method="post" action="<%=request.getContextPath()%>/std/Login" onKeyPress="return submitOnEnter(this,event)">
-						
+
 						<div class="row">
 							<div class="large-12 columns">
 								<label>Username</label>
 									<input type="text" id="input-login" name="username" placeholder="Please type your username" required/>
-								
+
 							</div>
 						</div>
 
@@ -58,7 +57,7 @@
 							<div class="large-12 columns">
 								<label>Password</label>
 									<input type="password" id="input-password" name="password" placeholder="Your password" required/>
-								
+
 							</div>
 						</div>
 
@@ -80,7 +79,7 @@
 							     <s:actionerror/>
 							  </div>
 						</s:if>
-						
+
 						<div class="spinner-style">
 						<script type="text/javascript">
 							i18nerrorPleaseEnterUsername="<s:text name='webportal.error.enterusername'/>";

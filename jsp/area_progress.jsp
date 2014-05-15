@@ -5,62 +5,57 @@
 <%@page import="com.capgemini.sesp.ast_sep.webclient.util.to.WorkOrderStatusTO"%>
 <%@page import="java.util.HashMap"%>
 <%@page import="java.util.List"%>
-<%@page import="java.util.Map"%><html xmlns="http://www.w3.org/1999/xhtml">
+<%@page import="java.util.Map"%>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Smart Energy Services Platform</title>
+	<title><s:text name="webportal.head.title"/></title>
 
-	<!-- Enable html5 tags for 6-7-8 -->
-<!--[if lte IE 8]>
-<script type="text/javascript">
-document.createElement("header");
-document.createElement("footer");
-document.createElement("section");
-document.createElement("aside");
-document.createElement("nav");
-document.createElement("article");
-document.createElement("figure");
-</script>
-<![endif]-->
-<%  String contextPath = request.getContextPath(); %>
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
+		<!-- Enable html5 tags for 6-7-8 -->
+	<!--[if lte IE 8]>
+	<script type="text/javascript">
+	document.createElement("header");
+	document.createElement("footer");
+	document.createElement("section");
+	document.createElement("aside");
+	document.createElement("nav");
+	document.createElement("article");
+	document.createElement("figure");
+	</script>
+	<![endif]-->
+	<%  String contextPath = request.getContextPath(); %>
+	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/foundation.css" />
+	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/foundation-icons/foundation-icons.css">
 
-<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/jquery.multiselect.css"/>
-<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
-<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
+	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/jquery.multiselect.css"/>
+	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
+	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/datepicker.css" />
+	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-area-progress.css" />
 
-<!--[if IE 8]>
-<link rel="stylesheet" href="<%=contextPath%>/styles/ie8.css">
-<![endif]-->
+	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/style.tidy.css" />
+	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/bubble-map.css"/>
+	<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />
 
-<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/datepicker.css" />
-<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-area-progress.css" />
+	<script src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
+	<script src="<%=contextPath%>/js/vendor/jquery.nicescroll.js"></script>
+	<script src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
+	<script src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
+	<script src="<%=contextPath%>/js/bootstrap-datepicker.js"></script>
+	<script src="<%=contextPath%>/js/jquery.multiselect.js"></script>
+	<script src="<%=contextPath%>/js/jquery.cookie.js"></script>
+	<script src="<%=contextPath%>/js/common.js"></script>
+	<script src="<%=contextPath%>/js/search-results.js"></script>
+	<script src="<%=contextPath%>/js/OpenLayers.js"></script>
+	<script src="<%=contextPath%>/js/highchart/highcharts.js"></script>
+	<script src="<%=contextPath%>/js/area-progress.js"></script>
 
-<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/style.tidy.css" />
-<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/bubble-map.css"/>
-<link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />
-
-<script src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
-<script src="<%=contextPath%>/js/vendor/jquery.nicescroll.js"></script>
-<script src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
-<script src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
-<script src="<%=contextPath%>/js/bootstrap-datepicker.js"></script>
-<script src="<%=contextPath%>/js/jquery.multiselect.js"></script>
-<script src="<%=contextPath%>/js/jquery.cookie.js"></script>
-<script src="<%=contextPath%>/js/common.js"></script>
-<script src="<%=contextPath%>/js/search-results.js"></script>
-<script src="<%=contextPath%>/js/OpenLayers.js"></script>
-<script src="<%=contextPath%>/js/highchart/highcharts.js"></script>
-<script src="<%=contextPath%>/js/area-progress.js"></script>
-
-
-<script src="<%=contextPath%>/js/map.js"></script>
-<script src="<%=contextPath%>/js/sesp_ajax.js"></script>
-<script src="<%=contextPath%>/js/spin.js"></script>
-<script src="<%=contextPath%>/js/ajax-loader.js"></script>
+	<script src="<%=contextPath%>/js/map.js"></script>
+	<script src="<%=contextPath%>/js/sesp_ajax.js"></script>
+	<script src="<%=contextPath%>/js/spin.js"></script>
+	<script src="<%=contextPath%>/js/ajax-loader.js"></script>
 
 	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="<%=contextPath%>/styles/ie8.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
 	<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
 	<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
@@ -108,7 +103,7 @@ document.createElement("figure");
 	}
 %>
 <script>
-	contextPath = "<%=request.getContextPath()%>";
+	contextPath = "<%=contextPath%>";
 	area_name1 = "<%=request.getAttribute("aname")%>";
 	from_err_msg="<s:text name='areaprogress.filters.from.err.msg'/>";
 	to_err_msg="<s:text name='areaprogress.filters.to.err.msg'/>";

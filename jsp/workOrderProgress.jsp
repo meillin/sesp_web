@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Smart Energy Services Platform</title>
+	<title><s:text name="webportal.head.title"/></title>
 
 	<!-- Enable html5 tags for 6-7-8 -->
 	<!--[if lte IE 8]>
@@ -18,14 +18,11 @@
 	</script>
 	<![endif]-->
 	<%  String contextPath = request.getContextPath(); %>
-	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
-	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
+	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/foundation.css" />
+	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/foundation-icons/foundation-icons.css">
 	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/jquery.multiselect.css"/>
 	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
-	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/header.css" />
-	<!--[if IE 8]>
-	<link rel="stylesheet" href="<%=request.getContextPath()%>/styles/ie8.css">
-	<![endif]-->
+
 	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/datepicker.css" />
 	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-work-order-progress.css" />
 	<link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/style.tidy.css" />
@@ -51,6 +48,7 @@
 	<script src="<%=contextPath%>/js/highchart/highcharts.js"></script>
 
 	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="<%=contextPath%>/styles/ie8.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
 	<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
 	<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
@@ -157,7 +155,6 @@
 	function populateErrorBubbleContent(data) {
 		document.getElementById("bubble-content").innerHTML=data.responseText;
 	}
-
 
 	function populateBubbleContent(data) {
 	//Work Order Progress

@@ -5,41 +5,40 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title><s:text name='webportal.head.title'/></title>
 	<link rel="shortcut icon" type="image/png" href="<%=request.getContextPath()%>/images/favicon.png" />
-	<!-- Enable html5 tags for 6-7-8 -->
-<!--[if lte IE 8]>
-<script type="text/javascript">
-document.createElement("header");
-document.createElement("footer");
-document.createElement("section");
-document.createElement("aside");
-document.createElement("nav");
-document.createElement("article");
-document.createElement("figure");
-</script>
-<![endif]-->
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
+		<!-- Enable html5 tags for 6-7-8 -->
+	<!--[if lte IE 8]>
+	<script type="text/javascript">
+	document.createElement("header");
+	document.createElement("footer");
+	document.createElement("section");
+	document.createElement("aside");
+	document.createElement("nav");
+	document.createElement("article");
+	document.createElement("figure");
+	</script>
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
 
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/general.css" />
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/header.css" />
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-device.css" />
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/style.tidy.css" />
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/general.css" />
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-device.css" />
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/style.tidy.css" />
 
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.treeTable.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.treeTable.js"></script>
 
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/vendor/jquery.nicescroll.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/vendor/jquery.nicescroll.js"></script>
 
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
 
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/search-results.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/device.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/OpenLayers.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/map.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/spin.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/search-results.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/device.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/OpenLayers.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/map.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/spin.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
 
 
 	<!--[if lt IE 9]>

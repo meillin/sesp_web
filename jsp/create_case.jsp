@@ -20,18 +20,13 @@
 		<![endif]-->
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/color.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/general.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/header.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-block.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/footer.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-case.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/style.tidy.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/colResizable.css" />
 
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/colResizable-1.3.min.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
 
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/search-results.js"></script>

@@ -29,11 +29,6 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/jquery.multiselect.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/general.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/header.css" />
-
-		<!--[if IE 8]>
-		<link rel="stylesheet" href="<%=request.getContextPath()%>/styles/ie8.css">
-		<![endif]-->
 
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-stock-management.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/style.tidy.css" />
@@ -52,7 +47,6 @@
 		<script src="<%=request.getContextPath()%>/js/OpenLayers.js"></script>
 		<script src="<%=request.getContextPath()%>/js/common.js"></script>
 
-		<script src="<%=request.getContextPath()%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
 		<script src="<%=request.getContextPath()%>/js/map.js"></script>
 		<script src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
 		<script src="<%=request.getContextPath()%>/js/spin.js"></script>
@@ -62,12 +56,13 @@
 
 		<link rel="shortcut icon" type="image/png" href="<%=request.getContextPath()%>/images/favicon.png" />
 
-	<!--[if lt IE 9]>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
-	<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
-	<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
-	<![endif]-->
+		<!--[if lt IE 9]>
+		<link rel="stylesheet" href="<%=request.getContextPath()%>/styles/ie8.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+		<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+		<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+		<![endif]-->
 	</head>
 	<body onload="onLoadSpecial(),initmap('<%=request.getSession().getAttribute("MAP_SERVER_URL")%>'),onChangeEntity()">
 		<script>

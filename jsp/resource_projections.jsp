@@ -20,7 +20,6 @@
 
 		<script src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
 		<script src="<%=contextPath%>/js/highchart/highcharts.js"></script>
-
 		<script src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
 		<script src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
 		<script src="<%=contextPath%>/js/bootstrap-datepicker.js"></script>

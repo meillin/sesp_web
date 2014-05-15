@@ -12,21 +12,12 @@
   <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/general.css" />
   <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/content-index.css" />
   <link rel="shortcut icon" type="image/png" href="<%=contextPath%>/images/favicon.png" />
-  <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/style.tidy.css" />
-  <link rel="stylesheet" type="text/css" href="<%=contextPath%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
-  <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/jquery.multiselect.css"/>
 
   <script type="text/javascript" src="<%=contextPath%>/js/jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="<%=contextPath%>/js/jquery-migrate-1.1.1.js"></script>
   <script type="text/javascript" src="<%=contextPath%>/js/index-init.js"></script>
   <script type="text/javascript" src="<%=contextPath%>/js/common.js"></script>
-  <script type="text/javascript" src="<%=contextPath%>/js/search-results.js"></script>
   <script type="text/javascript" src="<%=contextPath%>/js/jquery-ui-1.10.2.custom.js"></script>
-  <script type="text/javascript" src="<%=contextPath%>/js/jquery.cookie.js"></script>
-
-  <script src="<%=contextPath%>/js/sesp_ajax.js"></script>
-  <script src="<%=contextPath%>/js/spin.js"></script>
-  <script src="<%=contextPath%>/js/ajax-loader.js"></script>
 
   <!--[if lt IE 9]>
   <link rel="stylesheet" type="text/css" href="<%=contextPath%>/styles/ie7.css">
@@ -53,7 +44,7 @@
           <div id="main-content-index">
             <div class="row">
             <div class="large-12 columns welcome-text text-center">
-            Smart Energy Services Platform
+              <s:text name='webportal.head.title'/>
             </div>
             </div>
             <div class="row">

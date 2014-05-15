@@ -21,10 +21,7 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/jquery.multiselect.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/general.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/header.css" />
-		<!--[if IE 8]>
-		<link rel="stylesheet" href="<%=request.getContextPath()%>/styles/ie8.css">
-		<![endif]-->
+
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/datepicker.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-time-reservation-call-list.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/classic-min.css" />
@@ -49,6 +46,7 @@
 		<script src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
 
 	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/styles/ie8.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
 	<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
 	<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>

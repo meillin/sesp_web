@@ -20,33 +20,23 @@
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/foundation.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/foundation-icons/foundation-icons.css">
 
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/bootstrap.css"/>
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/color.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/jquery.multiselect.css"/>
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/general.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/header.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-block.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/footer.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/datepicker.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/modal.css" />
 		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-measurepoint-consumption.css" />
-		<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/colResizable.css" />
 
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-migrate-1.1.1.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-ui-1.10.2.custom.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/colResizable-1.3.min.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/bootstrap-datepicker.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.multiselect.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/search-results.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/init.js"></script>
-
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
 
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/measurepoint-consumption.js"></script>
 		<link rel="shortcut icon" type="image/png" href="<%=request.getContextPath()%>/images/favicon.png" />
-		<script src="<%=request.getContextPath()%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
 		<script src="<%=request.getContextPath()%>/js/spin.js"></script>
 		<script src="<%=request.getContextPath()%>/js/ajax-loader.js"></script>
 

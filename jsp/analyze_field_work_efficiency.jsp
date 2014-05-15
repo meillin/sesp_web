@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Smart Energy Services Platform</title>
+	<title><s:text name="webportal.head.title"/></title>
 
 	<!-- Enable html5 tags for 6-7-8 -->
 		<!--[if lte IE 8]>
@@ -22,10 +22,6 @@
 
 	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/jquery.multiselect.css"/>
 	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/general.css" />
-	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/header.css" />
-	<!--[if IE 8]>
-	<link rel="stylesheet" href="<%=request.getContextPath()%>/styles/ie8.css">
-	<![endif]-->
 	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/datepicker.css" />
 	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/styles/content-analyze-field-work-efficiency.css" />
 	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgrid.css" />
@@ -41,7 +37,6 @@
 	<script src="<%=request.getContextPath()%>/js/common.js"></script>
 	<script src="<%=request.getContextPath()%>/js/sesp_ajax.js"></script>
 	<script src="<%=request.getContextPath()%>/js/search-results.js"></script>
-	<script src="<%=request.getContextPath()%>/js/fusionchartsxt/charts/FusionCharts.js"></script>
 	<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxcommon.js"></script>
 	<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgrid.js"></script>
 	<script src="<%=request.getContextPath()%>/js/dhtmlxGrid/codebase/dhtmlxgridcell.js"></script>
@@ -51,13 +46,13 @@
 	<script src="<%=request.getContextPath()%>/js/analyze_field_work_efficiency.js"></script>
 
 	<script src="<%=request.getContextPath()%>/js/highchart/highcharts.js"></script>
-
-		<!--[if lt IE 9]>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
-		<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
-		<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
-		<![endif]-->
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/styles/ie8.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+	<script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+	<script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+	<![endif]-->
 </head>
 	<body onload="loadData()">
 
@@ -73,7 +68,6 @@
 			i18nerrorChartError="<s:text name='webportal.error.nodataavailable'/>";
 
 			function initAnalysisGrid(){
-
 				if(analysisGrid)
 				{
 					analysisGrid.clearAll();
