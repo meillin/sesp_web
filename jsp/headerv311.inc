@@ -213,7 +213,7 @@
 							<option value="Chinese_TW"><s:text name="webportal.sesp.locale.chinese.tw"/></option>
 						</s:else>
 
-				     <select>
+					<select>
 
 				</li>
 				<li class="slide-menu-right">
