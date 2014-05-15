@@ -387,7 +387,6 @@ thead{
 /*****************Information column and sub menu ********************************************************/
 
 .filtered {
-	font-family: roboto-lght !important;
 	height: 100%;
 	background: #333e45;
 	position: fixed;

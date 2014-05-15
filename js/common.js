@@ -39,6 +39,7 @@ Sub menu actions
 /*
 Nice scroll
  */
+
  	if($('.filtered').length > 0){
 		$(".filtered, .nice-scroll").niceScroll({
 			cursorcolor:"#ffffff ",

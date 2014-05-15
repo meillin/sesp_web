@@ -291,15 +291,14 @@
 
 						<dd id="selected-date">
 							<a>Selected planning periods <span class="round label"></span></a>
-							<div id="" class="content">
-								<ul>
-								</ul>
+							<div class="content">
+								<ul></ul>
 							</div>
 						</dd>
 
 						<dd id="selected-utility-type">
 							<a>Utility type <span class="round label"></span></a>
-							<div id="" class="content">
+							<div class="content">
 								<ul></ul>
 							</div>
 						</dd>
