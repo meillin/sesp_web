@@ -28,7 +28,7 @@ $(function () {
 		      startAngle: -90,
 		      endAngle: 90,
 		      background: [{
-		          backgroundColor: 'transparent',
+		          backgroundColor: 'none',
 		          borderWidth: 0,
 		          outerRadius: '50%',
 		          innerRadius: '50%'
@@ -85,17 +85,18 @@ $(function () {
 							}
 					]
 				},
-
-		  series: [{
-								name: '',
-								data: [80],
-								dataLabels: {
-									formatter: function () {
-										return '<span style="color:#000"> '+this.y+' %</span>';
+				series: [
+									{
+										name: '',
+										data: [80],
+										dataLabels: {
+											formatter: function () {
+												return '<span style="color:#000"> '+this.y+' %</span>';
+											}
+										},
+										tooltip: { valueSuffix: '%' }
 									}
-								},
-								tooltip: { valueSuffix: '%' }
-							}]
+				]
 			},
 		// Add some life
 		function (chart) {
