@@ -1,24 +1,18 @@
 jQuery(document).ready(function($){
-
-	$("#block-planning-periods .table-line").click(function() {
-		if($(this).hasClass("selected")){
-			$(this).removeClass("selected");
-		}else{
-			$(this).addClass("selected");
-		}
+	/*
+	EVENTS
+	 */
+	$(".selecte-all").click(function(e){
+		$('#selected-date ul').html('');
+		$('#block-planning-periods-table tbody tr').addClass('selected');
+		$('#block-planning-periods-table tbody tr.selected').clone().appendTo('#selected-date ul');
+		$('#selected-date span.label').html($('tr.selected').length);
 	});
 
-	$(".block-title-button-select-all").click(function(e){
-		$("#block-planning-periods .table-line").addClass("selected");
-
-		e.stopPropagation();
-		return false;
-	});
-
-	$(".block-title-button-select-none").click(function(e){
-		$("#block-planning-periods .table-line").removeClass("selected");
-		e.stopPropagation();
-		return false;
+	$(".select-none").click(function(e){
+		$('#block-planning-periods-table tr').removeClass('selected');
+		$('#selected-date ul').html('');
+		$('#selected-date span.label').html('');
 	});
 });
 
@@ -204,7 +198,6 @@ function fillDeviceType(data){
 
 	$.each(data, function(i, item) {
 		items += '<option value="' + item.id +selected + item.name + '</option>';
-
 	});
 
 	populateSavedMultiSelectBox("#filter-multiselect-device-type", items,savedData);
@@ -221,7 +214,6 @@ function fillArea(data){
 
 	$.each(data, function(i, item) {
 		items += '<option value="' + item.id +selected + item.name + '</option>';
-
 	});
 
 	populateSavedMultiSelectBox("#filter-multiselect-area", items,savedData);
@@ -238,7 +230,6 @@ function fillAreaType(data){
 
 	$.each(data, function(i, item) {
 		items += '<option value="' + item.id +selected + item.name + '</option>';
-
 	});
 
 	populateSavedMultiSelectBox("#filter-multiselect-area-type", items,savedData);
@@ -337,9 +328,9 @@ function fillPlanningPeriodsData(data){
 			'<td>'+planningPeriod.planningEndDate.substring(0,10)+'</td>'+
 			'<td>'+planningPeriod.domainName+'</td>';
 			$('#block-planning-periods-table').append( tableData );
-
 		}
 	}
+
 }
 
 function fillDomain(data){
@@ -393,6 +384,13 @@ function errorAutoFill(data) {
 
 var numOfRow = 0;
 function selectRow(id){
+	$('#selected-date ul').html('');
+	var rowId = "#"+id;
+	$(rowId).toggleClass('selected');
+	$('#block-planning-periods-table tr.selected').clone().appendTo('#selected-date ul');
+	$('#selected-date span.label').html($('#block-planning-periods-table tr.selected').length);
+
+	/*
 	var rowId = "#"+id;
 	if($(rowId).hasClass(SELECTED) === true){
 		$(rowId).removeClass(SELECTED);
@@ -404,6 +402,7 @@ function selectRow(id){
 		numOfRow++;
 	}
 	$('#selected-date span.label').html(numOfRow);
+	*/
 }
 
 function processProjections(){
@@ -551,7 +550,6 @@ function fillResourceProjectsData(data){
 //Generic method for Stacked Bar 2D chart
 function drawStackedBarChart(data,idName,percentage, hight){
 	var randomNum = Math.random();
-	//alert(randomNum);
 	deviceAssertChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/StackedBar2D.swf", idName+randomNum, percentage,hight);
 	deviceAssertChart.setDataXML(data);
 	deviceAssertChart.render(idName);
@@ -559,7 +557,6 @@ function drawStackedBarChart(data,idName,percentage, hight){
 //Generic method for Pie chart
 function drawPieChart(data,idName,percentage, hight){
 	var randomNum = Math.random();
-	//alert(randomNum);
 	devAssetPieChart = new FusionCharts(contextPath+"/js/fusionchartsxt/charts/Pie2D.swf", idName+randomNum, percentage,hight);
 	devAssetPieChart.setDataXML(data);
 	devAssetPieChart.render(idName);
@@ -576,7 +573,6 @@ function validateInputs(idName,errorMessage){
 }
 
 function refreshMultiSelectBox(idName){
-
 	$(idName).empty();
 	$(idName).multiselect("refresh");
 }
@@ -586,7 +582,6 @@ function saveResourceProjectionFilter(key,value){
 }
 
 function populateSavedValue(nameId,value){
-
 	if( value != null && value !=''){
 		$(nameId).val(value);
 		return true;

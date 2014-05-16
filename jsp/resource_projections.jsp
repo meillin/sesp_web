@@ -120,8 +120,8 @@
 							<h4>
 								2 Select <span style="text-decoration:underline">weekly</span> planning periods
 								<small>
-									<a href="#"><s:text name="webportal.resourceprojections.planningperiods.selectall"/> | </a>
-									<a href="#"><s:text name="webportal.resourceprojections.planningperiods.selectnone"/></a>
+									<a href="#" class="selecte-all"><s:text name="webportal.resourceprojections.planningperiods.selectall"/> | </a>
+									<a href="#" class="select-none"><s:text name="webportal.resourceprojections.planningperiods.selectnone"/></a>
 								</small>
 							</h4>
 							<table id="block-planning-periods-table">
