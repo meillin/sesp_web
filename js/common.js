@@ -15,8 +15,10 @@ Main navigation
 /*
 Filter open background
  */
+
 	$('.toggle-filter').click(function(){
 		$('.wrapper-blur').fadeToggle('fast', 'linear');
+
 	});
 
 /*

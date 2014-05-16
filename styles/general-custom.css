@@ -9,15 +9,15 @@
 	border-radius: 3px;
 	box-shadow: 0px 1px 0px 0px #aaaaaa;
 	font-size: 14px;
-	
+
 	/*
-	 * Disable text selection 
+	 * Disable text selection
 	 */
-	-webkit-user-select: none;  
-  	-moz-user-select: none;    
-  	-ms-user-select: none;      
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 	user-select: none;
-	
+
 	/*
 	 * gradient background
 	 */

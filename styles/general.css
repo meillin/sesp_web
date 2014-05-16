@@ -235,7 +235,7 @@ li {
 	}
 	.logout-right{display: none!important;}
 	.filterHeader{position: relative !important;}
-	.filterHeader .large-4:nth-child(2), 
+	.filterHeader .large-4:nth-child(2),
 	.filterHeader .large-3:nth-child(2) {
 		margin-top: 1em;
 	}
@@ -357,6 +357,10 @@ thead{
 .filterHeader button:hover,
 .filterHeader a:hover{
 	background: rgba(26, 188, 156, 0.5);
+}
+.filterHeader small a:hover {
+	background: none;
+	color: #fff;
 }
 
 .filterHeader,

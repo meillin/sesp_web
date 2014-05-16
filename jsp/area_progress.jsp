@@ -141,7 +141,6 @@
 
 
 	function loadPointsSuccess(data) {
-	//var data1 = eval(data);
 	function getPointCollection(object, pointCollections) {
 		var pointCollection = pointCollections[object.idCase];
 		if(typeof pointCollection == "undefined") {
@@ -167,7 +166,6 @@
 
 		var pointCollections = [];
 		addPoints(data, getPointCollection, pointCollections, displayInfo, infoDataCallback);
-	//alert("PointData:\r\n" + data);
 	}
 
 	function displayInfo(id) {

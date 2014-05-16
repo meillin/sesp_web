@@ -729,7 +729,8 @@ function drawAreaStatus() {
         // Create the chart
         $('#area-status').highcharts({
             chart: {
-                type: 'pie'
+                type: 'pie',
+                height: 550
             },
             title: {
                 text: ''
@@ -742,7 +743,7 @@ function drawAreaStatus() {
             plotOptions: {
                 pie: {
                     shadow: false,
-                    center: ['70%', '50%'],
+                    center: ['55%', '50%'],
                     showInLegend: true
 
                 },

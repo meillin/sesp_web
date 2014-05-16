@@ -21,8 +21,18 @@
 }
 
 #search-input {
-	padding-top: 15px !important;
+	padding-top: 5px !important;
 }
+.input-datepicker {
+	padding-top: 10px !important;
+}
+select {
+	padding: 4px 0 7px 0;
+}
+.lang-dropdown, .panel-inner select {
+	background-color: #fff !important;
+}
+
 
 /*
  YOU HAVE FILTERED
@@ -39,14 +49,14 @@ dd a:hover {
 .slide-menu-right{
 	line-height: 1em;
 }
-
 .lang-dropdown{
 	z-index: 99999;
 }
-
 header .slide-menu-left a{
 	color: #fff;
 	display: block;
 	padding: 12px 20px !important;
-
+}
+.wrapper-blur {
+	height: 150%;
 }
