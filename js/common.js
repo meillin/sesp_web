@@ -101,6 +101,14 @@ Nice scroll filter
 		});
 	}
 
+	$("#block-time-select-date-interval").change(function() {
+		if($("#block-time-select-date-interval option:selected").val() == 'custominterval'){
+			$('.custom-input-datepicker').show();
+		} else{
+			$('.custom-input-datepicker').hide();
+		}
+    });
+
 });
 
 
