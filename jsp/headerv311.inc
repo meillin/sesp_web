@@ -217,7 +217,7 @@
 
 				</li>
 				<li class="slide-menu-right">
-					<a class="toggle-filter"><i class="fi-filter size-18"></i> Filter </a>
+					<a class="toggle-filter"><i class="fi-filter size-18"></i> <span> Filter<span></a>
 				</li>
 			</ul>
 		</li>
