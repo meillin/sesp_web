@@ -70,7 +70,9 @@
 				<div class="large-12 columns filterHeader">
 					<div class="big-row">
 						<div class="large-3 columns">
-							<h4><s:text name="webportal.resourceprojections.time.first"/></h4>
+							<h4><!--<s:text name="webportal.resourceprojections.time.first"/>-->
+							1 Search for planning periods
+							</h4>
 								<div class="large-12 columns">
 									<label><s:text name="webportal.resourceprojections.time.domain.title"/></label>
 									<select id="block-time-multiselect-domain" class="custom-multi-select" name="multiselect-domain" multiple="multiple" onchange="domainChanged()">
@@ -78,7 +80,8 @@
 								</div>
 
 								<div class="small-6 columns">
-									<label><s:text name="webportal.resourceprojections.planningperiods.type" /></label>
+									<label><!--<s:text name="webportal.resourceprojections.planningperiods.type" />-->
+									Period type</label>
 									<select id="period-type">
 										<option value="week"><s:text name="webportal.week"/></option>
 										<option value="month"><s:text name="webportal.month"/></option>
@@ -136,7 +139,7 @@
 						</div>
 
 						<div class="large-4 columns">
-							<h4><s:text name="webportal.resourceprojections.time.third"/></h4>
+							<h4><!--<s:text name="webportal.resourceprojections.time.third"/>-->3 Fillter</h4>
 
 							<div class="row">
 								<div class="small-6 columns">
